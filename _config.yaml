@@ -1,5 +1,7 @@
+# Site settings
 title: Bibliothecarius Modernus
-description: "Ancient Wisdom for Modern Times"
+subtitle: The Modern Librarian
+description: "Antiqua servare, nova quaerere"
 baseurl: ""
 url: ""
 
@@ -8,11 +10,20 @@ youtube_username: BibliothecariusModernus
 github_username: wryan14
 archive_link: https://archive.org/details/@bibliothecarius_modernus
 
+# Additional resources
+resource_links:
+  latin_texts: https://github.com/wryan14/Latin-Patristic-Texts
+  suggest_title: https://docs.google.com/forms/d/e/1FAIpQLSdpoyGc_rA5TQKtoKQ7WbKkvvGj97zTLhS3gPT3M__4zFu3Yw/viewform
+  vote_title: https://strawpoll.com/BJnXV77LjZv
+  text_conversion: https://github.com/wryan14/TextractSSMLProcessor
+
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Collections
 collections:
@@ -26,8 +37,41 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      author: "Bibliothecarius Modernus"
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
+  - scope:
+      path: ""
+    values:
+      image: "/assets/images/bibliothecarius-logo.png"
+
+# Pagination
+paginate: 6
+paginate_path: "/page:num/"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+
+# SEO settings
+twitter:
+  username: 
+  card: summary_large_image
+logo: /assets/images/bibliothecarius-logo.png
+social:
+  name: Bibliothecarius Modernus
+  links:
+    - https://youtube.com/@BibliothecariusModernus
+    - https://github.com/wryan14
+    - https://archive.org/details/@bibliothecarius_modernus
+
+# Google Analytics (if you want to add it later)
+# google_analytics: UA-XXXXXXXX-X

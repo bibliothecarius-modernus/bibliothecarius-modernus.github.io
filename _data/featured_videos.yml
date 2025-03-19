@@ -1,0 +1,12 @@
+videos:
+  - id: "28tOAJ4t7W4&t=447s" # Replace with actual YouTube video ID from the URL
+    title: "Brief Exposition on the Ancient Gallican Liturgy "
+    url: "" # Leave blank to use your channel URL, or add specific video URL
+    
+  - id: "KpM3KSvargE"
+    title: "Mystical Exposition on Proverbs"
+    url: ""
+    
+  - id: "epTiewBYnzI"
+    title: "The Life of King Sigebert"
+    url: ""

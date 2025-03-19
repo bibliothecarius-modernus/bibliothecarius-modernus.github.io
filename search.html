@@ -1,0 +1,163 @@
+---
+layout: page
+title: Search Results
+permalink: /search.html
+---
+
+<div class="search-page">
+  <div class="search-form-container">
+    <form action="{{ '/search.html' | relative_url }}" method="get" class="search-form">
+      <input type="text" id="search-input" name="query" placeholder="Search for translations..." {% if page.url contains '/search.html' and site.params.query %}value="{{ site.params.query }}"{% endif %}>
+      <button type="submit" class="search-button">Search</button>
+    </form>
+  </div>
+
+  <div id="search-results" class="search-results">
+    <h2 class="results-title">Searching...</h2>
+    <div class="results-list"></div>
+  </div>
+</div>
+
+<style>
+  .search-page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .search-form-container {
+    margin-bottom: 40px;
+  }
+  
+  .search-form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  #search-input:focus {
+    outline: none;
+    border-color: var(--highlight-color);
+  }
+  
+  .search-button {
+    background-color: var(--highlight-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: var(--dark-highlight);
+  }
+  
+  .results-title {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--medium-gray);
+  }
+  
+  .result-item {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  
+  .result-item:last-child {
+    border-bottom: none;
+  }
+  
+  .result-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .result-meta {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+  }
+  
+  .result-excerpt {
+    margin-bottom: 15px;
+  }
+  
+  .result-link {
+    color: var(--highlight-color);
+    font-weight: bold;
+  }
+  
+  .no-results {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .search-form {
+      flex-direction: column;
+    }
+    
+    .search-button {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchResults = document.getElementById('search-results');
+    const resultsTitle = searchResults.querySelector('.results-title');
+    const resultsList = searchResults.querySelector('.results-list');
+    
+    // Get query parameter from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+    
+    if (query) {
+      document.getElementById('search-input').value = query;
+      resultsTitle.textContent = `Search Results for "${query}"`;
+      
+      // Perform search across all posts (client-side search)
+      searchPosts(query);
+    } else {
+      resultsTitle.textContent = 'Enter a search term above';
+      resultsList.innerHTML = '';
+    }
+    
+    function searchPosts(searchQuery) {
+      // Normally you would use a proper search API or plugin
+      // This is a simple placeholder that would need to be replaced with actual functionality
+      // For demonstration purposes only
+      
+      // Simulate a search delay
+      setTimeout(function() {
+        // This would be replaced with actual search results
+        resultsList.innerHTML = `
+          <div class="no-results">
+            <p>For a functional search, you'll need to implement a search solution like:</p>
+            <ul>
+              <li>Jekyll Simple Search plugin</li>
+              <li>Lunr.js integration</li>
+              <li>Algolia search</li>
+            </ul>
+            <p>This is a template placeholder for the search results page.</p>
+          </div>
+        `;
+      }, 1000);
+    }
+  });
+</script>
