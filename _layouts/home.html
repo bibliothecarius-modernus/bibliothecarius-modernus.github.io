@@ -27,45 +27,58 @@ layout: default
   </div>
 
   <!-- Latest Research Section -->
-  <h2 class="post-list-heading">Latest Translations & Research</h2>
-  <ul class="post-list">
+    <h2 class="post-list-heading">Latest Translations & Research</h2>
+    <ul class="post-list">
     {% for post in site.posts limit:6 %}
     <li>
-      <div class="post-thumbnail">
-        {% if post.image %}
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
+        <div class="post-thumbnail">
+        {% if post.youtube_id %}
+            <div class="youtube-thumbnail-container">
+            <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/maxresdefault.jpg" 
+                alt="{{ post.title | escape }}" 
+                onerror="this.src='https://img.youtube.com/vi/{{ post.youtube_id }}/hqdefault.jpg'">
+            <div class="play-button-overlay">
+                <div class="play-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
+                    <path fill="white" d="M8 5v14l11-7z"/>
+                </svg>
+                </div>
+            </div>
+            </div>
+        {% elsif post.image %}
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
         {% else %}
-          <div class="post-thumbnail placeholder"></div>
+            <div class="post-thumbnail placeholder"></div>
         {% endif %}
-      </div>
-      <div class="post-content-wrapper">
+        </div>
+        <div class="post-content-wrapper">
         <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h3>
         <div class="post-meta">
-          <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+            <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
         </div>
         <div class="post-excerpt">
-          {{ post.excerpt | strip_html | truncatewords: 30 }}
+            {{ post.excerpt | strip_html | truncatewords: 30 }}
         </div>
         {% if post.categories %}
         <div class="post-categories">
-          {% for category in post.categories %}
-          <a href="{{ '/categories/' | append: category | relative_url }}" class="category-tag">{{ category }}</a>
-          {% endfor %}
+            {% for category in post.categories %}
+            <a href="{{ '/categories/' | append: category | relative_url }}" class="category-tag">{{ category }}</a>
+            {% endfor %}
         </div>
         {% endif %}
         <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
-      </div>
+        </div>
     </li>
     {% endfor %}
-  </ul>
+    </ul>
 
-  {% if site.posts.size > 6 %}
-  <div class="view-all-link">
+    {% if site.posts.size > 6 %}
+    <div class="view-all-link">
     <a href="{{ '/archive' | relative_url }}" class="read-more-button">View All Research</a>
-  </div>
-  {% endif %}
+    </div>
+    {% endif %}
 
   <!-- About Section -->
   <section class="about-section">

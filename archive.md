@@ -28,11 +28,24 @@ permalink: /archive/
       {% for post in year.items %}
       <li class="archive-item" {% if post.categories %}data-categories="{{ post.categories | join: ' ' }}"{% endif %}>
         <div class="archive-post-container">
-          {% if post.image %}
           <div class="archive-post-image">
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
+            {% if post.youtube_id %}
+              <div class="youtube-thumbnail-container">
+                <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/hqdefault.jpg" alt="{{ post.title | escape }}">
+                <div class="play-button-overlay">
+                  <div class="play-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                      <path fill="white" d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            {% elsif post.image %}
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
+            {% else %}
+              <div class="post-thumbnail placeholder"></div>
+            {% endif %}
           </div>
-          {% endif %}
           <div class="archive-post-content">
             <h3 class="archive-post-title">
               <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
@@ -107,6 +120,19 @@ permalink: /archive/
           }
         });
       });
+    });
+    
+    // YouTube thumbnail click handling
+    document.querySelectorAll('.youtube-thumbnail-container').forEach(thumbnail => {
+      thumbnail.addEventListener('click', function() {
+        const postLink = this.closest('.archive-post-container').querySelector('.archive-post-title a').getAttribute('href');
+        if (postLink) {
+          window.location.href = postLink;
+        }
+      });
+      
+      // Make the thumbnail look clickable
+      thumbnail.style.cursor = 'pointer';
     });
   });
 </script>
