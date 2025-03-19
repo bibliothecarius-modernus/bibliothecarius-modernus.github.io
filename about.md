@@ -7,13 +7,15 @@ permalink: /about/
 <div class="about-page">
   <img src="{{ '/assets/images/bibliothecarius-logo.png' | relative_url }}" alt="The Modern Librarian" class="profile">
 
-  <h2>Welcome to Bibliothecarius Modernus - The Modern Librarian</h2>
+  <h2>About Bibliothecarius Modernus - The Modern Librarian</h2>
   
-  <p>Bibliothecarius Modernus is a project that utilizes modern technology, particularly AI like ChatGPT, to translate Latin Patristic texts into accessible audio content. This work emerges from a personal academic interest in classical Church history and a commitment to making these valuable historical texts more accessible.</p>
-  
-  <p>These translations are not intended to be authoritative scholarly editions, but rather operate under the principle that accessibility is paramount. The translation process incorporates numerous safeguards to ensure the highest possible quality within these parameters. Recent videos include the original Latin text to allow scholars familiar with the language to assess translation quality. For those aware of scholarly translations, please share this information via email at bibliothecarius.modernus@gmail.com or in the comments section.</p>
-  
-  <p>The guiding philosophy is to leverage available technology to make these important texts accessible to anyone interested in them. Translation requests that fall within the scope of patristic Latin texts, particularly works found in Patrologia Latina, are welcome.</p>
+<p>Bibliothecarius Modernus uses AI technology to translate Latin Patristic texts, hopefully making them accessible to audiences that extend beyond niche Latin scholarship. These translations are not intended as authoritative scholarly editions, and the quality will vary based on the AI processing, particularly when handling theologically nuanced concepts. Despite these limitations, the project operates on the principle that accessibility outweighs perfection.</p>
+
+<p>Many works featured here have fallen into relative obscurity, either lacking English translations entirely or having only dated versions available. In some rare cases, more popular authors (like Tertullian or Ambrose) are included for personal reasons or upon request. The translation is prompted for maximal clarity while preserving the original meaning, with the goal of making these historical texts more approachable and potentially inspiring deeper scholarly study. Rather than replacing authoritative editions, this project should help translators identify works that still resonate with modern audiences or deserve further scholarly attention.</p>
+
+<p>To ensure accuracy, the translation process incorporates several safeguards against AI errors (including hallucinations). The videos display the original Latin alongside the English translation, and interlinear (English-Latin) versions are available on the GitLab repository for many texts. This transparency allows viewers to verify translations and identify any potential inaccuracies.</p>
+
+<p>Community engagement is the best part of the process, and I look forward to many discussions, corrections, and new theological or historical insights. For those aware of existing scholarly translations, please share this information (bibliothecarius.modernus@gmail.com or in video comments). While committed to providing free and accessible translations, this channel also serves as a connection point to more comprehensive scholarly resources when available.</p>
   
   <div class="social-links">
     <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">
