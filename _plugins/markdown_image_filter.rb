@@ -40,6 +40,43 @@ module Jekyll
           }
         end
         
+        # Process link-style references that contain image URLs
+        content = content.gsub(/\[(.*?)\]\((https?:\/\/.*?\.(jpe?g|png|gif|svg))(.*?)\)/) do |match|
+          alt_text = $1
+          image_url = $2 + $3
+          remaining = $4
+          
+          # Build the HTML for the figure
+          figure_html = %Q{
+  <figure class="content-image">
+    <img src="#{image_url}" alt="#{alt_text}" class="markdown-image">
+    <figcaption>#{alt_text}</figcaption>
+  </figure>
+          }
+          
+          figure_html
+        end
+        
+        # Process Wikimedia-style links to optimize them for direct image display
+        content = content.gsub(/\[(.*?)\]\((https?:\/\/commons\.wikimedia\.org\/wiki\/File:(.*?))\)/) do |match|
+          alt_text = $1
+          link_url = $2
+          filename = $3
+          
+          # Convert to direct image URL using Special:FilePath
+          image_url = "https://commons.wikimedia.org/wiki/Special:FilePath/#{filename}"
+          
+          # Build the HTML for the figure
+          figure_html = %Q{
+  <figure class="content-image">
+    <img src="#{image_url}" alt="#{alt_text}" class="markdown-image">
+    <figcaption>#{alt_text}</figcaption>
+  </figure>
+          }
+          
+          figure_html
+        end
+        
         content
       end
     end
