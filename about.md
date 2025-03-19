@@ -11,18 +11,6 @@ permalink: /about/
   
   <p>This project is dedicated to using modern technology, particularly AI, to translate Latin Patristic texts into accessible audio content for contemporary audiences. It stems from a personal passion for classical Church history and the desire to make these valuable historical texts more widely available.</p>
   
-  <h3>Our Mission</h3>
-  
-  <p>By leveraging cutting-edge technology, we've gained access to and translated a growing body of texts that were previously difficult to find in English. While these automated translations are not intended for scholarly use, they serve as entertaining introductions to these works and may inspire further study.</p>
-  
-  <p>Our goal is to bridge the gap between historical wisdom and contemporary understanding through careful translation and analysis that places each work in its historical context while exploring its relevance to modern readers.</p>
-  
-  <h3>Our Approach</h3>
-  
-  <p>We combine traditional philological methods with cutting-edge digital techniques to unlock the meanings hidden in ancient texts. Each translation is accompanied by detailed commentary that provides historical context and explores the text's modern relevance.</p>
-  
-  <p>The audio format makes these texts accessible to those who might not otherwise engage with them, allowing listeners to absorb ancient wisdom during their commute, workout, or other daily activities.</p>
-  
   <div class="social-links">
     <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">
       <svg class="svg-icon youtube">
