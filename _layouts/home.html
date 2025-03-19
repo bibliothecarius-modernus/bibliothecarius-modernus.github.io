@@ -6,13 +6,14 @@ layout: default
   <div class="home-header">
     <h1 class="home-title">{{ page.title | default: site.title }}</h1>
     <p class="home-subtitle">{{ page.subtitle | default: site.description }}</p>
+    <p class="home-slogan">Antiqua servare, nova quaerere</p>
   </div>
 
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-content">
-      <h2>Antiqua servare, nova quaerere</h2>
-      <p>Discover Latin Patristic texts through modern translation and AI-powered technology.</p>
+      <h2>Translating Latin Patristic Texts</h2>
+      <p>Exploring historical Church documents through modern technology and translation methods.</p>
       <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" class="youtube-button" target="_blank">
         <svg class="youtube-icon" viewBox="0 0 24 24" width="24" height="24">
           <path fill="currentColor" d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58,8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
@@ -27,7 +28,7 @@ layout: default
   </div>
 
   <!-- Latest Research Section -->
-  <h2 class="post-list-heading">Latest Translations & Research</h2>
+  <h2 class="post-list-heading">Recent Translations & Research</h2>
   <ul class="post-list">
     {% for post in site.posts limit:6 %}
     <li>
@@ -63,16 +64,16 @@ layout: default
 
   {% if site.posts.size > 6 %}
   <div class="view-all-link">
-    <a href="{{ '/archive' | relative_url }}" class="read-more-button">View All Research</a>
+    <a href="{{ '/archive' | relative_url }}" class="read-more-button">View Full Archive</a>
   </div>
   {% endif %}
 
   <!-- About Section -->
   <section class="about-section">
-    <h2>About The Modern Librarian</h2>
+    <h2>About Bibliothecarius Modernus</h2>
     <div class="about-content">
-      <p>Bibliothecarius Modernus - The Modern Librarian is dedicated to using cutting-edge technology, including AI, to translate Latin Patristic texts into accessible audio content for modern audiences.</p>
-      <p>This project stems from a personal passion for classical Church history and aims to bridge the gap between ancient wisdom and contemporary understanding through careful translation and analysis.</p>
+      <p>The Modern Librarian project combines classical philology with digital technology to translate Latin Patristic texts into accessible audio content.</p>
+      <p>Drawing from a background in classical Church history, this site features translations that provide an introduction to these important works and their historical context.</p>
       <a href="{{ '/about' | relative_url }}" class="read-more-button">Learn More</a>
     </div>
   </section>
@@ -82,23 +83,28 @@ layout: default
     <h2>Featured Videos</h2>
     <p>Explore our latest video translations and analyses of ancient Latin Patristic texts</p>
     <div class="youtube-cards">
-      {% for video in site.data.featured_videos.videos %}
       <div class="youtube-card">
-        <div class="youtube-thumbnail">
-          <!-- Using the YouTube thumbnail URL format with the video ID -->
-          <img src="https://img.youtube.com/vi/{{ video.id }}/hqdefault.jpg" alt="{{ video.title }}">
-        </div>
-        <h3>{{ video.title }}</h3>
-        <a href="{% if video.url != '' %}{{ video.url }}{% else %}https://www.youtube.com/watch?v={{ video.id }}{% endif %}" class="youtube-link" target="_blank">Watch Now</a>
+        <div class="youtube-thumbnail placeholder"></div>
+        <h3>Understanding Church Fathers</h3>
+        <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" class="youtube-link" target="_blank">Watch Now</a>
       </div>
-      {% endfor %}
+      <div class="youtube-card">
+        <div class="youtube-thumbnail placeholder"></div>
+        <h3>The Lost Letters of Ancient Rome</h3>
+        <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" class="youtube-link" target="_blank">Watch Now</a>
+      </div>
+      <div class="youtube-card">
+        <div class="youtube-thumbnail placeholder"></div>
+        <h3>Translating Patristic Wisdom</h3>
+        <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" class="youtube-link" target="_blank">Watch Now</a>
+      </div>
     </div>
     <div class="youtube-channel-link">
       <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" class="youtube-button" target="_blank">
         <svg class="youtube-icon" viewBox="0 0 24 24" width="24" height="24">
           <path fill="currentColor" d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58,8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
         </svg>
-        Subscribe to Our Channel
+        Subscribe to the Channel
       </a>
     </div>
   </section>
