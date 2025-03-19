@@ -36,6 +36,13 @@
     --light-gray: #F5F5F5;
     --medium-gray: #CCCCCC;
     --dark-gray: #666666;
+    
+    /* Reading optimization variables */
+    --content-width: 800px;
+    --heading-scale: 1.2;
+    --line-height-body: 1.8;
+    --font-size-content: 1.05rem;
+    --paragraph-spacing: 1.2em;
 }
 
 /* Base Styles */
@@ -43,7 +50,7 @@ body {
     font-family: 'PT Serif', serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: var(--line-height-body);
     font-size: 16px;
 }
 
@@ -51,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Luxurious Roman', serif;
     color: var(--text-color);
     margin-bottom: 0.5em;
+    line-height: 1.3;
 }
 
 a {
@@ -70,11 +78,11 @@ a:hover {
     padding: 0 30px;
 }
 
-/* Site Header */
+/* Site Header - More Streamlined for Blog Reading */
 .site-header {
     border-bottom: 2px solid var(--highlight-color);
     background-color: var(--bg-color);
-    padding: 15px 0;
+    padding: 8px 0; /* Reduced from 15px */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -84,7 +92,7 @@ a:hover {
 .site-branding {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px; /* Reduced from 15px */
 }
 
 .site-logo {
@@ -92,8 +100,15 @@ a:hover {
 }
 
 .site-logo img {
+    width: 45px; /* Reduced from original size */
+    height: 45px; /* Reduced from original size */
     border-radius: 50%;
     border: 2px solid var(--highlight-color);
+    transition: transform 0.3s ease;
+}
+
+.site-logo:hover img {
+    transform: scale(1.1);
 }
 
 .site-title-container {
@@ -104,30 +119,30 @@ a:hover {
 
 .site-title {
     font-family: 'Luxurious Roman', serif;
-    font-size: 2rem;
+    font-size: 1.6rem; /* Reduced from 2rem */
     color: var(--highlight-color) !important;
     margin: 0;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .site-description {
     font-family: 'PT Serif', serif;
     font-style: italic;
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Reduced from 0.9rem */
     color: var(--dark-gray);
     margin: 0;
 }
 
 .site-nav {
     float: right;
-    margin-top: 10px;
+    margin-top: 5px; /* Reduced from 10px */
 }
 
 .site-nav .page-link {
     font-family: 'Luxurious Roman', serif;
     color: var(--text-color);
-    font-size: 1.1rem;
-    margin-left: 20px;
+    font-size: 1rem; /* Reduced from 1.1rem */
+    margin-left: 15px; /* Reduced from 20px */
     padding-bottom: 3px;
     position: relative;
 }
@@ -173,6 +188,7 @@ a:hover {
     padding: 40px 0 20px;
     background-color: var(--text-color);
     color: var(--white);
+    margin-top: 60px;
 }
 
 .footer-heading {
@@ -237,7 +253,7 @@ a:hover {
 }
 
 .home-title {
-    font-size: 3rem;
+    font-size: calc(2rem * var(--heading-scale));
     margin-bottom: 10px;
 }
 
@@ -272,20 +288,20 @@ a:hover {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: var(--content-width);
     margin: 0 auto;
 }
 
 .hero-section h2 {
     color: var(--white);
-    font-size: 2.5rem;
+    font-size: calc(2rem * var(--heading-scale));
     margin-bottom: 20px;
 }
 
 .hero-section p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    line-height: 1.6;
+    line-height: var(--line-height-body);
 }
 
 .youtube-button {
@@ -314,7 +330,7 @@ a:hover {
 
 /* Post Listing */
 .post-list-heading {
-    font-size: 1.8rem;
+    font-size: calc(1.5rem * var(--heading-scale));
     color: var(--highlight-color);
     margin-top: 60px;
     border-bottom: 1px solid var(--highlight-color);
@@ -372,7 +388,7 @@ a:hover {
 }
 
 .post-link {
-    font-size: 1.4rem;
+    font-size: calc(1.2rem * var(--heading-scale));
     font-family: 'Luxurious Roman', serif;
     margin-bottom: 10px;
     line-height: 1.3;
@@ -387,6 +403,8 @@ a:hover {
 .post-excerpt {
     margin-bottom: 15px;
     flex-grow: 1;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .post-categories {
@@ -469,12 +487,12 @@ a:hover {
 
 .youtube-section h2 {
     color: var(--highlight-color);
-    font-size: 2rem;
+    font-size: calc(1.6rem * var(--heading-scale));
     margin-bottom: 15px;
 }
 
 .youtube-section p {
-    max-width: 700px;
+    max-width: var(--content-width);
     margin: 0 auto 30px;
     font-size: 1.1rem;
     color: var(--dark-gray);
@@ -574,18 +592,18 @@ a:hover {
 
 .about-section h2 {
     color: var(--highlight-color);
-    font-size: 2rem;
+    font-size: calc(1.6rem * var(--heading-scale));
     margin-bottom: 25px;
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: var(--content-width);
 }
 
 .about-content p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    margin-bottom: var(--paragraph-spacing);
+    font-size: var(--font-size-content);
+    line-height: var(--line-height-body);
 }
 
 /* Post Featured Image */
@@ -609,10 +627,23 @@ a:hover {
     margin: 20px 0 30px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
+    border: 3px solid var(--highlight-color); /* Gold border to match your theme */
+}
+
+.youtube-embed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: var(--text-color);
+    z-index: 1;
+    opacity: 0.2;
 }
 
 .youtube-embed iframe {
@@ -622,33 +653,70 @@ a:hover {
     width: 100%;
     height: 100%;
     border: none;
+    z-index: 0;
 }
 
+/* Add some space between the video and post content */
+.youtube-embed + .post-content {
+    margin-top: 40px;
+}
+
+/* Post Content - Scholarly Optimized */
 .post-content {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: var(--font-size-content);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.post {
+    padding-bottom: 40px;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.post-title {
+    font-size: calc(2rem * var(--heading-scale));
+    line-height: 1.3;
+    max-width: var(--content-width);
+    margin: 0 auto 15px;
 }
 
 .post-content h2 {
-    font-size: 1.8rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    font-size: calc(1.6rem * var(--heading-scale));
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid var(--medium-gray);
+    padding-bottom: 0.3em;
 }
 
 .post-content h3 {
-    font-size: 1.5rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    font-size: calc(1.3rem * var(--heading-scale));
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+}
+
+.post-content h4 {
+    font-size: calc(1.15rem * var(--heading-scale));
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+}
+
+.post-content p {
+    margin-bottom: var(--paragraph-spacing);
 }
 
 .post-content ul, 
 .post-content ol {
-    margin-bottom: 20px;
+    margin-bottom: var(--paragraph-spacing);
     padding-left: 25px;
 }
 
 .post-content li {
-    margin-bottom: 10px;
+    margin-bottom: 0.5em;
 }
 
 .post-content blockquote {
@@ -658,6 +726,7 @@ a:hover {
     background-color: var(--light-gray);
     border-radius: 0 8px 8px 0;
     font-style: italic;
+    font-size: 0.98em;
 }
 
 .post-content code {
@@ -665,12 +734,71 @@ a:hover {
     padding: 2px 5px;
     border-radius: 3px;
     font-family: monospace;
+    font-size: 0.9em;
 }
 
-.post-content img {
+/* Footnotes and Citations - Scholarly Style */
+.footnotes {
+    border-top: 1px solid var(--medium-gray);
+    padding-top: 1.5em;
+    margin-top: 3em;
+    font-size: 0.9em;
+}
+
+.footnote-ref {
+    font-size: 0.75em;
+    vertical-align: super;
+    line-height: 0;
+    color: var(--highlight-color);
+}
+
+.citation {
+    font-size: 0.9em;
+    display: block;
+    padding-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 1em;
+}
+
+/* Content Images from Markdown */
+.content-image {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.markdown-image {
     max-width: 100%;
-    border-radius: 8px;
-    margin: 20px 0;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    max-height: 500px;
+    object-fit: contain;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Handle side-by-side images */
+.image-row {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-row .content-image {
+    margin: 0;
+    flex: 1;
+    min-width: 250px;
 }
 
 .youtube-promo {
@@ -694,7 +822,7 @@ a:hover {
 
 /* About Page */
 .about-page {
-    max-width: 800px;
+    max-width: var(--content-width);
     margin: 0 auto;
 }
 
@@ -747,6 +875,11 @@ a:hover {
 }
 
 /* Archive Page */
+.archive-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
 .archive-title {
     margin-bottom: 40px;
     text-align: center;
@@ -795,7 +928,7 @@ a:hover {
 }
 
 .archive-year {
-    font-size: 1.8rem;
+    font-size: calc(1.5rem * var(--heading-scale));
     color: var(--highlight-color);
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -829,7 +962,7 @@ a:hover {
 }
 
 .archive-post-title {
-    font-size: 1.4rem;
+    font-size: calc(1.2rem * var(--heading-scale));
     margin-bottom: 10px;
     line-height: 1.3;
 }
@@ -850,6 +983,8 @@ a:hover {
 
 .archive-post-excerpt {
     margin-top: 10px;
+    font-size: var(--font-size-content);
+    line-height: 1.6;
 }
 
 /* Post Navigation */
@@ -857,6 +992,9 @@ a:hover {
     margin-top: 60px;
     padding-top: 30px;
     border-top: 1px solid var(--medium-gray);
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .post-nav-links {
@@ -892,40 +1030,108 @@ a:hover {
     color: var(--text-color);
 }
 
-/* YouTube Embed */
-.youtube-embed {
-    margin: 30px 0;
-    border-radius: 8px;
+/* YouTube Thumbnail Styling for Post List */
+.youtube-thumbnail-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+}
+
+.youtube-thumbnail-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.play-button {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effects */
+.post-list li:hover .youtube-thumbnail-container img {
+    transform: scale(1.05);
+    opacity: 0.7;
+}
+
+.post-list li:hover .play-button-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.post-list li:hover .play-button {
+    transform: scale(1.1);
+    background-color: rgba(255, 0, 0, 1);
+}
+
+/* Archive page thumbnail styling */
+.archive-post-image .youtube-thumbnail-container {
+    height: 150px;
+}
+
+.archive-post-image .play-button {
+    width: 40px;
+    height: 40px;
+}
+
+.archive-post-image .play-button svg {
+    width: 24px;
+    height: 24px;
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 900px) {
     .site-title {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     
     .site-description {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
     
     .hero-section h2 {
-        font-size: 2rem;
+        font-size: calc(1.7rem * var(--heading-scale));
     }
     
     .post-list-heading, 
     .about-section h2,
     .youtube-section h2 {
-        font-size: 1.6rem;
+        font-size: calc(1.4rem * var(--heading-scale));
     }
     
     .post-title {
-        font-size: 2.2rem;
+        font-size: calc(1.8rem * var(--heading-scale));
     }
     
     .footer-col-wrapper {
         flex-direction: column;
+    }
+    
+    .post-content {
+        font-size: 1rem;
     }
 }
 
@@ -935,26 +1141,41 @@ a:hover {
     }
     
     .home-title {
-        font-size: 2rem;
+        font-size: calc(1.7rem * var(--heading-scale));
     }
     
     .home-subtitle {
         font-size: 1rem;
     }
     
+    /* Keep horizontal layout for the header on mobile but reduce size */
     .site-branding {
-        flex-direction: column;
-        text-align: center;
+        gap: 8px;
+    }
+    
+    .site-logo img {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .site-title {
+        font-size: 1.2rem;
+    }
+    
+    .site-description {
+        display: none; /* Hide description on very small screens */
     }
     
     .site-nav {
+        margin-top: 0;
         float: none;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     
     .site-nav .page-link {
-        margin: 0 10px;
+        font-size: 0.9rem;
+        margin-left: 10px;
     }
     
     .hero-section {
@@ -962,7 +1183,7 @@ a:hover {
     }
     
     .hero-section h2 {
-        font-size: 1.7rem;
+        font-size: calc(1.5rem * var(--heading-scale));
     }
     
     .hero-section p {
@@ -976,7 +1197,7 @@ a:hover {
     }
     
     .post-title {
-        font-size: 1.8rem;
+        font-size: calc(1.5rem * var(--heading-scale));
     }
     
     .youtube-section,
@@ -987,157 +1208,26 @@ a:hover {
     .youtube-cards {
         grid-template-columns: 1fr;
     }
-
-    /* Enhanced YouTube Embed Styling */
-.youtube-embed {
-    margin: 20px 0 30px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    border: 3px solid var(--highlight-color); /* Gold border to match your theme */
-  }
-  
-  .youtube-embed::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background-color: var(--text-color);
-    z-index: 1;
-    opacity: 0.2;
-  }
-  
-  .youtube-embed iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    z-index: 0;
-  }
-  
-  /* Add some space between the video and post content */
-  .youtube-embed + .post-content {
-    margin-top: 40px;
-  }
-    /* Content Images from Markdown */
-.content-image {
-    margin: 30px 0;
-    text-align: center;
-  }
-  
-  .markdown-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    max-height: 500px;
-    object-fit: contain;
-  }
-  
-  figcaption {
-    margin-top: 8px;
-    font-size: 0.9rem;
-    color: var(--dark-gray);
-    font-style: italic;
-    line-height: 1.5;
-  }
-  
-  /* Handle side-by-side images */
-  .image-row {
-    display: flex;
-    gap: 20px;
-    margin: 30px 0;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .image-row .content-image {
-    margin: 0;
-    flex: 1;
-    min-width: 250px;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .image-row {
-      flex-direction: column;
+    
+    .archive-post-container {
+        flex-direction: column;
     }
-  }
-  /* YouTube Thumbnail Styling for Post List */
-.youtube-thumbnail-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: #000;
-  }
-  
-  .youtube-thumbnail-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease, opacity 0.3s ease;
-  }
-  
-  .play-button-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: 0.9;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .play-button {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 0, 0, 0.8);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  /* Hover effects */
-  .post-list li:hover .youtube-thumbnail-container img {
-    transform: scale(1.05);
-    opacity: 0.7;
-  }
-  
-  .post-list li:hover .play-button-overlay {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .post-list li:hover .play-button {
-    transform: scale(1.1);
-    background-color: rgba(255, 0, 0, 1);
-  }
-  
-  /* Archive page thumbnail styling */
-  .archive-post-image .youtube-thumbnail-container {
-    height: 150px;
-  }
-  
-  .archive-post-image .play-button {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .archive-post-image .play-button svg {
-    width: 24px;
-    height: 24px;
-  }
+    
+    .archive-post-image {
+        flex: 0 0 auto;
+        height: 180px;
+        margin-bottom: 15px;
+    }
+    
+    .image-row {
+        flex-direction: column;
+    }
+    
+    .post-content h2 {
+        font-size: calc(1.4rem * var(--heading-scale));
+    }
+    
+    .post-content h3 {
+        font-size: calc(1.2rem * var(--heading-scale));
+    }
 }
