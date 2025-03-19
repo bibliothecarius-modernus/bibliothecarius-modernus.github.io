@@ -1231,5 +1231,16 @@ figcaption {
     .post-content h3 {
         font-size: calc(1.2rem * var(--heading-scale));
     }
+
+  .profile-photo {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* This makes it circular */
+    object-fit: cover; /* This ensures the image fills the circle nicely */
+    display: block;
+    margin: 0 auto 20px auto; /* Centers the image with some space below */
+    border: 2px solid #e6e0cf; /* Optional: adds a subtle border matching your theme */
+  }
+
     
 }
