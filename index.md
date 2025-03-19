@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Bibliothecarius Modernus
-subtitle: Ancient Wisdom for Modern Times
+subtitle: The Modern Librarian
 ---
 
 Welcome to Bibliothecarius Modernus, where we explore ancient documents through modern translation and analysis.

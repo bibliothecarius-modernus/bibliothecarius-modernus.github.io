@@ -2,7 +2,7 @@
 layout: post
 title: "Defensio Eruditionis Hieronymianae adversus Joannem Clericum: A Comprehensive Analysis"
 date: 2025-03-19
-categories: [StJerome, TheologicalDebate, ClassicalScholarship, HistoricalTheology, LinguisticProficiency, IntellectualLegacy]
+categories: [Apologetics, Patristic Philosophy, Heresiology]
 youtube_id: "40fIiE9grXY"  # Replace with your actual video ID
 ---
 
