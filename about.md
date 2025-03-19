@@ -18,7 +18,16 @@ permalink: /about/
 <p>Community engagement is the best part of the process, and I look forward to many discussions, corrections, and new theological or historical insights. For those aware of existing scholarly translations, please share this information (bibliothecarius.modernus@gmail.com or in video comments). While committed to providing free and accessible translations, this channel also serves as a connection point to more comprehensive scholarly resources when available.</p>
 
 <p><em>For any translators who are interested in making their own translations or authoritative editions: Everything associated with my project is under Creative Commons license, so it's yours to use as a jumping off point - no need to ask. If you want to credit my work or just let me know this was helpful, that's always appreciated but not required.</em></p>
+
+<h3>About Me</h3>
+
+<div class="about-me">
+  <img src="{{ '/assets/images/ryan-photo.jpg' | relative_url }}" alt="Ryan Wolfslayer" class="profile-photo">
   
+  <p>Hi, I'm Ryan Wolfslayer, the person behind Bibliothecarius Modernus. For those who are interested, I am a trained librarian with an MSLIS from the University of Illinois at Urbana-Champaign. I've been working in digital librarianship for close to ten years and am an avid Python programmer. In my free time I read entirely too much theology, which is what directly inspired this project.</p>
+  
+  <p>Feel free to <a href="https://www.linkedin.com/in/ryanwolfslayer/" target="_blank">connect on LinkedIn</a> or reach out directly at bibliothecarius.modernus@gmail.com.</p>
+</div>
   <div class="social-links">
     <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">
       <svg class="svg-icon youtube">
