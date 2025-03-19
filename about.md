@@ -22,7 +22,9 @@ permalink: /about/
 <h3>About Me</h3>
 
 <div class="about-me">
-  <img src="{{ '/assets/images/ryan-photo.jpg' | relative_url }}" alt="Ryan Wolfslayer" class="profile-photo">
+  <div class="circular-photo-container">
+    <img src="{{ '/assets/images/ryan-photo.jpg' | relative_url }}" alt="Ryan Wolfslayer" class="profile">
+  </div>
   
   <p>Hi, I'm Ryan Wolfslayer, the person behind Bibliothecarius Modernus. For those who are interested, I am a trained librarian with an MSLIS from the University of Illinois at Urbana-Champaign. I've been working in digital librarianship for close to ten years and am an avid Python programmer. In my free time I read entirely too much theology, which is what directly inspired this project.</p>
   
