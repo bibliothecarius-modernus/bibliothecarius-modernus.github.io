@@ -1,0 +1,132 @@
+<!-- Create this file as _layouts/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+<body>
+  {% include header.html %}
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="home-header">
+        <h1 class="home-title">{{ page.title | default: site.title }}</h1>
+        <p class="home-subtitle">{{ page.subtitle | default: site.description }}</p>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h2>Exploring Ancient Documents for the Modern World</h2>
+          <p>Discover the wisdom of the ancients through modern translation and analysis</p>
+          <a href="{{ site.youtube_username | prepend: 'https://youtube.com/c/' }}" class="youtube-button" target="_blank">
+            <svg class="youtube-icon" viewBox="0 0 24 24">
+              <path d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58,8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
+            </svg>
+            Watch on YouTube
+          </a>
+        </div>
+      </section>
+
+      <div class="content">
+        {{ content }}
+      </div>
+
+      <!-- Latest Research Section -->
+      <h2 class="post-list-heading">Latest Research</h2>
+      <ul class="post-list">
+        {% for post in site.posts limit:5 %}
+        <li>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h3>
+          <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+            {% if post.categories %}
+            <span class="post-categories">
+              {% for category in post.categories %}
+              <a href="{{ '/categories/' | append: category | relative_url }}" class="category-tag">{{ category }}</a>
+              {% endfor %}
+            </span>
+            {% endif %}
+          </div>
+          <div class="post-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 50 }}
+            <a href="{{ post.url | relative_url }}" class="read-more">Read more...</a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+
+      {% if site.posts.size > 5 %}
+      <div class="view-all-link">
+        <a href="{{ '/archive' | relative_url }}" class="read-more-button">View All Research</a>
+      </div>
+      {% endif %}
+
+      <!-- About Section -->
+      <section class="about-section">
+        <h2>About Bibliothecarius Modernus</h2>
+        <div class="about-content">
+          <p>Dedicated to bridging the gap between ancient wisdom and modern understanding through careful translation and analysis of historical texts.</p>
+          <p>Our research focuses on uncovering the insights and knowledge contained in ancient documents, making them accessible to contemporary audiences.</p>
+          <a href="{{ '/about' | relative_url }}" class="read-more-button">Learn More</a>
+        </div>
+      </section>
+
+      <!-- YouTube Promo Section -->
+      <section class="youtube-section">
+        <h2>Featured Videos</h2>
+        <p>Explore our latest video analyses of ancient texts and their translations</p>
+        <div class="youtube-cards">
+          <div class="youtube-card">
+            <div class="youtube-thumbnail placeholder"></div>
+            <h3>Understanding Medieval Manuscripts</h3>
+            <a href="{{ site.youtube_username | prepend: 'https://youtube.com/c/' }}" class="youtube-link" target="_blank">Watch Now</a>
+          </div>
+          <div class="youtube-card">
+            <div class="youtube-thumbnail placeholder"></div>
+            <h3>The Lost Letters of Ancient Rome</h3>
+            <a href="{{ site.youtube_username | prepend: 'https://youtube.com/c/' }}" class="youtube-link" target="_blank">Watch Now</a>
+          </div>
+          <div class="youtube-card">
+            <div class="youtube-thumbnail placeholder"></div>
+            <h3>Translating Forgotten Wisdom</h3>
+            <a href="{{ site.youtube_username | prepend: 'https://youtube.com/c/' }}" class="youtube-link" target="_blank">Watch Now</a>
+          </div>
+        </div>
+        <div class="youtube-channel-link">
+          <a href="{{ site.youtube_username | prepend: 'https://youtube.com/c/' }}" class="youtube-button" target="_blank">
+            <svg class="youtube-icon" viewBox="0 0 24 24">
+              <path d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58,8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
+            </svg>
+            Subscribe to Our Channel
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    // Simple JavaScript to enhance the user experience
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add smooth scrolling to all links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
