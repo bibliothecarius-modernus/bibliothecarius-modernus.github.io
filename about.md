@@ -9,7 +9,11 @@ permalink: /about/
 
   <h2>Welcome to Bibliothecarius Modernus - The Modern Librarian</h2>
   
-  <p>This project is dedicated to using modern technology, particularly AI, to translate Latin Patristic texts into accessible audio content for contemporary audiences. It stems from a personal passion for classical Church history and the desire to make these valuable historical texts more widely available.</p>
+  <p>Bibliothecarius Modernus is a project that utilizes modern technology, particularly AI like ChatGPT, to translate Latin Patristic texts into accessible audio content. This work emerges from a personal academic interest in classical Church history and a commitment to making these valuable historical texts more accessible.</p>
+  
+  <p>These translations are not intended to be authoritative scholarly editions, but rather operate under the principle that accessibility is paramount. The translation process incorporates numerous safeguards to ensure the highest possible quality within these parameters. Recent videos include the original Latin text to allow scholars familiar with the language to assess translation quality. For those aware of scholarly translations, please share this information via email at bibliothecarius.modernus@gmail.com or in the comments section.</p>
+  
+  <p>The guiding philosophy is to leverage available technology to make these important texts accessible to anyone interested in them. Translation requests that fall within the scope of patristic Latin texts, particularly works found in Patrologia Latina, are welcome.</p>
   
   <div class="social-links">
     <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">
@@ -37,13 +41,13 @@ permalink: /about/
   <h3>Resources</h3>
   
   <ul class="resource-list">
-    <li><a href="https://github.com/wryan14/Latin-Patristic-Texts" target="_blank">Latin Patristic Texts Repository</a> - Access our growing collection of translated texts.</li>
-    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdpoyGc_rA5TQKtoKQ7WbKkvvGj97zTLhS3gPT3M__4zFu3Yw/viewform" target="_blank">Suggest a Title</a> - Recommend a text you'd like to see translated.</li>
+    <li><a href="https://github.com/wryan14/Latin-Patristic-Texts" target="_blank">Latin Patristic Texts Repository</a> - Access the growing collection of translated texts.</li>
+    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdpoyGc_rA5TQKtoKQ7WbKkvvGj97zTLhS3gPT3M__4zFu3Yw/viewform" target="_blank">Suggest a Title</a> - Recommend a text for translation.</li>
     <li><a href="https://strawpoll.com/BJnXV77LjZv" target="_blank">Vote for a Title</a> - Help choose the next translation project.</li>
-    <li><a href="https://github.com/wryan14/TextractSSMLProcessor" target="_blank">Text Conversion Project</a> - Learn about our technology and methods.</li>
+    <li><a href="https://github.com/wryan14/TextractSSMLProcessor" target="_blank">Text Conversion Project</a> - Learn about the technology and methods used.</li>
   </ul>
   
-  <h3>Join the Community</h3>
+  <h3>Connect</h3>
   
-  <p>Subscribe to our <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">YouTube channel</a> to stay updated on the latest translations and become part of a community seeking to discover ancient texts through modern methods.</p>
+  <p>Subscribe to the <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">YouTube channel</a> to stay updated on the latest translations and explore these important historical texts through modern methods.</p>
 </div>
