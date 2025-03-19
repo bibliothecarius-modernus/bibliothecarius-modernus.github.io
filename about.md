@@ -18,6 +18,7 @@ permalink: /about/
 <p>Community engagement is the best part of the process, and I look forward to many discussions, corrections, and new theological or historical insights. For those aware of existing scholarly translations, please share this information (bibliothecarius.modernus@gmail.com or in video comments). While committed to providing free and accessible translations, this channel also serves as a connection point to more comprehensive scholarly resources when available.</p>
 
 <p><em>For any translators who are interested in making their own translations or authoritative editions: Everything associated with my project is under Creative Commons license, so it's yours to use as a jumping off point - no need to ask. If you want to credit my work or just let me know this was helpful, that's always appreciated but not required.</em></p>
+<hr style="width: 70%; margin: 30px auto; border: none; border-top: 1px solid #c0b283;"> <!-- Styled horizontal rule -->
 
 <h3>About Me</h3>
 
