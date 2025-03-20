@@ -6,8 +6,8 @@ categories: [Epistolary Literature, Ecclesiastical History, Carolingian Theologi
 youtube_id: "PNH4_eu-F5c"  # Replace with your actual video ID
 ---
 
-#### Ratramnus of Corbie's 9th-century theological letter examining whether dog-headed people possess rational souls.
-
+<p class="article-summary">Ratramnus of Corbie's 9th-century theological letter examining whether dog-headed people possess rational souls.
+</p>
 ## Historical Context  
 **Date and Authorship:** The *Epistola de cynocephalis* is a mid-9th-century Latin letter written by Ratramnus of Corbie, a Frankish monk and theologian (d. c. 868). It was composed **sometime before 865** as a response to an inquiry from a missionary named Rimbert ([In the Middle: Cynocephali, Animal Savagery, and Terror](https://www.inthemedievalmiddle.com/2007/07/cynocephali-animal-savagery-and-terror.html#:~:text=Sometime%20before%20865%2C%20Ratramnus%20of,Following)). Rimbert – who was a priest (and later the successor of St. Ansgar as Archbishop of Hamburg-Bremen) – had received reports of the *cynocephali*, or dog-headed men, reputed to live in the far northern regions (possibly near Scandinavia). He asked Ratramnus whether these creatures were human and thus eligible for Christian conversion ([
            Philip Schaff: New Schaff-Herzog Encyclopedia of Religious Knowledge, Vol. IX: Petri - Reuchlin -

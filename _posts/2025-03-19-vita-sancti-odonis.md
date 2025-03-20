@@ -6,7 +6,7 @@ categories: [Hagiography, Asceticism & Monasticism, Monastic Rules & Constitutio
 youtube_id: "Ysp8glHxXdQ"  # Replace with your actual video ID
 ---
 
-#### John of Salerno's 10th-century hagiography of St. Odo reveals the spiritual ideals and reforming mission that shaped Cluny's monastic renewal movement.
+<p class="article-summary">John of Salerno's 10th-century hagiography of St. Odo reveals the spiritual ideals and reforming mission that shaped Cluny's monastic renewal movement.</p>
 
 
 ## Historical Context  
