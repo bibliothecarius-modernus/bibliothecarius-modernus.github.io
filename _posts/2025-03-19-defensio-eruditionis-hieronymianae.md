@@ -6,7 +6,7 @@ categories: [Apologetics, Patristic Philosophy, Heresiology]
 youtube_id: "40fIiE9grXY"  # Replace with your actual video ID
 ---
 
-Analyzes Jean Martianay's early 18th-century defense of St. Jerome's erudition against Protestant critic Jean Le Clerc, highlighting the theological tensions between traditional Catholic reverence for Church Fathers and emerging Enlightenment-era critical scholarship.
+# Analysis of Martianay's defense of St. Jerome against Enlightenment criticism, revealing tensions between Catholic tradition and modern biblical scholarship.
 
 ## Historical Context  
  ![Saint Jerome Writing by Caravaggio](https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Jerome_Writing-Caravaggio_(1605-6).jpg) *Figure: Caravaggio’s **Saint Jerome Writing** (c.1605). St. Jerome’s scholarly image underscores the reverence and controversy surrounding his legacy.* 

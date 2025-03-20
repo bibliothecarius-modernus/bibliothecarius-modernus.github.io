@@ -6,7 +6,7 @@ categories: [Liturgical Texts & Sacramentaries, Ecclesiastical History, Visigoth
 youtube_id: "28tOAJ4t7W4"  # Replace with your actual video ID
 ---
 
-# *Expositio brevis antiquae liturgiae Gallicanae*: Analysis
+# Examines the ancient Gallican liturgy, with its distinctive ceremonial elements and theological symbolism that differed significantly from the Roman Rite before Carolingian reforms.
 
 ## Historical Context  
 The *Expositio brevis antiquae liturgiae Gallicanae* (“Brief Exposition of the Ancient Gallican Liturgy”) is a short treatise that illuminates the **Gallican Rite** of the early medieval Church in Gaul. For a long time it was attributed to St. **Germanus of Paris** (c.496–576) as a pair of letters explaining the Mass, but modern research has shown it is **pseudonymous**. In the early 20th century, liturgical scholar André Wilmart demonstrated that the work **could not have been written by Germanus** and instead dated it to around *circa* 700 A.D. in southern Francia ([Gallican Rites - Encyclopedia.com](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/gallican-rites#:~:text=Germanus%20of%20Paris%20are%20authentic,Ambrose%27s%20authorship%20of%20the)). The text survives in a single manuscript from the Abbey of St. Martin of Autun – notably, the *only* known copy ([Gallican Rites - Encyclopedia.com](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/gallican-rites#:~:text=The%20Letters%20of%20St,the%20only%20manuscript%20of%20this)). This suggests the exposition was not widely copied, yet its preservation in monastic circles hints at its value for instructing clergy in a rapidly changing liturgical landscape. 

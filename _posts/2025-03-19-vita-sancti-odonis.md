@@ -5,7 +5,9 @@ date: 2025-03-19
 categories: [Hagiography, Asceticism & Monasticism, Monastic Rules & Constitutions]
 youtube_id: "Ysp8glHxXdQ"  # Replace with your actual video ID
 ---
-# Vita Sancti Odonis: A Critical Analysis of John of Salerno's Hagiography of the Second Abbot of Cluny
+
+# John of Salerno's 10th-century hagiography of St. Odo reveals the spiritual ideals and reforming mission that shaped Cluny's monastic renewal movement.
+
 
 ## Historical Context  
  ![History: Arthington Priory - i-Yorkshire Marketplace](https://i-yorkshire.com/wp-content/uploads/2022/08/522px-Cluny-Abtei-Ostfluegel-mtob.jpg)   
