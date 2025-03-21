@@ -2,6 +2,7 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <div class="post-meta">
@@ -49,47 +50,50 @@ layout: default
   </div>
   {% endif %}
 
-  <div class="translation-viewer">
-    <div class="view-options">
-      <button class="view-option active" data-view="side-by-side">Side by Side</button>
-      <button class="view-option" data-view="analysis">Analysis</button>
-      <button class="view-option" data-view="latin-only">Latin Only</button>
-      <button class="view-option" data-view="english-only">English Only</button>
+  <!-- Simple Translation Viewer - With embedded styles and scripts -->
+  <div id="translation-viewer">
+    <!-- Tab buttons -->
+    <div class="translation-tabs">
+      <button class="tab-btn active" data-target="side-by-side">Side by Side</button>
+      <button class="tab-btn" data-target="analysis">Analysis</button>
+      <button class="tab-btn" data-target="latin-only">Latin Only</button>
+      <button class="tab-btn" data-target="english-only">English Only</button>
     </div>
     
-    <div class="view-container">
+    <!-- Tab Content -->
+    <div class="tab-content">
       <!-- Side by Side View -->
-      <div id="side-by-side-view" class="view-panel active">
-        <div class="side-by-side-container">
-          <div class="latin-panel">
-            <div class="panel-header">Latin Original</div>
-            <div class="panel-content">
+      <div id="side-by-side" class="tab-panel active">
+        <div class="two-columns">
+          <div class="latin-column">
+            <h3>Latin Original</h3>
+            <div class="column-content">
               {% if page.latin_text %}
                 {{ page.latin_text | markdownify }}
               {% elsif page.translation_json %}
                 {% for chunk in page.translation_json.chunks %}
-                  <div class="latin-section" id="latin-section-{{ chunk.chunk_number }}">
-                    <div class="section-number">{{ chunk.chunk_number }}</div>
-                    <div class="section-content">
+                  <div class="chunk-section">
+                    <span class="chunk-number">{{ chunk.chunk_number }}</span>
+                    <div class="latin-text">
                       {{ chunk.original_latin | newline_to_br }}
                     </div>
                   </div>
                 {% endfor %}
               {% else %}
-                <p class="placeholder-text">Latin text is not available for this document.</p>
+                <p class="placeholder">Latin text is not available for this document.</p>
               {% endif %}
             </div>
           </div>
-          <div class="english-panel">
-            <div class="panel-header">English Translation</div>
-            <div class="panel-content">
+          <div class="english-column">
+            <h3>English Translation</h3>
+            <div class="column-content">
               {% if page.english_translation %}
                 {{ page.english_translation | markdownify }}
               {% elsif page.translation_json %}
                 {% for chunk in page.translation_json.chunks %}
-                  <div class="english-section" id="english-section-{{ chunk.chunk_number }}">
-                    <div class="section-number">{{ chunk.chunk_number }}</div>
-                    <div class="section-content">
+                  <div class="chunk-section">
+                    <span class="chunk-number">{{ chunk.chunk_number }}</span>
+                    <div class="english-text">
                       {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
                       {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
                       {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
@@ -99,7 +103,7 @@ layout: default
                   </div>
                 {% endfor %}
               {% else %}
-                <p class="placeholder-text">English translation is not available for this document.</p>
+                <p class="placeholder">English translation is not available for this document.</p>
               {% endif %}
             </div>
           </div>
@@ -107,44 +111,44 @@ layout: default
       </div>
       
       <!-- Analysis View -->
-      <div id="analysis-view" class="view-panel">
-        <div class="analysis-container">
-          <div class="post-content analysis-content" itemprop="articleBody">
-            {{ content }}
-          </div>
+      <div id="analysis" class="tab-panel">
+        <div class="post-content analysis-content" itemprop="articleBody">
+          {{ content }}
         </div>
       </div>
       
       <!-- Latin Only View -->
-      <div id="latin-only-view" class="view-panel">
-        <div class="latin-content">
+      <div id="latin-only" class="tab-panel">
+        <h3>Latin Original</h3>
+        <div class="single-column">
           {% if page.latin_text %}
             {{ page.latin_text | markdownify }}
           {% elsif page.translation_json %}
             {% for chunk in page.translation_json.chunks %}
-              <div class="latin-section full-width" id="latin-section-full-{{ chunk.chunk_number }}">
-                <div class="section-number">{{ chunk.chunk_number }}</div>
-                <div class="section-content">
+              <div class="chunk-section latin-full">
+                <span class="chunk-number">{{ chunk.chunk_number }}</span>
+                <div class="latin-text">
                   {{ chunk.original_latin | newline_to_br }}
                 </div>
               </div>
             {% endfor %}
           {% else %}
-            <p class="placeholder-text">Latin text is not available for this document.</p>
+            <p class="placeholder">Latin text is not available for this document.</p>
           {% endif %}
         </div>
       </div>
       
       <!-- English Only View -->
-      <div id="english-only-view" class="view-panel">
-        <div class="english-content">
+      <div id="english-only" class="tab-panel">
+        <h3>English Translation</h3>
+        <div class="single-column">
           {% if page.english_translation %}
             {{ page.english_translation | markdownify }}
           {% elsif page.translation_json %}
             {% for chunk in page.translation_json.chunks %}
-              <div class="english-section full-width" id="english-section-full-{{ chunk.chunk_number }}">
-                <div class="section-number">{{ chunk.chunk_number }}</div>
-                <div class="section-content">
+              <div class="chunk-section english-full">
+                <span class="chunk-number">{{ chunk.chunk_number }}</span>
+                <div class="english-text">
                   {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
                   {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
                   {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
@@ -154,7 +158,7 @@ layout: default
               </div>
             {% endfor %}
           {% else %}
-            <p class="placeholder-text">English translation is not available for this document.</p>
+            <p class="placeholder">English translation is not available for this document.</p>
           {% endif %}
         </div>
       </div>
@@ -203,90 +207,252 @@ layout: default
     </div>
   </div>
 
+  <!-- Embedded styles to avoid conflicts with main stylesheet -->
+  <style>
+    /* Translation Viewer Styles */
+    #translation-viewer {
+      margin: 30px 0;
+      font-family: inherit;
+    }
+    
+    /* Tab buttons */
+    .translation-tabs {
+      display: flex;
+      margin-bottom: 1px;
+      border-bottom: 2px solid #B8860B;
+    }
+    
+    .tab-btn {
+      padding: 8px 16px;
+      margin-right: 4px;
+      background-color: #EDE0CA;
+      border: 1px solid #B8860B;
+      border-bottom: none;
+      border-radius: 4px 4px 0 0;
+      color: #3E2C1B;
+      cursor: pointer;
+      font-weight: normal;
+      transition: background-color 0.2s;
+    }
+    
+    .tab-btn:hover {
+      background-color: #e3d6c0;
+    }
+    
+    .tab-btn.active {
+      background-color: #B8860B;
+      color: white;
+      font-weight: bold;
+    }
+    
+    /* Tab content container */
+    .tab-content {
+      border: 1px solid #B8860B;
+      border-top: none;
+      padding: 15px;
+      background-color: white;
+    }
+    
+    /* Tab panels */
+    .tab-panel {
+      display: none;
+    }
+    
+    .tab-panel.active {
+      display: block;
+    }
+    
+    /* Two-column layout for side-by-side view */
+    .two-columns {
+      display: flex;
+      max-height: 70vh;
+    }
+    
+    .latin-column, .english-column {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    
+    .latin-column {
+      border-right: 1px solid #e0e0e0;
+    }
+    
+    .column-content {
+      height: 100%;
+    }
+    
+    /* Column headers */
+    .two-columns h3, .single-column h3 {
+      text-align: center;
+      padding-bottom: 10px;
+      margin-top: 0;
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 1;
+    }
+    
+    .latin-column h3 {
+      color: #5c4a28;
+    }
+    
+    .english-column h3 {
+      color: #2a4a75;
+    }
+    
+    /* Chunk styling */
+    .chunk-section {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      border-radius: 6px;
+    }
+    
+    .chunk-number {
+      position: absolute;
+      top: -8px;
+      left: 10px;
+      background-color: #B8860B;
+      color: white;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    
+    .latin-text {
+      font-style: italic;
+      color: #5c4a28;
+    }
+    
+    .english-text {
+      color: #2a4a75;
+    }
+    
+    /* Background colors for sections */
+    .chunk-section {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .latin-column .chunk-section,
+    .latin-full {
+      background-color: #fff8e8;
+      border-color: #e6d7b8;
+    }
+    
+    .english-column .chunk-section,
+    .english-full {
+      background-color: #f8fbff;
+      border-color: #d0e2f5;
+    }
+    
+    /* Single column layout for latin/english only views */
+    .single-column {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    /* Translation paragraph spacing */
+    .translation-paragraph {
+      margin-bottom: 1em;
+    }
+    
+    /* Placeholder text */
+    .placeholder {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      font-style: italic;
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .translation-tabs {
+        flex-wrap: wrap;
+      }
+      
+      .tab-btn {
+        margin-bottom: 4px;
+      }
+      
+      .two-columns {
+        flex-direction: column;
+        max-height: none;
+      }
+      
+      .latin-column, .english-column {
+        height: auto;
+        max-height: 50vh;
+      }
+      
+      .latin-column {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+
+  <!-- Embedded JavaScript for tabs functionality -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Simple view switching
-      const viewOptions = document.querySelectorAll('.view-option');
-      const viewPanels = document.querySelectorAll('.view-panel');
+      // Get all tab buttons and panels
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      const tabPanels = document.querySelectorAll('.tab-panel');
       
-      // Set up view switching
-      viewOptions.forEach(option => {
-        option.addEventListener('click', function() {
-          const viewName = this.getAttribute('data-view');
+      // Set up tab switching
+      tabButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          // Get target panel id
+          const targetId = this.getAttribute('data-target');
           
-          // Remove active class from all options and panels
-          viewOptions.forEach(opt => opt.classList.remove('active'));
-          viewPanels.forEach(panel => panel.classList.remove('active'));
+          // Remove active class from all buttons and panels
+          tabButtons.forEach(function(btn) {
+            btn.classList.remove('active');
+          });
           
-          // Add active class to selected option and panel
+          tabPanels.forEach(function(panel) {
+            panel.classList.remove('active');
+          });
+          
+          // Add active class to clicked button and target panel
           this.classList.add('active');
-          document.getElementById(viewName + '-view').classList.add('active');
+          document.getElementById(targetId).classList.add('active');
           
           // Save preference to localStorage
-          localStorage.setItem('preferredView', viewName);
+          localStorage.setItem('preferredTab', targetId);
         });
       });
       
       // Check for saved preference
-      const savedView = localStorage.getItem('preferredView');
-      if (savedView) {
-        const savedButton = document.querySelector(`.view-option[data-view="${savedView}"]`);
+      const savedTab = localStorage.getItem('preferredTab');
+      if (savedTab && document.getElementById(savedTab)) {
+        // Find the button for this tab
+        const savedButton = document.querySelector('.tab-btn[data-target="' + savedTab + '"]');
         if (savedButton) {
           savedButton.click();
         }
       }
       
-      // Synchronize scrolling in side-by-side view
-      const latinPanel = document.querySelector('.latin-panel .panel-content');
-      const englishPanel = document.querySelector('.english-panel .panel-content');
+      // Set up synchronized scrolling for side-by-side view
+      const latinColumn = document.querySelector('.latin-column .column-content');
+      const englishColumn = document.querySelector('.english-column .column-content');
       
-      if (latinPanel && englishPanel) {
-        latinPanel.addEventListener('scroll', function() {
+      if (latinColumn && englishColumn) {
+        // When scrolling latin column
+        latinColumn.addEventListener('scroll', function() {
           const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
-          englishPanel.scrollTop = scrollPercentage * (englishPanel.scrollHeight - englishPanel.clientHeight);
+          englishColumn.scrollTop = scrollPercentage * (englishColumn.scrollHeight - englishColumn.clientHeight);
         });
         
-        englishPanel.addEventListener('scroll', function() {
+        // When scrolling english column
+        englishColumn.addEventListener('scroll', function() {
           const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
-          latinPanel.scrollTop = scrollPercentage * (latinPanel.scrollHeight - latinPanel.clientHeight);
+          latinColumn.scrollTop = scrollPercentage * (latinColumn.scrollHeight - latinColumn.clientHeight);
         });
       }
-      
-      // Section highlight on hover
-      const latinSections = document.querySelectorAll('.latin-section');
-      const englishSections = document.querySelectorAll('.english-section');
-      
-      latinSections.forEach((section, index) => {
-        section.addEventListener('mouseenter', function() {
-          this.classList.add('highlight');
-          if (englishSections[index]) {
-            englishSections[index].classList.add('highlight');
-          }
-        });
-        
-        section.addEventListener('mouseleave', function() {
-          this.classList.remove('highlight');
-          if (englishSections[index]) {
-            englishSections[index].classList.remove('highlight');
-          }
-        });
-      });
-      
-      englishSections.forEach((section, index) => {
-        section.addEventListener('mouseenter', function() {
-          this.classList.add('highlight');
-          if (latinSections[index]) {
-            latinSections[index].classList.add('highlight');
-          }
-        });
-        
-        section.addEventListener('mouseleave', function() {
-          this.classList.remove('highlight');
-          if (latinSections[index]) {
-            latinSections[index].classList.remove('highlight');
-          }
-        });
-      });
     });
   </script>
 </article>
