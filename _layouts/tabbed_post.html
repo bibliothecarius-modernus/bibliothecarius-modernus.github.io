@@ -191,16 +191,18 @@ layout: default
   </div>
   {% endif %}
   
-  <!-- Scholarly Discussion Section -->
-  <div class="comments-section">
+<!-- Scholarly Discussion Section -->
+<div class="comments-section">
     <h2>Scholarly Discussion</h2>
     <p class="discussion-intro">Share your insights, questions, or observations about this translation.</p>
     
     <div id="disqus_thread"></div>
     <script>
       var disqus_config = function () {
-        this.page.url = "{{ site.url }}{{ page.url }}";
-        this.page.identifier = "{{ page.url }}";
+        // Use absolute URL without any special characters
+        this.page.url = "{{ site.url | default: 'https://bibliothecarius-modernus.github.io' }}{{ page.url }}";
+        // Use a simple identifier without special characters
+        this.page.identifier = "{{ page.url | slugify }}";
       };
       (function() {
         var d = document, s = d.createElement('script');
