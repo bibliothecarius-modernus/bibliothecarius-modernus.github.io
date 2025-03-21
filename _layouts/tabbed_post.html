@@ -494,6 +494,39 @@ layout: default
         border-bottom: 1px solid #e0e0e0;
         margin-bottom: 15px;
       }
+      .article-summary {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        color: #3E2C1B;
+        border-left: 4px solid #B8860B;
+        padding: 12px 18px;
+        background-color: #f9f5ea;
+        border-radius: 0 6px 6px 0;
+        margin-bottom: 25px;
+        margin-top: 15px;
+        font-style: italic;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+      
+      /* Make links in summary stand out */
+      .article-summary a {
+        color: #7D5700;
+        text-decoration: none;
+        border-bottom: 1px dotted #B8860B;
+      }
+      
+      .article-summary a:hover {
+        color: #B8860B;
+        border-bottom: 1px solid #B8860B;
+      }
+      
+      /* Responsive adjustment */
+      @media (max-width: 768px) {
+        .article-summary {
+          font-size: 1.1rem;
+          padding: 10px 15px;
+        }
+      }
     }
   </style>
 
@@ -556,5 +589,6 @@ layout: default
         });
       }
     });
+    
   </script>
 </article>
