@@ -227,3 +227,104 @@ layout: default
   </div>
 
 </article>
+
+<!-- Add inline JavaScript to handle tab functionality directly in this file -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM loaded in tabbed_post template");
+    
+    // Get all tab buttons and tab content
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    console.log("Found " + tabButtons.length + " tab buttons and " + tabContents.length + " content sections");
+    
+    // Add click event to each tab button
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+        console.log("Tab clicked: " + tabId);
+        
+        // Hide all tab contents
+        tabContents.forEach(content => {
+          content.style.display = 'none';
+          content.classList.remove('active');
+        });
+        
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => {
+          btn.classList.remove('active');
+        });
+        
+        // Show the selected tab content
+        document.getElementById(tabId).style.display = 'block';
+        document.getElementById(tabId).classList.add('active');
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Save user preference
+        localStorage.setItem('preferredTab', tabId);
+      });
+    });
+    
+    // Set initial state - either from localStorage or default to first tab
+    const savedTab = localStorage.getItem('preferredTab');
+    
+    // Hide all tabs first
+    tabContents.forEach(content => {
+      content.style.display = 'none';
+      content.classList.remove('active');
+    });
+    
+    // Show the appropriate tab
+    if (savedTab && document.getElementById(savedTab)) {
+      // Show saved tab
+      document.getElementById(savedTab).style.display = 'block';
+      document.getElementById(savedTab).classList.add('active');
+      
+      // Update button state
+      const savedButton = document.querySelector(`.tab-button[data-tab="${savedTab}"]`);
+      if (savedButton) {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        savedButton.classList.add('active');
+      }
+    } else {
+      // Default to first tab (analysis)
+      document.getElementById('analysis').style.display = 'block';
+      document.getElementById('analysis').classList.add('active');
+      tabButtons[0].classList.add('active');
+    }
+    
+    // Set up interactive features for special views
+    if (document.getElementById('interlinear')) {
+      const interlinearLines = document.querySelectorAll('.interlinear-line');
+      interlinearLines.forEach(line => {
+        line.addEventListener('mouseenter', function() {
+          this.classList.add('highlighted');
+        });
+        line.addEventListener('mouseleave', function() {
+          this.classList.remove('highlighted');
+        });
+      });
+    }
+    
+    // Parallel view scrolling synchronization
+    if (document.getElementById('parallel')) {
+      const latinColumn = document.querySelector('.latin-column');
+      const englishColumn = document.querySelector('.english-column');
+      
+      if (latinColumn && englishColumn) {
+        latinColumn.addEventListener('scroll', function() {
+          const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
+          englishColumn.scrollTop = scrollPercentage * (englishColumn.scrollHeight - englishColumn.clientHeight);
+        });
+        
+        englishColumn.addEventListener('scroll', function() {
+          const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
+          latinColumn.scrollTop = scrollPercentage * (latinColumn.scrollHeight - latinColumn.clientHeight);
+        });
+      }
+    }
+  });
+</script>
