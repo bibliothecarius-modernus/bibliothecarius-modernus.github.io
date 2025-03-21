@@ -1242,7 +1242,7 @@ figcaption {
     border: 2px solid #e6e0cf; /* Optional: adds a subtle border matching your theme */
   }
 
-  /* TABBED VIEW */
+ /* TABBED VIEW */
 /* Tabs Container */
 .tabs-container {
     margin: 30px 0;
@@ -1302,6 +1302,10 @@ figcaption {
     line-height: 2;
     max-width: var(--content-width);
     margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   }
   
   .latin-text p, 
@@ -1309,10 +1313,69 @@ figcaption {
     margin-bottom: 1.5em;
   }
   
-  /* Latin specific styling */
+  /* Latin specific styling - now with distinct color theme */
   .latin-text, .latin-chunk, .interlinear-latin {
-    color: #333;
+    color: #4B3621; /* Rich brown for Latin text */
     font-style: italic;
+    background-color: #FFF8E7; /* Light cream background for Latin */
+    border-left: 3px solid var(--highlight-color);
+  }
+  
+  .latin-chunk {
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+  }
+  
+  /* English specific styling */
+  .english-text, .english-chunk, .interlinear-english {
+    color: #2A4B8D; /* Navy blue for English text */
+    background-color: #F7FBFF; /* Very light blue background */
+    border-left: 3px solid #2A4B8D;
+  }
+  
+  .english-chunk {
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+  }
+  
+  /* Chunk heading styling */
+  .latin-chunk::before, .english-chunk::before {
+    display: block;
+    font-family: 'Luxurious Roman', serif;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .latin-chunk::before {
+    content: "Latin Original";
+    color: #4B3621;
+  }
+  
+  .english-chunk::before {
+    content: "English Translation";
+    color: #2A4B8D;
+  }
+  
+  /* Paragraph styling for JSON content */
+  .latin-chunk p, .english-chunk p, .translation-paragraph {
+    margin-bottom: 1.2em;
+    line-height: 1.8;
+  }
+  
+  /* Formatting for translation speech markup tags */
+  .english-chunk p em {
+    font-style: italic;
+    color: #333;
+  }
+  
+  .english-chunk p strong {
+    font-weight: bold;
+    color: #000;
   }
   
   /* Parallel Text Layout */
@@ -1328,27 +1391,60 @@ figcaption {
     min-width: 0;
     overflow-y: auto;
     max-height: 80vh;
-    padding: 0 15px;
+    padding: 0;
     border: 1px solid var(--light-gray);
     border-radius: 8px;
+    background-color: var(--white);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .latin-column {
+    background-color: #FFF8E7; /* Cream background for Latin column */
+  }
+  
+  .english-column {
+    background-color: #F7FBFF; /* Light blue background for English column */
   }
   
   .latin-column h3, 
   .english-column h3 {
     position: sticky;
     top: 0;
-    background-color: var(--bg-color);
-    padding: 10px 0;
+    padding: 15px;
+    margin: 0;
     border-bottom: 1px solid var(--medium-gray);
-    margin-bottom: 20px;
-    color: var(--highlight-color);
+    margin-bottom: 0;
+    text-align: center;
     z-index: 1;
+  }
+  
+  .latin-column h3 {
+    background-color: #FFF8E7;
+    color: #4B3621;
+    border-bottom: 2px solid var(--highlight-color);
+  }
+  
+  .english-column h3 {
+    background-color: #F7FBFF;
+    color: #2A4B8D;
+    border-bottom: 2px solid #2A4B8D;
+  }
+  
+  .latin-column .latin-chunk, 
+  .english-column .english-chunk {
+    margin: 15px;
+    border: none;
+    border-radius: 4px;
   }
   
   /* Interlinear View Styling */
   .interlinear-container {
     max-width: var(--content-width);
     margin: 0 auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
   }
   
   .interlinear-container h3 {
@@ -1361,6 +1457,8 @@ figcaption {
   
   .interlinear-chunk {
     margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--medium-gray);
   }
   
   .chunk-heading {
@@ -1371,29 +1469,37 @@ figcaption {
     font-size: 1.1rem;
     color: var(--highlight-color);
     text-align: center;
+    font-family: 'Luxurious Roman', serif;
   }
   
   .interlinear-line {
     margin-bottom: 8px;
-    padding: 5px 10px;
+    padding: 10px;
     border-radius: 4px;
     transition: background-color 0.2s ease;
+    background-color: #FFF8E7;
+    border-left: 3px solid var(--highlight-color);
   }
   
   .interlinear-latin {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-weight: bold;
+    color: #4B3621;
+    line-height: 1.6;
   }
   
   .interlinear-english {
     margin-top: 20px;
     padding: 15px;
-    background-color: var(--light-gray);
+    background-color: #F7FBFF;
     border-radius: 8px;
+    color: #2A4B8D;
+    border-left: 3px solid #2A4B8D;
   }
   
   .interlinear-line.highlighted {
-    background-color: rgba(184, 134, 11, 0.1); /* Using var(--highlight-color) with opacity */
+    background-color: #F0E6D2; /* Darker cream for highlight */
+    border-left: 3px solid var(--dark-highlight);
   }
   
   .interlinear-divider {
@@ -1406,16 +1512,6 @@ figcaption {
   .latin-from-json, .english-from-json {
     max-width: var(--content-width);
     margin: 0 auto;
-  }
-  
-  .latin-chunk, .english-chunk {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--light-gray);
-  }
-  
-  .latin-chunk:last-child, .english-chunk:last-child {
-    border-bottom: none;
   }
   
   .translation-paragraph {
