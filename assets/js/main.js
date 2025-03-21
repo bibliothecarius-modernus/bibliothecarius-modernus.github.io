@@ -1,4 +1,4 @@
-// Combined main.js with YouTube thumbnails and tab functionality
+// Main JavaScript file for Bibliothecarius Modernus
 
 document.addEventListener('DOMContentLoaded', function() {
   // YouTube Thumbnail Click Handler
@@ -21,15 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Tab Functionality
-  const setupTabs = function() {
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
-    
-    if (tabButtons.length === 0) {
-      return; // No tabs on this page
-    }
-    
-    console.log('Setting up tabs - found ' + tabButtons.length + ' tab buttons');
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+  
+  if (tabButtons.length > 0) {
+    console.log('Tab functionality initialized: Found ' + tabButtons.length + ' tabs');
     
     tabButtons.forEach(button => {
       button.addEventListener('click', function() {
@@ -42,13 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add active class to clicked button and corresponding content
         this.classList.add('active');
         const tabId = this.getAttribute('data-tab');
-        const tabContent = document.getElementById(tabId);
-        
-        if (tabContent) {
-          tabContent.classList.add('active');
-        } else {
-          console.error('Tab content with id "' + tabId + '" not found');
-        }
+        document.getElementById(tabId).classList.add('active');
         
         // Save user preference to localStorage
         localStorage.setItem('preferredTab', tabId);
@@ -58,16 +48,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if user has a preferred tab
     const preferredTab = localStorage.getItem('preferredTab');
     if (preferredTab) {
-      const preferredButton = document.querySelector('.tab-button[data-tab="' + preferredTab + '"]');
+      const preferredButton = document.querySelector(`.tab-button[data-tab="${preferredTab}"]`);
       if (preferredButton) {
         preferredButton.click();
       }
     }
-  };
+  }
+
+  // Interactive features for interlinear view
+  if (document.getElementById('interlinear')) {
+    const interlinearLines = document.querySelectorAll('.interlinear-line');
+    interlinearLines.forEach(line => {
+      line.addEventListener('mouseenter', function() {
+        this.classList.add('highlighted');
+      });
+      line.addEventListener('mouseleave', function() {
+        this.classList.remove('highlighted');
+      });
+    });
+  }
   
-  // Run the tab setup
-  setupTabs();
-  
+  // Synchronize scrolling in parallel view
+  if (document.getElementById('parallel')) {
+    const latinColumn = document.querySelector('.latin-column');
+    const englishColumn = document.querySelector('.english-column');
+    
+    if (latinColumn && englishColumn) {
+      latinColumn.addEventListener('scroll', function() {
+        const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
+        englishColumn.scrollTop = scrollPercentage * (englishColumn.scrollHeight - englishColumn.clientHeight);
+      });
+      
+      englishColumn.addEventListener('scroll', function() {
+        const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
+        latinColumn.scrollTop = scrollPercentage * (latinColumn.scrollHeight - latinColumn.clientHeight);
+      });
+    }
+  }
+
   // Add smooth scrolling to all links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
