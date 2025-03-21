@@ -1,0 +1,292 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+      {% if page.author %}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author }}</span>
+          </span>
+      {% endif %}
+      
+      {% if page.categories %}
+      <div class="post-categories">
+        {% for category in page.categories %}
+        <a href="{{ '/archive/#' | append: category | uri_escape | relative_url }}" class="category-tag" data-category="{{ category }}">{{ category }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    
+    {% if page.youtube_id %}
+    <div class="youtube-embed">
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/{{ page.youtube_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    {% elsif page.image %}
+    <div class="post-featured-image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+    </div>
+    {% endif %}
+  </header>
+
+  {% if page.audio_analysis %}
+  <div class="audio-player-container">
+    <details>
+      <summary>Listen to Audio Analysis</summary>
+      <div class="audio-player">
+        <audio controls>
+          <source src="{{ page.audio_analysis | relative_url }}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p class="audio-description">Listen to a brief analysis of this text</p>
+      </div>
+    </details>
+  </div>
+  {% endif %}
+
+  <div class="tabs-container">
+    <div class="tabs">
+      <button class="tab-button active" data-tab="analysis">Analysis</button>
+      <button class="tab-button" data-tab="latin">Latin Original</button>
+      <button class="tab-button" data-tab="english">English Translation</button>
+      <button class="tab-button" data-tab="parallel">Side by Side</button>
+      <button class="tab-button" data-tab="interlinear">Interlinear</button>
+    </div>
+    
+    <div id="analysis" class="tab-content active">
+      <div class="post-content analysis-content" itemprop="articleBody">
+        {{ content | process_markdown_images }}
+      </div>
+    </div>
+    
+    <div id="latin" class="tab-content">
+      <div class="latin-text">
+        {% if page.latin_text %}
+          {{ page.latin_text | markdownify }}
+        {% elsif page.translation_json %}
+          <div class="latin-from-json">
+            {% for chunk in page.translation_json.chunks %}
+              <div class="latin-chunk">
+                {{ chunk.original_latin | newline_to_br }}
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="placeholder-text">Latin text is currently unavailable for this document.</p>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div id="english" class="tab-content">
+      <div class="english-text">
+        {% if page.english_translation %}
+          {{ page.english_translation | markdownify }}
+        {% elsif page.translation_json %}
+          <div class="english-from-json">
+            {% for chunk in page.translation_json.chunks %}
+              <div class="english-chunk">
+                {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
+                {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
+                {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
+                {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
+                {{ cleaned_text }}
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="placeholder-text">English translation is currently unavailable for this document.</p>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div id="parallel" class="tab-content">
+      <div class="parallel-text">
+        {% if page.latin_text and page.english_translation %}
+          <div class="parallel-container">
+            <div class="latin-column">
+              <h3>Latin Original</h3>
+              {{ page.latin_text | markdownify }}
+            </div>
+            <div class="english-column">
+              <h3>English Translation</h3>
+              {{ page.english_translation | markdownify }}
+            </div>
+          </div>
+        {% elsif page.translation_json %}
+          <div class="parallel-container">
+            <div class="latin-column">
+              <h3>Latin Original</h3>
+              {% for chunk in page.translation_json.chunks %}
+                <div class="latin-chunk" id="latin-chunk-{{chunk.chunk_number}}">
+                  {{ chunk.original_latin | newline_to_br }}
+                </div>
+              {% endfor %}
+            </div>
+            <div class="english-column">
+              <h3>English Translation</h3>
+              {% for chunk in page.translation_json.chunks %}
+                <div class="english-chunk" id="english-chunk-{{chunk.chunk_number}}">
+                  {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
+                  {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
+                  {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
+                  {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
+                  {{ cleaned_text }}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <p class="placeholder-text">Complete parallel text is not available for this document.</p>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div id="interlinear" class="tab-content">
+      {% if page.translation_json %}
+        <div class="interlinear-container">
+          <h3>Interlinear Translation</h3>
+          {% for chunk in page.translation_json.chunks %}
+            <div class="interlinear-chunk">
+              <h4 class="chunk-heading">Section {{chunk.chunk_number}}</h4>
+              {% assign latin_lines = chunk.original_latin | split: "
+" %}
+              {% for line in latin_lines %}
+                {% if line != "" %}
+                  <div class="interlinear-line">
+                    <div class="interlinear-latin">{{ line }}</div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+              
+              <div class="interlinear-english">
+                {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
+                {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
+                {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
+                {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
+                {{ cleaned_text }}
+              </div>
+              
+              {% unless forloop.last %}
+                <hr class="interlinear-divider">
+              {% endunless %}
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="placeholder-text">Interlinear text is not available for this document.</p>
+      {% endif %}
+    </div>
+  </div>
+  
+  {% if page.youtube_id %}
+  <div class="youtube-promo">
+    <h3>Enjoy this article? Listen to the translation!</h3>
+    <p>Get the full experience of this Latin Patristic text.</p>
+    <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" class="youtube-button" target="_blank">
+      <svg class="youtube-icon" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="currentColor" d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34,.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58,8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34,.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
+      </svg>
+      Watch on YouTube
+    </a>
+  </div>
+  {% else %}
+  <div class="youtube-promo">
+    <h3>Explore More Latin Patristic Texts</h3>
+    <p>Discover more ancient wisdom through our video translations on YouTube.</p>
+    <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" class="youtube-button" target="_blank">
+      <svg class="youtube-icon" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="currentColor" d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34,.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58,8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34,.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
+      </svg>
+      Visit Our Channel
+    </a>
+  </div>
+  {% endif %}
+  
+  <div class="post-navigation">
+    <div class="post-nav-links">
+      {% if page.previous.url %}
+      <a class="prev-post" href="{{ page.previous.url | relative_url }}">
+        <span class="nav-label">Previous</span>
+        <span class="post-title">{{ page.previous.title | escape }}</span>
+      </a>
+      {% endif %}
+      
+      {% if page.next.url %}
+      <a class="next-post" href="{{ page.next.url | relative_url }}">
+        <span class="nav-label">Next</span>
+        <span class="post-title">{{ page.next.title | escape }}</span>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+
+</article>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+  
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons and contents
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
+      
+      // Add active class to clicked button and corresponding content
+      button.classList.add('active');
+      const tabId = button.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active');
+      
+      // Save user preference to localStorage
+      localStorage.setItem('preferredTab', tabId);
+    });
+  });
+  
+  // Check if user has a preferred tab
+  const preferredTab = localStorage.getItem('preferredTab');
+  if (preferredTab) {
+    const preferredButton = document.querySelector(`.tab-button[data-tab="${preferredTab}"]`);
+    if (preferredButton) {
+      preferredButton.click();
+    }
+  }
+  
+  // Interactive features for interlinear view
+  if (document.getElementById('interlinear')) {
+    const interlinearLines = document.querySelectorAll('.interlinear-line');
+    interlinearLines.forEach(line => {
+      line.addEventListener('mouseenter', function() {
+        this.classList.add('highlighted');
+      });
+      line.addEventListener('mouseleave', function() {
+        this.classList.remove('highlighted');
+      });
+    });
+  }
+  
+  // Synchronize scrolling in parallel view
+  if (document.getElementById('parallel')) {
+    const latinColumn = document.querySelector('.latin-column');
+    const englishColumn = document.querySelector('.english-column');
+    
+    if (latinColumn && englishColumn) {
+      latinColumn.addEventListener('scroll', function() {
+        const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
+        englishColumn.scrollTop = scrollPercentage * (englishColumn.scrollHeight - englishColumn.clientHeight);
+      });
+      
+      englishColumn.addEventListener('scroll', function() {
+        const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
+        latinColumn.scrollTop = scrollPercentage * (latinColumn.scrollHeight - latinColumn.clientHeight);
+      });
+    }
+  }
+});
+</script>
