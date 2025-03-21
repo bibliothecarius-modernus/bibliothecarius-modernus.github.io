@@ -50,24 +50,29 @@ layout: default
   </div>
   {% endif %}
 
-  <!-- Analysis content is displayed by default, outside the tabs -->
-  <div class="post-content analysis-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-  
-  <!-- Translation Viewer - With embedded styles and scripts -->
+  <!-- Simple Translation Viewer - With embedded styles and scripts -->
   <div id="translation-viewer">
-    <!-- Tab buttons for translation options only -->
+    <!-- Tab buttons -->
     <div class="translation-tabs">
-      <button class="tab-btn active" data-target="side-by-side">Side by Side</button>
+      <button class="tab-btn analysis-tab active" data-target="analysis">Analysis</button>
+      <button class="tab-btn" data-target="side-by-side">Side by Side</button>
       <button class="tab-btn" data-target="latin-only">Latin Only</button>
       <button class="tab-btn" data-target="english-only">English Only</button>
     </div>
     
     <!-- Tab Content -->
     <div class="tab-content">
+      <!-- Analysis View -->
+      <div id="analysis" class="tab-panel active">
+        <div class="analysis-container">
+          <div class="post-content analysis-content" itemprop="articleBody">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+      
       <!-- Side by Side View -->
-      <div id="side-by-side" class="tab-panel active">
+      <div id="side-by-side" class="tab-panel">
         <div class="two-columns">
           <div class="latin-column">
             <h3>Latin Original</h3>
@@ -210,8 +215,6 @@ layout: default
     #translation-viewer {
       margin: 30px 0;
       font-family: inherit;
-      border-top: 2px solid #B8860B;
-      padding-top: 20px;
     }
     
     /* Tab buttons */
@@ -244,21 +247,49 @@ layout: default
       font-weight: bold;
     }
     
+    /* Special styling for analysis tab */
+    .analysis-tab {
+      background-color: #3E2C1B;
+      color: #EDE0CA;
+      font-size: 1.05rem;
+    }
+    
+    .analysis-tab:hover {
+      background-color: #4d372a;
+    }
+    
+    .analysis-tab.active {
+      background-color: #3E2C1B;
+      color: #EDE0CA;
+    }
+    
     /* Tab content container */
     .tab-content {
       border: 1px solid #B8860B;
       border-top: none;
-      padding: 15px;
       background-color: white;
     }
     
     /* Tab panels */
     .tab-panel {
       display: none;
+      padding: 15px;
     }
     
     .tab-panel.active {
       display: block;
+    }
+    
+    /* Analysis panel without border or background */
+    #analysis {
+      padding: 0;
+      border: none;
+      margin: 0;
+      background-color: transparent;
+    }
+    
+    .analysis-container {
+      padding: 0;
     }
     
     /* Two-column layout for side-by-side view */
@@ -366,16 +397,6 @@ layout: default
       font-style: italic;
     }
     
-    /* Emphasize this is the translation section */
-    #translation-viewer::before {
-      content: "Translation";
-      display: block;
-      font-family: 'Luxurious Roman', serif;
-      font-size: 1.5rem;
-      color: #B8860B;
-      margin-bottom: 15px;
-    }
-    
     /* Mobile responsiveness */
     @media (max-width: 768px) {
       .translation-tabs {
@@ -431,12 +452,12 @@ layout: default
           document.getElementById(targetId).classList.add('active');
           
           // Save preference to localStorage
-          localStorage.setItem('preferredTranslationTab', targetId);
+          localStorage.setItem('preferredTab', targetId);
         });
       });
       
       // Check for saved preference
-      const savedTab = localStorage.getItem('preferredTranslationTab');
+      const savedTab = localStorage.getItem('preferredTab');
       if (savedTab && document.getElementById(savedTab)) {
         // Find the button for this tab
         const savedButton = document.querySelector('.tab-btn[data-target="' + savedTab + '"]');
