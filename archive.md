@@ -135,4 +135,17 @@ permalink: /archive/
       thumbnail.style.cursor = 'pointer';
     });
   });
+  if (window.location.hash) {
+  const category = window.location.hash.substring(1); // Remove the # symbol
+  
+  // Find the corresponding category filter and click it
+  const categoryFilters = document.querySelectorAll('.category-filter a');
+  categoryFilters.forEach(filter => {
+    if (filter.getAttribute('data-category') === category) {
+      filter.click();
+      
+      // Scroll to the filter to make it visible
+      filter.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
 </script>
