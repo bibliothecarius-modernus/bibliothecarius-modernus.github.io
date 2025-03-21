@@ -50,12 +50,16 @@ layout: default
   </div>
   {% endif %}
 
-  <!-- Simple Translation Viewer - With embedded styles and scripts -->
+  <!-- Analysis content is displayed by default, outside the tabs -->
+  <div class="post-content analysis-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+  
+  <!-- Translation Viewer - With embedded styles and scripts -->
   <div id="translation-viewer">
-    <!-- Tab buttons -->
+    <!-- Tab buttons for translation options only -->
     <div class="translation-tabs">
       <button class="tab-btn active" data-target="side-by-side">Side by Side</button>
-      <button class="tab-btn" data-target="analysis">Analysis</button>
       <button class="tab-btn" data-target="latin-only">Latin Only</button>
       <button class="tab-btn" data-target="english-only">English Only</button>
     </div>
@@ -107,13 +111,6 @@ layout: default
               {% endif %}
             </div>
           </div>
-        </div>
-      </div>
-      
-      <!-- Analysis View -->
-      <div id="analysis" class="tab-panel">
-        <div class="post-content analysis-content" itemprop="articleBody">
-          {{ content }}
         </div>
       </div>
       
@@ -213,6 +210,8 @@ layout: default
     #translation-viewer {
       margin: 30px 0;
       font-family: inherit;
+      border-top: 2px solid #B8860B;
+      padding-top: 20px;
     }
     
     /* Tab buttons */
@@ -367,6 +366,16 @@ layout: default
       font-style: italic;
     }
     
+    /* Emphasize this is the translation section */
+    #translation-viewer::before {
+      content: "Translation";
+      display: block;
+      font-family: 'Luxurious Roman', serif;
+      font-size: 1.5rem;
+      color: #B8860B;
+      margin-bottom: 15px;
+    }
+    
     /* Mobile responsiveness */
     @media (max-width: 768px) {
       .translation-tabs {
@@ -422,12 +431,12 @@ layout: default
           document.getElementById(targetId).classList.add('active');
           
           // Save preference to localStorage
-          localStorage.setItem('preferredTab', targetId);
+          localStorage.setItem('preferredTranslationTab', targetId);
         });
       });
       
       // Check for saved preference
-      const savedTab = localStorage.getItem('preferredTab');
+      const savedTab = localStorage.getItem('preferredTranslationTab');
       if (savedTab && document.getElementById(savedTab)) {
         // Find the button for this tab
         const savedButton = document.querySelector('.tab-btn[data-target="' + savedTab + '"]');
