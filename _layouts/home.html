@@ -64,7 +64,7 @@ layout: default
         {% if post.categories %}
         <div class="post-categories">
             {% for category in post.categories %}
-            <a href="{{ '/archive/#' | append: category | relative_url }}" class="category-tag" data-category="{{ category }}">{{ category }}</a>
+            <a href="{{ '/archive/#' | append: category | uri_escape | relative_url }}" class="category-tag" data-category="{{ category }}">{{ category }}</a>
             {% endfor %}
         </div>
         {% endif %}

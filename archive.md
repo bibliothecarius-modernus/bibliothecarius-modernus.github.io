@@ -74,130 +74,126 @@ permalink: /archive/
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const categoryFilters = document.querySelectorAll('.category-filter a');
-  const archiveItems = document.querySelectorAll('.archive-item');
-  
-  categoryFilters.forEach(filter => {
-    filter.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Remove active class from all filters
-      categoryFilters.forEach(f => f.classList.remove('active'));
-      
-      // Add active class to clicked filter
-      this.classList.add('active');
-      
-      const category = this.getAttribute('data-category');
-      
-      // Show/hide items based on category
-      archiveItems.forEach(item => {
-        if (category === 'all') {
-          item.style.display = 'block';
-        } else {
-          const itemCategories = item.getAttribute('data-categories');
-          if (itemCategories && itemCategories.includes(category)) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
-        }
-      });
-    });
-  });
-  
-  // Handle category tag clicks
-  document.querySelectorAll('.post-categories .category-tag').forEach(tag => {
-    tag.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const categoryToFilter = this.getAttribute('data-filter');
-      
-      // Find and click the corresponding category filter
-      categoryFilters.forEach(filter => {
-        if (filter.getAttribute('data-category') === categoryToFilter) {
-          filter.click();
-        }
-      });
-    });
-  });
-  
-  // YouTube thumbnail click handling
-  document.querySelectorAll('.youtube-thumbnail-container').forEach(thumbnail => {
-    thumbnail.addEventListener('click', function() {
-      const postLink = this.closest('.archive-post-container').querySelector('.archive-post-title a').getAttribute('href');
-      if (postLink) {
-        window.location.href = postLink;
-      }
-    });
-    
-    // Make the thumbnail look clickable
-    thumbnail.style.cursor = 'pointer';
-  });
-  
-  // Add the new hash handling code here, right before the closing bracket of the DOMContentLoaded function
-  
-  // Handle hash in URL for direct category filtering
-  if (window.location.hash) {
-    const category = window.location.hash.substring(1); // Remove the # symbol
-    
-    // Find the corresponding category filter and click it
+  document.addEventListener('DOMContentLoaded', function() {
     const categoryFilters = document.querySelectorAll('.category-filter a');
-    let foundFilter = false;
+    const archiveItems = document.querySelectorAll('.archive-item');
     
     categoryFilters.forEach(filter => {
-      const filterCategory = filter.getAttribute('data-category');
-      
-      // Check if the category matches (case-insensitive comparison)
-      if (filterCategory && filterCategory.toLowerCase() === category.toLowerCase()) {
-        // Remove active class from all filters first
+      filter.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Remove active class from all filters
         categoryFilters.forEach(f => f.classList.remove('active'));
         
-        // Add active class to this filter
-        filter.classList.add('active');
+        // Add active class to clicked filter
+        this.classList.add('active');
+        
+        const category = this.getAttribute('data-category');
         
         // Show/hide items based on category
+        archiveItems.forEach(item => {
+          if (category === 'all') {
+            item.style.display = 'block';
+          } else {
+            const itemCategories = item.getAttribute('data-categories');
+            if (itemCategories && itemCategories.includes(category)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+    
+    // Handle category tag clicks
+    document.querySelectorAll('.post-categories .category-tag').forEach(tag => {
+      tag.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const categoryToFilter = this.getAttribute('data-filter');
+        
+        // Find and click the corresponding category filter
+        categoryFilters.forEach(filter => {
+          if (filter.getAttribute('data-category') === categoryToFilter) {
+            filter.click();
+          }
+        });
+      });
+    });
+    
+    // YouTube thumbnail click handling
+    document.querySelectorAll('.youtube-thumbnail-container').forEach(thumbnail => {
+      thumbnail.addEventListener('click', function() {
+        const postLink = this.closest('.archive-post-container').querySelector('.archive-post-title a').getAttribute('href');
+        if (postLink) {
+          window.location.href = postLink;
+        }
+      });
+      
+      // Make the thumbnail look clickable
+      thumbnail.style.cursor = 'pointer';
+    });
+    
+    // Handle hash in URL for direct category filtering
+    if (window.location.hash) {
+      // Decode the URL hash to handle spaces and special characters
+      const category = decodeURIComponent(window.location.hash.substring(1));
+      
+      // Find the corresponding category filter and click it
+      const categoryFilters = document.querySelectorAll('.category-filter a');
+      let foundFilter = false;
+      
+      categoryFilters.forEach(filter => {
+        const filterCategory = filter.getAttribute('data-category');
+        
+        // Case-insensitive comparison
+        if (filterCategory && filterCategory.toLowerCase() === category.toLowerCase()) {
+          filter.click();
+          foundFilter = true;
+          
+          // Scroll to the filter to make it visible
+          setTimeout(() => {
+            filter.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        }
+      });
+      
+      // If we didn't find a match, try direct filtering as fallback
+      if (!foundFilter) {
         const archiveItems = document.querySelectorAll('.archive-item');
+        let hasMatchingItems = false;
+        
         archiveItems.forEach(item => {
           const itemCategories = item.getAttribute('data-categories');
-          if (itemCategories && itemCategories.toLowerCase().includes(category.toLowerCase())) {
-            item.style.display = 'block';
+          
+          if (itemCategories) {
+            // Split the categories string and check each one
+            const categories = itemCategories.split(' ');
+            if (categories.some(cat => cat.toLowerCase() === category.toLowerCase())) {
+              item.style.display = 'block';
+              hasMatchingItems = true;
+            } else {
+              item.style.display = 'none';
+            }
           } else {
             item.style.display = 'none';
           }
         });
         
-        // Scroll to the filter to make it visible
-        filter.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        foundFilter = true;
-      }
-    });
-    
-    // If we didn't find a matching filter, try to find a category with that name anyway
-    if (!foundFilter) {
-      const archiveItems = document.querySelectorAll('.archive-item');
-      let hasMatchingItems = false;
-      
-      archiveItems.forEach(item => {
-        const itemCategories = item.getAttribute('data-categories');
-        if (itemCategories && itemCategories.toLowerCase().includes(category.toLowerCase())) {
-          item.style.display = 'block';
-          hasMatchingItems = true;
-        } else {
-          item.style.display = 'none';
-        }
-      });
-      
-      if (hasMatchingItems) {
-        // Update the "All Categories" button to not be active
-        const allCategoriesFilter = document.querySelector('.category-filter a[data-category="all"]');
-        if (allCategoriesFilter) {
+        if (hasMatchingItems) {
+          // Update filter buttons to show the right one as active
           categoryFilters.forEach(f => f.classList.remove('active'));
-          // We don't mark any specific category as active since we didn't find an exact match
+          
+          // Try to find and mark the matching category filter
+          categoryFilters.forEach(filter => {
+            if (filter.getAttribute('data-category') && 
+                filter.getAttribute('data-category').toLowerCase() === category.toLowerCase()) {
+              filter.classList.add('active');
+            }
+          });
         }
       }
     }
-  }
-});
+  });
 </script>

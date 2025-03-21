@@ -15,13 +15,13 @@ layout: default
           </span>
       {% endif %}
       
-      {% if page.categories %}
-      <div class="post-categories">
-        {% for category in page.categories %}
-        <a href="{{ '/categories/' | append: category | relative_url }}" class="category-tag">{{ category }}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
+      {% if post.categories %}
+        <div class="post-categories">
+            {% for category in post.categories %}
+            <a href="{{ '/archive/#' | append: category | uri_escape | relative_url }}" class="category-tag" data-category="{{ category }}">{{ category }}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
     </div>
     
     {% if page.youtube_id %}
