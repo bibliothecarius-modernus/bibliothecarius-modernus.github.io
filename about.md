@@ -22,8 +22,6 @@ permalink: /about/
   <ul class="resource-list">
     <li><a href="https://github.com/wryan14/Latin-Patristic-Texts" target="_blank">Latin Patristic Texts Repository</a> - Access the growing collection of translated texts.</li>
     <li><a href="https://github.com/wryan14/TextractSSMLProcessor" target="_blank">Text Conversion Project</a> - Learn about the technology and methods used.</li>
-    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdpoyGc_rA5TQKtoKQ7WbKkvvGj97zTLhS3gPT3M__4zFu3Yw/viewform" target="_blank">Suggest a Title</a> - Recommend a text for translation.</li>
-    <li><a href="https://strawpoll.com/BJnXV77LjZv" target="_blank">Vote for a Title</a> - Help choose the next translation project.</li>
   </ul>
 
   <p><em>For any translators who are interested in making their own translations or authoritative editions: Everything associated with my project is under Creative Commons license, so it's yours to use as a jumping off point - no need to ask. If you want to credit my work or just let me know this was helpful, that's always appreciated but not required.</em></p>
