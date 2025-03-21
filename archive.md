@@ -7,6 +7,19 @@ permalink: /archive/
 <div class="archive-page">
   <h1 class="archive-title">Translation & Research Archive</h1>
   
+  <!-- Archive Search - Above Categories -->
+  <div class="archive-search-container">
+    <form action="{{ '/search.html' | relative_url }}" method="get" class="archive-search-form">
+      <input type="text" name="query" placeholder="Search translations..." class="archive-search-input">
+      <button type="submit" class="archive-search-button">
+        <svg viewBox="0 0 24 24" width="16" height="16">
+          <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+        <span class="search-button-text">Search</span>
+      </button>
+    </form>
+  </div>
+  
   {% if site.categories.size > 0 %}
   <div class="archive-categories">
     <h2>Browse by Category</h2>
@@ -72,6 +85,75 @@ permalink: /archive/
     {% endfor %}
   </div>
 </div>
+
+<style>
+  /* Archive Search Styles */
+  .archive-search-container {
+    margin-bottom: 30px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .archive-search-form {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    background-color: var(--white);
+    border: 1px solid var(--highlight-color);
+  }
+  
+  .archive-search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+  
+  .archive-search-input::placeholder {
+    color: var(--dark-gray);
+    font-style: italic;
+  }
+  
+  .archive-search-input:focus {
+    outline: none;
+  }
+  
+  .archive-search-button {
+    background-color: var(--highlight-color);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    font-family: 'PT Serif', serif;
+    font-weight: 500;
+  }
+  
+  .archive-search-button:hover {
+    background-color: var(--dark-highlight);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .archive-search-container {
+      max-width: 100%;
+    }
+    
+    .search-button-text {
+      display: none;
+    }
+    
+    .archive-search-button {
+      padding: 12px;
+    }
+  }
+</style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
