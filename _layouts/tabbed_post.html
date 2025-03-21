@@ -33,6 +33,12 @@ layout: default
       <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
     </div>
     {% endif %}
+    
+    <div class="article-summary-container">
+      {% if page.article-summary %}
+        <p class="article-summary">{{ page.article-summary }}</p>
+      {% endif %}
+    </div>
   </header>
 
   {% if page.audio_analysis %}
@@ -52,17 +58,27 @@ layout: default
 
   <div class="tabs-container">
     <div class="tabs">
-      <button class="tab-button active" data-tab="analysis">Analysis</button>
+      <button class="tab-button active" data-tab="analysis">
+        <span class="tab-icon">📝</span>
+        <span class="tab-label">Analysis</span>
+      </button>
       {% if page.latin_text or page.translation_json %}
-        <button class="tab-button" data-tab="latin">Latin Original</button>
-        <button class="tab-button" data-tab="english">English Translation</button>
-        <button class="tab-button" data-tab="parallel">Side by Side</button>
-        <button class="tab-button" data-tab="interlinear">Interlinear</button>
+        <button class="tab-button" data-tab="latin">
+          <span class="tab-icon">🏛️</span>
+          <span class="tab-label">Latin Original</span>
+        </button>
+        <button class="tab-button" data-tab="english">
+          <span class="tab-icon">🔤</span>
+          <span class="tab-label">English Translation</span>
+        </button>
+        <button class="tab-button" data-tab="interlinear">
+          <span class="tab-icon">↔️</span>
+          <span class="tab-label">Interlinear View</span>
+        </button>
       {% endif %}
     </div>
     
     <div id="analysis" class="tab-content active">
-      <h2 class="tab-title">Analysis</h2>
       <div class="post-content analysis-content" itemprop="articleBody">
         {{ content | process_markdown_images }}
       </div>
@@ -70,15 +86,17 @@ layout: default
     
     {% if page.latin_text or page.translation_json %}
       <div id="latin" class="tab-content">
-        <h2 class="tab-title">Latin Original</h2>
         <div class="latin-text">
           {% if page.latin_text %}
             {{ page.latin_text | markdownify }}
           {% elsif page.translation_json %}
             <div class="latin-from-json">
               {% for chunk in page.translation_json.chunks %}
-                <div class="latin-chunk" data-title="Section {{ chunk.chunk_number }}">
-                  {{ chunk.original_latin | newline_to_br }}
+                <div class="latin-chunk" id="latin-section-{{ chunk.chunk_number }}">
+                  <span class="section-indicator">Section {{ chunk.chunk_number }}</span>
+                  <div class="latin-content">
+                    {{ chunk.original_latin | newline_to_br }}
+                  </div>
                 </div>
               {% endfor %}
             </div>
@@ -89,19 +107,21 @@ layout: default
       </div>
       
       <div id="english" class="tab-content">
-        <h2 class="tab-title">English Translation</h2>
         <div class="english-text">
           {% if page.english_translation %}
             {{ page.english_translation | markdownify }}
           {% elsif page.translation_json %}
             <div class="english-from-json">
               {% for chunk in page.translation_json.chunks %}
-                <div class="english-chunk" data-title="Section {{ chunk.chunk_number }}">
-                  {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
-                  {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
-                  {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
-                  {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
-                  {{ cleaned_text }}
+                <div class="english-chunk" id="english-section-{{ chunk.chunk_number }}">
+                  <span class="section-indicator">Section {{ chunk.chunk_number }}</span>
+                  <div class="english-content">
+                    {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
+                    {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
+                    {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
+                    {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
+                    {{ cleaned_text }}
+                  </div>
                 </div>
               {% endfor %}
             </div>
@@ -111,74 +131,29 @@ layout: default
         </div>
       </div>
       
-      <div id="parallel" class="tab-content">
-        <h2 class="tab-title">Side by Side Comparison</h2>
-        <div class="parallel-text">
-          {% if page.latin_text and page.english_translation %}
-            <div class="parallel-container">
-              <div class="latin-column">
-                <h3>Latin Original</h3>
-                {{ page.latin_text | markdownify }}
-              </div>
-              <div class="english-column">
-                <h3>English Translation</h3>
-                {{ page.english_translation | markdownify }}
-              </div>
-            </div>
-          {% elsif page.translation_json %}
-            <div class="parallel-container">
-              <div class="latin-column">
-                <h3>Latin Original</h3>
-                {% for chunk in page.translation_json.chunks %}
-                  <div class="latin-chunk" id="latin-chunk-{{chunk.chunk_number}}">
-                    {{ chunk.original_latin | newline_to_br }}
-                  </div>
-                {% endfor %}
-              </div>
-              <div class="english-column">
-                <h3>English Translation</h3>
-                {% for chunk in page.translation_json.chunks %}
-                  <div class="english-chunk" id="english-chunk-{{chunk.chunk_number}}">
-                    {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
-                    {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
-                    {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
-                    {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
-                    {{ cleaned_text }}
-                  </div>
-                {% endfor %}
-              </div>
-            </div>
-          {% else %}
-            <p class="placeholder-text">Complete parallel text is not available for this document.</p>
-          {% endif %}
-        </div>
-      </div>
-      
       <div id="interlinear" class="tab-content">
-        {% if page.translation_json %}
-          <div class="interlinear-container">
-            <h2 class="tab-title">Interlinear Translation</h2>
+        <div class="interlinear-container">
+          {% if page.translation_json %}
             {% for chunk in page.translation_json.chunks %}
               <div class="interlinear-chunk">
-                <h4 class="chunk-heading">Section {{chunk.chunk_number}}</h4>
-                <div class="interlinear-section">
-                  {% assign latin_lines = chunk.original_latin | split: "
-" %}
-                  {% for line in latin_lines %}
-                    {% if line != "" %}
-                      <div class="interlinear-pair">
-                        <div class="interlinear-line">
-                          <div class="interlinear-latin">{{ line }}</div>
-                        </div>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
+                <div class="interlinear-header">
+                  <h4 class="section-title">Section {{ chunk.chunk_number }}</h4>
                 </div>
                 
-                <!-- Complete translation section -->
-                <div class="complete-translation">
+                {% assign latin_lines = chunk.original_latin | split: "
+" %}
+                {% for line in latin_lines %}
+                  {% if line != "" %}
+                    <div class="interlinear-pair">
+                      <div class="latin-line">{{ line }}</div>
+                      <!-- The English translation will be adjacent rather than below -->
+                    </div>
+                  {% endif %}
+                {% endfor %}
+                
+                <div class="interlinear-translation">
                   <h5>Complete Translation</h5>
-                  <div class="interlinear-english full-translation">
+                  <div class="full-translation">
                     {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
                     {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
                     {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
@@ -188,14 +163,14 @@ layout: default
                 </div>
                 
                 {% unless forloop.last %}
-                  <hr class="interlinear-divider">
+                  <hr class="section-divider">
                 {% endunless %}
               </div>
             {% endfor %}
-          </div>
-        {% else %}
-          <p class="placeholder-text">Interlinear text is not available for this document.</p>
-        {% endif %}
+          {% else %}
+            <p class="placeholder-text">Interlinear text is not available for this document.</p>
+          {% endif %}
+        </div>
       </div>
     {% endif %}
   </div>
@@ -243,107 +218,3 @@ layout: default
   </div>
 
 </article>
-
-<!-- Add inline JavaScript to handle tab functionality directly in this file -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM loaded in tabbed_post template");
-    
-    // Get all tab buttons and tab content
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
-    
-    console.log("Found " + tabButtons.length + " tab buttons and " + tabContents.length + " content sections");
-    
-    // Add click event to each tab button
-    tabButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const tabId = this.getAttribute('data-tab');
-        console.log("Tab clicked: " + tabId);
-        
-        // Hide all tab contents
-        tabContents.forEach(content => {
-          content.style.display = 'none';
-          content.classList.remove('active');
-        });
-        
-        // Remove active class from all buttons
-        tabButtons.forEach(btn => {
-          btn.classList.remove('active');
-        });
-        
-        // Show the selected tab content
-        document.getElementById(tabId).style.display = 'block';
-        document.getElementById(tabId).classList.add('active');
-        
-        // Add active class to clicked button
-        this.classList.add('active');
-        
-        // Save user preference
-        localStorage.setItem('preferredTab', tabId);
-      });
-    });
-    
-    // Set initial state - always default to analysis tab first, then check localStorage
-    const savedTab = localStorage.getItem('preferredTab');
-    
-    // Hide all tabs first
-    tabContents.forEach(content => {
-      content.style.display = 'none';
-      content.classList.remove('active');
-    });
-    
-    // Show the appropriate tab
-    if (savedTab && document.getElementById(savedTab)) {
-      // Show saved tab
-      document.getElementById(savedTab).style.display = 'block';
-      document.getElementById(savedTab).classList.add('active');
-      
-      // Update button state
-      const savedButton = document.querySelector(`.tab-button[data-tab="${savedTab}"]`);
-      if (savedButton) {
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        savedButton.classList.add('active');
-      }
-    } else {
-      // Default to analysis tab
-      document.getElementById('analysis').style.display = 'block';
-      document.getElementById('analysis').classList.add('active');
-      tabButtons[0].classList.add('active');
-      
-      // Save this preference
-      localStorage.setItem('preferredTab', 'analysis');
-    }
-    
-    // Set up interactive features for interlinear view
-    if (document.getElementById('interlinear')) {
-      const interlinearLines = document.querySelectorAll('.interlinear-line');
-      interlinearLines.forEach(line => {
-        line.addEventListener('mouseenter', function() {
-          this.classList.add('highlighted');
-        });
-        line.addEventListener('mouseleave', function() {
-          this.classList.remove('highlighted');
-        });
-      });
-    }
-    
-    // Parallel view scrolling synchronization
-    if (document.getElementById('parallel')) {
-      const latinColumn = document.querySelector('.latin-column');
-      const englishColumn = document.querySelector('.english-column');
-      
-      if (latinColumn && englishColumn) {
-        latinColumn.addEventListener('scroll', function() {
-          const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
-          englishColumn.scrollTop = scrollPercentage * (englishColumn.scrollHeight - englishColumn.clientHeight);
-        });
-        
-        englishColumn.addEventListener('scroll', function() {
-          const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
-          latinColumn.scrollTop = scrollPercentage * (latinColumn.scrollHeight - latinColumn.clientHeight);
-        });
-      }
-    }
-  });
-</script>
