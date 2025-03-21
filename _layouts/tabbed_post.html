@@ -2,7 +2,6 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <div class="post-meta">
@@ -50,137 +49,115 @@ layout: default
   </div>
   {% endif %}
 
-  <div class="tabs-container">
-    <div class="tabs">
-      <button class="tab-button active" data-tab="analysis">Analysis</button>
-      <button class="tab-button" data-tab="latin">Latin Original</button>
-      <button class="tab-button" data-tab="english">English Translation</button>
-      <button class="tab-button" data-tab="parallel">Side by Side</button>
-      <button class="tab-button" data-tab="interlinear">Interlinear</button>
+  <div class="translation-viewer">
+    <div class="view-options">
+      <button class="view-option active" data-view="side-by-side">Side by Side</button>
+      <button class="view-option" data-view="analysis">Analysis</button>
+      <button class="view-option" data-view="latin-only">Latin Only</button>
+      <button class="view-option" data-view="english-only">English Only</button>
     </div>
     
-    <div id="analysis" class="tab-content active">
-      <div class="post-content analysis-content" itemprop="articleBody">
-        {{ content | process_markdown_images }}
-      </div>
-    </div>
-    
-    <div id="latin" class="tab-content">
-      <div class="latin-text">
-        {% if page.latin_text %}
-          {{ page.latin_text | markdownify }}
-        {% elsif page.translation_json %}
-          <div class="latin-from-json">
-            {% for chunk in page.translation_json.chunks %}
-              <div class="latin-chunk">
-                {{ chunk.original_latin | newline_to_br }}
-              </div>
-            {% endfor %}
-          </div>
-        {% else %}
-          <p class="placeholder-text">Latin text is currently unavailable for this document.</p>
-        {% endif %}
-      </div>
-    </div>
-    
-    <div id="english" class="tab-content">
-      <div class="english-text">
-        {% if page.english_translation %}
-          {{ page.english_translation | markdownify }}
-        {% elsif page.translation_json %}
-          <div class="english-from-json">
-            {% for chunk in page.translation_json.chunks %}
-              <div class="english-chunk">
-                {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
-                {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
-                {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
-                {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
-                {{ cleaned_text }}
-              </div>
-            {% endfor %}
-          </div>
-        {% else %}
-          <p class="placeholder-text">English translation is currently unavailable for this document.</p>
-        {% endif %}
-      </div>
-    </div>
-    
-    <div id="parallel" class="tab-content">
-      <div class="parallel-text">
-        {% if page.latin_text and page.english_translation %}
-          <div class="parallel-container">
-            <div class="latin-column">
-              <h3>Latin Original</h3>
-              {{ page.latin_text | markdownify }}
-            </div>
-            <div class="english-column">
-              <h3>English Translation</h3>
-              {{ page.english_translation | markdownify }}
+    <div class="view-container">
+      <!-- Side by Side View -->
+      <div id="side-by-side-view" class="view-panel active">
+        <div class="side-by-side-container">
+          <div class="latin-panel">
+            <div class="panel-header">Latin Original</div>
+            <div class="panel-content">
+              {% if page.latin_text %}
+                {{ page.latin_text | markdownify }}
+              {% elsif page.translation_json %}
+                {% for chunk in page.translation_json.chunks %}
+                  <div class="latin-section" id="latin-section-{{ chunk.chunk_number }}">
+                    <div class="section-number">{{ chunk.chunk_number }}</div>
+                    <div class="section-content">
+                      {{ chunk.original_latin | newline_to_br }}
+                    </div>
+                  </div>
+                {% endfor %}
+              {% else %}
+                <p class="placeholder-text">Latin text is not available for this document.</p>
+              {% endif %}
             </div>
           </div>
-        {% elsif page.translation_json %}
-          <div class="parallel-container">
-            <div class="latin-column">
-              <h3>Latin Original</h3>
-              {% for chunk in page.translation_json.chunks %}
-                <div class="latin-chunk" id="latin-chunk-{{chunk.chunk_number}}">
+          <div class="english-panel">
+            <div class="panel-header">English Translation</div>
+            <div class="panel-content">
+              {% if page.english_translation %}
+                {{ page.english_translation | markdownify }}
+              {% elsif page.translation_json %}
+                {% for chunk in page.translation_json.chunks %}
+                  <div class="english-section" id="english-section-{{ chunk.chunk_number }}">
+                    <div class="section-number">{{ chunk.chunk_number }}</div>
+                    <div class="section-content">
+                      {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
+                      {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
+                      {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
+                      {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
+                      {{ cleaned_text }}
+                    </div>
+                  </div>
+                {% endfor %}
+              {% else %}
+                <p class="placeholder-text">English translation is not available for this document.</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Analysis View -->
+      <div id="analysis-view" class="view-panel">
+        <div class="analysis-container">
+          <div class="post-content analysis-content" itemprop="articleBody">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+      
+      <!-- Latin Only View -->
+      <div id="latin-only-view" class="view-panel">
+        <div class="latin-content">
+          {% if page.latin_text %}
+            {{ page.latin_text | markdownify }}
+          {% elsif page.translation_json %}
+            {% for chunk in page.translation_json.chunks %}
+              <div class="latin-section full-width" id="latin-section-full-{{ chunk.chunk_number }}">
+                <div class="section-number">{{ chunk.chunk_number }}</div>
+                <div class="section-content">
                   {{ chunk.original_latin | newline_to_br }}
                 </div>
-              {% endfor %}
-            </div>
-            <div class="english-column">
-              <h3>English Translation</h3>
-              {% for chunk in page.translation_json.chunks %}
-                <div class="english-chunk" id="english-chunk-{{chunk.chunk_number}}">
+              </div>
+            {% endfor %}
+          {% else %}
+            <p class="placeholder-text">Latin text is not available for this document.</p>
+          {% endif %}
+        </div>
+      </div>
+      
+      <!-- English Only View -->
+      <div id="english-only-view" class="view-panel">
+        <div class="english-content">
+          {% if page.english_translation %}
+            {{ page.english_translation | markdownify }}
+          {% elsif page.translation_json %}
+            {% for chunk in page.translation_json.chunks %}
+              <div class="english-section full-width" id="english-section-full-{{ chunk.chunk_number }}">
+                <div class="section-number">{{ chunk.chunk_number }}</div>
+                <div class="section-content">
                   {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
                   {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
                   {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
                   {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
                   {{ cleaned_text }}
                 </div>
-              {% endfor %}
-            </div>
-          </div>
-        {% else %}
-          <p class="placeholder-text">Complete parallel text is not available for this document.</p>
-        {% endif %}
-      </div>
-    </div>
-    
-    <div id="interlinear" class="tab-content">
-      {% if page.translation_json %}
-        <div class="interlinear-container">
-          <h3>Interlinear Translation</h3>
-          {% for chunk in page.translation_json.chunks %}
-            <div class="interlinear-chunk">
-              <h4 class="chunk-heading">Section {{chunk.chunk_number}}</h4>
-              {% assign latin_lines = chunk.original_latin | split: "
-" %}
-              {% for line in latin_lines %}
-                {% if line != "" %}
-                  <div class="interlinear-line">
-                    <div class="interlinear-latin">{{ line }}</div>
-                  </div>
-                {% endif %}
-              {% endfor %}
-              
-              <div class="interlinear-english">
-                {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
-                {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
-                {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
-                {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
-                {{ cleaned_text }}
               </div>
-              
-              {% unless forloop.last %}
-                <hr class="interlinear-divider">
-              {% endunless %}
-            </div>
-          {% endfor %}
+            {% endfor %}
+          {% else %}
+            <p class="placeholder-text">English translation is not available for this document.</p>
+          {% endif %}
         </div>
-      {% else %}
-        <p class="placeholder-text">Interlinear text is not available for this document.</p>
-      {% endif %}
+      </div>
     </div>
   </div>
   
@@ -226,105 +203,90 @@ layout: default
     </div>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Simple view switching
+      const viewOptions = document.querySelectorAll('.view-option');
+      const viewPanels = document.querySelectorAll('.view-panel');
+      
+      // Set up view switching
+      viewOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          const viewName = this.getAttribute('data-view');
+          
+          // Remove active class from all options and panels
+          viewOptions.forEach(opt => opt.classList.remove('active'));
+          viewPanels.forEach(panel => panel.classList.remove('active'));
+          
+          // Add active class to selected option and panel
+          this.classList.add('active');
+          document.getElementById(viewName + '-view').classList.add('active');
+          
+          // Save preference to localStorage
+          localStorage.setItem('preferredView', viewName);
+        });
+      });
+      
+      // Check for saved preference
+      const savedView = localStorage.getItem('preferredView');
+      if (savedView) {
+        const savedButton = document.querySelector(`.view-option[data-view="${savedView}"]`);
+        if (savedButton) {
+          savedButton.click();
+        }
+      }
+      
+      // Synchronize scrolling in side-by-side view
+      const latinPanel = document.querySelector('.latin-panel .panel-content');
+      const englishPanel = document.querySelector('.english-panel .panel-content');
+      
+      if (latinPanel && englishPanel) {
+        latinPanel.addEventListener('scroll', function() {
+          const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
+          englishPanel.scrollTop = scrollPercentage * (englishPanel.scrollHeight - englishPanel.clientHeight);
+        });
+        
+        englishPanel.addEventListener('scroll', function() {
+          const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
+          latinPanel.scrollTop = scrollPercentage * (latinPanel.scrollHeight - latinPanel.clientHeight);
+        });
+      }
+      
+      // Section highlight on hover
+      const latinSections = document.querySelectorAll('.latin-section');
+      const englishSections = document.querySelectorAll('.english-section');
+      
+      latinSections.forEach((section, index) => {
+        section.addEventListener('mouseenter', function() {
+          this.classList.add('highlight');
+          if (englishSections[index]) {
+            englishSections[index].classList.add('highlight');
+          }
+        });
+        
+        section.addEventListener('mouseleave', function() {
+          this.classList.remove('highlight');
+          if (englishSections[index]) {
+            englishSections[index].classList.remove('highlight');
+          }
+        });
+      });
+      
+      englishSections.forEach((section, index) => {
+        section.addEventListener('mouseenter', function() {
+          this.classList.add('highlight');
+          if (latinSections[index]) {
+            latinSections[index].classList.add('highlight');
+          }
+        });
+        
+        section.addEventListener('mouseleave', function() {
+          this.classList.remove('highlight');
+          if (latinSections[index]) {
+            latinSections[index].classList.remove('highlight');
+          }
+        });
+      });
+    });
+  </script>
 </article>
-
-<!-- Add inline JavaScript to handle tab functionality directly in this file -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM loaded in tabbed_post template");
-    
-    // Get all tab buttons and tab content
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
-    
-    console.log("Found " + tabButtons.length + " tab buttons and " + tabContents.length + " content sections");
-    
-    // Add click event to each tab button
-    tabButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const tabId = this.getAttribute('data-tab');
-        console.log("Tab clicked: " + tabId);
-        
-        // Hide all tab contents
-        tabContents.forEach(content => {
-          content.style.display = 'none';
-          content.classList.remove('active');
-        });
-        
-        // Remove active class from all buttons
-        tabButtons.forEach(btn => {
-          btn.classList.remove('active');
-        });
-        
-        // Show the selected tab content
-        document.getElementById(tabId).style.display = 'block';
-        document.getElementById(tabId).classList.add('active');
-        
-        // Add active class to clicked button
-        this.classList.add('active');
-        
-        // Save user preference
-        localStorage.setItem('preferredTab', tabId);
-      });
-    });
-    
-    // Set initial state - either from localStorage or default to first tab
-    const savedTab = localStorage.getItem('preferredTab');
-    
-    // Hide all tabs first
-    tabContents.forEach(content => {
-      content.style.display = 'none';
-      content.classList.remove('active');
-    });
-    
-    // Show the appropriate tab
-    if (savedTab && document.getElementById(savedTab)) {
-      // Show saved tab
-      document.getElementById(savedTab).style.display = 'block';
-      document.getElementById(savedTab).classList.add('active');
-      
-      // Update button state
-      const savedButton = document.querySelector(`.tab-button[data-tab="${savedTab}"]`);
-      if (savedButton) {
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        savedButton.classList.add('active');
-      }
-    } else {
-      // Default to first tab (analysis)
-      document.getElementById('analysis').style.display = 'block';
-      document.getElementById('analysis').classList.add('active');
-      tabButtons[0].classList.add('active');
-    }
-    
-    // Set up interactive features for special views
-    if (document.getElementById('interlinear')) {
-      const interlinearLines = document.querySelectorAll('.interlinear-line');
-      interlinearLines.forEach(line => {
-        line.addEventListener('mouseenter', function() {
-          this.classList.add('highlighted');
-        });
-        line.addEventListener('mouseleave', function() {
-          this.classList.remove('highlighted');
-        });
-      });
-    }
-    
-    // Parallel view scrolling synchronization
-    if (document.getElementById('parallel')) {
-      const latinColumn = document.querySelector('.latin-column');
-      const englishColumn = document.querySelector('.english-column');
-      
-      if (latinColumn && englishColumn) {
-        latinColumn.addEventListener('scroll', function() {
-          const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
-          englishColumn.scrollTop = scrollPercentage * (englishColumn.scrollHeight - englishColumn.clientHeight);
-        });
-        
-        englishColumn.addEventListener('scroll', function() {
-          const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
-          latinColumn.scrollTop = scrollPercentage * (latinColumn.scrollHeight - latinColumn.clientHeight);
-        });
-      }
-    }
-  });
-</script>
