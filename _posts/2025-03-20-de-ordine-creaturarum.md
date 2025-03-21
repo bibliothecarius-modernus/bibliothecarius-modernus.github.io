@@ -3,7 +3,7 @@ layout: post
 title: "De Ordine Creaturarum: Hiberno-Latin Cosmology in Context"
 date: 2025-03-20
 categories: [Irish & Anglo-Saxon Contributions, Natural Philosophy & Medicine, Neo-Platonic Christian Philosophy]
-youtube_id: "4Ccek3JHA-g"  # Replace with your actual video ID
+youtube_id: "KFZOL1rWOkY"  # Replace with your actual video ID
 ---
 
 <p class="article-summary">A 7th-century Irish synthesis of biblical cosmology and natural philosophy that shaped medieval understanding of universal order.</p>
