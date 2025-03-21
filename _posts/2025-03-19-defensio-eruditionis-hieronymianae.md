@@ -4,8 +4,8 @@ title: "Defensio Eruditionis Hieronymianae adversus Joannem Clericum: A Comprehe
 date: 2025-03-19
 categories: [Apologetics, Patristic Philosophy, Heresiology]
 youtube_id: "40fIiE9grXY"  # Replace with your actual video ID
-audio_analysis: "/assets/audio/Ratramnus_On-Dog-Headed-People-and-Human-Souls.wav"  # Path to your MP3 file
-translation_json:{
+audio_analysis: "" # Path to your MP3 file
+translation_json: {
   "chunks": [
     {
       "chunk_number": 1,
