@@ -265,4 +265,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     }
-  });
+  });});
