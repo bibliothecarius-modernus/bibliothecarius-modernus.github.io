@@ -50,6 +50,13 @@ layout: default
   </div>
   {% endif %}
 
+  <!-- Article summary displayed prominently -->
+  {% if page.article-summary %}
+  <div class="article-summary-box">
+    <p class="article-summary">{{ page.article-summary }}</p>
+  </div>
+  {% endif %}
+
   <!-- Simple Translation Viewer - With embedded styles and scripts -->
   <div id="translation-viewer">
     <!-- Tab buttons -->
@@ -211,17 +218,39 @@ layout: default
 
   <!-- Embedded styles to avoid conflicts with main stylesheet -->
   <style>
+    /* Article Summary Box */
+    .article-summary-box {
+      margin: 1.5rem 0;
+      padding: 1.2rem 1.5rem;
+      background-color: #f5f2e8;
+      border-left: 4px solid #B8860B;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .article-summary {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #3E2C1B;
+    }
+    
     /* Translation Viewer Styles */
     #translation-viewer {
       margin: 30px 0;
       font-family: inherit;
+      position: relative;
+      z-index: 5;
     }
     
     /* Tab buttons */
     .translation-tabs {
       display: flex;
-      margin-bottom: 1px;
+      margin-bottom: 0;
       border-bottom: 2px solid #B8860B;
+      position: relative;
+      z-index: 10;
     }
     
     .tab-btn {
@@ -235,6 +264,8 @@ layout: default
       cursor: pointer;
       font-weight: normal;
       transition: background-color 0.2s;
+      position: relative;
+      z-index: 15;
     }
     
     .tab-btn:hover {
@@ -267,13 +298,15 @@ layout: default
     .tab-content {
       border: 1px solid #B8860B;
       border-top: none;
-      background-color: white;
+      position: relative;
+      z-index: 1;
     }
     
     /* Tab panels */
     .tab-panel {
       display: none;
       padding: 15px;
+      background-color: white;
     }
     
     .tab-panel.active {
@@ -285,11 +318,28 @@ layout: default
       padding: 0;
       border: none;
       margin: 0;
-      background-color: transparent;
+      background-color: transparent !important;
+      background: transparent !important;
     }
     
     .analysis-container {
       padding: 0;
+      background-color: transparent;
+    }
+    
+    /* Fix for tab content container when analysis is active */
+    #analysis.active + .tab-panel,
+    .analysis-tab.active ~ .tab-content {
+      background-color: transparent;
+      border: none;
+    }
+    
+    /* Making tab-content transparent when analysis is selected */
+    .analysis-tab.active ~ .tab-content,
+    .analysis-tab.active + .tab-content,
+    .tab-content:has(> #analysis.active) {
+      background-color: transparent;
+      border-color: transparent;
     }
     
     /* Two-column layout for side-by-side view */
@@ -431,6 +481,18 @@ layout: default
       // Get all tab buttons and panels
       const tabButtons = document.querySelectorAll('.tab-btn');
       const tabPanels = document.querySelectorAll('.tab-panel');
+      const tabContent = document.querySelector('.tab-content');
+      
+      // Function to update tab content background
+      function updateTabContentBackground(targetId) {
+        if (targetId === 'analysis') {
+          tabContent.style.backgroundColor = 'transparent';
+          tabContent.style.borderColor = 'transparent';
+        } else {
+          tabContent.style.backgroundColor = 'white';
+          tabContent.style.borderColor = '#B8860B';
+        }
+      }
       
       // Set up tab switching
       tabButtons.forEach(function(button) {
@@ -451,6 +513,9 @@ layout: default
           this.classList.add('active');
           document.getElementById(targetId).classList.add('active');
           
+          // Update tab content background based on selected tab
+          updateTabContentBackground(targetId);
+          
           // Save preference to localStorage
           localStorage.setItem('preferredTab', targetId);
         });
@@ -463,7 +528,16 @@ layout: default
         const savedButton = document.querySelector('.tab-btn[data-target="' + savedTab + '"]');
         if (savedButton) {
           savedButton.click();
+        } else {
+          // Default to Analysis tab
+          const analysisButton = document.querySelector('.tab-btn[data-target="analysis"]');
+          if (analysisButton) {
+            analysisButton.click();
+          }
         }
+      } else {
+        // Default to Analysis tab and set appropriate styling
+        updateTabContentBackground('analysis');
       }
       
       // Set up synchronized scrolling for side-by-side view
