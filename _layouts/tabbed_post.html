@@ -53,7 +53,7 @@ layout: default
   {% endif %}
 
   <!-- Simple Translation Viewer - With embedded styles and scripts -->
-  <div id="translation-viewer" {% if page.drive_json_id %}data-drive-json="{{ page.drive_json_id }}"{% endif %}>
+  <div id="translation-viewer" class="desktop-fixed-width" {% if page.drive_json_id %}data-drive-json="{{ page.drive_json_id }}"{% endif %}>
     <!-- Tab buttons -->
     <div class="translation-tabs">
       <button class="tab-btn analysis-tab active" data-target="analysis">Analysis</button>
@@ -268,6 +268,32 @@ layout: default
     #translation-viewer {
       margin: 30px 0;
       font-family: inherit;
+    }
+    
+    /* Fixed width container for desktop */
+    .desktop-fixed-width {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (min-width: 769px) {
+      article.post {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 20px;
+      }
+      
+      .post-content.analysis-content {
+        margin: 0 auto;
+        max-width: 800px;
+      }
+      
+      .post-header, .audio-player-container, .youtube-promo, .comments-section, .post-navigation {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
     
     /* Tab buttons */
@@ -556,6 +582,11 @@ layout: default
         display: none;
       }
       
+      /* Remove desktop fixed width on mobile */
+      .desktop-fixed-width {
+        max-width: 100%;
+      }
+      
       /* Content area padding adjustments */
       .tab-panel {
         padding: 10px 8px;
@@ -730,7 +761,6 @@ layout: default
         padding: 0 10px;
       }
     }
-  </style>
 
   <!-- Updated JavaScript for tabs functionality -->
   <script>

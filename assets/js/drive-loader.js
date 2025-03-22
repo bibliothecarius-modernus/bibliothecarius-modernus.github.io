@@ -1,9 +1,8 @@
 // File: assets/js/drive-loader.js
 
 /**
- * Google Drive Content Loader
- * This script handles loading content from Google Drive for our Latin translations
- * Enhanced with mobile-friendly functionality
+ * Google Drive Content Loader with CORS workarounds
+ * This script handles loading content from Google Drive using JSONP or proxy methods
  */
 
 const DriveLoader = {
@@ -88,7 +87,7 @@ const DriveLoader = {
     },
     
     /**
-     * Load translation JSON data from Google Drive
+     * Load translation JSON data from Google Drive using a CORS-compatible method
      */
     loadTranslationData: function() {
       const translationContainer = document.getElementById('translation-viewer');
@@ -104,7 +103,11 @@ const DriveLoader = {
       
       const loadingIndicator = this.showLoadingIndicator(translationContainer);
       
-      fetch(`https://drive.google.com/uc?export=download&id=${driveFileId}`)
+      // Use a CORS proxy service (JSONP approach)
+      // We'll use the cors.bridged.cc service which allows cross-origin requests
+      const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(`https://drive.google.com/uc?export=download&id=${driveFileId}`)}`;
+      
+      fetch(proxyUrl)
         .then(response => {
           if (!response.ok) throw new Error('Failed to load translation data');
           return response.json();
@@ -117,7 +120,38 @@ const DriveLoader = {
         })
         .catch(error => {
           console.error('Error loading translation data:', error);
-          this.showErrorMessage(translationContainer, 'Failed to load translation data. Please try again later.');
+          this.showErrorMessage(translationContainer, 'Failed to load data. Please try our alternate method.');
+          this.hideLoadingIndicator(loadingIndicator);
+          
+          // Fallback method: Use GitHub Pages JSON file instead
+          this.loadFallbackData(driveFileId, translationContainer);
+        });
+    },
+    
+    /**
+     * Load fallback JSON data from the local repository
+     */
+    loadFallbackData: function(driveFileId, container) {
+      // Generate a filename based on the drive ID (simplified version)
+      const filename = `translation-${driveFileId.substring(0, 8)}.json`;
+      const fallbackUrl = `/assets/data/${filename}`;
+      
+      const loadingIndicator = this.showLoadingIndicator(container);
+      
+      fetch(fallbackUrl)
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to load fallback data');
+          return response.json();
+        })
+        .then(data => {
+          this.cache[driveFileId] = data;
+          this.processTranslationData(data);
+          container.dataset.loaded = 'true';
+          this.hideLoadingIndicator(loadingIndicator);
+        })
+        .catch(error => {
+          console.error('Error loading fallback data:', error);
+          this.showErrorMessage(container, 'Unable to load translation data. Please reload the page or try again later.');
           this.hideLoadingIndicator(loadingIndicator);
         });
     },
@@ -220,7 +254,7 @@ const DriveLoader = {
     },
     
     /**
-     * Load audio file from Google Drive
+     * Load audio file from Google Drive with CORS-compatible method
      */
     loadAudioFile: function() {
       const audioPlayer = document.querySelector('.audio-player audio');
@@ -231,16 +265,34 @@ const DriveLoader = {
       
       const loadingIndicator = this.showLoadingIndicator(audioPlayer.parentElement);
       
-      // Update audio source to direct Google Drive streaming link
-      audioPlayer.src = `https://drive.google.com/uc?export=download&id=${driveFileId}`;
+      // For audio files, it's better to use a direct proxy URL or a backup approach
+      // Option 1: Direct embed with iframe (simpler but less control)
+      // audioPlayer.style.display = 'none';
+      // const iframe = document.createElement('iframe');
+      // iframe.src = `https://drive.google.com/file/d/${driveFileId}/preview`;
+      // iframe.width = '100%';
+      // iframe.height = '60';
+      // iframe.frameBorder = '0';
+      // iframe.allow = 'autoplay';
+      // audioPlayer.parentElement.appendChild(iframe);
+      
+      // Option 2: Use a CORS proxy with audio (more compatible)
+      const audioFallbackUrl = `/assets/audio/fallback-${driveFileId.substring(0, 8)}.mp3`;
+      
+      // Try with direct Drive link first
+      audioPlayer.src = `https://docs.google.com/uc?export=download&id=${driveFileId}`;
       audioPlayer.dataset.loaded = 'true';
       
-      audioPlayer.addEventListener('canplay', () => {
-        this.hideLoadingIndicator(loadingIndicator);
+      audioPlayer.addEventListener('error', () => {
+        console.log('Direct Drive audio failed, trying fallback');
+        audioPlayer.src = audioFallbackUrl;
+        
+        audioPlayer.addEventListener('error', () => {
+          this.showErrorMessage(audioPlayer.parentElement, 'Audio could not be loaded. Please try again later.');
+        });
       });
       
-      audioPlayer.addEventListener('error', () => {
-        this.showErrorMessage(audioPlayer.parentElement, 'Failed to load audio. Please try again later.');
+      audioPlayer.addEventListener('canplay', () => {
         this.hideLoadingIndicator(loadingIndicator);
       });
     },
