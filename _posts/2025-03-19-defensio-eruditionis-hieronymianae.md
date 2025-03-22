@@ -4,7 +4,7 @@ title: "Defensio Eruditionis Hieronymianae adversus Joannem Clericum: A Comprehe
 date: 2025-03-19
 categories: [Apologetics, Patristic Philosophy, Heresiology]
 youtube_id: "40fIiE9grXY"  # Replace with your actual video ID
-audio_analysis: "" # Path to your MP3 file
+audio_analysis: "/assets/audio/Martianay Defends Jerome_ Tradition Against Enlightenment Critique.wav" # Path to your MP3 file
 translation_json: {
   "chunks": [
     {
