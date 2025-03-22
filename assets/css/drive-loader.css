@@ -1,0 +1,214 @@
+/* File: assets/css/drive-loader.css */
+
+/* Loading indicator styles */
+.drive-loading-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #EDE0CA;
+    border-top: 4px solid #B8860B;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+  }
+  
+  .loader-text {
+    font-size: 14px;
+    color: #3E2C1B;
+    font-style: italic;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error message styles */
+  .drive-error-message {
+    padding: 12px 15px;
+    background-color: #fff0f0;
+    border-left: 4px solid #c00;
+    color: #900;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Placeholder styles while content is loading */
+  .placeholder-content {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin: 10px 0;
+    height: 100px;
+    background-image: 
+      linear-gradient(90deg, #f0f0f0 0px, #f8f8f8 40px, #f0f0f0 80px);
+    background-size: 600px;
+    animation: placeholder-shine 1.5s infinite linear;
+  }
+  
+  @keyframes placeholder-shine {
+    0% {
+      background-position: -100px;
+    }
+    100% {
+      background-position: 600px;
+    }
+  }
+  
+  /* Mobile-friendly placeholder styling */
+  @media (max-width: 768px) {
+    .placeholder-content {
+      height: 80px;
+      margin: 8px 0;
+      padding: 10px;
+    }
+  }
+  
+  /* Make sure the translation containers have relative positioning */
+  #side-by-side, #latin-only, #english-only, .audio-player {
+    position: relative;
+  }
+  
+  /* Styles for tabs when content is loading/loaded */
+  .tab-btn[data-status="loading"] {
+    opacity: 0.7;
+    position: relative;
+  }
+  
+  .tab-btn[data-status="loading"]::after {
+    content: "⟳";
+    display: inline-block;
+    margin-left: 5px;
+    animation: spin 1s linear infinite;
+  }
+  
+  .tab-btn[data-status="loaded"] {
+    opacity: 1;
+  }
+  
+  /* Lazy-loaded audio player styling */
+  .audio-player.loading audio {
+    opacity: 0.5;
+  }
+  
+  /* Make sure audio controls are fully visible */
+  .audio-player audio {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Mobile styles for loading indicator */
+  @media (max-width: 768px) {
+    .drive-loading-indicator {
+      min-height: 120px;
+      padding: 15px;
+    }
+    
+    .loader-spinner {
+      width: 30px;
+      height: 30px;
+      border-width: 3px;
+    }
+    
+    .loader-text {
+      font-size: 13px;
+    }
+    
+    .drive-error-message {
+      padding: 10px;
+      font-size: 13px;
+      margin: 10px 0;
+    }
+  }
+  
+  /* Mobile fullscreen loader for better visibility */
+  @media (max-width: 480px) {
+    .drive-loading-indicator.fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      background-color: rgba(255, 255, 255, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  /* Mobile navigation styling */
+  .mobile-nav-btn {
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+  .mobile-nav-btn:active {
+    transform: scale(0.98);
+  }
+  
+  .mobile-nav-btn.loading {
+    position: relative;
+    padding-right: 25px;
+  }
+  
+  .mobile-nav-btn.loading::after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    margin-top: -6px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Mobile-friendly content adjustments */
+  @media (max-width: 768px) {
+    #analysis {
+      background-color: #f9f5ea !important;  /* !important to override inline styles */
+    }
+    
+    /* Better height for mobile single-column views */
+    #latin-only .single-column,
+    #english-only .single-column {
+      max-height: none; /* Allow content to flow naturally */
+      padding: 5px 8px;
+    }
+    
+    /* Ensure analysis content is readable on mobile */
+    .post-content.analysis-content {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    /* Better spacing for chunk sections on mobile */
+    .chunk-section {
+      margin-bottom: 12px;
+    }
+  }
