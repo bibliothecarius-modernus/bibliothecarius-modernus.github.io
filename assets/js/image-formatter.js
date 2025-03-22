@@ -513,6 +513,35 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Determine which text to search based on options
       let textElements = [];
+      const searchInCurrentTabOnly = searchCurrentTab.checked;
+      
+      if (searchInCurrentTabOnly) {
+        // Search only in the active tab
+        if (activeTab.id === 'latin-only' && searchLatin.checked) {
+          textElements = Array.from(activeTab.querySelectorAll('.latin-text'));
+        } else if (activeTab.id === 'english-only' && searchEnglish.checked) {
+          textElements = Array.from(activeTab.querySelectorAll('.english-text'));
+        } else if (activeTab.id === 'side-by-side') {
+          if (searchLatin.checked) {
+            textElements = textElements.concat(Array.from(activeTab.querySelectorAll('.latin-text')));
+          }
+          if (searchEnglish.checked) {
+            textElements = textElements.concat(Array.from(activeTab.querySelectorAll('.english-text')));
+          }
+        } else if (activeTab.id === 'analysis') {
+          // Search in the analysis content
+          textElements = Array.from(activeTab.querySelectorAll('.analysis-content'));
+        }
+      } else {
+        // Search across all tabs based on language selection
+        if (searchLatin.checked) {
+          textElements = textElements.concat(Array.from(document.querySelectorAll('.latin-text')));
+        }
+        
+        if (searchEnglish.checked) {
+          textElements = textElements.concat(Array.from(document.querySelectorAll('.english-text')));
+        }
+      }
       
       // Highlight matches
       let totalMatches = 0;
