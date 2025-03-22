@@ -50,12 +50,12 @@ layout: default
   </div>
   {% endif %}
 
-  <!-- Simple Translation Viewer - With embedded styles and scripts -->
+  <!-- Simple Translation Viewer -->
   <div id="translation-viewer">
     <!-- Tab buttons -->
     <div class="translation-tabs">
       <button class="tab-btn analysis-tab active" data-target="analysis">Analysis</button>
-      <button class="tab-btn" data-target="side-by-side">Side by Side</button>
+      <button class="tab-btn side-by-side-tab" data-target="side-by-side">Side by Side</button>
       <button class="tab-btn" data-target="latin-only">Latin Only</button>
       <button class="tab-btn" data-target="english-only">English Only</button>
     </div>
@@ -65,7 +65,7 @@ layout: default
       <!-- Analysis View -->
       <div id="analysis" class="tab-panel active">
         <div class="analysis-container">
-          <div class="post-content analysis-content" itemprop="articleBody">
+          <div class="post-content analysis-content readable-margins" itemprop="articleBody">
             {{ content }}
           </div>
         </div>
@@ -79,7 +79,7 @@ layout: default
             <div class="column-content">
               {% if page.latin_text %}
                 {{ page.latin_text | markdownify }}
-              {% elsif page.translation_json %}
+              {% elsif page.translation_json and page.translation_json.chunks %}
                 {% for chunk in page.translation_json.chunks %}
                   <div class="chunk-section">
                     <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -88,6 +88,11 @@ layout: default
                     </div>
                   </div>
                 {% endfor %}
+              {% elsif page.translation_json %}
+                <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
+                  <div class="placeholder-content"></div>
+                  <div class="placeholder-content"></div>
+                </div>
               {% else %}
                 <p class="placeholder">Latin text is not available for this document.</p>
               {% endif %}
@@ -98,7 +103,7 @@ layout: default
             <div class="column-content">
               {% if page.english_translation %}
                 {{ page.english_translation | markdownify }}
-              {% elsif page.translation_json %}
+              {% elsif page.translation_json and page.translation_json.chunks %}
                 {% for chunk in page.translation_json.chunks %}
                   <div class="chunk-section">
                     <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -111,10 +116,25 @@ layout: default
                     </div>
                   </div>
                 {% endfor %}
+              {% elsif page.translation_json %}
+                <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
+                  <div class="placeholder-content"></div>
+                  <div class="placeholder-content"></div>
+                </div>
               {% else %}
                 <p class="placeholder">English translation is not available for this document.</p>
               {% endif %}
             </div>
+          </div>
+        </div>
+        <!-- Mobile alternative for side-by-side view -->
+        <div class="mobile-translation-view">
+          <div class="mobile-notice">
+            <p>Side by side view is not available on small screens. Please use Latin Only or English Only views.</p>
+          </div>
+          <div class="mobile-navigation">
+            <button class="mobile-nav-btn" data-target="latin-only">View Latin</button>
+            <button class="mobile-nav-btn" data-target="english-only">View English</button>
           </div>
         </div>
       </div>
@@ -125,7 +145,7 @@ layout: default
         <div class="single-column">
           {% if page.latin_text %}
             {{ page.latin_text | markdownify }}
-          {% elsif page.translation_json %}
+          {% elsif page.translation_json and page.translation_json.chunks %}
             {% for chunk in page.translation_json.chunks %}
               <div class="chunk-section latin-full">
                 <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -134,6 +154,12 @@ layout: default
                 </div>
               </div>
             {% endfor %}
+          {% elsif page.translation_json %}
+            <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
+              <div class="placeholder-content"></div>
+              <div class="placeholder-content"></div>
+              <div class="placeholder-content"></div>
+            </div>
           {% else %}
             <p class="placeholder">Latin text is not available for this document.</p>
           {% endif %}
@@ -146,7 +172,7 @@ layout: default
         <div class="single-column">
           {% if page.english_translation %}
             {{ page.english_translation | markdownify }}
-          {% elsif page.translation_json %}
+          {% elsif page.translation_json and page.translation_json.chunks %}
             {% for chunk in page.translation_json.chunks %}
               <div class="chunk-section english-full">
                 <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -159,6 +185,12 @@ layout: default
                 </div>
               </div>
             {% endfor %}
+          {% elsif page.translation_json %}
+            <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
+              <div class="placeholder-content"></div>
+              <div class="placeholder-content"></div>
+              <div class="placeholder-content"></div>
+            </div>
           {% else %}
             <p class="placeholder">English translation is not available for this document.</p>
           {% endif %}
@@ -192,7 +224,7 @@ layout: default
   {% endif %}
   
 <!-- Scholarly Discussion Section -->
-<div class="comments-section">
+<div class="comments-section readable-margins">
     <h2>Scholarly Discussion</h2>
     <p class="discussion-intro">Share your insights, questions, or observations about this translation.</p>
     
@@ -214,7 +246,7 @@ layout: default
     <noscript>Please enable JavaScript to view the scholarly discussion.</noscript>
   </div>
   
-  <div class="post-navigation">
+  <div class="post-navigation readable-margins">
     <div class="post-nav-links">
       {% if page.previous.url %}
       <a class="prev-post" href="{{ page.previous.url | relative_url }}">
@@ -240,11 +272,48 @@ layout: default
       font-family: inherit;
     }
     
+    /* Readable margins for content */
+    .readable-margins {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 20px;
+    }
+    
+    @media (max-width: 840px) {
+      .readable-margins {
+        padding: 0 20px;
+      }
+    }
+    
+    .post-header {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .audio-player-container {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 20px;
+    }
+    
+    .youtube-promo {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 20px;
+    }
+    
     /* Tab buttons */
     .translation-tabs {
       display: flex;
       margin-bottom: 1px;
       border-bottom: 2px solid #B8860B;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .tab-btn {
@@ -291,6 +360,9 @@ layout: default
       border: 1px solid #B8860B;
       border-top: none;
       background-color: white;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     /* Tab panels */
@@ -333,6 +405,42 @@ layout: default
     
     .column-content {
       height: 100%;
+    }
+    
+    /* Mobile alternative for side-by-side view */
+    .mobile-translation-view {
+      display: none;
+      padding: 15px;
+      text-align: center;
+    }
+    
+    .mobile-notice {
+      background-color: #fff8e8;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      border: 1px solid #B8860B;
+    }
+    
+    .mobile-navigation {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+    
+    .mobile-nav-btn {
+      padding: 10px 20px;
+      background-color: #3E2C1B;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+    
+    .mobile-nav-btn:hover {
+      background-color: #B8860B;
     }
     
     /* Column headers */
@@ -420,14 +528,18 @@ layout: default
       font-style: italic;
     }
     
+    .placeholder-content {
+      height: 18px;
+      margin-bottom: 10px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+    }
+    
     /* Comments Section Styling */
     .comments-section {
       margin-top: 40px;
       padding-top: 30px;
       border-top: 2px solid #B8860B;
-      max-width: var(--content-width);
-      margin-left: auto;
-      margin-right: auto;
       position: relative;
     }
     
@@ -469,41 +581,281 @@ layout: default
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
     
-    /* Mobile responsiveness */
+    /* JSON loader */
+    .json-loader {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    
+    /* Audio player styling */
+    .audio-player-container {
+      margin: 15px auto 25px;
+    }
+    
+    .audio-player-container details {
+      background-color: #f8f4ea;
+      border: 1px solid #e6d7b8;
+      border-radius: 6px;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+    
+    .audio-player-container summary {
+      padding: 12px 15px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #3E2C1B;
+      position: relative;
+      list-style: none;
+      outline: none;
+    }
+    
+    .audio-player-container summary::-webkit-details-marker {
+      display: none;
+    }
+    
+    .audio-player-container summary::before {
+      content: '▶';
+      font-size: 0.8em;
+      margin-right: 10px;
+      color: #B8860B;
+    }
+    
+    .audio-player-container details[open] summary::before {
+      content: '▼';
+    }
+    
+    .audio-player {
+      padding: 10px 15px 15px;
+      border-top: 1px solid #e6d7b8;
+    }
+    
+    .audio-player audio {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    
+    .audio-description {
+      margin: 8px 0 0;
+      font-style: italic;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    /* Mobile responsiveness - IMPROVED VERSION */
     @media (max-width: 768px) {
+      /* Tab navigation improvements */
       .translation-tabs {
         flex-wrap: wrap;
+        justify-content: center;
       }
       
       .tab-btn {
-        margin-bottom: 4px;
+        flex: 1 1 40%;
+        margin: 0 2px 4px;
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        text-align: center;
       }
       
-      .two-columns {
-        flex-direction: column;
-        max-height: none;
+      /* Hide side-by-side tab on mobile */
+      .side-by-side-tab {
+        display: none;
       }
       
+      /* Content area padding adjustments */
+      .tab-panel {
+        padding: 10px 8px;
+      }
+      
+      /* Analysis full-width background */
+      #analysis {
+        background-color: #f9f5ea; /* Light background for entire analysis area */
+        padding: 15px 10px;
+        margin: 0 -10px; /* Negative margin to ensure full width */
+        width: calc(100% + 20px); /* Ensure the background spans the entire width */
+      }
+      
+      .analysis-container {
+        padding: 0;
+        background-color: #f9f5ea;
+      }
+      
+      .post-content.analysis-content {
+        background-color: #f9f5ea;
+        padding: 0 5px;
+      }
+      
+      /* Hide regular two-column view and show mobile alternative */
+      #side-by-side .two-columns {
+        display: none;
+      }
+      
+      #side-by-side .mobile-translation-view {
+        display: block;
+      }
+      
+      /* Single column views adjustments */
       .latin-column, .english-column {
         height: auto;
-        max-height: 50vh;
+        max-height: 40vh;
+        padding: 5px;
       }
       
       .latin-column {
         border-right: none;
         border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 10px;
+      }
+      
+      /* Chunk styling adjustments */
+      .chunk-section {
+        padding: 12px 8px 8px;
         margin-bottom: 15px;
       }
       
+      .chunk-number {
+        font-size: 10px;
+        padding: 1px 6px;
+      }
+      
+      /* Comments section adjustments */
+      .comments-section {
+        padding-top: 20px;
+        margin-top: 30px;
+      }
+      
+      .discussion-intro {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+      }
+      
+      #disqus_thread {
+        padding: 10px 8px;
+      }
+      
+      /* Post content adjustments for better mobile reading */
+      .post-content {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      
+      .post-content h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5em;
+      }
+      
+      .post-content h3 {
+        font-size: 1.3rem;
+      }
+      
+      /* Better spacing for mobile content */
+      .article-summary {
+        margin: 10px 0 20px;
+        font-size: 1rem;
+      }
+    }
+    
+    /* Extreme narrow screens (smaller phones) */
+    @media (max-width: 480px) {
+      /* Even more compact layout */
+      .tab-btn {
+        flex: 1 1 45%;
+        padding: 6px 4px;
+        font-size: 0.8rem;
+        margin: 0 1px 3px;
+      }
+      
+      /* Reduce padding further */
+      .tab-panel {
+        padding: 8px 5px;
+      }
+      
+      /* Analysis background */
+      #analysis {
+        padding: 10px 8px;
+      }
+      
+      /* Less margin between sections */
+      .chunk-section {
+        margin-bottom: 12px;
+        padding: 10px 6px 6px;
+      }
+      
+      /* Adjust header sizes */
+      .two-columns h3, .single-column h3 {
+        font-size: 1.1rem;
+        padding-bottom: 6px;
+      }
+      
+      /* Fix margins for content */
+      .latin-text, .english-text {
+        margin: 0;
+        line-height: 1.4;
+      }
+      
+      /* Mobile navigation buttons */
+      .mobile-nav-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+      
+      /* Post header adjustments */
+      .post-header {
+        margin-bottom: 1rem;
+      }
+      
+      /* Simplified mobile notice */
+      .mobile-notice p {
+        font-size: 0.9rem;
+        margin: 0;
+      }
+    }
+    
+    /* Fix scrolling behavior on touch devices */
+    @media (pointer: coarse) {
+      .latin-column, .english-column, .single-column {
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+    
+    /* Ensure content doesn't overflow on small screens */
+    .post-content {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      max-width: 100%;
+    }
+    
+    /* Fix for YouTube embed responsiveness */
+    .youtube-embed iframe {
+      max-height: 56vw;
+    }
+    
+    /* Overall page margin fix for mobile */
+    @media (max-width: 768px) {
+      .readable-margins {
+        padding: 0 15px;
+      }
     }
   </style>
 
-  <!-- Embedded JavaScript for tabs functionality -->
+  <!-- JavaScript for tabs functionality and JSON loading -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Get all tab buttons and panels
       const tabButtons = document.querySelectorAll('.tab-btn');
       const tabPanels = document.querySelectorAll('.tab-panel');
+      
+      // Mobile navigation buttons
+      const mobileNavButtons = document.querySelectorAll('.mobile-nav-btn');
+      mobileNavButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          document.querySelector('.tab-btn[data-target="' + targetId + '"]').click();
+        });
+      });
       
       // Set up tab switching
       tabButtons.forEach(function(button) {
@@ -531,13 +883,44 @@ layout: default
       
       // Check for saved preference
       const savedTab = localStorage.getItem('preferredTab');
+      
+      // Don't restore side-by-side view on mobile
+      const isMobile = window.innerWidth <= 768;
       if (savedTab && document.getElementById(savedTab)) {
-        // Find the button for this tab
-        const savedButton = document.querySelector('.tab-btn[data-target="' + savedTab + '"]');
-        if (savedButton) {
-          savedButton.click();
+        if (!(isMobile && savedTab === 'side-by-side')) {
+          // Find the button for this tab
+          const savedButton = document.querySelector('.tab-btn[data-target="' + savedTab + '"]');
+          if (savedButton) {
+            savedButton.click();
+          }
+        } else {
+          // If we're on mobile and the saved tab is side-by-side, default to analysis
+          const analysisButton = document.querySelector('.tab-btn[data-target="analysis"]');
+          if (analysisButton) {
+            analysisButton.click();
+          }
         }
       }
+      
+      // Handle window resize to switch views if needed
+      window.addEventListener('resize', function() {
+        const currentActiveTab = document.querySelector('.tab-panel.active').id;
+        const isMobileView = window.innerWidth <= 768;
+        
+        // If resizing to mobile view and side-by-side is active, switch to analysis
+        if (isMobileView && currentActiveTab === 'side-by-side') {
+          const analysisButton = document.querySelector('.tab-btn[data-target="analysis"]');
+          if (analysisButton) {
+            analysisButton.click();
+          }
+        }
+        
+        // Toggle visibility of side-by-side tab based on screen size
+        const sideBySideTab = document.querySelector('.side-by-side-tab');
+        if (sideBySideTab) {
+          sideBySideTab.style.display = isMobileView ? 'none' : 'block';
+        }
+      });
       
       // Set up synchronized scrolling for side-by-side view
       const latinColumn = document.querySelector('.latin-column .column-content');
@@ -556,7 +939,120 @@ layout: default
           latinColumn.scrollTop = scrollPercentage * (latinColumn.scrollHeight - latinColumn.clientHeight);
         });
       }
+      
+      // Load JSON files from assets if needed
+      const jsonLoaders = document.querySelectorAll('.json-loader');
+      if (jsonLoaders.length > 0) {
+        jsonLoaders.forEach(function(loader) {
+          const jsonPath = loader.getAttribute('data-json-path');
+          if (jsonPath) {
+            fetch(jsonPath)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+                return response.json();
+              })
+              .then(data => {
+                // Process the loaded JSON
+                processTranslationJson(data, loader);
+              })
+              .catch(error => {
+                console.error('Error loading JSON:', error);
+                loader.innerHTML = '<p class="placeholder">Error loading translation data.</p>';
+              });
+          }
+        });
+      }
+      
+      // Function to process translation JSON and create content
+      function processTranslationJson(json, container) {
+        // Clear loading placeholders
+        container.innerHTML = '';
+        
+        // Get parent tab type
+        const parentTab = container.closest('.tab-panel');
+        const tabType = parentTab ? parentTab.id : null;
+        
+        // Check if json has chunks
+        if (json && json.chunks && json.chunks.length > 0) {
+          // Process based on tab type
+          if (tabType === 'latin-only') {
+            // Latin only view
+            json.chunks.forEach(chunk => {
+              const chunkEl = document.createElement('div');
+              chunkEl.className = 'chunk-section latin-full';
+              chunkEl.innerHTML = `
+                <span class="chunk-number">${chunk.chunk_number}</span>
+                <div class="latin-text">${chunk.original_latin.replace(/\n/g, '<br>')}</div>
+              `;
+              container.appendChild(chunkEl);
+            });
+          } else if (tabType === 'english-only') {
+            // English only view
+            json.chunks.forEach(chunk => {
+              const chunkEl = document.createElement('div');
+              chunkEl.className = 'chunk-section english-full';
+              
+              // Clean the text
+              let cleanedText = chunk.cleaned_english_translation
+                .replace(/<speak>/g, '')
+                .replace(/<\/speak>/g, '')
+                .replace(/<s>/g, '')
+                .replace(/<\/s>/g, '')
+                .replace(/<p>/g, '<p class="translation-paragraph">')
+                .replace(/<break time="\\d+ms"\/>/g, '');
+              
+              chunkEl.innerHTML = `
+                <span class="chunk-number">${chunk.chunk_number}</span>
+                <div class="english-text">${cleanedText}</div>
+              `;
+              container.appendChild(chunkEl);
+            });
+          } else if (tabType === 'side-by-side') {
+            // We need to find which column we're in
+            const latinColumn = container.closest('.latin-column');
+            const englishColumn = container.closest('.english-column');
+            
+            if (latinColumn) {
+              // Latin column in side-by-side view
+              json.chunks.forEach(chunk => {
+                const chunkEl = document.createElement('div');
+                chunkEl.className = 'chunk-section';
+                chunkEl.innerHTML = `
+                  <span class="chunk-number">${chunk.chunk_number}</span>
+                  <div class="latin-text">${chunk.original_latin.replace(/\n/g, '<br>')}</div>
+                `;
+                container.appendChild(chunkEl);
+              });
+            } else if (englishColumn) {
+              // English column in side-by-side view
+              json.chunks.forEach(chunk => {
+                const chunkEl = document.createElement('div');
+                chunkEl.className = 'chunk-section';
+                
+                // Clean the text
+                let cleanedText = chunk.cleaned_english_translation
+                  .replace(/<speak>/g, '')
+                  .replace(/<\/speak>/g, '')
+                  .replace(/<s>/g, '')
+                  .replace(/<\/s>/g, '')
+                  .replace(/<p>/g, '<p class="translation-paragraph">')
+                  .replace(/<break time="\\d+ms"\/>/g, '');
+                
+                chunkEl.innerHTML = `
+                  <span class="chunk-number">${chunk.chunk_number}</span>
+                  <div class="english-text">${cleanedText}</div>
+                `;
+                container.appendChild(chunkEl);
+              });
+            }
+          }
+        } else {
+          // No chunks found
+          container.innerHTML = '<p class="placeholder">Translation data could not be loaded properly.</p>';
+        }
+      }
     });
-    
   </script>
 </article>
