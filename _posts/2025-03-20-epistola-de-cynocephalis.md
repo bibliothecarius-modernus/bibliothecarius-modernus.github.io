@@ -4,7 +4,7 @@ title: "Analysis of Epistola de cynocephalis (PL 121)"
 date: 2025-03-20
 categories: [Epistolary Literature, Ecclesiastical History, Carolingian Theological Renaissance]
 youtube_id: "PNH4_eu-F5c"  # Replace with your actual video ID
-audio_analysis: "/assets/audio/Ratramnus_On-Dog-Headed-People-and-Human-Souls.wav"  # Path to your MP3 file
+audio_analysis: "/assets/audio/Ratramnus_On-Dog-Headed-People-and-Human-Souls.mp3"  # Path to your MP3 file
 translation_json: {
     "chunks": [
         {

@@ -4,7 +4,7 @@ title: "Expositio brevis antiquae liturgiae Gallicanae"
 date: 2025-03-19
 categories: [Liturgical Texts & Sacramentaries, Ecclesiastical History, Visigothic & Mozarabic Writings]
 youtube_id: "28tOAJ4t7W4"  # Replace with your actual video ID
-audio_analysis: "/assets/audio/Expositio brevis_ Unveiling the Ancient Gallican Liturgy.wav"  # Path to your MP3 file
+audio_analysis: "/assets/audio/Expositio brevis_ Unveiling the Ancient Gallican Liturgy.mp3"  # Path to your MP3 file
 translation_json: {
   "chunks": [
     {
