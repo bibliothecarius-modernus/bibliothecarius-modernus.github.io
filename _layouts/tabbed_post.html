@@ -41,9 +41,7 @@ layout: default
       <summary>Listen to Audio Analysis</summary>
       <div class="audio-player">
         <audio controls>
-          {% if page.audio_analysis %}
           <source src="{{ page.audio_analysis | relative_url }}" type="audio/mpeg">
-          {% endif %}
           Your browser does not support the audio element.
         </audio>
         <p class="audio-description">Listen to a brief analysis of this text</p>
@@ -789,6 +787,62 @@ layout: default
       .readable-margins {
         padding: 0 15px;
       }
+    }
+    
+    /* Audio player styling */
+    .audio-player-container {
+      margin: 15px auto 25px;
+      padding: 0 20px;
+    }
+    
+    .audio-player-container details {
+      background-color: #f8f4ea;
+      border: 1px solid #e6d7b8;
+      border-radius: 6px;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+    
+    .audio-player-container summary {
+      padding: 12px 15px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #3E2C1B;
+      position: relative;
+      list-style: none;
+      outline: none;
+    }
+    
+    .audio-player-container summary::-webkit-details-marker {
+      display: none;
+    }
+    
+    .audio-player-container summary::before {
+      content: '▶';
+      font-size: 0.8em;
+      margin-right: 10px;
+      color: #B8860B;
+    }
+    
+    .audio-player-container details[open] summary::before {
+      content: '▼';
+    }
+    
+    .audio-player {
+      padding: 10px 15px 15px;
+      border-top: 1px solid #e6d7b8;
+    }
+    
+    .audio-player audio {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    
+    .audio-description {
+      margin: 8px 0 0;
+      font-style: italic;
+      color: #666;
+      font-size: 0.9rem;
     }
   </style>
 
