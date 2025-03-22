@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         .search-checkboxes {
           display: flex;
-          gap: 15px;
+          gap: 12px;
         }
         .search-navigation {
           display: flex;
@@ -188,6 +188,11 @@ document.addEventListener('DOMContentLoaded', function() {
             flex-direction: column;
             align-items: flex-start;
             gap: 10px;
+          }
+          .search-checkboxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
           }
           .search-navigation {
             margin-left: 0;
@@ -502,17 +507,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
-      // Determine which text to search
+      // Get active tab
+      const activeTab = document.querySelector('.tab-panel.active');
+      if (!activeTab) return;
+      
+      // Determine which text to search based on options
       let textElements = [];
-      
-      // Search across all tabs based on language selection
-      if (searchLatin.checked) {
-        textElements = textElements.concat(Array.from(document.querySelectorAll('.latin-text')));
-      }
-      
-      if (searchEnglish.checked) {
-        textElements = textElements.concat(Array.from(document.querySelectorAll('.english-text')));
-      }
       
       // Highlight matches
       let totalMatches = 0;
@@ -547,6 +547,22 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         // No results found
         resultCount.textContent = 'No matches found';
+        
+        // For "search across tabs" mode with no results, suggest checking other tabs
+        if (searchInCurrentTabOnly && (searchLatin.checked && searchEnglish.checked)) {
+          resultCount.textContent = 'No matches in current tab';
+          
+          // Add suggestion to uncheck "current tab only"
+          const mobileNotice = document.createElement('div');
+          mobileNotice.className = 'search-mobile-notice';
+          mobileNotice.textContent = 'Try unchecking "Current tab only" to search all tabs.';
+          
+          // Find a place to add this notice
+          const searchOptions = document.querySelector('.search-options');
+          if (searchOptions && !searchOptions.querySelector('.search-mobile-notice')) {
+            searchOptions.appendChild(mobileNotice);
+          }
+        }
       }
     }
     
@@ -670,6 +686,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     prevButton.addEventListener('click', goToPreviousResult);
     nextButton.addEventListener('click', goToNextResult);
+    
+    // Default "current tab only" based on device
+    searchCurrentTab.checked = isMobile || window.innerWidth < 1200;
+    
+    // Update when tabs change
+    document.addEventListener('tabChanged', function(e) {
+      if (searchCurrentTab.checked && currentHighlights.length > 0) {
+        // Re-run the search when changing tabs with "current tab only" enabled
+        performSearch();
+      }
+    });
     
     // Focus search input when clicking the container
     searchContainer.addEventListener('click', function(e) {
