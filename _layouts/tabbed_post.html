@@ -53,7 +53,7 @@ layout: default
   {% endif %}
 
   <!-- Simple Translation Viewer - With embedded styles and scripts -->
-  <div id="translation-viewer" class="desktop-fixed-width" {% if page.drive_json_id %}data-drive-json="{{ page.drive_json_id }}"{% endif %}>
+  <div id="translation-viewer" {% if page.drive_json_id %}data-drive-json="{{ page.drive_json_id }}"{% endif %}>
     <!-- Tab buttons -->
     <div class="translation-tabs">
       <button class="tab-btn analysis-tab active" data-target="analysis">Analysis</button>
@@ -67,7 +67,7 @@ layout: default
       <!-- Analysis View -->
       <div id="analysis" class="tab-panel active">
         <div class="analysis-container">
-          <div class="post-content analysis-content" itemprop="articleBody">
+          <div class="post-content analysis-content readable-margins" itemprop="articleBody">
             {{ content }}
           </div>
         </div>
@@ -218,7 +218,7 @@ layout: default
   {% endif %}
   
 <!-- Scholarly Discussion Section -->
-<div class="comments-section">
+<div class="comments-section readable-margins">
     <h2>Scholarly Discussion</h2>
     <p class="discussion-intro">Share your insights, questions, or observations about this translation.</p>
     
@@ -240,7 +240,7 @@ layout: default
     <noscript>Please enable JavaScript to view the scholarly discussion.</noscript>
   </div>
   
-  <div class="post-navigation">
+  <div class="post-navigation readable-margins">
     <div class="post-nav-links">
       {% if page.previous.url %}
       <a class="prev-post" href="{{ page.previous.url | relative_url }}">
@@ -270,30 +270,36 @@ layout: default
       font-family: inherit;
     }
     
-    /* Fixed width container for desktop */
-    .desktop-fixed-width {
+    /* Readable margins for content */
+    .readable-margins {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 20px;
+    }
+    
+    @media (max-width: 840px) {
+      .readable-margins {
+        padding: 0 20px;
+      }
+    }
+    
+    .post-header {
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
     }
     
-    @media (min-width: 769px) {
-      article.post {
-        max-width: 100%;
-        width: 100%;
-        padding: 0 20px;
-      }
-      
-      .post-content.analysis-content {
-        margin: 0 auto;
-        max-width: 800px;
-      }
-      
-      .post-header, .audio-player-container, .youtube-promo, .comments-section, .post-navigation {
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+    .audio-player-container {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .youtube-promo {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     /* Tab buttons */
@@ -301,6 +307,9 @@ layout: default
       display: flex;
       margin-bottom: 1px;
       border-bottom: 2px solid #B8860B;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .tab-btn {
@@ -347,6 +356,9 @@ layout: default
       border: 1px solid #B8860B;
       border-top: none;
       background-color: white;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     /* Tab panels */
@@ -517,9 +529,6 @@ layout: default
       margin-top: 40px;
       padding-top: 30px;
       border-top: 2px solid #B8860B;
-      max-width: var(--content-width);
-      margin-left: auto;
-      margin-right: auto;
       position: relative;
     }
     
@@ -580,11 +589,6 @@ layout: default
       /* Hide side-by-side tab on mobile */
       .side-by-side-tab {
         display: none;
-      }
-      
-      /* Remove desktop fixed width on mobile */
-      .desktop-fixed-width {
-        max-width: 100%;
       }
       
       /* Content area padding adjustments */
@@ -757,12 +761,13 @@ layout: default
     
     /* Overall page margin fix for mobile */
     @media (max-width: 768px) {
-      article.post {
-        padding: 0 10px;
+      .readable-margins {
+        padding: 0 15px;
       }
     }
+  </style>
 
-  <!-- Updated JavaScript for tabs functionality -->
+  <!-- Updated JavaScript for tabs functionality with a simple CORS solution -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Get all tab buttons and panels
