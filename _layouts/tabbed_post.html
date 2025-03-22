@@ -1049,3 +1049,1464 @@ layout: default
       }
     });
   </script>
+  <script>
+    // Enhanced Translation Interface
+// This script adds several advanced features to the translation interface:
+// 1. Advanced Search with highlighting
+// 2. Synchronized scrolling between Latin and English
+// 3. Annotation system for scholarly notes
+// 4. Terminology highlighting
+// 5. Improved navigation
+
+document.addEventListener('DOMContentLoaded', function() {
+  // ===== FEATURE 1: ADVANCED SEARCH & HIGHLIGHTING =====
+  
+  // Add search UI to the translation viewer
+  function addSearchInterface() {
+    const translationViewer = document.getElementById('translation-viewer');
+    if (!translationViewer) return;
+    
+    // Create search container
+    const searchContainer = document.createElement('div');
+    searchContainer.className = 'translation-search-container';
+    searchContainer.innerHTML = `
+      <div class="search-controls">
+        <div class="search-input-container">
+          <input type="text" id="translation-search" placeholder="Search in text..." class="search-input">
+          <button id="search-button" class="search-button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="search-options">
+          <label class="search-option">
+            <input type="checkbox" id="search-latin" checked>
+            <span>Latin</span>
+          </label>
+          <label class="search-option">
+            <input type="checkbox" id="search-english" checked>
+            <span>English</span>
+          </label>
+          <label class="search-option">
+            <input type="checkbox" id="search-case-sensitive">
+            <span>Case sensitive</span>
+          </label>
+          <div class="search-nav">
+            <span id="search-results-count">0 results</span>
+            <button id="search-prev" title="Previous result" disabled>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button id="search-next" title="Next result" disabled>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // Insert search interface before tabs
+    const tabsContainer = translationViewer.querySelector('.translation-tabs');
+    translationViewer.insertBefore(searchContainer, tabsContainer);
+    
+    // Set up search functionality
+    setupSearchFunctionality();
+  }
+  
+  // Implement search functionality
+  function setupSearchFunctionality() {
+    const searchInput = document.getElementById('translation-search');
+    const searchButton = document.getElementById('search-button');
+    const prevButton = document.getElementById('search-prev');
+    const nextButton = document.getElementById('search-next');
+    const resultsCount = document.getElementById('search-results-count');
+    const searchLatin = document.getElementById('search-latin');
+    const searchEnglish = document.getElementById('search-english');
+    const caseSensitive = document.getElementById('search-case-sensitive');
+    
+    let currentSearchResults = [];
+    let currentResultIndex = -1;
+    
+    // Search function
+    function performSearch() {
+      // Clear previous results
+      clearSearchHighlights();
+      currentSearchResults = [];
+      currentResultIndex = -1;
+      
+      const searchTerm = searchInput.value.trim();
+      if (!searchTerm) {
+        updateResultsUI();
+        return;
+      }
+    }
+    
+    // Edit an annotation
+    function editAnnotation(id) {
+      const annotation = annotations[id];
+      if (!annotation) return;
+      
+      // Find the highlighted text in the document
+      const highlightedText = document.querySelector(`.annotated-text[data-annotation-id="${id}"]`);
+      
+      if (highlightedText) {
+        // Get the range
+        const range = document.createRange();
+        range.selectNodeContents(highlightedText);
+        
+        // Set up the popup
+        selectedRange = range;
+        currentSelection = annotation.selection;
+        currentEditingId = id;
+        
+        // Position the popup
+        const rect = range.getBoundingClientRect();
+        const popupEl = popupContainer.querySelector('.annotation-popup');
+        
+        // Show the popup near the highlighted text
+        popupContainer.style.display = 'block';
+        popupEl.style.left = `${rect.left}px`;
+        popupEl.style.top = `${rect.bottom + 10}px`;
+        
+        // Pre-fill with existing note
+        popupContainer.querySelector('.annotation-text').value = annotation.text;
+      } else {
+        // Text not found in DOM, open popup near the annotation card
+        const card = document.querySelector(`.annotation-card[data-annotation-id="${id}"]`);
+        if (!card) return;
+        
+        // Set editing state
+        currentEditingId = id;
+        currentSelection = annotation.selection;
+        
+        // Position popup near the card
+        const rect = card.getBoundingClientRect();
+        const popupEl = popupContainer.querySelector('.annotation-popup');
+        
+        popupContainer.style.display = 'block';
+        popupEl.style.left = `${rect.left}px`;
+        popupEl.style.top = `${rect.bottom + 10}px`;
+        
+        // Pre-fill with existing note
+        popupContainer.querySelector('.annotation-text').value = annotation.text;
+      }
+    }
+    
+    // Delete an annotation
+    function deleteAnnotation(id) {
+      // Confirm deletion
+      if (!confirm('Are you sure you want to delete this annotation?')) return;
+      
+      // Remove from storage
+      delete annotations[id];
+      saveAnnotations();
+      
+      // Update UI
+      renderAnnotations();
+      updateAnnotationCount();
+      
+      // Remove highlight from text if it exists
+      const highlightedText = document.querySelector(`.annotated-text[data-annotation-id="${id}"]`);
+      if (highlightedText) {
+        // Replace the span with its text content
+        const parent = highlightedText.parentNode;
+        const textNode = document.createTextNode(highlightedText.textContent);
+        parent.replaceChild(textNode, highlightedText);
+        parent.normalize();
+      }
+    }
+    
+    // Export annotations as JSON file
+    function exportAnnotations() {
+      const pageTitle = document.querySelector('.post-title')?.textContent || 'Unknown Document';
+      const exportData = {
+        document: pageTitle,
+        exportDate: new Date().toISOString(),
+        annotations: annotations
+      };
+      
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], {type: 'application/json'});
+      const url = URL.createObjectURL(blob);
+      
+      // Create download link
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `annotations-${pageTitle.toLowerCase().replace(/[^a-z0-9]/g, '-')}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+    
+    // Save annotations to localStorage
+    function saveAnnotations() {
+      localStorage.setItem('translation-annotations', JSON.stringify(annotations));
+    }
+    
+    // Load annotations from localStorage
+    function loadAnnotations() {
+      const saved = localStorage.getItem('translation-annotations');
+      return saved ? JSON.parse(saved) : {};
+    }
+    
+    // Update count badge on annotations button
+    function updateAnnotationCount() {
+      const count = Object.keys(annotations).length;
+      const countBadge = document.querySelector('.annotation-count');
+      if (countBadge) {
+        countBadge.textContent = count;
+        countBadge.style.display = count > 0 ? 'inline-block' : 'none';
+      }
+    }
+      
+      // Determine where to search
+      let searchAreas = [];
+      if (searchLatin.checked) searchAreas.push('latin');
+      if (searchEnglish.checked) searchAreas.push('english');
+      
+      // Search options
+      const options = {
+        caseSensitive: caseSensitive.checked
+      };
+      
+      // Perform the search
+      searchAreas.forEach(area => {
+        let elements;
+        if (area === 'latin') {
+          elements = document.querySelectorAll('.latin-text');
+        } else {
+          elements = document.querySelectorAll('.english-text');
+        }
+        
+        elements.forEach(element => {
+          const result = highlightSearchTerms(element, searchTerm, options, area);
+          currentSearchResults = currentSearchResults.concat(result);
+        });
+      });
+      
+      // Sort results by their position in the document
+      currentSearchResults.sort((a, b) => {
+        const posA = a.element.getBoundingClientRect();
+        const posB = b.element.getBoundingClientRect();
+        return posA.top - posB.top;
+      });
+      
+      updateResultsUI();
+      
+      // Navigate to first result if available
+      if (currentSearchResults.length > 0) {
+        navigateToResult(0);
+      }
+      
+      // Switch to appropriate tab if needed based on results
+      if (currentSearchResults.length > 0) {
+        const firstResult = currentSearchResults[0];
+        if (firstResult.type === 'latin' && searchEnglish.checked && !searchLatin.checked) {
+          // Switch to Latin tab
+          document.querySelector('.tab-btn[data-target="latin-only"]').click();
+        } else if (firstResult.type === 'english' && searchLatin.checked && !searchEnglish.checked) {
+          // Switch to English tab
+          document.querySelector('.tab-btn[data-target="english-only"]').click();
+        } else if (searchLatin.checked && searchEnglish.checked) {
+          // Switch to side-by-side view if not on mobile
+          if (window.innerWidth > 768) {
+            document.querySelector('.tab-btn[data-target="side-by-side"]').click();
+          }
+        }
+      }
+    }
+    
+    // Highlight search terms in element
+    function highlightSearchTerms(element, term, options, type) {
+      const results = [];
+      const text = element.textContent;
+      const parent = element.closest('.chunk-section');
+      const chunkNumber = parent ? parent.querySelector('.chunk-number').textContent : 'unknown';
+      
+      // Use regex for search
+      const flags = options.caseSensitive ? 'g' : 'gi';
+      const regex = new RegExp(term, flags);
+      
+      let match;
+      let html = element.innerHTML;
+      const textPositions = [];
+      
+      // Find all matches and record positions
+      while ((match = regex.exec(text)) !== null) {
+        textPositions.push({
+          index: match.index,
+          length: match[0].length,
+          text: match[0]
+        });
+      }
+      
+      // Apply highlighting in reverse order to maintain indices
+      for (let i = textPositions.length - 1; i >= 0; i--) {
+        const pos = textPositions[i];
+        
+        // Convert text position to HTML position
+        const htmlPos = findPositionInHtml(html, pos.text, pos.index);
+        if (htmlPos !== -1) {
+          // Insert highlighting markup
+          html = html.substring(0, htmlPos) +
+                 `<mark class="search-highlight" data-result-index="${results.length}">` +
+                 html.substring(htmlPos, htmlPos + pos.length) +
+                 '</mark>' +
+                 html.substring(htmlPos + pos.length);
+          
+          // Add to results
+          results.push({
+            element: element,
+            highlight: null, // Will be updated after DOM is modified
+            index: results.length,
+            chunk: chunkNumber,
+            type: type
+          });
+        }
+      }
+      
+      // Update the HTML
+      if (textPositions.length > 0) {
+        element.innerHTML = html;
+        
+        // Update highlight references
+        element.querySelectorAll('.search-highlight').forEach(highlight => {
+          const index = parseInt(highlight.getAttribute('data-result-index'), 10);
+          if (!isNaN(index) && index < results.length) {
+            results[index].highlight = highlight;
+          }
+        });
+      }
+      
+      return results;
+    }
+    
+    // Helper to find the position in HTML string
+    function findPositionInHtml(html, text, textIndex) {
+      // This is a simplified approach. A more robust solution would parse the HTML
+      const tempElement = document.createElement('div');
+      tempElement.innerHTML = html;
+      const plainText = tempElement.textContent;
+      
+      // Find the nth occurrence of the text
+      let count = 0;
+      let currentIndex = 0;
+      
+      while (count <= textIndex) {
+        const indexOf = plainText.indexOf(text, currentIndex);
+        if (indexOf === -1) return -1;
+        
+        if (count === textIndex) {
+          // Found the correct occurrence - now map it back to the HTML
+          let htmlIndex = 0;
+          let textCounter = 0;
+          
+          // Simplified mapping from text index to HTML index
+          for (let i = 0; i < html.length; i++) {
+            if (html[i] === '<') {
+              // Skip tags
+              while (i < html.length && html[i] !== '>') i++;
+              continue;
+            }
+            
+            if (textCounter === indexOf) {
+              htmlIndex = i;
+              break;
+            }
+            
+            textCounter++;
+          }
+          
+          return htmlIndex;
+        }
+        
+        currentIndex = indexOf + 1;
+        count++;
+      }
+      
+      return -1;
+    }
+    
+    // Update the results UI
+    function updateResultsUI() {
+      const count = currentSearchResults.length;
+      resultsCount.textContent = `${count} ${count === 1 ? 'result' : 'results'}`;
+      
+      prevButton.disabled = count === 0 || currentResultIndex <= 0;
+      nextButton.disabled = count === 0 || currentResultIndex >= count - 1;
+    }
+    
+    // Clear search highlights
+    function clearSearchHighlights() {
+      document.querySelectorAll('.search-highlight').forEach(highlight => {
+        const parent = highlight.parentNode;
+        if (parent) {
+          // Replace the highlight with its text content
+          parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+          // Normalize to combine adjacent text nodes
+          parent.normalize();
+        }
+      });
+    }
+    
+    // Navigate to a specific result
+    function navigateToResult(index) {
+      if (index < 0 || index >= currentSearchResults.length) return;
+      
+      // Update current index
+      currentResultIndex = index;
+      
+      // Get the highlight element
+      const result = currentSearchResults[index];
+      const highlight = result.highlight;
+      
+      if (!highlight) return;
+      
+      // Add active class to current highlight
+      document.querySelectorAll('.search-highlight.active').forEach(el => {
+        el.classList.remove('active');
+      });
+      highlight.classList.add('active');
+      
+      // Scroll to the highlight
+      const parent = highlight.closest('.chunk-section');
+      if (parent) {
+        // Ensure the chunk is visible
+        parent.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // If we're in side-by-side view, ensure both columns show the same chunk
+        const chunkNumber = parent.querySelector('.chunk-number').textContent;
+        syncScrollToChunk(chunkNumber, result.type);
+      }
+      
+      // Update UI
+      updateResultsUI();
+    }
+    
+    // Sync scroll to matching chunk in other column
+    function syncScrollToChunk(chunkNumber, sourceType) {
+      // Only relevant in side-by-side view
+      const sideByBySide = document.getElementById('side-by-side');
+      if (!sideByBySide || !sideByBySide.classList.contains('active')) return;
+      
+      // Find the other column
+      const targetType = sourceType === 'latin' ? 'english' : 'latin';
+      const targetColumn = document.querySelector(`.${targetType}-column`);
+      if (!targetColumn) return;
+      
+      // Find the matching chunk
+      const targetChunks = targetColumn.querySelectorAll('.chunk-section');
+      for (const chunk of targetChunks) {
+        const chunkNum = chunk.querySelector('.chunk-number').textContent;
+        if (chunkNum === chunkNumber) {
+          // Scroll to this chunk
+          chunk.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          break;
+        }
+      }
+    }
+    
+    // Event listeners
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') {
+        performSearch();
+      }
+    });
+    
+    prevButton.addEventListener('click', function() {
+      if (currentResultIndex > 0) {
+        navigateToResult(currentResultIndex - 1);
+      }
+    });
+    
+    nextButton.addEventListener('click', function() {
+      if (currentResultIndex < currentSearchResults.length - 1) {
+        navigateToResult(currentResultIndex + 1);
+      }
+    });
+    
+    // Option changes trigger new search
+    searchLatin.addEventListener('change', performSearch);
+    searchEnglish.addEventListener('change', performSearch);
+    caseSensitive.addEventListener('change', performSearch);
+  }
+
+  // ===== FEATURE 2: SYNCHRONIZED SCROLLING =====
+  
+  function setupSynchronizedScrolling() {
+    // Track whether we're currently handling a scroll event
+    let isScrolling = false;
+    
+    // Get the columns
+    const latinColumn = document.querySelector('.latin-column');
+    const englishColumn = document.querySelector('.english-column');
+    
+    if (!latinColumn || !englishColumn) return;
+    
+    // Set up scroll event listeners
+    latinColumn.addEventListener('scroll', function() {
+      if (isScrolling) return;
+      isScrolling = true;
+      
+      // Find visible chunks in Latin column
+      const visibleChunk = findVisibleChunk(latinColumn);
+      if (visibleChunk) {
+        // Find corresponding chunk in English column
+        scrollToCorrespondingChunk(englishColumn, visibleChunk);
+      }
+      
+      // Reset flag after a short delay
+      setTimeout(() => { isScrolling = false; }, 100);
+    });
+    
+    englishColumn.addEventListener('scroll', function() {
+      if (isScrolling) return;
+      isScrolling = true;
+      
+      // Find visible chunks in English column
+      const visibleChunk = findVisibleChunk(englishColumn);
+      if (visibleChunk) {
+        // Find corresponding chunk in Latin column
+        scrollToCorrespondingChunk(latinColumn, visibleChunk);
+      }
+      
+      // Reset flag after a short delay
+      setTimeout(() => { isScrolling = false; }, 100);
+    });
+  }
+  
+  // Find the most visible chunk in a column
+  function findVisibleChunk(column) {
+    const chunks = column.querySelectorAll('.chunk-section');
+    const columnRect = column.getBoundingClientRect();
+    let bestVisibility = 0;
+    let bestChunk = null;
+    
+    chunks.forEach(chunk => {
+      const chunkRect = chunk.getBoundingClientRect();
+      
+      // Calculate how much of the chunk is visible
+      const visibleTop = Math.max(chunkRect.top, columnRect.top);
+      const visibleBottom = Math.min(chunkRect.bottom, columnRect.bottom);
+      
+      if (visibleBottom > visibleTop) {
+        const visibleHeight = visibleBottom - visibleTop;
+        const percentVisible = visibleHeight / chunkRect.height;
+        
+        if (percentVisible > bestVisibility) {
+          bestVisibility = percentVisible;
+          bestChunk = chunk;
+        }
+      }
+    });
+    
+    return bestChunk;
+  }
+  
+  // Scroll to the corresponding chunk in the other column
+  function scrollToCorrespondingChunk(column, sourceChunk) {
+    const chunkNumber = sourceChunk.querySelector('.chunk-number').textContent;
+    const targetChunks = column.querySelectorAll('.chunk-section');
+    
+    for (const chunk of targetChunks) {
+      const num = chunk.querySelector('.chunk-number').textContent;
+      if (num === chunkNumber) {
+        // Calculate position to keep the same relative position
+        const sourceRect = sourceChunk.getBoundingClientRect();
+        const sourceColumn = sourceChunk.closest('.latin-column, .english-column');
+        const sourceColumnRect = sourceColumn.getBoundingClientRect();
+        
+        // Calculate relative position in source column
+        const relativeOffset = sourceRect.top - sourceColumnRect.top;
+        
+        // Adjust scroll position of target column
+        column.scrollTop = chunk.offsetTop - relativeOffset;
+        break;
+      }
+    }
+  }
+  
+  // ===== FEATURE 4: TERMINOLOGY HIGHLIGHTING =====
+  
+  function setupTerminologyHighlighting() {
+    // Add terminology controls
+    const terminologyContainer = document.createElement('div');
+    terminologyContainer.className = 'terminology-container';
+    terminologyContainer.innerHTML = `
+      <div class="terminology-controls">
+        <h3>Terminology Matching</h3>
+        <div class="terminology-form">
+          <div class="terminology-input-group">
+            <input type="text" id="latin-term" placeholder="Latin term" class="terminology-input">
+            <input type="text" id="english-term" placeholder="English equivalent" class="terminology-input">
+            <button id="add-terminology" class="terminology-button">Add</button>
+          </div>
+          <div class="terminology-options">
+            <label class="terminology-option">
+              <input type="checkbox" id="case-sensitive-terms" checked>
+              <span>Case sensitive</span>
+            </label>
+            <label class="terminology-option">
+              <input type="checkbox" id="whole-word-terms">
+              <span>Whole words only</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="terminology-list-container">
+        <h4>Your Terminology</h4>
+        <div class="terminology-list"></div>
+        <div class="no-terminology">No terminology pairs added yet.</div>
+      </div>
+    `;
+    
+    // Create the toggle button
+    const terminologyToggle = document.createElement('button');
+    terminologyToggle.className = 'toggle-terminology';
+    terminologyToggle.title = 'Terminology tools';
+    terminologyToggle.innerHTML = `
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    `;
+    
+    // Add to the document
+    const translationViewer = document.getElementById('translation-viewer');
+    translationViewer.appendChild(terminologyContainer);
+    translationViewer.appendChild(terminologyToggle);
+    
+    // Set up terminology storage
+    let terminologyPairs = loadTerminology();
+    let activeHighlighting = true;
+    
+    // Initialize the list
+    renderTerminologyList();
+    
+    // Set up event listeners
+    terminologyToggle.addEventListener('click', function() {
+      terminologyContainer.classList.toggle('open');
+      terminologyToggle.classList.toggle('active');
+    });
+    
+    // Add button
+    document.getElementById('add-terminology').addEventListener('click', addTerminologyPair);
+    
+    // Form inputs
+    const latinInput = document.getElementById('latin-term');
+    const englishInput = document.getElementById('english-term');
+    
+    latinInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter' && englishInput.value.trim() !== '') {
+        addTerminologyPair();
+      }
+    });
+    
+    englishInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter' && latinInput.value.trim() !== '') {
+        addTerminologyPair();
+      }
+    });
+    
+    // Options for highlighting
+    const caseSensitiveOption = document.getElementById('case-sensitive-terms');
+    const wholeWordOption = document.getElementById('whole-word-terms');
+    
+    caseSensitiveOption.addEventListener('change', updateTerminologyHighlighting);
+    wholeWordOption.addEventListener('change', updateTerminologyHighlighting);
+    
+    // Apply highlighting initially
+    applyTerminologyHighlighting();
+    
+    // Add a new terminology pair
+    function addTerminologyPair() {
+      const latinTerm = latinInput.value.trim();
+      const englishTerm = englishInput.value.trim();
+      
+      if (latinTerm === '' || englishTerm === '') {
+        return;
+      }
+      
+      // Create unique ID
+      const id = Date.now().toString();
+      
+      // Add to storage
+      terminologyPairs[id] = {
+        id,
+        latin: latinTerm,
+        english: englishTerm
+      };
+      
+      // Save and update
+      saveTerminology();
+      renderTerminologyList();
+      
+      // Apply highlighting
+      applyTerminologyHighlighting();
+      
+      // Clear inputs
+      latinInput.value = '';
+      englishInput.value = '';
+      latinInput.focus();
+    }
+    
+    // Render the terminology list
+    function renderTerminologyList() {
+      const list = terminologyContainer.querySelector('.terminology-list');
+      const noTerminology = terminologyContainer.querySelector('.no-terminology');
+      
+      // Clear current list
+      list.innerHTML = '';
+      
+      // Get as array
+      const pairsArray = Object.values(terminologyPairs);
+      
+      // Toggle empty state
+      if (pairsArray.length === 0) {
+        list.style.display = 'none';
+        noTerminology.style.display = 'block';
+      } else {
+        list.style.display = 'block';
+        noTerminology.style.display = 'none';
+        
+        // Create items
+        pairsArray.forEach(pair => {
+          const item = document.createElement('div');
+          item.className = 'terminology-item';
+          item.setAttribute('data-terminology-id', pair.id);
+          
+          item.innerHTML = `
+            <div class="terminology-text">
+              <span class="latin-term">${pair.latin}</span>
+              <span class="term-separator">→</span>
+              <span class="english-term">${pair.english}</span>
+            </div>
+            <div class="terminology-actions">
+              <button class="delete-terminology" title="Delete">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                </svg>
+              </button>
+            </div>
+          `;
+          
+          list.appendChild(item);
+          
+          // Delete button
+          item.querySelector('.delete-terminology').addEventListener('click', function() {
+            deleteTerminologyPair(pair.id);
+          });
+        });
+      }
+    }
+    
+    // Delete a terminology pair
+    function deleteTerminologyPair(id) {
+      if (!confirm('Remove this terminology pair?')) return;
+      
+      // Remove highlighting
+      removeTerminologyHighlighting(id);
+      
+      // Remove from storage
+      delete terminologyPairs[id];
+      saveTerminology();
+      
+      // Update display
+      renderTerminologyList();
+    }
+    
+    // Apply terminology highlighting to the text
+    function applyTerminologyHighlighting() {
+      // Clear existing highlights first
+      removeAllTerminologyHighlighting();
+      
+      if (!activeHighlighting) return;
+      
+      // Get options
+      const caseSensitive = document.getElementById('case-sensitive-terms').checked;
+      const wholeWord = document.getElementById('whole-word-terms').checked;
+      
+      // Get all terminology pairs
+      const pairs = Object.values(terminologyPairs);
+      
+      // Get all text elements
+      const latinTexts = document.querySelectorAll('.latin-text');
+      const englishTexts = document.querySelectorAll('.english-text');
+      
+      // Process each pair
+      pairs.forEach(pair => {
+        // Create regexes for matching
+        let latinRegexStr = escapeRegExp(pair.latin);
+        let englishRegexStr = escapeRegExp(pair.english);
+        
+        if (wholeWord) {
+          latinRegexStr = `\\b${latinRegexStr}\\b`;
+          englishRegexStr = `\\b${englishRegexStr}\\b`;
+        }
+        
+        const latinRegex = new RegExp(latinRegexStr, caseSensitive ? 'g' : 'gi');
+        const englishRegex = new RegExp(englishRegexStr, caseSensitive ? 'g' : 'gi');
+        
+        // Highlight Latin terms
+        latinTexts.forEach(element => {
+          highlightTerms(element, latinRegex, pair.id, 'latin');
+        });
+        
+        // Highlight English terms
+        englishTexts.forEach(element => {
+          highlightTerms(element, englishRegex, pair.id, 'english');
+        });
+      });
+    }
+    
+    // Highlight terms in an element
+    function highlightTerms(element, regex, pairId, language) {
+      const html = element.innerHTML;
+      
+      // Replace matching text with highlighted version
+      const newHtml = html.replace(regex, match => {
+        return `<span class="terminology-highlight" data-terminology-id="${pairId}" data-term-language="${language}">${match}</span>`;
+      });
+      
+      // Only update if changes were made
+      if (newHtml !== html) {
+        element.innerHTML = newHtml;
+      }
+    }
+    
+    // Remove terminology highlighting
+    function removeTerminologyHighlighting(id) {
+      const highlights = document.querySelectorAll(`.terminology-highlight[data-terminology-id="${id}"]`);
+      
+      highlights.forEach(highlight => {
+        // Replace with text content
+        const parent = highlight.parentNode;
+        const text = document.createTextNode(highlight.textContent);
+        parent.replaceChild(text, highlight);
+        parent.normalize();
+      });
+    }
+    
+    // Remove all terminology highlighting
+    function removeAllTerminologyHighlighting() {
+      const highlights = document.querySelectorAll('.terminology-highlight');
+      
+      highlights.forEach(highlight => {
+        // Replace with text content
+        const parent = highlight.parentNode;
+        const text = document.createTextNode(highlight.textContent);
+        parent.replaceChild(text, highlight);
+        parent.normalize();
+      });
+    }
+    
+// Update highlighting when options change
+function updateTerminologyHighlighting() {
+  applyTerminologyHighlighting();
+}
+
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Save terminology to localStorage
+function saveTerminology() {
+  localStorage.setItem('translation-terminology', JSON.stringify(terminologyPairs));
+}
+
+// Load terminology from localStorage
+function loadTerminology() {
+  const saved = localStorage.getItem('translation-terminology');
+  return saved ? JSON.parse(saved) : {};
+}
+
+// End of setupTerminologyHighlighting function should NOT be here
+// } <- Remove this closing brace
+
+// ===== FEATURE 5: PARALLEL NAVIGATION =====
+function setupParallelNavigation() {
+  // Create navigation controls
+  const navControls = document.createElement('div');
+  navControls.className = 'chunk-navigation';
+  navControls.innerHTML = `
+    <div class="chunk-nav-controls">
+      <button id="prev-chunk" class="chunk-nav-button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Previous</span>
+      </button>
+      <div class="chunk-indicator">
+        <span>Chunk </span>
+        <span id="current-chunk-number">-</span>
+        <span> of </span>
+        <span id="total-chunks">-</span>
+      </div>
+      <button id="next-chunk" class="chunk-nav-button">
+        <span>Next</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  `;
+    
+    // Add to the translation viewer
+    const translationViewer = document.getElementById('translation-viewer');
+    translationViewer.appendChild(navControls);
+    
+    // Set up navigation functionality
+    const prevButton = document.getElementById('prev-chunk');
+    const nextButton = document.getElementById('next-chunk');
+    const currentChunkDisplay = document.getElementById('current-chunk-number');
+    const totalChunksDisplay = document.getElementById('total-chunks');
+    
+    // Initialize state
+    let currentChunkIndex = 0;
+    let totalChunks = 0;
+    let chunkNumbersArray = [];
+    
+    // Update navigation state based on visible content
+    function updateNavigationState() {
+      // Get active tab
+      const activePanel = document.querySelector('.tab-panel.active');
+      if (!activePanel) return;
+      
+      // Get all chunks in the active panel
+      const chunks = activePanel.querySelectorAll('.chunk-section');
+      totalChunks = chunks.length;
+      
+      // Update total display
+      totalChunksDisplay.textContent = totalChunks;
+      
+      // Get chunk numbers
+      chunkNumbersArray = [];
+      chunks.forEach(chunk => {
+        const number = chunk.querySelector('.chunk-number').textContent;
+        chunkNumbersArray.push(number);
+      });
+      
+      // Find current chunk (most visible)
+      if (activePanel.id === 'side-by-side') {
+        // In side-by-side view, determine from latin column
+        const latinColumn = activePanel.querySelector('.latin-column');
+        if (latinColumn) {
+          const visibleChunk = findVisibleChunk(latinColumn);
+          if (visibleChunk) {
+            const number = visibleChunk.querySelector('.chunk-number').textContent;
+            currentChunkIndex = chunkNumbersArray.indexOf(number);
+          }
+        }
+      } else {
+        // In single column view
+        const visibleChunk = findVisibleChunk(activePanel);
+        if (visibleChunk) {
+          const number = visibleChunk.querySelector('.chunk-number').textContent;
+          currentChunkIndex = chunkNumbersArray.indexOf(number);
+        }
+      }
+      
+      // Update current display
+      if (currentChunkIndex >= 0 && currentChunkIndex < chunkNumbersArray.length) {
+        currentChunkDisplay.textContent = chunkNumbersArray[currentChunkIndex];
+      } else {
+        currentChunkDisplay.textContent = '-';
+      }
+      
+      // Update button states
+      prevButton.disabled = currentChunkIndex <= 0;
+      nextButton.disabled = currentChunkIndex >= totalChunks - 1;
+    }
+    
+    // Navigate to the previous chunk
+    function goToPreviousChunk() {
+      if (currentChunkIndex <= 0) return;
+      
+      navigateToChunkByIndex(currentChunkIndex - 1);
+    }
+    
+    // Navigate to the next chunk
+    function goToNextChunk() {
+      if (currentChunkIndex >= totalChunks - 1) return;
+      
+      navigateToChunkByIndex(currentChunkIndex + 1);
+    }
+    
+    // Navigate to a specific chunk by index
+    function navigateToChunkByIndex(index) {
+      if (index < 0 || index >= chunkNumbersArray.length) return;
+      
+      // Get the chunk number
+      const chunkNumber = chunkNumbersArray[index];
+      
+      // Get active tab
+      const activePanel = document.querySelector('.tab-panel.active');
+      if (!activePanel) return;
+      
+      // Find the chunk
+      let targetChunk = null;
+      
+      // Different handling for side-by-side view
+      if (activePanel.id === 'side-by-side') {
+        // In side-by-side, navigate in both columns
+        const latinColumn = activePanel.querySelector('.latin-column');
+        
+        if (latinColumn) {
+          // Find in latin column
+          const latinChunks = latinColumn.querySelectorAll('.chunk-section');
+          for (const chunk of latinChunks) {
+            const num = chunk.querySelector('.chunk-number').textContent;
+            if (num === chunkNumber) {
+              targetChunk = chunk;
+              break;
+            }
+          }
+          
+          // Scroll to target
+          if (targetChunk) {
+            targetChunk.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Update state
+            currentChunkIndex = index;
+            currentChunkDisplay.textContent = chunkNumber;
+            
+            // Update button states
+            prevButton.disabled = currentChunkIndex <= 0;
+            nextButton.disabled = currentChunkIndex >= totalChunks - 1;
+          }
+        }
+      } else {
+        // Single column view
+        const chunks = activePanel.querySelectorAll('.chunk-section');
+        for (const chunk of chunks) {
+          const num = chunk.querySelector('.chunk-number').textContent;
+          if (num === chunkNumber) {
+            targetChunk = chunk;
+            break;
+          }
+        }
+        
+        // Scroll to target
+        if (targetChunk) {
+          targetChunk.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          
+          // Update state
+          currentChunkIndex = index;
+          currentChunkDisplay.textContent = chunkNumber;
+          
+          // Update button states
+          prevButton.disabled = currentChunkIndex <= 0;
+          nextButton.disabled = currentChunkIndex >= totalChunks - 1;
+        }
+      }
+    }
+    
+    // Event listeners
+    prevButton.addEventListener('click', goToPreviousChunk);
+    nextButton.addEventListener('click', goToNextChunk);
+    
+    // Update navigation on tab changes
+    document.addEventListener('tabChanged', function() {
+      // Wait for tab content to be fully loaded
+      setTimeout(updateNavigationState, 100);
+    });
+    
+    // Update on scroll
+    document.addEventListener('scroll', debounce(updateNavigationState, 100), { passive: true });
+    
+    // Update when columns are scrolled
+    const columns = document.querySelectorAll('.latin-column, .english-column, .single-column');
+    columns.forEach(column => {
+      column.addEventListener('scroll', debounce(updateNavigationState, 100), { passive: true });
+    });
+    
+    // Initial update
+    setTimeout(updateNavigationState, 300);
+  }
+  
+
+      const context = this;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+  }
+
+  // ===== FEATURE 3: ANNOTATION SYSTEM =====
+  
+  function setupAnnotationSystem() {
+    const tabContent = document.querySelector('.tab-content');
+    if (!tabContent) return;
+    
+    // Create the annotation sidebar
+    const annotationSidebar = document.createElement('div');
+    annotationSidebar.className = 'annotation-sidebar';
+    annotationSidebar.innerHTML = `
+      <div class="annotation-header">
+        <h3>Notes & Annotations</h3>
+        <button id="close-annotations" class="close-annotations" title="Close annotations">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6L6 18"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="annotation-content">
+        <div class="annotation-list"></div>
+        <div class="no-annotations">No annotations yet. Select text to add notes.</div>
+      </div>
+      <div class="annotation-controls">
+        <button id="export-annotations" class="annotation-button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Export Notes
+        </button>
+      </div>
+    `;
+    
+    // Add the toggle button
+    const toggleButton = document.createElement('button');
+    toggleButton.className = 'toggle-annotations';
+    toggleButton.title = 'Toggle annotations';
+    toggleButton.innerHTML = `
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      <span class="annotation-count">0</span>
+    `;
+    
+    // Add elements to the translation viewer
+    const translationViewer = document.getElementById('translation-viewer');
+    translationViewer.appendChild(toggleButton);
+    translationViewer.appendChild(annotationSidebar);
+    
+    // Storage for annotations
+    let annotations = loadAnnotations();
+    updateAnnotationCount();
+    
+    // Set up annotation creation popup
+    const popupContainer = document.createElement('div');
+    popupContainer.className = 'annotation-popup-container';
+    popupContainer.innerHTML = `
+      <div class="annotation-popup">
+        <div class="annotation-popup-header">
+          <span>Add Annotation</span>
+          <button class="close-popup">×</button>
+        </div>
+        <textarea class="annotation-text" placeholder="Enter your notes..."></textarea>
+        <div class="annotation-popup-footer">
+          <button class="save-annotation">Save</button>
+          <button class="cancel-annotation">Cancel</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(popupContainer);
+    
+    // Variables to track selection and popup state
+    let currentSelection = null;
+    let selectedRange = null;
+    let currentEditingId = null;
+    
+    // Event listeners for toggle button
+    toggleButton.addEventListener('click', function() {
+      annotationSidebar.classList.toggle('open');
+      toggleButton.classList.toggle('active');
+    });
+    
+    // Close button for annotations
+    document.getElementById('close-annotations').addEventListener('click', function() {
+      annotationSidebar.classList.remove('open');
+      toggleButton.classList.remove('active');
+    });
+    
+    // Export button
+    document.getElementById('export-annotations').addEventListener('click', exportAnnotations);
+    
+    // Selection handling in the translation panels
+    tabContent.addEventListener('mouseup', handleTextSelection);
+    
+    // Close popup buttons
+    popupContainer.querySelector('.close-popup').addEventListener('click', closeAnnotationPopup);
+    popupContainer.querySelector('.cancel-annotation').addEventListener('click', closeAnnotationPopup);
+    
+    // Save annotation
+    popupContainer.querySelector('.save-annotation').addEventListener('click', saveAnnotation);
+    
+    // Display existing annotations
+    renderAnnotations();
+    
+    // Handle text selection
+    function handleTextSelection(e) {
+      // Only allow annotations in text areas
+      if (!e.target.closest('.latin-text') && !e.target.closest('.english-text')) {
+        return;
+      }
+      
+      const selection = window.getSelection();
+      if (selection.toString().trim().length === 0) {
+        return;
+      }
+      
+      // Get selection details
+      currentSelection = selection.toString();
+      selectedRange = selection.getRangeAt(0);
+      
+      // Get position for popup
+      const rect = selectedRange.getBoundingClientRect();
+      const popupEl = popupContainer.querySelector('.annotation-popup');
+      
+      // Position the popup near the selection
+      popupContainer.style.display = 'block';
+      const popupWidth = popupEl.offsetWidth;
+      const popupHeight = popupEl.offsetHeight;
+      
+      // Calculate position to avoid going off-screen
+      let left = rect.left + (rect.width / 2) - (popupWidth / 2);
+      let top = rect.top - popupHeight - 10;
+      
+      // Adjust if off-screen
+      if (left < 10) left = 10;
+      if (left + popupWidth > window.innerWidth - 10) {
+        left = window.innerWidth - popupWidth - 10;
+      }
+      
+      // If would go above viewport, position below selection
+      if (top < 10) {
+        top = rect.bottom + 10;
+      }
+      
+      popupEl.style.left = `${left}px`;
+      popupEl.style.top = `${top}px`;
+      
+      // Clear any previous text
+      popupContainer.querySelector('.annotation-text').value = '';
+      currentEditingId = null;
+    }
+    
+    // Save the annotation
+    function saveAnnotation() {
+      if (!currentSelection || !selectedRange) return;
+      
+      const text = popupContainer.querySelector('.annotation-text').value.trim();
+      if (!text) {
+        closeAnnotationPopup();
+        return;
+      }
+      
+      // Get the chunk number
+      const chunk = selectedRange.startContainer.closest('.chunk-section');
+      const chunkNumber = chunk ? chunk.querySelector('.chunk-number').textContent : 'unknown';
+      
+      // Determine if Latin or English
+      const isLatin = !!selectedRange.startContainer.closest('.latin-text');
+      const language = isLatin ? 'latin' : 'english';
+      
+      // Create annotation ID
+      const id = currentEditingId || Date.now().toString();
+      
+      // Create or update annotation
+      annotations[id] = {
+        id,
+        text,
+        selection: currentSelection,
+        chunkNumber,
+        language,
+        timestamp: new Date().toISOString()
+      };
+      
+      // Save and update display
+      saveAnnotations();
+      renderAnnotations();
+      updateAnnotationCount();
+      
+      // Close the popup
+      closeAnnotationPopup();
+      
+      // Highlight the text in the document
+      highlightAnnotatedText(selectedRange, id);
+    }
+    
+    // Close the annotation popup
+    function closeAnnotationPopup() {
+      popupContainer.style.display = 'none';
+      currentSelection = null;
+      selectedRange = null;
+      currentEditingId = null;
+    }
+    
+    // Highlight annotated text in the document
+    function highlightAnnotatedText(range, id) {
+      // Create a span to wrap the selection
+      const span = document.createElement('span');
+      span.className = 'annotated-text';
+      span.setAttribute('data-annotation-id', id);
+      
+      // Mark the selected text with the span
+      range.surroundContents(span);
+    }
+    
+    // Render all annotations in the sidebar
+    function renderAnnotations() {
+      const list = annotationSidebar.querySelector('.annotation-list');
+      const noAnnotations = annotationSidebar.querySelector('.no-annotations');
+      
+      // Clear current display
+      list.innerHTML = '';
+      
+      // Get annotations as array and sort by date
+      const annotationsArray = Object.values(annotations);
+      annotationsArray.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      
+      // Toggle empty state display
+      if (annotationsArray.length === 0) {
+        list.style.display = 'none';
+        noAnnotations.style.display = 'block';
+      } else {
+        list.style.display = 'block';
+        noAnnotations.style.display = 'none';
+        
+        // Create annotation cards
+        annotationsArray.forEach(annotation => {
+          const card = document.createElement('div');
+          card.className = 'annotation-card';
+          card.setAttribute('data-annotation-id', annotation.id);
+          
+          // Format date for display
+          const date = new Date(annotation.timestamp);
+          const formattedDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+          
+          card.innerHTML = `
+            <div class="annotation-card-header">
+              <div class="annotation-meta">
+                <span class="annotation-language">${annotation.language === 'latin' ? 'Latin' : 'English'}</span>
+                <span class="annotation-chunk">Chunk ${annotation.chunkNumber}</span>
+                <span class="annotation-date">${formattedDate}</span>
+              </div>
+              <div class="annotation-actions">
+                <button class="edit-annotation" title="Edit">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                  </svg>
+                </button>
+                <button class="delete-annotation" title="Delete">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="annotation-quote">"${annotation.selection}"</div>
+            <div class="annotation-note">${annotation.text}</div>
+          `;
+          
+          list.appendChild(card);
+          
+          // Add event listeners for edit and delete buttons
+          card.querySelector('.edit-annotation').addEventListener('click', function() {
+            editAnnotation(annotation.id);
+          });
+          
+          card.querySelector('.delete-annotation').addEventListener('click', function() {
+            deleteAnnotation(annotation.id);
+          });
+          
+          // Clicking on annotation scrolls to related text
+          card.addEventListener('click', function(e) {
+            // Don't navigate if clicking on buttons
+            if (e.target.closest('button')) return;
+            navigateToAnnotation(annotation);
+          });
+        });
+      }
+    }
+    
+    // Navigate to annotated text
+    function navigateToAnnotation(annotation) {
+      // Find the annotation in the document
+      const highlightedText = document.querySelector(`.annotated-text[data-annotation-id="${annotation.id}"]`);
+      
+      if (highlightedText) {
+        // Find the chunk and ensure proper tab is active
+        const chunk = highlightedText.closest('.chunk-section');
+        if (!chunk) return;
+        
+        const isInSideBySide = !!chunk.closest('#side-by-side');
+        const isInLatinOnly = !!chunk.closest('#latin-only');
+        const isInEnglishOnly = !!chunk.closest('#english-only');
+        
+        // Switch to appropriate tab if needed
+        if (annotation.language === 'latin' && !isInSideBySide && !isInLatinOnly) {
+          document.querySelector('.tab-btn[data-target="latin-only"]').click();
+        } else if (annotation.language === 'english' && !isInSideBySide && !isInEnglishOnly) {
+          document.querySelector('.tab-btn[data-target="english-only"]').click();
+        } else if (!isInSideBySide && window.innerWidth > 768) {
+          document.querySelector('.tab-btn[data-target="side-by-side"]').click();
+        }
+        
+        // Wait a short time for tab switch to complete
+        setTimeout(() => {
+          // Scroll the chunk into view
+          chunk.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // Highlight the annotation with a pulse effect
+          highlightedText.classList.add('pulse-highlight');
+          setTimeout(() => {
+            highlightedText.classList.remove('pulse-highlight');
+          }, 2000);
+        }, 100);
+      } else {
+        // If the highlighted text is not in the DOM, just navigate to the chunk number
+        const chunks = document.querySelectorAll('.chunk-section');
+        let targetChunk = null;
+        
+        // Find the chunk with matching number
+        for (const chunk of chunks) {
+          const chunkNum = chunk.querySelector('.chunk-number').textContent;
+          if (chunkNum === annotation.chunkNumber) {
+            // Check if this chunk is in the right language section
+            const isLatinChunk = !!chunk.querySelector('.latin-text');
+            const isEnglishChunk = !!chunk.querySelector('.english-text');
+            
+            if ((annotation.language === 'latin' && isLatinChunk) || 
+                (annotation.language === 'english' && isEnglishChunk)) {
+              targetChunk = chunk;
+              break;
+            }
+          }
+        }
+        
+        if (targetChunk) {
+          // Switch to appropriate tab if needed
+          const isInSideBySide = !!targetChunk.closest('#side-by-side');
+          const isInLatinOnly = !!targetChunk.closest('#latin-only');
+          const isInEnglishOnly = !!targetChunk.closest('#english-only');
+          
+          if (annotation.language === 'latin' && !isInSideBySide && !isInLatinOnly) {
+            document.querySelector('.tab-btn[data-target="latin-only"]').click();
+          } else if (annotation.language === 'english' && !isInSideBySide && !isInEnglishOnly) {
+            document.querySelector('.tab-btn[data-target="english-only"]').click();
+          } else if (!isInSideBySide && window.innerWidth > 768) {
+            document.querySelector('.tab-btn[data-target="side-by-side"]').click();
+          }
+          
+          // Wait for tab switch then scroll
+          setTimeout(() => {
+            targetChunk.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        }
+      }
+  </script>
+</article>
