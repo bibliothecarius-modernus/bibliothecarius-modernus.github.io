@@ -1,9 +1,19 @@
+<!-- ENHANCED TABBED POST TEMPLATE WITH LOCAL STORAGE AND LAZY LOADING -->
+
+{% comment %}
+This is an improved version of tabbed_post.html that:
+1. Implements a local storage caching mechanism for translation data
+2. Uses lazy loading for audio files
+3. Improves responsive design using modern CSS techniques
+4. Fully eliminates dependency on Google Drive for content
+{% endcomment %}
+
 ---
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
+  <header class="post-header content-container">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <div class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -25,7 +35,7 @@ layout: default
     </div>
     
     {% if page.youtube_id %}
-    <div class="youtube-embed">
+    <div class="youtube-embed responsive-embed">
       <iframe width="100%" height="500" src="https://www.youtube.com/embed/{{ page.youtube_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     {% elsif page.image %}
@@ -35,15 +45,13 @@ layout: default
     {% endif %}
   </header>
 
-  {% if page.audio_analysis or page.drive_audio_id %}
-  <div class="audio-player-container">
+  {% if page.audio_analysis %}
+  <div class="audio-player-container content-container">
     <details>
       <summary>Listen to Audio Analysis</summary>
       <div class="audio-player">
-        <audio controls data-drive-audio="{{ page.drive_audio_id }}">
-          {% if page.audio_analysis %}
+        <audio controls preload="none">
           <source src="{{ page.audio_analysis | relative_url }}" type="audio/mpeg">
-          {% endif %}
           Your browser does not support the audio element.
         </audio>
         <p class="audio-description">Listen to a brief analysis of this text</p>
@@ -52,8 +60,8 @@ layout: default
   </div>
   {% endif %}
 
-  <!-- Simple Translation Viewer - With embedded styles and scripts -->
-  <div id="translation-viewer" {% if page.drive_json_id %}data-drive-json="{{ page.drive_json_id }}"{% endif %}>
+  <!-- Improved Translation Viewer - With local storage caching -->
+  <div id="translation-viewer" class="container">
     <!-- Tab buttons -->
     <div class="translation-tabs">
       <button class="tab-btn analysis-tab active" data-target="analysis">Analysis</button>
@@ -67,7 +75,7 @@ layout: default
       <!-- Analysis View -->
       <div id="analysis" class="tab-panel active">
         <div class="analysis-container">
-          <div class="post-content analysis-content readable-margins" itemprop="articleBody">
+          <div class="post-content analysis-content content-container" itemprop="articleBody">
             {{ content }}
           </div>
         </div>
@@ -78,10 +86,10 @@ layout: default
         <div class="two-columns">
           <div class="latin-column">
             <h3>Latin Original</h3>
-            <div class="column-content">
+            <div class="column-content" id="side-latin-content">
               {% if page.latin_text %}
                 {{ page.latin_text | markdownify }}
-              {% elsif page.translation_json and page.drive_json_id == nil %}
+              {% elsif page.translation_json %}
                 {% for chunk in page.translation_json.chunks %}
                   <div class="chunk-section">
                     <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -90,20 +98,17 @@ layout: default
                     </div>
                   </div>
                 {% endfor %}
-              {% elsif page.drive_json_id %}
-                <div class="placeholder-content"></div>
-                <div class="placeholder-content"></div>
               {% else %}
-                <p class="placeholder">Latin text is not available for this document.</p>
+                <div class="loading-indicator">Loading Latin text...</div>
               {% endif %}
             </div>
           </div>
           <div class="english-column">
             <h3>English Translation</h3>
-            <div class="column-content">
+            <div class="column-content" id="side-english-content">
               {% if page.english_translation %}
                 {{ page.english_translation | markdownify }}
-              {% elsif page.translation_json and page.drive_json_id == nil %}
+              {% elsif page.translation_json %}
                 {% for chunk in page.translation_json.chunks %}
                   <div class="chunk-section">
                     <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -116,11 +121,8 @@ layout: default
                     </div>
                   </div>
                 {% endfor %}
-              {% elsif page.drive_json_id %}
-                <div class="placeholder-content"></div>
-                <div class="placeholder-content"></div>
               {% else %}
-                <p class="placeholder">English translation is not available for this document.</p>
+                <div class="loading-indicator">Loading English translation...</div>
               {% endif %}
             </div>
           </div>
@@ -140,10 +142,10 @@ layout: default
       <!-- Latin Only View -->
       <div id="latin-only" class="tab-panel">
         <h3>Latin Original</h3>
-        <div class="single-column">
+        <div class="single-column" id="latin-only-content">
           {% if page.latin_text %}
             {{ page.latin_text | markdownify }}
-          {% elsif page.translation_json and page.drive_json_id == nil %}
+          {% elsif page.translation_json %}
             {% for chunk in page.translation_json.chunks %}
               <div class="chunk-section latin-full">
                 <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -152,12 +154,8 @@ layout: default
                 </div>
               </div>
             {% endfor %}
-          {% elsif page.drive_json_id %}
-            <div class="placeholder-content"></div>
-            <div class="placeholder-content"></div>
-            <div class="placeholder-content"></div>
           {% else %}
-            <p class="placeholder">Latin text is not available for this document.</p>
+            <div class="loading-indicator">Loading Latin text...</div>
           {% endif %}
         </div>
       </div>
@@ -165,10 +163,10 @@ layout: default
       <!-- English Only View -->
       <div id="english-only" class="tab-panel">
         <h3>English Translation</h3>
-        <div class="single-column">
+        <div class="single-column" id="english-only-content">
           {% if page.english_translation %}
             {{ page.english_translation | markdownify }}
-          {% elsif page.translation_json and page.drive_json_id == nil %}
+          {% elsif page.translation_json %}
             {% for chunk in page.translation_json.chunks %}
               <div class="chunk-section english-full">
                 <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -181,12 +179,8 @@ layout: default
                 </div>
               </div>
             {% endfor %}
-          {% elsif page.drive_json_id %}
-            <div class="placeholder-content"></div>
-            <div class="placeholder-content"></div>
-            <div class="placeholder-content"></div>
           {% else %}
-            <p class="placeholder">English translation is not available for this document.</p>
+            <div class="loading-indicator">Loading English translation...</div>
           {% endif %}
         </div>
       </div>
@@ -194,7 +188,7 @@ layout: default
   </div>
   
   {% if page.youtube_id %}
-  <div class="youtube-promo">
+  <div class="youtube-promo content-container">
     <h3>Enjoy this article? Listen to the translation!</h3>
     <p>Get the full experience of this Latin Patristic text.</p>
     <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" class="youtube-button" target="_blank">
@@ -205,7 +199,7 @@ layout: default
     </a>
   </div>
   {% else %}
-  <div class="youtube-promo">
+  <div class="youtube-promo content-container">
     <h3>Explore More Latin Patristic Texts</h3>
     <p>Discover more ancient wisdom through our video translations on YouTube.</p>
     <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" class="youtube-button" target="_blank">
@@ -217,8 +211,8 @@ layout: default
   </div>
   {% endif %}
   
-<!-- Scholarly Discussion Section -->
-<div class="comments-section readable-margins">
+  <!-- Scholarly Discussion Section -->
+  <div class="comments-section content-container">
     <h2>Scholarly Discussion</h2>
     <p class="discussion-intro">Share your insights, questions, or observations about this translation.</p>
     
@@ -240,7 +234,7 @@ layout: default
     <noscript>Please enable JavaScript to view the scholarly discussion.</noscript>
   </div>
   
-  <div class="post-navigation readable-margins">
+  <div class="post-navigation content-container">
     <div class="post-nav-links">
       {% if page.previous.url %}
       <a class="prev-post" href="{{ page.previous.url | relative_url }}">
@@ -258,519 +252,12 @@ layout: default
     </div>
   </div>
 
-  <!-- Load drive-loader CSS and JS -->
-  <link rel="stylesheet" href="{{ '/assets/css/drive-loader.css' | relative_url }}">
-  <script src="{{ '/assets/js/drive-loader.js' | relative_url }}"></script>
-
-  <!-- Embedded styles to avoid conflicts with main stylesheet -->
-  <style>
-    /* Translation Viewer Styles */
-    #translation-viewer {
-      margin: 30px 0;
-      font-family: inherit;
-    }
-    
-    /* Readable margins for content */
-    .readable-margins {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 20px;
-    }
-    
-    @media (max-width: 840px) {
-      .readable-margins {
-        padding: 0 20px;
-      }
-    }
-    
-    .post-header {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .audio-player-container {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .youtube-promo {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    /* Tab buttons */
-    .translation-tabs {
-      display: flex;
-      margin-bottom: 1px;
-      border-bottom: 2px solid #B8860B;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .tab-btn {
-      padding: 8px 16px;
-      margin-right: 4px;
-      background-color: #EDE0CA;
-      border: 1px solid #B8860B;
-      border-bottom: none;
-      border-radius: 4px 4px 0 0;
-      color: #3E2C1B;
-      cursor: pointer;
-      font-weight: normal;
-      transition: background-color 0.2s;
-    }
-    
-    .tab-btn:hover {
-      background-color: #e3d6c0;
-    }
-    
-    .tab-btn.active {
-      background-color: #B8860B;
-      color: white;
-      font-weight: bold;
-    }
-    
-    /* Special styling for analysis tab */
-    .analysis-tab {
-      background-color: #3E2C1B;
-      color: #EDE0CA;
-      font-size: 1.05rem;
-    }
-    
-    .analysis-tab:hover {
-      background-color: #4d372a;
-    }
-    
-    .analysis-tab.active {
-      background-color: #3E2C1B;
-      color: #EDE0CA;
-    }
-    
-    /* Tab content container */
-    .tab-content {
-      border: 1px solid #B8860B;
-      border-top: none;
-      background-color: white;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    /* Tab panels */
-    .tab-panel {
-      display: none;
-      padding: 15px;
-    }
-    
-    .tab-panel.active {
-      display: block;
-    }
-    
-    /* Analysis panel without border or background */
-    #analysis {
-      padding: 0;
-      border: none;
-      margin: 0;
-      background-color: transparent;
-    }
-    
-    .analysis-container {
-      padding: 0;
-    }
-    
-    /* Two-column layout for side-by-side view */
-    .two-columns {
-      display: flex;
-      max-height: 70vh;
-    }
-    
-    .latin-column, .english-column {
-      flex: 1;
-      overflow-y: auto;
-      padding: 10px;
-    }
-    
-    .latin-column {
-      border-right: 1px solid #e0e0e0;
-    }
-    
-    .column-content {
-      height: 100%;
-    }
-    
-    /* Mobile alternative for side-by-side view */
-    .mobile-translation-view {
-      display: none;
-      padding: 15px;
-      text-align: center;
-    }
-    
-    .mobile-notice {
-      background-color: #fff8e8;
-      padding: 15px;
-      border-radius: 6px;
-      margin-bottom: 15px;
-      border: 1px solid #B8860B;
-    }
-    
-    .mobile-navigation {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 10px;
-    }
-    
-    .mobile-nav-btn {
-      padding: 10px 20px;
-      background-color: #3E2C1B;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.2s;
-    }
-    
-    .mobile-nav-btn:hover {
-      background-color: #B8860B;
-    }
-    
-    /* Column headers */
-    .two-columns h3, .single-column h3 {
-      text-align: center;
-      padding-bottom: 10px;
-      margin-top: 0;
-      position: sticky;
-      top: 0;
-      background-color: white;
-      z-index: 1;
-    }
-    
-    .latin-column h3 {
-      color: #5c4a28;
-    }
-    
-    .english-column h3 {
-      color: #2a4a75;
-    }
-    
-    /* Chunk styling */
-    .chunk-section {
-      position: relative;
-      margin-bottom: 20px;
-      padding: 10px 15px;
-      border-radius: 6px;
-    }
-    
-    .chunk-number {
-      position: absolute;
-      top: -8px;
-      left: 10px;
-      background-color: #B8860B;
-      color: white;
-      font-size: 12px;
-      padding: 2px 8px;
-      border-radius: 10px;
-    }
-    
-    .latin-text {
-      font-style: italic;
-      color: #5c4a28;
-    }
-    
-    .english-text {
-      color: #2a4a75;
-    }
-    
-    /* Background colors for sections */
-    .chunk-section {
-      background-color: #f9f9f9;
-      border: 1px solid #e0e0e0;
-    }
-    
-    .latin-column .chunk-section,
-    .latin-full {
-      background-color: #fff8e8;
-      border-color: #e6d7b8;
-    }
-    
-    .english-column .chunk-section,
-    .english-full {
-      background-color: #f8fbff;
-      border-color: #d0e2f5;
-    }
-    
-    /* Single column layout for latin/english only views */
-    .single-column {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-    
-    /* Translation paragraph spacing */
-    .translation-paragraph {
-      margin-bottom: 1em;
-    }
-    
-    /* Placeholder text */
-    .placeholder {
-      text-align: center;
-      padding: 30px;
-      color: #666;
-      font-style: italic;
-    }
-    
-    /* Comments Section Styling */
-    .comments-section {
-      margin-top: 40px;
-      padding-top: 30px;
-      border-top: 2px solid #B8860B;
-      position: relative;
-    }
-    
-    .comments-section::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: 0;
-      right: 0;
-      height: 10px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
-    }
-    
-    .comments-section h2 {
-      font-family: 'Luxurious Roman', serif;
-      color: #3E2C1B;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-    }
-    
-    .discussion-intro {
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #666;
-      font-size: 1.05rem;
-      line-height: 1.5;
-      border-left: 4px solid #B8860B;
-      padding-left: 15px;
-      background-color: #f8f4ea;
-      padding: 10px 15px;
-      border-radius: 0 4px 4px 0;
-    }
-    
-    #disqus_thread {
-      margin-top: 25px;
-      padding: 15px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    
-    /* Mobile responsiveness - IMPROVED VERSION */
-    @media (max-width: 768px) {
-      /* Tab navigation improvements */
-      .translation-tabs {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      
-      .tab-btn {
-        flex: 1 1 40%;
-        margin: 0 2px 4px;
-        padding: 8px 10px;
-        font-size: 0.9rem;
-        text-align: center;
-      }
-      
-      /* Hide side-by-side tab on mobile */
-      .side-by-side-tab {
-        display: none;
-      }
-      
-      /* Content area padding adjustments */
-      .tab-panel {
-        padding: 10px 8px;
-      }
-      
-      /* Analysis full-width background */
-      #analysis {
-        background-color: #f9f5ea; /* Light background for entire analysis area */
-        padding: 15px 10px;
-        margin: 0 -10px; /* Negative margin to ensure full width */
-        width: calc(100% + 20px); /* Ensure the background spans the entire width */
-      }
-      
-      .analysis-container {
-        padding: 0;
-        background-color: #f9f5ea;
-      }
-      
-      .post-content.analysis-content {
-        background-color: #f9f5ea;
-        padding: 0 5px;
-      }
-      
-      /* Hide regular two-column view and show mobile alternative */
-      #side-by-side .two-columns {
-        display: none;
-      }
-      
-      #side-by-side .mobile-translation-view {
-        display: block;
-      }
-      
-      /* Single column views adjustments */
-      .latin-column, .english-column {
-        height: auto;
-        max-height: 40vh;
-        padding: 5px;
-      }
-      
-      .latin-column {
-        border-right: none;
-        border-bottom: 1px solid #e0e0e0;
-        margin-bottom: 10px;
-      }
-      
-      /* Chunk styling adjustments */
-      .chunk-section {
-        padding: 12px 8px 8px;
-        margin-bottom: 15px;
-      }
-      
-      .chunk-number {
-        font-size: 10px;
-        padding: 1px 6px;
-      }
-      
-      /* Comments section adjustments */
-      .comments-section {
-        padding-top: 20px;
-        margin-top: 30px;
-      }
-      
-      .discussion-intro {
-        padding: 8px 10px;
-        font-size: 0.95rem;
-      }
-      
-      #disqus_thread {
-        padding: 10px 8px;
-      }
-      
-      /* Post content adjustments for better mobile reading */
-      .post-content {
-        font-size: 16px;
-        line-height: 1.6;
-      }
-      
-      .post-content h2 {
-        font-size: 1.5rem;
-        margin-top: 1.5em;
-      }
-      
-      .post-content h3 {
-        font-size: 1.3rem;
-      }
-      
-      /* Better spacing for mobile content */
-      .article-summary {
-        margin: 10px 0 20px;
-        font-size: 1rem;
-      }
-    }
-    
-    /* Extreme narrow screens (smaller phones) */
-    @media (max-width: 480px) {
-      /* Even more compact layout */
-      .tab-btn {
-        flex: 1 1 45%;
-        padding: 6px 4px;
-        font-size: 0.8rem;
-        margin: 0 1px 3px;
-      }
-      
-      /* Reduce padding further */
-      .tab-panel {
-        padding: 8px 5px;
-      }
-      
-      /* Analysis background */
-      #analysis {
-        padding: 10px 8px;
-      }
-      
-      /* Less margin between sections */
-      .chunk-section {
-        margin-bottom: 12px;
-        padding: 10px 6px 6px;
-      }
-      
-      /* Adjust header sizes */
-      .two-columns h3, .single-column h3 {
-        font-size: 1.1rem;
-        padding-bottom: 6px;
-      }
-      
-      /* Fix margins for content */
-      .latin-text, .english-text {
-        margin: 0;
-        line-height: 1.4;
-      }
-      
-      /* Mobile navigation buttons */
-      .mobile-nav-btn {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-      }
-      
-      /* Post header adjustments */
-      .post-header {
-        margin-bottom: 1rem;
-      }
-      
-      /* Simplified mobile notice */
-      .mobile-notice p {
-        font-size: 0.9rem;
-        margin: 0;
-      }
-    }
-    
-    /* Fix scrolling behavior on touch devices */
-    @media (pointer: coarse) {
-      .latin-column, .english-column, .single-column {
-        -webkit-overflow-scrolling: touch;
-      }
-    }
-    
-    /* Ensure content doesn't overflow on small screens */
-    .post-content {
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      max-width: 100%;
-    }
-    
-    /* Fix for YouTube embed responsiveness */
-    .youtube-embed iframe {
-      max-height: 56vw;
-    }
-    
-    /* Overall page margin fix for mobile */
-    @media (max-width: 768px) {
-      .readable-margins {
-        padding: 0 15px;
-      }
-    }
-  </style>
-
-  <!-- Updated JavaScript for tabs functionality with a simple CORS solution -->
+  <!-- Optimized JavaScript for translation loading and caching -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Get all tab buttons and panels
+      // ----------------
+      // Tab functionality
+      // ----------------
       const tabButtons = document.querySelectorAll('.tab-btn');
       const tabPanels = document.querySelectorAll('.tab-panel');
       
@@ -805,20 +292,15 @@ layout: default
           // Save preference to localStorage
           localStorage.setItem('preferredTab', targetId);
           
-          // Trigger event for dynamic content loading
-          document.dispatchEvent(new CustomEvent('tabChanged', {
-            detail: {
-              tabId: targetId
-            }
-          }));
+          // Trigger content load if needed
+          loadContentIfNeeded(targetId);
         });
       });
       
       // Check for saved preference
       const savedTab = localStorage.getItem('preferredTab');
-      
-      // Don't restore side-by-side view on mobile
       const isMobile = window.innerWidth <= 768;
+      
       if (savedTab && document.getElementById(savedTab)) {
         if (!(isMobile && savedTab === 'side-by-side')) {
           // Find the button for this tab
@@ -833,15 +315,149 @@ layout: default
             analysisButton.click();
           }
         }
+      } else {
+        // Load content for the default active tab (analysis)
+        loadContentIfNeeded('analysis');
       }
       
-      // Trigger initial content loading event for the active tab
-      const activeTabId = document.querySelector('.tab-panel.active').id;
-      document.dispatchEvent(new CustomEvent('tabChanged', {
-        detail: {
-          tabId: activeTabId
+      // ----------------
+      // Translation content loading with local storage caching
+      // ----------------
+      
+      // Only initialize if we have translation content to load
+      const pageSlug = window.location.pathname.replace(/\//g, '-').replace(/^-|-$/g, '');
+      const cacheKey = 'translation_' + pageSlug;
+      const cacheExpiry = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+      
+      function loadContentIfNeeded(tabId) {
+        // Skip if we have inline content already or this is the analysis tab
+        if (tabId === 'analysis' || document.querySelector('.translation_json')) {
+          return;
         }
-      }));
+        
+        // Check if we need to load content
+        const hasLoadingIndicators = document.querySelectorAll('.loading-indicator').length > 0;
+        if (!hasLoadingIndicators) {
+          return; // Content already loaded
+        }
+        
+        // Try to get from cache first
+        const cached = getFromCache(cacheKey);
+        if (cached) {
+          renderTranslationData(cached);
+          return;
+        }
+        
+        // Determine filename from page metadata or URL
+        const translationFile = '{{ page.translation_file | default: "" }}' || 
+                               pageSlug + '.json';
+        
+        // Set loading state
+        document.querySelectorAll('.loading-indicator').forEach(el => {
+          el.textContent = 'Loading translation...';
+        });
+        
+        // Fetch the translation data
+        fetch('/assets/translations/' + translationFile)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Translation file not found');
+            }
+            return response.json();
+          })
+          .then(data => {
+            // Cache the result
+            saveToCache(cacheKey, data);
+            // Render the data
+            renderTranslationData(data);
+          })
+          .catch(error => {
+            console.error('Error loading translation:', error);
+            document.querySelectorAll('.loading-indicator').forEach(el => {
+              el.textContent = 'Translation could not be loaded. Please try again later.';
+              el.classList.add('error');
+            });
+          });
+      }
+      
+      function renderTranslationData(data) {
+        if (!data || !data.chunks || !data.chunks.length) {
+          console.error('Invalid translation data format');
+          return;
+        }
+        
+        // Create HTML for Latin sections
+        const latinHTML = data.chunks.map(chunk => {
+          return `
+            <div class="chunk-section">
+              <span class="chunk-number">${chunk.chunk_number}</span>
+              <div class="latin-text">
+                ${chunk.original_latin.replace(/\n/g, '<br>')}
+              </div>
+            </div>
+          `;
+        }).join('');
+        
+        // Create HTML for English sections
+        const englishHTML = data.chunks.map(chunk => {
+          // Clean up SSML tags
+          let cleanedText = chunk.cleaned_english_translation
+            .replace(/<speak>|<\/speak>/g, '')
+            .replace(/<s>|<\/s>/g, '')
+            .replace(/<p>/g, '<p class="translation-paragraph">')
+            .replace(/<break time="\d+ms"\/>/g, '');
+            
+          return `
+            <div class="chunk-section">
+              <span class="chunk-number">${chunk.chunk_number}</span>
+              <div class="english-text">
+                ${cleanedText}
+              </div>
+            </div>
+          `;
+        }).join('');
+        
+        // Update all the content containers
+        document.querySelectorAll('#side-latin-content, #latin-only-content').forEach(el => {
+          el.innerHTML = latinHTML;
+        });
+        
+        document.querySelectorAll('#side-english-content, #english-only-content').forEach(el => {
+          el.innerHTML = englishHTML;
+        });
+      }
+      
+      // Cache utilities
+      function saveToCache(key, data) {
+        const item = {
+          timestamp: Date.now(),
+          data: data
+        };
+        try {
+          localStorage.setItem(key, JSON.stringify(item));
+        } catch (e) {
+          console.warn('Could not save to localStorage:', e);
+        }
+      }
+      
+      function getFromCache(key) {
+        try {
+          const item = JSON.parse(localStorage.getItem(key));
+          if (!item) return null;
+          
+          // Check if cache is still valid
+          const age = Date.now() - item.timestamp;
+          if (age > cacheExpiry) {
+            localStorage.removeItem(key);
+            return null;
+          }
+          
+          return item.data;
+        } catch (e) {
+          console.warn('Could not read from localStorage:', e);
+          return null;
+        }
+      }
       
       // Handle window resize to switch views if needed
       window.addEventListener('resize', function() {
@@ -862,6 +478,186 @@ layout: default
           sideBySideTab.style.display = isMobileView ? 'none' : 'block';
         }
       });
+      
+      // Lazy load audio elements
+      document.querySelectorAll('audio').forEach(audio => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Set src attribute only when in viewport
+              const source = audio.querySelector('source');
+              if (source && source.dataset.src) {
+                source.src = source.dataset.src;
+                audio.load();
+                observer.unobserve(audio);
+              }
+            }
+          });
+        }, { rootMargin: '100px' });
+        
+        observer.observe(audio);
+      });
     });
   </script>
+
+  <!-- Inline critical CSS for better performance -->
+  <style>
+    /* Core responsive layout styles */
+    .content-container {
+      width: 100%;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    @media (max-width: 840px) {
+      .content-container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+    
+    /* Critical tab interface styles */
+    .translation-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+      margin-bottom: 1px;
+      border-bottom: 2px solid #B8860B;
+    }
+    
+    .tab-btn {
+      flex: 1;
+      min-width: min-content;
+      white-space: nowrap;
+      padding: 8px 16px;
+      margin-right: 4px;
+      background-color: #EDE0CA;
+      border: 1px solid #B8860B;
+      border-bottom: none;
+      border-radius: 4px 4px 0 0;
+      color: #3E2C1B;
+      cursor: pointer;
+      font-weight: normal;
+      transition: background-color 0.2s;
+    }
+    
+    .tab-btn:hover {
+      background-color: #e3d6c0;
+    }
+    
+    .tab-btn.active {
+      background-color: #B8860B;
+      color: white;
+      font-weight: bold;
+    }
+    
+    .analysis-tab {
+      background-color: #3E2C1B;
+      color: #EDE0CA;
+    }
+    
+    .analysis-tab:hover {
+      background-color: #4d372a;
+    }
+    
+    .analysis-tab.active {
+      background-color: #3E2C1B;
+      color: #EDE0CA;
+    }
+    
+    .tab-content {
+      border: 1px solid #B8860B;
+      border-top: none;
+      background-color: white;
+    }
+    
+    .tab-panel {
+      display: none;
+      padding: 15px;
+    }
+    
+    .tab-panel.active {
+      display: block;
+    }
+    
+    #analysis {
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+    
+    /* Responsive embed for YouTube */
+    .responsive-embed {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    
+    .responsive-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Loading indicators */
+    .loading-indicator {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+    }
+    
+    .loading-indicator.error {
+      background-color: #fff0f0;
+      color: #a00;
+    }
+    
+    /* Mobile translation view */
+    @media (max-width: 767px) {
+      .side-by-side-tab {
+        display: none;
+      }
+      
+      #side-by-side .two-columns {
+        display: none;
+      }
+      
+      #side-by-side .mobile-translation-view {
+        display: block;
+      }
+      
+      .mobile-notice {
+        background-color: #fff8e8;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        border: 1px solid #B8860B;
+      }
+      
+      .mobile-navigation {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+      }
+      
+      .mobile-nav-btn {
+        padding: 10px 20px;
+        background-color: #3E2C1B;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.2s;
+      }
+    }
+  </style>
 </article>
