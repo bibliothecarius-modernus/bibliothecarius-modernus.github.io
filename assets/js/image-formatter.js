@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <svg viewBox="0 0 24 24" width="16" height="16">
             <path d="M4 11v2h16v-2H4zm0-7v2h16V4H4zm0 14v2h16v-2H4z" fill="currentColor" />
           </svg>
-          <span>Linked Scrolling On</span>
+          <span>Sync Scrolling</span>
         </button>
       </div>
     `;
@@ -33,21 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const columnsContainer = sideByByside.querySelector('.two-columns');
     sideByByside.insertBefore(syncControls, columnsContainer);
     
-    // Make column headers sticky but less tall
-    const columnHeaders = sideByByside.querySelectorAll('.two-columns h3');
-    columnHeaders.forEach(header => {
-      header.style.padding = '5px 0';
-      header.style.margin = '0';
-      header.style.fontSize = '0.9rem';
-      header.style.opacity = '0.8';
-    });
-    
     // Add styles
     const styleElement = document.createElement('style');
     styleElement.textContent = `
       .sync-controls {
         text-align: center;
-        margin: 0 0 5px 0;
+        margin: 0 0 10px 0;
       }
       .sync-button {
         display: inline-flex;
@@ -56,9 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
         background: #f0f0f0;
         border: 1px solid #ccc;
         border-radius: 4px;
-        padding: 4px 10px;
+        padding: 6px 12px;
         cursor: pointer;
-        font-size: 12px;
+        font-size: 13px;
         color: #666;
       }
       .sync-button.active {
@@ -68,23 +59,20 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       .column-indicator {
         position: absolute;
-        top: 32px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(184, 134, 11, 0.85);
+        top: 8px;
+        right: 8px;
+        background: rgba(184, 134, 11, 0.8);
         color: white;
-        padding: 3px 10px;
+        padding: 2px 6px;
         border-radius: 3px;
         font-size: 11px;
         opacity: 0;
         transition: opacity 0.3s;
         pointer-events: none;
-        z-index: 10;
       }
-      .two-columns h3 {
-        background-color: rgba(255, 255, 255, 0.95);
-        border-bottom: 1px solid #e6d7b8;
-        z-index: 5;
+      .latin-column:hover .column-indicator,
+      .english-column:hover .column-indicator {
+        opacity: 1;
       }
     `;
     document.head.appendChild(styleElement);
@@ -98,13 +86,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add indicators to columns
     const latinIndicator = document.createElement('div');
     latinIndicator.className = 'column-indicator';
-    latinIndicator.textContent = '';
+    latinIndicator.textContent = 'Latin Text';
     latinColumn.style.position = 'relative';
     latinColumn.appendChild(latinIndicator);
     
     const englishIndicator = document.createElement('div');
     englishIndicator.className = 'column-indicator';
-    englishIndicator.textContent = '';
+    englishIndicator.textContent = 'English Translation';
     englishColumn.style.position = 'relative';
     englishColumn.appendChild(englishIndicator);
     
@@ -176,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Reset scrolling flag after a short delay
       setTimeout(() => { isScrolling = false; }, 50);
       
-      // Show indicator briefly
+      // Update column indicators
       updateColumnIndicators();
       
       // Reset inactivity timer
@@ -184,28 +172,25 @@ document.addEventListener('DOMContentLoaded', function() {
       inactivityTimer = setTimeout(() => {
         activeColumn = null;
         updateColumnIndicators();
-      }, 1500);
+      }, 2000);
     }
     
     // Update column indicators based on active column
     function updateColumnIndicators() {
-      // Only show indicators when scrolling is not synced
-      if (!isScrollSynced) {
-        latinIndicator.textContent = 'Independent Scrolling';
-        englishIndicator.textContent = 'Independent Scrolling';
+      if (activeColumn === latinColumn) {
+        latinIndicator.textContent = 'Scrolling Latin Text';
         latinIndicator.style.opacity = '1';
+        englishIndicator.textContent = 'Following';
         englishIndicator.style.opacity = '1';
-      } else if (activeColumn === latinColumn) {
-        // Only show indicator in the active column
-        latinIndicator.textContent = 'Scrolling both columns';
-        latinIndicator.style.opacity = '1';
-        englishIndicator.style.opacity = '0';
       } else if (activeColumn === englishColumn) {
-        englishIndicator.textContent = 'Scrolling both columns';
+        englishIndicator.textContent = 'Scrolling English Text';
         englishIndicator.style.opacity = '1';
-        latinIndicator.style.opacity = '0';
+        latinIndicator.textContent = 'Following';
+        latinIndicator.style.opacity = '1';
       } else {
+        latinIndicator.textContent = 'Latin Text';
         latinIndicator.style.opacity = '0';
+        englishIndicator.textContent = 'English Translation';
         englishIndicator.style.opacity = '0';
       }
     }
@@ -218,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Update text
       const textSpan = this.querySelector('span');
-      textSpan.textContent = isScrollSynced ? 'Linked Scrolling On' : 'Independent Scrolling';
+      textSpan.textContent = isScrollSynced ? 'Sync Scrolling' : 'Scrolling Independent';
       
       // Update indicators
       if (!isScrollSynced) {
@@ -235,14 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         // Re-sync columns when enabling sync
         scrollToMatchingChunk(latinColumn, englishColumn);
-        
-        // Show brief confirmation
-        latinIndicator.textContent = 'Linking columns...';
-        latinIndicator.style.opacity = '1';
-        
-        setTimeout(() => {
-          latinIndicator.style.opacity = '0';
-        }, 1500);
+        updateColumnIndicators();
       }
     });
     
@@ -274,19 +252,16 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       </div>
       <div class="search-options">
-        <div class="search-checkboxes">
-          <label><input type="checkbox" id="search-latin" checked> Latin</label>
-          <label><input type="checkbox" id="search-english" checked> English</label>
-          <label><input type="checkbox" id="search-current-tab" checked> Current tab only</label>
-        </div>
+        <label><input type="checkbox" id="search-latin" checked> Latin</label>
+        <label><input type="checkbox" id="search-english" checked> English</label>
         <div class="search-navigation">
-          <button id="search-prev" title="Previous result (Shift+Enter)" disabled>
+          <button id="search-prev" title="Previous result" disabled>
             <svg viewBox="0 0 24 24" width="16" height="16">
               <polyline points="15 18 9 12 15 6" fill="none" stroke="currentColor" stroke-width="2"></polyline>
             </svg>
           </button>
           <span id="search-result-count"></span>
-          <button id="search-next" title="Next result (Enter)" disabled>
+          <button id="search-next" title="Next result" disabled>
             <svg viewBox="0 0 24 24" width="16" height="16">
               <polyline points="9 18 15 12 9 6" fill="none" stroke="currentColor" stroke-width="2"></polyline>
             </svg>
@@ -335,21 +310,17 @@ document.addEventListener('DOMContentLoaded', function() {
         gap: 15px;
         font-size: 14px;
         align-items: center;
-        justify-content: space-between;
-      }
-      .search-checkboxes {
-        display: flex;
-        gap: 12px;
+        flex-wrap: wrap;
       }
       .search-navigation {
+        margin-left: auto;
         display: flex;
         align-items: center;
         gap: 8px;
       }
       #search-prev, #search-next {
-        background: #3E2C1B;
-        color: white;
-        border: none;
+        background: #f0f0f0;
+        border: 1px solid #ccc;
         border-radius: 4px;
         width: 28px;
         height: 28px;
@@ -359,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {
         cursor: pointer;
       }
       #search-prev:disabled, #search-next:disabled {
-        background: #ccc;
+        opacity: 0.5;
         cursor: not-allowed;
       }
       #search-result-count {
@@ -373,14 +344,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       .search-highlight.active {
         background-color: #FFD700;
-        box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.5);
-      }
-      #keyboard-hints {
-        color: #777;
-        font-size: 11px;
-        margin-top: 4px;
-        text-align: right;
-        font-style: italic;
       }
       
       /* Mobile-specific styles */
@@ -393,11 +356,6 @@ document.addEventListener('DOMContentLoaded', function() {
           align-items: flex-start;
           gap: 10px;
         }
-        .search-checkboxes {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          width: 100%;
-        }
         .search-navigation {
           margin-left: 0;
           width: 100%;
@@ -409,9 +367,6 @@ document.addEventListener('DOMContentLoaded', function() {
           margin-top: 5px;
           font-style: italic;
         }
-        #keyboard-hints {
-          display: none;
-        }
       }
     `;
     document.head.appendChild(styleElement);
@@ -421,16 +376,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchButton = document.getElementById('translation-search-button');
     const searchLatin = document.getElementById('search-latin');
     const searchEnglish = document.getElementById('search-english');
-    const searchCurrentTab = document.getElementById('search-current-tab');
     const resultCount = document.getElementById('search-result-count');
     const prevButton = document.getElementById('search-prev');
     const nextButton = document.getElementById('search-next');
-    
-    // Add keyboard hints
-    const keyboardHints = document.createElement('div');
-    keyboardHints.id = 'keyboard-hints';
-    keyboardHints.textContent = 'Press Enter for next match, Shift+Enter for previous';
-    searchContainer.appendChild(keyboardHints);
     
     // Track search state
     let currentHighlights = [];
@@ -452,33 +400,32 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
-      // Get active tab
-      const activeTab = document.querySelector('.tab-panel.active');
-      if (!activeTab) return;
-      
-      // Determine which text to search based on options
+      // Determine which text to search based on current view and options
       let textElements = [];
-      const searchInCurrentTabOnly = searchCurrentTab.checked;
       
-      if (searchInCurrentTabOnly) {
-        // Search only in the active tab
-        if (activeTab.id === 'latin-only' && searchLatin.checked) {
-          textElements = Array.from(activeTab.querySelectorAll('.latin-text'));
-        } else if (activeTab.id === 'english-only' && searchEnglish.checked) {
-          textElements = Array.from(activeTab.querySelectorAll('.english-text'));
-        } else if (activeTab.id === 'side-by-side') {
-          if (searchLatin.checked) {
-            textElements = textElements.concat(Array.from(activeTab.querySelectorAll('.latin-text')));
+      // Handle mobile differently - search in active tab only
+      if (isMobile) {
+        const activeTab = document.querySelector('.tab-panel.active');
+        if (activeTab) {
+          if (activeTab.id === 'latin-only' && searchLatin.checked) {
+            textElements = Array.from(activeTab.querySelectorAll('.latin-text'));
+          } else if (activeTab.id === 'english-only' && searchEnglish.checked) {
+            textElements = Array.from(activeTab.querySelectorAll('.english-text'));
+          } else if (activeTab.id === 'side-by-side') {
+            // This shouldn't happen on mobile, but just in case
+            if (searchLatin.checked) {
+              textElements = textElements.concat(Array.from(activeTab.querySelectorAll('.latin-text')));
+            }
+            if (searchEnglish.checked) {
+              textElements = textElements.concat(Array.from(activeTab.querySelectorAll('.english-text')));
+            }
+          } else if (activeTab.id === 'analysis') {
+            // Search in the analysis content
+            textElements = Array.from(activeTab.querySelectorAll('.analysis-content'));
           }
-          if (searchEnglish.checked) {
-            textElements = textElements.concat(Array.from(activeTab.querySelectorAll('.english-text')));
-          }
-        } else if (activeTab.id === 'analysis') {
-          // Search in the analysis content
-          textElements = Array.from(activeTab.querySelectorAll('.analysis-content'));
         }
       } else {
-        // Search across all tabs based on language selection
+        // Desktop - search in all available text elements based on options
         if (searchLatin.checked) {
           textElements = textElements.concat(Array.from(document.querySelectorAll('.latin-text')));
         }
@@ -508,34 +455,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
       
+      // Update result count
+      resultCount.textContent = `${totalMatches} result${totalMatches !== 1 ? 's' : ''}`;
+      
       // Save all highlights for navigation
       currentHighlights = Array.from(document.querySelectorAll('.search-highlight'));
       
-      // Update UI based on results
+      // Enable/disable navigation buttons
+      nextButton.disabled = currentHighlights.length <= 0;
+      
+      // If results found, navigate to first one
       if (currentHighlights.length > 0) {
-        // Enable next button
-        nextButton.disabled = false;
-        
-        // Navigate to first result
         navigateToResult(0);
       } else {
-        // No results found
-        resultCount.textContent = 'No matches found';
-        
-        // For "search across tabs" mode with no results, suggest checking other tabs
-        if (searchInCurrentTabOnly && (searchLatin.checked && searchEnglish.checked)) {
-          resultCount.textContent = 'No matches in current tab';
+        // No results - show message based on context
+        if (isMobile && (searchLatin.checked && searchEnglish.checked)) {
+          resultCount.textContent = 'No results in current view';
           
-          // Add suggestion to uncheck "current tab only"
+          // Add mobile notice explaining search scope
           const mobileNotice = document.createElement('div');
           mobileNotice.className = 'search-mobile-notice';
-          mobileNotice.textContent = 'Try unchecking "Current tab only" to search all tabs.';
+          mobileNotice.textContent = 'Tip: Switch tabs to search in both Latin and English.';
           
           // Find a place to add this notice
           const searchOptions = document.querySelector('.search-options');
           if (searchOptions && !searchOptions.querySelector('.search-mobile-notice')) {
             searchOptions.appendChild(mobileNotice);
           }
+        } else {
+          resultCount.textContent = 'No results';
         }
       }
     }
@@ -561,32 +509,43 @@ document.addEventListener('DOMContentLoaded', function() {
       const currentHighlight = currentHighlights[currentHighlightIndex];
       currentHighlight.classList.add('active');
       
-      // Find the tab that contains this highlight
-      const tabPanel = currentHighlight.closest('.tab-panel');
-      if (!tabPanel) return;
+      // Get parent chunk for tab switching
+      const chunk = currentHighlight.closest('.chunk-section');
       
-      // Activate the tab if it's not already active
-      if (!tabPanel.classList.contains('active')) {
-        const tabId = tabPanel.id;
-        const tabButton = document.querySelector(`.tab-btn[data-target="${tabId}"]`);
-        if (tabButton) {
-          tabButton.click();
+      // Determine which language this highlight is in
+      const isInLatin = !!currentHighlight.closest('.latin-text');
+      const isInEnglish = !!currentHighlight.closest('.english-text');
+      
+      // Ensure correct tab is active before scrolling
+      if (!isMobile) {
+        // On desktop, we can switch to optimal view
+        if (isInLatin && !isInEnglish) {
+          if (!currentHighlight.closest('#side-by-side')) {
+            document.querySelector('.tab-btn[data-target="latin-only"]').click();
+          }
+        } else if (isInEnglish && !isInLatin) {
+          if (!currentHighlight.closest('#side-by-side')) {
+            document.querySelector('.tab-btn[data-target="english-only"]').click();
+          }
+        } else if (window.innerWidth > 768) {
+          // For mixed results on desktop, prefer side-by-side
+          if (!currentHighlight.closest('#side-by-side')) {
+            document.querySelector('.tab-btn[data-target="side-by-side"]').click();
+          }
+        }
+      } else {
+        // On mobile, switch tabs based on language
+        if (isInLatin && searchLatin.checked) {
+          document.querySelector('.tab-btn[data-target="latin-only"]').click();
+        } else if (isInEnglish && searchEnglish.checked) {
+          document.querySelector('.tab-btn[data-target="english-only"]').click();
         }
       }
       
-      // Wait a bit for any tab transitions
+      // Wait a bit for the tab switch to complete
       setTimeout(() => {
-        // Scroll to current highlight with some context
+        // Scroll to current highlight
         currentHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        // Make the highlight more noticeable
-        currentHighlight.animate([
-          { boxShadow: '0 0 0 4px rgba(255, 215, 0, 0.7)' },
-          { boxShadow: '0 0 0 4px rgba(255, 215, 0, 0)' }
-        ], {
-          duration: 1000,
-          iterations: 2
-        });
       }, 100);
     }
     
@@ -594,9 +553,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function goToNextResult() {
       if (currentHighlightIndex < currentHighlights.length - 1) {
         navigateToResult(currentHighlightIndex + 1);
-      } else if (currentHighlights.length > 0) {
-        // Loop back to the first result
-        navigateToResult(0);
       }
     }
     
@@ -604,9 +560,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function goToPreviousResult() {
       if (currentHighlightIndex > 0) {
         navigateToResult(currentHighlightIndex - 1);
-      } else if (currentHighlights.length > 0) {
-        // Loop to the last result
-        navigateToResult(currentHighlights.length - 1);
       }
     }
     
@@ -636,50 +589,51 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add event listeners
     searchButton.addEventListener('click', performSearch);
-    searchInput.addEventListener('keydown', function(e) {
+    searchInput.addEventListener('keyup', function(e) {
       if (e.key === 'Enter') {
-        if (e.shiftKey) {
-          e.preventDefault();
-          // If no search has been performed yet, do the search first
-          if (currentHighlights.length === 0) {
-            performSearch();
-          } else {
-            goToPreviousResult();
-          }
-        } else {
-          e.preventDefault();
-          // If no search has been performed yet, do the search first
-          if (currentHighlights.length === 0) {
-            performSearch();
-          } else {
-            goToNextResult();
-          }
-        }
+        performSearch();
       }
     });
     
     prevButton.addEventListener('click', goToPreviousResult);
     nextButton.addEventListener('click', goToNextResult);
     
-    // Default "current tab only" based on device
-    searchCurrentTab.checked = isMobile || window.innerWidth < 1200;
+    // For mobile, update search options based on active tab
+    function updateMobileSearchOptions() {
+      if (!isMobile) return;
+      
+      const activeTab = document.querySelector('.tab-panel.active');
+      if (!activeTab) return;
+      
+      // Enable/disable checkboxes based on active tab
+      if (activeTab.id === 'latin-only') {
+        searchLatin.checked = true;
+        searchEnglish.checked = false;
+        searchEnglish.disabled = true;
+        searchLatin.disabled = true;
+      } else if (activeTab.id === 'english-only') {
+        searchLatin.checked = false;
+        searchEnglish.checked = true;
+        searchLatin.disabled = true;
+        searchEnglish.disabled = true;
+      } else {
+        searchLatin.disabled = false;
+        searchEnglish.disabled = false;
+      }
+    }
     
-    // Update when tabs change
-    document.addEventListener('tabChanged', function(e) {
-      if (searchCurrentTab.checked && currentHighlights.length > 0) {
-        // Re-run the search when changing tabs with "current tab only" enabled
-        performSearch();
+    // Update on tab change
+    document.addEventListener('tabChanged', function() {
+      updateMobileSearchOptions();
+      // Clear previous search when changing tabs on mobile
+      if (isMobile) {
+        clearHighlights();
+        resultCount.textContent = '';
       }
     });
     
-    // Focus search input when clicking the container
-    searchContainer.addEventListener('click', function(e) {
-      // Don't focus if clicking on a control
-      if (!e.target.closest('button') && !e.target.closest('input')) {
-        searchInput.focus();
-      }
-    });
-    
+    // Initialize
+    updateMobileSearchOptions();
     console.log('Search functionality enabled');
   }
   
@@ -705,8 +659,11 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', function() {
     const wasMobile = window.innerWidth <= 768;
     
-    // If switching between mobile and desktop, reinitialize features
+    // If switching between mobile and desktop, reload the page
+    // This is a simplistic approach; a more complex solution would
+    // reinitialize the features without reloading
     if (wasMobile !== (window.innerWidth <= 768)) {
+      // Instead of reload, we could re-run setup functions
       setupSimpleSearch();
       if (document.getElementById('side-by-side').classList.contains('active')) {
         setupSynchronizedScrolling();
