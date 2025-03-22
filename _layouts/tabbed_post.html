@@ -35,12 +35,12 @@ layout: default
     {% endif %}
   </header>
 
-  {% if page.audio_analysis or page.drive_audio_id %}
+  {% if page.audio_analysis %}
   <div class="audio-player-container">
     <details>
       <summary>Listen to Audio Analysis</summary>
       <div class="audio-player">
-        <audio controls data-drive-audio="{{ page.drive_audio_id }}">
+        <audio controls>
           {% if page.audio_analysis %}
           <source src="{{ page.audio_analysis | relative_url }}" type="audio/mpeg">
           {% endif %}
@@ -52,8 +52,8 @@ layout: default
   </div>
   {% endif %}
 
-  <!-- Simple Translation Viewer - With embedded styles and scripts -->
-  <div id="translation-viewer" {% if page.drive_json_id %}data-drive-json="{{ page.drive_json_id }}"{% endif %}>
+  <!-- Simple Translation Viewer -->
+  <div id="translation-viewer">
     <!-- Tab buttons -->
     <div class="translation-tabs">
       <button class="tab-btn analysis-tab active" data-target="analysis">Analysis</button>
@@ -81,7 +81,7 @@ layout: default
             <div class="column-content">
               {% if page.latin_text %}
                 {{ page.latin_text | markdownify }}
-              {% elsif page.translation_json and page.drive_json_id == nil %}
+              {% elsif page.translation_json and page.translation_json.chunks %}
                 {% for chunk in page.translation_json.chunks %}
                   <div class="chunk-section">
                     <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -90,9 +90,11 @@ layout: default
                     </div>
                   </div>
                 {% endfor %}
-              {% elsif page.drive_json_id %}
-                <div class="placeholder-content"></div>
-                <div class="placeholder-content"></div>
+              {% elsif page.translation_json %}
+                <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
+                  <div class="placeholder-content"></div>
+                  <div class="placeholder-content"></div>
+                </div>
               {% else %}
                 <p class="placeholder">Latin text is not available for this document.</p>
               {% endif %}
@@ -103,7 +105,7 @@ layout: default
             <div class="column-content">
               {% if page.english_translation %}
                 {{ page.english_translation | markdownify }}
-              {% elsif page.translation_json and page.drive_json_id == nil %}
+              {% elsif page.translation_json and page.translation_json.chunks %}
                 {% for chunk in page.translation_json.chunks %}
                   <div class="chunk-section">
                     <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -116,9 +118,11 @@ layout: default
                     </div>
                   </div>
                 {% endfor %}
-              {% elsif page.drive_json_id %}
-                <div class="placeholder-content"></div>
-                <div class="placeholder-content"></div>
+              {% elsif page.translation_json %}
+                <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
+                  <div class="placeholder-content"></div>
+                  <div class="placeholder-content"></div>
+                </div>
               {% else %}
                 <p class="placeholder">English translation is not available for this document.</p>
               {% endif %}
@@ -143,7 +147,7 @@ layout: default
         <div class="single-column">
           {% if page.latin_text %}
             {{ page.latin_text | markdownify }}
-          {% elsif page.translation_json and page.drive_json_id == nil %}
+          {% elsif page.translation_json and page.translation_json.chunks %}
             {% for chunk in page.translation_json.chunks %}
               <div class="chunk-section latin-full">
                 <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -152,10 +156,12 @@ layout: default
                 </div>
               </div>
             {% endfor %}
-          {% elsif page.drive_json_id %}
-            <div class="placeholder-content"></div>
-            <div class="placeholder-content"></div>
-            <div class="placeholder-content"></div>
+          {% elsif page.translation_json %}
+            <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
+              <div class="placeholder-content"></div>
+              <div class="placeholder-content"></div>
+              <div class="placeholder-content"></div>
+            </div>
           {% else %}
             <p class="placeholder">Latin text is not available for this document.</p>
           {% endif %}
@@ -168,7 +174,7 @@ layout: default
         <div class="single-column">
           {% if page.english_translation %}
             {{ page.english_translation | markdownify }}
-          {% elsif page.translation_json and page.drive_json_id == nil %}
+          {% elsif page.translation_json and page.translation_json.chunks %}
             {% for chunk in page.translation_json.chunks %}
               <div class="chunk-section english-full">
                 <span class="chunk-number">{{ chunk.chunk_number }}</span>
@@ -181,10 +187,12 @@ layout: default
                 </div>
               </div>
             {% endfor %}
-          {% elsif page.drive_json_id %}
-            <div class="placeholder-content"></div>
-            <div class="placeholder-content"></div>
-            <div class="placeholder-content"></div>
+          {% elsif page.translation_json %}
+            <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
+              <div class="placeholder-content"></div>
+              <div class="placeholder-content"></div>
+              <div class="placeholder-content"></div>
+            </div>
           {% else %}
             <p class="placeholder">English translation is not available for this document.</p>
           {% endif %}
@@ -258,10 +266,6 @@ layout: default
     </div>
   </div>
 
-  <!-- Load drive-loader CSS and JS -->
-  <link rel="stylesheet" href="{{ '/assets/css/drive-loader.css' | relative_url }}">
-  <script src="{{ '/assets/js/drive-loader.js' | relative_url }}"></script>
-
   <!-- Embedded styles to avoid conflicts with main stylesheet -->
   <style>
     /* Translation Viewer Styles */
@@ -270,7 +274,7 @@ layout: default
       font-family: inherit;
     }
     
-    /* Readable margins for content */
+    /* Readable margins for content - improved for better readability */
     .readable-margins {
       max-width: 800px;
       margin-left: auto;
@@ -281,6 +285,12 @@ layout: default
     @media (max-width: 840px) {
       .readable-margins {
         padding: 0 20px;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .readable-margins {
+        padding: 0 16px;
       }
     }
     
@@ -524,6 +534,13 @@ layout: default
       font-style: italic;
     }
     
+    .placeholder-content {
+      height: 18px;
+      margin-bottom: 10px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+    }
+    
     /* Comments Section Styling */
     .comments-section {
       margin-top: 40px;
@@ -568,6 +585,14 @@ layout: default
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    /* JSON loader */
+    .json-loader {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      margin-bottom: 15px;
     }
     
     /* Mobile responsiveness - IMPROVED VERSION */
@@ -767,7 +792,7 @@ layout: default
     }
   </style>
 
-  <!-- Updated JavaScript for tabs functionality with a simple CORS solution -->
+  <!-- JavaScript for tabs functionality and JSON loading -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Get all tab buttons and panels
@@ -835,14 +860,6 @@ layout: default
         }
       }
       
-      // Trigger initial content loading event for the active tab
-      const activeTabId = document.querySelector('.tab-panel.active').id;
-      document.dispatchEvent(new CustomEvent('tabChanged', {
-        detail: {
-          tabId: activeTabId
-        }
-      }));
-      
       // Handle window resize to switch views if needed
       window.addEventListener('resize', function() {
         const currentActiveTab = document.querySelector('.tab-panel.active').id;
@@ -862,6 +879,119 @@ layout: default
           sideBySideTab.style.display = isMobileView ? 'none' : 'block';
         }
       });
+      
+      // Load JSON files from assets
+      const jsonLoaders = document.querySelectorAll('.json-loader');
+      if (jsonLoaders.length > 0) {
+        jsonLoaders.forEach(function(loader) {
+          const jsonPath = loader.getAttribute('data-json-path');
+          if (jsonPath) {
+            fetch(jsonPath)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+                return response.json();
+              })
+              .then(data => {
+                // Process the loaded JSON
+                processTranslationJson(data, loader);
+              })
+              .catch(error => {
+                console.error('Error loading JSON:', error);
+                loader.innerHTML = '<p class="error">Error loading translation data. Please try again later.</p>';
+              });
+          }
+        });
+      }
+      
+      // Function to process translation JSON and create content
+      function processTranslationJson(json, container) {
+        // Clear loading placeholders
+        container.innerHTML = '';
+        
+        // Get parent tab type
+        const parentTab = container.closest('.tab-panel');
+        const tabType = parentTab ? parentTab.id : null;
+        
+        // Check if json has chunks
+        if (json && json.chunks && json.chunks.length > 0) {
+          // Process based on tab type
+          if (tabType === 'latin-only') {
+            // Latin only view
+            json.chunks.forEach(chunk => {
+              const chunkEl = document.createElement('div');
+              chunkEl.className = 'chunk-section latin-full';
+              chunkEl.innerHTML = `
+                <span class="chunk-number">${chunk.chunk_number}</span>
+                <div class="latin-text">${chunk.original_latin.replace(/\n/g, '<br>')}</div>
+              `;
+              container.appendChild(chunkEl);
+            });
+          } else if (tabType === 'english-only') {
+            // English only view
+            json.chunks.forEach(chunk => {
+              const chunkEl = document.createElement('div');
+              chunkEl.className = 'chunk-section english-full';
+              
+              // Clean the text
+              let cleanedText = chunk.cleaned_english_translation
+                .replace(/<speak>/g, '')
+                .replace(/<\/speak>/g, '')
+                .replace(/<s>/g, '')
+                .replace(/<\/s>/g, '')
+                .replace(/<p>/g, '<p class="translation-paragraph">')
+                .replace(/<break time="\\d+ms"\/>/g, '');
+              
+              chunkEl.innerHTML = `
+                <span class="chunk-number">${chunk.chunk_number}</span>
+                <div class="english-text">${cleanedText}</div>
+              `;
+              container.appendChild(chunkEl);
+            });
+          } else if (tabType === 'side-by-side') {
+            // We need to find which column we're in
+            const latinColumn = container.closest('.latin-column');
+            const englishColumn = container.closest('.english-column');
+            
+            if (latinColumn) {
+              // Latin column in side-by-side view
+              json.chunks.forEach(chunk => {
+                const chunkEl = document.createElement('div');
+                chunkEl.className = 'chunk-section';
+                chunkEl.innerHTML = `
+                  <span class="chunk-number">${chunk.chunk_number}</span>
+                  <div class="latin-text">${chunk.original_latin.replace(/\n/g, '<br>')}</div>
+                `;
+                container.appendChild(chunkEl);
+              });
+            } else if (englishColumn) {
+              // English column in side-by-side view
+              json.chunks.forEach(chunk => {
+                const chunkEl = document.createElement('div');
+                chunkEl.className = 'chunk-section';
+                
+                // Clean the text
+                let cleanedText = chunk.cleaned_english_translation
+                  .replace(/<speak>/g, '')
+                  .replace(/<\/speak>/g, '')
+                  .replace(/<s>/g, '')
+                  .replace(/<\/s>/g, '')
+                  .replace(/<p>/g, '<p class="translation-paragraph">')
+                  .replace(/<break time="\\d+ms"\/>/g, '');
+                
+                chunkEl.innerHTML = `
+                  <span class="chunk-number">${chunk.chunk_number}</span>
+                  <div class="english-text">${cleanedText}</div>
+                `;
+                container.appendChild(chunkEl);
+              });
+            }
+          }
+        } else {
+          // No chunks found
+          container.innerHTML = '<p class="placeholder">Translation data could not be loaded properly.</p>';
+        }
+      }
     });
   </script>
-</article>
