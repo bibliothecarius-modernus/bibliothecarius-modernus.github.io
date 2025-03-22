@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const translationViewer = document.getElementById('translation-viewer');
   if (!translationViewer) return;
   
+  // Global variables to track event listeners for cleanup
+  let latinScrollListener = null;
+  let englishScrollListener = null;
+  let syncToggleListener = null;
+  let searchInitialized = false;
+  
   // ===== FEATURE 1: SMART SYNCHRONIZED SCROLLING =====
   function setupSynchronizedScrolling() {
     // We'll only set this up when the side-by-side view is active
@@ -14,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const englishColumn = document.querySelector('.english-column');
     
     if (!latinColumn || !englishColumn) return;
+    
+    // Clean up existing elements and listeners
+    cleanupSynchronizedScrolling();
     
     // Create sync controls
     const syncControls = document.createElement('div');
@@ -43,51 +52,166 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add styles
-    const styleElement = document.createElement('style');
-    styleElement.textContent = `
-      .sync-controls {
-        text-align: center;
-        margin: 0 0 5px 0;
-      }
-      .sync-button {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        background: #f0f0f0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        padding: 4px 10px;
-        cursor: pointer;
-        font-size: 12px;
-        color: #666;
-      }
-      .sync-button.active {
-        background: #3E2C1B;
-        color: white;
-        border-color: #3E2C1B;
-      }
-      .column-indicator {
-        position: absolute;
-        top: 32px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(184, 134, 11, 0.85);
-        color: white;
-        padding: 3px 10px;
-        border-radius: 3px;
-        font-size: 11px;
-        opacity: 0;
-        transition: opacity 0.3s;
-        pointer-events: none;
-        z-index: 10;
-      }
-      .two-columns h3 {
-        background-color: rgba(255, 255, 255, 0.95);
-        border-bottom: 1px solid #e6d7b8;
-        z-index: 5;
-      }
-    `;
-    document.head.appendChild(styleElement);
+    const styleId = 'translation-enhancement-styles';
+    if (!document.getElementById(styleId)) {
+      const styleElement = document.createElement('style');
+      styleElement.id = styleId;
+      styleElement.textContent = `
+        .sync-controls {
+          text-align: center;
+          margin: 0 0 5px 0;
+        }
+        .sync-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          background: #f0f0f0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 4px 10px;
+          cursor: pointer;
+          font-size: 12px;
+          color: #666;
+        }
+        .sync-button.active {
+          background: #3E2C1B;
+          color: white;
+          border-color: #3E2C1B;
+        }
+        .column-indicator {
+          position: absolute;
+          top: 32px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(184, 134, 11, 0.85);
+          color: white;
+          padding: 3px 10px;
+          border-radius: 3px;
+          font-size: 11px;
+          opacity: 0;
+          transition: opacity 0.3s;
+          pointer-events: none;
+          z-index: 10;
+        }
+        .two-columns h3 {
+          background-color: rgba(255, 255, 255, 0.95);
+          border-bottom: 1px solid #e6d7b8;
+          z-index: 5;
+        }
+        .translation-search {
+          margin: 0 auto 15px;
+          max-width: 800px;
+          padding: 10px 15px;
+          background: #f8f4ea;
+          border: 1px solid #B8860B;
+          border-radius: 6px;
+        }
+        .search-input-container {
+          display: flex;
+          width: 100%;
+        }
+        #translation-search-input {
+          flex: 1;
+          padding: 8px 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px 0 0 4px;
+          font-size: 14px;
+        }
+        #translation-search-button {
+          background: #3E2C1B;
+          color: white;
+          border: none;
+          border-radius: 0 4px 4px 0;
+          padding: 0 15px;
+          cursor: pointer;
+        }
+        .search-options {
+          display: flex;
+          margin-top: 8px;
+          gap: 15px;
+          font-size: 14px;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .search-checkboxes {
+          display: flex;
+          gap: 12px;
+        }
+        .search-navigation {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        #search-prev, #search-next {
+          background: #3E2C1B;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          width: 28px;
+          height: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+        #search-prev:disabled, #search-next:disabled {
+          background: #ccc;
+          cursor: not-allowed;
+        }
+        #search-result-count {
+          color: #666;
+          min-width: 60px;
+          text-align: center;
+        }
+        .search-highlight {
+          background-color: #FFEB99;
+          outline: 1px solid #B8860B;
+        }
+        .search-highlight.active {
+          background-color: #FFD700;
+          box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.5);
+        }
+        #keyboard-hints {
+          color: #777;
+          font-size: 11px;
+          margin-top: 4px;
+          text-align: right;
+          font-style: italic;
+        }
+        
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+          .translation-search {
+            padding: 8px 12px;
+          }
+          .search-options {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+          .search-checkboxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+          }
+          .search-navigation {
+            margin-left: 0;
+            width: 100%;
+            justify-content: space-between;
+          }
+          .search-mobile-notice {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+          }
+          #keyboard-hints {
+            display: none;
+          }
+        }
+      `;
+      document.head.appendChild(styleElement);
+    }
     
     // Track scroll state
     let isScrollSynced = true;
@@ -138,11 +262,16 @@ document.addEventListener('DOMContentLoaded', function() {
       const visibleChunk = findVisibleChunk(sourceColumn);
       if (!visibleChunk) return;
       
-      const chunkNumber = visibleChunk.querySelector('.chunk-number').textContent;
+      const chunkNumber = visibleChunk.querySelector('.chunk-number')?.textContent;
+      if (!chunkNumber) return;
+      
       const targetChunks = targetColumn.querySelectorAll('.chunk-section');
       
       for (const chunk of targetChunks) {
-        const num = chunk.querySelector('.chunk-number').textContent;
+        const numElement = chunk.querySelector('.chunk-number');
+        if (!numElement) continue;
+        
+        const num = numElement.textContent;
         if (num === chunkNumber) {
           // Get relative position in source chunk
           const visibleChunkRect = visibleChunk.getBoundingClientRect();
@@ -210,9 +339,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    // Toggle sync state
-    const syncToggleButton = document.getElementById('sync-toggle-button');
-    syncToggleButton.addEventListener('click', function() {
+    // Toggle sync state handler
+    function toggleSyncState() {
       isScrollSynced = !isScrollSynced;
       this.classList.toggle('active', isScrollSynced);
       
@@ -244,11 +372,18 @@ document.addEventListener('DOMContentLoaded', function() {
           latinIndicator.style.opacity = '0';
         }, 1500);
       }
-    });
+    }
     
-    // Add event listeners for scroll
-    latinColumn.addEventListener('scroll', handleScroll);
-    englishColumn.addEventListener('scroll', handleScroll);
+    // Setup event listeners
+    latinScrollListener = handleScroll.bind(null);
+    englishScrollListener = handleScroll.bind(null);
+    
+    latinColumn.addEventListener('scroll', latinScrollListener);
+    englishColumn.addEventListener('scroll', englishScrollListener);
+    
+    const syncToggleButton = document.getElementById('sync-toggle-button');
+    syncToggleListener = toggleSyncState.bind(syncToggleButton);
+    syncToggleButton.addEventListener('click', syncToggleListener);
     
     // Initial sync
     setTimeout(() => {
@@ -258,8 +393,47 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Smart synchronized scrolling enabled');
   }
   
+  // Function to clean up before re-initializing scroll sync
+  function cleanupSynchronizedScrolling() {
+    // Remove UI elements
+    const existingSyncControls = document.querySelector('.sync-controls');
+    if (existingSyncControls) {
+      existingSyncControls.remove();
+    }
+    
+    document.querySelectorAll('.column-indicator').forEach(indicator => {
+      indicator.remove();
+    });
+    
+    // Remove event listeners
+    const latinColumn = document.querySelector('.latin-column');
+    const englishColumn = document.querySelector('.english-column');
+    
+    if (latinColumn && latinScrollListener) {
+      latinColumn.removeEventListener('scroll', latinScrollListener);
+    }
+    
+    if (englishColumn && englishScrollListener) {
+      englishColumn.removeEventListener('scroll', englishScrollListener);
+    }
+    
+    const syncToggleButton = document.getElementById('sync-toggle-button');
+    if (syncToggleButton && syncToggleListener) {
+      syncToggleButton.removeEventListener('click', syncToggleListener);
+    }
+    
+    // Reset global variables
+    latinScrollListener = null;
+    englishScrollListener = null;
+    syncToggleListener = null;
+  }
+  
   // ===== FEATURE 2: SIMPLE SEARCH =====
   function setupSimpleSearch() {
+    // Only initialize once
+    if (searchInitialized) return;
+    searchInitialized = true;
+    
     // Create search container
     const searchContainer = document.createElement('div');
     searchContainer.className = 'translation-search';
@@ -299,122 +473,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabsContainer = translationViewer.querySelector('.translation-tabs');
     translationViewer.insertBefore(searchContainer, tabsContainer);
     
-    // Add search styles
-    const styleElement = document.createElement('style');
-    styleElement.textContent = `
-      .translation-search {
-        margin: 0 auto 15px;
-        max-width: 800px;
-        padding: 10px 15px;
-        background: #f8f4ea;
-        border: 1px solid #B8860B;
-        border-radius: 6px;
-      }
-      .search-input-container {
-        display: flex;
-        width: 100%;
-      }
-      #translation-search-input {
-        flex: 1;
-        padding: 8px 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px 0 0 4px;
-        font-size: 14px;
-      }
-      #translation-search-button {
-        background: #3E2C1B;
-        color: white;
-        border: none;
-        border-radius: 0 4px 4px 0;
-        padding: 0 15px;
-        cursor: pointer;
-      }
-      .search-options {
-        display: flex;
-        margin-top: 8px;
-        gap: 15px;
-        font-size: 14px;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .search-checkboxes {
-        display: flex;
-        gap: 12px;
-      }
-      .search-navigation {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      #search-prev, #search-next {
-        background: #3E2C1B;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        width: 28px;
-        height: 28px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-      #search-prev:disabled, #search-next:disabled {
-        background: #ccc;
-        cursor: not-allowed;
-      }
-      #search-result-count {
-        color: #666;
-        min-width: 60px;
-        text-align: center;
-      }
-      .search-highlight {
-        background-color: #FFEB99;
-        outline: 1px solid #B8860B;
-      }
-      .search-highlight.active {
-        background-color: #FFD700;
-        box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.5);
-      }
-      #keyboard-hints {
-        color: #777;
-        font-size: 11px;
-        margin-top: 4px;
-        text-align: right;
-        font-style: italic;
-      }
-      
-      /* Mobile-specific styles */
-      @media (max-width: 768px) {
-        .translation-search {
-          padding: 8px 12px;
-        }
-        .search-options {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 10px;
-        }
-        .search-checkboxes {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          width: 100%;
-        }
-        .search-navigation {
-          margin-left: 0;
-          width: 100%;
-          justify-content: space-between;
-        }
-        .search-mobile-notice {
-          font-size: 12px;
-          color: #666;
-          margin-top: 5px;
-          font-style: italic;
-        }
-        #keyboard-hints {
-          display: none;
-        }
-      }
-    `;
-    document.head.appendChild(styleElement);
+    // Add keyboard hints
+    const keyboardHints = document.createElement('div');
+    keyboardHints.id = 'keyboard-hints';
+    keyboardHints.textContent = 'Press Enter for next match, Shift+Enter for previous';
+    searchContainer.appendChild(keyboardHints);
     
     // Setup search functionality
     const searchInput = document.getElementById('translation-search-input');
@@ -425,12 +488,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultCount = document.getElementById('search-result-count');
     const prevButton = document.getElementById('search-prev');
     const nextButton = document.getElementById('search-next');
-    
-    // Add keyboard hints
-    const keyboardHints = document.createElement('div');
-    keyboardHints.id = 'keyboard-hints';
-    keyboardHints.textContent = 'Press Enter for next match, Shift+Enter for previous';
-    searchContainer.appendChild(keyboardHints);
     
     // Track search state
     let currentHighlights = [];
@@ -697,20 +754,33 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('tabChanged', function(e) {
     if (e.detail && e.detail.tabId === 'side-by-side') {
       // Initialize scrolling when switching to side-by-side view
-      setupSynchronizedScrolling();
+      setTimeout(() => {
+        setupSynchronizedScrolling();
+      }, 50);
+    } else {
+      // When switching to other tabs, clean up scrolling
+      cleanupSynchronizedScrolling();
     }
   });
   
   // Handle window resize
+  let resizeTimer;
   window.addEventListener('resize', function() {
-    const wasMobile = window.innerWidth <= 768;
-    
-    // If switching between mobile and desktop, reinitialize features
-    if (wasMobile !== (window.innerWidth <= 768)) {
-      setupSimpleSearch();
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      const isMobileNow = window.innerWidth <= 768;
+      const wasMobile = window.innerWidth <= 768;
+      
+      // If switching between mobile and desktop, reinitialize features
+      if (isMobileNow !== wasMobile) {
+        searchInitialized = false;
+        setupSimpleSearch();
+      }
+      
       if (document.getElementById('side-by-side').classList.contains('active')) {
+        cleanupSynchronizedScrolling();
         setupSynchronizedScrolling();
       }
-    }
+    }, 250);
   });
 });
