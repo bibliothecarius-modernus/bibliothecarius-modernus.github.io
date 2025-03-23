@@ -58,7 +58,7 @@ layout: default
       <button class="tab-btn side-by-side-tab" data-target="side-by-side">Side by Side</button>
       <button class="tab-btn" data-target="latin-only">Latin Only</button>
       <button class="tab-btn" data-target="english-only">English Only</button>
-      {% include resource_info_tab.html %}
+      <button class="tab-btn metadata-tab" data-target="metadata">Resource Info</button>
     </div>
     
     <!-- Tab Content -->
@@ -197,6 +197,7 @@ layout: default
           {% endif %}
         </div>
       </div>
+      {% include resource_info_tab.html %}
     </div>
   </div>
   
