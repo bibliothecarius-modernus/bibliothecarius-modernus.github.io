@@ -79,7 +79,7 @@
       </tr>
       <tr>
         <th>Citation</th>
-        <td>{{ page.original_work.author }}. "{{ page.original_work.latin_title }}." Translated by Bibliothecarius Modernus, {{ page.date | date: "%-d %b. %Y" }}, {{ site.url }}{{ page.url }}.</td>
+        <td>{{ page.original_work.author }}. "{{ page.original_work.latin_title }}." Translated by Bibliothecarius Modernus using ChatGPT-4o, {{ page.date | date: "%-d %b. %Y" }}, {{ site.url }}{{ page.url }}.</td>
       </tr>
       <tr>
         <th>License</th>
@@ -101,7 +101,7 @@
       {% if page.external_resources.archive_url %}
       <tr>
         <th>Archive.org</th>
-        <td><a href="{{ page.external_resources.archive_url }}" target="_blank">Download full text PDF/EPUB</a></td>
+        <td><a href="{{ page.external_resources.archive_url }}" target="_blank">Download the Audio File</a></td>
       </tr>
       {% endif %}
       {% if page.external_resources.github_url %}

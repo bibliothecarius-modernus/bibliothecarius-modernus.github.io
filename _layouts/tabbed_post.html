@@ -266,581 +266,583 @@ layout: default
   </div>
 
   <!-- Embedded styles to avoid conflicts with main stylesheet -->
-  <style>
-    /* Translation Viewer Styles */
-    #translation-viewer {
-      margin: 30px 0;
-      font-family: inherit;
-    }
-    
-    /* Readable margins for content */
+  <!-- Embedded styles to avoid conflicts with main stylesheet -->
+<style>
+  /* Translation Viewer Styles */
+  #translation-viewer {
+    margin: 30px 0;
+    font-family: inherit;
+  }
+  
+  /* Readable margins for content */
+  .readable-margins {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+  
+  @media (max-width: 840px) {
     .readable-margins {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
       padding: 0 20px;
     }
-    
-    @media (max-width: 840px) {
-      .readable-margins {
-        padding: 0 20px;
-      }
-    }
-    
-    .post-header {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .audio-player-container {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 20px;
-    }
-    
-    .youtube-promo {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 20px;
-    }
-    
-    /* Tab buttons */
+  }
+  
+  .post-header {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .audio-player-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+  
+  .youtube-promo {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+  
+  /* Tab buttons */
+  .translation-tabs {
+    display: flex;
+    margin-bottom: 1px;
+    border-bottom: 2px solid #B8860B;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .tab-btn {
+    padding: 8px 16px;
+    margin-right: 4px;
+    background-color: #EDE0CA;
+    border: 1px solid #B8860B;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    color: #3E2C1B;
+    cursor: pointer;
+    font-weight: normal;
+    transition: background-color 0.2s;
+  }
+  
+  .tab-btn:hover {
+    background-color: #e3d6c0;
+  }
+  
+  .tab-btn.active {
+    background-color: #B8860B;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Special styling for analysis tab */
+  .analysis-tab {
+    background-color: #3E2C1B;
+    color: #EDE0CA;
+    font-size: 1.05rem;
+  }
+  
+  .analysis-tab:hover {
+    background-color: #4d372a;
+  }
+  
+  .analysis-tab.active {
+    background-color: #3E2C1B;
+    color: #EDE0CA;
+  }
+  
+  /* Tab content container */
+  .tab-content {
+    border: 1px solid #B8860B;
+    border-top: none;
+    background-color: white;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Tab panels */
+  .tab-panel {
+    display: none;
+    padding: 15px;
+  }
+  
+  .tab-panel.active {
+    display: block;
+  }
+  
+  /* Analysis panel without border or background */
+  #analysis {
+    padding: 0;
+    border: none;
+    margin: 0;
+    background-color: transparent;
+  }
+  
+  .analysis-container {
+    padding: 0;
+  }
+  
+  /* Two-column layout for side-by-side view */
+  .two-columns {
+    display: flex;
+    max-height: 70vh;
+  }
+  
+  .latin-column, .english-column {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  
+  .latin-column {
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .column-content {
+    height: 100%;
+  }
+  
+  /* Mobile alternative for side-by-side view */
+  .mobile-translation-view {
+    display: none;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .mobile-notice {
+    background-color: #fff8e8;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #B8860B;
+  }
+  
+  .mobile-navigation {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .mobile-nav-btn {
+    padding: 10px 20px;
+    background-color: #3E2C1B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .mobile-nav-btn:hover {
+    background-color: #B8860B;
+  }
+  
+  /* Column headers */
+  .two-columns h3, .single-column h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  .latin-column h3 {
+    color: #5c4a28;
+  }
+  
+  .english-column h3 {
+    color: #2a4a75;
+  }
+  
+  /* Chunk styling */
+  .chunk-section {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 6px;
+  }
+  
+  .chunk-number {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    background-color: #B8860B;
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  
+  .latin-text {
+    font-style: italic;
+    color: #5c4a28;
+  }
+  
+  .english-text {
+    color: #2a4a75;
+  }
+  
+  /* Background colors for sections */
+  .chunk-section {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .latin-column .chunk-section,
+  .latin-full {
+    background-color: #fff8e8;
+    border-color: #e6d7b8;
+  }
+  
+  .english-column .chunk-section,
+  .english-full {
+    background-color: #f8fbff;
+    border-color: #d0e2f5;
+  }
+  
+  /* Single column layout for latin/english only views */
+  .single-column {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Translation paragraph spacing */
+  .translation-paragraph {
+    margin-bottom: 1em;
+  }
+  
+  /* Placeholder text */
+  .placeholder {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .placeholder-content {
+    height: 18px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+  }
+  
+  /* Comments Section Styling */
+  .comments-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #B8860B;
+    position: relative;
+  }
+  
+  .comments-section::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
+  }
+  
+  .comments-section h2 {
+    font-family: 'Luxurious Roman', serif;
+    color: #3E2C1B;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .discussion-intro {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    border-left: 4px solid #B8860B;
+    padding-left: 15px;
+    background-color: #f8f4ea;
+    padding: 10px 15px;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  #disqus_thread {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  /* JSON loader */
+  .json-loader {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  /* Audio player styling */
+  .audio-player-container {
+    margin: 15px auto 25px;
+  }
+  
+  .audio-player-container details {
+    background-color: #f8f4ea;
+    border: 1px solid #e6d7b8;
+    border-radius: 6px;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .audio-player-container summary {
+    padding: 12px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #3E2C1B;
+    position: relative;
+    list-style: none;
+    outline: none;
+  }
+  
+  .audio-player-container summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .audio-player-container summary::before {
+    content: '▶';
+    font-size: 0.8em;
+    margin-right: 10px;
+    color: #B8860B;
+  }
+  
+  .audio-player-container details[open] summary::before {
+    content: '▼';
+  }
+  
+  .audio-player {
+    padding: 10px 15px 15px;
+    border-top: 1px solid #e6d7b8;
+  }
+  
+  .audio-player audio {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .audio-description {
+    margin: 8px 0 0;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* Mobile responsiveness - IMPROVED VERSION */
+  @media (max-width: 768px) {
+    /* Tab navigation improvements */
     .translation-tabs {
-      display: flex;
-      margin-bottom: 1px;
-      border-bottom: 2px solid #B8860B;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     
     .tab-btn {
-      padding: 8px 16px;
-      margin-right: 4px;
-      background-color: #EDE0CA;
-      border: 1px solid #B8860B;
-      border-bottom: none;
-      border-radius: 4px 4px 0 0;
-      color: #3E2C1B;
-      cursor: pointer;
-      font-weight: normal;
-      transition: background-color 0.2s;
+      flex: 1 1 40%;
+      margin: 0 2px 4px;
+      padding: 8px 10px;
+      font-size: 0.9rem;
+      text-align: center;
     }
     
-    .tab-btn:hover {
-      background-color: #e3d6c0;
-    }
-    
-    .tab-btn.active {
-      background-color: #B8860B;
-      color: white;
-      font-weight: bold;
-    }
-    
-    /* Special styling for analysis tab */
-    .analysis-tab {
-      background-color: #3E2C1B;
-      color: #EDE0CA;
-      font-size: 1.05rem;
-    }
-    
-    .analysis-tab:hover {
-      background-color: #4d372a;
-    }
-    
-    .analysis-tab.active {
-      background-color: #3E2C1B;
-      color: #EDE0CA;
-    }
-    
-    /* Tab content container */
-    .tab-content {
-      border: 1px solid #B8860B;
-      border-top: none;
-      background-color: white;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    /* Tab panels */
-    .tab-panel {
+    /* Hide side-by-side tab on mobile */
+    .side-by-side-tab {
       display: none;
-      padding: 15px;
     }
     
-    .tab-panel.active {
-      display: block;
+    /* Content area padding adjustments */
+    .tab-panel {
+      padding: 10px 8px;
     }
     
-    /* Analysis panel without border or background */
+    /* Analysis full-width background */
     #analysis {
-      padding: 0;
-      border: none;
-      margin: 0;
-      background-color: transparent;
+      background-color: #f9f5ea; /* Light background for entire analysis area */
+      padding: 15px 10px;
+      margin: 0 -10px; /* Negative margin to ensure full width */
+      width: calc(100% + 20px); /* Ensure the background spans the entire width */
     }
     
     .analysis-container {
       padding: 0;
+      background-color: #f9f5ea;
     }
     
-    /* Two-column layout for side-by-side view */
-    .two-columns {
-      display: flex;
-      max-height: 70vh;
+    .post-content.analysis-content {
+      background-color: #f9f5ea;
+      padding: 0 5px;
     }
     
+    /* Hide regular two-column view and show mobile alternative */
+    #side-by-side .two-columns {
+      display: none;
+    }
+    
+    #side-by-side .mobile-translation-view {
+      display: block;
+    }
+    
+    /* Single column views adjustments */
     .latin-column, .english-column {
-      flex: 1;
-      overflow-y: auto;
-      padding: 10px;
+      height: auto;
+      max-height: 40vh;
+      padding: 5px;
     }
     
     .latin-column {
-      border-right: 1px solid #e0e0e0;
+      border-right: none;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 10px;
     }
     
-    .column-content {
-      height: 100%;
-    }
-    
-    /* Mobile alternative for side-by-side view */
-    .mobile-translation-view {
-      display: none;
-      padding: 15px;
-      text-align: center;
-    }
-    
-    .mobile-notice {
-      background-color: #fff8e8;
-      padding: 15px;
-      border-radius: 6px;
-      margin-bottom: 15px;
-      border: 1px solid #B8860B;
-    }
-    
-    .mobile-navigation {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 10px;
-    }
-    
-    .mobile-nav-btn {
-      padding: 10px 20px;
-      background-color: #3E2C1B;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.2s;
-    }
-    
-    .mobile-nav-btn:hover {
-      background-color: #B8860B;
-    }
-    
-    /* Column headers */
-    .two-columns h3, .single-column h3 {
-      text-align: center;
-      padding-bottom: 10px;
-      margin-top: 0;
-      position: sticky;
-      top: 0;
-      background-color: white;
-      z-index: 1;
-    }
-    
-    .latin-column h3 {
-      color: #5c4a28;
-    }
-    
-    .english-column h3 {
-      color: #2a4a75;
-    }
-    
-    /* Chunk styling */
+    /* Chunk styling adjustments */
     .chunk-section {
-      position: relative;
-      margin-bottom: 20px;
-      padding: 10px 15px;
-      border-radius: 6px;
+      padding: 12px 8px 8px;
+      margin-bottom: 15px;
     }
     
     .chunk-number {
-      position: absolute;
-      top: -8px;
-      left: 10px;
-      background-color: #B8860B;
-      color: white;
-      font-size: 12px;
-      padding: 2px 8px;
-      border-radius: 10px;
+      font-size: 10px;
+      padding: 1px 6px;
     }
     
-    .latin-text {
-      font-style: italic;
-      color: #5c4a28;
-    }
-    
-    .english-text {
-      color: #2a4a75;
-    }
-    
-    /* Background colors for sections */
-    .chunk-section {
-      background-color: #f9f9f9;
-      border: 1px solid #e0e0e0;
-    }
-    
-    .latin-column .chunk-section,
-    .latin-full {
-      background-color: #fff8e8;
-      border-color: #e6d7b8;
-    }
-    
-    .english-column .chunk-section,
-    .english-full {
-      background-color: #f8fbff;
-      border-color: #d0e2f5;
-    }
-    
-    /* Single column layout for latin/english only views */
-    .single-column {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-    
-    /* Translation paragraph spacing */
-    .translation-paragraph {
-      margin-bottom: 1em;
-    }
-    
-    /* Placeholder text */
-    .placeholder {
-      text-align: center;
-      padding: 30px;
-      color: #666;
-      font-style: italic;
-    }
-    
-    .placeholder-content {
-      height: 18px;
-      margin-bottom: 10px;
-      background-color: #f0f0f0;
-      border-radius: 4px;
-    }
-    
-    /* Comments Section Styling */
+    /* Comments section adjustments */
     .comments-section {
-      margin-top: 40px;
-      padding-top: 30px;
-      border-top: 2px solid #B8860B;
-      position: relative;
-    }
-    
-    .comments-section::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: 0;
-      right: 0;
-      height: 10px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
-    }
-    
-    .comments-section h2 {
-      font-family: 'Luxurious Roman', serif;
-      color: #3E2C1B;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
+      padding-top: 20px;
+      margin-top: 30px;
     }
     
     .discussion-intro {
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #666;
-      font-size: 1.05rem;
-      line-height: 1.5;
-      border-left: 4px solid #B8860B;
-      padding-left: 15px;
-      background-color: #f8f4ea;
-      padding: 10px 15px;
-      border-radius: 0 4px 4px 0;
+      padding: 8px 10px;
+      font-size: 0.95rem;
     }
     
     #disqus_thread {
-      margin-top: 25px;
-      padding: 15px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 10px 8px;
     }
     
-    /* JSON loader */
-    .json-loader {
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 4px;
-      margin-bottom: 15px;
+    /* Post content adjustments for better mobile reading */
+    .post-content {
+      font-size: 16px;
+      line-height: 1.6;
     }
     
-    /* Audio player styling */
-    .audio-player-container {
-      margin: 15px auto 25px;
+    .post-content h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5em;
     }
     
-    .audio-player-container details {
-      background-color: #f8f4ea;
-      border: 1px solid #e6d7b8;
-      border-radius: 6px;
-      padding: 0;
-      transition: all 0.3s ease;
+    .post-content h3 {
+      font-size: 1.3rem;
     }
     
-    .audio-player-container summary {
-      padding: 12px 15px;
-      cursor: pointer;
-      font-weight: bold;
-      color: #3E2C1B;
-      position: relative;
-      list-style: none;
-      outline: none;
+    /* Better spacing for mobile content */
+    .article-summary {
+      margin: 10px 0 20px;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Extreme narrow screens (smaller phones) */
+  @media (max-width: 480px) {
+    /* Even more compact layout */
+    .tab-btn {
+      flex: 1 1 45%;
+      padding: 6px 4px;
+      font-size: 0.8rem;
+      margin: 0 1px 3px;
     }
     
-    .audio-player-container summary::-webkit-details-marker {
-      display: none;
+    /* Reduce padding further */
+    .tab-panel {
+      padding: 8px 5px;
     }
     
-    .audio-player-container summary::before {
-      content: '▶';
-      font-size: 0.8em;
-      margin-right: 10px;
-      color: #B8860B;
+    /* Analysis background */
+    #analysis {
+      padding: 10px 8px;
     }
     
-    .audio-player-container details[open] summary::before {
-      content: '▼';
+    /* Less margin between sections */
+    .chunk-section {
+      margin-bottom: 12px;
+      padding: 10px 6px 6px;
     }
     
-    .audio-player {
-      padding: 10px 15px 15px;
-      border-top: 1px solid #e6d7b8;
+    /* Adjust header sizes */
+    .two-columns h3, .single-column h3 {
+      font-size: 1.1rem;
+      padding-bottom: 6px;
     }
     
-    .audio-player audio {
-      width: 100%;
-      margin-bottom: 8px;
+    /* Fix margins for content */
+    .latin-text, .english-text {
+      margin: 0;
+      line-height: 1.4;
     }
     
-    .audio-description {
-      margin: 8px 0 0;
-      font-style: italic;
-      color: #666;
+    /* Mobile navigation buttons */
+    .mobile-nav-btn {
+      padding: 8px 12px;
       font-size: 0.9rem;
     }
     
-    /* Mobile responsiveness - IMPROVED VERSION */
-    @media (max-width: 768px) {
-      /* Tab navigation improvements */
-      .translation-tabs {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      
-      .tab-btn {
-        flex: 1 1 40%;
-        margin: 0 2px 4px;
-        padding: 8px 10px;
-        font-size: 0.9rem;
-        text-align: center;
-      }
-      
-      /* Hide side-by-side tab on mobile */
-      .side-by-side-tab {
-        display: none;
-      }
-      
-      /* Content area padding adjustments */
-      .tab-panel {
-        padding: 10px 8px;
-      }
-      
-      /* Analysis full-width background */
-      #analysis {
-        background-color: #f9f5ea; /* Light background for entire analysis area */
-        padding: 15px 10px;
-        margin: 0 -10px; /* Negative margin to ensure full width */
-        width: calc(100% + 20px); /* Ensure the background spans the entire width */
-      }
-      
-      .analysis-container {
-        padding: 0;
-        background-color: #f9f5ea;
-      }
-      
-      .post-content.analysis-content {
-        background-color: #f9f5ea;
-        padding: 0 5px;
-      }
-      
-      /* Hide regular two-column view and show mobile alternative */
-      #side-by-side .two-columns {
-        display: none;
-      }
-      
-      #side-by-side .mobile-translation-view {
-        display: block;
-      }
-      
-      /* Single column views adjustments */
-      .latin-column, .english-column {
-        height: auto;
-        max-height: 40vh;
-        padding: 5px;
-      }
-      
-      .latin-column {
-        border-right: none;
-        border-bottom: 1px solid #e0e0e0;
-        margin-bottom: 10px;
-      }
-      
-      /* Chunk styling adjustments */
-      .chunk-section {
-        padding: 12px 8px 8px;
-        margin-bottom: 15px;
-      }
-      
-      .chunk-number {
-        font-size: 10px;
-        padding: 1px 6px;
-      }
-      
-      /* Comments section adjustments */
-      .comments-section {
-        padding-top: 20px;
-        margin-top: 30px;
-      }
-      
-      .discussion-intro {
-        padding: 8px 10px;
-        font-size: 0.95rem;
-      }
-      
-      #disqus_thread {
-        padding: 10px 8px;
-      }
-      
-      /* Post content adjustments for better mobile reading */
-      .post-content {
-        font-size: 16px;
-        line-height: 1.6;
-      }
-      
-      .post-content h2 {
-        font-size: 1.5rem;
-        margin-top: 1.5em;
-      }
-      
-      .post-content h3 {
-        font-size: 1.3rem;
-      }
-      
-      /* Better spacing for mobile content */
-      .article-summary {
-        margin: 10px 0 20px;
-        font-size: 1rem;
-      }
+    /* Post header adjustments */
+    .post-header {
+      margin-bottom: 1rem;
     }
     
-    /* Extreme narrow screens (smaller phones) */
-    @media (max-width: 480px) {
-      /* Even more compact layout */
-      .tab-btn {
-        flex: 1 1 45%;
-        padding: 6px 4px;
-        font-size: 0.8rem;
-        margin: 0 1px 3px;
-      }
-      
-      /* Reduce padding further */
-      .tab-panel {
-        padding: 8px 5px;
-      }
-      
-      /* Analysis background */
-      #analysis {
-        padding: 10px 8px;
-      }
-      
-      /* Less margin between sections */
-      .chunk-section {
-        margin-bottom: 12px;
-        padding: 10px 6px 6px;
-      }
-      
-      /* Adjust header sizes */
-      .two-columns h3, .single-column h3 {
-        font-size: 1.1rem;
-        padding-bottom: 6px;
-      }
-      
-      /* Fix margins for content */
-      .latin-text, .english-text {
-        margin: 0;
-        line-height: 1.4;
-      }
-      
-      /* Mobile navigation buttons */
-      .mobile-nav-btn {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-      }
-      
-      /* Post header adjustments */
-      .post-header {
-        margin-bottom: 1rem;
-      }
-      
-      /* Simplified mobile notice */
-      .mobile-notice p {
-        font-size: 0.9rem;
-        margin: 0;
-      }
+    /* Simplified mobile notice */
+    .mobile-notice p {
+      font-size: 0.9rem;
+      margin: 0;
     }
-    
-    /* Fix scrolling behavior on touch devices */
-    @media (pointer: coarse) {
-      .latin-column, .english-column, .single-column {
-        -webkit-overflow-scrolling: touch;
-      }
+  }
+  
+  /* Fix scrolling behavior on touch devices */
+  @media (pointer: coarse) {
+    .latin-column, .english-column, .single-column {
+      -webkit-overflow-scrolling: touch;
     }
-    
-    /* Ensure content doesn't overflow on small screens */
-    .post-content {
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      max-width: 100%;
+  }
+  
+  /* Ensure content doesn't overflow on small screens */
+  .post-content {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+  
+  /* Fix for YouTube embed responsiveness */
+  .youtube-embed iframe {
+    max-height: 56vw;
+  }
+  
+  /* Overall page margin fix for mobile */
+  @media (max-width: 768px) {
+    .readable-margins {
+      padding: 0 15px;
     }
-    
-    /* Fix for YouTube embed responsiveness */
-    .youtube-embed iframe {
-      max-height: 56vw;
-    }
-    
-    /* Overall page margin fix for mobile */
-    @media (max-width: 768px) {
-      .readable-margins {
-        padding: 0 15px;
-      }
-    }
-    /* Resource Info tab styling */
+  }
+
+  /* Resource Info tab styling */
   .metadata-tab {
     background-color: #8B4513;
     color: #EDE0CA;
@@ -941,7 +943,7 @@ layout: default
       padding: 12px 15px;
     }
   }
-  </style>
+</style>
 
   <!-- JavaScript for tabs functionality and JSON loading -->
   <script>
