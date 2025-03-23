@@ -1,6 +1,6 @@
 ---
 layout: tabbed_post
-title: "Defensio Eruditionis Hieronymianae (c.1700): Text & Translation"
+title: "Defensio Eruditionis Hieronymianae (c.1700)"
 date: 2025-03-19
 categories: [Apologetics, Patristic Philosophy, Heresiology]
 youtube_id: "40fIiE9grXY"
