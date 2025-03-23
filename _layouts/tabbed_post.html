@@ -861,7 +861,7 @@ layout: default
 
   /* Metadata content styling */
   .metadata-container {
-    padding: 15px 0;
+    padding: 15px 10px;
     max-width: 95%;
     margin: 0 auto;
   }
@@ -882,16 +882,6 @@ layout: default
     font-size: 1.05rem;
   }
 
-  .metadata-table th {
-    text-align: left;
-    padding: 8px 10px;
-    width: 30%;
-    vertical-align: top;
-    border-bottom: 1px solid #e0e0e0;
-    background-color: #f9f5ea;
-    color: #3E2C1B;
-  }
-
   .metadata-table td {
     padding: 8px 10px;
     border-bottom: 1px solid #e0e0e0;
@@ -900,6 +890,7 @@ layout: default
     overflow-wrap: break-word;
     word-break: break-word;
     max-width: 0;
+    width: 75%;  /* Explicitly set content column width */
   }
 
   .translation-notes {
