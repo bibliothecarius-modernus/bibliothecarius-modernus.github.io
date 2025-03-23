@@ -8,7 +8,7 @@ audio_analysis: "/assets/audio/Expositio brevis_ Unveiling the Ancient Gallican 
 translation_json: "/assets/translations/2025-03-19-exposito-brevis-antiquae-liturgiae-gallicanae.json"
 
 # Additional metadata fields 
-original work:
+original_work:
   latin_title: Expositio brevis antiquae liturgiae Gallicanae
   author: "Pseudo-Germanus of Paris"
   date: "c. 700"
