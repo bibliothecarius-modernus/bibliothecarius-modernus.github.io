@@ -18,6 +18,7 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/defense-of-the-learning-of-jerome-against-jean-le-clerc"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_25"
+  doi: "10.5281/zenodo.15073583"
 ---
 
 

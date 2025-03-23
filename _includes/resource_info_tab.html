@@ -75,10 +75,26 @@
       <tr>
         <th colspan="2" class="metadata-section">Usage Information</th>
       </tr>
-      <tr>
+      <!-- Conditionally show DOI if it exists -->
+        {% if page.external_resources.doi %}
+        <tr>
+        <th>DOI</th>
+        <td><a href="https://doi.org/{{ page.external_resources.doi }}" target="_blank">{{ page.external_resources.doi }}</a></td>
+        </tr>
+        {% endif %}
+
+        <!-- Citation with conditional DOI logic -->
+        <tr>
         <th>Citation</th>
-        <td>{{ page.original_work.author }}. "{{ page.original_work.latin_title }}." AI translation by Bibliothecarius Modernus using ChatGPT-4o, {{ page.date | date: "%-d %b. %Y" }}, {{ site.url }}{{ page.url }}.</td>
-      </tr>
+        <td>
+            {{ page.original_work.author }}. "{{ page.original_work.latin_title }}." AI translation by Bibliothecarius Modernus using ChatGPT-4o with automated and human review safeguards, {{ page.date | date: "%-d %b. %Y" }}, 
+            {% if page.external_resources.doi %}
+            DOI: <a href="https://doi.org/{{ page.external_resources.doi }}">{{ page.external_resources.doi }}</a>
+            {% else %}
+            {{ site.url }}{{ page.url }}
+            {% endif %}
+        </td>
+        </tr>
       <tr>
         <th>License</th>
         <td>Creative Commons Attribution 4.0 International (CC BY 4.0)</td>
