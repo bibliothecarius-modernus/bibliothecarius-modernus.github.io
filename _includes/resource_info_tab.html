@@ -1,0 +1,129 @@
+<button class="tab-btn metadata-tab" data-target="metadata">Resource Info</button>
+
+<div id="metadata" class="tab-panel">
+  <h3>Text & Translation Information</h3>
+  <div class="metadata-container">
+    <table class="metadata-table">
+      <tr>
+        <th colspan="2" class="metadata-section">Original Work</th>
+      </tr>
+      <tr>
+        <th>Title</th>
+        <td>{{ page.original_work.latin_title }}</td>
+      </tr>
+      <tr>
+        <th>Author</th>
+        <td>{{ page.original_work.author }}</td>
+      </tr>
+      <tr>
+        <th>Date</th>
+        <td>{{ page.original_work.date }}</td>
+      </tr>
+      <tr>
+        <th>Language</th>
+        <td>Latin</td>
+      </tr>
+      <tr>
+        <th>Publication</th>
+        <td>{{ page.original_work.publication }}</td>
+      </tr>
+      <tr>
+        <th>Context</th>
+        <td>{{ page.original_work.context }}</td>
+      </tr>
+      {% if page.original_work.related_texts %}
+      <tr>
+        <th>Related Texts</th>
+        <td>
+          {% for text in page.original_work.related_texts %}
+            {{ text.text }}{% unless forloop.last %}<br>{% endunless %}
+          {% endfor %}
+        </td>
+      </tr>
+      {% endif %}
+      
+      <tr>
+        <th colspan="2" class="metadata-section">This Translation</th>
+      </tr>
+      <tr>
+        <th>Published</th>
+        <td>{{ page.date | date: "%B %-d, %Y" }}</td>
+      </tr>
+      <tr>
+        <th>Translation Method</th>
+        <td>AI-assisted translation with human review</td>
+      </tr>
+      <tr>
+        <th>Translation Goals</th>
+        <td>Accessibility and clarity while preserving original meaning</td>
+      </tr>
+      <tr>
+        <th>Content Includes</th>
+        <td>Latin text, English translation, contextual analysis{% if page.audio_analysis %}, audio commentary{% endif %}</td>
+      </tr>
+      <tr>
+        <th>Categories</th>
+        <td>
+          {% for category in page.categories %}
+            {{ category }}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </td>
+      </tr>
+      <tr>
+        <th>Permalink</th>
+        <td><a href="{{ site.url }}{{ page.url }}">{{ site.url }}{{ page.url }}</a></td>
+      </tr>
+      
+      <tr>
+        <th colspan="2" class="metadata-section">Usage Information</th>
+      </tr>
+      <tr>
+        <th>Citation</th>
+        <td>{{ page.original_work.author }}. "{{ page.original_work.latin_title }}." Translated by Bibliothecarius Modernus, {{ page.date | date: "%-d %b. %Y" }}, {{ site.url }}{{ page.url }}.</td>
+      </tr>
+      <tr>
+        <th>License</th>
+        <td>Creative Commons Attribution 4.0 International (CC BY 4.0)</td>
+      </tr>
+      <tr>
+        <th>Reuse</th>
+        <td>This translation may be freely used as a starting point for your own translations or scholarly work. Attribution is appreciated but not required.</td>
+      </tr>
+      <tr>
+        <th>Limitations</th>
+        <td>This AI-assisted translation is not intended as an authoritative scholarly edition. Readers are encouraged to verify crucial passages against the original Latin.</td>
+      </tr>
+      
+      {% if page.youtube_id or page.external_resources.archive_url or page.external_resources.github_url %}
+      <tr>
+        <th colspan="2" class="metadata-section">Additional Resources</th>
+      </tr>
+      {% if page.external_resources.archive_url %}
+      <tr>
+        <th>Archive.org</th>
+        <td><a href="{{ page.external_resources.archive_url }}" target="_blank">Download full text PDF/EPUB</a></td>
+      </tr>
+      {% endif %}
+      {% if page.external_resources.github_url %}
+      <tr>
+        <th>GitHub</th>
+        <td><a href="{{ page.external_resources.github_url }}" target="_blank">Plain text version and source files</a></td>
+      </tr>
+      {% endif %}
+      {% if page.youtube_id %}
+      <tr>
+        <th>YouTube</th>
+        <td><a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank">Video presentation with Latin/English audio</a></td>
+      </tr>
+      {% endif %}
+      {% endif %}
+    </table>
+    
+    <div class="translation-notes">
+      <h4>About This Translation</h4>
+      <p>This translation is part of the Bibliothecarius Modernus project, which uses AI technology to make Latin Patristic texts more accessible to audiences beyond specialized Latin scholarship. The translation prioritizes clarity and readability while attempting to preserve the original meaning.</p>
+      <p>The parallel presentation of Latin and English texts is designed to provide transparency and allow readers to verify the translation. You can access this text in multiple formats through our Archive.org collection, GitHub repository, or YouTube channel (links in the Additional Resources section above).</p>
+      <p>If you're a translator interested in creating your own translation or scholarly edition based on this work, you are welcome to do so under the Creative Commons license. No permission is needed, though acknowledgment is appreciated.</p>
+    </div>
+  </div>
+</div>

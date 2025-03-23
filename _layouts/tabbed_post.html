@@ -58,6 +58,7 @@ layout: default
       <button class="tab-btn side-by-side-tab" data-target="side-by-side">Side by Side</button>
       <button class="tab-btn" data-target="latin-only">Latin Only</button>
       <button class="tab-btn" data-target="english-only">English Only</button>
+      {% include resource_info_tab.html %}
     </div>
     
     <!-- Tab Content -->
@@ -839,6 +840,107 @@ layout: default
         padding: 0 15px;
       }
     }
+    /* Resource Info tab styling */
+  .metadata-tab {
+    background-color: #8B4513;
+    color: #EDE0CA;
+  }
+
+  .metadata-tab:hover {
+    background-color: #9e5c2e;
+  }
+
+  .metadata-tab.active {
+    background-color: #8B4513;
+    color: white;
+  }
+
+  /* Metadata content styling */
+  .metadata-container {
+    padding: 15px 0;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .metadata-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+
+  .metadata-section {
+    background-color: #B8860B;
+    color: white;
+    text-align: left;
+    padding: 8px 10px;
+    font-size: 1.05rem;
+  }
+
+  .metadata-table th {
+    text-align: left;
+    padding: 8px 10px;
+    width: 30%;
+    vertical-align: top;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f9f5ea;
+    color: #3E2C1B;
+  }
+
+  .metadata-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 1.5;
+  }
+
+  .translation-notes {
+    background-color: #f9f5ea;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    border-left: 4px solid #B8860B;
+  }
+
+  .translation-notes h4 {
+    margin-top: 0;
+    color: #3E2C1B;
+    margin-bottom: 12px;
+  }
+
+  .translation-notes p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .translation-notes p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Mobile responsiveness for metadata */
+  @media (max-width: 768px) {
+    .metadata-table th {
+      width: 40%;
+    }
+    
+    .metadata-table, .metadata-table th, .metadata-table td {
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .metadata-table th {
+      width: 45%;
+    }
+    
+    .metadata-table, .metadata-table th, .metadata-table td {
+      font-size: 0.8rem;
+      padding: 6px 8px;
+    }
+    
+    .translation-notes {
+      padding: 12px 15px;
+    }
+  }
   </style>
 
   <!-- JavaScript for tabs functionality and JSON loading -->

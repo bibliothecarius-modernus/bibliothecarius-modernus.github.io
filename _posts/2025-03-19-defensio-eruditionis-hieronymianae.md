@@ -1,15 +1,28 @@
 ---
 layout: tabbed_post
-title: "Defensio Eruditionis Hieronymianae adversus Joannem Clericum: A Comprehensive Analysis"
+title: "Defensio Eruditionis Hieronymianae (c.1700): Text & Translation"
 date: 2025-03-19
 categories: [Apologetics, Patristic Philosophy, Heresiology]
-youtube_id: "40fIiE9grXY"  # Replace with your actual video ID
-audio_analysis: "/assets/audio/martianay-defends-jerome-tradition-against-enlightenment-critique.mp3" # Path to your MP3 file
+youtube_id: "40fIiE9grXY"
+audio_analysis: "/assets/audio/martianay-defends-jerome-tradition-against-enlightenment-critique.mp3"
 translation_json: "/assets/translations/2025-03-19-defensio-eruditionis-hieronymianae.json"
+
+# Additional metadata fields
+original_work:
+  latin_title: "Defensio Eruditionis Hieronymianae adversus Joannem Clericum"
+  author: "Jean Martianay"
+  date: "c. 1700-1701"
+  publication: "Patrologia Latina Volume 25"
+  context: "Counter-Enlightenment defense of St. Jerome's scholarship against critiques by Protestant philosopher Jean Le Clerc"
+
+external_resources:
+  archive_url: "https://archive.org/details/defense-of-the-learning-of-jerome-against-jean-le-clerc"
+  github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_25"
 ---
 
+
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-  Analysis of Martianay's defense of St. Jerome against Enlightenment criticism, revealing tensions between Catholic tradition and modern biblical scholarship.
+  Latin text and English translation of Martianay's defense of St. Jerome against Jean Le Clerc's Enlightenment criticisms, revealing the clash between traditional Catholic scholarship and emerging modern biblical critique.
 </p>
 
 ## Historical Context  
