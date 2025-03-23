@@ -867,6 +867,7 @@ layout: default
   }
 
   .metadata-table {
+    table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
@@ -895,6 +896,10 @@ layout: default
     padding: 8px 10px;
     border-bottom: 1px solid #e0e0e0;
     line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 0;
   }
 
   .translation-notes {
