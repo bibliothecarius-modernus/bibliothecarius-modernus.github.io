@@ -12,8 +12,8 @@ original work:
   latin_title: Expositio brevis antiquae liturgiae Gallicanae
   author: "Pseudo-Germanus of Paris"
   date: "c. 700"
-  publication: "Patrologia Latina Volume 72
-  context: Examines the ancient Gallican liturgy, with its distinctive ceremonial elements and theological symbolism that differed significantly from the Roman Rite before Carolingian reforms. 
+  publication: "Patrologia Latina Volume 72"
+  context: "Examines the ancient Gallican liturgy, with its distinctive ceremonial elements and theological symbolism that differed significantly from the Roman Rite before Carolingian reforms."
 
 external_resources:
   archive_url: "https://archive.org/details/brief-exposition-of-the-old-gallican-liturgy"
