@@ -1,0 +1,10 @@
+{
+    "chunks": [
+        {
+            "original_latin": "APOLOGIA",
+            "cleaned_english_translation": "This work (Q. Julius Hilarianus - Little Book on the Duration of the World) was translated before the implementation of the interlinear JSON format. To view the original Latin and English translation separately, please visit: https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_13/Q.%20Julius%20Hilarianus%20-%20Little%20Book%20on%20the%20Duration%20of%20the%20World",
+            "voice": "Ruth",
+            "chunk_number": 1
+        }
+    ]
+}

@@ -1,12 +1,26 @@
 ---
 layout: post
-title: "Libellus de Mundi Duratione – Comprehensive Analysis"
+title: "Libellus de Mundi Duratione (c. 397 AD)"
 date: 2025-03-20
 categories: [Eschatology, Nicene Fathers, Chronicles & Annals]
 youtube_id: "4Ccek3JHA-g"  # Replace with your actual video ID
+audio_analysis: "/assets/audio/Libellus_de_Mundi_Duratione-Analysis.mp3" # Path to your MP3 file
+translation_json: "/assets/translations/2025-03-20-libellus-de-mundi-duratione.json" # Path to JSON file
+Additional metadata fields
+original_work:
+latin_title: "Libellus de Mundi Duratione"
+author: "Quintus Julius Hilarianus"
+date: "c. 397 AD"
+publication: "Patrologia Latina Volume 13"
+context: "Written during intense eschatological speculation in North Africa, this treatise calculates a 6,000-year timeline for world history based on biblical chronology, representing one of the last explicit endorsements of premillennial thought in mainstream Latin Christianity before Augustinian amillennialism became dominant."
+external_resources:
+archive_url: "https://archive.org/details/libellus-de-mundi-duratione"
+github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_13"
 ---
 
-<p class="article-summary">Hilarianus's 4th-century treatise "Libellus de Mundi Duratione" calculates a 6,000-year timeline of world history, predicting Christ's return around 498 AD.</p>
+<p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+Hilarianus's 4th-century treatise "Libellus de Mundi Duratione" calculates a 6,000-year timeline of world history based on biblical chronology, concluding Christ would return around 498 AD. As one of the last explicit defenses of premillennial eschatology in Latin Christianity before Augustine's amillennial view became dominant, it represents a crucial transition point in early Christian apocalyptic thought.
+</p>
 
 ## Historical Context  
 The *Libellus de Mundi Duratione* (“Little Book on the Duration of the World”) was composed in the late 4th century (c. 397 AD) in the context of a North African Christian community. This period was marked by intense eschatological speculation – many Christians were trying to calculate the age of the world and predict the Second Coming of Christ. Some fringe movements (like the Montanists in Phrygia and Donatists in Africa) were fervently proclaiming the imminent end of the world, while mainstream church leaders were also aware of apocalyptic expectations ([Reading the Book of Revelation politically](http://www.scielo.org.za/scielo.php?script=sci_arttext&pid=S2413-94672017000200017#:~:text=Their%20eschatological%20fervour%20was%20not,and%20their%20link%20with%20a)) ([Reading the Book of Revelation politically](http://www.scielo.org.za/scielo.php?script=sci_arttext&pid=S2413-94672017000200017#:~:text=acute%20awareness%20of%20the%20end,imminent%20end%20of%20the%20world)). In fact, *Libellus de Mundi Duratione* explicitly addresses a debate among brethren about whether the world’s beginning and end can be known. Hilarianus notes that various opinions existed: some pagans posited an extremely old or even eternal world, while others denied an end or a beginning to creation ([Quintus Iulius Hilarianus, Chronologia Sive Libellus De Mundi Duratione  ](https://catholiclibrary.org/library/view?docId=/Fathers-OR/PL.013.html&chunk.id=00000653#:~:text=multitudo%20sapientum%20%201097C%20sanitas,si%20permittitis%29%20vobis)) ([Quintus Iulius Hilarianus, Chronologia Sive Libellus De Mundi Duratione  ](https://catholiclibrary.org/library/view?docId=/Fathers-OR/PL.013.html&chunk.id=00000653#:~:text=iisdem%2C%20mundi%20initium%20finemque%20ejus,annos%2C%20in%20lege%2C%20inaniter%201097D)). Against this backdrop, the author insists that Scripture provides a reliable chronology of the world, in contrast to “worldly philosophy and empty deception” ([Quintus Iulius Hilarianus, Chronologia Sive Libellus De Mundi Duratione  ](https://catholiclibrary.org/library/view?docId=/Fathers-OR/PL.013.html&chunk.id=00000653#:~:text=iisdem%2C%20mundi%20initium%20finemque%20ejus,annos%2C%20in%20lege%2C%20inaniter%201097D)). The treatise was written not long after the Council of Nicaea (325) and amid ongoing theological debates in the late 300s. Notably, it came just a few years after St. Jerome had updated Eusebius’s *Chronicle* (circa 381) and around the same time as Sulpicius Severus composed his *Chronica* (c. 403), reflecting a broader late 4th-century interest in sacred history and its timeline. Early Christian thinkers such as Hippolytus, Julius Africanus, and Lactantius had already popularized the notion that human history would last 6,000 years followed by a millennial reign of Christ. By 397 AD, this idea was still circulating, though it was increasingly being questioned by theologians like St. Augustine. The *Libellus* thus enters an intellectual milieu where some Christians eagerly sought chronological certainty about the world’s age and “end of days,” while others cautioned against date-setting. Hilarianus’s work is a direct product of this milieu: it attempts to compute the world’s duration from Creation, assert the nearness of the prophesied 6,000-year limit, and thereby encourage believers with the hope of the coming Kingdom.
