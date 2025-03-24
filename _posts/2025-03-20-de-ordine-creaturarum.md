@@ -4,7 +4,7 @@ title: "De Ordine Creaturarum (c.670-700)"
 date: 2025-03-20
 categories: [Irish & Anglo-Saxon Contributions, Natural Philosophy & Medicine, Neo-Platonic Christian Philosophy]
 youtube_id: "KFZOL1rWOkY"  # Using the YouTube ID from your document
-audio_analysis: "/assets/audio/De-Ordine-Creaturarum-Hiberno-Latin-Cosmology.mp3"
+audio_analysis: "/assets/audio/The Order of Creation_ A 7th-Century Irish Cosmology.mp3"
 translation_json: "/assets/translations/2025-03-20-de-ordine-creaturarum.json"
 
 # Additional metadata fields

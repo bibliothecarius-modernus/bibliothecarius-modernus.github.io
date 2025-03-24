@@ -4,9 +4,8 @@ title: "Libellus de Mundi Duratione (c. 397 AD)"
 date: 2025-03-20
 categories: [Eschatology, Nicene Fathers, Chronicles & Annals]
 youtube_id: "4Ccek3JHA-g"  # Replace with your actual video ID
-audio_analysis: "/assets/audio/Libellus_de_Mundi_Duratione-Analysis.mp3" # Path to your MP3 file
+audio_analysis: "/assets/audio/Hilarianus_ The Worlds Duration and End-Time Hope.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-03-20-libellus-de-mundi-duratione.json" # Path to JSON file
-
 original_work:
     latin_title: "Libellus de Mundi Duratione"
     author: "Quintus Julius Hilarianus"
