@@ -40,6 +40,7 @@ layout: default
   </div>
 
  <!-- Latest Research Section with Enhanced Filtering -->
+<!-- Latest Research Section with Enhanced Filtering -->
 <section class="research-section">
   <div class="research-header">
     <h2 class="post-list-heading">Latest Translations & Research</h2>
@@ -51,24 +52,36 @@ layout: default
           <label for="filter-century">Century:</label>
           <select id="filter-century" class="filter-select">
             <option value="all">All Centuries</option>
-            <option value="1">1st Century</option>
-            <option value="2">2nd Century</option>
-            <option value="3">3rd Century</option>
-            <option value="4">4th Century</option>
-            <option value="5">5th Century</option>
-            <option value="6">6th Century</option>
-            <option value="7">7th Century</option>
-            <option value="8">8th Century</option>
-            <option value="9">9th Century</option>
-            <option value="10">10th Century</option>
-            <option value="11">11th Century</option>
-            <option value="12">12th Century</option>
-            <option value="13">13th Century</option>
-            <option value="14">14th Century</option>
-            <option value="15">15th Century</option>
-            <option value="16">16th Century</option>
-            <option value="17">17th Century</option>
-            <option value="18">18th Century</option>
+            {% assign all_dates = site.posts | map: "original_work" | map: "date" | compact %}
+            {% assign centuries = "" | split: "" %}
+            {% for date in all_dates %}
+              {% if date != nil and date != "" %}
+                {% assign cleaned_date = date | remove: "c." | remove: "CE" | remove: "AD" | strip %}
+                {% assign year = cleaned_date | split: "-" | first | strip %}
+                {% if year != "" %}
+                  {% assign year_num = year | plus: 0 %}
+                  {% if year_num > 0 %}
+                    {% assign century = year_num | divided_by: 100 | plus: 1 %}
+                    {% assign century_str = century | append: "" %}
+                    {% assign centuries = centuries | push: century_str %}
+                  {% endif %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {% assign unique_centuries = centuries | uniq | sort %}
+            {% for century in unique_centuries %}
+              {% assign ordinal = "th" %}
+              {% assign last_digit = century | modulo: 10 %}
+              {% assign last_two_digits = century | modulo: 100 %}
+              {% if last_digit == 1 and last_two_digits != 11 %}
+                {% assign ordinal = "st" %}
+              {% elsif last_digit == 2 and last_two_digits != 12 %}
+                {% assign ordinal = "nd" %}
+              {% elsif last_digit == 3 and last_two_digits != 13 %}
+                {% assign ordinal = "rd" %}
+              {% endif %}
+              <option value="{{ century }}">{{ century }}{{ ordinal }} Century</option>
+            {% endfor %}
           </select>
         </div>
         
@@ -93,23 +106,12 @@ layout: default
         </button>
       </div>
       
-      <!-- Category Pills for Quick Filtering -->
+      <!-- Category Pills for Quick Filtering - Dynamic based on current filters -->
       <div class="category-pills">
         <span class="pill active" data-category="all">All</span>
-        {% assign all_categories = site.posts | map: "categories" | flatten | uniq | sort %}
-        {% for category in all_categories limit:8 %}
-          <span class="pill" data-category="{{ category | slugify }}">{{ category }}</span>
-        {% endfor %}
-        {% if all_categories.size > 8 %}
-          <div class="more-categories">
-            <span class="pill more-pill">More <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg></span>
-            <div class="categories-dropdown">
-              {% for category in all_categories offset:8 %}
-                <span class="pill dropdown-pill" data-category="{{ category | slugify }}">{{ category }}</span>
-              {% endfor %}
-            </div>
-          </div>
-        {% endif %}
+        <div id="dynamic-categories" class="dynamic-categories">
+          <!-- Dynamic categories will be populated here by JavaScript -->
+        </div>
       </div>
     </div>
   </div>
