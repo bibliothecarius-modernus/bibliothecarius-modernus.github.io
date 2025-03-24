@@ -1,12 +1,29 @@
 ---
-layout: post
-title: "Vita Sancti Odonis: A Critical Analysis of John of Salerno's Hagiography of the Second Abbot of Cluny"
+layout: tabbed_post
+title: "Vita Sancti Odonis Abbatis Cluniacensis Secundi (c. 943)"
 date: 2025-03-19
 categories: [Hagiography, Asceticism & Monasticism, Monastic Rules & Constitutions]
 youtube_id: "Ysp8glHxXdQ"  # Replace with your actual video ID
+audio_analysis: "/assets/audio/Vita_Sancti_Odonis_Critical_Analysis.mp3" # Path to your MP3 file
+translation_json: "/assets/translations/2025-03-19-vita-sancti-odonis.json"
+
+# Additional metadata fields
+original_work:
+  latin_title: "Vita Sancti Odonis Abbatis Cluniacensis Secundi"
+  author: "John of Salerno"
+  date: "c. 943"
+  publication: "Patrologia Latina Volume 133"
+  context: "Written shortly after Odo's death in 942, this hagiography documents the life and reforming mission of St. Odo, who played a central role in the 10th-century Cluniac monastic renewal movement that revitalized Benedictine monasticism across Europe."
+
+external_resources:
+  archive_url: "https://archive.org/details/the-life-of-saint-odo-second-abbot-of-cluny"
+  github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_133"
 ---
 
-<p class="article-summary">John of Salerno's 10th-century hagiography of St. Odo reveals the spiritual ideals and reforming mission that shaped Cluny's monastic renewal movement.</p>
+
+<p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+  John of Salerno's intimate 10th-century hagiography of St. Odo, written just months after the abbot's death, provides crucial insights into early Cluniac spirituality, monastic reform practices, and the charismatic leadership that transformed Western monasticism during a turbulent period of ecclesiastical history.
+</p>
 
 
 ## Historical Context  
