@@ -51,38 +51,50 @@ layout: default
           <label for="filter-century">Century:</label>
           <select id="filter-century" class="filter-select">
             <option value="all">All Centuries</option>
+            
+            {% comment %}
+            First, get all the centuries correctly calculated
+            {% endcomment %}
             {% assign all_dates = site.posts | map: "original_work" | map: "date" | compact %}
-            {% assign centuries = "" | split: "" %}
+            {% assign centuries_array = "" | split: "" %}
+            
             {% for date in all_dates %}
               {% if date != nil and date != "" %}
                 {% assign cleaned_date = date | remove: "c." | remove: "CE" | remove: "AD" | strip %}
-                {% assign year = cleaned_date | split: "-" | first | strip %}
-                {% if year != "" %}
-                  {% assign year_num = year | plus: 0 %}
+                {% assign year_str = cleaned_date | split: "-" | first | strip %}
+                {% if year_str != "" %}
+                  {% assign year_num = year_str | plus: 0 %}
                   {% if year_num > 0 %}
-                    {% comment %}
-                    Special handling for years ending in 00:
-                    For years like 100, 200, 700, 1700, etc., we need to add 1 to get the correct century
-                    {% endcomment %}
                     {% if year_num == 100 or year_num == 200 or year_num == 300 or year_num == 400 or year_num == 500 or year_num == 600 or year_num == 700 or year_num == 800 or year_num == 900 or year_num == 1000 or year_num == 1100 or year_num == 1200 or year_num == 1300 or year_num == 1400 or year_num == 1500 or year_num == 1600 or year_num == 1700 or year_num == 1800 or year_num == 1900 or year_num == 2000 %}
+                      {% comment %} For years ending in 00, we need special handling {% endcomment %}
                       {% assign century = year_num | divided_by: 100 | plus: 1 %}
                     {% else %}
                       {% assign century = year_num | divided_by: 100 | plus: 1 %}
                     {% endif %}
-                    {% assign century_str = century | append: "" %}
-                    {% assign centuries = centuries | push: century_str %}
+                    {% assign centuries_array = centuries_array | push: century %}
                   {% endif %}
                 {% endif %}
               {% endif %}
             {% endfor %}
             
             {% comment %}
-            Convert string centuries to numbers and sort numerically
-            To ensure oldest to newest (ascending) order, we'll sort directly
+            Extract unique centuries and convert to integers for sorting
             {% endcomment %}
-            {% assign sorted_centuries = centuries | uniq %}
-            {% assign sorted_centuries = sorted_centuries | sort_natural %}
+            {% assign unique_centuries = centuries_array | uniq %}
+            {% assign century_integers = "" | split: "" %}
+            {% for century in unique_centuries %}
+              {% assign cent_int = century | plus: 0 %}
+              {% assign century_integers = century_integers | push: cent_int %}
+            {% endfor %}
             
+            {% comment %}
+            Sort centuries manually by creating a sorted array
+            {% endcomment %}
+            {% assign sorted_centuries = century_integers | sort %}
+            
+            {% comment %}
+            Generate the century options
+            {% endcomment %}
             {% for century in sorted_centuries %}
               {% assign ordinal = "th" %}
               {% assign last_digit = century | modulo: 10 %}
