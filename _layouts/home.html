@@ -77,15 +77,11 @@ layout: default
             {% endfor %}
             
             {% comment %}
-            Convert string centuries to numbers for proper sorting
+            Convert string centuries to numbers and sort numerically
+            To ensure oldest to newest (ascending) order, we'll sort directly
             {% endcomment %}
-            {% assign century_numbers = "" | split: "" %}
-            {% for century in centuries %}
-              {% assign century_number = century | plus: 0 %}
-              {% assign century_numbers = century_numbers | push: century_number %}
-            {% endfor %}
-            
-            {% assign sorted_centuries = century_numbers | uniq | sort %}
+            {% assign sorted_centuries = centuries | uniq %}
+            {% assign sorted_centuries = sorted_centuries | sort_natural %}
             
             {% for century in sorted_centuries %}
               {% assign ordinal = "th" %}
