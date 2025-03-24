@@ -38,17 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
       if (clearFiltersLink) clearFiltersLink.addEventListener('click', resetFilters);
       if (loadMoreButton) loadMoreButton.addEventListener('click', loadMorePosts);
       
-      // Add click handler for the "All" pill
-      if (allCategoryPill) {
-        allCategoryPill.addEventListener('click', function() {
-          setActiveCategoryPill('all');
-          currentFilters.category = 'all';
+      // Set up category pill listeners
+      document.querySelectorAll('.pill').forEach(pill => {
+        pill.addEventListener('click', function() {
+          currentFilters.category = this.dataset.category;
+          updateCategoryPillsState();
           refreshPosts();
         });
-      }
-      
-      // Generate initial category pills
-      updateDynamicCategoryPills();
+      });
       
       // Initial setup
       updatePostCount();
@@ -131,12 +128,9 @@ document.addEventListener('DOMContentLoaded', function() {
         currentFilters.author = target.value;
       }
       
-      // Update category pills based on current filters
-      updateDynamicCategoryPills();
-      
       // Reset category filter when changing other filters
       currentFilters.category = 'all';
-      setActiveCategoryPill('all');
+      updateCategoryPillsState();
       
       refreshPosts();
     }
@@ -196,144 +190,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    function updateDynamicCategoryPills() {
-      if (!dynamicCategoriesContainer) return;
-      
-      // Clear existing pills
-      dynamicCategoriesContainer.innerHTML = '';
-      
-      // Get filtered categories based on current filters
-      let availableCategories = [];
-      
-      if (currentFilters.century === 'all' && currentFilters.author === 'all') {
-        // Show all categories
-        availableCategories = [...allPostsData.categories];
-      } else if (currentFilters.century !== 'all' && currentFilters.author === 'all') {
-        // Filter by century only
-        if (allPostsData.categoriesByCentury[currentFilters.century]) {
-          availableCategories = [...allPostsData.categoriesByCentury[currentFilters.century]];
-        }
-      } else if (currentFilters.century === 'all' && currentFilters.author !== 'all') {
-        // Filter by author only
-        if (allPostsData.categoriesByAuthor[currentFilters.author]) {
-          availableCategories = [...allPostsData.categoriesByAuthor[currentFilters.author]];
-        }
-      } else {
-        // Filter by both century and author
-        // We need to find the intersection of categories
-        const categoriesByCentury = allPostsData.categoriesByCentury[currentFilters.century] || new Set();
-        const categoriesByAuthor = allPostsData.categoriesByAuthor[currentFilters.author] || new Set();
-        
-        availableCategories = [...categoriesByCentury].filter(category => 
-          categoriesByAuthor.has(category)
-        );
-      }
-      
-      // Sort categories alphabetically
-      availableCategories.sort();
-      
-      // Create pill for each category
-      availableCategories.forEach(category => {
-        const pill = document.createElement('span');
-        pill.className = 'pill';
-        pill.dataset.category = category;
-        
-        // Use original category text if available
-        pill.textContent = allPostsData.categoryMap[category] || 
-                          category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-        
-        // Make active if currently selected
-        if (category === currentFilters.category) {
-          pill.classList.add('active');
-        }
-        
-        // Add event listener
-        pill.addEventListener('click', function() {
-          setActiveCategoryPill(category);
-          currentFilters.category = category;
-          refreshPosts();
-        });
-        
-        dynamicCategoriesContainer.appendChild(pill);
+    // We're now using static category pills, so we don't need this dynamic category generation function
+    function updateCategoryPillsState() {
+      // Simply update the active state based on current selection
+      document.querySelectorAll('.pill').forEach(pill => {
+        pill.classList.toggle('active', pill.dataset.category === currentFilters.category);
       });
-      
-      // Show "more" dropdown if there are many categories
-      if (availableCategories.length > 8) {
-        const mainCategories = availableCategories.slice(0, 8);
-        const extraCategories = availableCategories.slice(8);
-        
-        // Clear and re-add the first 8 categories
-        dynamicCategoriesContainer.innerHTML = '';
-        
-        mainCategories.forEach(category => {
-          const pill = document.createElement('span');
-          pill.className = 'pill';
-          pill.dataset.category = category;
-          pill.textContent = allPostsData.categoryMap[category] || 
-                            category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-          
-          if (category === currentFilters.category) {
-            pill.classList.add('active');
-          }
-          
-          pill.addEventListener('click', function() {
-            setActiveCategoryPill(category);
-            currentFilters.category = category;
-            refreshPosts();
-          });
-          
-          dynamicCategoriesContainer.appendChild(pill);
-        });
-        
-        // Add "more" dropdown
-        const moreContainer = document.createElement('div');
-        moreContainer.className = 'more-categories';
-        
-        const morePill = document.createElement('span');
-        morePill.className = 'pill more-pill';
-        morePill.innerHTML = 'More <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>';
-        
-        const dropdown = document.createElement('div');
-        dropdown.className = 'categories-dropdown';
-        
-        extraCategories.forEach(category => {
-          const dropdownPill = document.createElement('span');
-          dropdownPill.className = 'pill dropdown-pill';
-          dropdownPill.dataset.category = category;
-          dropdownPill.textContent = allPostsData.categoryMap[category] || 
-                                    category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-          
-          if (category === currentFilters.category) {
-            dropdownPill.classList.add('active');
-          }
-          
-          dropdownPill.addEventListener('click', function() {
-            setActiveCategoryPill(category);
-            currentFilters.category = category;
-            refreshPosts();
-          });
-          
-          dropdown.appendChild(dropdownPill);
-        });
-        
-        moreContainer.appendChild(morePill);
-        moreContainer.appendChild(dropdown);
-        dynamicCategoriesContainer.appendChild(moreContainer);
-      }
     }
     
-    function setActiveCategoryPill(category) {
-      // Remove active class from all pills (including those in the dropdown)
-      document.querySelectorAll('.pill').forEach(pill => pill.classList.remove('active'));
-      
-      // Add active class to the selected pill
-      const activePill = document.querySelector(`.pill[data-category="${category}"]`);
-      if (activePill) {
-        activePill.classList.add('active');
-      } else if (category === 'all') {
-        allCategoryPill.classList.add('active');
-      }
-    }
+    // This has been replaced by updateCategoryPillsState
     
     function resetFilters(e) {
       if (e) e.preventDefault();
@@ -353,11 +218,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Update author dropdown with all authors
       updateAuthorDropdown();
       
-      // Update category pills with all categories
-      updateDynamicCategoryPills();
-      
-      // Set "All" pill as active
-      setActiveCategoryPill('all');
+      // Update category pills state
+      updateCategoryPillsState();
       
       refreshPosts();
     }
@@ -423,10 +285,18 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Category filter
         if (currentFilters.category !== 'all') {
-          const categories = (post.dataset.categories || '').split(',');
-          if (!categories.includes(currentFilters.category)) {
-            return false;
-          }
+          // Get proper category data from the actual category tags in the post
+          let categoryFound = false;
+          const categoryElements = post.querySelectorAll('.category-tag');
+          
+          // Check each category element
+          categoryElements.forEach(element => {
+            if (element.dataset.category === currentFilters.category) {
+              categoryFound = true;
+            }
+          });
+          
+          if (!categoryFound) return false;
         }
         
         return true;
