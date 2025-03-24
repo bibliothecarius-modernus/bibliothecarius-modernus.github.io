@@ -35,7 +35,7 @@ Gottschalk’s insistence on a radical Augustinian position led to official cond
 							- The Medieval Review
 			](https://scholarworks.iu.edu/journals/index.php/tmr/article/view/25644/31407#:~:text=Gottschalk%20seems%20to%20have%20won,his%20teachings%20and%20for%20rejecting)). He never recanted, dying still imprisoned in 868. His case was highly unusual for the time; early medieval Francia saw very few internal heresy prosecutions, which made this **“homegrown Carolingian heretic”** stand out ([Gottschalk: a ninth-century heretic, dissenter, and religious outlaw - OUPblog](https://blog.oup.com/2017/08/gottschalk-heretic-religious-outlaw-church/#:~:text=This%20state%20of%20affairs%20was,when%20Carolingian%20bishops%20were%20aiming)). The two Confessions thus emerged from a dramatic context in which an individual theologian challenged ecclesiastical authority on a core doctrinal issue.
 
- ![File:Vestiges-Abbaye-Hautvillers.JPG - Wikimedia Commons](https://commons.wikimedia.org/wiki/File%3AVestiges-Abbaye-Hautvillers.JPG) 
+ ![File:Vestiges-Abbaye-Hautvillers.JPG - Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/d/db/Vestiges-Abbaye-Hautvillers.JPG) 
  *Gottschalk spent his final years imprisoned at the monastery of Hautvillers (modern buildings shown), where he composed his extended confession.*  
 
 ## Theological Themes  
