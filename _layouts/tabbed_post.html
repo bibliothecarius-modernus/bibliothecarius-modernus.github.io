@@ -10,7 +10,7 @@ layout: default
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
       {% if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span itemprop="name">{{ page.author }}</span>
           </span>
       {% endif %}
@@ -939,36 +939,6 @@ layout: default
     
     .translation-notes {
       padding: 12px 15px;
-    }
-  }
-  .post-date, .post-author {
-    display: inline-block;
-  }
-  
-  .dot-separator {
-    display: inline-block;
-  }
-  
-  /* Hide dot separator on mobile */
-  @media (max-width: 768px) {
-    .dot-separator {
-      display: none;
-    }
-    
-    .post-date, .post-author {
-      display: block;
-      line-height: 1.5;
-    }
-    
-    .post-author {
-      margin-top: 2px;
-    }
-  }
-  
-  /* Extremely small screens adjustments */
-  @media (max-width: 480px) {
-    .post-date, .post-author {
-      font-size: 0.9rem;
     }
   }
 </style>
