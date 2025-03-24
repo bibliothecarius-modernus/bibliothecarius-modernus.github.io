@@ -106,12 +106,13 @@ layout: default
         </button>
       </div>
       
-      <!-- Category Pills for Quick Filtering - Dynamic based on current filters -->
+      <!-- Category Pills for Quick Filtering - Static list with better formatting -->
       <div class="category-pills">
-        <span class="pill active" data-category="all">All</span>
-        <div id="dynamic-categories" class="dynamic-categories">
-          <!-- Dynamic categories will be populated here by JavaScript -->
-        </div>
+        <span class="pill active" data-category="all">All Categories</span>
+        {% assign all_categories = site.posts | map: "categories" | flatten | uniq | sort %}
+        {% for category in all_categories %}
+          <span class="pill" data-category="{{ category | slugify }}">{{ category | replace: '-', ' ' }}</span>
+        {% endfor %}
       </div>
     </div>
   </div>

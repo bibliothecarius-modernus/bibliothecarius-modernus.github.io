@@ -84,12 +84,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   
   .pill {
     display: inline-block;
-    padding: 5px 12px;
+    padding: 6px 14px;
     background-color: var(--light-gray);
     border-radius: 20px;
     font-size: 0.85rem;
@@ -97,16 +98,22 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     border: 1px solid transparent;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
   }
   
   .pill:hover {
     background-color: rgba(184, 134, 11, 0.1);
     border-color: var(--highlight-color);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
   
   .pill.active {
     background-color: var(--highlight-color);
     color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
   
   .more-categories {
