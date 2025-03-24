@@ -1,12 +1,28 @@
 ---
-layout: post
-title: "De Ordine Creaturarum: Hiberno-Latin Cosmology in Context"
+layout: tabbed_post
+title: "De Ordine Creaturarum (c.670-700)"
 date: 2025-03-20
 categories: [Irish & Anglo-Saxon Contributions, Natural Philosophy & Medicine, Neo-Platonic Christian Philosophy]
-youtube_id: "KFZOL1rWOkY"  # Replace with your actual video ID
+youtube_id: "KFZOL1rWOkY"  # Using the YouTube ID from your document
+audio_analysis: "/assets/audio/De-Ordine-Creaturarum-Hiberno-Latin-Cosmology.mp3"
+translation_json: "/assets/translations/2025-03-20-de-ordine-creaturarum.json"
+
+# Additional metadata fields
+original_work:
+  latin_title: De Ordine Creaturarum
+  author: "Anonymous Hiberno-Latin Scholar (Pseudo-Isidore)"
+  date: "c. 670-700"
+  publication: "Patrologia Latina Volume 83"
+  context: "An Irish synthesis of biblical cosmology and natural philosophy that presented a comprehensive theological vision of creation's hierarchical order, incorrectly attributed to Isidore of Seville for centuries."
+
+external_resources:
+  archive_url: "https://archive.org/details/on-the-order-of-creatures"
+  github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_83"
 ---
 
-<p class="article-summary">A 7th-century Irish synthesis of biblical cosmology and natural philosophy that shaped medieval understanding of universal order.</p>
+<p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+A 7th-century Irish synthesis of biblical cosmology and natural philosophy that shaped medieval understanding of universal order through its hierarchical organization of all creation from the Trinity to the material world, incorrectly attributed to Isidore of Seville until modern scholarship revealed its Hiberno-Latin origins.
+</p>
 
 # Historical Context  
 **Authorship and Dating:** *De Ordine Creaturarum* is an early medieval Latin treatise on the “order of creation,” traditionally included in Patrologia Latina volume 83 under the works of Isidore of Seville. Modern scholarship, however, has shown it is **pseudo-Isidorean** – not actually written by Isidore  ([reference](https://www.durham.ac.uk/media/durham-university/research-/research-institutes/institute-of-medieval-and-early-modern-studies/pdfs/BurkeDavid_EndofFellowshipReport.pdf#:~:text=Isidore%20of%20Seville%20%28c.%20560,Liber%20de%20ordine%20creaturarum%20is)). Manuscript evidence and stylistic analysis indicate it was composed by an **anonymous Hiberno-Latin author in 7th-century Ireland**, likely in the second half of that century  ([reference](https://journal.fi/scf/article/download/153354/98931/370494#:~:text=Liber%20de%20ordine%20creaturarum%20,includes%201245%20lines%20of%20prose)). For centuries it circulated under famous patristic names: some medieval manuscripts even ascribed it to St. Augustine  ([reference](https://www.durham.ac.uk/media/durham-university/research-/research-institutes/institute-of-medieval-and-early-modern-studies/pdfs/BurkeDavid_EndofFellowshipReport.pdf#:~:text=creaturarum%2C%20a%20text%20there%20ascribed,the%20Liber%20de%20ordine%20creaturarum)) or Isidore, which is why Migne included it in Isidore’s works. Manuel C. Díaz y Díaz’s critical edition (1972) definitively established the text’s Irish provenance  ([reference](https://www.durham.ac.uk/media/durham-university/research-/research-institutes/institute-of-medieval-and-early-modern-studies/pdfs/BurkeDavid_EndofFellowshipReport.pdf#:~:text=Isidore%20of%20Seville%20%28c.%20560,Liber%20de%20ordine%20creaturarum%20is)). Thus, *De Ordine Creaturarum* is best understood as an *Insular* (Irish/Anglo-Saxon) work from around 670–700 AD, rather than a product of the earlier Visigothic Spain of Isidore. Its **historical setting** is the intellectually vibrant Irish monastic milieu, a generation or two after the time of Isidore and roughly contemporary with the *Synod of Whitby* and the rise of early English scholarship. In this context, Irish scholars were digesting the Church Fathers and classical learning, producing original syntheses – *De Ordine Creaturarum* among them ([The Irish Background to the De XII abusiuis saeculi (Chapter 2) - Addressing Injustice in the Medieval Body Politic](https://www.cambridge.org/core/books/addressing-injustice-in-the-medieval-body-politic/irish-background-to-the-de-xii-abusiuis-saeculi/0E8E8F38946565F9D262B5A349F50156#:~:text=The%20De%20XII%20abusiuis%20saeculi,Latin%20learning%2C%20those)). 
