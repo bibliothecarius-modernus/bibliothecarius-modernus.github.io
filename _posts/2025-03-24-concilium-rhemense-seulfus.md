@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Concilium Rhemense praeside Seulfo (c. 923-924)"
 date: 2025-03-24
-categories: [Ecclesiastical History, Conciliar & Synodal Acts, Medieval Theology & Practice]
+categories: [Ecclesiastical History, Conciliar & Synodal Acts]
 youtube_id: "2Ks-JSf8dMU" # Replace with your actual video ID
 audioanalysis: "/assets/audio/concilium-rhemense-praeside-seulfo.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-03-24-concilium-rhemense-seulfus.json"
