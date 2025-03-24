@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     init();
     
     function init() {
+      // Log post data for debugging
+      console.log('Posts data extracted:', allPostsData);
+      
       // Set up event listeners
       filterCenturySelect.addEventListener('change', handleFilterChange);
       filterAuthorSelect.addEventListener('change', handleFilterChange);
@@ -62,13 +65,20 @@ document.addEventListener('DOMContentLoaded', function() {
           const match = originalDate.match(/\d+/);
           if (match) {
             const year = parseInt(match[0]);
-            // Special handling for years ending in 00
+            
+            // Correct century calculation
             if (year % 100 === 0) {
-              century = (year / 100).toString();
+              // For years like 100, 700, 1700
+              century = ((year / 100) + 1).toString();
             } else {
+              // For years like 105, 701, 1705
               century = Math.ceil(year / 100).toString();
             }
+            
             data.centuries.add(century);
+            
+            // For debugging
+            console.log(`Date: ${originalDate}, Year: ${year}, Century: ${century}`);
           }
         } catch (e) {
           console.log('Error parsing date:', e);
@@ -219,13 +229,17 @@ document.addEventListener('DOMContentLoaded', function() {
           let century = '';
           try {
             const originalDate = post.dataset.originalDate || '';
+            // Extract first number from date string
             const match = originalDate.match(/\d+/);
             if (match) {
               const year = parseInt(match[0]);
-              // Special handling for years ending in 00
+              
+              // Correct century calculation
               if (year % 100 === 0) {
-                century = (year / 100).toString();
+                // For years like 100, 700, 1700
+                century = ((year / 100) + 1).toString();
               } else {
+                // For years like 105, 701, 1705
                 century = Math.ceil(year / 100).toString();
               }
             }

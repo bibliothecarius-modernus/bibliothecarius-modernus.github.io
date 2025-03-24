@@ -60,7 +60,11 @@ layout: default
                 {% if year != "" %}
                   {% assign year_num = year | plus: 0 %}
                   {% if year_num > 0 %}
-                    {% if year_num % 100 == 0 %}
+                    {% comment %}
+                    Special handling for years ending in 00:
+                    For years like 100, 200, 700, 1700, etc., we need to add 1 to get the correct century
+                    {% endcomment %}
+                    {% if year_num == 100 or year_num == 200 or year_num == 300 or year_num == 400 or year_num == 500 or year_num == 600 or year_num == 700 or year_num == 800 or year_num == 900 or year_num == 1000 or year_num == 1100 or year_num == 1200 or year_num == 1300 or year_num == 1400 or year_num == 1500 or year_num == 1600 or year_num == 1700 or year_num == 1800 or year_num == 1900 or year_num == 2000 %}
                       {% assign century = year_num | divided_by: 100 | plus: 1 %}
                     {% else %}
                       {% assign century = year_num | divided_by: 100 | plus: 1 %}
@@ -71,12 +75,22 @@ layout: default
                 {% endif %}
               {% endif %}
             {% endfor %}
-            {% assign unique_centuries = centuries | uniq | sort: 'first' %}
-            {% for century in unique_centuries %}
-              {% assign century_num = century | plus: 0 %}
+            
+            {% comment %}
+            Convert string centuries to numbers for proper sorting
+            {% endcomment %}
+            {% assign century_numbers = "" | split: "" %}
+            {% for century in centuries %}
+              {% assign century_number = century | plus: 0 %}
+              {% assign century_numbers = century_numbers | push: century_number %}
+            {% endfor %}
+            
+            {% assign sorted_centuries = century_numbers | uniq | sort %}
+            
+            {% for century in sorted_centuries %}
               {% assign ordinal = "th" %}
-              {% assign last_digit = century_num | modulo: 10 %}
-              {% assign last_two_digits = century_num | modulo: 100 %}
+              {% assign last_digit = century | modulo: 10 %}
+              {% assign last_two_digits = century | modulo: 100 %}
               {% if last_digit == 1 and last_two_digits != 11 %}
                 {% assign ordinal = "st" %}
               {% elsif last_digit == 2 and last_two_digits != 12 %}
