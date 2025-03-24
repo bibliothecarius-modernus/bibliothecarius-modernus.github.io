@@ -6,16 +6,16 @@ categories: [Eschatology, Nicene Fathers, Chronicles & Annals]
 youtube_id: "4Ccek3JHA-g"  # Replace with your actual video ID
 audio_analysis: "/assets/audio/Libellus_de_Mundi_Duratione-Analysis.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-03-20-libellus-de-mundi-duratione.json" # Path to JSON file
-Additional metadata fields
+
 original_work:
-latin_title: "Libellus de Mundi Duratione"
-author: "Quintus Julius Hilarianus"
-date: "c. 397 AD"
-publication: "Patrologia Latina Volume 13"
-context: "Written during intense eschatological speculation in North Africa, this treatise calculates a 6,000-year timeline for world history based on biblical chronology, representing one of the last explicit endorsements of premillennial thought in mainstream Latin Christianity before Augustinian amillennialism became dominant."
+    latin_title: "Libellus de Mundi Duratione"
+    author: "Quintus Julius Hilarianus"
+    date: "c. 397 AD"
+    publication: "Patrologia Latina Volume 13"
+    context: "Written during intense eschatological speculation in North Africa, this treatise calculates a 6,000-year timeline for world history based on biblical chronology, representing one of the last explicit endorsements of premillennial thought in mainstream Latin Christianity before Augustinian amillennialism became dominant."
 external_resources:
-archive_url: "https://archive.org/details/libellus-de-mundi-duratione"
-github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_13"
+    archive_url: "https://archive.org/details/libellus-de-mundi-duratione"
+    github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_13"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
