@@ -10,12 +10,10 @@ layout: default
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
       {% if page.author %}
-        <span class="post-meta-separator">•</span> 
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <span itemprop="name">{{ page.author }}</span>
-        </span>
+         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author }}</span>
+          </span>
       {% endif %}
-    </div>
       
       {% if page.categories %}
       <div class="post-categories">
@@ -943,25 +941,6 @@ layout: default
       padding: 12px 15px;
     }
   }
-  /* Style for the bullet separator in post meta */
-.post-meta-separator {
-  display: inline-block;
-  margin: 0 0.5em;
-}
-
-/* Hide bullet on small screens */
-@media screen and (max-width: 600px) {
-  .post-meta-separator {
-    display: none;
-  }
-  
-  .post-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: flex-start;
-  }
-}
 </style>
 
   <!-- JavaScript for tabs functionality and JSON loading -->
