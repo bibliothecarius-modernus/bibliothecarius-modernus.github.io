@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const loadMoreButton = document.getElementById('load-more');
     const postsCount = document.getElementById('posts-count');
     const noResults = document.getElementById('no-results');
-    const dynamicCategoriesContainer = document.getElementById('dynamic-categories');
-    const allCategoryPill = document.querySelector('.pill[data-category="all"]');
     const loader = document.querySelector('.loader');
     
     // Constants
@@ -18,8 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // State variables
     let currentFilters = {
       century: 'all',
-      author: 'all',
-      category: 'all'
+      author: 'all'
     };
     let currentPage = 1;
     let filteredPosts = [...posts];
@@ -38,15 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
       if (clearFiltersLink) clearFiltersLink.addEventListener('click', resetFilters);
       if (loadMoreButton) loadMoreButton.addEventListener('click', loadMorePosts);
       
-      // Set up category pill listeners
-      document.querySelectorAll('.pill').forEach(pill => {
-        pill.addEventListener('click', function() {
-          currentFilters.category = this.dataset.category;
-          updateCategoryPillsState();
-          refreshPosts();
-        });
-      });
-      
       // Initial setup
       updatePostCount();
       checkLoadMoreVisibility();
@@ -57,10 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const data = {
         authors: new Set(),
         centuries: new Set(),
-        categories: new Set(),
-        categoryMap: {},
         authorsByCentury: {},
-        categoriesByCentury: {},
         categoriesByAuthor: {}
       };
       
@@ -69,26 +54,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const author = post.dataset.author;
         if (author) data.authors.add(author);
         
-        // Extract categories
-        const categories = (post.dataset.categories || '').split(',').filter(Boolean);
-        categories.forEach(category => {
-          data.categories.add(category);
-          
-          // Store original category name for display
-          const categoryElement = post.querySelector(`.category-tag[data-category="${category}"]`);
-          if (categoryElement) {
-            data.categoryMap[category] = categoryElement.textContent;
-          }
-        });
-        
         // Extract century
         let century = '';
         try {
           const originalDate = post.dataset.originalDate || '';
+          // Extract first number from date string
           const match = originalDate.match(/\d+/);
           if (match) {
             const year = parseInt(match[0]);
-            century = Math.ceil(year / 100).toString();
+            // Special handling for years ending in 00
+            if (year % 100 === 0) {
+              century = (year / 100).toString();
+            } else {
+              century = Math.ceil(year / 100).toString();
+            }
             data.centuries.add(century);
           }
         } catch (e) {
@@ -100,16 +79,11 @@ document.addEventListener('DOMContentLoaded', function() {
           // Authors by century
           if (!data.authorsByCentury[century]) data.authorsByCentury[century] = new Set();
           if (author) data.authorsByCentury[century].add(author);
-          
-          // Categories by century
-          if (!data.categoriesByCentury[century]) data.categoriesByCentury[century] = new Set();
-          categories.forEach(category => data.categoriesByCentury[century].add(category));
         }
         
         if (author) {
           // Categories by author
           if (!data.categoriesByAuthor[author]) data.categoriesByAuthor[author] = new Set();
-          categories.forEach(category => data.categoriesByAuthor[author].add(category));
         }
       });
       
@@ -127,10 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (target.id === 'filter-author') {
         currentFilters.author = target.value;
       }
-      
-      // Reset category filter when changing other filters
-      currentFilters.category = 'all';
-      updateCategoryPillsState();
       
       refreshPosts();
     }
@@ -190,16 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    // We're now using static category pills, so we don't need this dynamic category generation function
-    function updateCategoryPillsState() {
-      // Simply update the active state based on current selection
-      document.querySelectorAll('.pill').forEach(pill => {
-        pill.classList.toggle('active', pill.dataset.category === currentFilters.category);
-      });
-    }
-    
-    // This has been replaced by updateCategoryPillsState
-    
     function resetFilters(e) {
       if (e) e.preventDefault();
       
@@ -210,16 +170,12 @@ document.addEventListener('DOMContentLoaded', function() {
       // Reset state
       currentFilters = {
         century: 'all',
-        author: 'all',
-        category: 'all'
+        author: 'all'
       };
       currentPage = 1;
       
       // Update author dropdown with all authors
       updateAuthorDropdown();
-      
-      // Update category pills state
-      updateCategoryPillsState();
       
       refreshPosts();
     }
@@ -252,9 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function applyFilters() {
       // Performance optimization - early exit if no filters are applied
-      if (currentFilters.century === 'all' && 
-          currentFilters.author === 'all' && 
-          currentFilters.category === 'all') {
+      if (currentFilters.century === 'all' && currentFilters.author === 'all') {
         return [...posts];
       }
       
@@ -268,7 +222,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const match = originalDate.match(/\d+/);
             if (match) {
               const year = parseInt(match[0]);
-              century = Math.ceil(year / 100).toString();
+              // Special handling for years ending in 00
+              if (year % 100 === 0) {
+                century = (year / 100).toString();
+              } else {
+                century = Math.ceil(year / 100).toString();
+              }
             }
           } catch (e) {
             console.log('Error parsing date:', e);
@@ -281,22 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentFilters.author !== 'all' && 
             post.dataset.author !== currentFilters.author) {
           return false;
-        }
-        
-        // Category filter
-        if (currentFilters.category !== 'all') {
-          // Get proper category data from the actual category tags in the post
-          let categoryFound = false;
-          const categoryElements = post.querySelectorAll('.category-tag');
-          
-          // Check each category element
-          categoryElements.forEach(element => {
-            if (element.dataset.category === currentFilters.category) {
-              categoryFound = true;
-            }
-          });
-          
-          if (!categoryFound) return false;
         }
         
         return true;
