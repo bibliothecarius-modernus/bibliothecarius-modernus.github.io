@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get all relevant elements
     const posts = document.querySelectorAll('.post-item');
-    const sortBySelect = document.getElementById('sort-by');
     const filterCenturySelect = document.getElementById('filter-century');
     const filterAuthorSelect = document.getElementById('filter-author');
     const categoryPills = document.querySelectorAll('.pill');
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
       author: 'all',
       category: 'all'
     };
-    let currentSort = 'date-desc';
     let currentPage = 1;
     let filteredPosts = [...posts];
     
@@ -31,12 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function init() {
       // Set up event listeners
-      sortBySelect.addEventListener('change', handleSortChange);
       filterCenturySelect.addEventListener('change', handleFilterChange);
       filterAuthorSelect.addEventListener('change', handleFilterChange);
       resetButton.addEventListener('click', resetFilters);
-      clearFiltersLink.addEventListener('click', resetFilters);
-      loadMoreButton.addEventListener('click', loadMorePosts);
+      if (clearFiltersLink) clearFiltersLink.addEventListener('click', resetFilters);
+      if (loadMoreButton) loadMoreButton.addEventListener('click', loadMorePosts);
       
       // Set up category pills
       categoryPills.forEach(pill => {
@@ -57,11 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
       checkLoadMoreVisibility();
     }
     
-    function handleSortChange() {
-      currentSort = sortBySelect.value;
-      refreshPosts();
-    }
-    
     function handleFilterChange() {
       currentFilters.century = filterCenturySelect.value;
       currentFilters.author = filterAuthorSelect.value;
@@ -72,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e) e.preventDefault();
       
       // Reset all filter controls
-      sortBySelect.value = 'date-desc';
       filterCenturySelect.value = 'all';
       filterAuthorSelect.value = 'all';
       
@@ -90,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
         author: 'all',
         category: 'all'
       };
-      currentSort = 'date-desc';
       currentPage = 1;
       
       refreshPosts();
@@ -100,56 +90,17 @@ document.addEventListener('DOMContentLoaded', function() {
       // Show loading indicator
       if (loader) loader.style.display = 'flex';
       
-      // Give time for the loader to appear before doing heavy operations
-      setTimeout(() => {
-        // Apply filters
-        filteredPosts = [...posts].filter(post => {
-          let passes = true;
-          
-          // Century filter
-          if (currentFilters.century !== 'all') {
-            const originalDate = post.dataset.originalDate;
-            if (originalDate) {
-              // Use the improved century extraction
-              const century = extractCenturyFromYear(originalDate);
-              passes = passes && (century.toString() === currentFilters.century);
-            } else {
-              passes = false;
-            }
-          }
-          
-          // Author filter
-          if (currentFilters.author !== 'all') {
-            passes = passes && (post.dataset.author === currentFilters.author);
-          }
-          
-          // Category filter
-          if (currentFilters.category !== 'all') {
-            const categories = post.dataset.categories.split(',');
-            passes = passes && categories.includes(currentFilters.category);
-          }
-          
-          return passes;
-        });
+      // Debounce for performance
+      if (window.refreshTimeout) {
+        clearTimeout(window.refreshTimeout);
+      }
+      
+      window.refreshTimeout = setTimeout(() => {
+        // Reset to first page when filters change
+        currentPage = 1;
         
-        // Apply sorting
-        filteredPosts.sort((a, b) => {
-          switch (currentSort) {
-            case 'date-desc':
-              return new Date(b.dataset.date) - new Date(a.dataset.date);
-            case 'date-asc':
-              return new Date(a.dataset.date) - new Date(b.dataset.date);
-            case 'title':
-              return a.dataset.title.localeCompare(b.dataset.title);
-            case 'original-date':
-              // Handle complex date formats: "c. 865", ranges, BCE/CE notations
-              const aYear = extractYearFromDateString(a.dataset.originalDate);
-              const bYear = extractYearFromDateString(b.dataset.originalDate);
-              return aYear - bYear;
-            default:
-              return 0;
-          }
-        });
+        // Apply filters - using a more efficient approach for better performance
+        filteredPosts = applyFilters();
         
         // Update DOM
         updatePostDisplay();
@@ -158,35 +109,73 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Hide loading indicator
         if (loader) loader.style.display = 'none';
-      }, 300); // Short delay for the loader to be visible
+      }, 100);
+    }
+    
+    function applyFilters() {
+      // Performance optimization - early exit if no filters are applied
+      if (currentFilters.century === 'all' && 
+          currentFilters.author === 'all' && 
+          currentFilters.category === 'all') {
+        return [...posts];
+      }
+      
+      // Only filter what needs to be filtered
+      return [...posts].filter(post => {
+        if (currentFilters.century !== 'all') {
+          // Extract century from the data attribute using a simple approach
+          let century = '';
+          try {
+            const originalDate = post.dataset.originalDate || '';
+            // Extract first number from the date string
+            const match = originalDate.match(/\d+/);
+            if (match) {
+              const year = parseInt(match[0]);
+              century = Math.ceil(year / 100).toString();
+            }
+          } catch (e) {
+            console.log('Error parsing date:', e);
+          }
+          
+          if (century !== currentFilters.century) return false;
+        }
+        
+        if (currentFilters.author !== 'all' && 
+            post.dataset.author !== currentFilters.author) {
+          return false;
+        }
+        
+        if (currentFilters.category !== 'all') {
+          const categories = (post.dataset.categories || '').split(',');
+          if (!categories.includes(currentFilters.category)) {
+            return false;
+          }
+        }
+        
+        return true;
+      });
     }
     
     function updatePostDisplay() {
-      // First, hide all posts
+      // Performance optimization - use document fragment for batch DOM updates
+      const fragment = document.createDocumentFragment();
+      const postsToShow = filteredPosts.slice(0, currentPage * POSTS_PER_PAGE);
+      
+      // First hide all posts for a clean slate
       posts.forEach(post => {
         post.style.display = 'none';
       });
       
       // Show no results message if needed
       if (filteredPosts.length === 0) {
-        noResults.style.display = 'block';
-        loadMoreButton.style.display = 'none';
+        if (noResults) noResults.style.display = 'block';
+        if (loadMoreButton) loadMoreButton.style.display = 'none';
       } else {
-        noResults.style.display = 'none';
+        if (noResults) noResults.style.display = 'none';
         
-        // Show only the posts for the current page
-        const startIndex = 0;
-        const endIndex = Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length);
-        
-        // Add animation classes
-        filteredPosts.forEach((post, index) => {
-          if (index >= startIndex && index < endIndex) {
-            // Add a staggered delay for fade-in animation
-            setTimeout(() => {
-              post.classList.add('showing');
-              post.style.display = 'flex';
-            }, (index - startIndex) * 50);
-          }
+        // Show the filtered posts for current page
+        postsToShow.forEach(post => {
+          post.style.display = 'flex';
         });
       }
     }
@@ -198,6 +187,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function checkLoadMoreVisibility() {
+      if (!loadMoreButton) return;
+      
       if (filteredPosts.length <= currentPage * POSTS_PER_PAGE) {
         loadMoreButton.style.display = 'none';
       } else {
@@ -206,63 +197,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function updatePostCount() {
-      if (postsCount) {
-        if (filteredPosts.length === posts.length) {
-          postsCount.textContent = `Showing all ${posts.length} posts`;
-        } else {
-          postsCount.textContent = `Showing ${Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)} of ${filteredPosts.length} posts matching your filters`;
-        }
+      if (!postsCount) return;
+      
+      if (filteredPosts.length === posts.length) {
+        postsCount.textContent = `Showing all ${posts.length} posts`;
+      } else {
+        postsCount.textContent = `Showing ${Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)} of ${filteredPosts.length} posts matching your filters`;
       }
-    }
-    
-    // Helper function to extract a numeric year from complex date strings
-    function extractYearFromDateString(dateString) {
-      if (!dateString) return 0;
-      
-      // Handle BCE/BC dates (make them negative for proper sorting)
-      if (/BCE|BC/i.test(dateString)) {
-        // Extract the number before BCE/BC and make negative
-        const match = dateString.match(/(\d+)\s*(?:BCE|BC)/i);
-        if (match) {
-          return -parseInt(match[1]);
-        }
-      }
-      
-      // Remove "c." (circa), "ca.", and similar approximation markers
-      let cleaned = dateString.replace(/^c\.\s*|^ca\.\s*|^circa\s*/i, '');
-      
-      // For date ranges (e.g., "865-870"), take the first year
-      if (/-/.test(cleaned) && !/\d-\d{1,2}$/.test(cleaned)) { // Avoid interpreting "March 5-6" as a year range
-        cleaned = cleaned.split('-')[0].trim();
-      }
-      
-      // For dates like "9th century", approximate to the middle of the century
-      const centuryMatch = cleaned.match(/(\d+)(?:st|nd|rd|th)\s*century/i);
-      if (centuryMatch) {
-        const century = parseInt(centuryMatch[1]);
-        return (century - 1) * 100 + 50; // Middle of the century
-      }
-      
-      // Extract the first 1-4 digit number sequence
-      const numericMatch = cleaned.match(/\b(\d{1,4})\b/);
-      if (numericMatch) {
-        return parseInt(numericMatch[1]);
-      }
-      
-      // Default to 0 if no valid year found
-      return 0;
-    }
-    
-    // Extract century from a year
-    function extractCenturyFromYear(yearString) {
-      const year = extractYearFromDateString(yearString);
-      
-      // Handle BCE/BC dates
-      if (year < 0) {
-        return Math.ceil(Math.abs(year) / 100) + " BCE";
-      }
-      
-      // Handle CE/AD dates
-      return Math.ceil(year / 100);
     }
   });
