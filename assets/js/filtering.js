@@ -38,92 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
       if (clearFiltersLink) clearFiltersLink.addEventListener('click', resetFilters);
       if (loadMoreButton) loadMoreButton.addEventListener('click', loadMorePosts);
       
-      // Make author dropdown searchable
-      makeAuthorDropdownSearchable();
+      // Enhance the author filter with improved UI
+      enhanceAuthorFilter();
       
       // Initial setup
       updatePostCount();
       checkLoadMoreVisibility();
-    }
-    
-    // Make author dropdown searchable
-    function makeAuthorDropdownSearchable() {
-      const filterAuthorSelect = document.getElementById('filter-author');
-      if (!filterAuthorSelect) return;
-      
-      // Create a wrapper container to hold both the select and the search box
-      const wrapper = document.createElement('div');
-      wrapper.className = 'search-select-wrapper';
-      filterAuthorSelect.parentNode.insertBefore(wrapper, filterAuthorSelect);
-      
-      // Create search input
-      const searchInput = document.createElement('input');
-      searchInput.type = 'text';
-      searchInput.placeholder = 'Search authors...';
-      searchInput.className = 'author-search-input';
-      
-      // Move the select into the wrapper
-      wrapper.appendChild(searchInput);
-      wrapper.appendChild(filterAuthorSelect);
-      
-      // Store the original options for filtering
-      const allOptions = Array.from(filterAuthorSelect.options);
-      
-      // Add event listener for search input
-      searchInput.addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase();
-        
-        // Always keep the "All Authors" option
-        while (filterAuthorSelect.options.length > 1) {
-          filterAuthorSelect.remove(1);
-        }
-        
-        // Filter options based on search term
-        const filteredOptions = allOptions.filter(option => {
-          // Always include "All Authors" option
-          if (option.value === 'all') return true;
-          
-          return option.text.toLowerCase().includes(searchTerm);
-        });
-        
-        // Add filtered options back to select
-        filteredOptions.forEach(option => {
-          if (option.value !== 'all') { // Skip the first option as we kept it
-            filterAuthorSelect.add(option.cloneNode(true));
-          }
-        });
-        
-        // If no results and search isn't empty, show a message
-        if (filteredOptions.length === 1 && searchTerm !== '') {
-          const noResultsOption = document.createElement('option');
-          noResultsOption.disabled = true;
-          noResultsOption.text = 'No authors found';
-          filterAuthorSelect.add(noResultsOption);
-        }
-      });
-      
-      // When the select is clicked, focus on the search input
-      filterAuthorSelect.addEventListener('mousedown', function(e) {
-        // Only intercept if the dropdown isn't already open
-        if (this.options.length > 0 && !this.classList.contains('open')) {
-          e.preventDefault();
-          searchInput.focus();
-          this.classList.add('open');
-          
-          // A small delay to show all options
-          setTimeout(() => {
-            searchInput.value = '';
-            searchInput.dispatchEvent(new Event('input'));
-          }, 10);
-        }
-      });
-      
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!wrapper.contains(e.target)) {
-          filterAuthorSelect.classList.remove('open');
-        }
-      });
     }
     
     // Extract all data from posts for faster filtering and dynamic dropdowns
@@ -251,6 +171,28 @@ document.addEventListener('DOMContentLoaded', function() {
           currentFilters.author = 'all';
         }
       }
+      
+      // Update the enhanced author dropdown UI
+      if (document.querySelector('.author-dropdown')) {
+        const wrapper = filterAuthorSelect.closest('.search-select-wrapper');
+        const dropdown = wrapper.querySelector('.author-dropdown');
+        const selectedDisplay = wrapper.querySelector('.selected-author');
+        
+        // Update selected display
+        const selectedOption = filterAuthorSelect.options[filterAuthorSelect.selectedIndex];
+        updateSelectedDisplay(selectedDisplay, selectedOption.text);
+        
+        // Update wrapper class based on selection
+        if (selectedOption.value === 'all') {
+          wrapper.classList.remove('has-selected');
+        } else {
+          wrapper.classList.add('has-selected');
+        }
+        
+        // Repopulate dropdown with new options
+        const allOptions = Array.from(filterAuthorSelect.options);
+        populateDropdown(dropdown, allOptions);
+      }
     }
     
     function resetFilters(e) {
@@ -269,6 +211,15 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Update author dropdown with all authors
       updateAuthorDropdown();
+      
+      // Update the enhanced author UI state
+      const wrapper = filterAuthorSelect.closest('.search-select-wrapper');
+      if (wrapper) {
+        wrapper.classList.remove('has-selected');
+        const searchInput = wrapper.querySelector('.author-search-input');
+        if (searchInput) searchInput.value = '';
+        wrapper.classList.remove('has-value');
+      }
       
       refreshPosts();
     }
@@ -388,5 +339,310 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         postsCount.textContent = `Showing ${Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)} of ${filteredPosts.length} posts matching your filters`;
       }
+    }
+    
+    // Enhanced Author Filter Functionality
+    function enhanceAuthorFilter() {
+      const filterAuthorSelect = document.getElementById('filter-author');
+      if (!filterAuthorSelect) return;
+      
+      // Store original options
+      const allOptions = Array.from(filterAuthorSelect.options);
+      
+      // Set up enhanced UI
+      setupEnhancedAuthorUI(filterAuthorSelect, allOptions);
+      
+      // Update classes to indicate we've enhanced the filter
+      filterAuthorSelect.classList.add('author-select');
+    }
+    
+    function setupEnhancedAuthorUI(filterAuthorSelect, allOptions) {
+      // Get parent container
+      const wrapper = filterAuthorSelect.closest('.search-select-wrapper') || 
+        createWrapper(filterAuthorSelect);
+      
+      // Create or get search input
+      let searchInput = wrapper.querySelector('.author-search-input');
+      if (!searchInput) {
+        searchInput = document.createElement('input');
+        searchInput.type = 'text';
+        searchInput.placeholder = 'Search authors...';
+        searchInput.className = 'author-search-input';
+        wrapper.appendChild(searchInput);
+      }
+      
+      // Create selected author display
+      const selectedAuthor = document.createElement('div');
+      selectedAuthor.className = 'selected-author';
+      wrapper.appendChild(selectedAuthor);
+      
+      // Create clear button
+      const clearButton = document.createElement('div');
+      clearButton.className = 'clear-search';
+      wrapper.appendChild(clearButton);
+      
+      // Create custom dropdown
+      const dropdown = document.createElement('div');
+      dropdown.className = 'author-dropdown';
+      wrapper.appendChild(dropdown);
+      
+      // For mobile: create overlay and header
+      const overlay = document.createElement('div');
+      overlay.className = 'author-dropdown-overlay';
+      document.body.appendChild(overlay);
+      
+      const isMobile = window.innerWidth <= 768;
+      if (isMobile) {
+        const header = document.createElement('div');
+        header.className = 'author-dropdown-header';
+        header.textContent = 'Select Author';
+        
+        const closeButton = document.createElement('div');
+        closeButton.className = 'author-dropdown-close';
+        header.appendChild(closeButton);
+        
+        dropdown.appendChild(header);
+        
+        // Close dropdown on overlay click
+        overlay.addEventListener('click', () => {
+          closeDropdown();
+        });
+        
+        // Close dropdown on close button click
+        closeButton.addEventListener('click', () => {
+          closeDropdown();
+        });
+      }
+      
+      // Fill dropdown with options
+      populateDropdown(dropdown, allOptions);
+      
+      // Event listeners
+      searchInput.addEventListener('focus', () => {
+        wrapper.classList.add('is-focused');
+        openDropdown();
+      });
+      
+      searchInput.addEventListener('blur', (e) => {
+        // Delay to allow for dropdown click to register
+        if (!isMobile) {
+          setTimeout(() => {
+            if (!dropdown.contains(document.activeElement)) {
+              wrapper.classList.remove('is-focused');
+              closeDropdown();
+            }
+          }, 150);
+        }
+      });
+      
+      searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        
+        // Show/hide clear button
+        if (searchTerm) {
+          wrapper.classList.add('has-value');
+        } else {
+          wrapper.classList.remove('has-value');
+        }
+        
+        // Filter dropdown options
+        filterDropdownOptions(dropdown, allOptions, searchTerm);
+        
+        // Open dropdown if closed
+        openDropdown();
+      });
+      
+      clearButton.addEventListener('click', () => {
+        searchInput.value = '';
+        wrapper.classList.remove('has-value');
+        filterAuthorSelect.value = 'all';
+        updateSelectedDisplay(selectedAuthor, 'All Authors');
+        wrapper.classList.remove('has-selected');
+        
+        // Trigger change event
+        const event = new Event('change');
+        filterAuthorSelect.dispatchEvent(event);
+        
+        // Close dropdown
+        closeDropdown();
+      });
+      
+      // Helper functions
+      function openDropdown() {
+        // Only show dropdown if we have options
+        if (!dropdown.hasChildNodes()) return;
+        
+        dropdown.classList.add('active');
+        if (isMobile) overlay.classList.add('active');
+        
+        // Scroll to selected item if any
+        const selected = dropdown.querySelector('.author-dropdown-item.selected');
+        if (selected) {
+          selected.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+      }
+      
+      function closeDropdown() {
+        dropdown.classList.remove('active');
+        if (isMobile) overlay.classList.remove('active');
+      }
+      
+      // Set initial state based on default selection
+      const defaultSelected = filterAuthorSelect.options[filterAuthorSelect.selectedIndex];
+      if (defaultSelected && defaultSelected.value !== 'all') {
+        updateSelectedDisplay(selectedAuthor, defaultSelected.text);
+        wrapper.classList.add('has-selected');
+      }
+    }
+    
+    function createWrapper(selectElement) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'search-select-wrapper';
+      selectElement.parentNode.insertBefore(wrapper, selectElement);
+      wrapper.appendChild(selectElement);
+      return wrapper;
+    }
+    
+    function populateDropdown(dropdown, options) {
+      // Clear existing items
+      while (dropdown.firstChild) {
+        dropdown.removeChild(dropdown.firstChild);
+      }
+      
+      // Add header if mobile
+      if (window.innerWidth <= 768) {
+        const header = document.createElement('div');
+        header.className = 'author-dropdown-header';
+        header.textContent = 'Select Author';
+        
+        const closeButton = document.createElement('div');
+        closeButton.className = 'author-dropdown-close';
+        header.appendChild(closeButton);
+        
+        dropdown.appendChild(header);
+      }
+      
+      // Add all options
+      options.forEach(option => {
+        const item = document.createElement('div');
+        item.className = 'author-dropdown-item';
+        item.dataset.value = option.value;
+        item.textContent = option.text;
+        
+        if (option.selected) {
+          item.classList.add('selected');
+        }
+        
+        item.addEventListener('click', () => {
+          // Update select element
+          const select = dropdown.closest('.search-select-wrapper').querySelector('select');
+          select.value = option.value;
+          
+          // Update UI
+          const selectedDisplay = dropdown.closest('.search-select-wrapper').querySelector('.selected-author');
+          updateSelectedDisplay(selectedDisplay, option.text);
+          
+          // Update wrapper state
+          if (option.value === 'all') {
+            dropdown.closest('.search-select-wrapper').classList.remove('has-selected');
+          } else {
+            dropdown.closest('.search-select-wrapper').classList.add('has-selected');
+          }
+          
+          // Close dropdown
+          dropdown.classList.remove('active');
+          document.querySelector('.author-dropdown-overlay')?.classList.remove('active');
+          
+          // Trigger change event
+          const event = new Event('change');
+          select.dispatchEvent(event);
+        });
+        
+        dropdown.appendChild(item);
+      });
+    }
+    
+    function filterDropdownOptions(dropdown, allOptions, searchTerm) {
+      // Get header element if it exists (for mobile)
+      const header = dropdown.querySelector('.author-dropdown-header');
+      
+      // Clear existing options
+      while (dropdown.firstChild) {
+        dropdown.removeChild(dropdown.firstChild);
+      }
+      
+      // Re-add header if it exists
+      if (header) {
+        dropdown.appendChild(header);
+      }
+      
+      // Filter options
+      const filteredOptions = allOptions.filter(option => {
+        if (option.value === 'all') return true; // Always include "All Authors"
+        return option.text.toLowerCase().includes(searchTerm);
+      });
+      
+      // Add filtered options
+      filteredOptions.forEach(option => {
+        const item = document.createElement('div');
+        item.className = 'author-dropdown-item';
+        item.dataset.value = option.value;
+        item.textContent = option.text;
+        
+        // Highlight search term
+        if (searchTerm && option.value !== 'all') {
+          const highlightedText = option.text.replace(
+            new RegExp(searchTerm, 'gi'),
+            match => `<strong>${match}</strong>`
+          );
+          item.innerHTML = highlightedText;
+        }
+        
+        // Mark selected option
+        const select = dropdown.closest('.search-select-wrapper').querySelector('select');
+        if (option.value === select.value) {
+          item.classList.add('selected');
+        }
+        
+        item.addEventListener('click', () => {
+          // Update select element
+          select.value = option.value;
+          
+          // Update UI
+          const selectedDisplay = dropdown.closest('.search-select-wrapper').querySelector('.selected-author');
+          updateSelectedDisplay(selectedDisplay, option.text);
+          
+          // Update wrapper state
+          if (option.value === 'all') {
+            dropdown.closest('.search-select-wrapper').classList.remove('has-selected');
+          } else {
+            dropdown.closest('.search-select-wrapper').classList.add('has-selected');
+          }
+          
+          // Close dropdown
+          dropdown.classList.remove('active');
+          document.querySelector('.author-dropdown-overlay')?.classList.remove('active');
+          
+          // Trigger change event
+          const event = new Event('change');
+          select.dispatchEvent(event);
+        });
+        
+        dropdown.appendChild(item);
+      });
+      
+      // Add "No results" message if needed
+      if (filteredOptions.length === 1 && filteredOptions[0].value === 'all' && searchTerm) {
+        const noResults = document.createElement('div');
+        noResults.className = 'author-dropdown-item';
+        noResults.style.fontStyle = 'italic';
+        noResults.style.color = 'var(--dark-gray)';
+        noResults.textContent = 'No authors found';
+        dropdown.appendChild(noResults);
+      }
+    }
+    
+    function updateSelectedDisplay(element, text) {
+      element.textContent = text;
     }
   });
