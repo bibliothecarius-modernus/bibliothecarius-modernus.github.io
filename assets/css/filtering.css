@@ -260,26 +260,69 @@ label {
   font-weight: bold;
 }
 
-/* Load more button */
-.pagination-controls {
-  text-align: center;
+/* Pagination Styling - NEW */
+.pagination-container {
+  display: flex;
+  justify-content: center;
   margin: 40px 0 20px;
 }
 
-.load-more-button {
-  background-color: var(--light-gray);
-  border: 1px solid var(--medium-gray);
-  color: var(--text-color);
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.pagination-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+  align-items: center;
 }
 
-.load-more-button:hover {
+.pagination-item {
+  display: inline-block;
+}
+
+.pagination-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid var(--medium-gray);
+}
+
+.pagination-item a:hover {
   background-color: var(--light-highlight);
   color: white;
+}
+
+.pagination-item.active a {
+  background-color: var(--highlight-color);
+  color: white;
+  border-color: var(--highlight-color);
+}
+
+.pagination-item.disabled a {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-prev a,
+.pagination-next a {
+  font-size: 1.2rem;
+}
+
+.pagination-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--dark-gray);
 }
 
 /* Smooth transitions */
@@ -395,6 +438,22 @@ label {
 .author-dropdown-item.selected {
   background-color: rgba(184, 134, 11, 0.1);
   font-weight: bold;
+}
+
+/* NEW: Highlighting in author dropdown */
+.author-dropdown-item strong {
+  background-color: rgba(184, 134, 11, 0.2); /* Subtle highlight */
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.author-dropdown-item.no-results {
+  font-style: italic;
+  color: var(--dark-gray);
+  cursor: default;
+  padding: 15px 12px;
+  text-align: center;
+  border-top: 1px solid var(--medium-gray);
 }
 
 /* Clear button */
@@ -522,6 +581,15 @@ label {
     from { transform: translateY(100%); }
     to { transform: translateY(0); }
   }
+  
+  /* Responsive pagination - NEW */
+  .pagination-item:not(.pagination-prev):not(.pagination-next):not(.active):not(.pagination-ellipsis) {
+    display: none;
+  }
+  
+  .pagination-item.active {
+    display: inline-block;
+  }
 }
 
 /* Overlay for mobile */
@@ -539,6 +607,7 @@ label {
 .author-dropdown-overlay.active {
   display: block;
 }
+
 /* Mobile overflow fixes */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -566,4 +635,29 @@ label {
   .selected-author {
     max-width: calc(100% - 70px);
   }
+}
+
+/* Focus states for accessibility - NEW */
+.pagination-item a:focus,
+.author-search-input:focus {
+  outline: 2px solid var(--highlight-color);
+  outline-offset: 2px;
+}
+
+/* Animation for page transitions - NEW */
+.post-item {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Screen reader only text - NEW */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

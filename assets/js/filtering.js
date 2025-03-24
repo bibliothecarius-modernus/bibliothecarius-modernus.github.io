@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterAuthorSelect = document.getElementById('filter-author');
     const resetButton = document.getElementById('reset-filters');
     const clearFiltersLink = document.getElementById('clear-filters');
-    const loadMoreButton = document.getElementById('load-more');
     const postsCount = document.getElementById('posts-count');
     const noResults = document.getElementById('no-results');
     const loader = document.querySelector('.loader');
+    const paginationContainer = document.getElementById('pagination-container');
     
     // Constants
     const POSTS_PER_PAGE = 6;
@@ -36,14 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
       filterAuthorSelect.addEventListener('change', handleFilterChange);
       resetButton.addEventListener('click', resetFilters);
       if (clearFiltersLink) clearFiltersLink.addEventListener('click', resetFilters);
-      if (loadMoreButton) loadMoreButton.addEventListener('click', loadMorePosts);
       
       // Enhance the author filter with improved UI
       enhanceAuthorFilter();
       
       // Initial setup
       updatePostCount();
-      checkLoadMoreVisibility();
+      refreshPosts();
     }
     
     // Extract all data from posts for faster filtering and dynamic dropdowns
@@ -115,6 +114,8 @@ document.addEventListener('DOMContentLoaded', function() {
         currentFilters.author = target.value;
       }
       
+      // Reset to first page when filters change
+      currentPage = 1;
       refreshPosts();
     }
     
@@ -234,16 +235,13 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       window.refreshTimeout = setTimeout(() => {
-        // Reset to first page when filters change
-        currentPage = 1;
-        
         // Apply filters
         filteredPosts = applyFilters();
         
         // Update DOM
         updatePostDisplay();
         updatePostCount();
-        checkLoadMoreVisibility();
+        updatePagination();
         
         // Hide loading indicator
         if (loader) loader.style.display = 'none';
@@ -303,41 +301,194 @@ document.addEventListener('DOMContentLoaded', function() {
       // Show no results message if needed
       if (filteredPosts.length === 0) {
         if (noResults) noResults.style.display = 'block';
-        if (loadMoreButton) loadMoreButton.style.display = 'none';
+        if (paginationContainer) paginationContainer.style.display = 'none';
       } else {
         if (noResults) noResults.style.display = 'none';
+        if (paginationContainer) paginationContainer.style.display = 'flex';
+        
+        // Calculate start and end indices for current page
+        const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+        const endIndex = startIndex + POSTS_PER_PAGE;
         
         // Show the filtered posts for current page
-        const postsToShow = filteredPosts.slice(0, currentPage * POSTS_PER_PAGE);
+        const postsToShow = filteredPosts.slice(startIndex, endIndex);
         postsToShow.forEach(post => {
           post.style.display = 'flex';
         });
       }
     }
     
-    function loadMorePosts() {
-      currentPage++;
-      updatePostDisplay();
-      checkLoadMoreVisibility();
+    function updatePagination() {
+      if (!paginationContainer) return;
+      
+      // Clear existing pagination
+      paginationContainer.innerHTML = '';
+      
+      // Don't show pagination if there's only one page
+      if (filteredPosts.length <= POSTS_PER_PAGE) {
+        paginationContainer.style.display = 'none';
+        return;
+      }
+      
+      // Calculate total pages
+      const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+      
+      // Create pagination structure
+      const paginationList = document.createElement('ul');
+      paginationList.className = 'pagination-list';
+      
+      // Previous button
+      const prevItem = document.createElement('li');
+      prevItem.className = 'pagination-item pagination-prev';
+      const prevLink = document.createElement('a');
+      prevLink.href = '#';
+      prevLink.innerHTML = '&laquo;';
+      prevLink.setAttribute('aria-label', 'Previous page');
+      if (currentPage === 1) {
+        prevItem.classList.add('disabled');
+        prevLink.addEventListener('click', e => e.preventDefault());
+      } else {
+        prevLink.addEventListener('click', e => {
+          e.preventDefault();
+          goToPage(currentPage - 1);
+        });
+      }
+      prevItem.appendChild(prevLink);
+      paginationList.appendChild(prevItem);
+      
+      // Page numbers
+      let startPage = Math.max(1, currentPage - 2);
+      let endPage = Math.min(totalPages, startPage + 4);
+      
+      // Adjust startPage if we're near the end
+      if (endPage - startPage < 4) {
+        startPage = Math.max(1, endPage - 4);
+      }
+      
+      // First page link if needed
+      if (startPage > 1) {
+        const firstItem = document.createElement('li');
+        firstItem.className = 'pagination-item';
+        const firstLink = document.createElement('a');
+        firstLink.href = '#';
+        firstLink.textContent = '1';
+        firstLink.addEventListener('click', e => {
+          e.preventDefault();
+          goToPage(1);
+        });
+        firstItem.appendChild(firstLink);
+        paginationList.appendChild(firstItem);
+        
+        // Ellipsis if needed
+        if (startPage > 2) {
+          const ellipsisItem = document.createElement('li');
+          ellipsisItem.className = 'pagination-item pagination-ellipsis';
+          ellipsisItem.textContent = '...';
+          paginationList.appendChild(ellipsisItem);
+        }
+      }
+      
+      // Page numbers
+      for (let i = startPage; i <= endPage; i++) {
+        const pageItem = document.createElement('li');
+        pageItem.className = 'pagination-item';
+        if (i === currentPage) {
+          pageItem.classList.add('active');
+        }
+        
+        const pageLink = document.createElement('a');
+        pageLink.href = '#';
+        pageLink.textContent = i;
+        pageLink.addEventListener('click', e => {
+          e.preventDefault();
+          goToPage(i);
+        });
+        
+        pageItem.appendChild(pageLink);
+        paginationList.appendChild(pageItem);
+      }
+      
+      // Last page link if needed
+      if (endPage < totalPages) {
+        // Ellipsis if needed
+        if (endPage < totalPages - 1) {
+          const ellipsisItem = document.createElement('li');
+          ellipsisItem.className = 'pagination-item pagination-ellipsis';
+          ellipsisItem.textContent = '...';
+          paginationList.appendChild(ellipsisItem);
+        }
+        
+        const lastItem = document.createElement('li');
+        lastItem.className = 'pagination-item';
+        const lastLink = document.createElement('a');
+        lastLink.href = '#';
+        lastLink.textContent = totalPages;
+        lastLink.addEventListener('click', e => {
+          e.preventDefault();
+          goToPage(totalPages);
+        });
+        lastItem.appendChild(lastLink);
+        paginationList.appendChild(lastItem);
+      }
+      
+      // Next button
+      const nextItem = document.createElement('li');
+      nextItem.className = 'pagination-item pagination-next';
+      const nextLink = document.createElement('a');
+      nextLink.href = '#';
+      nextLink.innerHTML = '&raquo;';
+      nextLink.setAttribute('aria-label', 'Next page');
+      if (currentPage === totalPages) {
+        nextItem.classList.add('disabled');
+        nextLink.addEventListener('click', e => e.preventDefault());
+      } else {
+        nextLink.addEventListener('click', e => {
+          e.preventDefault();
+          goToPage(currentPage + 1);
+        });
+      }
+      nextItem.appendChild(nextLink);
+      paginationList.appendChild(nextItem);
+      
+      // Add pagination to container
+      paginationContainer.appendChild(paginationList);
+      paginationContainer.style.display = 'flex';
     }
     
-    function checkLoadMoreVisibility() {
-      if (!loadMoreButton) return;
+    function goToPage(page) {
+      // Don't do anything if it's already the current page
+      if (page === currentPage) return;
       
-      if (filteredPosts.length <= currentPage * POSTS_PER_PAGE) {
-        loadMoreButton.style.display = 'none';
-      } else {
-        loadMoreButton.style.display = 'inline-block';
+      // Update page and refresh display
+      currentPage = page;
+      updatePostDisplay();
+      updatePagination();
+      updatePostCount();
+      
+      // Scroll to top of research section for better UX
+      const researchSection = document.querySelector('.research-section');
+      if (researchSection) {
+        const offset = researchSection.offsetTop - 100; // Subtract header height + some padding
+        window.scrollTo({
+          top: offset,
+          behavior: 'smooth'
+        });
       }
     }
     
     function updatePostCount() {
       if (!postsCount) return;
       
-      if (filteredPosts.length === posts.length) {
-        postsCount.textContent = `Showing all ${posts.length} posts`;
+      if (filteredPosts.length === 0) {
+        postsCount.textContent = 'No posts match your filters';
+      } else if (filteredPosts.length === posts.length) {
+        const start = (currentPage - 1) * POSTS_PER_PAGE + 1;
+        const end = Math.min(currentPage * POSTS_PER_PAGE, posts.length);
+        postsCount.textContent = `Showing ${start}-${end} of ${posts.length} posts`;
       } else {
-        postsCount.textContent = `Showing ${Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)} of ${filteredPosts.length} posts matching your filters`;
+        const start = (currentPage - 1) * POSTS_PER_PAGE + 1;
+        const end = Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length);
+        postsCount.textContent = `Showing ${start}-${end} of ${filteredPosts.length} posts matching your filters`;
       }
     }
     
@@ -579,7 +730,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Filter options
       const filteredOptions = allOptions.filter(option => {
         if (option.value === 'all') return true; // Always include "All Authors"
-        return option.text.toLowerCase().includes(searchTerm);
+        return option.text.toLowerCase().includes(searchTerm.toLowerCase()); // Case-insensitive search
       });
       
       // Add filtered options
@@ -587,15 +738,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const item = document.createElement('div');
         item.className = 'author-dropdown-item';
         item.dataset.value = option.value;
-        item.textContent = option.text;
         
         // Highlight search term
         if (searchTerm && option.value !== 'all') {
-          const highlightedText = option.text.replace(
-            new RegExp(searchTerm, 'gi'),
-            match => `<strong>${match}</strong>`
-          );
+          const regex = new RegExp(`(${searchTerm})`, 'gi');
+          const highlightedText = option.text.replace(regex, '<strong>$1</strong>');
           item.innerHTML = highlightedText;
+        } else {
+          item.textContent = option.text;
         }
         
         // Mark selected option
@@ -634,9 +784,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Add "No results" message if needed
       if (filteredOptions.length === 1 && filteredOptions[0].value === 'all' && searchTerm) {
         const noResults = document.createElement('div');
-        noResults.className = 'author-dropdown-item';
-        noResults.style.fontStyle = 'italic';
-        noResults.style.color = 'var(--dark-gray)';
+        noResults.className = 'author-dropdown-item no-results';
         noResults.textContent = 'No authors found';
         dropdown.appendChild(noResults);
       }
