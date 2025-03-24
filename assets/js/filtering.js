@@ -41,9 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
       // Enhance the author filter with improved UI
       enhanceAuthorFilter();
       
+      // Set up initial pagination
+      setupPagination();
+      
       // Initial setup
       updatePostCount();
-      checkLoadMoreVisibility();
+      updateViewAllResearchVisibility();
     }
     
     // Extract all data from posts for faster filtering and dynamic dropdowns
@@ -242,8 +245,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update DOM
         updatePostDisplay();
+        setupPagination();
         updatePostCount();
-        checkLoadMoreVisibility();
+        updateViewAllResearchVisibility();
         
         // Hide loading indicator
         if (loader) loader.style.display = 'none';
@@ -316,18 +320,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function loadMorePosts() {
-      currentPage++;
-      updatePostDisplay();
-      checkLoadMoreVisibility();
+      // This is no longer needed but kept for backward compatibility
+      goToPage(currentPage + 1);
     }
     
-    function checkLoadMoreVisibility() {
-      if (!loadMoreButton) return;
+    function updateViewAllResearchVisibility() {
+      const viewAllLink = document.querySelector('.view-all-link');
+      if (!viewAllLink) return;
       
-      if (filteredPosts.length <= currentPage * POSTS_PER_PAGE) {
-        loadMoreButton.style.display = 'none';
+      // Only show "View All Research" if we have a significant number of posts
+      if (filteredPosts.length > POSTS_PER_PAGE * 2) {
+        viewAllLink.style.display = 'block';
       } else {
-        loadMoreButton.style.display = 'inline-block';
+        viewAllLink.style.display = 'none';
       }
     }
     
@@ -339,6 +344,144 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         postsCount.textContent = `Showing ${Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)} of ${filteredPosts.length} posts matching your filters`;
       }
+    }
+    
+    // Pagination Functions
+    function setupPagination() {
+      // Get or create pagination container
+      let paginationControls = document.querySelector('.pagination-controls');
+      if (!paginationControls) return;
+      
+      // Clear previous pagination (if any)
+      paginationControls.innerHTML = '';
+      
+      // Calculate total pages
+      const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+      
+      // Don't show pagination if there's only one page or no results
+      if (totalPages <= 1 || filteredPosts.length === 0) {
+        paginationControls.style.display = 'none';
+        return;
+      } else {
+        paginationControls.style.display = 'flex';
+      }
+      
+      // Previous button
+      const prevButton = document.createElement('button');
+      prevButton.className = 'pagination-button pagination-prev' + (currentPage === 1 ? ' disabled' : '');
+      prevButton.innerHTML = '&larr;';
+      prevButton.setAttribute('aria-label', 'Previous page');
+      prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+          goToPage(currentPage - 1);
+        }
+      });
+      paginationControls.appendChild(prevButton);
+      
+      // Create pagination numbers with smart ellipsis
+      const maxVisiblePages = window.innerWidth < 600 ? 3 : 5;
+      createPaginationNumbers(paginationControls, totalPages, maxVisiblePages);
+      
+      // Next button
+      const nextButton = document.createElement('button');
+      nextButton.className = 'pagination-button pagination-next' + (currentPage === totalPages ? ' disabled' : '');
+      nextButton.innerHTML = '&rarr;';
+      nextButton.setAttribute('aria-label', 'Next page');
+      nextButton.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+          goToPage(currentPage + 1);
+        }
+      });
+      paginationControls.appendChild(nextButton);
+    }
+    
+    function createPaginationNumbers(container, totalPages, maxVisible) {
+      // Always show first page
+      addPageButton(container, 1);
+      
+      // Logic for showing page numbers with ellipsis
+      if (totalPages <= maxVisible) {
+        // Show all pages if there are few
+        for (let i = 2; i <= totalPages; i++) {
+          addPageButton(container, i);
+        }
+      } else {
+        // Complex pagination with ellipsis
+        let extraClass = window.innerWidth < 400 ? ' extra' : '';
+        
+        if (currentPage < maxVisible - 1) {
+          // Near start: show first (maxVisible-1) pages, then ellipsis, then last page
+          for (let i = 2; i < maxVisible; i++) {
+            addPageButton(container, i, extraClass);
+          }
+          addEllipsis(container);
+          addPageButton(container, totalPages);
+        } else if (currentPage > totalPages - maxVisible + 2) {
+          // Near end: show first page, then ellipsis, then last (maxVisible-1) pages
+          addEllipsis(container);
+          for (let i = totalPages - maxVisible + 2; i < totalPages; i++) {
+            addPageButton(container, i, extraClass);
+          }
+          addPageButton(container, totalPages);
+        } else {
+          // Middle: show first page, ellipsis, current+-1, ellipsis, last page
+          addEllipsis(container);
+          
+          // Pages around current
+          const start = Math.max(2, currentPage - 1);
+          const end = Math.min(totalPages - 1, currentPage + 1);
+          
+          for (let i = start; i <= end; i++) {
+            addPageButton(container, i, extraClass);
+          }
+          
+          if (end < totalPages - 1) {
+            addEllipsis(container);
+          }
+          
+          if (end < totalPages) {
+            addPageButton(container, totalPages);
+          }
+        }
+      }
+    }
+    
+    function addPageButton(container, pageNum, extraClass = '') {
+      const button = document.createElement('button');
+      button.className = 'pagination-button pagination-number' + 
+                        (currentPage === pageNum ? ' active' : '') + extraClass;
+      button.textContent = pageNum;
+      button.addEventListener('click', () => {
+        goToPage(pageNum);
+      });
+      container.appendChild(button);
+    }
+    
+    function addEllipsis(container) {
+      const ellipsis = document.createElement('span');
+      ellipsis.className = 'pagination-ellipsis';
+      ellipsis.textContent = '...';
+      container.appendChild(ellipsis);
+    }
+    
+    function goToPage(page) {
+      // Update current page and refresh display
+      currentPage = page;
+      
+      // Scroll to top of posts section for better UX
+      const scrollTarget = document.querySelector('.research-section');
+      if (scrollTarget) {
+        scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      
+      // Update posts display
+      updatePostDisplay();
+      
+      // Refresh pagination
+      setupPagination();
+      
+      // Update post count
+      updatePostCount();
     }
     
     // Enhanced Author Filter Functionality

@@ -15,6 +15,7 @@
   margin: 25px 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   border: 1px solid rgba(184, 134, 11, 0.2);
+  overflow: hidden;
 }
 
 .filter-row {
@@ -260,28 +261,6 @@ label {
   font-weight: bold;
 }
 
-/* Load more button */
-.pagination-controls {
-  text-align: center;
-  margin: 40px 0 20px;
-}
-
-.load-more-button {
-  background-color: var(--light-gray);
-  border: 1px solid var(--medium-gray);
-  color: var(--text-color);
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.load-more-button:hover {
-  background-color: var(--light-highlight);
-  color: white;
-}
-
 /* Smooth transitions */
 .post-item {
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -312,6 +291,7 @@ label {
   position: relative;
   width: 100%;
   max-width: 250px;
+  box-sizing: border-box;
 }
 
 /* Improved search input styling */
@@ -325,6 +305,7 @@ label {
   font-family: 'PT Serif', serif;
   font-size: 0.9rem;
   transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
 }
 
 /* Add search icon */
@@ -449,6 +430,63 @@ label {
   color: var(--text-color);
 }
 
+/* Pagination Controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 20px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pagination-button {
+  background-color: var(--light-gray);
+  border: 1px solid var(--medium-gray);
+  color: var(--text-color);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 40px;
+  text-align: center;
+}
+
+.pagination-button:hover {
+  background-color: var(--light-highlight);
+  color: white;
+}
+
+.pagination-button.active {
+  background-color: var(--highlight-color);
+  color: white;
+  border-color: var(--highlight-color);
+  font-weight: bold;
+}
+
+.pagination-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination-ellipsis {
+  padding: 8px 12px;
+  color: var(--dark-gray);
+}
+
+/* Archive link styling */
+.view-all-link {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+/* Make sure all elements respect the box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Mobile optimization */
 @media screen and (max-width: 768px) {
   .filter-row {
@@ -461,6 +499,13 @@ label {
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
+    width: 100%; /* Ensure full width */
+  }
+  
+  .filter-group label {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
   }
   
   .filter-select {
@@ -481,6 +526,24 @@ label {
   .search-select-wrapper {
     width: 100%;
     max-width: 100%;
+    padding-right: 15px; /* Add padding to prevent overflow */
+  }
+  
+  /* Ensure the input doesn't overflow */
+  .author-search-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 30px; /* Make room for clear button */
+  }
+  
+  /* Adjust clear button positioning */
+  .clear-search {
+    right: 8px;
+  }
+  
+  /* Ensure selected author doesn't overflow */
+  .selected-author {
+    max-width: calc(100% - 70px);
   }
   
   .author-dropdown {
@@ -518,9 +581,31 @@ label {
     cursor: pointer;
   }
   
+  .pagination-controls {
+    gap: 6px;
+  }
+  
+  .pagination-button {
+    padding: 6px 10px;
+    min-width: 36px;
+    font-size: 0.85rem;
+  }
+  
+  /* Add space at the bottom of the filter controls for mobile */
+  .filter-controls {
+    padding-bottom: 20px;
+  }
+  
   @keyframes slideUp {
     from { transform: translateY(100%); }
     to { transform: translateY(0); }
+  }
+  
+  /* Hide some page numbers on very small screens */
+  @media screen and (max-width: 400px) {
+    .pagination-number.extra {
+      display: none;
+    }
   }
 }
 
@@ -538,32 +623,4 @@ label {
 
 .author-dropdown-overlay.active {
   display: block;
-}
-/* Mobile overflow fixes */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-.filter-controls {
-  overflow: hidden;
-}
-
-@media screen and (max-width: 768px) {
-  .filter-group label {
-    width: 100%;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .author-search-input {
-    padding-right: 30px;
-  }
-  
-  .clear-search {
-    right: 8px;
-  }
-  
-  .selected-author {
-    max-width: calc(100% - 70px);
-  }
 }
