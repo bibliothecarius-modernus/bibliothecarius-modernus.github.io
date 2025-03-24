@@ -38,9 +38,92 @@ document.addEventListener('DOMContentLoaded', function() {
       if (clearFiltersLink) clearFiltersLink.addEventListener('click', resetFilters);
       if (loadMoreButton) loadMoreButton.addEventListener('click', loadMorePosts);
       
+      // Make author dropdown searchable
+      makeAuthorDropdownSearchable();
+      
       // Initial setup
       updatePostCount();
       checkLoadMoreVisibility();
+    }
+    
+    // Make author dropdown searchable
+    function makeAuthorDropdownSearchable() {
+      const filterAuthorSelect = document.getElementById('filter-author');
+      if (!filterAuthorSelect) return;
+      
+      // Create a wrapper container to hold both the select and the search box
+      const wrapper = document.createElement('div');
+      wrapper.className = 'search-select-wrapper';
+      filterAuthorSelect.parentNode.insertBefore(wrapper, filterAuthorSelect);
+      
+      // Create search input
+      const searchInput = document.createElement('input');
+      searchInput.type = 'text';
+      searchInput.placeholder = 'Search authors...';
+      searchInput.className = 'author-search-input';
+      
+      // Move the select into the wrapper
+      wrapper.appendChild(searchInput);
+      wrapper.appendChild(filterAuthorSelect);
+      
+      // Store the original options for filtering
+      const allOptions = Array.from(filterAuthorSelect.options);
+      
+      // Add event listener for search input
+      searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        
+        // Always keep the "All Authors" option
+        while (filterAuthorSelect.options.length > 1) {
+          filterAuthorSelect.remove(1);
+        }
+        
+        // Filter options based on search term
+        const filteredOptions = allOptions.filter(option => {
+          // Always include "All Authors" option
+          if (option.value === 'all') return true;
+          
+          return option.text.toLowerCase().includes(searchTerm);
+        });
+        
+        // Add filtered options back to select
+        filteredOptions.forEach(option => {
+          if (option.value !== 'all') { // Skip the first option as we kept it
+            filterAuthorSelect.add(option.cloneNode(true));
+          }
+        });
+        
+        // If no results and search isn't empty, show a message
+        if (filteredOptions.length === 1 && searchTerm !== '') {
+          const noResultsOption = document.createElement('option');
+          noResultsOption.disabled = true;
+          noResultsOption.text = 'No authors found';
+          filterAuthorSelect.add(noResultsOption);
+        }
+      });
+      
+      // When the select is clicked, focus on the search input
+      filterAuthorSelect.addEventListener('mousedown', function(e) {
+        // Only intercept if the dropdown isn't already open
+        if (this.options.length > 0 && !this.classList.contains('open')) {
+          e.preventDefault();
+          searchInput.focus();
+          this.classList.add('open');
+          
+          // A small delay to show all options
+          setTimeout(() => {
+            searchInput.value = '';
+            searchInput.dispatchEvent(new Event('input'));
+          }, 10);
+        }
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!wrapper.contains(e.target)) {
+          filterAuthorSelect.classList.remove('open');
+        }
+      });
     }
     
     // Extract all data from posts for faster filtering and dynamic dropdowns
