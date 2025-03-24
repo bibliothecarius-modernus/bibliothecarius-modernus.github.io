@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Libellus de Mundi Duratione (c. 397 AD)"
 date: 2025-03-20
 categories: [Eschatology, Nicene Fathers, Chronicles & Annals]
