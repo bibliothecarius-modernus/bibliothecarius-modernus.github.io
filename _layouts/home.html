@@ -39,7 +39,7 @@ layout: default
     {{ content }}
   </div>
 
-  <!-- Latest Research Section with Enhanced Filtering -->
+ <!-- Latest Research Section with Enhanced Filtering -->
 <section class="research-section">
   <div class="research-header">
     <h2 class="post-list-heading">Latest Translations & Research</h2>
@@ -61,15 +61,27 @@ layout: default
           <label for="filter-century">Century:</label>
           <select id="filter-century" class="filter-select">
             <option value="all">All Centuries</option>
-            <option value="1">1st Century</option>
-            <option value="2">2nd Century</option>
-            <option value="3">3rd Century</option>
-            <option value="4">4th Century</option>
-            <option value="5">5th Century</option>
-            <option value="6">6th Century</option>
-            <option value="7">7th Century</option>
-            <option value="8">8th Century</option>
-            <option value="9">9th Century</option>
+            {% assign all_dates = site.posts | map: "original_work" | map: "date" | compact %}
+            {% assign centuries = "" | split: "" %}
+            {% for date in all_dates %}
+              {% assign cleaned_date = date | remove: "c." | remove: "CE" | remove: "AD" | strip %}
+              {% assign century_number = cleaned_date | divided_by: 100 | plus: 1 %}
+              {% if century_number > 0 %}
+                {% assign century_str = century_number | append: "" %}
+                {% assign centuries = centuries | push: century_str %}
+              {% endif %}
+            {% endfor %}
+            {% assign unique_centuries = centuries | uniq | sort %}
+            {% for century in unique_centuries %}
+              {% assign ordinal = "" %}
+              {% case century | modulo: 10 %}
+                {% when 1 %}{% if century | modulo: 100 != 11 %}{% assign ordinal = "st" %}{% else %}{% assign ordinal = "th" %}{% endif %}
+                {% when 2 %}{% if century | modulo: 100 != 12 %}{% assign ordinal = "nd" %}{% else %}{% assign ordinal = "th" %}{% endif %}
+                {% when 3 %}{% if century | modulo: 100 != 13 %}{% assign ordinal = "rd" %}{% else %}{% assign ordinal = "th" %}{% endif %}
+                {% else %}{% assign ordinal = "th" %}
+              {% endcase %}
+              <option value="{{ century }}">{{ century }}{{ ordinal }} Century</option>
+            {% endfor %}
           </select>
         </div>
         

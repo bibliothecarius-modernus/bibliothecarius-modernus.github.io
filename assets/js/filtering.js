@@ -110,9 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
           if (currentFilters.century !== 'all') {
             const originalDate = post.dataset.originalDate;
             if (originalDate) {
-              // Extract century from date (roughly)
-              const year = parseInt(originalDate);
-              const century = Math.ceil(year / 100);
+              // Use the improved century extraction
+              const century = extractCenturyFromYear(originalDate);
               passes = passes && (century.toString() === currentFilters.century);
             } else {
               passes = false;
@@ -143,9 +142,9 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'title':
               return a.dataset.title.localeCompare(b.dataset.title);
             case 'original-date':
-              // Handle potential missing dates or non-numeric values
-              const aYear = parseInt(a.dataset.originalDate) || 0;
-              const bYear = parseInt(b.dataset.originalDate) || 0;
+              // Handle complex date formats: "c. 865", ranges, BCE/CE notations
+              const aYear = extractYearFromDateString(a.dataset.originalDate);
+              const bYear = extractYearFromDateString(b.dataset.originalDate);
               return aYear - bYear;
             default:
               return 0;
@@ -216,14 +215,54 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    // Optional: Add century extraction utility (approximation)
+    // Helper function to extract a numeric year from complex date strings
+    function extractYearFromDateString(dateString) {
+      if (!dateString) return 0;
+      
+      // Handle BCE/BC dates (make them negative for proper sorting)
+      if (/BCE|BC/i.test(dateString)) {
+        // Extract the number before BCE/BC and make negative
+        const match = dateString.match(/(\d+)\s*(?:BCE|BC)/i);
+        if (match) {
+          return -parseInt(match[1]);
+        }
+      }
+      
+      // Remove "c." (circa), "ca.", and similar approximation markers
+      let cleaned = dateString.replace(/^c\.\s*|^ca\.\s*|^circa\s*/i, '');
+      
+      // For date ranges (e.g., "865-870"), take the first year
+      if (/-/.test(cleaned) && !/\d-\d{1,2}$/.test(cleaned)) { // Avoid interpreting "March 5-6" as a year range
+        cleaned = cleaned.split('-')[0].trim();
+      }
+      
+      // For dates like "9th century", approximate to the middle of the century
+      const centuryMatch = cleaned.match(/(\d+)(?:st|nd|rd|th)\s*century/i);
+      if (centuryMatch) {
+        const century = parseInt(centuryMatch[1]);
+        return (century - 1) * 100 + 50; // Middle of the century
+      }
+      
+      // Extract the first 1-4 digit number sequence
+      const numericMatch = cleaned.match(/\b(\d{1,4})\b/);
+      if (numericMatch) {
+        return parseInt(numericMatch[1]);
+      }
+      
+      // Default to 0 if no valid year found
+      return 0;
+    }
+    
+    // Extract century from a year
     function extractCenturyFromYear(yearString) {
-      // Handle 'c.' prefix and clean the input
-      const cleanedYear = yearString.replace(/^c\.\s*/, '').trim();
-      const year = parseInt(cleanedYear);
+      const year = extractYearFromDateString(yearString);
       
-      if (isNaN(year)) return null;
+      // Handle BCE/BC dates
+      if (year < 0) {
+        return Math.ceil(Math.abs(year) / 100) + " BCE";
+      }
       
+      // Handle CE/AD dates
       return Math.ceil(year / 100);
     }
   });
