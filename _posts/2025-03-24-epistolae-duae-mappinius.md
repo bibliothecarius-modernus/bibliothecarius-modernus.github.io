@@ -4,7 +4,7 @@ title: "Epistolae duae Mappinii Episcopi Remensis (c.550)"
 date: 2025-03-24
 categories: [Epistolary Literature, Ecclesiastical History, Post-Nicene Fathers]
 youtube_id: "XAKzgRgQoJw" # Replace with your actual video ID
-audio_analysis: "/assets/audio/Epistolae_duae_Mappinii.mp3" # Path to your MP3 file
+audio_analysis: "/assets/audio/Mappinius of Reims_ Letters and Merovingian Church Politics.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-03-24-epistolae-duae-mappinius.json"
 # Additional metadata fields
 original_work:

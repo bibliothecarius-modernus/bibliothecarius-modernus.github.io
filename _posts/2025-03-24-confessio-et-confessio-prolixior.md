@@ -4,7 +4,7 @@ title: "Confessio et Confessio prolixior (c. 849)"
 date: 2025-03-24
 categories: [Creeds & Confessions, Soteriology, Carolingian Theological Renaissance]
 youtube_id: "kuOpVJZ6dG4" # Replace with your actual video ID
-audio_analysis: "/assets/audio/Confessio_et_Confessio_prolixior_Theological_Defiance.mp3" # Path to your MP3 file
+audio_analysis: "/assets/audio/Gottschalk of Orbais_ Confessions and Carolingian Predestination.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-03-24-confessio-et-confessio-prolixior.json" # Path to JSON file
 
 # Additional metadata fields
