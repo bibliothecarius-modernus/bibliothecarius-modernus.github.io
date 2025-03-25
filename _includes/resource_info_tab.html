@@ -87,7 +87,7 @@
         <tr>
         <th>Citation</th>
         <td>
-            {{ page.original_work.author }}. "{{ page.original_work.latin_title }}." AI translation by Bibliothecarius Modernus using ChatGPT-4o with automated and human review safeguards, {{ page.date | date: "%-d %b. %Y" }}, 
+            {{ page.original_work.author }}. "{{ page.original_work.latin_title }}." Machine translation by Bibliothecarius Modernus using ChatGPT-4o, {{ page.date | date: "%-d %b. %Y" }}, 
             {% if page.external_resources.doi %}
             DOI: <a href="https://doi.org/{{ page.external_resources.doi }}">{{ page.external_resources.doi }}</a>
             {% else %}
