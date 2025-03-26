@@ -5,7 +5,7 @@ date: 2025-03-26
 categories: [Carolingian Theological Renaissance, Apologetics, Ecclesiastical History]
 youtube_id: "YQd2VGZZpEM" # From the paste.txt document
 audio_analysis: "/assets/audio/libri-carolini-790.mp3" # Based on link in paste.txt
-translation_json: "/assets/translations/2025-03-26-libri-carolini.json"
+translation_json: "/assets/translations/2025-03-26-libri-carolini-790.json"
 # Additional metadata fields
 original_work:
   latin_title: Opus Caroli regis contra synodum
