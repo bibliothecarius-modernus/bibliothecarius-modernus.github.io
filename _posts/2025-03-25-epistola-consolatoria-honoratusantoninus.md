@@ -1,7 +1,7 @@
 ---
 layout: tabbed_post
 title: "Epistola consolatoria ad Arcadium (c.437-440)"
-date: 2025-03-27
+date: 2025-03-25
 categories: [Epistolary Literature, Post-Nicene Fathers, Apologetics]
 youtube_id: "11SnNFY7vfM" # Replace with your actual video
 audio_analysis: "/assets/audio/Epistola-consolatoria-ad-Arcadium.mp3" # Path to your MP3 file
