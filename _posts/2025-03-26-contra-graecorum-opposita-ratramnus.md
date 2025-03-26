@@ -22,7 +22,7 @@ external_resources:
   Latin text and English translation of Ratramnus of Corbie's influential 9th-century treatise defending Western Christianity against Byzantine criticisms during the Photian Schism, offering sophisticated arguments for the Filioque doctrine, papal primacy, and the legitimacy of Latin liturgical practices while distinguishing between essential matters of faith and acceptable diversity in customs.
 </p>
 
-![File:Carolingian and Byzantine Empires 814.png - Wikipedia](https://upload.wikimedia.org/wikipedia/commons/e/e5/Carolingian_and_Byzantine_Empires_814.pngg)
+![File:Carolingian and Byzantine Empires 814.png - Wikipedia](https://upload.wikimedia.org/wikipedia/commons/e/e5/Carolingian_and_Byzantine_Empires_814.png)
 *Map showing the Carolingian (Western Latin) Empire (yellow) and the Byzantine (Eastern Greek) Empire (purple) in the early 9th century. This geopolitical split underpinned the cultural and ecclesiastical differences that *Contra Graecorum Opposita* addresses ([1911 Encyclopædia Britannica/Ratramnus - Wikisource, the free online library](https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Ratramnus#:~:text=of%20Gottschalk%20deter%20him%20from,published%20at%20Oxford%20in%201859)) ([Ratramnus - Catholic Answers Encyclopedia](https://www.catholic.com/encyclopedia/ratramnus#:~:text=His%20best%20work%2C%20from%20a,A)).* 
 
 ## Historical Context  
