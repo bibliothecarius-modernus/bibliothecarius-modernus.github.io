@@ -5,7 +5,7 @@ date: 2025-03-27
 categories: [Epistolary Literature, Post-Nicene Fathers, Apologetics]
 youtube_id: "11SnNFY7vfM" # Replace with your actual video
 audio_analysis: "/assets/audio/Epistola-consolatoria-ad-Arcadium.mp3" # Path to your MP3 file
-translation_json: "/assets/translations/2025-03-27-epistola_consolatoria_honoratusantoninus"
+translation_json: "/assets/translations/2025-03-27-epistola_consolatoria_honoratusantoninus.json"
 
 # Additional metadata fields
 original_work:
