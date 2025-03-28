@@ -4,7 +4,7 @@ title: "Contra Graecorum Opposita (c.868)"
 date: 2025-03-26
 categories: [Carolingian Theological Renaissance, Pneumatology, Apologetics]
 youtube_id: "kirdtBRa8ZA" # Replace with your actual video ID for Book One
-audioanalysis: "/assets/audio/Contra Graecorum Opposita Book One.mp3" # Path to your MP3 file
+audio_analysis: "/assets/audio/Ratramnus-of-Corbie_-Against-Byzantine-Criticisms.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-03-26-contra-graecorum-opposita-ratramnus.json"
 # Additional metadata fields
 original_work:
