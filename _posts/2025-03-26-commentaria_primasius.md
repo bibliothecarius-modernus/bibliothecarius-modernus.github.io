@@ -4,7 +4,7 @@ title: "Commentaria in Apocalypsin (c.540)"
 date: 2025-03-26
 categories: [New Testament Commentaries, Eschatology, Post-Nicene Fathers]
 youtube_id: "BpyXIhdZuMw"  # Replace with your actual video ID
-audioanalysis: "/assets/audio/Commentaria in Apocalypsin Primasius of Hadrumetum.mp3"
+audioanalysis: "/assets/audio/Primasius-Commentary-on-Revelation_-Tradition-and-Influence.mp3"
 translation_json: "/assets/translations/2025-03-26-commentaria_primasius.json"
 
 # Additional metadata fields
