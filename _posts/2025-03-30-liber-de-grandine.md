@@ -28,7 +28,7 @@ An influential Carolingian treatise by Archbishop Agobard of Lyon (c. 820) refut
 As for authorship, there is little doubt that Agobard wrote *De grandine et tonitruis*. It appears among his collected works in **Patrologia Latina** vol. 104. Agobard was an influential churchman and theologian of his time, known for other polemical writings against heresies, Jewish rituals, and image worship. His clear, authoritative voice and personal witness in the text (he recounts events that he saw “in nostra praesentia,” “in our presence”) strongly support his authorship. Historically, the treatise provides a rare window into the **popular beliefs of early medieval Francia** – so much so that modern historians consider it “one of the most famous [texts] of the Carolingian world” for what it reveals about 9th-century folklore and church response. 
 
 ## Theological and Philosophical Themes  
-![image](blob:https://chatgpt.com/24410127-4b0d-4bd7-a744-b1e3988702f6)
+<img src="/assets/images/2025-03-30-liber-de-grandine-image1.jpg" alt="Historical manuscript or illustration related to Liber de Grandine" width="450" height="auto" />
  
  *Medieval theologians viewed weather as an instrument of divine will. This 13th-century Bible illustration shows **God sending hail and fire** upon Egypt (Seventh Plague, Exodus 9), underscoring that storms were ultimately attributed to God’s power in Christian thought.*
 
