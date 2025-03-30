@@ -4,7 +4,7 @@ title: "Liber de grandine et tonitruis (c.820)"
 date: 2025-03-30
 categories: [Carolingian Theological Renaissance, Apologetics]
 youtube_id: "ryWZe_16cwg"
-audioanalysis: "/assets/audio/Agobard of Lyon on Weather Sorcery and Divine Power.mp3"
+audio_analysis: "/assets/audio/Agobard of Lyon on Weather Sorcery and Divine Power.mp3"
 translation_json: "/assets/translations/2025-03-30-liber-de-grandine-et-tonitruis.json"
 # Additional metadata fields
 original_work:
