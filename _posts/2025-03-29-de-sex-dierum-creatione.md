@@ -17,7 +17,7 @@ original_work:
 
 external_resources:
   archive_url: "https://archive.org/details/on-the-six-days-of-creation"
-  github_url: "wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_93"
+  github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_93"
 ---
 
 "On the Six Days of Creation: A Book of Collected Sentences from the Fathers" is an anonymous patristic compilation from approximately 700 CE, preserved in Patrologia Latina volume 93. This comprehensive hexameral text systematically explores theological interpretations of Genesis creation narratives, synthesizing commentaries from early Church Fathers. The document methodically examines each creation day—from the genesis of light through the institution of the Sabbath—offering nuanced exegetical insights into divine creative acts. Notable sections include detailed treatments of celestial bodies, the origins of humanity, and the theological significance of Sabbath rest. This florilegium represents an important witness to early medieval scriptural interpretation, demonstrating how patristic authorities were assembled to illuminate sacred text and reconcile faith with natural philosophy. This work provides researchers with valuable insights into theological approaches to creation, human origins, and cosmology in the post-Nicene tradition.
