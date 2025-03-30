@@ -4,7 +4,7 @@ title: "De Sex Dierum Creatione (c.700)"
 date: 2025-03-29
 categories: [Old Testament Commentaries, Post-Nicene Fathers, Ecclesiastical History]
 youtube_id: "IoeT2lqYi5U"
-audioanalysis: "/assets/audio/De Sex Dierum Creatione Anonymous Creation Narrative.mp3"
+audio_analysis: "/assets/audio/De Sex Dierum Creatione Anonymous Creation Narrative.mp3"
 translation_json: "/assets/translations/2025-03-29-de-sex-dierum-creatione.json"
 
 # Additional metadata fields
