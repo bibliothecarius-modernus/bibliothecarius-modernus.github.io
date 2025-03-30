@@ -4,7 +4,7 @@ title: "Liber de Synodis seu Fide Orientalium (c.358)"
 date: 2025-03-27
 categories: [Nicene Fathers, Heresiology, Trinitarian Theology]
 youtube_id: "2n5mFNVhRmE" # Replace with your actual video ID
-audioanalysis: "/assets/audio/Liber de Synodis Bridging the East-West Divide.mp3" # Path to your MP3 file
+audio_analysis: "/assets/audio/Liber de Synodis Bridging the East-West Divide.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-03-27-liber-de-synodis-seu-fide-orientalium.json" # Additional metadata fields
 original_work:
   latin_title: Liber de Synodis seu Fide Orientalium
