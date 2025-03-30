@@ -3,7 +3,7 @@ layout: tabbed_post
 title: "De Partu Virginis (c.847)"
 date: 2025-03-27
 categories: [Marian Theology & Devotion, Carolingian Theological Renaissance, Christology]
-youtube_id: "28tOAJ4t7W4" # Replace with your actual video ID
+youtube_id: "JCI4hA5gwEg" # Replace with your actual video ID
 audio_analysis: "/assets/audio/De Partu Virginis On the Birth of the Virgin Mother.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-03-27-de-partu-virginis.json" # Additional metadata fields
 original_work:
