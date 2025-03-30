@@ -22,7 +22,7 @@ Hilary of Poitiers' influential theological treatise written in 358/359 AD durin
 </p>
 
 ## Historical and Theological Context  
-<img src="/assets/images/2025-03-27-liber-do-synodis-seu-fide-orientalium-image-1.jpg" alt="First Council of Nicaea" width="450" height="auto" />
+<img src="/assets/images/2025-03-27-liber-do-synodis-seu-fide-orientalium-image-1.png" alt="First Council of Nicaea" width="450" height="auto" />
  
   *A 16th-century icon of the First Council of Nicaea (325 AD). The Nicene Council affirmed the Son’s full divinity (homoousios, “of one substance” with the Father) against Arian teaching. This established the theological backdrop for Hilary’s work.*  
 
