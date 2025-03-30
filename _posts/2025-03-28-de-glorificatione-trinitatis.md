@@ -4,8 +4,8 @@ title: "De glorificatione Trinitatis et processione sancti Spiritus (c.1128)"
 date: 2025-03-28
 categories: [Trinitarian Theology, Post-Nicene Fathers, Pneumatology]
 youtube_id: "3lLq_1wsZFI" # Replace with your actual video ID
-audioanalysis: "/assets/audio/Rupert-of-Deutz-Trinity-Holy-Spirit.mp3" # Path to your MP3 file
-translation_json: "/assets/translations/2025-03-30-de-glorificatione-trinitatis.json" # Path to your JSON file
+audio_analysis: "/assets/audio/Rupert-of-Deutz-Trinity-Holy-Spirit.mp3" # Path to your MP3 file
+translation_json: "/assets/translations/2025-03-28-de-glorificatione-trinitatis.json" # Path to your JSON file
 
 # Additional metadata fields
 original_work:
