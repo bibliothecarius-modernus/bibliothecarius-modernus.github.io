@@ -18,7 +18,7 @@ external_resources:
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_126"
 ---
 
-<p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: `#3E2C1B`; border-left: 4px solid `#B8860B`; padding: 12px 18px; background-color: `#f9f5ea`; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+<p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 Bertharius's 9th-century treatise on fasting from Monte Cassino systematically outlines monastic fasting practices throughout the liturgical year, including Ember Days and feast vigils. This significant document reveals the theological understanding of fasting as penitential labor with quantifiable spiritual benefits, preserves early medieval liturgical customs, and demonstrates the integration of ascetic practice within the rhythm of the Church calendar.
 </p>
 
