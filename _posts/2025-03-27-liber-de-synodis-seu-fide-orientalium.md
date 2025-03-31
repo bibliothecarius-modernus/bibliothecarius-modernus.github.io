@@ -3,7 +3,7 @@ layout: tabbed_post
 title: "Liber de Synodis seu Fide Orientalium (c.358)"
 date: 2025-03-27
 categories: [Nicene Fathers, Heresiology, Trinitarian Theology]
-youtube_id: "2n5mFNVhRmE" # Replace with your actual video ID
+youtube_id: "VSceYHnbL2g" # Replace with your actual video ID
 audio_analysis: "/assets/audio/Hilary of Poitiers on Eastern Synods and Nicene Faith.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-03-27-liber-de-synodis-seu-fide-orientalium.json" # Additional metadata fields
 original_work:
