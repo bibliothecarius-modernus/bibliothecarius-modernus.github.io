@@ -4,7 +4,7 @@ title: "Quomodo per annum jejunandum sit (c. 850-883)"
 date: 2025-03-31
 categories: [Liturgical Texts & Sacramentaries, Asceticism & Monasticism]
 youtube_id: "PjQvT8fEPFE" # Replace with your actual video ID
-audioanalysis: "/assets/audio/Quomodo per annum jejunandum sit Fasting Throughout the Year.mp3"
+audio_analysis: "/assets/audio/Bertharius Monastic Fasting in the 9th Century.mp3"
 translation_json: "/assets/translations/2025-03-31-quomodo-per-annum-jejunandum.json"
 # Additional metadata fields
 original_work:
