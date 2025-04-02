@@ -24,7 +24,12 @@ A concise 4th-century treatise by Saint Nicetas of Remesiana defending nocturnal
 </p>
 
 ## Historical Context 
-<img src="/assets/images/2025-04-01-bibliotheca-laureshamensis-digital.jpg" alt="Vatikan, Biblioteca Apostolica Vaticana, Pal. lat. 210 (Ps.-)Augustinus; Nicetas Remesianensis; "Ephraem Latinus": Opuscula (Italien, 6.-7. Jh." width="450" height="auto" />
+<img 
+  src="{{ '/assets/images/2025-04-01-bibliotheca-laureshamensis-digital.jpg' | relative_url }}" 
+  alt='Vatikan, Biblioteca Apostolica Vaticana, Pal. lat. 210 (Ps.-)Augustinus; Nicetas Remesianensis; "Ephraem Latinus": Opuscula (Italien, 6.-7. Jh.)' 
+  width="450" 
+  style="height: auto;" />
+
 
 ([Vatikan, Biblioteca Apostolica Vaticana, Pal. lat. 210](https://bibliotheca-laureshamensis-digital.de/bav/bav_pal_lat_210/0361)) ([Jerome Epistulae Rare Books](https://www.textmanuscripts.com/medieval/jerome-illuminated-epistulae-60839))
 
