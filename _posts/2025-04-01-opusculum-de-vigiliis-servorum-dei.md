@@ -19,7 +19,7 @@ external_resources:
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68"
 ---
 
-<p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: `#3E2C1B`; border-left: 4px solid `#B8860B`; padding: 12px 18px; background-color: `#f9f5ea`; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+<p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 A concise 4th-century treatise by Saint Nicetas of Remesiana defending nocturnal prayer vigils, long misattributed to other Church Fathers, that blends scriptural exhortation with pastoral sensitivity to establish night prayer as an ancient, Christ-centered spiritual discipline vital for Christian formation in newly converted communities along the Roman frontier.
 </p>
 
