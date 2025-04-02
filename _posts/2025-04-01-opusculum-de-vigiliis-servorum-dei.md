@@ -93,6 +93,7 @@ In sum, the literary character of *De vigiliis servorum Dei* is that of a **scri
 ![Egbert-Psalter](https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Egbert-Psalter%2C_fol._99r.jpg/500px-Egbert-Psalter%2C_fol._99r.jpg?20110221193334)   
 
 ([Egbert-Psalter, fol. 99r](https://commons.wikimedia.org/wiki/File:Egbert-Psalter,_fol._99r.jpg))  
+10th-century illumination from the Egbert Psalter showing Saint Nicetius of Trier, to whom Nicetas's treatise on vigils was long misattributed, enhancing his medieval reputation as a spiritual teacher.
  
 The *Opusculum de vigiliis servorum Dei* has an unusual transmission history marked by centuries of misattribution, followed by modern rediscovery. After Nicetas of Remesiana's era, his works faded into obscurity and were often copied under different names ([Journal of Theological Studies](https://biblicalstudies.org.uk/pdf/jts/007_203.pdf)). By the early Middle Ages, the treatise on vigils was circulating anonymously or attributed to better-known Church Fathers.
 
