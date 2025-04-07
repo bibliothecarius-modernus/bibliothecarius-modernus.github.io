@@ -4,7 +4,7 @@ title: "Libellus de Waldrada (c.862)"
 date: 2025-04-07
 categories: [Ecclesiastical History, Canon Law, Carolingian Theological Renaissance]
 youtube_id: "XSkZR5X8h8I" # Replace with your actual video ID
-audioanalysis: "/assets/audio/Libellus-de-Waldrada-Royal-Divorce-Scandal.mp3" # Path to your MP3 file
+audioa_nalysis: "/assets/audio/Libellus de Waldrada A Royal Divorce and Papal Authority.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-04-07-libellus-de-waldrada.json" # Additional metadata fields
 
 # Original work metadata
