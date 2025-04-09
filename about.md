@@ -14,7 +14,7 @@ permalink: /about/
 
   <p>Many works featured here have fallen into relative obscurity, either lacking English translations entirely or having only dated versions available. In some rare cases, more popular authors (like Tertullian or Ambrose) are included for personal reasons or upon request. The translation is prompted for maximal clarity while preserving the original meaning, with the goal of making these historical texts more approachable and potentially inspiring deeper scholarly study. Rather than replacing authoritative editions, this project should help translators identify works that still resonate with modern audiences or deserve further scholarly attention.</p>
 
-  <p>To ensure accuracy, the translation process incorporates several safeguards against AI errors (including hallucinations). The videos display the original Latin alongside the English translation, and interlinear (English-Latin) versions are available on the GitLab repository for many texts. This transparency allows viewers to verify translations and identify any potential inaccuracies.</p>
+  <p>To ensure accuracy, the translation process incorporates several safeguards against AI errors (including hallucinations). The videos display the original Latin alongside the English translation, and interlinear (English-Latin) versions are available on the GitHub repository for many texts. This transparency allows viewers to verify translations and identify any potential inaccuracies.</p>
 
   <!-- Resources Section (moved up for better flow) -->
   <h3>Resources</h3>
