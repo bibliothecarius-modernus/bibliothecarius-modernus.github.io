@@ -160,7 +160,7 @@ Interestingly, *Liber adversus Joannem Scotum* experienced a sort of **resurrect
 
 In 1650, a Parisian publisher (Jean Billaine) issued *Vindiciae Praedestinationis et Gratiae* ("Vindication of Predestination and Grace"), which collected writings of Augustine and his early medieval defenders. This publication's elaborate frontispiece engraving depicts key figures of the 9th-century debate – notably St. Augustine at top, and at the bottom a gathering of Carolingian theologians and bishops including *"Florus Magister Lyugdunensis"* (Florus of Lyon) and others, shown supporting a banner of **"Praedestination and Grace"**.
 
-![Frontispiece of Vindiciae Praedestinationis et Gratiae](https://commons.wikimedia.org/wiki/File:Frontispiece_for_Vindicae_Predestinationis_et_Gratiae_MET_DP836286.jpg)
+![Frontispiece of Vindiciae Praedestinationis et Gratiae](https://upload.wikimedia.org/wikipedia/commons/f/fa/Frontispiece_for_Vindicae_Predestinationis_et_Gratiae_MET_DP836286.jpg)
 
 *Frontispiece of a 1650 Paris edition showing Florus of Lyon honored alongside other Carolingian theologians for refuting the errors of John Scotus.*
 
