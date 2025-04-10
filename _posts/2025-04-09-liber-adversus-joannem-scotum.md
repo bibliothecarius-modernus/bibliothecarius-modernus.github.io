@@ -4,7 +4,7 @@ title: "Liber adversus Joannem Scotum (c.852)"
 date: 2025-04-09
 categories: [Post-Nicene Fathers, Apologetics, Carolingian Theological Renaissance]
 youtube_id: "OpAmSWjh77k" # Replace with your actual video ID
-audio_analysis: "/assets/audio/Liber adversus Joannem Scotum Refuting Eriugena.mp3" # Path to your MP3 file
+audio_analysis: "/assets/audio/Florus of Lyon Against Eriugena on Predestination.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-04-09-liber-adversus-joannem-scotum.json" # Additional metadata fields
 
 # Original work metadata
