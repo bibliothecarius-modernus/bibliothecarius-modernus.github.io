@@ -4,7 +4,7 @@ title: "Sancti Valerii Abbatis Opuscula (c.695)"
 date: 2025-04-10
 categories: [Asceticism & Monasticism, Visigothic & Mozarabic Writings, Hagiography]
 youtube_id: "vpHVRMlVkmM" # Replace with your actual video ID
-audioanalysis: "/assets/audio/Sancti-Valerii-Abbatis-Opuscula.mp3" # Path to your MP3 file
+audio_analysis: "/assets/audio/Saint Valerius of Bierzo The Complete Opuscula.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-04-10-sancti-valerii-abbatis-opuscula.json" # Path to your JSON file
 
 # Additional metadata fields
