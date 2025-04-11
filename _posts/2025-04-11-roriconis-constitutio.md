@@ -2,9 +2,9 @@
 layout: tabbed_post
 title: "Roriconis Constitutio (c. 961)"
 date: 2025-04-11
-categories: [Ecclesiastical History, Monastic Rules & Constitutions, Carolingian Theological Renaissance]
+categories: [Ecclesiastical History, Monastic Rules & Constitutions]
 youtube_id: "AlXtX9dZmh8" # Replace with your actual video ID
-audioanalysis: "/assets/audio/Roriconis Constitutio Monastic Revival in 10th Century Laon.mp3" # Path to your MP3 file
+audio_analysis: "/assets/audio/Roricon of Laon 961 Constitutio Monastic Revival.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-04-11-roriconis-constitutio.json" # Additional metadata fields
 
 # Original work metadata
