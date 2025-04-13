@@ -4,7 +4,7 @@ title: "Epistolae et decreta Felicis Papae IV (c.530)"
 date: 2025-04-13
 categories: [Papal Bulls & Decretals, Post-Nicene Fathers, Ecclesiastical History]
 youtube_id: "WURnD0QG2q4"
-audioanalysis: "/assets/audio/Pope Felix IV Letters Decrees and Papal Authority.mp3"
+audio_analysis: "/assets/audio/Pope Felix IV Letters Decrees and Papal Authority.mp3"
 translation_json: "/assets/translations/2025-04-13-epistolae-et-decreta-felicis-papae-iv.json"
 original_work:
   latin_title: Epistolae et decreta Felicis Papae IV
