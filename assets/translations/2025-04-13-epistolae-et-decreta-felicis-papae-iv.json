@@ -1,0 +1,10 @@
+{
+    "chunks": [
+        {
+            "original_latin": "NOTA LECTORIBUS: Hoc opus (Epistolae et decreta Felicis Papae IV) translatum est antequam systema textus interlinearis institueretur. Textus interactivi inspectio non adest pro hoc documento. Ad Latinum originalem et translationem Anglicam separatim videndas, quaesumus repository visitas per nexum infra datum.\nhttps://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_65",
+            "cleaned_english_translation": "<speak>NOTE TO READERS: This work (Letters and Decrees of Pope Felix IV) was translated before the interactive text system was implemented. The interactive text viewer is unavailable for this document. To view the original Latin and English translation separately, please visit the following repository:\n<a href=\"https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_65\">GitHub - Patrologia Latina Volume 65 Repository</a></speak>",
+            "voice": "Ruth",
+            "chunk_number": 1
+        }
+    ]
+  }
