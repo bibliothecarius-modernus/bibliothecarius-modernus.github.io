@@ -4,7 +4,7 @@ title: "Explanatio in Ferculum Salomonis (c.853-856)"
 date: 2025-04-13
 categories: [Post-Nicene Fathers, Ecclesiology, Ecclesiastical History]
 youtube_id: "3KBp38ROsXU"  # Replace with your actual video ID
-audio_analysis: "/assets/audio/Explanatio in Ferculum Salomonis.mp3"  # Path to your MP3 file
+audio_analysis: "/assets/audio/Hincmar of Rheims Explanation of Solomons Couch.mp3"  # Path to your MP3 file
 translation_json: "/assets/translations/2025-04-13-explanatio-in-ferculum-salomonis.json"  # Additional metadata fields
 original_work:
   latin_title: Explanatio in Ferculum Salomonis
