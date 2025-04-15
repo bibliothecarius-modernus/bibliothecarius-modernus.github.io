@@ -1,6 +1,6 @@
 ---
 layout: tabbed_post
-title: "Libellus emendationis (c. 418 AD)"
+title: "Libellus emendationis (c. 418)"
 date: 2025-04-14
 categories: [Post-Nicene Fathers, Christology, Apologetics]
 youtube_id: "uFdb0zb7RvU"
@@ -9,7 +9,7 @@ translation_json: "/assets/translations/2025-04-14-libellus-emendationis.json"
 original_work:
   latin_title: Libellus emendationis
   author: "Leporius"
-  date: "c. 418 AD"
+  date: "c. 418"
   publication: "Patrologia Latina Volume 31"
   context: "Written as a formal recantation of Pelagian and proto-Nestorian beliefs under the guidance of Augustine of Hippo, this document addresses key Christological issues regarding the nature of Christ and anticipates orthodox formulations later established at the Council of Chalcedon."
 external_resources:
@@ -31,6 +31,7 @@ The *Libellus emendationis* (“Little Book of Correction”) was written in the
      alt="Initial G with St. Augustine writing; Mystic Mill - NYPL Digital Collections" 
      width="75%" 
      style="display: block; margin: 0 auto;"> 
+
  *A medieval illuminated manuscript shows St. Augustine writing in his study (from a 15th-century Italian copy of his *City of God*). Augustine’s guidance was instrumental in the composition of Leporius’s *Libellus*, though the work is ultimately attributed to Leporius himself ([Leporius - Biblical Cyclopedia](https://www.biblicalcyclopedia.com/L/leporius.html#:~:text=Some%20scholars%20in%20modern%20times%2C,were%20first%20collected%20Sismondi%20from)) ([Dissertation Spotlight - Nestorius Latinus: The Latin Reception and Critique of Nestorius of Constantinople  — ANCIENT JEW REVIEW](https://www.ancientjewreview.com/read/2021/4/7/dissertation-spotlight-nestorius-latinus-the-latin-reception-and-critique-of-nestorius-of-constantinople#:~:text=,420)).* 
 
 It should be noted that **modern scholarship** uniformly affirms Leporius’s authorship while acknowledging Augustine’s role. For example, Gennadius of Marseille (a contemporary of the next generation) wrote that “Leporius, first a monk and later a presbyter, began by teaching Pelagianism and added to that various errors in Christology,” but that he *“publicly corrected them”* ([Letters](https://wesleyscholar.com/wp-content/uploads/2019/04/Augustine-Letters-211-270.pdf#:~:text=Though%20Leporius%20taught%20certain%20views,Pelagianism%20and%20added%20to%20that)). This indicates the early Church itself viewed the *Libellus* as Leporius’s personal recantation. Recent studies (such as those by F. De Beer and others) have analyzed the text as a **“tessera of orthodoxy”** – a token of restored orthodoxy in the West on the eve of the Nestorian debates ([[PDF] Tajemnica wcielenia w galijskiej literaturze V wieku na przykładzie ...](https://bibliotekanauki.pl/articles/2093046.pdf#:~:text=,185%3B%20A)). In summary, there is little doubt that the *Libellus* was authored (and signed) by Leporius, with the **authority of Augustine and the African bishops** behind him, lending the work its weight and elegant theological clarity.
@@ -57,6 +58,7 @@ It is no surprise, then, that Leporius’s statement was later regarded as an **
      alt="Council of Ephesus fresco depicting the condemnation of Nestorius" 
      width="75%" 
      style="display: block; margin: 0 auto;"> 
+     
  *Late medieval memory of doctrinal controversy: a 16th-century Russian fresco depicts the **Council of Ephesus (431)** condemning Nestorius (shown being defrocked by the bishops). Leporius’s Libellus anticipated the Council’s **anti-Nestorian** Christology by affirming Christ’s single person and Mary’s status as Mother of God ([Letters](https://wesleyscholar.com/wp-content/uploads/2019/04/Augustine-Letters-211-270.pdf#:~:text=the%20monk%20Leporius%20after%20he,healed%20him%20through%20the%20efforts)) ([Dissertation Spotlight - Nestorius Latinus: The Latin Reception and Critique of Nestorius of Constantinople  — ANCIENT JEW REVIEW](https://www.ancientjewreview.com/read/2021/4/7/dissertation-spotlight-nestorius-latinus-the-latin-reception-and-critique-of-nestorius-of-constantinople#:~:text=,for%20the%20rest%20of%20his)).* 
 
 Furthermore, the *Libellus emendationis* has connections to later Western doctrinal development. It was highly valued by theologians like **St. Leo the Great** (mid-5th century). Pope Leo, who fought *Eutychianism* and *Nestorianism*, likely knew of Leporius’s confession. In one of Leo’s letters, he echoes phrases found in the *Libellus*, suggesting he viewed Leporius’s formulation as a useful precedent ([Leporius - Biblical Cyclopedia](https://www.biblicalcyclopedia.com/L/leporius.html#:~:text=sometimes%20with%20the%20addition%20Confessionem,the%20attacks%20of%20the%20Nestorians)) ([Leporius - Biblical Cyclopedia](https://www.biblicalcyclopedia.com/L/leporius.html#:~:text=dissertation%20on%20the%20subject%2C%20have,were%20first%20collected%20Sismondi%20from)). By the time of the **Council of Chalcedon (451)**, the formula of *“one person, two natures”* was enshrined, and later records show the *Libellus* was remembered as an orthodox touchstone. A 6th-century writer, Facundus of Hermiane, cites Leporius when defending the unity of Christ ([Full text of "Sacris Erudiri A Journal of Late Antique and Medieval Christianity"](https://archive.org/stream/SacrisErudiriAJournalOfLateAntiqueAndMedievalChristianity/Sacris%20Erudiri%20-%20Volume%2017%20-%20Number%202%20%201966_djvu.txt#:~:text=17%20Leponius%2C%20Libellus%20Emendationis%20,GALLANDIUvs%2C%20in%20Pro)). The fact that **Leporius – once a heretic – came to be lauded as *“one of the firmest bulwarks of orthodoxy against the Nestorians”*** is a striking turnabout ([Leporius - Biblical Cyclopedia](https://www.biblicalcyclopedia.com/L/leporius.html#:~:text=sometimes%20with%20the%20addition%20Confessionem,the%20attacks%20of%20the%20Nestorians)). His journey from error to truth thus not only impacted his contemporaries but also fed into the ongoing stream of Christological orthodoxy in the Church.
