@@ -4,7 +4,7 @@ title: "Libellus emendationis (c. 418 AD)"
 date: 2025-04-14
 categories: [Post-Nicene Fathers, Christology, Apologetics]
 youtube_id: "uFdb0zb7RvU"
-audioanalysis: "/assets/audio/Libellus-emendationis-Leporius-theological-recantation.mp3"
+audio_analysis: "/assets/audio/Leporius Libellus Emendationis A Theological Retraction.mp3"
 translation_json: "/assets/translations/2025-04-14-libellus-emendationis.json"
 original_work:
   latin_title: Libellus emendationis
