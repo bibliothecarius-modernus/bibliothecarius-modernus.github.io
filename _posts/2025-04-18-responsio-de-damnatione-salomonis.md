@@ -4,7 +4,7 @@ title: "Responsio de damnatione Salomonis (c.1150)"
 date: 2025-04-18
 categories: [Ecclesiastical History, Moral Theology, High Scholasticism]
 youtube_id: "pEI4aJtOuRc" # Replace with your actual video ID
-audioanalysis: "/assets/audio/Responsio de damnatione Salomonis Medieval Analysis of King Solomon.mp3" # Path to your MP3 file
+audio_analysis: "/assets/audio/Solomons Damnation A Medieval Inquiry by Philip of Harveng.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-04-18-responsio-de-damnatione-salomonis.json" # Additional metadata fields
 original_work:
   latin_title: Responsio de damnatione Salomonis
