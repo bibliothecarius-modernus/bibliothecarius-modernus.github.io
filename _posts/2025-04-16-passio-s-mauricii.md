@@ -4,7 +4,7 @@ title: "Passio S. Mauricii et sociorum (c. 450)"
 date: 2025-04-16
 categories: [Hagiography, Post-Nicene Fathers, Ecclesiastical History]
 youtube_id: "jKYrw8S5Ufg" # Replace with your actual video ID
-audio_analysis: "/assets/audio/Passio-S-Mauricii-et-sociorum.mp3" # Path to your MP3 file
+audio_analysis: "/assets/audio/Saint Maurice and the Theban Legion Faith and Legend.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-04-16-passio-s-mauricii-et-sociorum.json" # Additional metadata fields
 original_work:
   latin_title: Passio S. Mauricii et sociorum
@@ -18,7 +18,7 @@ external_resources:
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-Eucherius of Lyon's influential 5th-century account of St. Maurice and the Theban Legion, who chose martyrdom rather than violate Christian conscience, establishing a theological framework for Christian military service that balances loyalty to earthly authority with ultimate obedience to God.
+A fifth-century hagiographical text by Eucherius of Lyon documenting the martyrdom of the Theban Legion, examining the theological tension between military duty and Christian faith while establishing a paradigm for conscientious objection within late antique Christianity.
 </p>
 
 ## Historical Background and Origins
