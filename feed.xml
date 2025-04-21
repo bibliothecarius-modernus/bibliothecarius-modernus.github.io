@@ -11,36 +11,33 @@ layout: null
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:15 %}
+    {% for post in site.posts limit:50 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>
           {% if post.article-summary %}
-          {{ post.article-summary | xml_escape }}
+          {{ post.article-summary | xml_escape | truncate: 150 }}
           {% else %}
           {{ post.excerpt | strip_html | truncate: 150 | xml_escape }}
           {% endif %}
           
           {% if post.original_work %}
-          &lt;p&gt;Original work: {{ post.original_work.latin_title | xml_escape }} 
-          {% if post.original_work.author %}by {{ post.original_work.author | xml_escape }}{% endif %}
-          {% if post.original_work.date %}({{ post.original_work.date | xml_escape }}){% endif %}&lt;/p&gt;
-          {% endif %}
-          
-          {% if post.categories.size > 0 %}
-          &lt;p&gt;Categories: 
-            {% for category in post.categories %}
-              {{ category | xml_escape }}{% unless forloop.last %}, {% endunless %}
-            {% endfor %}
+          &lt;p&gt;
+          {% if post.original_work.latin_title %}{{ post.original_work.latin_title | xml_escape }}{% endif %}
+          {% if post.original_work.author %} by {{ post.original_work.author | xml_escape }}{% endif %}
+          {% if post.original_work.date %} ({{ post.original_work.date | xml_escape }}){% endif %}
           &lt;/p&gt;
           {% endif %}
         </description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.categories %}
-        <category>{{ tag | xml_escape }}</category>
+        {% for category in post.categories %}
+        <category>{{ category | xml_escape }}</category>
         {% endfor %}
+        {% if post.youtube_id %}
+        <enclosure url="https://img.youtube.com/vi/{{ post.youtube_id }}/maxresdefault.jpg" type="image/jpeg" length="0"/>
+        {% endif %}
       </item>
     {% endfor %}
   </channel>
