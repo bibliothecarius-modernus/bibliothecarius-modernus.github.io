@@ -10,18 +10,20 @@ layout: null
       "date": "{{ post.date | date_to_xmlschema }}",
       "categories": [{% for category in post.categories %}"{{ category }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
       "original_work": {
-        {% if post.original_work.latin_title %}"latin_title": {{ post.original_work.latin_title | jsonify }},{% endif %}
-        {% if post.original_work.author %}"author": {{ post.original_work.author | jsonify }},{% endif %}
-        {% if post.original_work.date %}"date": {{ post.original_work.date | jsonify }},{% endif %}
-        {% if post.original_work.publication %}"publication": {{ post.original_work.publication | jsonify }},{% endif %}
-        {% if post.original_work.context %}"context": {{ post.original_work.context | jsonify }}{% endif %}
-      }{% if post.youtube_id %},
-      "youtube_id": "{{ post.youtube_id }}",
-      "youtube_url": "https://www.youtube.com/watch?v={{ post.youtube_id }}"{% endif %}{% if post.external_resources %},
+        "latin_title": {% if post.original_work.latin_title %}{{ post.original_work.latin_title | jsonify }}{% else %}null{% endif %},
+        "author": {% if post.original_work.author %}{{ post.original_work.author | jsonify }}{% else %}null{% endif %},
+        "date": {% if post.original_work.date %}{{ post.original_work.date | jsonify }}{% else %}null{% endif %},
+        "publication": {% if post.original_work.publication %}{{ post.original_work.publication | jsonify }}{% else %}null{% endif %}
+        {% if post.original_work.context %},
+        "context": {{ post.original_work.context | jsonify }}
+        {% endif %}
+      },
+      "youtube_id": {% if post.youtube_id %}{{ post.youtube_id | jsonify }}{% else %}null{% endif %},
+      "youtube_url": {% if post.youtube_id %}"https://www.youtube.com/watch?v={{ post.youtube_id }}"{% else %}null{% endif %},
       "external_resources": {
-        {% if post.external_resources.archive_url %}"archive_url": "{{ post.external_resources.archive_url }}",{% endif %}
-        {% if post.external_resources.github_url %}"github_url": "{{ post.external_resources.github_url }}"{% endif %}
-      }{% endif %}
+        "archive_url": {% if post.external_resources.archive_url %}{{ post.external_resources.archive_url | jsonify }}{% else %}null{% endif %},
+        "github_url": {% if post.external_resources.github_url %}{{ post.external_resources.github_url | jsonify }}{% else %}null{% endif %}
+      }
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
