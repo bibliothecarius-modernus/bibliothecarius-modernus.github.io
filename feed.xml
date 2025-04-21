@@ -2,68 +2,32 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" 
-     xmlns:atom="http://www.w3.org/2005/Atom" 
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:content="http://purl.org/rss/1.0/modules/content/"
-     xmlns:media="http://search.yahoo.com/mrss/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>{{ site.title | xml_escape }}</title>
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <language>en-us</language>
-    <copyright>Copyright {{ 'now' | date: "%Y" }}</copyright>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    
+    <generator>Jekyll v{{ jekyll.version }}</generator>
     {% for post in site.posts limit:20 %}
       <item>
-        <!-- Basic RSS elements -->
         <title>{{ post.title | xml_escape }}</title>
         <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        
-        <!-- Brief description - context field -->
-        <description>{% if post.original_work.context %}{{ post.original_work.context | strip_html | truncate: 300 | xml_escape }}{% else %}{{ post.title | xml_escape }}{% endif %}</description>
-        
-        <!-- Dublin Core elements -->
         {% if post.original_work.author %}<dc:creator>{{ post.original_work.author | xml_escape }}</dc:creator>{% endif %}
-        {% if post.original_work.date %}<dc:date>{{ post.original_work.date | xml_escape }}</dc:date>{% endif %}
-        {% if post.original_work.latin_title %}<dc:title>{{ post.original_work.latin_title | xml_escape }}</dc:title>{% endif %}
         
-        <!-- Categories -->
+        <description>{% if post.original_work.context %}{{ post.original_work.context | xml_escape }}{% else %}{{ post.original_work.latin_title | xml_escape }} {% if post.original_work.author %}by {{ post.original_work.author | xml_escape }}{% endif %} ({{ post.original_work.date | xml_escape }}){% endif %}</description>
+        
         {% for category in post.categories %}
         <category>{{ category | xml_escape }}</category>
         {% endfor %}
         
-        <!-- Media elements for YouTube -->
         {% if post.youtube_id %}
-        <media:thumbnail url="https://img.youtube.com/vi/{{ post.youtube_id }}/maxresdefault.jpg" />
-        <media:content url="https://www.youtube.com/watch?v={{ post.youtube_id }}" type="video/youtube" />
         <enclosure url="https://img.youtube.com/vi/{{ post.youtube_id }}/maxresdefault.jpg" type="image/jpeg" length="0"/>
         {% endif %}
-        
-        <!-- Additional content in separately namespaced field -->
-        <content:encoded><![CDATA[
-          {% if post.original_work.context %}
-          <p>{{ post.original_work.context | strip_html | xml_escape }}</p>
-          {% endif %}
-          
-          <p><strong>Original Work:</strong> 
-          {% if post.original_work.latin_title %}<em>{{ post.original_work.latin_title | xml_escape }}</em>{% endif %}
-          {% if post.original_work.author %} by {{ post.original_work.author | xml_escape }}{% endif %}
-          {% if post.original_work.date %} ({{ post.original_work.date | xml_escape }}){% endif %}
-          {% if post.original_work.publication %}<br/>Publication: {{ post.original_work.publication | xml_escape }}{% endif %}
-          </p>
-          
-          {% if post.youtube_id %}
-          <p><a href="https://www.youtube.com/watch?v={{ post.youtube_id }}">Watch on YouTube</a></p>
-          {% endif %}
-          
-          <p><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">Read full analysis</a></p>
-        ]]></content:encoded>
       </item>
     {% endfor %}
   </channel>
