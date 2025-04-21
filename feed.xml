@@ -21,22 +21,22 @@ layout: null
         <description>
           <![CDATA[
           {% if post.original_work.context %}
-            <p>{{ post.original_work.context }}</p>
+            <p>{{ post.original_work.context | replace: '&', '&amp;' | replace: '<', '&lt;' | replace: '>', '&gt;' }}</p>
           {% endif %}
           
           <p>
             <strong>Original Work:</strong> 
-            {% if post.original_work.latin_title %}<em>{{ post.original_work.latin_title }}</em>{% endif %}
-            {% if post.original_work.author %} by {{ post.original_work.author }}{% endif %}
-            {% if post.original_work.date %} ({{ post.original_work.date }}){% endif %}
-            {% if post.original_work.publication %}<br/>Publication: {{ post.original_work.publication }}{% endif %}
+            {% if post.original_work.latin_title %}<em>{{ post.original_work.latin_title | replace: '&', '&amp;' | replace: '<', '&lt;' | replace: '>', '&gt;' }}</em>{% endif %}
+            {% if post.original_work.author %} by {{ post.original_work.author | replace: '&', '&amp;' | replace: '<', '&lt;' | replace: '>', '&gt;' }}{% endif %}
+            {% if post.original_work.date %} ({{ post.original_work.date | replace: '&', '&amp;' | replace: '<', '&lt;' | replace: '>', '&gt;' }}){% endif %}
+            {% if post.original_work.publication %}<br/>Publication: {{ post.original_work.publication | replace: '&', '&amp;' | replace: '<', '&lt;' | replace: '>', '&gt;' }}{% endif %}
           </p>
           
           {% if post.categories.size > 0 %}
             <p>
               <strong>Categories:</strong> 
               {% for category in post.categories %}
-                {{ category }}{% unless forloop.last %}, {% endunless %}
+                {{ category | replace: '&', '&amp;' | replace: '<', '&lt;' | replace: '>', '&gt;' }}{% unless forloop.last %}, {% endunless %}
               {% endfor %}
             </p>
           {% endif %}
@@ -49,15 +49,15 @@ layout: null
             <p>
               <strong>External Resources:</strong><br/>
               {% if post.external_resources.archive_url %}
-                <a href="{{ post.external_resources.archive_url }}">Internet Archive</a><br/>
+                <a href="{{ post.external_resources.archive_url | replace: '&', '&amp;' }}">Internet Archive</a><br/>
               {% endif %}
               {% if post.external_resources.github_url %}
-                <a href="{{ post.external_resources.github_url }}">GitHub Repository</a>
+                <a href="{{ post.external_resources.github_url | replace: '&', '&amp;' }}">GitHub Repository</a>
               {% endif %}
             </p>
           {% endif %}
           
-          <p><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">Read full analysis at {{ site.title }}</a></p>
+          <p><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">Read full analysis at {{ site.title | replace: '&', '&amp;' }}</a></p>
           ]]>
         </description>
         {% for category in post.categories %}
