@@ -12,7 +12,7 @@ original_work:
   author: "Theodulf of Orléans"
   date: "c. 790"
   publication: "Monumenta Germaniae Historica"
-context: "A theological treatise commissioned by Charlemagne that articulates a Frankish critique of the Second Council of Nicaea (787) and its endorsement of icon veneration, presenting a middle path that accepts images as educational tools while rejecting their veneration."
+  context: "A theological treatise commissioned by Charlemagne that articulates a Frankish critique of the Second Council of Nicaea (787) and its endorsement of icon veneration, presenting a middle path that accepts images as educational tools while rejecting their veneration."
 external_resources:
   archive_url: "https://archive.org/details/libri-carolini-790"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Libri_Carolini"

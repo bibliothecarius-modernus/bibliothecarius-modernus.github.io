@@ -12,7 +12,7 @@ original_work:
   author: "Hugh of St. Victor"
   date: "c. 1130"
   publication: "Patrologia Latina Volume 176"
-context: "Examines the theological complexities of Christ's will, distinguishing between divine and human wills while analyzing how these different volitions coexist harmoniously within the one person of Christ."
+  context: "Examines the theological complexities of Christ's will, distinguishing between divine and human wills while analyzing how these different volitions coexist harmoniously within the one person of Christ."
 external_resources:
   archive_url: "https://archive.org/details/on-the-four-wills-in-christ"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_176"
