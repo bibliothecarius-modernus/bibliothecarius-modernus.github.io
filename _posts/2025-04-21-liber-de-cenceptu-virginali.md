@@ -1,11 +1,11 @@
 ---
 layout: tabbed_post
 title: "Liber de conceptu virginali et originali peccato (c.1099)"
-date: 2025-04-23
+date: 2025-04-21
 categories: [High Scholasticism, Christology, Moral Theology]
 youtube_id: "hgSPaJGgsTo" # Replace with your actual video ID
 audio_analysis: "/assets/audio/Anselm on Virgin Birth and Original Sin.mp3" # Path to your MP3 file
-translation_json: "/assets/translations/2025-04-23-liber-de-cenceptu-virginali.json"
+translation_json: "/assets/translations/2025-04-21-liber-de-cenceptu-virginali.json"
 # Additional metadata fields
 original_work:
   latin_title: Liber de conceptu virginali et originali peccato
