@@ -4,7 +4,7 @@
       <div class="footer-col footer-col-1">
         <h2 class="footer-heading">{{ site.title | escape }}</h2>
         <p>{{ site.description | escape }}</p>
-        <!-- RSS link added here -->
+        <!-- RSS link -->
         <p style="margin-top: 15px;">
           <a href="{{ '/feed.xml' | relative_url }}" target="_blank" style="display: flex; align-items: center; color: var(--highlight-color);">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
@@ -13,6 +13,16 @@
               <circle cx="5" cy="19" r="1"></circle>
             </svg>
             Subscribe via RSS
+          </a>
+        </p>
+        <!-- API link added here -->
+        <p style="margin-top: 10px;">
+          <a href="{{ '/metadata.json' | relative_url }}" target="_blank" style="display: flex; align-items: center; color: var(--highlight-color);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+              <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+              <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+            </svg>
+            Metadata API
           </a>
         </p>
       </div>

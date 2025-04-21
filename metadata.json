@@ -1,0 +1,28 @@
+---
+layout: null
+---
+{
+  "posts": [
+    {% for post in site.posts %}
+    {
+      "title": {{ post.title | jsonify }},
+      "url": "{{ site.url }}{{ site.baseurl }}{{ post.url }}",
+      "date": "{{ post.date | date_to_xmlschema }}",
+      "categories": [{% for category in post.categories %}"{{ category }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
+      "original_work": {
+        {% if post.original_work.latin_title %}"latin_title": {{ post.original_work.latin_title | jsonify }},{% endif %}
+        {% if post.original_work.author %}"author": {{ post.original_work.author | jsonify }},{% endif %}
+        {% if post.original_work.date %}"date": {{ post.original_work.date | jsonify }},{% endif %}
+        {% if post.original_work.publication %}"publication": {{ post.original_work.publication | jsonify }},{% endif %}
+        {% if post.original_work.context %}"context": {{ post.original_work.context | jsonify }}{% endif %}
+      }{% if post.youtube_id %},
+      "youtube_id": "{{ post.youtube_id }}",
+      "youtube_url": "https://www.youtube.com/watch?v={{ post.youtube_id }}"{% endif %}{% if post.external_resources %},
+      "external_resources": {
+        {% if post.external_resources.archive_url %}"archive_url": "{{ post.external_resources.archive_url }}",{% endif %}
+        {% if post.external_resources.github_url %}"github_url": "{{ post.external_resources.github_url }}"{% endif %}
+      }{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
