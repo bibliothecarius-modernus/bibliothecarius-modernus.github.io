@@ -1,38 +1,47 @@
 <header class="site-header">
-    <div class="wrapper">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div class="site-branding">
-          <a class="site-logo" href="{{ site.baseurl }}/">
-            <img src="{{ '/assets/images/bibliothecarius-logo.png' | relative_url }}" alt="{{ site.title | escape }}" width="60" height="60">
-          </a>
-          <div class="site-title-container">
-            <a class="site-title" href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
-            <p class="site-description">{{ site.description | escape }}</p>
-          </div>
+  <div class="wrapper">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="site-branding">
+        <a class="site-logo" href="{{ site.baseurl }}/">
+          <img src="{{ '/assets/images/bibliothecarius-logo.png' | relative_url }}" alt="{{ site.title | escape }}" width="60" height="60">
+        </a>
+        <div class="site-title-container">
+          <a class="site-title" href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
+          <p class="site-description">{{ site.description | escape }}</p>
         </div>
-  
-        <nav class="site-nav" style="float: none; margin-top: 0;">
-          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-          <label for="nav-trigger">
-            <span class="menu-icon">
-              <svg viewBox="0 0 18 15" width="18px" height="15px">
-                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-              </svg>
-            </span>
-          </label>
-  
-          <div class="trigger">
-            <a class="page-link" href="{{ site.baseurl }}/">Home</a>
-            <a class="page-link" href="{{ '/about/' | relative_url }}">About</a>
-            <a class="page-link" href="{{ '/archive/' | relative_url }}">Archive</a>
-            <a class="page-link youtube-nav-link" href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">
-              <svg class="youtube-icon" viewBox="0 0 24 24" width="16" height="16">
-                <path fill="currentColor" d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58,8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
-              </svg>
-              YouTube
-            </a>
-          </div>
-        </nav>
       </div>
+
+      <nav class="site-nav" style="float: none; margin-top: 0;">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="{{ site.baseurl }}/">Home</a>
+          <a class="page-link" href="{{ '/about/' | relative_url }}">About</a>
+          <a class="page-link" href="{{ '/archive/' | relative_url }}">Archive</a>
+          <a class="page-link youtube-nav-link" href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">
+            <svg class="youtube-icon" viewBox="0 0 24 24" width="16" height="16">
+              <path fill="currentColor" d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34,.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58,8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34,.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
+            </svg>
+            YouTube
+          </a>
+          <!-- RSS LINK ADDED HERE -->
+          <a class="page-link" href="{{ '/feed.xml' | relative_url }}" title="Subscribe via RSS" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -3px; margin-right: 3px;">
+              <path d="M4 11a9 9 0 0 1 9 9"></path>
+              <path d="M4 4a16 16 0 0 1 16 16"></path>
+              <circle cx="5" cy="19" r="1"></circle>
+            </svg>
+            RSS
+          </a>
+        </div>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>
