@@ -4,7 +4,7 @@ title: "De Quatuor Voluntatibus in Christo (c.1130)"
 date: 2025-04-22
 categories: [Post-Nicene Fathers, Christology]
 youtube_id: "qf-BkTxhQpU" # Replace with your actual video ID
-audio_analysis: "/assets/audio/De Quatuor Voluntatibus in Christo - Hugh of St Victor on Christ's Four Wills.mp3"
+audio_analysis: "/assets/audio/De Quatuor Voluntatibus in Christo Hugh of St Victor on Christs Four Wills.mp3"
 translation_json: "/assets/translations/2025-04-22-de-quatuor-voluntatibus-in-christo.json"
 # Additional metadata fields
 original_work:
