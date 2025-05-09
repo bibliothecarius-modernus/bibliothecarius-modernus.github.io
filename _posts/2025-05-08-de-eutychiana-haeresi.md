@@ -4,7 +4,7 @@ title: "De Eutychiana haeresi et historia (c.450)"
 date: 2025-05-08
 categories: [Post-Nicene Fathers, Heresiology, Ecclesiastical History]
 youtube_id: "peY5ysKu7Mo"
-audio_analysis: "/assets/audio/De Eutychiana haeresi et historia Liber I.mp3"
+audio_analysis: "/assets/audio/On the Eutychian Heresy and History.mp3"
 translation_json: "/assets/translations/2025-05-08-de-eutychiana-haeresi.json"
 # Additional metadata fields
 original_work:
@@ -14,7 +14,7 @@ original_work:
   publication: "Patrologia Latina Volume 55"
   context: "A theological treatise examining the Eutychian heresy, documenting the controversies surrounding the Council of Chalcedon, and defending orthodox Christology against Monophysite claims that diminished Christ's true humanity."
 external_resources:
-  archive_url: "https://archive.org/editxml/on-the-heresy-and-history-of-the-eutychians-book-one"
+  archive_url: "https://archive.org/details/on-the-heresy-and-history-of-the-eutychians-book-one"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55"
 ---
 
