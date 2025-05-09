@@ -4,7 +4,7 @@ title: "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (c.445)"
 date: 2025-05-08
 categories: [Post-Nicene Fathers, Apologetics, Heresiology]
 youtube_id: "i60cOx7hcgY"
-audio_analysis: "/assets/audio/De Pelagiana Haeresi S Leonis Magni Aevo Gliscente.mp3"
+audio_analysis: "/assets/audio/Leo the Great Against the Pelagian Heresy.mp3"
 translation_json: "/assets/translations/2025-05-08-de-pelagiana-haeresi.json"
 # Additional metadata fields
 original_work:
@@ -23,7 +23,6 @@ external_resources:
 This historical-theological compilation documents Pope Leo the Great's decisive campaign against Pelagianism in 5th-century Italy, demonstrating how his papal authority consolidated Augustine's doctrines on grace, original sin, and salvation throughout the Western Church.
 </p>
 
-# The Pelagian Heresy: Origins and Theological Claims
 
 <figure>
   <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Pelagius_with_caption.jpg" 
