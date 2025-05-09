@@ -94,10 +94,10 @@ In art and culture, one could say the **Leonine mosaics** and the **coinage** be
 In conclusion, the *Epistolae* of Pope St. Leo III in PL 102 offer a **window into a pivotal moment** in church history – when the papacy, emerging from a period of Byzantine overshadowing, aligned with a new Western empire and asserted a more universal role. They document the theological consensus and controversies of the age, the administrative networks linking Rome to the far corners of Europe, and the rhetorical formulation of papal authority that would echo through subsequent centuries. For a theologically and historically informed reader, these letters are more than just administrative correspondences; they are the building blocks of the medieval papal monarchy and vital records of the Carolingian Renaissance. In their mix of spiritual fervor, political savvy, and pastoral solicitude, Leo III's letters exemplify the papal office's aims to be, in his own words, *"the light of truth guiding the way of salvation"* for a newly reconfigured Christian world.
 
 **Sources:**
-- Leo III, *Epistolae* – **Patrologia Latina** vol.102 (ed. J.-P. Migne, 1849)
-- *Codex epistolaris Carolinus* (MGH Epp. III) – Correspondence of popes with Carolingians
-- **Liber Pontificalis**, ed. Duchesne – Life of Leo III (on the Creed shields)
-- Catholic Encyclopedia s.v. *Leo III*
-- Flicker photo by Lawrence OP – *"St Peter bestowing gifts"* (Lateran Triclinium mosaic)
-- Salutemundo (blog), *Leo III letters translation* – North African affairs letter of 813
-- Monumenta Germaniae Historica Epp. V, ed. K. Hampe – (contains Leo's letters with critical notes)
+- [Leo III, *Epistolae* – **Patrologia Latina** vol.102](https://la.wikisource.org/wiki/Epistolae_2_(Leo_III)#:~:text=EPISTOLA%20PRIMA,AD%20LEONEM%20PAPAM%20III) (ed. J.-P. Migne, 1849)
+- [*Codex epistolaris Carolinus*](https://www.facsimiles.com/facsimiles/capitulare-de-villis#:~:text=the%20incipit%20to%20the%20first,internal%20divisions%20and%20external%20invasions) (MGH Epp. III) – Correspondence of popes with Carolingians
+- [**Liber Pontificalis**](https://www.assemblyofbishops.org/ministries/ecumenical-and-interfaith-dialogues/orthodox-catholic/filioque-a-church-dividing-issue#:~:text=to%20the%20Liber%20Pontificalis%2C%20the,with%20the%20Filioque%20during%20the), ed. Duchesne – Life of Leo III (on the Creed shields)
+- [Catholic Encyclopedia s.v. *Leo III*](https://www.newadvent.org/cathen/09157b.htm#:~:text=A%20few%20days%20later%2C%20Leo,West%2C%20and%2C%20in%20theory%2C%20at)
+- [Flicker photo by Lawrence OP – *"St Peter bestowing gifts"*](https://www.flickr.com/photos/paullew/3018121521#:~:text=It%20shows%20St%20Peter%20bestowing,the%20first%20Holy%20Roman%20Emperor) (Lateran Triclinium mosaic)
+- [Salutemundo (blog), *Leo III letters translation*](https://salutemmundo.wordpress.com/2021/08/17/pope-leo-iii-writing-to-charlemagne-on-north-african-affairs/#:~:text=This%20is%20a%20letter%20written,on%20the%20scene%20in%20Sicily) – North African affairs letter of 813
+- [Monumenta Germaniae Historica Epp. V](https://salutemmundo.wordpress.com/2021/08/17/pope-leo-iii-writing-to-charlemagne-on-north-african-affairs/#:~:text=Leo%20III%2C%20Epistolae%2C%20ed,99), ed. K. Hampe – (contains Leo's letters with critical notes)
