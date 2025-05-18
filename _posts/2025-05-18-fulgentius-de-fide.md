@@ -22,7 +22,10 @@ external_resources:
 A concise theological compendium from a leading North African bishop defending Nicene Trinitarianism, Chalcedonian Christology, and Augustinian soteriology against heretical movements of the early 6th century, while presenting a systematic "rule of faith" for orthodox Christians living under Arian Vandal rule.
 </p>
 
-![St. Fulgentius of Ruspe depicted as a bishop with a book (17th-century painting)](https://upload.wikimedia.org/wikipedia/commons/0/08/Fulgentius_von_Ruspe_17Jh.jpg)
+<figure class="image-figure" style="max-width: 400px; margin: 2rem auto;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Fulgentius_von_Ruspe_17Jh.jpg" alt="St. Fulgentius of Ruspe depicted as a bishop with a book (17th-century painting)" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+  <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 0.75rem; font-size: 0.9rem;">St. Fulgentius of Ruspe depicted as a bishop with a book (17th-century painting). Fulgentius's treatise <strong>De Fide</strong> reflects his role as a guardian of orthodox doctrine in an age of theological controversy.</figcaption>
+</figure>
 
 *St. Fulgentius of Ruspe depicted as a bishop with a book (17th-century painting). Fulgentius's treatise **De Fide** reflects his role as a guardian of orthodox doctrine in an age of theological controversy.*
 
