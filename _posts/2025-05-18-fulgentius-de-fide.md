@@ -12,7 +12,7 @@ original_work:
   author: "Fulgentius of Ruspe"
   date: "c. 519"
   publication: "Patrologia Latina Volume 65"
-context: "Written during Fulgentius's exile in Sardinia, this systematic exposition of Catholic doctrine defends Trinitarian and Christological orthodoxy against Arianism and provides a comprehensive rule of faith for believers living under Vandal rule."
+  context: "Written during Fulgentius's exile in Sardinia, this systematic exposition of Catholic doctrine defends Trinitarian and Christological orthodoxy against Arianism and provides a comprehensive rule of faith for believers living under Vandal rule."
 external_resources:
   archive_url: "https://archive.org/details/on-faith-fulgentius" 
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_65"

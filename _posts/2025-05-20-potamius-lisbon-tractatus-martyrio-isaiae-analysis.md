@@ -12,7 +12,7 @@ original_work:
   author: "Potamius of Lisbon"
   date: "c. 355"
   publication: "Patrologia Latina Volume 8"
-context: "Written by the first known bishop of Olisipo (Lisbon), this vivid homiletic treatise combines classical rhetoric with Christian theology to depict the martyrdom of the prophet Isaiah as a spiritual spectacle and demonstration of faithful witness."
+  context: "Written by the first known bishop of Olisipo (Lisbon), this vivid homiletic treatise combines classical rhetoric with Christian theology to depict the martyrdom of the prophet Isaiah as a spiritual spectacle and demonstration of faithful witness."
 external_resources:
   archive_url: "https://archive.org/details/treatise-on-the-martyrdom-of-isaiah"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_8"
