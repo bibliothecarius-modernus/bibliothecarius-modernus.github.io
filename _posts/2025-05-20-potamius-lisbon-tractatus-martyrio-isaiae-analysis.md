@@ -1,4 +1,27 @@
-# Potamius of Lisbon and the _Tractatus de martyrio Isaiae_ : Historical and Theological Analysis
+---
+layout: tabbed_post
+title: "Potamii Olisiponensis Tractatus de martyrio Isaiae (c. 355)"
+date: 2025-05-20
+categories: [Post-Nicene Fathers, Homiletics, Visigothic & Mozarabic Writings]
+youtube_id: "GRQXBiuL0UE"
+audio_analysis: "/assets/audio/Potamius_Tractatus_de_martyrio_Isaiae.mp3"
+translation_json: "/assets/translations/2025-05-20-potamius-lisbon-tractatus-martyrio-isaiae.json"
+# Additional metadata fields
+original_work:
+  latin_title: "Tractatus de martyrio Isaiae prophetae"
+  author: "Potamius of Lisbon"
+  date: "c. 355"
+  publication: "Patrologia Latina Volume 8"
+context: "Written by the first known bishop of Olisipo (Lisbon), this vivid homiletic treatise combines classical rhetoric with Christian theology to depict the martyrdom of the prophet Isaiah as a spiritual spectacle and demonstration of faithful witness."
+external_resources:
+  archive_url: "https://archive.org/details/treatise-on-the-martyrdom-of-isaiah"
+  github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_8"
+---
+
+<p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+A striking fourth-century homiletic treatise in which Potamius of Lisbon presents the martyrdom of the prophet Isaiah through an unprecedented fusion of anatomical detail and spiritual exegesis, transforming the prophet's brutal execution into a sacred spectacle that glorifies martyrdom as triumph rather than tragedy.
+</p>
+
 
 ## Authorship and Historical Context of Potamius of Lisbon
 
