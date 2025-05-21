@@ -19,7 +19,8 @@ external_resources:
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-A striking fourth-century homiletic treatise in which Potamius of Lisbon presents the martyrdom of the prophet Isaiah through an unprecedented fusion of anatomical detail and spiritual exegesis, transforming the prophet's brutal execution into a sacred spectacle that glorifies martyrdom as triumph rather than tragedy.
+Fourth-century homiletic text in which Potamius of Lisbon examines the martyrdom of Isaiah through a combination of anatomical description and theological exposition. The treatise employs rhetorical techniques to present the prophet's death as a demonstration of spiritual victory, exemplifying early Iberian Christian literature during the post-Nicene period.
+
 </p>
 
 
