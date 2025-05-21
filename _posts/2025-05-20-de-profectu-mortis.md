@@ -30,7 +30,7 @@ Renier of St. Laurent's theological treatise examines death through the lens of 
 
 
 <figure class="image-figure" style="max-width: 400px; margin: 2rem auto;">
-  <img src="blob:https://chatgpt.com/d2f38699-d711-4d51-b026-f1ea6ff88664" alt="https://commons.wikimedia.org/wiki/File:090718-Abbaye-Saint-Laurent-arriere.jpg" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/090718-Abbaye-Saint-Laurent-arriere.jpg" alt="https://commons.wikimedia.org/wiki/File:090718-Abbaye-Saint-Laurent-arriere.jpg" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
   <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 0.75rem; font-size: 0.9rem;">https://upload.wikimedia.org/wikipedia/commons/a/a4/090718-Abbaye-Saint-Laurent-arriere.jpg</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ _Modern view of the former Abbey of Saint-Laurent in Liège. Renier spent his mo
 
 
 <figure class="image-figure" style="max-width: 400px; margin: 2rem auto;">
-  <img src="blob:https://chatgpt.com/7e2064be-c66d-4ebc-afdc-e1e2fbd63443" alt="https://collections.mfa.org/objects/49047" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+  <img src="https://collections.mfa.org/internal/media/dispatcher/711478/resize%3Aformat%3Dpreview" alt="https://collections.mfa.org/objects/49047" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
   <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 0.75rem; font-size: 0.9rem;">https://collections.mfa.org/internal/media/dispatcher/711478/resize%3Aformat%3Dpreview</figcaption>
 </figure>
 
