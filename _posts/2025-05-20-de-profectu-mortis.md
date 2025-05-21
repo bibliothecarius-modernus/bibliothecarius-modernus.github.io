@@ -4,7 +4,7 @@ title: "De profectu mortis (c. 1200)"
 date: 2025-05-20
 categories: [Asceticism & Monasticism, Moral Theology, Post-Nicene Fathers]
 youtube_id: "28tOAJ4t7W4" # Using your actual video ID
-audio_analysis: "/assets/audio/De profectu mortis - On the Advancement of Death.mp3"
+audio_analysis: "/assets/audio/On the Progress of Death.mp3"
 translation_json: "/assets/translations/2025-05-20-de-profectu-mortis.json"
 # Additional metadata fields
 original_work:
