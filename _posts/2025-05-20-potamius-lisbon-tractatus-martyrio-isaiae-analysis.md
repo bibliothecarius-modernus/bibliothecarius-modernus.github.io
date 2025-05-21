@@ -4,7 +4,7 @@ title: "Potamii Olisiponensis Tractatus de martyrio Isaiae (c. 355)"
 date: 2025-05-20
 categories: [Post-Nicene Fathers, Homiletics, Visigothic & Mozarabic Writings]
 youtube_id: "GRQXBiuL0UE"
-audio_analysis: "/assets/audio/Potamius_Tractatus_de_martyrio_Isaiae.mp3"
+audio_analysis: "/assets/audio/Potamius Isaiah Martyrdom as Sacred Spectacle.mp3"
 translation_json: "/assets/translations/2025-05-20-potamius-lisbon-tractatus-martyrio-isaiae.json"
 # Additional metadata fields
 original_work:
