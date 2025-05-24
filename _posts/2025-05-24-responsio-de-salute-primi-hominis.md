@@ -1,7 +1,7 @@
 ---
 layout: tabbed_post
 title: "Responsio de salute primi hominis (c.1160)"
-date: 2025-03-19
+date: 2025-05-24
 categories: [High Scholasticism (12th-13th c.), Soteriology, Moral Theology]
 youtube_id: "DX1T56mA3FM"
 audio_analysis: "/assets/audio/Responsio de salute primi hominis - Philip of Harveng Medieval Salvation Theology.mp3"
