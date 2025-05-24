@@ -4,7 +4,7 @@ title: "Responsio de salute primi hominis (c.1160)"
 date: 2025-05-24
 categories: [High Scholasticism, Soteriology, Moral Theology]
 youtube_id: "DX1T56mA3FM"
-audio_analysis: "/assets/audio/Responsio de salute primi hominis - Philip of Harveng Medieval Salvation Theology.mp3"
+audio_analysis: "/assets/audio/On the Salvation of Adam.mp3"
 translation_json: "/assets/translations/2025-03-19-responsio-de-salute-primi-hominis.json"
 # Additional metadata fields
 original_work:
