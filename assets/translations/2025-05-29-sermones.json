@@ -1,0 +1,10 @@
+{
+    "chunks": [
+        {
+            "original_latin": "NOTA LECTORIBUS: Hoc documentum est commentarium academicum de Sermonibus Fausti Reiensis (c.400–490), non textus originalis Latinus cum translatione. Textus interactivi inspectio non adest pro hoc documento. Ad Latinum originalem et translationem Anglicam separatim videndas in Patrologia Latina volumine 58, quaesumus repository visitas per nexum infra datum.\nhttps://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_58",
+            "cleaned_english_translation": "<speak>NOTE TO READERS: This document is a scholarly commentary on the Sermones (Sermons) of Faustus of Riez (c.400–490), not the original Latin text with translation. The interactive text viewer is unavailable for this document. To view the original Latin and English translation separately in Patrologia Latina Volume 58, please visit the following repository:\n<a href=\"https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_58\">GitHub - Patrologia Latina Volume 58 Repository</a></speak>",
+            "voice": "Ruth",
+            "chunk_number": 1
+        }
+    ]
+}
