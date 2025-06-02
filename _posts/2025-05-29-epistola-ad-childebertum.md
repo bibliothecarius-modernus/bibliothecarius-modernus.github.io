@@ -18,7 +18,7 @@ external_resources:
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-Latin text and English translation of Leo of Sens's letter to King Childebert I (c. 537-538) protesting the king's attempt to create a new bishopric at Melun, illustrating the ecclesiastical-political conflicts arising from the fragmentation of church authority across divided Merovingian kingdoms.
+Leo of Sens's letter to King Childebert I (c. 537-538) protesting the king's attempt to create a new bishopric at Melun, illustrating the ecclesiastical-political conflicts arising from the fragmentation of church authority across divided Merovingian kingdoms.
 </p>
 
 # Epistola ad Childebertum – Context and Analysis
