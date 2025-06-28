@@ -1,0 +1,10 @@
+{
+    "chunks": [
+        {
+            "original_latin": "NOTA LECTORIBUS: Hoc documentum est commentarium academicum de Libello de Laude Eremi Eucherii Lugdunensis (c.428), non textus originalis Latinus cum translatione. Textus interactivi inspectio non adest pro hoc documento. Ad Latinum originalem et translationem Anglicam separatim videndas in Patrologia Latina volumine 50, quaesumus repository visitas per nexum infra datum.\nhttps://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_50\n\nEtiam textum completum in Archive.org invenire potes:\nhttps://archive.org/details/little-book-on-the-praise-of-the-hermitage",
+            "cleaned_english_translation": "<speak>NOTE TO READERS: This document is a scholarly commentary on the Libellus de Laude Eremi (Little Book in Praise of the Desert) by Eucherius of Lyon (c.428), not the original Latin text with translation. The interactive text viewer is unavailable for this document. To view the original Latin and English translation separately in Patrologia Latina Volume 50, please visit the following repository:\n<a href=\"https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_50\">GitHub - Patrologia Latina Volume 50 Repository</a>\n\nYou can also find the complete text at Archive.org:\n<a href=\"https://archive.org/details/little-book-on-the-praise-of-the-hermitage\">Archive.org - Little Book on the Praise of the Hermitage</a></speak>",
+            "voice": "Ruth",
+            "chunk_number": 1
+        }
+    ]
+}
