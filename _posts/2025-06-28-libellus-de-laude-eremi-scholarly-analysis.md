@@ -28,7 +28,7 @@ Eucherius of Lyon's epistle to Hilary of Arles defending the eremitical life thr
 
 
 <figure class="image-figure" style="max-width: 400px; margin: 2rem auto;">
-  <img src="blob:https://chatgpt.com/70941041-3255-4b4e-b381-64e1ce0786ec" alt="" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Church_and_monastery_of_the_L%C3%A9rins_Abbey.jpg/1280px-Church_and_monastery_of_the_L%C3%A9rins_Abbey.jpg" alt="" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
   <figcaption style="text-align: center; font-style: italic; color: #666; margin-top: 0.75rem; font-size: 0.9rem;"></figcaption>
 </figure>
 
