@@ -4,14 +4,14 @@ title: "Vita Annonis Minor (c.1180)"
 date: 2025-07-30
 categories: [Hagiography, Ecclesiastical History, Asceticism & Monasticism]
 youtube_id: "28tOAJ4t7W4" # Replace with your actual video ID
-audio_analysis: "/assets/audio/2025-07-30-vita-annonis-minor.json" # Path to your MP3 file
+audio_analysis: "/assets/audio/2025-07-30-vita-annonis-minor.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-07-30-vita-annonis-minor.json"
 # Additional metadata fields
 original_work:
   latin_title: Vita Annonis Minor
   author: "Anonymous"
   date: "c. 1180"
-  publication: "Bibliotheca Hagiographica Latina 509"
+  publication: "Siegburger Studien Volume 10"
   context: "A late 12th-century hagiographic biography of Saint Anno II, Archbishop of Cologne, compiled specifically to support his canonization in 1183. The work emphasizes Anno's sanctity, miracles, and role as a church reformer during the Investiture Controversy era."
 external_resources:
   archive_url: "https://archive.org/details/vita-annonis-minor"
