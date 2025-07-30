@@ -24,9 +24,6 @@ Hagiographic biography of Archbishop Anno II of Cologne, compiled by Siegburg Ab
 </p>
 
 
-**Introduction:** 
-_Vita Annonis Minor_ is a Latin hagiographic biography of Saint Anno II, Archbishop of Cologne (r. 1056–1075). Compiled in the late 12th century, this work presents Anno’s life and posthumous miracles in a saintly framework, aiming to secure his canonization. The following report examines its historical context, authorship and manuscript provenance, literary structure and theological features, key themes, and its reception and scholarly interpretation, drawing on critical editions and academic studies.
-
 ## 1\. Historical Context (11th–12th Century Background)
 
 Anno II lived in a turbulent era marked by imperial and ecclesiastical power struggles. Born around 1010 into a Swabian noble family, he rose through the imperial court to become Archbishop of Cologne in 1056 [en.wikipedia.org](https://en.wikipedia.org/wiki/Anno_II#:~:text=Anno%20II%20%28c,of%20the%20%2062) [encyclopedia.com](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/anno-cologne-st#:~:text=Archbishop%20of%20Cologne%3B%20b,lenient%20Adalbert%20of%20Bremen%2C%20but). As archbishop, Anno was both a spiritual leader and a secular prince, wielding significant influence in the Holy Roman Empire. He served as one of the regents for the young King (later Emperor) Henry IV, even orchestrating Henry’s dramatic seizure at Kaiserswerth in 1062 to wrest control from the dowager empress [encyclopedia.com](https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/anno-cologne-st#:~:text=and%20became%20archbishop%20of%20Cologne,but%20was%20recalled%20in%201072) . This bold political act – essentially a kidnapping – made Anno the guardian of the realm for a time, illustrating the immense **episcopal authority** wielded by 11th-century prince-bishops.
