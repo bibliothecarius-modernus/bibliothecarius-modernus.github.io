@@ -27,7 +27,7 @@ The *Libellus de Ratione Inveniendi Crassitudinem Sphaerae* ("A Short Work on th
 
 This was not the "Dark Ages" of popular imagination. Instead, it was an era when scholars like Gerbert of Aurillac (later Pope Sylvester II) reintroduced the abacus to Western Europe, brought Hindu-Arabic numerals to European attention through contact with Islamic Spain, and constructed sophisticated astronomical instruments including armillary spheres.
 
-The text represents a continuation of scholarly correspondence between Adelbold and Gerbert—a relationship that exemplifies how mathematical knowledge circulated among the educated elite of medieval Christendom. Earlier, Adelbold had posed a problem to Gerbert about calculating the area of an equilateral triangle, demonstrating that mathematical puzzles were a form of intellectual currency in this learned network.
+The text represents a continuation of scholarly correspondence between Adelbold and Gerbert—a relationship that exemplifies how mathematical knowledge circulated among the educated elite of medieval Christendom. As the *Encyclopedia of Pope Sylvester II* notes, Gerbert's circle at Reims began to revive Greek geometry (often via Boethius and Arabic sources) under a Christian framework, and this treatise is a direct product of that milieu—evidence of the "vivid interest in mathematics" among the clergy. Earlier, Adelbold had posed a problem to Gerbert about calculating the area of an equilateral triangle, demonstrating that mathematical puzzles were a form of intellectual currency in this learned network.
 
 ## 2. The Author: Adelbold of Utrecht (c. 975–1026)
 
@@ -97,34 +97,75 @@ Before this treatise on spheres, Adelbold had posed a problem to Gerbert: In an 
 
 ## 4. The Mathematical Content
 
+<div style="background-color: #f5f5f5; border-left: 4px solid #666; padding: 12px 16px; margin: 20px 0; font-style: italic;">
+<strong>Figure concept:</strong> A sphere inscribed in a cylinder – Archimedes' classical model illustrating sphere volume. Archimedes proved that a sphere's volume equals exactly ⅔ of its circumscribing cylinder's volume.
+</div>
+
 ### The Problem from Macrobius
 
 Adelbold explicitly addresses a passage from Macrobius's *Commentary on the Dream of Scipio* (*Commentarii in Somnium Scipionis*), one of the most influential textbooks of the medieval period.
 
-Macrobius (fl. c. 400 CE) stated that when one sphere's diameter is double another's, its "thickness" (*crassitudo*, meaning volume) is eight times greater. Adelbold wants to understand and verify the mathematical reasoning behind this claim.
+Macrobius (fl. c. 400 CE) stated that when one sphere's diameter is double another's, its "thickness" (*crassitudo*, meaning volume) is eight times greater. Adelbold wants to understand and verify the mathematical reasoning behind this claim. Notably, the Latin term *crassitudo sphaerae* is adopted from Cicero to mean "volume"—a reminder that medieval scholars lacked our modern vocabulary and had to adapt classical terminology.
 
 This connection is significant because it shows:
 1. The continuity of classical learning through late antique sources
 2. How medieval scholars engaged critically with inherited texts
 3. The role of Macrobius as an intermediary for mathematical knowledge
 
-### Adelbold's Method
+### Adelbold's Method: A Worked Example
 
-The treatise demonstrates a sophisticated understanding of spherical geometry:
+The treatise demonstrates a sophisticated understanding of spherical geometry through a concrete numerical example. Adelbold works through the calculation step by step:
 
-1. **Circle calculations** using π ≈ 22/7 (the Archimedean approximation): A circle with diameter 7 has circumference 22
+**Step 1: Establish the Circle**
 
-2. **Area calculation**: Area = (diameter/2) × (circumference/2), yielding 38.5 for a circle of diameter 7
+Take a sphere with diameter 7 (length units). Using the Archimedean approximation π ≈ 22/7:
+- Circumference = 22
+- Radius = 3½
 
-3. **The cube-sphere relationship**: The core problem involves inscribing a sphere within a cube and determining what fraction of the cube's volume the sphere occupies
+**Step 2: Calculate the Circle's Area**
 
-4. **The 11/21 ratio**: Adelbold arrives at the sphere being approximately 11/21 of the cube's volume—meaning 10/21 must be "cut away" from the cube to leave the sphere
+The circle's area is calculated as radius × half-circumference:
+
+$$3.5 \times 11 = 38.5$$
+
+**Step 3: Inscribe the Sphere in a Cube**
+
+Adelbold inscribes the sphere in a cube of side 7. The cube's volume is:
+
+$$7^3 = 343$$
+
+**Step 4: Subtract the Excess**
+
+To find the sphere's volume, Adelbold "cuts away" the parts of the cube that exceed the sphere. By removing 1/21 of the cube repeatedly:
+
+- Removing 10 times gives: 343 − (10 × 343/21) = 343 − 163⅓ ≈ 179⅔
+- Removing 11 times gives: 343 − (11 × 343/21) = 343 − 179⅔ ≈ 163⅓
+
+He concludes the sphere's volume is **179⅔ cubic units**.
+
+**Step 5: Verification**
+
+This result exactly matches the classical formula $$\frac{4}{3}\pi r^3$$ when using π ≈ 22/7:
+
+$$\frac{4}{3} \times \frac{22}{7} \times (3.5)^3 = \frac{4}{3} \times \frac{22}{7} \times 42.875 = 179\frac{2}{3}$$
+
+The agreement is striking—Adelbold has successfully reconstructed the Archimedean result!
+
+### The 11/21 Ratio
+
+Adelbold arrives at the sphere being approximately 11/21 of the cube's volume—meaning 10/21 must be "cut away" from the cube to leave the sphere.
 
 ### Mathematical Significance
 
 The actual ratio of sphere to cube volume (where the sphere is inscribed in the cube) is π/6 ≈ 0.5236. Using π ≈ 22/7, this gives approximately 11/21 ≈ 0.5238—remarkably close! This demonstrates sophisticated understanding of the relationship between these geometric forms.
 
+Modern historian Curtze (in his *Abhandlungen zur Geschichte der Mathematik*) remarks that Adalbold's arithmetic indeed reproduces Archimedes' result, yielding the familiar π = 22/7 approximation.
+
 ### The Archimedes Connection
+
+<div style="background-color: #f5f5f5; border-left: 4px solid #666; padding: 12px 16px; margin: 20px 0; font-style: italic;">
+<strong>Figure concept:</strong> Archimedes' sphere and cylinder – the sphere's volume is ⅔ that of its circumscribing cylinder. This relationship was so beloved by Archimedes that he requested it be inscribed on his tombstone.
+</div>
 
 While Adelbold works toward sphere volume calculations, the ultimate source for this mathematics is Archimedes' treatise *On the Sphere and Cylinder* (c. 225 BCE). However, Archimedes' original work was largely unknown in Western Europe in Adelbold's time.
 
@@ -171,13 +212,15 @@ The text exemplifies how cathedral schools (Reims, Liège, Bamberg, Cologne) ser
 
 Students became teachers, and the cycle continued, gradually building the intellectual infrastructure that would eventually lead to the medieval universities.
 
-### Manuscript Tradition
+### Manuscript Tradition and Publication History
 
 The text survived in manuscripts from:
 - Tegernsee Monastery
 - St. Peter's Monastery, Salzburg
 
-It was first published by Alphonsus Hueber and included in Bernard Pez's *Thesaurus Anecdotorum Novissimus* (1721), making it available to modern scholars.
+As Migne notes in *Patrologia Latina*, this *Libellus* "now appears for the first time" from old manuscripts—meaning it had not circulated widely before its 19th-century publication. It was first published by Alphonsus Hueber and included in Bernard Pez's *Thesaurus Anecdotorum Novissimus* (1721), making it available to modern scholars.
+
+In the corpus of *Patrologia Latina* (vol. 140), this text illustrates the Church's custodianship of learning—even a bishop's mathematical paper is preserved alongside sermons and theology. The Latin text appears at cols. 1103–1106 of that volume.
 
 ## 7. Noteworthy Excerpts (Translated)
 
@@ -201,10 +244,21 @@ It was first published by Alphonsus Hueber and included in Bernard Pez's *Thesau
 
 ## Sources
 
+### Primary Sources
+- J.-P. Migne, *Patrologia Latina* vol. 140, cols. 1103–1106: [Archive.org](https://archive.org/stream/patrologiaecurs17unkngoog/patrologiaecurs17unkngoog_djvu.txt)
+
+### Secondary Literature
+- Curtze, M. *Abhandlungen zur Geschichte der Mathematik* (1927): [Archive.org](https://archive.org/stream/acd4263.0003.001.umich.edu/acd4263.0003.001.umich.edu_djvu.txt)
+- Encyclopedia.com: [Pope Sylvester II](https://www.encyclopedia.com/people/philosophy-and-religion/roman-catholic-popes-and-antipopes/pope-sylvester-ii)
 - MacTutor History of Mathematics: [Gerbert of Aurillac](https://mathshistory.st-andrews.ac.uk/Biographies/Gerbert/)
+- MAA Convergence: [Gerbert's Geometry](https://old.maa.org/press/periodicals/convergence/mathematical-treasure-gerberts-geometry)
+- Britannica: [Sylvester II](https://www.britannica.com/biography/Sylvester-II/Pontificate)
+
+### Reference
 - Wikipedia: [Adalbold II of Utrecht](https://en.wikipedia.org/wiki/Adalbold_II_of_Utrecht)
 - Wikipedia: [Pope Sylvester II](https://en.wikipedia.org/wiki/Pope_Sylvester_II)
 - Wikipedia: [Macrobius](https://en.wikipedia.org/wiki/Macrobius)
 - Wikipedia: [On the Sphere and Cylinder](https://en.wikipedia.org/wiki/On_the_Sphere_and_Cylinder)
-- MAA Convergence: [Gerbert's Geometry](https://old.maa.org/press/periodicals/convergence/mathematical-treasure-gerberts-geometry)
-- Britannica: [Sylvester II](https://www.britannica.com/biography/Sylvester-II/Pontificate)
+
+### Notes on Figures
+The conceptual figures described in this article illustrate Archimedes' classical sphere-volume theorem. No direct medieval diagram survives for Adelbold's treatise, but the geometry described underlies his calculations.
