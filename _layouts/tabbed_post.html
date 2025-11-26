@@ -1073,11 +1073,26 @@ layout: default
       function processTranslationJson(json, container) {
         // Clear loading placeholders
         container.innerHTML = '';
-        
+
         // Get parent tab type
         const parentTab = container.closest('.tab-panel');
         const tabType = parentTab ? parentTab.id : null;
-        
+
+        // Helper function to get chunk number (supports both old and new format)
+        function getChunkNumber(chunk) {
+          return chunk.chunk_number || chunk.chunk_id || '';
+        }
+
+        // Helper function to get Latin text (supports both old and new format)
+        function getLatinText(chunk) {
+          return chunk.original_latin || chunk.latin || '';
+        }
+
+        // Helper function to get English text (supports both old and new format)
+        function getEnglishText(chunk) {
+          return chunk.cleaned_english_translation || chunk.english || '';
+        }
+
         // Check if json has chunks
         if (json && json.chunks && json.chunks.length > 0) {
           // Process based on tab type
@@ -1087,8 +1102,8 @@ layout: default
               const chunkEl = document.createElement('div');
               chunkEl.className = 'chunk-section latin-full';
               chunkEl.innerHTML = `
-                <span class="chunk-number">${chunk.chunk_number}</span>
-                <div class="latin-text">${chunk.original_latin.replace(/\n/g, '<br>')}</div>
+                <span class="chunk-number">${getChunkNumber(chunk)}</span>
+                <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
               `;
               container.appendChild(chunkEl);
             });
@@ -1097,18 +1112,18 @@ layout: default
             json.chunks.forEach(chunk => {
               const chunkEl = document.createElement('div');
               chunkEl.className = 'chunk-section english-full';
-              
+
               // Clean the text
-              let cleanedText = chunk.cleaned_english_translation
+              let cleanedText = getEnglishText(chunk)
                 .replace(/<speak>/g, '')
                 .replace(/<\/speak>/g, '')
                 .replace(/<s>/g, '')
                 .replace(/<\/s>/g, '')
                 .replace(/<p>/g, '<p class="translation-paragraph">')
                 .replace(/<break time="\\d+ms"\/>/g, '');
-              
+
               chunkEl.innerHTML = `
-                <span class="chunk-number">${chunk.chunk_number}</span>
+                <span class="chunk-number">${getChunkNumber(chunk)}</span>
                 <div class="english-text">${cleanedText}</div>
               `;
               container.appendChild(chunkEl);
@@ -1117,15 +1132,15 @@ layout: default
             // We need to find which column we're in
             const latinColumn = container.closest('.latin-column');
             const englishColumn = container.closest('.english-column');
-            
+
             if (latinColumn) {
               // Latin column in side-by-side view
               json.chunks.forEach(chunk => {
                 const chunkEl = document.createElement('div');
                 chunkEl.className = 'chunk-section';
                 chunkEl.innerHTML = `
-                  <span class="chunk-number">${chunk.chunk_number}</span>
-                  <div class="latin-text">${chunk.original_latin.replace(/\n/g, '<br>')}</div>
+                  <span class="chunk-number">${getChunkNumber(chunk)}</span>
+                  <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
                 `;
                 container.appendChild(chunkEl);
               });
@@ -1134,18 +1149,18 @@ layout: default
               json.chunks.forEach(chunk => {
                 const chunkEl = document.createElement('div');
                 chunkEl.className = 'chunk-section';
-                
+
                 // Clean the text
-                let cleanedText = chunk.cleaned_english_translation
+                let cleanedText = getEnglishText(chunk)
                   .replace(/<speak>/g, '')
                   .replace(/<\/speak>/g, '')
                   .replace(/<s>/g, '')
                   .replace(/<\/s>/g, '')
                   .replace(/<p>/g, '<p class="translation-paragraph">')
                   .replace(/<break time="\\d+ms"\/>/g, '');
-                
+
                 chunkEl.innerHTML = `
-                  <span class="chunk-number">${chunk.chunk_number}</span>
+                  <span class="chunk-number">${getChunkNumber(chunk)}</span>
                   <div class="english-text">${cleanedText}</div>
                 `;
                 container.appendChild(chunkEl);
