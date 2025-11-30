@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De cultu imaginum (c. 840)"
 date: 2025-11-26
-categories: [Medieval Theology, Carolingian Renaissance]
+categories: [Carolingian Theological Renaissance, Apologetics, Heresiology]
 youtube_id: "NcGaqandP_k"
 audio_analysis: "/assets/audio/Jonas Orleans De Cultu Imaginum Book 1.mp3"
 translation_json: "/assets/translations/2025-11-26-de-cultu-imaginum-book-1.json"
