@@ -25,7 +25,6 @@ https://archive.org/details/on-the-power-of-the-holy-spirit
 Resources
 
 1. For a plain-text copy of both the Latin text and the translation, please visit: https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_52
-2. If you are interested in making your own audiobooks from public domain material, please visit: https://github.com/wryan14/TextractSSMLProcessor (Contributions to this project are welcome!)
 
 Attribution
 

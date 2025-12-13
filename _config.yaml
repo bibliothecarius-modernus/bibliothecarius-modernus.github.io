@@ -13,7 +13,6 @@ archive_link: https://archive.org/details/@ryan_wolfslayer
 # Additional resources
 resource_links:
   latin_texts: https://github.com/wryan14/Latin-Patristic-Texts
-  text_conversion: https://github.com/wryan14/TextractSSMLProcessor
 
 # Build settings
 markdown: kramdown
