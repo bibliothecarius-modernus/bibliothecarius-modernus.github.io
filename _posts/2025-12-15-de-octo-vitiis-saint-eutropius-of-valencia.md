@@ -14,6 +14,9 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/de-octo-vitiis-eutropius-valencia"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Eutropius%20of%20Valencia%20-%20On%20the%20Eight%20Vices"
+
+redirect_from:
+  - "/monastic-spirituality/early-church-theology/patristic-correspondence/2025/12/15/de-octo-vitiis-saint-eutropius-of-valencia.html"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">

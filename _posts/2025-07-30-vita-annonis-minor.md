@@ -15,6 +15,9 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/vita-annonis-minor"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Vita_Annonis_Minor"
+
+redirect_from:
+  - "/hagiography/ecclesiastical-history/asceticism-monasticism/2025/07/30/vita-annonis-minor.html"
 ---
 
 

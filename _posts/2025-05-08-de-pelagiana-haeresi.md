@@ -15,6 +15,9 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/on-the-pelagian-heresy-growing-in-the-age-of-leo-the-great"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55"
+
+redirect_from:
+  - "/post-nicene-fathers/apologetics/heresiology/2025/05/08/de-pelagiana-haeresi.html"
 ---
 
 

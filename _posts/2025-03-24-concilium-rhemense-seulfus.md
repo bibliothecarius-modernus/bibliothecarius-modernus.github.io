@@ -15,6 +15,9 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/reims-council-presided-by-seulf"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_132"
+
+redirect_from:
+  - "/ecclesiastical-history/conciliar-synodal-acts/2025/03/24/concilium-rhemense-seulfus.html"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">

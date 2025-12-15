@@ -15,6 +15,9 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/exorcism_202505"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_17"
+
+redirect_from:
+  - "/liturgical-texts-sacramentaries/asceticism-monasticism/ecclesiastical-history/2025/05/24/exorcismus-ambrose.html"
 ---
 
 

@@ -21,6 +21,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
+
+# Permalink format - simple date-based URLs without categories
+permalink: /:year/:month/:title/
 
 # Collections
 collections:

@@ -15,6 +15,9 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/conflicts-on-the-trinity-book-one"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_53"
+
+redirect_from:
+  - "/post-nicene-fathers/christology/heresiology/2025/07/01/conflictus-de-deo-trino-uno-theological-historical-analysis.html"
 ---
 
 

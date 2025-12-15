@@ -17,6 +17,9 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/commentary-on-the-apocalypse-book-one"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68"
+
+redirect_from:
+  - "/new-testament-commentaries/eschatology/post-nicene-fathers/2025/03/26/commentaria_primasius.html"
 ---
 
 

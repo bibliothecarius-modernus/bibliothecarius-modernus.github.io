@@ -17,6 +17,9 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/the-life-of-saint-odo-second-abbot-of-cluny"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_133"
+
+redirect_from:
+  - "/hagiography/asceticism-monasticism/monastic-rules-constitutions/2025/03/19/vita-sancti-odonis.html"
 ---
 
 
