@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De glorificatione Trinitatis et processione sancti Spiritus (c.1128)"
 date: 2025-03-28
-categories: [trinitarian-theology, post-nicene-fathers, pneumatology]
+categories: [trinitarian-theology, high-scholasticism, pneumatology]
 youtube_id: "3lLq_1wsZFI" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-03-28-de-glorificatione-trinitatis.json" # Path to your JSON file
 

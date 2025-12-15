@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Epistola ad Childebertum (c.537-538)"
 date: 2025-05-29
-categories: [ecclesiology, apostolic-fathers, post-nicene-fathers]
+categories: [ecclesiology, post-nicene-fathers, epistolary-literature]
 youtube_id: "ZbM7vdt48fE"
 translation_json: "/assets/translations/2025-05-29-epistola-ad-childebertum.json"
 original_work:
