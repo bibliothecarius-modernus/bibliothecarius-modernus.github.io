@@ -11,14 +11,14 @@ original_work:
   author: "Saint Eutropius of Valencia"
   date: "c. 600 CE"
   publication: "Patrologia Latina Volume 80, cols. 9D-14D"
-  context: "A letter on the eight principal vices written by a Spanish abbot to Bishop Peter of Ercavica, presenting the systematic psychology of sin that would influence medieval spirituality"
+  context: "A letter on the eight principal vices attributed to a Spanish bishop to Bishop Peter of Ercavica, presenting the systematic psychology of sin that would influence medieval spirituality"
 external_resources:
   archive_url: "https://archive.org/details/de-octo-vitiis-eutropius-valencia"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Eutropius%20of%20Valencia%20-%20On%20the%20Eight%20Vices"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-A 6th-century treatise on the psychology of sin from Visigothic Spain. Writing around 600 CE, Saint Eutropius of Valencia presents the eight principal vices in their original formulation—the precursor to the famous "Seven Deadly Sins" that would dominate medieval spirituality.
+A 6th-century treatise on the psychology of sin from Visigothic Spain. Attributed to Saint Eutropius of Valencia (on the testimony of Isidore of Seville), this text presents the eight principal vices in their original formulation—the precursor to the famous "Seven Deadly Sins" that would dominate medieval spirituality.
 </p>
 
 ## Historical Context: Visigothic Spain After Conversion
@@ -93,9 +93,15 @@ The appetites themselves are not evil; their **disordered expression** is. This 
 
 **Saint Eutropius of Valencia** (Latin: *Eutropius Valentinus*; fl. late 6th–early 7th century; d. c. 610) was a Spanish churchman who served successively as monk, abbot, and bishop during the critical period following the Visigothic conversion to Catholicism.
 
+### Attribution Evidence
+
+The attribution of *De Octo Vitiis* to Eutropius rests on **primary source evidence from Isidore of Seville**. Migne's *Patrologia Latina* (volume 80, column 9) explicitly cites Isidore's *De viris illustribus*, chapter 32, as the source for attributing these letters to Eutropius. This seventh-century testimony—from a near-contemporary who had access to Spanish church archives—constitutes the strongest form of evidence typically available for texts of this period.
+
+Modern scholarship on Eutropius remains sparse. While Isidore's testimony is not seriously contested, the text receives little attention in contemporary studies of Visigothic spirituality—reflecting perhaps the broader neglect of minor Spanish patristic authors rather than any specific problem with the attribution.
+
 ### Early Life and Monasticism
 
-Eutropius entered the monastery of Servitanum (location uncertain, possibly near Valencia or in the Aragonese region), where he eventually rose to become abbot (*pater monachorum*). Isidore of Seville records that while still at Servitanum, Eutropius composed his letters on the vices and monastic discipline, indicating that his reputation as a spiritual writer preceded his episcopal career.
+According to Isidore, Eutropius entered the monastery of Servitanum (location uncertain, possibly near Valencia or in the Aragonese region), where he eventually rose to become abbot (*pater monachorum*). Isidore records that while still at Servitanum, Eutropius composed his letters on the vices and monastic discipline, indicating that his reputation as a spiritual writer preceded his episcopal career.
 
 ### Episcopal Ministry
 
@@ -103,7 +109,7 @@ Eutropius was elevated to the bishopric of Valencia (Latin: *Valentia*), one of 
 
 ### Legacy
 
-Isidore of Seville's characterization of Eutropius's letter on the vices as *"valde utilem epistolam"* (a very useful letter) indicates that the text enjoyed authority in seventh-century Spain. The subsequent obscurity of Eutropius reflects not the quality of his work but the catastrophic disruption of Spanish church life by the Muslim invasion of 711.
+Isidore's characterization of Eutropius's letter on the vices as *"valde utilem epistolam"* (a very useful letter) indicates that the text enjoyed authority in seventh-century Spain. The subsequent obscurity of Eutropius reflects not the quality of his work but the catastrophic disruption of Spanish church life by the Muslim invasion of 711.
 
 Eutropius is venerated as a saint in the Spanish church. His feast day is traditionally celebrated on **May 23**.
 
