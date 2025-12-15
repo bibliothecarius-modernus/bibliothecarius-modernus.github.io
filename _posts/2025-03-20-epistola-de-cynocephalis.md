@@ -4,7 +4,6 @@ title: "Epistola de cynocephalis (c.865)"
 date: 2025-03-20
 categories: [Epistolary Literature, Ecclesiastical History, Carolingian Theological Renaissance]
 youtube_id: "PNH4_eu-F5c"  # Replace with your actual video ID
-audio_analysis: "/assets/audio/Ratramnus_On-Dog-Headed-People-and-Human-Souls.mp3"  # Path to your MP3 file
 translation_json: /assets/translations/2025-03-20-epistola-de-cynocephalis.json
 original_work:
   latin_title: Epistola de cynocephalis

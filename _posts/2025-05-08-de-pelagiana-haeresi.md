@@ -4,7 +4,6 @@ title: "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (c.445)"
 date: 2025-05-08
 categories: [Post-Nicene Fathers, Apologetics, Heresiology]
 youtube_id: "i60cOx7hcgY"
-audio_analysis: "/assets/audio/Leo the Great Against the Pelagian Heresy.mp3"
 translation_json: "/assets/translations/2025-05-08-de-pelagiana-haeresi.json"
 # Additional metadata fields
 original_work:

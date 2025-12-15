@@ -4,7 +4,6 @@ title: "Responsio de salute primi hominis (c.1160)"
 date: 2025-05-24
 categories: [High Scholasticism, Soteriology, Moral Theology]
 youtube_id: "DX1T56mA3FM"
-audio_analysis: "/assets/audio/On the Salvation of Adam.mp3"
 translation_json: "/assets/translations/2025-05-24-responsio-de-salute-primi-hominis.json"
 # Additional metadata fields
 original_work:

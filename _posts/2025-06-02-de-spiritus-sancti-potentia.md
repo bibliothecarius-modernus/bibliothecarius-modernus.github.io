@@ -4,7 +4,6 @@ title: "De Spiritus Sancti Potentia (c.335–414)"
 date: 2025-06-02
 categories: [Pneumatology, Nicene Fathers, Trinitarian Theology]
 youtube_id: "f7hA8ons1AQ"
-audio_analysis: "/assets/audio/2025-06-02-de-spiritus-sancti-potentia.mp3"
 translation_json: "/assets/translations/2025-06-02-de-spiritus-sancti-potentia.json"
 original_work:
   latin_title: "De Spiritus Sancti Potentia"

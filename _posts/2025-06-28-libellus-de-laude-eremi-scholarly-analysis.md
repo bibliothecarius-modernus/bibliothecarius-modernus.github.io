@@ -4,7 +4,6 @@ title: "Libellus de Laude Eremi (c.428)"
 date: 2025-06-28
 categories: [Asceticism & Monasticism, Post-Nicene Fathers, Mystical Theology]
 youtube_id: "f9agxTyZwdc"
-audio_analysis: "/assets/audio/In Praise of the Hermitage.mp3"
 translation_json: "/assets/translations/2025-06-28-libellus-de-laude-eremi.json"
 # Additional metadata fields
 original_work:

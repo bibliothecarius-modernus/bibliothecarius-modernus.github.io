@@ -4,7 +4,6 @@ title: "Libellus contra Maximum Arianum (c.484)"
 date: 2025-04-25
 categories: [Post-Nicene Fathers, Apologetics, Visigothic & Mozarabic Writings]
 youtube_id: "PfotBx6JKsg"
-audio_analysis: "/assets/audio/Libellus-contra-Maximum-Arianum-Analysis.mp3"
 translation_json: "/assets/translations/2025-04-25-libellus-contra-maximum.json"
 # Additional metadata fields
 original_work:

@@ -4,7 +4,6 @@ title: "[LATIN_TITLE] ([DATE]): Text & Translation"
 date: YYYY-MM-DD
 categories: []
 youtube_id: ""
-audio_analysis: ""
 translation_json: ""
 
 original_work:

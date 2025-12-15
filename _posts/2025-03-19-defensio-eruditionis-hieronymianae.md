@@ -4,7 +4,6 @@ title: "Defensio Eruditionis Hieronymianae (c.1700)"
 date: 2025-03-19
 categories: [Apologetics, Patristic Philosophy, Heresiology]
 youtube_id: "40fIiE9grXY"
-audio_analysis: "/assets/audio/martianay-defends-jerome-tradition-against-enlightenment-critique.mp3"
 translation_json: "/assets/translations/2025-03-19-defensio-eruditionis-hieronymianae.json"
 
 # Additional metadata fields

@@ -4,7 +4,6 @@ title: "Epistolae Tres (c. 610 CE)"
 date: 2025-12-14
 categories: [Merovingian History, Medieval Diplomacy, Patristic Correspondence]
 youtube_id: "u-WBXrP2QtY"
-audio_analysis: "/assets/audio/Three Letters - Bulgaranus Comes.mp3"
 translation_json: "/assets/translations/2025-12-14-epistolae-tres-bulgaranus.json"
 original_work:
   latin_title: Epistolae Tres

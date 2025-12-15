@@ -4,7 +4,6 @@ title: "Epistolae de Sanctus Leo III Pontifex Romanus (c.800)"
 date: 2025-05-08
 categories: [Liturgical Texts & Sacramentaries, Ecclesiastical History, Post-Nicene Fathers]
 youtube_id: "rVkoTp1lIvA" 
-audio_analysis: "/assets/audio/Pope Leo III Letters.mp3"
 translation_json: "/assets/translations/2025-05-08-epistolae-de-sanctus-leo-iii.json"
 # Additional metadata fields
 original_work:

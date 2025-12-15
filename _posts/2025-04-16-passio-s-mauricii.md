@@ -4,7 +4,6 @@ title: "Passio S. Mauricii et sociorum (c.450)"
 date: 2025-04-16
 categories: [Hagiography, Post-Nicene Fathers, Ecclesiastical History]
 youtube_id: "jKYrw8S5Ufg" # Replace with your actual video ID
-audio_analysis: "/assets/audio/Saint Maurice and the Theban Legion Faith and Legend.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-04-16-passio-s-mauricii-et-sociorum.json" # Additional metadata fields
 original_work:
   latin_title: Passio S. Mauricii et sociorum

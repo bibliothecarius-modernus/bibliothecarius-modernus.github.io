@@ -4,7 +4,6 @@ title: "Epistola ad Childebertum (c.537-538)"
 date: 2025-05-29
 categories: [Ecclesiology, Apostolic Fathers, Post-Nicene Fathers]
 youtube_id: "ZbM7vdt48fE"
-audio_analysis: "/assets/audio/2025-05-29-epistola-ad-childebertum.mp3"
 translation_json: "/assets/translations/2025-05-29-epistola-ad-childebertum.json"
 original_work:
   latin_title: "Epistola ad Childebertum"

@@ -4,7 +4,6 @@ title: "De Octo Vitiis (c. 600 CE)"
 date: 2025-12-15
 categories: [Monastic Spirituality, Early Church Theology, Patristic Correspondence]
 youtube_id: "dTD1ymDfGYA"
-audio_analysis: "/assets/audio/On the Eight Vices - Saint Eutropius of Valencia.mp3"
 translation_json: "/assets/translations/2025-12-15-de-octo-vitiis-saint-eutropius-of-valencia.json"
 original_work:
   latin_title: De Octo Vitiis

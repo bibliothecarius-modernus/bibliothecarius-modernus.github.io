@@ -4,7 +4,6 @@ title: "Vita Sancti Odonis Abbatis Cluniacensis Secundi (c. 943)"
 date: 2025-03-19
 categories: [Hagiography, Asceticism & Monasticism, Monastic Rules & Constitutions]
 youtube_id: "Ysp8glHxXdQ"  # Replace with your actual video ID
-audio_analysis: "/assets/audio/John of Salernos Life of St Odo_ Clunys Early Reform.mp3" # Path to your MP3 file
 translation_json: "/assets/translations/2025-03-19-vita-sancti-odonis.json"
 
 # Additional metadata fields
