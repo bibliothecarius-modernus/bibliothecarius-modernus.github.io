@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De Fide ad Petrum (c.519)"
 date: 2025-05-18
-categories: [Trinitarian Theology, Christology, Post-Nicene Fathers]
+categories: [trinitarian-theology, christology, post-nicene-fathers]
 youtube_id: "Dn4WhiCWPis"
 translation_json: "/assets/translations/2025-05-18-fulgentius-de-fide.json"
 # Additional metadata fields

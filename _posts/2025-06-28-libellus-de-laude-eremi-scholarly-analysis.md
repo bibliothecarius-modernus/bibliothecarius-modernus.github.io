@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Libellus de Laude Eremi (c.428)"
 date: 2025-06-28
-categories: [Asceticism & Monasticism, Post-Nicene Fathers, Mystical Theology]
+categories: [asceticism-monasticism, post-nicene-fathers, mystical-theology]
 youtube_id: "f9agxTyZwdc"
 translation_json: "/assets/translations/2025-06-28-libellus-de-laude-eremi.json"
 # Additional metadata fields

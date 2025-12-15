@@ -1,0 +1,269 @@
+# Category mapping for stable URLs
+# Slug is the stable URL identifier - never changes once created
+# name is the display text - can be updated freely
+# legacy_hashes are old URL formats that should redirect to the slug
+
+apologetics:
+  name: "Apologetics"
+  legacy_hashes:
+    - "Apologetics"
+
+apostolic-fathers:
+  name: "Apostolic Fathers"
+  legacy_hashes:
+    - "Apostolic Fathers"
+    - "Apostolic%20Fathers"
+
+asceticism-monasticism:
+  name: "Asceticism & Monasticism"
+  legacy_hashes:
+    - "Asceticism & Monasticism"
+    - "Asceticism%20%26%20Monasticism"
+
+canon-law:
+  name: "Canon Law"
+  legacy_hashes:
+    - "Canon Law"
+    - "Canon%20Law"
+
+carolingian-theological-renaissance:
+  name: "Carolingian Theological Renaissance"
+  legacy_hashes:
+    - "Carolingian Theological Renaissance"
+    - "Carolingian%20Theological%20Renaissance"
+
+christology:
+  name: "Christology"
+  legacy_hashes:
+    - "Christology"
+
+chronicles-annals:
+  name: "Chronicles & Annals"
+  legacy_hashes:
+    - "Chronicles & Annals"
+    - "Chronicles%20%26%20Annals"
+
+conciliar-synodal-acts:
+  name: "Conciliar & Synodal Acts"
+  legacy_hashes:
+    - "Conciliar & Synodal Acts"
+    - "Conciliar%20%26%20Synodal%20Acts"
+
+creeds-confessions:
+  name: "Creeds & Confessions"
+  legacy_hashes:
+    - "Creeds & Confessions"
+    - "Creeds%20%26%20Confessions"
+
+early-church-theology:
+  name: "Early Church Theology"
+  legacy_hashes:
+    - "Early Church Theology"
+    - "Early%20Church%20Theology"
+
+ecclesiastical-history:
+  name: "Ecclesiastical History"
+  legacy_hashes:
+    - "Ecclesiastical History"
+    - "Ecclesiastical%20History"
+
+ecclesiology:
+  name: "Ecclesiology"
+  legacy_hashes:
+    - "Ecclesiology"
+
+epistolary:
+  name: "Epistolary"
+  legacy_hashes:
+    - "Epistolary"
+
+epistolary-literature:
+  name: "Epistolary Literature"
+  legacy_hashes:
+    - "Epistolary Literature"
+    - "Epistolary%20Literature"
+
+eschatology:
+  name: "Eschatology"
+  legacy_hashes:
+    - "Eschatology"
+
+hagiography:
+  name: "Hagiography"
+  legacy_hashes:
+    - "Hagiography"
+
+heresiology:
+  name: "Heresiology"
+  legacy_hashes:
+    - "Heresiology"
+
+high-scholasticism:
+  name: "High Scholasticism"
+  legacy_hashes:
+    - "High Scholasticism"
+    - "High%20Scholasticism"
+
+homiletics:
+  name: "Homiletics"
+  legacy_hashes:
+    - "Homiletics"
+
+irish-anglo-saxon-contributions:
+  name: "Irish & Anglo-Saxon Contributions"
+  legacy_hashes:
+    - "Irish & Anglo-Saxon Contributions"
+    - "Irish%20%26%20Anglo-Saxon%20Contributions"
+
+liturgical-texts-sacramentaries:
+  name: "Liturgical Texts & Sacramentaries"
+  legacy_hashes:
+    - "Liturgical Texts & Sacramentaries"
+    - "Liturgical%20Texts%20%26%20Sacramentaries"
+
+marian-theology-devotion:
+  name: "Marian Theology & Devotion"
+  legacy_hashes:
+    - "Marian Theology & Devotion"
+    - "Marian%20Theology%20%26%20Devotion"
+
+mathematics:
+  name: "Mathematics"
+  legacy_hashes:
+    - "Mathematics"
+
+medieval-diplomacy:
+  name: "Medieval Diplomacy"
+  legacy_hashes:
+    - "Medieval Diplomacy"
+    - "Medieval%20Diplomacy"
+
+medieval-science:
+  name: "Medieval Science"
+  legacy_hashes:
+    - "Medieval Science"
+    - "Medieval%20Science"
+
+medieval-theology:
+  name: "Medieval Theology (6th-12th Century)"
+  legacy_hashes:
+    - "Medieval Theology (6th-12th Century)"
+    - "Medieval%20Theology%20(6th-12th%20Century)"
+
+merovingian-history:
+  name: "Merovingian History"
+  legacy_hashes:
+    - "Merovingian History"
+    - "Merovingian%20History"
+
+monastic-rules-constitutions:
+  name: "Monastic Rules & Constitutions"
+  legacy_hashes:
+    - "Monastic Rules & Constitutions"
+    - "Monastic%20Rules%20%26%20Constitutions"
+
+monastic-spirituality:
+  name: "Monastic Spirituality"
+  legacy_hashes:
+    - "Monastic Spirituality"
+    - "Monastic%20Spirituality"
+
+moral-theology:
+  name: "Moral Theology"
+  legacy_hashes:
+    - "Moral Theology"
+    - "Moral%20Theology"
+
+mystical-theology:
+  name: "Mystical Theology"
+  legacy_hashes:
+    - "Mystical Theology"
+    - "Mystical%20Theology"
+
+natural-philosophy-medicine:
+  name: "Natural Philosophy & Medicine"
+  legacy_hashes:
+    - "Natural Philosophy & Medicine"
+    - "Natural%20Philosophy%20%26%20Medicine"
+
+neo-platonic-christian-philosophy:
+  name: "Neo-Platonic Christian Philosophy"
+  legacy_hashes:
+    - "Neo-Platonic Christian Philosophy"
+    - "Neo-Platonic%20Christian%20Philosophy"
+
+new-testament-commentaries:
+  name: "New Testament Commentaries"
+  legacy_hashes:
+    - "New Testament Commentaries"
+    - "New%20Testament%20Commentaries"
+
+nicene-fathers:
+  name: "Nicene Fathers"
+  legacy_hashes:
+    - "Nicene Fathers"
+    - "Nicene%20Fathers"
+
+old-testament-commentaries:
+  name: "Old Testament Commentaries"
+  legacy_hashes:
+    - "Old Testament Commentaries"
+    - "Old%20Testament%20Commentaries"
+
+papal-bulls-decretals:
+  name: "Papal Bulls & Decretals"
+  legacy_hashes:
+    - "Papal Bulls & Decretals"
+    - "Papal%20Bulls%20%26%20Decretals"
+
+patristic-correspondence:
+  name: "Patristic Correspondence"
+  legacy_hashes:
+    - "Patristic Correspondence"
+    - "Patristic%20Correspondence"
+
+patristic-philosophy:
+  name: "Patristic Philosophy"
+  legacy_hashes:
+    - "Patristic Philosophy"
+    - "Patristic%20Philosophy"
+
+penitential-literature:
+  name: "Penitential Literature"
+  legacy_hashes:
+    - "Penitential Literature"
+    - "Penitential%20Literature"
+
+pneumatology:
+  name: "Pneumatology"
+  legacy_hashes:
+    - "Pneumatology"
+
+post-nicene-fathers:
+  name: "Post-Nicene Fathers"
+  legacy_hashes:
+    - "Post-Nicene Fathers"
+    - "Post-Nicene%20Fathers"
+
+scholastic-theology:
+  name: "Scholastic Theology"
+  legacy_hashes:
+    - "Scholastic Theology"
+    - "Scholastic%20Theology"
+
+soteriology:
+  name: "Soteriology"
+  legacy_hashes:
+    - "Soteriology"
+
+trinitarian-theology:
+  name: "Trinitarian Theology"
+  legacy_hashes:
+    - "Trinitarian Theology"
+    - "Trinitarian%20Theology"
+
+visigothic-mozarabic-writings:
+  name: "Visigothic & Mozarabic Writings"
+  legacy_hashes:
+    - "Visigothic & Mozarabic Writings"
+    - "Visigothic%20%26%20Mozarabic%20Writings"

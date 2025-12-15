@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De Quatuor Voluntatibus in Christo (c.1130)"
 date: 2025-04-22
-categories: [Post-Nicene Fathers, Christology]
+categories: [post-nicene-fathers, christology]
 youtube_id: "qf-BkTxhQpU" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-04-22-de-quatuor-voluntatibus-in-christo.json"
 # Additional metadata fields

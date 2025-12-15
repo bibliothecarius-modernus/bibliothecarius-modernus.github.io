@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Conflictus de Deo Trino et Uno (c.449-451)"
 date: 2025-07-01
-categories: [Post-Nicene Fathers, Christology, Heresiology]
+categories: [post-nicene-fathers, christology, heresiology]
 youtube_id: "oXz9YxwZqc4"
 translation_json: "/assets/translations/2025-07-01-conflictus-de-deo-trino-uno-theological-historical-analysis.json"
 # Additional metadata fields

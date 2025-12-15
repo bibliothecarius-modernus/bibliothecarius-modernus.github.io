@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Exorcismus (c. 500-600)"
 date: 2025-05-24
-categories: [Liturgical Texts & Sacramentaries, Asceticism & Monasticism, Ecclesiastical History]
+categories: [liturgical-texts-sacramentaries, asceticism-monasticism, ecclesiastical-history]
 youtube_id: "uSARcV6mxW4"
 translation_json: "/assets/translations/2025-05-24-exorcismus-ambrose.json"
 # Additional metadata fields

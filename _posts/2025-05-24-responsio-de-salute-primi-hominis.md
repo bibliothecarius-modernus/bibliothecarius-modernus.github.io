@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Responsio de salute primi hominis (c.1160)"
 date: 2025-05-24
-categories: [High Scholasticism, Soteriology, Moral Theology]
+categories: [high-scholasticism, soteriology, moral-theology]
 youtube_id: "DX1T56mA3FM"
 translation_json: "/assets/translations/2025-05-24-responsio-de-salute-primi-hominis.json"
 # Additional metadata fields

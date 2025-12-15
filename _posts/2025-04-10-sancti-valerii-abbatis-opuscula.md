@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Sancti Valerii Abbatis Opuscula (c.695)"
 date: 2025-04-10
-categories: [Asceticism & Monasticism, Visigothic & Mozarabic Writings, Hagiography]
+categories: [asceticism-monasticism, visigothic-mozarabic-writings, hagiography]
 youtube_id: "vpHVRMlVkmM" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-04-10-sancti-valerii-abbatis-opuscula.json" # Path to your JSON file
 

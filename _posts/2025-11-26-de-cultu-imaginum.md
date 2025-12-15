@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De cultu imaginum (c. 840)"
 date: 2025-11-26
-categories: [Carolingian Theological Renaissance, Apologetics, Heresiology]
+categories: [carolingian-theological-renaissance, apologetics, heresiology]
 youtube_id: "NcGaqandP_k"
 translation_json: "/assets/translations/2025-11-26-de-cultu-imaginum-book-1.json"
 original_work:

@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Libellus de Ratione Inveniendi Crassitudinem Sphaerae (c. 1000)"
 date: 2025-11-25
-categories: [Medieval Science, Mathematics, Epistolary]
+categories: [medieval-science, mathematics, epistolary]
 youtube_id: "44vqTfEStio"
 translation_json: "/assets/translations/2025-11-25-libellus-de-crassitudine-sphaerae.json"
 original_work:

@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Liber de Synodis seu Fide Orientalium (c.358)"
 date: 2025-03-27
-categories: [Nicene Fathers, Heresiology, Trinitarian Theology]
+categories: [nicene-fathers, heresiology, trinitarian-theology]
 youtube_id: "VSceYHnbL2g" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-03-27-liber-de-synodis-seu-fide-orientalium.json" # Additional metadata fields
 original_work:

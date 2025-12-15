@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De Octo Vitiis (c. 600 CE)"
 date: 2025-12-15
-categories: [Monastic Spirituality, Early Church Theology, Patristic Correspondence]
+categories: [monastic-spirituality, early-church-theology, patristic-correspondence]
 youtube_id: "dTD1ymDfGYA"
 translation_json: "/assets/translations/2025-12-15-de-octo-vitiis-saint-eutropius-of-valencia.json"
 original_work:

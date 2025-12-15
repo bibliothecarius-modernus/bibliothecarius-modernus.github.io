@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Liber de conceptu virginali et originali peccato (c.1099)"
 date: 2025-04-21
-categories: [High Scholasticism, Christology, Moral Theology]
+categories: [high-scholasticism, christology, moral-theology]
 youtube_id: "hgSPaJGgsTo" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-04-21-liber-de-cenceptu-virginali.json"
 # Additional metadata fields

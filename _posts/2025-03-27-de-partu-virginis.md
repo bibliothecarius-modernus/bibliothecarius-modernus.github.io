@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De Partu Virginis (c.847)"
 date: 2025-03-27
-categories: [Marian Theology & Devotion, Carolingian Theological Renaissance, Christology]
+categories: [marian-theology-devotion, carolingian-theological-renaissance, christology]
 youtube_id: "JCI4hA5gwEg" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-03-27-de-partu-virginis.json" # Additional metadata fields
 original_work:

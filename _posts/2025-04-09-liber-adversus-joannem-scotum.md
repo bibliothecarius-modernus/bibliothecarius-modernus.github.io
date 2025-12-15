@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Liber adversus Joannem Scotum (c.852)"
 date: 2025-04-09
-categories: [Post-Nicene Fathers, Apologetics, Carolingian Theological Renaissance]
+categories: [post-nicene-fathers, apologetics, carolingian-theological-renaissance]
 youtube_id: "OpAmSWjh77k" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-04-09-liber-adversus-joannem-scotum.json" # Additional metadata fields
 

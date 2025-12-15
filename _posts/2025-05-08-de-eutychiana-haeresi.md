@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De Eutychiana haeresi et historia (c.450)"
 date: 2025-05-08
-categories: [Post-Nicene Fathers, Heresiology, Ecclesiastical History]
+categories: [post-nicene-fathers, heresiology, ecclesiastical-history]
 youtube_id: "peY5ysKu7Mo"
 translation_json: "/assets/translations/2025-05-08-de-eutychiana-haeresi.json"
 # Additional metadata fields

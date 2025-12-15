@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Dialogus inter Deum et Peccatorem (c. 1190s-1210s)"
 date: 2025-12-14
-categories: [Penitential Literature, Scholastic Theology, Medieval Theology (6th-12th Century)]
+categories: [penitential-literature, scholastic-theology, medieval-theology]
 youtube_id: "ChsStFdL5jw"
 translation_json: "/assets/translations/2025-12-14-dialogus-inter-deum-et-peccatorem.json"
 original_work:

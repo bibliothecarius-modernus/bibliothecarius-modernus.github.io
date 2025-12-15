@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Passio S. Mauricii et sociorum (c.450)"
 date: 2025-04-16
-categories: [Hagiography, Post-Nicene Fathers, Ecclesiastical History]
+categories: [hagiography, post-nicene-fathers, ecclesiastical-history]
 youtube_id: "jKYrw8S5Ufg" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-04-16-passio-s-mauricii-et-sociorum.json" # Additional metadata fields
 original_work:

@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Expositio brevis antiquae liturgiae Gallicanae (c.700)"
 date: 2025-03-19
-categories: [Liturgical Texts & Sacramentaries, Ecclesiastical History, Visigothic & Mozarabic Writings]
+categories: [liturgical-texts-sacramentaries, ecclesiastical-history, visigothic-mozarabic-writings]
 youtube_id: "28tOAJ4t7W4"  # Replace with your actual video ID
 translation_json: "/assets/translations/2025-03-19-exposito-brevis-antiquae-liturgiae-gallicanae.json"
 

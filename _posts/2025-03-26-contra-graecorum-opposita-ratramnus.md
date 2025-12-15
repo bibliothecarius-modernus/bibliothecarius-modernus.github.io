@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Contra Graecorum Opposita (c.868)"
 date: 2025-03-26
-categories: [Carolingian Theological Renaissance, Pneumatology, Apologetics]
+categories: [carolingian-theological-renaissance, pneumatology, apologetics]
 youtube_id: "kirdtBRa8ZA" # Replace with your actual video ID for Book One
 translation_json: "/assets/translations/2025-03-26-contra-graecorum-opposita-ratramnus.json"
 # Additional metadata fields

@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Vita Sancti Odonis Abbatis Cluniacensis Secundi (c. 943)"
 date: 2025-03-19
-categories: [Hagiography, Asceticism & Monasticism, Monastic Rules & Constitutions]
+categories: [hagiography, asceticism-monasticism, monastic-rules-constitutions]
 youtube_id: "Ysp8glHxXdQ"  # Replace with your actual video ID
 translation_json: "/assets/translations/2025-03-19-vita-sancti-odonis.json"
 

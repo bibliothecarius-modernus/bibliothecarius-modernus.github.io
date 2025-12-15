@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Liber de grandine et tonitruis (c.820)"
 date: 2025-03-30
-categories: [Carolingian Theological Renaissance, Apologetics]
+categories: [carolingian-theological-renaissance, apologetics]
 youtube_id: "ryWZe_16cwg"
 translation_json: "/assets/translations/2025-03-30-liber-de-grandine-et-tonitruis.json"
 # Additional metadata fields

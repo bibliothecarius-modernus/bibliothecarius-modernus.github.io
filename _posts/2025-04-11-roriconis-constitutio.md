@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Roriconis Constitutio (c. 961)"
 date: 2025-04-11
-categories: [Ecclesiastical History, Monastic Rules & Constitutions]
+categories: [ecclesiastical-history, monastic-rules-constitutions]
 youtube_id: "AlXtX9dZmh8" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-04-11-roriconis-constitutio.json" # Additional metadata fields
 

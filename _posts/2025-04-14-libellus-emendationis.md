@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Libellus emendationis (c. 418)"
 date: 2025-04-14
-categories: [Post-Nicene Fathers, Christology, Apologetics]
+categories: [post-nicene-fathers, christology, apologetics]
 youtube_id: "uFdb0zb7RvU"
 translation_json: "/assets/translations/2025-04-14-libellus-emendationis.json"
 original_work:

@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Libellus contra Maximum Arianum (c.484)"
 date: 2025-04-25
-categories: [Post-Nicene Fathers, Apologetics, Visigothic & Mozarabic Writings]
+categories: [post-nicene-fathers, apologetics, visigothic-mozarabic-writings]
 youtube_id: "PfotBx6JKsg"
 translation_json: "/assets/translations/2025-04-25-libellus-contra-maximum.json"
 # Additional metadata fields

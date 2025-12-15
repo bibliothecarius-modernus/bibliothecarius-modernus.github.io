@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Libri Carolini (c.790)"
 date: 2025-03-26
-categories: [Carolingian Theological Renaissance, Apologetics, Ecclesiastical History]
+categories: [carolingian-theological-renaissance, apologetics, ecclesiastical-history]
 youtube_id: "YQd2VGZZpEM" # From the paste.txt document
 translation_json: "/assets/translations/2025-03-26-libri-carolini-790.json"
 # Additional metadata fields

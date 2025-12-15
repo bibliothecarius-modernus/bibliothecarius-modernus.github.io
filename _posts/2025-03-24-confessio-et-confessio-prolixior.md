@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Confessio et Confessio prolixior (c. 849)"
 date: 2025-03-24
-categories: [Creeds & Confessions, Soteriology, Carolingian Theological Renaissance]
+categories: [creeds-confessions, soteriology, carolingian-theological-renaissance]
 youtube_id: "kuOpVJZ6dG4" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-03-24-confessio-et-confessio-prolixior.json" # Path to JSON file
 

@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Epistola de cynocephalis (c.865)"
 date: 2025-03-20
-categories: [Epistolary Literature, Ecclesiastical History, Carolingian Theological Renaissance]
+categories: [epistolary-literature, ecclesiastical-history, carolingian-theological-renaissance]
 youtube_id: "PNH4_eu-F5c"  # Replace with your actual video ID
 translation_json: /assets/translations/2025-03-20-epistola-de-cynocephalis.json
 original_work:

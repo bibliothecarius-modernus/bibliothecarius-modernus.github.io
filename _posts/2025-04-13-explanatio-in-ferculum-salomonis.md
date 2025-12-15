@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Explanatio in Ferculum Salomonis (c.853-856)"
 date: 2025-04-13
-categories: [Post-Nicene Fathers, Ecclesiology, Ecclesiastical History]
+categories: [post-nicene-fathers, ecclesiology, ecclesiastical-history]
 youtube_id: "3KBp38ROsXU"  # Replace with your actual video ID
 translation_json: "/assets/translations/2025-04-13-explanatio-in-ferculum-salomonis.json"  # Additional metadata fields
 original_work:

@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Vita Annonis Minor (c.1180)"
 date: 2025-07-30
-categories: [Hagiography, Ecclesiastical History, Asceticism & Monasticism]
+categories: [hagiography, ecclesiastical-history, asceticism-monasticism]
 youtube_id: "AVkI0035t2o" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-07-30-vita-annonis-minor.json"
 # Additional metadata fields

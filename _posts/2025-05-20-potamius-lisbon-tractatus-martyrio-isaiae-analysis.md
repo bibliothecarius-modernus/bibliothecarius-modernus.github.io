@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Potamii Olisiponensis Tractatus de martyrio Isaiae (c. 355)"
 date: 2025-05-20
-categories: [Post-Nicene Fathers, Homiletics, Visigothic & Mozarabic Writings]
+categories: [post-nicene-fathers, homiletics, visigothic-mozarabic-writings]
 youtube_id: "GRQXBiuL0UE"
 translation_json: "/assets/translations/2025-05-20-potamius-lisbon-tractatus-martyrio-isaiae.json"
 # Additional metadata fields

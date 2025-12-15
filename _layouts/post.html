@@ -18,7 +18,8 @@ layout: default
       {% if page.categories %}
       <div class="post-categories">
         {% for category in page.categories %}
-        <a href="{{ '/archive/#' | append: category | uri_escape | relative_url }}" class="category-tag" data-category="{{ category }}">{{ category }}</a>
+        {% assign cat_data = site.data.categories[category] %}
+        <a href="{{ '/archive/#' | append: category | relative_url }}" class="category-tag" data-category="{{ category }}">{% if cat_data %}{{ cat_data.name }}{% else %}{{ category }}{% endif %}</a>
         {% endfor %}
       </div>
       {% endif %}

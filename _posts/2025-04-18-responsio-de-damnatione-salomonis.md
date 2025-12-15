@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Responsio de damnatione Salomonis (c.1150)"
 date: 2025-04-18
-categories: [Ecclesiastical History, Moral Theology, High Scholasticism]
+categories: [ecclesiastical-history, moral-theology, high-scholasticism]
 youtube_id: "pEI4aJtOuRc" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-04-18-responsio-de-damnatione-salomonis.json" # Additional metadata fields
 original_work:

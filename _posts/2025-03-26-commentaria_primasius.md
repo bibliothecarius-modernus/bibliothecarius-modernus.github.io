@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Commentaria in Apocalypsin (c.540)"
 date: 2025-03-26
-categories: [New Testament Commentaries, Eschatology, Post-Nicene Fathers]
+categories: [new-testament-commentaries, eschatology, post-nicene-fathers]
 youtube_id: "BpyXIhdZuMw"  # Replace with your actual video ID
 translation_json: "/assets/translations/2025-03-26-commentaria_primasius.json"
 

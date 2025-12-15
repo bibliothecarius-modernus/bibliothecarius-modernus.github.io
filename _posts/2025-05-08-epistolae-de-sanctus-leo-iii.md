@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Epistolae de Sanctus Leo III Pontifex Romanus (c.800)"
 date: 2025-05-08
-categories: [Liturgical Texts & Sacramentaries, Ecclesiastical History, Post-Nicene Fathers]
+categories: [liturgical-texts-sacramentaries, ecclesiastical-history, post-nicene-fathers]
 youtube_id: "rVkoTp1lIvA" 
 translation_json: "/assets/translations/2025-05-08-epistolae-de-sanctus-leo-iii.json"
 # Additional metadata fields

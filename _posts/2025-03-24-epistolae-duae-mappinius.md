@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Epistolae duae Mappinii Episcopi Remensis (c.550)"
 date: 2025-03-24
-categories: [Epistolary Literature, Ecclesiastical History, Post-Nicene Fathers]
+categories: [epistolary-literature, ecclesiastical-history, post-nicene-fathers]
 youtube_id: "XAKzgRgQoJw" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-03-24-epistolae-duae-mappinius.json"
 # Additional metadata fields

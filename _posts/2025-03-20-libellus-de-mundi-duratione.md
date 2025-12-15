@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Libellus de Mundi Duratione (c. 397 AD)"
 date: 2025-03-20
-categories: [Eschatology, Nicene Fathers, Chronicles & Annals]
+categories: [eschatology, nicene-fathers, chronicles-annals]
 youtube_id: "4Ccek3JHA-g"  # Replace with your actual video ID
 translation_json: "/assets/translations/2025-03-20-libellus-de-mundi-duratione.json" # Path to JSON file
 original_work:

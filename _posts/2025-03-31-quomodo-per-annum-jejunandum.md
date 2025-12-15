@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Quomodo per annum jejunandum sit (c. 850-883)"
 date: 2025-03-31
-categories: [Liturgical Texts & Sacramentaries, Asceticism & Monasticism]
+categories: [liturgical-texts-sacramentaries, asceticism-monasticism]
 youtube_id: "PjQvT8fEPFE" # Replace with your actual video ID
 translation_json: "/assets/translations/2025-03-31-quomodo-per-annum-jejunandum.json"
 # Additional metadata fields

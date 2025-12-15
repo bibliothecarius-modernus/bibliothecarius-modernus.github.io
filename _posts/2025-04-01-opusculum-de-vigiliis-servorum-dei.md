@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Opusculum de vigiliis servorum Dei (c.400)"
 date: 2025-04-01
-categories: [Post-Nicene Fathers, Liturgical Texts & Sacramentaries, Asceticism & Monasticism]
+categories: [post-nicene-fathers, liturgical-texts-sacramentaries, asceticism-monasticism]
 youtube_id: "03_nqMucNBw" # Replace with your actual video ID when available
 translation_json: "/assets/translations/2025-04-01-opusculum-de-vigiliis-servorum-dei.json" # Path to your JSON file
 

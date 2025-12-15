@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De Ordine Creaturarum (c.670-700)"
 date: 2025-03-20
-categories: [Irish & Anglo-Saxon Contributions, Natural Philosophy & Medicine, Neo-Platonic Christian Philosophy]
+categories: [irish-anglo-saxon-contributions, natural-philosophy-medicine, neo-platonic-christian-philosophy]
 youtube_id: "KFZOL1rWOkY"  # Using the YouTube ID from your document
 translation_json: "/assets/translations/2025-03-20-de-ordine-creaturarum.json"
 
