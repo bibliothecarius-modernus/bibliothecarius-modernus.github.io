@@ -3,7 +3,7 @@ layout: tabbed_post
 title: "De Octo Vitiis (c. 600 CE)"
 date: 2025-12-15
 categories: [Visigothic Spain, Monastic Spirituality, Moral Theology]
-youtube_id: "PENDING"
+youtube_id: "dTD1ymDfGYA"
 audio_analysis: "/assets/audio/On the Eight Vices - Eutropius of Valencia.mp3"
 translation_json: "/assets/translations/2025-12-15-de-octo-vitiis-eutropius.json"
 original_work:
