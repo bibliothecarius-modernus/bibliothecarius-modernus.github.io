@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De Octo Vitiis (c. 600 CE)"
 date: 2025-12-15
-categories: [asceticism-monasticism, moral-theology, monastic-spirituality, visigothic-mozarabic-writings]
+categories: [asceticism-monasticism, moral-theology, visigothic-mozarabic-writings]
 youtube_id: "dTD1ymDfGYA"
 translation_json: "/assets/translations/2025-12-15-de-octo-vitiis-saint-eutropius-of-valencia.json"
 original_work:
@@ -17,7 +17,7 @@ external_resources:
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-On the Eight Vices by Saint Eutropius of Valencia - a 6th century text from Patrologia Latina Volume 80.
+  Eutropius of Valencia's 6th-century treatise *De Octo Vitiis* systematically examines eight principal vices threatening monastic life, drawing heavily on Cassian's desert tradition to provide Spanish monasticism with a practical guide for spiritual combat during the Visigothic period.
 </p>
 
 ## Historical Context
@@ -32,8 +32,8 @@ On the Eight Vices by Saint Eutropius of Valencia - a 6th century text from Patr
 
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Visigothic_Kingdom_586-711_es.svg" alt="The Visigothic Kingdom (586-711 AD), showing the territorial context where Eutropius lived and wrote during the critical period of conversion from Arianism to Catholicism under King Reccared I." style="max-width: 100%; height: auto;">
-  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666;">The Visigothic Kingdom (586-711 AD), showing the territorial context where Eutropius lived and wrote during the critical period of conversion from Arianism to Catholicism under King Reccared I.<br><small>License: Creative Commons Attribution-ShareAlike 3.0 Unported</small></figcaption>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Visigothic_Kingdom_586-711_es.svg" alt="Map of the Visigothic Kingdom (586-711 AD), showing the territorial extent of the realm during Eutropius's lifetime. The conversion to Catholicism in 589 marked a pivotal moment for bishops like Eutropius, who became Bishop of Valencia around this time." style="max-width: 100%; height: auto;">
+  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666;">Map of the Visigothic Kingdom (586-711 AD), showing the territorial extent of the realm during Eutropius's lifetime. The conversion to Catholicism in 589 marked a pivotal moment for bishops like Eutropius, who became Bishop of Valencia around this time.<br><small>License: Creative Commons Attribution-ShareAlike 3.0 Unported</small></figcaption>
 </figure>
 
 
@@ -45,8 +45,8 @@ On the Eight Vices by Saint Eutropius of Valencia - a 6th century text from Patr
 
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Dirc_van_Delft_-_The_Seven_Deadly_Sins_-_Walters_W17197R_-_Full_Page.jpg" alt="Medieval illumination depicting the Seven Deadly Sins, showing the evolution from Eutropius's eight-vice schema to the later seven-fold classification that became standard in Western Christianity." style="max-width: 100%; height: auto;">
-  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666;">Medieval illumination depicting the Seven Deadly Sins, showing the evolution from Eutropius's eight-vice schema to the later seven-fold classification that became standard in Western Christianity.<br><small>License: Public domain (photograph of a 15th-century artwork)</small></figcaption>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Dirc_van_Delft_-_The_Seven_Deadly_Sins_-_Walters_W17197R_-_Full_Page.jpg" alt="A 15th-century illumination depicting the Seven Deadly Sins. Eutropius's treatise on the eight vices contributed to the medieval development of this moral categorization, though his original schema followed the earlier eightfold tradition of Evagrius and Cassian." style="max-width: 100%; height: auto;">
+  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666;">A 15th-century illumination depicting the Seven Deadly Sins. Eutropius's treatise on the eight vices contributed to the medieval development of this moral categorization, though his original schema followed the earlier eightfold tradition of Evagrius and Cassian.<br><small>License: Public domain (photograph of a 15th-century artwork)</small></figcaption>
 </figure>
 
 
@@ -54,8 +54,8 @@ On the Eight Vices by Saint Eutropius of Valencia - a 6th century text from Patr
 
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/John_Cassian.jpeg" alt="Icon of St. John Cassian, the 5th-century monk whose teachings on the eight principal vices provided the direct source and framework for Eutropius's *De Octo Vitiis*." style="max-width: 100%; height: auto;">
-  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666;">Icon of St. John Cassian, the 5th-century monk whose teachings on the eight principal vices provided the direct source and framework for Eutropius's *De Octo Vitiis*.<br><small>License: Public domain (historical iconographic art)</small></figcaption>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/John_Cassian.jpeg" alt="Icon of St. John Cassian, the 5th-century monk whose writings on the eight principal vices directly influenced Eutropius's *De Octo Vitiis*. Cassian served as the primary patristic source for Eutropius's systematic treatment of spiritual combat against the passions." style="max-width: 100%; height: auto;">
+  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666;">Icon of St. John Cassian, the 5th-century monk whose writings on the eight principal vices directly influenced Eutropius's *De Octo Vitiis*. Cassian served as the primary patristic source for Eutropius's systematic treatment of spiritual combat against the passions.<br><small>License: Public domain (historical iconographic art)</small></figcaption>
 </figure>
 
 
