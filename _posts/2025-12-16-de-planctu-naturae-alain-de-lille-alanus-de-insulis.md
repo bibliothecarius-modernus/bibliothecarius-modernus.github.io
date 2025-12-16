@@ -61,14 +61,14 @@ external_resources:
 
 <figure style="text-align: center; margin: 2em auto; max-width: 50%;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Abbaye_de_C%C3%AEteaux_062.jpg" alt="Scale model of Cîteaux Abbey's medieval complex, where Alan of Lille spent his final years as a Cistercian monk" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Scale model of Cîteaux Abbey's medieval complex, where Alan of Lille spent his final years as a Cistercian monk<br><small>License: * CC BY-SA 4.0. *Caption:* “Scale model of Cîteaux Abbey’s medieval complex ([commons.wikimedia.org](https://commons.wikimedia.org/wiki/File%3AAbbaye_de_C%C3%AEteaux_062.jpg#:~:text=)) ([commons.wikimedia.org](https://commons.wikimedia.org/wiki/File%3AAbbaye_de_C%C3%AEteaux_062.jpg#:~:text=This%20file%20is%20licensed%20under</small></figcaption>
+  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Scale model of Cîteaux Abbey's medieval complex, where Alan of Lille spent his final years as a Cistercian monk</figcaption>
 </figure>
 
 
 
 <figure style="text-align: center; margin: 2em auto; max-width: 50%;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Debatte_zwischen_Alain_de_Lille_und_Petrus_Cantor.jpg" alt="Medieval illumination depicting Alan of Lille (left) in scholarly debate with Peter Cantor, illustrating his formidable reputation in intellectual discourse" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Medieval illumination depicting Alan of Lille (left) in scholarly debate with Peter Cantor, illustrating his formidable reputation in intellectual discourse<br><small>License: * Public Domain. *Caption:* “Alan of Lille (left) and Paris theologian Peter Cantor (right) engaged in debate</small></figcaption>
+  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Medieval illumination depicting Alan of Lille (left) in scholarly debate with Peter Cantor</figcaption>
 </figure>
 
 
