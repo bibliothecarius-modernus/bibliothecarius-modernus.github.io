@@ -9,11 +9,11 @@ original_work:
   latin_title: De Planctu Naturae
   author: "Alain de Lille (Alanus de Insulis)"
   date: "c. 1200 CE"
-  publication: "Patrologia Latina Volume "
+  publication: "Patrologia Latina Volume 210"
   context: "The Complaint of Nature"
 external_resources:
   archive_url: "https://archive.org/details/de-planctu-naturae-alan-of-lille"
-  github_url: "https://github.com/wryan14/Latin-Patristic-Texts"
+  github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_210/Alain%20de%20Lille%20(Alanus%20de%20Insulis)%20-%20De%20Planctu%20Naturae"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
