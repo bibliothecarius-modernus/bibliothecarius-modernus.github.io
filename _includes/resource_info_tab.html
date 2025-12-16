@@ -47,10 +47,18 @@
         <th>Published</th>
         <td>{{ page.date | date: "%B %-d, %Y" }}</td>
       </tr>
+      {% assign cutoff_date = "2025-11-01" | date: "%s" %}
+      {% assign post_date = page.date | date: "%s" %}
       <tr>
         <th>Translation Method</th>
-        <td>AI translation using ChatGPT-4o with automated and human review safeguards</td>
+        <td>{% if post_date >= cutoff_date %}AI translation using Claude 4.5 Sonnet with automated and human review safeguards{% else %}AI translation using ChatGPT-4o with automated and human review safeguards{% endif %}</td>
       </tr>
+      {% if post_date >= cutoff_date %}
+      <tr>
+        <th>Research Method</th>
+        <td>Deep contextual research using OpenAI o3 Deep Research</td>
+      </tr>
+      {% endif %}
       <tr>
         <th>Translation Goals</th>
         <td>Accessibility and clarity while preserving original meaning</td>
@@ -83,11 +91,11 @@
         </tr>
         {% endif %}
 
-        <!-- Citation with conditional DOI logic -->
+        <!-- Citation with conditional DOI logic and model attribution -->
         <tr>
         <th>Citation</th>
         <td>
-            {{ page.original_work.author }}. "{{ page.original_work.latin_title }}." Translation by Bibliothecarius Modernus using ChatGPT-4o, {{ page.date | date: "%-d %b. %Y" }}, 
+            {{ page.original_work.author }}. "{{ page.original_work.latin_title }}." Translation by Bibliothecarius Modernus using {% if post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %}, {{ page.date | date: "%-d %b. %Y" }},
             {% if page.external_resources.doi %}
             DOI: <a href="https://doi.org/{{ page.external_resources.doi }}">{{ page.external_resources.doi }}</a>
             {% else %}
