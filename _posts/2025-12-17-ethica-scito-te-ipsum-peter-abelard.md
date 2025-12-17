@@ -62,8 +62,8 @@ external_resources:
 
 
 <figure style="text-align: center; margin: 2em auto; max-width: 50%;">
-  <img src="https://plato.stanford.edu/archIves/spr2025/entries/abelard/#:~:text=petitioning%20the%20Papal%20Court%20before,P%C3%A8re%20Lachaise%20cemetery%20in%20Paris" alt="Ruins of Cluny Abbey, where Abelard found sanctuary under Abbot Peter the Venerable after his condemnation in 1140, spending his final years in peace before his death in 1142" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Ruins of Cluny Abbey, where Abelard found sanctuary under Abbot Peter the Venerable after his condemnation in 1140, spending his final years in peace before his death in 1142<br><small>License: * CC BY-SA 2.0. ([commons.wikimedia.org](https://commons.wikimedia.org/wiki/File%3ACluny_Abbey_%286044923653%29.jpg#:~:text=Size%20of%20this%20preview%3A%20450</small></figcaption>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Cluny_Abbey_%286044923653%29.jpg/960px-Cluny_Abbey_%286044923653%29.jpg" alt="Ruins of Cluny Abbey, where Abelard found sanctuary under Abbot Peter the Venerable after his condemnation in 1140, spending his final years in peace before his death in 1142" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Ruins of Cluny Abbey, where Abelard found sanctuary under Abbot Peter the Venerable after his condemnation in 1140, spending his final years in peace before his death in 1142<br><small>License: CC BY-SA 2.0. (<a href="https://commons.wikimedia.org/wiki/File:Cluny_Abbey_(6044923653).jpg">Wikimedia Commons</a>)</small></figcaption>
 </figure>
 
 
