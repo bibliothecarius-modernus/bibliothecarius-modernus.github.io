@@ -1,19 +1,19 @@
 ---
 layout: tabbed_post
-title: "Unknown (c. 12th century00 CE)"
+title: "Ethica seu Liber dictus Scito Te Ipsum (c. 1200 CE)"
 date: 2025-12-17
 categories: [moral-theology, scholastic-theology]
-youtube_id: "PLACEHOLDER"
-translation_json: "/assets/translations/2025-12-17-unknown-peter-abelard.json"
+youtube_id: "Lj7g6J2FKy0"
+translation_json: "/assets/translations/2025-12-17-ethica-scito-te-ipsum-peter-abelard.json"
 original_work:
-  latin_title: Unknown
+  latin_title: Ethica seu Liber dictus Scito Te Ipsum
   author: "Peter Abelard"
-  date: "c. 12th century00 CE"
-  publication: "Patrologia Latina Volume "
-  context: "Unknown"
+  date: "c. 1200 CE"
+  publication: "Patrologia Latina Volume 178"
+  context: "Ethics, or the Book Called Know Yourself"
 external_resources:
   archive_url: "https://archive.org/details/abelard-scito-te-ipsum-ethics"
-  github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_0/Peter%20Abelard%20-%20Untitled"
+  github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_178/Peter%20Abelard%20-%20Ethics,%20or%20the%20Book%20Called%20Know%20Yourself"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
