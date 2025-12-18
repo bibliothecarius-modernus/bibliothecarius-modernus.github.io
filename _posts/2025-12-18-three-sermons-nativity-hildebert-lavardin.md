@@ -1,16 +1,21 @@
 ---
 layout: post
 title: "Three Sermons on the Nativity of the Lord"
-author: "Hildebert of Lavardin"
+date: 2025-12-18
 categories: ["Medieval Theology", "Biblical Commentary"]
 tags: [Hildebert of Lavardin, Christmas Sermons, Incarnation, 12th Century, Patrologia Latina, Medieval Theology]
-image: 
+image:
 article_summary: "This 12th-century collection of three Christmas sermons presents sophisticated theological reflections on the Incarnation, examining the mystery of Christ's dual divine and human natures and the soteriological implications of God becoming man. The homilies offer detailed exploration of Marian theology, particularly the doctrine of perpetual virginity, while demonstrating the high level of Christological discourse characteristic of medieval monastic preaching. These sermons provide valuable insight into 12th-century liturgical practice and theological pedagogy, representing the intersection of scholastic methodology with pastoral instruction."
 youtube: "PENDING"
-archive_url: "https://archive.org/details/sermones-tres-nativitate-domini-hildebert"
-github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_171/Unknown%20-%20Three%20Sermons%20on%20the%20Nativity%20of%20the%20Lord"
-pl_volume: 171
-latin_title: "Sermones Tres in Nativitate Domini"
+original_work:
+  latin_title: "Sermones Tres in Nativitate Domini"
+  author: "Hildebert of Lavardin"
+  date: "c. 1100-1130 CE"
+  publication: "Patrologia Latina Volume 171"
+  context: "Three Christmas Sermons"
+external_resources:
+  archive_url: "https://archive.org/details/sermones-tres-nativitate-domini-hildebert"
+  github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_171/Hildebert%20of%20Lavardin%20-%20Three%20Sermons%20on%20the%20Nativity%20of%20the%20Lord"
 ---
 
 ## Historical Context
