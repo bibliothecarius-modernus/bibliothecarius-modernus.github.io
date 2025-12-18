@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const chunkNum = getChunkNumber(chunk);
           const chunkEl = document.createElement('div');
           chunkEl.className = 'chunk-section latin-full';
-          chunkEl.id = `chunk-${chunkNum}`;
+          chunkEl.dataset.chunk = chunkNum;
           chunkEl.innerHTML = `
             <span class="chunk-number">${chunkNum}</span>
             <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const chunkNum = getChunkNumber(chunk);
           const chunkEl = document.createElement('div');
           chunkEl.className = 'chunk-section english-full';
-          chunkEl.id = `chunk-${chunkNum}`;
+          chunkEl.dataset.chunk = chunkNum;
 
           // Clean the text
           let cleanedText = getEnglishText(chunk)
@@ -229,12 +229,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const englishColumn = container.closest('.english-column');
 
         if (latinColumn) {
-          // Latin column in side-by-side view (IDs go here to avoid duplicates)
+          // Latin column in side-by-side view
           json.chunks.forEach(chunk => {
             const chunkNum = getChunkNumber(chunk);
             const chunkEl = document.createElement('div');
             chunkEl.className = 'chunk-section';
-            chunkEl.id = `chunk-${chunkNum}`;
+            chunkEl.dataset.chunk = chunkNum;
             chunkEl.innerHTML = `
               <span class="chunk-number">${chunkNum}</span>
               <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const chunkNum = getChunkNumber(chunk);
             const chunkEl = document.createElement('div');
             chunkEl.className = 'chunk-section';
-            chunkEl.dataset.chunk = chunkNum; // Use data attribute to avoid duplicate IDs
+            chunkEl.dataset.chunk = chunkNum;
 
             // Clean the text
             let cleanedText = getEnglishText(chunk)
@@ -283,31 +283,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const hash = window.location.hash;
     if (!hash || !hash.startsWith('#chunk-')) return;
 
-    const chunkId = hash.substring(1); // Remove the #
-    const targetElement = document.getElementById(chunkId);
+    // Extract chunk number from hash (e.g., "#chunk-5" -> "5")
+    const chunkNum = hash.replace('#chunk-', '');
+    if (!chunkNum) return;
 
-    if (targetElement) {
-      // Switch to English-only tab for search results (more readable)
-      const englishTab = document.querySelector('.tab-btn[data-target="english-only"]');
-      if (englishTab) {
-        englishTab.click();
-      }
-
-      // Wait for tab switch, then scroll
-      setTimeout(() => {
-        // Try to find the element again in case tab switch created new elements
-        const element = document.getElementById(chunkId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          // Highlight the chunk briefly
-          element.style.transition = 'background-color 0.3s';
-          element.style.backgroundColor = 'rgba(184, 134, 11, 0.2)';
-          setTimeout(() => {
-            element.style.backgroundColor = '';
-          }, 2000);
-        }
-      }, 300);
+    // Switch to English-only tab for search results (more readable)
+    const englishTab = document.querySelector('.tab-btn[data-target="english-only"]');
+    if (englishTab) {
+      englishTab.click();
     }
+
+    // Wait for tab switch and content to be ready, then scroll
+    setTimeout(() => {
+      // Find the chunk within the active english-only tab
+      const englishPanel = document.getElementById('english-only');
+      if (!englishPanel) return;
+
+      const targetElement = englishPanel.querySelector(`[data-chunk="${chunkNum}"]`);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Highlight the chunk briefly
+        targetElement.style.transition = 'background-color 0.3s';
+        targetElement.style.backgroundColor = 'rgba(184, 134, 11, 0.25)';
+        targetElement.style.borderLeft = '4px solid #B8860B';
+        setTimeout(() => {
+          targetElement.style.backgroundColor = '';
+          targetElement.style.borderLeft = '';
+        }, 3000);
+      }
+    }, 500);
   }
 
   // Also handle hash changes (e.g., clicking internal links)
