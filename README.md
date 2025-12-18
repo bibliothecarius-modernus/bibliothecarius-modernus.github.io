@@ -1,20 +1,14 @@
 # Bibliothecarius Modernus
 
-A Jekyll site publishing AI-assisted translations of Latin Patristic texts. The project makes obscure theological works accessible to modern readers by providing side-by-side Latin/English translations, with accompanying YouTube video presentations.
+A Jekyll site publishing AI-assisted translations of Latin Patristic texts. Provides side-by-side Latin/English translations of early Church fathers and medieval theologians, many of which lack existing English translations.
 
-Currently hosts 54 translated works spanning early Church fathers and medieval theologians, many of which lack existing English translations.
+Translations prioritize accessibility over scholarly authority—the original Latin is always displayed alongside English for verification.
 
 ## Requirements
 
 - Ruby 2.7+
 - Jekyll 4.x
 - Bundler
-
-Jekyll plugins (configured in `_config.yaml`):
-- jekyll-feed
-- jekyll-seo-tag
-- jekyll-sitemap
-- jekyll-redirect-from
 
 ## Local Development
 
@@ -23,42 +17,37 @@ bundle install
 bundle exec jekyll serve
 ```
 
-The site will be available at `http://localhost:4000`.
+Site available at `http://localhost:4000`.
 
 ## Deployment
 
-Push to `main` branch. GitHub Actions builds and deploys to GitHub Pages.
+Push to `main` branch. GitHub Actions builds and deploys to GitHub Pages automatically.
 
-The site uses custom Ruby plugins in `_plugins/`, which requires GitHub Actions for builds rather than standard GitHub Pages.
+Custom Ruby plugins in `_plugins/` require GitHub Actions rather than standard GitHub Pages builds.
 
 ## Structure
 
 ```
 _posts/              # Blog posts (layout: tabbed_post)
+_layouts/            # Page templates including tabbed Latin/English/Analysis view
+_plugins/            # Custom Liquid filters
+_templates/          # New post template
+_data/               # Category and video configuration
 assets/
   translations/      # JSON files with Latin/English text chunks
-  css/               # Stylesheets
-  js/                # JavaScript (filtering, translation viewer)
-  images/            # Site images and post thumbnails
-_layouts/
-  tabbed_post.html   # Post layout with Latin/English/Analysis tabs
-  home.html          # Homepage with filtering
-_plugins/
-  remove_chars.rb    # Liquid filter for search indexing
-_data/
-  categories.yml     # Post category definitions
-  featured_videos.yml
-_templates/
-  new_post.md        # Template for creating new posts
+  css/
+  js/
+  images/
 ```
 
 ## Adding New Posts
 
-1. Copy `_templates/new_post.md` to `_posts/` with date prefix: `YYYY-MM-DD-title.md`
-2. Create corresponding translation JSON in `assets/translations/`
-3. Update front matter with `translation_json` path and metadata
+1. Copy `_templates/new_post.md` to `_posts/YYYY-MM-DD-title.md`
+2. Create translation JSON in `assets/translations/`
+3. Update front matter with `translation_json` path
 
 Translation JSON format:
+
 ```json
 {
   "chunks": [
@@ -73,9 +62,10 @@ Translation JSON format:
 
 ## Related Resources
 
-- [Latin Patristic Texts Repository](https://github.com/wryan14/Latin-Patristic-Texts) - Source texts and raw translations
-- [YouTube Channel](https://youtube.com/@BibliothecariusModernus) - Video presentations of translations
+- [Project Blog](https://bibliothecarius-modernus.github.io/)
+- [Latin Patristic Texts Repository](https://github.com/wryan14/Latin-Patristic-Texts) - Source texts and interlinear translations
+- [YouTube Channel](https://youtube.com/@BibliothecariusModernus) - Video presentations with Latin/English display
 
 ## License
 
-Creative Commons. All translations and site content are freely available for use, modification, and redistribution.
+CC0 1.0 Universal - see [LICENSE](LICENSE)
