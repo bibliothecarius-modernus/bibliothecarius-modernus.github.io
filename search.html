@@ -1,292 +1,183 @@
 ---
 layout: page
-title: Search Results
+title: Search Translations
 permalink: /search.html
 ---
 
 <div class="search-page">
-  <div class="search-form-container">
-    <form action="{{ '/search.html' | relative_url }}" method="get" class="search-form">
-      <input type="text" id="search-input" name="query" placeholder="Search for translations..." {% if page.url contains '/search.html' and site.params.query %}value="{{ site.params.query }}"{% endif %}>
-      <button type="submit" class="search-button">Search</button>
-    </form>
-  </div>
-
-  <div id="search-results" class="search-results">
-    <h2 class="results-title">Enter a search term above</h2>
-    <div class="results-list"></div>
-  </div>
+  <div id="search"></div>
 </div>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
 
 <style>
   .search-page {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
   }
-  
-  .search-form-container {
-    margin-bottom: 40px;
+
+  /* Pagefind UI customization */
+  :root {
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-primary: #8B4513;
+    --pagefind-ui-text: #3E2C1B;
+    --pagefind-ui-background: #FFFEF7;
+    --pagefind-ui-border: #D4C4A8;
+    --pagefind-ui-tag: #F5F0E1;
+    --pagefind-ui-border-width: 2px;
+    --pagefind-ui-border-radius: 6px;
+    --pagefind-ui-image-border-radius: 6px;
+    --pagefind-ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
   }
-  
-  .search-form {
-    display: flex;
-    gap: 10px;
+
+  /* Search input styling */
+  .pagefind-ui__search-input {
+    font-size: 1.1rem !important;
+    padding: 14px 16px !important;
   }
-  
-  #search-input {
-    flex: 1;
-    padding: 12px 15px;
-    border: 2px solid var(--medium-gray);
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+
+  /* Results styling */
+  .pagefind-ui__result {
+    padding: 20px 0 !important;
+    border-bottom: 1px solid var(--pagefind-ui-border) !important;
   }
-  
-  #search-input:focus {
-    outline: none;
-    border-color: var(--highlight-color);
+
+  .pagefind-ui__result-title {
+    font-size: 1.25rem !important;
+    color: var(--pagefind-ui-primary) !important;
   }
-  
-  .search-button {
-    background-color: var(--highlight-color);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+
+  .pagefind-ui__result-excerpt {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: var(--pagefind-ui-text) !important;
   }
-  
-  .search-button:hover {
-    background-color: var(--dark-highlight);
+
+  /* Highlight matches */
+  .pagefind-ui__result-excerpt mark {
+    background-color: rgba(184, 134, 11, 0.25) !important;
+    padding: 1px 3px !important;
+    border-radius: 3px !important;
   }
-  
-  .results-title {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--medium-gray);
+
+  /* Filter buttons */
+  .pagefind-ui__filter-panel {
+    margin-bottom: 20px !important;
   }
-  
-  .result-item {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid var(--light-gray);
+
+  .pagefind-ui__filter-name {
+    font-weight: 600 !important;
+    color: var(--pagefind-ui-text) !important;
   }
-  
-  .result-item:last-child {
-    border-bottom: none;
+
+  /* Message styling */
+  .pagefind-ui__message {
+    font-size: 1rem !important;
+    padding: 20px !important;
+    background-color: var(--pagefind-ui-tag) !important;
+    border-radius: var(--pagefind-ui-border-radius) !important;
+    margin-top: 20px !important;
   }
-  
-  .result-title {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+
+  /* Meta info (author, language badge) */
+  .pagefind-ui__result-tag {
+    background-color: var(--pagefind-ui-tag) !important;
+    color: var(--pagefind-ui-text) !important;
+    font-size: 0.85rem !important;
+    padding: 3px 8px !important;
+    border-radius: 4px !important;
+    margin-right: 8px !important;
   }
-  
-  .result-meta {
-    font-size: 0.9rem;
-    color: var(--dark-gray);
-    margin-bottom: 10px;
+
+  /* Loading state */
+  .pagefind-ui__loading {
+    color: var(--pagefind-ui-text) !important;
   }
-  
-  .result-excerpt {
-    margin-bottom: 15px;
-  }
-  
-  .result-link {
-    color: var(--highlight-color);
-    font-weight: bold;
-  }
-  
-  .no-results {
-    text-align: center;
-    padding: 30px;
-    background-color: var(--light-gray);
-    border-radius: 8px;
-  }
-  
-  .highlight {
-    background-color: rgba(var(--highlight-color-rgb), 0.2);
-    padding: 0 3px;
-    border-radius: 3px;
-  }
-  
+
+  /* Responsive adjustments */
   @media screen and (max-width: 600px) {
-    .search-form {
-      flex-direction: column;
+    .search-page {
+      padding: 0 15px;
     }
-    
-    .search-button {
-      width: 100%;
+
+    .pagefind-ui__search-input {
+      font-size: 1rem !important;
     }
+  }
+
+  /* Search tips */
+  .search-tips {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #F5F0E1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .search-tips h3 {
+    margin-top: 0;
+    color: var(--pagefind-ui-primary);
+    font-size: 1.1rem;
+  }
+
+  .search-tips ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+
+  .search-tips li {
+    margin-bottom: 8px;
+  }
+
+  .search-tips code {
+    background-color: #FFFEF7;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
   }
 </style>
 
-<!-- Load Lunr.js for search functionality -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const searchResults = document.getElementById('search-results');
-    const resultsTitle = searchResults.querySelector('.results-title');
-    const resultsList = searchResults.querySelector('.results-list');
-    
-    // Get query parameter from URL
+  window.addEventListener('DOMContentLoaded', function() {
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      showImages: false,
+      excerptLength: 30,
+      translations: {
+        placeholder: "Search Latin texts and English translations...",
+        zero_results: "No results found for \"[SEARCH_TERM]\". Try different keywords or check for spelling variations.",
+        clear_search: "Clear",
+        load_more: "Load more results",
+        search_label: "Search translations",
+        filters_label: "Filters",
+        many_results: "[COUNT] results",
+        one_result: "1 result"
+      }
+    });
+
+    // Check for query parameter and auto-search
     const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('query');
-    
-    // Initialize search index
-    let searchIndex;
-    let searchData;
-    
-    // Function to highlight search terms in results
-    function highlightSearchTerms(text, searchTerm) {
-      if (!text || !searchTerm) return text;
-      const searchTerms = searchTerm.split(' ').filter(term => term.length > 2);
-      let highlightedText = text;
-      
-      searchTerms.forEach(term => {
-        const regex = new RegExp('(' + term + ')', 'gi');
-        highlightedText = highlightedText.replace(regex, '<span class="highlight">$1</span>');
-      });
-      
-      return highlightedText;
-    }
-    
-    // Function to perform the search
-    function performSearch(searchTerm) {
-      if (!searchTerm || searchTerm.trim() === '') {
-        resultsTitle.textContent = 'Enter a search term above';
-        resultsList.innerHTML = '';
-        return;
-      }
-      
-      resultsTitle.textContent = `Searching for "${searchTerm}"...`;
-      
-      // Load the search data if it's not already loaded
-      if (!searchIndex) {
-        fetch('{{ "/search.json" | relative_url }}')
-          .then(response => response.json())
-          .then(data => {
-            searchData = data;
-            
-            // Build the Lunr index
-            searchIndex = lunr(function() {
-              this.field('title', { boost: 10 });
-              this.field('category', { boost: 5 });
-              this.field('tags', { boost: 5 });
-              this.field('content');
-              
-              // Add each document to the index
-              for (let i = 0; i < data.length; i++) {
-                this.add({
-                  id: i,
-                  title: data[i].title,
-                  category: data[i].category,
-                  tags: data[i].tags,
-                  content: data[i].content
-                });
-              }
-            });
-            
-            // Perform the search with the now-initialized index
-            displaySearchResults(searchTerm);
-          })
-          .catch(error => {
-            console.error('Error loading search data:', error);
-            resultsTitle.textContent = 'Error loading search data';
-            resultsList.innerHTML = `
-              <div class="no-results">
-                <p>There was an error loading the search data. Please try again later.</p>
-              </div>
-            `;
-          });
-      } else {
-        // Index already loaded, just display results
-        displaySearchResults(searchTerm);
-      }
-    }
-    
-    // Function to display search results
-    function displaySearchResults(searchTerm) {
-      const results = searchIndex.search(searchTerm);
-      
-      if (results.length > 0) {
-        resultsTitle.textContent = `Found ${results.length} result${results.length === 1 ? '' : 's'} for "${searchTerm}"`;
-        
-        let resultsHtml = '';
-        results.forEach(result => {
-          const item = searchData[result.ref];
-          
-          resultsHtml += `
-            <div class="result-item">
-              <h3 class="result-title">
-                <a href="${item.url}">${highlightSearchTerms(item.title, searchTerm)}</a>
-              </h3>
-              <div class="result-meta">
-                <span class="result-date">${item.date}</span>
-                ${item.category ? `<span class="result-category"> • ${item.category}</span>` : ''}
-              </div>
-              <div class="result-excerpt">
-                ${highlightSearchTerms(item.content, searchTerm)}...
-              </div>
-              <a href="${item.url}" class="result-link">Read more</a>
-            </div>
-          `;
-        });
-        
-        resultsList.innerHTML = resultsHtml;
-      } else {
-        resultsTitle.textContent = `No results found for "${searchTerm}"`;
-        resultsList.innerHTML = `
-          <div class="no-results">
-            <p>Your search returned no results. Try different keywords or check for typos.</p>
-            <p>You might also try:</p>
-            <ul>
-              <li>Using more general terms</li>
-              <li>Checking our <a href="{{ '/archive' | relative_url }}">archive page</a> for browsing all content</li>
-              <li>Exploring our <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}">YouTube channel</a></li>
-            </ul>
-          </div>
-        `;
-      }
-    }
-    
-    // Check if there's a query parameter and perform the search
+    const query = urlParams.get('query') || urlParams.get('q');
     if (query) {
-      document.getElementById('search-input').value = query;
-      performSearch(query);
+      const searchInput = document.querySelector('.pagefind-ui__search-input');
+      if (searchInput) {
+        searchInput.value = query;
+        searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+      }
     }
-    
-    // Handle the search form submission
-    document.querySelector('.search-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const searchTerm = document.getElementById('search-input').value.trim();
-      
-      if (searchTerm) {
-        // Update the URL with the search term
-        const newUrl = window.location.pathname + '?query=' + encodeURIComponent(searchTerm);
-        window.history.pushState({ searchTerm }, '', newUrl);
-        
-        // Perform the search
-        performSearch(searchTerm);
-      }
-    });
-    
-    // Handle browser back/forward navigation
-    window.addEventListener('popstate', function(e) {
-      const urlParams = new URLSearchParams(window.location.search);
-      const searchTerm = urlParams.get('query');
-      
-      if (searchTerm) {
-        document.getElementById('search-input').value = searchTerm;
-        performSearch(searchTerm);
-      } else {
-        document.getElementById('search-input').value = '';
-        resultsTitle.textContent = 'Enter a search term above';
-        resultsList.innerHTML = '';
-      }
-    });
   });
 </script>
+
+<div class="search-tips">
+  <h3>Search Tips</h3>
+  <ul>
+    <li><strong>Search in Latin:</strong> Try <code>misericordia</code>, <code>peccator</code>, or <code>Deus</code></li>
+    <li><strong>Search in English:</strong> Try <code>mercy</code>, <code>sinner</code>, or <code>repentance</code></li>
+    <li><strong>Filter by language:</strong> Use the filters to show only Latin or English results</li>
+    <li><strong>Filter by century:</strong> Narrow results to specific time periods</li>
+    <li><strong>Partial matches:</strong> Pagefind supports fuzzy matching for typos</li>
+  </ul>
+</div>

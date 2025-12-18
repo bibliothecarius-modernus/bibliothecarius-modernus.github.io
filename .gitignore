@@ -1,1 +1,9 @@
 _forthcoming/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+node_modules/
+package-lock.json
+.sass-cache/
+*.gem
+Gemfile.lock
