@@ -1,3 +1,6 @@
+# Deployment: This site uses GitHub Actions for builds (not standard GitHub Pages)
+# Custom plugins in _plugins/ require this. See .github/workflows/ for build config.
+
 # Site settings
 title: Bibliothecarius Modernus
 subtitle: The Modern Librarian
