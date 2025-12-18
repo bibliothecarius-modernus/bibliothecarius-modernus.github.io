@@ -31,8 +31,8 @@ external_resources:
 
 
 <figure style="text-align: center; margin: 2em auto; max-width: 50%;">
-  <img src="https://en.m.wikiquote.org/wiki/File%3APope_Innocent_III_%28Monastery_of_Subiaco%29.jpg#:~:text=Description%20%20%7C%20English%3A%20,2016%2C%2010%3A39%3A33%20Source" alt="Mid-13th century fresco of Pope Innocent III at the Monastery of Sacro Speco (Subiaco), depicting the pontiff who authored the *Dialogus inter Deum et Peccatorem*" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Mid-13th century fresco of Pope Innocent III at the Monastery of Sacro Speco (Subiaco), depicting the pontiff who authored the *Dialogus inter Deum et Peccatorem*<br><small>License: Public Domain (photo released under CC0)*. **Suggested caption:** *Mid-13th century fresco of Pope Innocent III at the Monastery of Sacro Speco (Subiaco</small></figcaption>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Pope_Innocent_III_%28Monastery_of_Subiaco%29.jpg" alt="Mid-13th century fresco of Pope Innocent III at the Monastery of Sacro Speco (Subiaco), depicting the pontiff who authored the Dialogus inter Deum et Peccatorem" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Mid-13th century fresco of Pope Innocent III at the Monastery of Sacro Speco (Subiaco)<br><small>Image: Public Domain (Wikimedia Commons)</small></figcaption>
 </figure>
 
 
