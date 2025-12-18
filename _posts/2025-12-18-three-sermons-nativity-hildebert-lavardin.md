@@ -4,9 +4,10 @@ title: "Three Sermons on the Nativity of the Lord"
 date: 2025-12-18
 categories: ["Medieval Theology", "Biblical Commentary"]
 tags: [Hildebert of Lavardin, Christmas Sermons, Incarnation, 12th Century, Patrologia Latina, Medieval Theology]
+listed: false
 image:
 article_summary: "This 12th-century collection of three Christmas sermons presents sophisticated theological reflections on the Incarnation, examining the mystery of Christ's dual divine and human natures and the soteriological implications of God becoming man. The homilies offer detailed exploration of Marian theology, particularly the doctrine of perpetual virginity, while demonstrating the high level of Christological discourse characteristic of medieval monastic preaching. These sermons provide valuable insight into 12th-century liturgical practice and theological pedagogy, representing the intersection of scholastic methodology with pastoral instruction."
-youtube: "PENDING"
+youtube_id: "mPHeN5t4qnY"
 original_work:
   latin_title: "Sermones Tres in Nativitate Domini"
   author: "Hildebert of Lavardin"
