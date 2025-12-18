@@ -62,20 +62,8 @@ layout: default
       <div id="side-by-side" class="tab-panel">
         <div class="two-columns">
           <div class="latin-column">
-            <!-- <h3>Latin Original</h3> -->
             <div class="column-content">
-              {% if page.latin_text %}
-                {{ page.latin_text | markdownify }}
-              {% elsif page.translation_json and page.translation_json.chunks %}
-                {% for chunk in page.translation_json.chunks %}
-                  <div class="chunk-section">
-                    <span class="chunk-number">{{ chunk.chunk_number }}</span>
-                    <div class="latin-text">
-                      {{ chunk.original_latin | newline_to_br }}
-                    </div>
-                  </div>
-                {% endfor %}
-              {% elsif page.translation_json %}
+              {% if page.translation_json %}
                 <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
                   <div class="placeholder-content"></div>
                   <div class="placeholder-content"></div>
@@ -86,24 +74,8 @@ layout: default
             </div>
           </div>
           <div class="english-column">
-            <!-- <h3>English Translation</h3> -->
             <div class="column-content">
-              {% if page.english_translation %}
-                {{ page.english_translation | markdownify }}
-              {% elsif page.translation_json and page.translation_json.chunks %}
-                {% for chunk in page.translation_json.chunks %}
-                  <div class="chunk-section">
-                    <span class="chunk-number">{{ chunk.chunk_number }}</span>
-                    <div class="english-text">
-                      {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
-                      {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
-                      {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
-                      {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
-                      {{ cleaned_text }}
-                    </div>
-                  </div>
-                {% endfor %}
-              {% elsif page.translation_json %}
+              {% if page.translation_json %}
                 <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
                   <div class="placeholder-content"></div>
                   <div class="placeholder-content"></div>
@@ -130,18 +102,7 @@ layout: default
       <div id="latin-only" class="tab-panel">
         <h3>Latin Original</h3>
         <div class="single-column">
-          {% if page.latin_text %}
-            {{ page.latin_text | markdownify }}
-          {% elsif page.translation_json and page.translation_json.chunks %}
-            {% for chunk in page.translation_json.chunks %}
-              <div class="chunk-section latin-full">
-                <span class="chunk-number">{{ chunk.chunk_number }}</span>
-                <div class="latin-text">
-                  {{ chunk.original_latin | newline_to_br }}
-                </div>
-              </div>
-            {% endfor %}
-          {% elsif page.translation_json %}
+          {% if page.translation_json %}
             <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
               <div class="placeholder-content"></div>
               <div class="placeholder-content"></div>
@@ -157,22 +118,7 @@ layout: default
       <div id="english-only" class="tab-panel">
         <h3>English Translation</h3>
         <div class="single-column">
-          {% if page.english_translation %}
-            {{ page.english_translation | markdownify }}
-          {% elsif page.translation_json and page.translation_json.chunks %}
-            {% for chunk in page.translation_json.chunks %}
-              <div class="chunk-section english-full">
-                <span class="chunk-number">{{ chunk.chunk_number }}</span>
-                <div class="english-text">
-                  {% assign cleaned_text = chunk.cleaned_english_translation | replace: '<speak>', '' | replace: '</speak>', '' %}
-                  {% assign cleaned_text = cleaned_text | replace: '<s>', '' | replace: '</s>', '' %}
-                  {% assign cleaned_text = cleaned_text | replace: '<p>', '<p class="translation-paragraph">' %}
-                  {% assign cleaned_text = cleaned_text | replace: '<break time="500ms"/>', '' %}
-                  {{ cleaned_text }}
-                </div>
-              </div>
-            {% endfor %}
-          {% elsif page.translation_json %}
+          {% if page.translation_json %}
             <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
               <div class="placeholder-content"></div>
               <div class="placeholder-content"></div>
