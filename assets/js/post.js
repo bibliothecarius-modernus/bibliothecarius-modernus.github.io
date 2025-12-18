@@ -1,8 +1,8 @@
 /**
  * @file Post layout functionality including tab navigation and JSON translation loading.
- * @description Handles tab switching, localStorage preferences, responsive view switching,
- *              synchronized scrolling, and dynamic translation content loading.
- * @requires DOM elements: .tab-btn, .tab-panel, .json-loader
+ * @description Handles tab switching, view toggle within Translation tab, localStorage preferences,
+ *              responsive view switching, synchronized scrolling, and dynamic translation content loading.
+ * @requires DOM elements: .tab-btn, .tab-panel, .view-toggle-btn, .translation-view, .json-loader
  */
 document.addEventListener('DOMContentLoaded', function() {
   // --- localStorage Helpers (Safari private browsing throws) ---
@@ -26,19 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const tabButtons = document.querySelectorAll('.tab-btn');
   const tabPanels = document.querySelectorAll('.tab-panel');
 
-  // Mobile navigation buttons
-  const mobileNavButtons = document.querySelectorAll('.mobile-nav-btn');
-  mobileNavButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      const targetId = this.getAttribute('data-target');
-      document.querySelector('.tab-btn[data-target="' + targetId + '"]').click();
-    });
-  });
-
   // Set up tab switching
   tabButtons.forEach(function(button) {
     button.addEventListener('click', function() {
-      // Get target panel id
       const targetId = this.getAttribute('data-target');
 
       // Remove active class from all buttons and panels
@@ -59,47 +49,77 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Check for saved preference
-  const savedTab = safeGetItem('preferredTab');
+  // --- View Toggle Setup (within Translation tab) ---
+  const viewToggleButtons = document.querySelectorAll('.view-toggle-btn');
+  const translationViews = document.querySelectorAll('.translation-view');
 
-  // Don't restore side-by-side view on mobile
+  viewToggleButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const viewId = 'view-' + this.getAttribute('data-view');
+
+      // Remove active class from all toggle buttons and views
+      viewToggleButtons.forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+
+      translationViews.forEach(function(view) {
+        view.classList.remove('active');
+      });
+
+      // Add active class to clicked button and target view
+      this.classList.add('active');
+      const targetView = document.getElementById(viewId);
+      if (targetView) {
+        targetView.classList.add('active');
+      }
+
+      // Save view preference to localStorage
+      safeSetItem('preferredView', this.getAttribute('data-view'));
+    });
+  });
+
+  // Restore saved preferences
+  const savedTab = safeGetItem('preferredTab');
+  const savedView = safeGetItem('preferredView');
   const isMobile = window.innerWidth <= 768;
+
+  // Restore tab preference
   if (savedTab && document.getElementById(savedTab)) {
-    if (!(isMobile && savedTab === 'side-by-side')) {
-      // Find the button for this tab
-      const savedButton = document.querySelector('.tab-btn[data-target="' + savedTab + '"]');
-      if (savedButton) {
-        savedButton.click();
-      }
-    } else {
-      // If we're on mobile and the saved tab is side-by-side, default to analysis
-      const analysisButton = document.querySelector('.tab-btn[data-target="analysis"]');
-      if (analysisButton) {
-        analysisButton.click();
-      }
+    const savedButton = document.querySelector('.tab-btn[data-target="' + savedTab + '"]');
+    if (savedButton) {
+      savedButton.click();
     }
   }
 
-  // Handle window resize to switch views if needed
-  window.addEventListener('resize', function() {
-    const activeTabPanel = document.querySelector('.tab-panel.active');
-    if (!activeTabPanel) return;
-
-    const currentActiveTab = activeTabPanel.id;
-    const isMobileView = window.innerWidth <= 768;
-
-    // If resizing to mobile view and side-by-side is active, switch to analysis
-    if (isMobileView && currentActiveTab === 'side-by-side') {
-      const analysisButton = document.querySelector('.tab-btn[data-target="analysis"]');
-      if (analysisButton) {
-        analysisButton.click();
-      }
+  // Restore view preference (default to 'english' on mobile if 'both' was saved)
+  if (savedView) {
+    let viewToRestore = savedView;
+    if (isMobile && savedView === 'both') {
+      viewToRestore = 'english';
     }
+    const savedViewButton = document.querySelector('.view-toggle-btn[data-view="' + viewToRestore + '"]');
+    if (savedViewButton) {
+      savedViewButton.click();
+    }
+  } else if (isMobile) {
+    // Default to english on mobile if no preference
+    const englishButton = document.querySelector('.view-toggle-btn[data-view="english"]');
+    if (englishButton) {
+      englishButton.click();
+    }
+  }
 
-    // Toggle visibility of side-by-side tab based on screen size
-    const sideBySideTab = document.querySelector('.side-by-side-tab');
-    if (sideBySideTab) {
-      sideBySideTab.style.display = isMobileView ? 'none' : 'block';
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    const isMobileView = window.innerWidth <= 768;
+    const activeView = document.querySelector('.translation-view.active');
+
+    // If resizing to mobile and 'both' view is active, switch to 'english'
+    if (isMobileView && activeView && activeView.id === 'view-both') {
+      const englishButton = document.querySelector('.view-toggle-btn[data-view="english"]');
+      if (englishButton) {
+        englishButton.click();
+      }
     }
   });
 
@@ -108,13 +128,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const englishColumn = document.querySelector('.english-column .column-content');
 
   if (latinColumn && englishColumn) {
-    // When scrolling latin column
     latinColumn.addEventListener('scroll', function() {
       const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
       englishColumn.scrollTop = scrollPercentage * (englishColumn.scrollHeight - englishColumn.clientHeight);
     });
 
-    // When scrolling english column
     englishColumn.addEventListener('scroll', function() {
       const scrollPercentage = this.scrollTop / (this.scrollHeight - this.clientHeight);
       latinColumn.scrollTop = scrollPercentage * (latinColumn.scrollHeight - latinColumn.clientHeight);
@@ -147,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   /**
-   * Render translation JSON data into appropriate tab panel format.
+   * Render translation JSON data into appropriate view format.
    *
    * Expected JSON structure:
    * {
@@ -165,9 +183,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear loading placeholders
     container.innerHTML = '';
 
-    // Get parent tab type
-    const parentTab = container.closest('.tab-panel');
-    const tabType = parentTab ? parentTab.id : null;
+    // Get view type from data attribute
+    const viewType = container.getAttribute('data-view-type');
 
     /** Extract chunk number from either old or new JSON format */
     function getChunkNumber(chunk) {
@@ -184,15 +201,27 @@ document.addEventListener('DOMContentLoaded', function() {
       return chunk.cleaned_english_translation || chunk.english || '';
     }
 
+    /** Clean English text from SSML tags */
+    function cleanEnglishText(text) {
+      return text
+        .replace(/<speak>/g, '')
+        .replace(/<\/speak>/g, '')
+        .replace(/<s>/g, '')
+        .replace(/<\/s>/g, '')
+        .replace(/<p>/g, '<p class="translation-paragraph">')
+        .replace(/<break time="\\d+ms"\/>/g, '');
+    }
+
     // Check if json has chunks
     if (json && json.chunks && json.chunks.length > 0) {
-      // Process based on tab type
-      if (tabType === 'latin-only') {
+      // Process based on view type
+      if (viewType === 'latin-only') {
         // Latin only view
         json.chunks.forEach(chunk => {
           const chunkNum = getChunkNumber(chunk);
           const chunkEl = document.createElement('div');
           chunkEl.className = 'chunk-section latin-full';
+          chunkEl.id = 'chunk-' + chunkNum;
           chunkEl.dataset.chunk = chunkNum;
           chunkEl.innerHTML = `
             <span class="chunk-number">${chunkNum}</span>
@@ -200,71 +229,46 @@ document.addEventListener('DOMContentLoaded', function() {
           `;
           container.appendChild(chunkEl);
         });
-      } else if (tabType === 'english-only') {
+      } else if (viewType === 'english-only') {
         // English only view
         json.chunks.forEach(chunk => {
           const chunkNum = getChunkNumber(chunk);
           const chunkEl = document.createElement('div');
           chunkEl.className = 'chunk-section english-full';
+          chunkEl.id = 'chunk-' + chunkNum;
           chunkEl.dataset.chunk = chunkNum;
-
-          // Clean the text
-          let cleanedText = getEnglishText(chunk)
-            .replace(/<speak>/g, '')
-            .replace(/<\/speak>/g, '')
-            .replace(/<s>/g, '')
-            .replace(/<\/s>/g, '')
-            .replace(/<p>/g, '<p class="translation-paragraph">')
-            .replace(/<break time="\\d+ms"\/>/g, '');
-
           chunkEl.innerHTML = `
             <span class="chunk-number">${chunkNum}</span>
-            <div class="english-text">${cleanedText}</div>
+            <div class="english-text">${cleanEnglishText(getEnglishText(chunk))}</div>
           `;
           container.appendChild(chunkEl);
         });
-      } else if (tabType === 'side-by-side') {
-        // We need to find which column we're in
-        const latinColumn = container.closest('.latin-column');
-        const englishColumn = container.closest('.english-column');
-
-        if (latinColumn) {
-          // Latin column in side-by-side view
-          json.chunks.forEach(chunk => {
-            const chunkNum = getChunkNumber(chunk);
-            const chunkEl = document.createElement('div');
-            chunkEl.className = 'chunk-section';
-            chunkEl.dataset.chunk = chunkNum;
-            chunkEl.innerHTML = `
-              <span class="chunk-number">${chunkNum}</span>
-              <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
-            `;
-            container.appendChild(chunkEl);
-          });
-        } else if (englishColumn) {
-          // English column in side-by-side view
-          json.chunks.forEach(chunk => {
-            const chunkNum = getChunkNumber(chunk);
-            const chunkEl = document.createElement('div');
-            chunkEl.className = 'chunk-section';
-            chunkEl.dataset.chunk = chunkNum;
-
-            // Clean the text
-            let cleanedText = getEnglishText(chunk)
-              .replace(/<speak>/g, '')
-              .replace(/<\/speak>/g, '')
-              .replace(/<s>/g, '')
-              .replace(/<\/s>/g, '')
-              .replace(/<p>/g, '<p class="translation-paragraph">')
-              .replace(/<break time="\\d+ms"\/>/g, '');
-
-            chunkEl.innerHTML = `
-              <span class="chunk-number">${chunkNum}</span>
-              <div class="english-text">${cleanedText}</div>
-            `;
-            container.appendChild(chunkEl);
-          });
-        }
+      } else if (viewType === 'side-by-side-latin') {
+        // Latin column in side-by-side view
+        json.chunks.forEach(chunk => {
+          const chunkNum = getChunkNumber(chunk);
+          const chunkEl = document.createElement('div');
+          chunkEl.className = 'chunk-section';
+          chunkEl.dataset.chunk = chunkNum;
+          chunkEl.innerHTML = `
+            <span class="chunk-number">${chunkNum}</span>
+            <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
+          `;
+          container.appendChild(chunkEl);
+        });
+      } else if (viewType === 'side-by-side-english') {
+        // English column in side-by-side view
+        json.chunks.forEach(chunk => {
+          const chunkNum = getChunkNumber(chunk);
+          const chunkEl = document.createElement('div');
+          chunkEl.className = 'chunk-section';
+          chunkEl.dataset.chunk = chunkNum;
+          chunkEl.innerHTML = `
+            <span class="chunk-number">${chunkNum}</span>
+            <div class="english-text">${cleanEnglishText(getEnglishText(chunk))}</div>
+          `;
+          container.appendChild(chunkEl);
+        });
       }
     } else {
       // No chunks found
@@ -277,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   /**
    * Scroll to a specific chunk if the URL contains a hash like #chunk-5.
-   * Switches to English-only tab for better readability.
+   * Switches to Translation tab with English view for better readability.
    */
   function scrollToHashChunk() {
     const hash = window.location.hash;
@@ -287,19 +291,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const chunkNum = hash.replace('#chunk-', '');
     if (!chunkNum) return;
 
-    // Switch to English-only tab for search results (more readable)
-    const englishTab = document.querySelector('.tab-btn[data-target="english-only"]');
-    if (englishTab) {
-      englishTab.click();
+    // Switch to Translation tab
+    const translationTab = document.querySelector('.tab-btn[data-target="translation"]');
+    if (translationTab) {
+      translationTab.click();
     }
 
-    // Wait for tab switch and content to be ready, then scroll
-    setTimeout(() => {
-      // Find the chunk within the active english-only tab
-      const englishPanel = document.getElementById('english-only');
-      if (!englishPanel) return;
+    // Switch to English view for search results (more readable)
+    const englishViewBtn = document.querySelector('.view-toggle-btn[data-view="english"]');
+    if (englishViewBtn) {
+      englishViewBtn.click();
+    }
 
-      const targetElement = englishPanel.querySelector(`[data-chunk="${chunkNum}"]`);
+    // Wait for tab/view switch and content to be ready, then scroll
+    setTimeout(() => {
+      // Find the chunk within the english view
+      const englishView = document.getElementById('view-english');
+      if (!englishView) return;
+
+      const targetElement = englishView.querySelector(`[data-chunk="${chunkNum}"]`);
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
         // Highlight the chunk briefly

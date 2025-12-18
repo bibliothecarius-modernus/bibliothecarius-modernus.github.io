@@ -41,12 +41,9 @@ layout: default
     <!-- Tab buttons -->
     <div class="translation-tabs">
       <button class="tab-btn analysis-tab active" data-target="analysis">Analysis</button>
-      <button class="tab-btn side-by-side-tab" data-target="side-by-side">Side by Side</button>
-      <button class="tab-btn" data-target="latin-only">Latin Only</button>
-      <button class="tab-btn" data-target="english-only">English Only</button>
-      <button class="tab-btn metadata-tab" data-target="metadata">Resource Info</button>
+      <button class="tab-btn translation-tab" data-target="translation">Translation</button>
     </div>
-    
+
     <!-- Tab Content -->
     <div class="tab-content">
       <!-- Analysis View -->
@@ -57,81 +54,84 @@ layout: default
           </div>
         </div>
       </div>
-      
-      <!-- Side by Side View -->
-      <div id="side-by-side" class="tab-panel">
-        <div class="two-columns">
-          <div class="latin-column">
-            <div class="column-content">
-              {% if page.translation_json %}
-                <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
-                  <div class="placeholder-content"></div>
-                  <div class="placeholder-content"></div>
-                </div>
-              {% else %}
-                <p class="placeholder">Latin text is not available for this document.</p>
-              {% endif %}
+
+      <!-- Translation View (unified) -->
+      <div id="translation" class="tab-panel">
+        <!-- View Toggle -->
+        <div class="translation-view-toggle">
+          <button class="view-toggle-btn active" data-view="both">Both</button>
+          <button class="view-toggle-btn" data-view="latin">Latin</button>
+          <button class="view-toggle-btn" data-view="english">English</button>
+        </div>
+
+        <!-- Both (Side by Side) View -->
+        <div id="view-both" class="translation-view active">
+          <div class="two-columns">
+            <div class="latin-column">
+              <div class="column-content">
+                {% if page.translation_json %}
+                  <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}" data-view-type="side-by-side-latin">
+                    <div class="placeholder-content"></div>
+                    <div class="placeholder-content"></div>
+                  </div>
+                {% else %}
+                  <p class="placeholder">Latin text is not available for this document.</p>
+                {% endif %}
+              </div>
+            </div>
+            <div class="english-column">
+              <div class="column-content">
+                {% if page.translation_json %}
+                  <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}" data-view-type="side-by-side-english">
+                    <div class="placeholder-content"></div>
+                    <div class="placeholder-content"></div>
+                  </div>
+                {% else %}
+                  <p class="placeholder">English translation is not available for this document.</p>
+                {% endif %}
+              </div>
             </div>
           </div>
-          <div class="english-column">
-            <div class="column-content">
-              {% if page.translation_json %}
-                <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
-                  <div class="placeholder-content"></div>
-                  <div class="placeholder-content"></div>
-                </div>
-              {% else %}
-                <p class="placeholder">English translation is not available for this document.</p>
-              {% endif %}
-            </div>
+          <!-- Mobile notice for side-by-side -->
+          <div class="mobile-both-notice">
+            <p>Side by side view works best on larger screens. Use the toggle above to view Latin or English separately.</p>
           </div>
         </div>
-        <!-- Mobile alternative for side-by-side view -->
-        <div class="mobile-translation-view">
-          <div class="mobile-notice">
-            <p>Side by side view is not available on small screens. Please use Latin Only or English Only views.</p>
+
+        <!-- Latin Only View -->
+        <div id="view-latin" class="translation-view">
+          <div class="single-column">
+            {% if page.translation_json %}
+              <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}" data-view-type="latin-only">
+                <div class="placeholder-content"></div>
+                <div class="placeholder-content"></div>
+                <div class="placeholder-content"></div>
+              </div>
+            {% else %}
+              <p class="placeholder">Latin text is not available for this document.</p>
+            {% endif %}
           </div>
-          <div class="mobile-navigation">
-            <button class="mobile-nav-btn" data-target="latin-only">View Latin</button>
-            <button class="mobile-nav-btn" data-target="english-only">View English</button>
+        </div>
+
+        <!-- English Only View -->
+        <div id="view-english" class="translation-view">
+          <div class="single-column">
+            {% if page.translation_json %}
+              <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}" data-view-type="english-only">
+                <div class="placeholder-content"></div>
+                <div class="placeholder-content"></div>
+                <div class="placeholder-content"></div>
+              </div>
+            {% else %}
+              <p class="placeholder">English translation is not available for this document.</p>
+            {% endif %}
           </div>
         </div>
       </div>
-      
-      <!-- Latin Only View -->
-      <div id="latin-only" class="tab-panel">
-        <h3>Latin Original</h3>
-        <div class="single-column">
-          {% if page.translation_json %}
-            <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
-              <div class="placeholder-content"></div>
-              <div class="placeholder-content"></div>
-              <div class="placeholder-content"></div>
-            </div>
-          {% else %}
-            <p class="placeholder">Latin text is not available for this document.</p>
-          {% endif %}
-        </div>
-      </div>
-      
-      <!-- English Only View -->
-      <div id="english-only" class="tab-panel">
-        <h3>English Translation</h3>
-        <div class="single-column">
-          {% if page.translation_json %}
-            <div class="json-loader" data-json-path="{{ page.translation_json | relative_url }}">
-              <div class="placeholder-content"></div>
-              <div class="placeholder-content"></div>
-              <div class="placeholder-content"></div>
-            </div>
-          {% else %}
-            <p class="placeholder">English translation is not available for this document.</p>
-          {% endif %}
-        </div>
-      </div>
-      <!-- Resource Info View-->
-      {% include resource_info_tab.html %}
     </div>
+
+    <!-- Resource Info - Collapsible section -->
+    {% include resource_info_tab.html %}
   </div>
   
   {% if page.youtube_id %}
