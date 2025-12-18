@@ -190,10 +190,12 @@ document.addEventListener('DOMContentLoaded', function() {
       if (tabType === 'latin-only') {
         // Latin only view
         json.chunks.forEach(chunk => {
+          const chunkNum = getChunkNumber(chunk);
           const chunkEl = document.createElement('div');
           chunkEl.className = 'chunk-section latin-full';
+          chunkEl.id = `chunk-${chunkNum}`;
           chunkEl.innerHTML = `
-            <span class="chunk-number">${getChunkNumber(chunk)}</span>
+            <span class="chunk-number">${chunkNum}</span>
             <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
           `;
           container.appendChild(chunkEl);
@@ -201,8 +203,10 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (tabType === 'english-only') {
         // English only view
         json.chunks.forEach(chunk => {
+          const chunkNum = getChunkNumber(chunk);
           const chunkEl = document.createElement('div');
           chunkEl.className = 'chunk-section english-full';
+          chunkEl.id = `chunk-${chunkNum}`;
 
           // Clean the text
           let cleanedText = getEnglishText(chunk)
@@ -214,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .replace(/<break time="\\d+ms"\/>/g, '');
 
           chunkEl.innerHTML = `
-            <span class="chunk-number">${getChunkNumber(chunk)}</span>
+            <span class="chunk-number">${chunkNum}</span>
             <div class="english-text">${cleanedText}</div>
           `;
           container.appendChild(chunkEl);
@@ -225,12 +229,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const englishColumn = container.closest('.english-column');
 
         if (latinColumn) {
-          // Latin column in side-by-side view
+          // Latin column in side-by-side view (IDs go here to avoid duplicates)
           json.chunks.forEach(chunk => {
+            const chunkNum = getChunkNumber(chunk);
             const chunkEl = document.createElement('div');
             chunkEl.className = 'chunk-section';
+            chunkEl.id = `chunk-${chunkNum}`;
             chunkEl.innerHTML = `
-              <span class="chunk-number">${getChunkNumber(chunk)}</span>
+              <span class="chunk-number">${chunkNum}</span>
               <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
             `;
             container.appendChild(chunkEl);
@@ -238,8 +244,10 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (englishColumn) {
           // English column in side-by-side view
           json.chunks.forEach(chunk => {
+            const chunkNum = getChunkNumber(chunk);
             const chunkEl = document.createElement('div');
             chunkEl.className = 'chunk-section';
+            chunkEl.dataset.chunk = chunkNum; // Use data attribute to avoid duplicate IDs
 
             // Clean the text
             let cleanedText = getEnglishText(chunk)
@@ -251,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
               .replace(/<break time="\\d+ms"\/>/g, '');
 
             chunkEl.innerHTML = `
-              <span class="chunk-number">${getChunkNumber(chunk)}</span>
+              <span class="chunk-number">${chunkNum}</span>
               <div class="english-text">${cleanedText}</div>
             `;
             container.appendChild(chunkEl);
@@ -262,5 +270,46 @@ document.addEventListener('DOMContentLoaded', function() {
       // No chunks found
       container.innerHTML = '<p class="placeholder">Translation data could not be loaded properly.</p>';
     }
+
+    // After loading, check if we need to scroll to a specific chunk
+    scrollToHashChunk();
   }
+
+  /**
+   * Scroll to a specific chunk if the URL contains a hash like #chunk-5.
+   * Switches to English-only tab for better readability.
+   */
+  function scrollToHashChunk() {
+    const hash = window.location.hash;
+    if (!hash || !hash.startsWith('#chunk-')) return;
+
+    const chunkId = hash.substring(1); // Remove the #
+    const targetElement = document.getElementById(chunkId);
+
+    if (targetElement) {
+      // Switch to English-only tab for search results (more readable)
+      const englishTab = document.querySelector('.tab-btn[data-target="english-only"]');
+      if (englishTab) {
+        englishTab.click();
+      }
+
+      // Wait for tab switch, then scroll
+      setTimeout(() => {
+        // Try to find the element again in case tab switch created new elements
+        const element = document.getElementById(chunkId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // Highlight the chunk briefly
+          element.style.transition = 'background-color 0.3s';
+          element.style.backgroundColor = 'rgba(184, 134, 11, 0.2)';
+          setTimeout(() => {
+            element.style.backgroundColor = '';
+          }, 2000);
+        }
+      }, 300);
+    }
+  }
+
+  // Also handle hash changes (e.g., clicking internal links)
+  window.addEventListener('hashchange', scrollToHashChunk);
 });
