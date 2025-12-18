@@ -157,50 +157,7 @@ layout: default
     </a>
   </div>
   {% endif %}
-  
-<!-- Scholarly Discussion Section -->
-<!-- Commenting out Disqus integration to remove ads -->
-<!--
-<div class="comments-section readable-margins">
-    <h2>Scholarly Discussion</h2>
-    <p class="discussion-intro">Share your insights, questions, or observations about this translation.</p>
-    
-    <div id="disqus_thread"></div>
-    <script>
-      var disqus_config = function () {
-        // Use absolute URL without any special characters
-        this.page.url = "{{ site.url | default: 'https://bibliothecarius-modernus.github.io' }}{{ page.url }}";
-        // Use a simple identifier without special characters
-        this.page.identifier = "{{ page.url | slugify }}";
-      };
-      (function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://bibliothecarius-modernus.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the scholarly discussion.</noscript>
-  </div>
-  
-  <div class="post-navigation readable-margins">
-    <div class="post-nav-links">
-      {% if page.previous.url %}
-      <a class="prev-post" href="{{ page.previous.url | relative_url }}">
-        <span class="nav-label">Previous</span>
-        <span class="post-title">{{ page.previous.title | escape }}</span>
-      </a>
-      {% endif %}
-      
-      {% if page.next.url %}
-      <a class="next-post" href="{{ page.next.url | relative_url }}">
-        <span class="nav-label">Next</span>
-        <span class="post-title">{{ page.next.title | escape }}</span>
-      </a>
-      {% endif %}
-    </div>
-  </div>
--->
+
   <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
 
   <script src="{{ '/assets/js/post.js' | relative_url }}"></script>
