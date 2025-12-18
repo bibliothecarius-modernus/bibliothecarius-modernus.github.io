@@ -3,6 +3,7 @@ layout: tabbed_post
 title: "Epistolae Tres (c. 610 CE)"
 date: 2025-12-18
 listed: false
+publish_date: 2025-12-25
 categories: [epistolary, visigothic-mozarabic-writings, medieval-diplomacy]
 youtube_id: "u-WBXrP2QtY"
 translation_json: "/assets/translations/2025-12-18-epistolae-tres-bulgaranus-comes.json"

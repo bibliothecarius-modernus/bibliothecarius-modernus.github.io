@@ -1,0 +1,127 @@
+name: Scheduled Blog Post Publishing
+
+on:
+  schedule:
+    # Run daily at 6:00 AM UTC (1:00 AM EST, 10:00 PM PST)
+    - cron: '0 6 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  publish-scheduled-posts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Check and publish scheduled posts
+        id: publish
+        run: |
+          python << 'EOF'
+          import os
+          import re
+          import yaml
+          from datetime import datetime, date
+          from pathlib import Path
+
+          posts_dir = Path("_posts")
+          today = date.today()
+          published_posts = []
+
+          print(f"Checking posts for scheduled publishing (today: {today})")
+          print("=" * 60)
+
+          for post_file in posts_dir.glob("*.md"):
+              with open(post_file, "r", encoding="utf-8") as f:
+                  content = f.read()
+
+              # Extract front matter
+              match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
+              if not match:
+                  continue
+
+              front_matter_text = match.group(1)
+              try:
+                  front_matter = yaml.safe_load(front_matter_text)
+              except yaml.YAMLError:
+                  print(f"  Warning: Could not parse front matter in {post_file.name}")
+                  continue
+
+              if not front_matter:
+                  continue
+
+              # Check if post has publish_date and is currently unlisted
+              publish_date = front_matter.get("publish_date")
+              listed = front_matter.get("listed", True)
+
+              if publish_date and listed == False:
+                  # Parse the publish date
+                  if isinstance(publish_date, date):
+                      pub_date = publish_date
+                  elif isinstance(publish_date, str):
+                      try:
+                          pub_date = datetime.strptime(publish_date, "%Y-%m-%d").date()
+                      except ValueError:
+                          print(f"  Warning: Invalid date format in {post_file.name}: {publish_date}")
+                          continue
+                  else:
+                      continue
+
+                  print(f"  {post_file.name}: publish_date={pub_date}, listed={listed}")
+
+                  # If publish date has arrived, flip to listed
+                  if pub_date <= today:
+                      print(f"    -> Publishing! (scheduled for {pub_date})")
+
+                      # Update the front matter
+                      new_front_matter_text = front_matter_text.replace(
+                          "listed: false", "listed: true"
+                      )
+
+                      # Reconstruct the file
+                      new_content = f"---\n{new_front_matter_text}\n---\n" + content[match.end():]
+
+                      with open(post_file, "w", encoding="utf-8") as f:
+                          f.write(new_content)
+
+                      published_posts.append(post_file.name)
+                  else:
+                      days_until = (pub_date - today).days
+                      print(f"    -> Not yet ({days_until} days until publish)")
+
+          print("=" * 60)
+
+          if published_posts:
+              print(f"Published {len(published_posts)} post(s):")
+              for post in published_posts:
+                  print(f"  - {post}")
+
+              # Set output for commit step
+              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                  f.write(f"published=true\n")
+                  f.write(f"count={len(published_posts)}\n")
+                  f.write(f"posts={', '.join(published_posts)}\n")
+          else:
+              print("No posts to publish today.")
+              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                  f.write("published=false\n")
+          EOF
+
+      - name: Commit and push changes
+        if: steps.publish.outputs.published == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add _posts/
+          git commit -m "Publish scheduled blog posts: ${{ steps.publish.outputs.posts }}"
+          git push

@@ -3,6 +3,7 @@ layout: tabbed_post
 title: "Dialogus inter Deum et Peccatorem (c. 1195-1215)"
 date: 2025-12-18
 listed: false
+publish_date: 2025-12-25
 categories: [penitential-literature, moral-theology, mystical-theology]
 youtube_id: "ChsStFdL5jw"
 translation_json: "/assets/translations/2025-12-18-dialogus-inter-deum-et-peccatorem-pope-innocent-iii.json"
