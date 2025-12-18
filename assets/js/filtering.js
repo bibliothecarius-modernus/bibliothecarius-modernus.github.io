@@ -793,4 +793,23 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateSelectedDisplay(element, text) {
       element.textContent = text;
     }
+
+    // YouTube Thumbnail Click Handler
+    // Makes YouTube thumbnails clickable to navigate to the post
+    const youtubeThumbnails = document.querySelectorAll('.youtube-thumbnail-container');
+    youtubeThumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', function(e) {
+        // Find the closest post item to get its link
+        const listItem = this.closest('li');
+        if (listItem) {
+          const postLink = listItem.querySelector('.post-link').getAttribute('href');
+          if (postLink) {
+            window.location.href = postLink;
+          }
+        }
+      });
+
+      // Make the thumbnail look clickable
+      thumbnail.style.cursor = 'pointer';
+    });
   });
