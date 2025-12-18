@@ -1,6 +1,6 @@
 ---
 layout: tabbed_post
-title: "Dialogus inter Deum et Peccatorem (c. 13th century00 CE)"
+title: "Dialogus inter Deum et Peccatorem (c. 1195-1215)"
 date: 2025-12-18
 listed: false
 categories: [penitential-literature, moral-theology, mystical-theology]
@@ -9,8 +9,8 @@ translation_json: "/assets/translations/2025-12-18-dialogus-inter-deum-et-peccat
 original_work:
   latin_title: Dialogus inter Deum et Peccatorem
   author: "Pope Innocent III"
-  date: "c. 13th century00 CE"
-  publication: "Patrologia Latina Volume 217"
+  date: "c. 1195-1215"
+  publication: "Patrologia Latina Volume 217, cols. 691-702"
   context: "Dialogue Between God and a Sinner"
 external_resources:
   archive_url: "https://archive.org/details/dialogue-between-god-and-sinner-innocent-iii"

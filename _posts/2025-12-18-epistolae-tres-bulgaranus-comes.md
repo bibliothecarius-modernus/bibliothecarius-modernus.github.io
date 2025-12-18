@@ -1,6 +1,6 @@
 ---
 layout: tabbed_post
-title: "Epistolae Tres (c. 7th century00 CE)"
+title: "Epistolae Tres (c. 610 CE)"
 date: 2025-12-18
 listed: false
 categories: [epistolary, visigothic-mozarabic-writings, medieval-diplomacy]
@@ -9,8 +9,8 @@ translation_json: "/assets/translations/2025-12-18-epistolae-tres-bulgaranus-com
 original_work:
   latin_title: Epistolae Tres
   author: "Bulgaranus Comes"
-  date: "c. 7th century00 CE"
-  publication: "Patrologia Latina Volume 80"
+  date: "c. 610 CE"
+  publication: "Patrologia Latina Volume 80, cols. 107-112"
   context: "Three Letters of Count Bulgaranus"
 external_resources:
   archive_url: "https://archive.org/details/bulgaranus-epistolae-tres"
