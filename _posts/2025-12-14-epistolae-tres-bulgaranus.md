@@ -2,6 +2,7 @@
 layout: tabbed_post
 title: "Epistolae Tres (c. 610 CE)"
 date: 2025-12-14
+listed: false
 categories: [merovingian-history, medieval-diplomacy, patristic-correspondence]
 youtube_id: "u-WBXrP2QtY"
 translation_json: "/assets/translations/2025-12-14-epistolae-tres-bulgaranus.json"

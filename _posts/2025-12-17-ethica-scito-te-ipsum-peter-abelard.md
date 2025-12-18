@@ -2,6 +2,7 @@
 layout: tabbed_post
 title: "Ethica seu Liber dictus Scito Te Ipsum (c. 1200 CE)"
 date: 2025-12-17
+listed: false
 categories: [moral-theology, scholastic-theology]
 youtube_id: "Lj7g6J2FKy0"
 translation_json: "/assets/translations/2025-12-17-ethica-scito-te-ipsum-peter-abelard.json"
