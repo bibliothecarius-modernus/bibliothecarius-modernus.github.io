@@ -1,5 +1,34 @@
 ---
 ---
+/*
+ * MINIMA THEME DEPENDENCY AUDIT
+ * =============================
+ * This file imports the minima theme and then overrides nearly everything.
+ *
+ * MINIMA STYLES USED AS-IS:
+ *   - Basic CSS reset/normalize
+ *   - Some default element spacing
+ *
+ * MINIMA STYLES PARTIALLY EXTENDED:
+ *   - .wrapper (max-width and padding modified)
+ *   - Base responsive breakpoints (but heavily customized)
+ *
+ * MINIMA STYLES COMPLETELY OVERRIDDEN:
+ *   - body (fonts, colors, line-height)
+ *   - h1-h6 (fonts, colors, margins)
+ *   - a, a:hover (colors, transitions)
+ *   - .site-header (layout, styling, sticky positioning)
+ *   - .site-footer (colors, layout)
+ *   - .post-content (fonts, spacing, blockquotes)
+ *   - .post-list (grid layout replaces list)
+ *   - .post-meta (colors, sizing)
+ *   - Responsive media queries (custom breakpoints and styles)
+ *
+ * RECOMMENDATION:
+ *   Consider removing the minima dependency entirely in a future refactor.
+ *   This would reduce CSS specificity conflicts and page load size.
+ *   Estimated effort: Medium - would need to add back normalize/reset CSS.
+ */
 
 @import "{{ site.theme }}";
 
