@@ -147,6 +147,7 @@ layout: default
   <!-- Post List with Data Attributes for Filtering/Sorting -->
   <ul class="post-list" id="filtered-posts">
     {% for post in site.posts %}
+    {% unless post.listed == false %}
     <li class="post-item" 
         data-title="{{ post.title }}"
         data-date="{{ post.date | date: '%Y-%m-%d' }}"
@@ -200,6 +201,7 @@ layout: default
         <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
         </div>
     </li>
+    {% endunless %}
     {% endfor %}
   </ul>
 

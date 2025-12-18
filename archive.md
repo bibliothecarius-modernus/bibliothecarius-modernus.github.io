@@ -26,6 +26,7 @@ permalink: /archive/
     <h2 class="archive-year">{{ year.name }}</h2>
     <ul class="archive-list">
       {% for post in year.items %}
+      {% unless post.listed == false %}
       <li class="archive-item" {% if post.categories %}data-categories="{{ post.categories | join: ' ' }}"{% endif %} data-category-slugs="{{ post.categories | join: ' ' }}">
         <div class="archive-post-container">
           <div class="archive-post-image">
@@ -68,6 +69,7 @@ permalink: /archive/
           </div>
         </div>
       </li>
+      {% endunless %}
       {% endfor %}
     </ul>
     {% endfor %}
