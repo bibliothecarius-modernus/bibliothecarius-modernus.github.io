@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Passio S. Mauricii et sociorum (c.450)"
 date: 2025-04-16
 categories: [hagiography, post-nicene-fathers, ecclesiastical-history]

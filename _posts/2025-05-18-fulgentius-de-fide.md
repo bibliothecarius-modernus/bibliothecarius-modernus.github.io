@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "De Fide ad Petrum (c.519)"
 date: 2025-05-18
 categories: [trinitarian-theology, christology, post-nicene-fathers]

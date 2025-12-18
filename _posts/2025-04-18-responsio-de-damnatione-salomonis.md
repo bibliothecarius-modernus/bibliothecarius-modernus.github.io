@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Responsio de damnatione Salomonis (c.1150)"
 date: 2025-04-18
 categories: [ecclesiastical-history, moral-theology, high-scholasticism]

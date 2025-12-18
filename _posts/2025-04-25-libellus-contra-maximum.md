@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Libellus contra Maximum Arianum (c.484)"
 date: 2025-04-25
 categories: [post-nicene-fathers, apologetics, visigothic-mozarabic-writings]

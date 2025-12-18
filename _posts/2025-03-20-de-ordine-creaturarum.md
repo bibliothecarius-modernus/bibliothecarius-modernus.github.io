@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "De Ordine Creaturarum (c.670-700)"
 date: 2025-03-20
 categories: [irish-anglo-saxon-contributions, natural-philosophy-medicine, neo-platonic-christian-philosophy]

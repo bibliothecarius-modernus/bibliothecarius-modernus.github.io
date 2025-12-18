@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Vita Sancti Odonis Abbatis Cluniacensis Secundi (c. 943)"
 date: 2025-03-19
 categories: [hagiography, asceticism-monasticism, monastic-rules-constitutions]

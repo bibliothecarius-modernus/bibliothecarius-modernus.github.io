@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "De cultu imaginum (c. 840)"
 date: 2025-11-26
 categories: [carolingian-theological-renaissance, apologetics, heresiology]

@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "[LATIN_TITLE] ([DATE]): Text & Translation"
 date: YYYY-MM-DD
 categories: []

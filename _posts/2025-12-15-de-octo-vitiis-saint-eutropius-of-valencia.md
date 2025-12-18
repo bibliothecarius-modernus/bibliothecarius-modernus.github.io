@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "De Octo Vitiis (c. 600 CE)"
 date: 2025-12-15
 categories: [moral-theology, asceticism-monasticism, visigothic-mozarabic-writings]

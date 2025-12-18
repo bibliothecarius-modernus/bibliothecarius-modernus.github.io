@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Vita Annonis Minor (c.1180)"
 date: 2025-07-30
 categories: [hagiography, ecclesiastical-history, asceticism-monasticism]

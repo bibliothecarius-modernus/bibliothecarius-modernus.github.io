@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "De Planctu Naturae (c. 1200 CE)"
 date: 2025-12-16
 categories: [neo-platonic-christian-philosophy, medieval-theology, moral-theology]

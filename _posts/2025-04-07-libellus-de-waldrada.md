@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Libellus de Waldrada (c.862)"
 date: 2025-04-07
 categories: [ecclesiastical-history, canon-law, carolingian-theological-renaissance]

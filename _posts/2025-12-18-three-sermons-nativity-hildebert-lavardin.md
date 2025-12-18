@@ -1,15 +1,12 @@
 ---
 layout: post
-title: "Three Sermons on the Nativity of the Lord"
+title: "Sermones Tres in Nativitate Domini (c. 1100-1130 CE)"
 date: 2025-12-18
-categories: ["Medieval Theology", "Biblical Commentary"]
-tags: [Hildebert of Lavardin, Christmas Sermons, Incarnation, 12th Century, Patrologia Latina, Medieval Theology]
 listed: false
-image:
-article_summary: "This 12th-century collection of three Christmas sermons presents sophisticated theological reflections on the Incarnation, examining the mystery of Christ's dual divine and human natures and the soteriological implications of God becoming man. The homilies offer detailed exploration of Marian theology, particularly the doctrine of perpetual virginity, while demonstrating the high level of Christological discourse characteristic of medieval monastic preaching. These sermons provide valuable insight into 12th-century liturgical practice and theological pedagogy, representing the intersection of scholastic methodology with pastoral instruction."
+categories: [medieval-theology, biblical-commentary]
 youtube_id: "mPHeN5t4qnY"
 original_work:
-  latin_title: "Sermones Tres in Nativitate Domini"
+  latin_title: Sermones Tres in Nativitate Domini
   author: "Hildebert of Lavardin"
   date: "c. 1100-1130 CE"
   publication: "Patrologia Latina Volume 171"
@@ -18,6 +15,10 @@ external_resources:
   archive_url: "https://archive.org/details/sermones-tres-nativitate-domini-hildebert"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_171/Hildebert%20of%20Lavardin%20-%20Three%20Sermons%20on%20the%20Nativity%20of%20the%20Lord"
 ---
+
+<p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+  This 12th-century collection of three Christmas sermons presents sophisticated theological reflections on the Incarnation, examining the mystery of Christ's dual divine and human natures and the soteriological implications of God becoming man. The homilies offer detailed exploration of Marian theology, particularly the doctrine of perpetual virginity, while demonstrating the high level of Christological discourse characteristic of medieval monastic preaching. These sermons provide valuable insight into 12th-century liturgical practice and theological pedagogy, representing the intersection of scholastic methodology with pastoral instruction.
+</p>
 
 ## Historical Context
 

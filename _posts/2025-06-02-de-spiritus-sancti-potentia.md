@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "De Spiritus Sancti Potentia (c.335–414)"
 date: 2025-06-02
 categories: [pneumatology, nicene-fathers, trinitarian-theology]

@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Exorcismus (c. 500-600)"
 date: 2025-05-24
 categories: [liturgical-texts-sacramentaries, asceticism-monasticism, ecclesiastical-history]

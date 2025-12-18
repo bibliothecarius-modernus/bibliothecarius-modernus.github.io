@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Quomodo per annum jejunandum sit (c. 850-883)"
 date: 2025-03-31
 categories: [liturgical-texts-sacramentaries, asceticism-monasticism]

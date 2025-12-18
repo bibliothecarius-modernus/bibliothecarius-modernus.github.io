@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Contra Graecorum Opposita (c.868)"
 date: 2025-03-26
 categories: [carolingian-theological-renaissance, pneumatology, apologetics]

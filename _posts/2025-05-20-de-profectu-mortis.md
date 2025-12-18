@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "De profectu mortis (c. 1200)"
 date: 2025-05-20
 categories: [asceticism-monasticism, moral-theology, high-scholasticism]

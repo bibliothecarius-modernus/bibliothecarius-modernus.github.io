@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Epistola de cynocephalis (c.865)"
 date: 2025-03-20
 categories: [epistolary-literature, ecclesiastical-history, carolingian-theological-renaissance]

@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (c.445)"
 date: 2025-05-08
 categories: [post-nicene-fathers, apologetics, heresiology]

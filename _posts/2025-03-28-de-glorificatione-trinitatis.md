@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "De glorificatione Trinitatis et processione sancti Spiritus (c.1128)"
 date: 2025-03-28
 categories: [trinitarian-theology, high-scholasticism, pneumatology]

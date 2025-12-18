@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Dialogus inter Deum et Peccatorem (c. 1190s-1210s)"
 date: 2025-12-14
 listed: false

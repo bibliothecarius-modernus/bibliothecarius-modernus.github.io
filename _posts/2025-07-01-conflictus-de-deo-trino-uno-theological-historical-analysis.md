@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Conflictus de Deo Trino et Uno (c.449-451)"
 date: 2025-07-01
 categories: [post-nicene-fathers, christology, heresiology]

@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Libri Carolini (c.790)"
 date: 2025-03-26
 categories: [carolingian-theological-renaissance, apologetics, ecclesiastical-history]

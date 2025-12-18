@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Epistolae Tres (c. 610 CE)"
 date: 2025-12-14
 listed: false

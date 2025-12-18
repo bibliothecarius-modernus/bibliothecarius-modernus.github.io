@@ -1,5 +1,5 @@
 ---
-layout: tabbed_post
+layout: post
 title: "Liber de Synodis seu Fide Orientalium (c.358)"
 date: 2025-03-27
 categories: [nicene-fathers, heresiology, trinitarian-theology]
