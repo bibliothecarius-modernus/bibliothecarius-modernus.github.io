@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Liber de conceptu virginali et originali peccato (c.1099)"
 date: 2025-04-21
 categories: [high-scholasticism, christology, moral-theology]

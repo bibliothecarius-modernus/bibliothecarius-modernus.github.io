@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Responsio de salute primi hominis (c.1160)"
 date: 2025-05-24
 categories: [high-scholasticism, soteriology, moral-theology]

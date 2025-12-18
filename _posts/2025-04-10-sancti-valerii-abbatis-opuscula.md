@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Sancti Valerii Abbatis Opuscula (c.695)"
 date: 2025-04-10
 categories: [asceticism-monasticism, visigothic-mozarabic-writings, hagiography]

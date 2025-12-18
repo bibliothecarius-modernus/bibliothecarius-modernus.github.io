@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Epistola consolatoria ad Arcadium (c.437-440)"
 date: 2025-03-25
 categories: [epistolary-literature, post-nicene-fathers, apologetics]

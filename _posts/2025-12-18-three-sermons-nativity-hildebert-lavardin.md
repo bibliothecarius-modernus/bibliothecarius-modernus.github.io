@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Sermones Tres in Nativitate Domini (c. 1100-1130 CE)"
 date: 2025-12-18
 listed: false

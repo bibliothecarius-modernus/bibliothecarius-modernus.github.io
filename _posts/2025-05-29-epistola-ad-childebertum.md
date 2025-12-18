@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Epistola ad Childebertum (c.537-538)"
 date: 2025-05-29
 categories: [ecclesiology, post-nicene-fathers, epistolary-literature]

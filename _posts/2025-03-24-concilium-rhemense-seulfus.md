@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Concilium Rhemense praeside Seulfo (c. 923-924)"
 date: 2025-03-24
 categories: [ecclesiastical-history, conciliar-synodal-acts]

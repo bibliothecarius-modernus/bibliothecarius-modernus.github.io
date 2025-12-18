@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Libellus de Ratione Inveniendi Crassitudinem Sphaerae (c. 1000)"
 date: 2025-11-25
 categories: [medieval-science, mathematics]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Commentaria in Apocalypsin (c.540)"
 date: 2025-03-26
 categories: [new-testament-commentaries, eschatology, post-nicene-fathers]

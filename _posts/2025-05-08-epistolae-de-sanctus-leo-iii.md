@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Epistolae de Sanctus Leo III Pontifex Romanus (c.800)"
 date: 2025-05-08
 categories: [papal-bulls-decretals, ecclesiastical-history, carolingian-theological-renaissance]

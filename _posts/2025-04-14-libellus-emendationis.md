@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Libellus emendationis (c. 418)"
 date: 2025-04-14
 categories: [post-nicene-fathers, christology, apologetics]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Defensio Eruditionis Hieronymianae (c.1700)"
 date: 2025-03-19
 categories: [apologetics, patristic-philosophy, heresiology]

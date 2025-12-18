@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "De Sex Dierum Creatione (c.700)"
 date: 2025-03-29
 categories: [old-testament-commentaries, post-nicene-fathers, ecclesiastical-history]

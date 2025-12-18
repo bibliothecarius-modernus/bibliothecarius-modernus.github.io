@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Confessio et Confessio prolixior (c. 849)"
 date: 2025-03-24
 categories: [creeds-confessions, soteriology, carolingian-theological-renaissance]

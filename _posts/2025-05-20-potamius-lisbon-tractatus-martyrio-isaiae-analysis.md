@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Potamii Olisiponensis Tractatus de martyrio Isaiae (c. 355)"
 date: 2025-05-20
 categories: [post-nicene-fathers, homiletics, visigothic-mozarabic-writings]

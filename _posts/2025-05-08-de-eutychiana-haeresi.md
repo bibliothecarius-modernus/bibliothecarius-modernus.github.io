@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "De Eutychiana haeresi et historia (c.450)"
 date: 2025-05-08
 categories: [post-nicene-fathers, heresiology, ecclesiastical-history]

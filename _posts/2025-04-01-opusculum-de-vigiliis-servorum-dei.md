@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Opusculum de vigiliis servorum Dei (c.400)"
 date: 2025-04-01
 categories: [post-nicene-fathers, liturgical-texts-sacramentaries, asceticism-monasticism]

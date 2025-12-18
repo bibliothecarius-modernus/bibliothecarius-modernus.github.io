@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Epistolae duae Mappinii Episcopi Remensis (c.550)"
 date: 2025-03-24
 categories: [epistolary-literature, ecclesiastical-history, post-nicene-fathers]

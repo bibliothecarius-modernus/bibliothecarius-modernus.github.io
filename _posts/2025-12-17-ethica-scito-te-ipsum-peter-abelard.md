@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Ethica seu Liber dictus Scito Te Ipsum (c. 1200 CE)"
 date: 2025-12-17
 listed: false

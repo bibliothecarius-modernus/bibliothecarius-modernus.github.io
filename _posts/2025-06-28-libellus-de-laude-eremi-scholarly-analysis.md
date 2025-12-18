@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Libellus de Laude Eremi (c.428)"
 date: 2025-06-28
 categories: [asceticism-monasticism, post-nicene-fathers, mystical-theology]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Expositio brevis antiquae liturgiae Gallicanae (c.700)"
 date: 2025-03-19
 categories: [liturgical-texts-sacramentaries, ecclesiastical-history, visigothic-mozarabic-writings]

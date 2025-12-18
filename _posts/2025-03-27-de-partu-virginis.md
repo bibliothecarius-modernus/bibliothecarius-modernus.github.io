@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "De Partu Virginis (c.847)"
 date: 2025-03-27
 categories: [marian-theology-devotion, carolingian-theological-renaissance, christology]

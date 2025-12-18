@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Liber adversus Joannem Scotum (c.852)"
 date: 2025-04-09
 categories: [apologetics, carolingian-theological-renaissance]

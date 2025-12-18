@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "De Quatuor Voluntatibus in Christo (c.1130)"
 date: 2025-04-22
 categories: [high-scholasticism, christology]

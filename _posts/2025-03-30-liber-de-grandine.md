@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Liber de grandine et tonitruis (c.820)"
 date: 2025-03-30
 categories: [carolingian-theological-renaissance, apologetics]

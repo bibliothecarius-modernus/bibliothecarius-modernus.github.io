@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Epistolae et decreta Felicis Papae IV (c.530)"
 date: 2025-04-13
 categories: [papal-bulls-decretals, post-nicene-fathers, ecclesiastical-history]

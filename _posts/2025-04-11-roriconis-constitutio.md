@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Roriconis Constitutio (c. 961)"
 date: 2025-04-11
 categories: [ecclesiastical-history, monastic-rules-constitutions]

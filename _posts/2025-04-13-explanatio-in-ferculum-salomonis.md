@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tabbed_post
 title: "Explanatio in Ferculum Salomonis (c.853-856)"
 date: 2025-04-13
 categories: [carolingian-theological-renaissance, ecclesiology, ecclesiastical-history]
