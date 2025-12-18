@@ -2,8 +2,8 @@ name: Scheduled Blog Post Publishing
 
 on:
   schedule:
-    # Run daily at 6:00 AM UTC (1:00 AM EST, 10:00 PM PST)
-    - cron: '0 6 * * *'
+    # Run daily at 11:05 AM UTC (6:05 AM EST / 7:05 AM EDT)
+    - cron: '5 11 * * *'
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
