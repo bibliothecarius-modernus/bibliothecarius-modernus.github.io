@@ -1,6 +1,28 @@
-// Post Layout JavaScript - Tab functionality and JSON loading
+/**
+ * @file Post layout functionality including tab navigation and JSON translation loading.
+ * @description Handles tab switching, localStorage preferences, responsive view switching,
+ *              synchronized scrolling, and dynamic translation content loading.
+ * @requires DOM elements: .tab-btn, .tab-panel, .json-loader
+ */
 document.addEventListener('DOMContentLoaded', function() {
-  // Get all tab buttons and panels
+  // --- localStorage Helpers (Safari private browsing throws) ---
+  function safeGetItem(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function safeSetItem(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (e) {
+      // Silent fail - preference won't persist but site works
+    }
+  }
+
+  // --- Tab Navigation Setup ---
   const tabButtons = document.querySelectorAll('.tab-btn');
   const tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -33,12 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById(targetId).classList.add('active');
 
       // Save preference to localStorage
-      localStorage.setItem('preferredTab', targetId);
+      safeSetItem('preferredTab', targetId);
     });
   });
 
   // Check for saved preference
-  const savedTab = localStorage.getItem('preferredTab');
+  const savedTab = safeGetItem('preferredTab');
 
   // Don't restore side-by-side view on mobile
   const isMobile = window.innerWidth <= 768;
@@ -60,7 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Handle window resize to switch views if needed
   window.addEventListener('resize', function() {
-    const currentActiveTab = document.querySelector('.tab-panel.active').id;
+    const activeTabPanel = document.querySelector('.tab-panel.active');
+    if (!activeTabPanel) return;
+
+    const currentActiveTab = activeTabPanel.id;
     const isMobileView = window.innerWidth <= 768;
 
     // If resizing to mobile view and side-by-side is active, switch to analysis
@@ -78,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Set up synchronized scrolling for side-by-side view
+  // --- Synchronized Scrolling ---
   const latinColumn = document.querySelector('.latin-column .column-content');
   const englishColumn = document.querySelector('.english-column .column-content');
 
@@ -96,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Load JSON files from assets if needed
+  // --- JSON Translation Loading ---
   const jsonLoaders = document.querySelectorAll('.json-loader');
   if (jsonLoaders.length > 0) {
     jsonLoaders.forEach(function(loader) {
@@ -121,7 +146,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Function to process translation JSON and create content
+  /**
+   * Render translation JSON data into appropriate tab panel format.
+   *
+   * Expected JSON structure:
+   * {
+   *   chunks: [{
+   *     chunk_number: string,      // or chunk_id in old format
+   *     original_latin: string,    // or latin in old format
+   *     cleaned_english_translation: string  // or english in old format
+   *   }]
+   * }
+   *
+   * @param {Object} json - Translation data with chunks array
+   * @param {HTMLElement} container - Target container for rendered content
+   */
   function processTranslationJson(json, container) {
     // Clear loading placeholders
     container.innerHTML = '';
@@ -130,17 +169,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const parentTab = container.closest('.tab-panel');
     const tabType = parentTab ? parentTab.id : null;
 
-    // Helper function to get chunk number (supports both old and new format)
+    /** Extract chunk number from either old or new JSON format */
     function getChunkNumber(chunk) {
       return chunk.chunk_number || chunk.chunk_id || '';
     }
 
-    // Helper function to get Latin text (supports both old and new format)
+    /** Extract Latin text from either old or new JSON format */
     function getLatinText(chunk) {
       return chunk.original_latin || chunk.latin || '';
     }
 
-    // Helper function to get English text (supports both old and new format)
+    /** Extract English text from either old or new JSON format */
     function getEnglishText(chunk) {
       return chunk.cleaned_english_translation || chunk.english || '';
     }

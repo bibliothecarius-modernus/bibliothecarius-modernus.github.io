@@ -1,3 +1,8 @@
+/**
+ * @file Home page filtering and pagination for post listings.
+ * @description Handles century/author filtering, pagination, and enhanced author search UI.
+ * @requires DOM elements: #filter-century, #filter-author, #reset-filters, #pagination-container
+ */
 document.addEventListener('DOMContentLoaded', function() {
     // Get all relevant elements
     const posts = document.querySelectorAll('.post-item');
@@ -28,9 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
     init();
     
     function init() {
-      // Log post data for debugging
-      console.log('Posts data extracted:', allPostsData);
-      
+      // Guard clause: exit if required filter elements don't exist
+      if (!filterCenturySelect || !filterAuthorSelect || !resetButton) {
+        return;
+      }
+
       // Set up event listeners
       filterCenturySelect.addEventListener('change', handleFilterChange);
       filterAuthorSelect.addEventListener('change', handleFilterChange);
@@ -45,7 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
       refreshPosts();
     }
     
-    // Extract all data from posts for faster filtering and dynamic dropdowns
+    /**
+     * Extract metadata from post elements for filtering and dropdown population.
+     * @param {NodeList} posts - Post list item elements with data attributes
+     * @returns {Object} Extracted data with authors, centuries, and relationship maps
+     */
     function extractAllPostsData(posts) {
       const data = {
         authors: new Set(),
@@ -68,22 +79,18 @@ document.addEventListener('DOMContentLoaded', function() {
           if (match) {
             const year = parseInt(match[0]);
             
-            // Correct century calculation
+            // Years ending in 00 (e.g., 500 CE) belong to the current century (5th),
+            // not the next, so we add 1. Other years use ceiling division.
             if (year % 100 === 0) {
-              // For years like 100, 700, 1700
               century = ((year / 100) + 1).toString();
             } else {
-              // For years like 105, 701, 1705
               century = Math.ceil(year / 100).toString();
             }
             
             data.centuries.add(century);
-            
-            // For debugging
-            console.log(`Date: ${originalDate}, Year: ${year}, Century: ${century}`);
           }
         } catch (e) {
-          console.log('Error parsing date:', e);
+          // Silent fail - date parsing errors are expected for some posts
         }
         
         // Build relationship maps for interdependent filtering
@@ -248,6 +255,10 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 100);
     }
     
+    /**
+     * Filter posts based on current filter state.
+     * @returns {Array<Element>} Array of post elements matching current filters
+     */
     function applyFilters() {
       // Performance optimization - early exit if no filters are applied
       if (currentFilters.century === 'all' && currentFilters.author === 'all') {
@@ -266,19 +277,17 @@ document.addEventListener('DOMContentLoaded', function() {
             if (match) {
               const year = parseInt(match[0]);
               
-              // Correct century calculation
+              // Years ending in 00 belong to the current century, not the next
               if (year % 100 === 0) {
-                // For years like 100, 700, 1700
                 century = ((year / 100) + 1).toString();
               } else {
-                // For years like 105, 701, 1705
                 century = Math.ceil(year / 100).toString();
               }
             }
           } catch (e) {
-            console.log('Error parsing date:', e);
+            // Silent fail - date parsing errors are expected for some posts
           }
-          
+
           if (century !== currentFilters.century) return false;
         }
         
@@ -318,9 +327,13 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
+    /**
+     * Render pagination controls based on filtered post count.
+     * Creates prev/next buttons and page number links with ellipsis for large page counts.
+     */
     function updatePagination() {
       if (!paginationContainer) return;
-      
+
       // Clear existing pagination
       paginationContainer.innerHTML = '';
       
@@ -492,7 +505,10 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    // Enhanced Author Filter Functionality
+    /**
+     * Replace native select with searchable dropdown UI for author filtering.
+     * Creates search input, dropdown list, and mobile-friendly overlay.
+     */
     function enhanceAuthorFilter() {
       const filterAuthorSelect = document.getElementById('filter-author');
       if (!filterAuthorSelect) return;
@@ -654,6 +670,11 @@ document.addEventListener('DOMContentLoaded', function() {
       return wrapper;
     }
     
+    /**
+     * Populate author dropdown with option elements.
+     * @param {HTMLElement} dropdown - Dropdown container element
+     * @param {Array<HTMLOptionElement>} options - Option elements from original select
+     */
     function populateDropdown(dropdown, options) {
       // Clear existing items
       while (dropdown.firstChild) {

@@ -1,10 +1,23 @@
-// Enhanced Translation Features
+/**
+ * @file Translation viewer enhancements for side-by-side Latin/English display.
+ * @description Provides synchronized scrolling between columns and text search functionality.
+ * @requires DOM element: #translation-viewer
+ * @requires Tab panels: #side-by-side, #latin-only, #english-only, #analysis
+ */
 document.addEventListener('DOMContentLoaded', function() {
   // Only initialize when we have a translation viewer
   const translationViewer = document.getElementById('translation-viewer');
   if (!translationViewer) return;
-  
-  // ===== FEATURE 1: SMART SYNCHRONIZED SCROLLING =====
+
+  // =============================================================================
+  // SYNCHRONIZED SCROLLING
+  // =============================================================================
+
+  /**
+   * Initialize synchronized scrolling between Latin and English columns.
+   * Only activates when side-by-side view is active.
+   * Creates sync toggle button and handles chunk-based scroll alignment.
+   */
   function setupSynchronizedScrolling() {
     // We'll only set this up when the side-by-side view is active
     const sideByByside = document.getElementById('side-by-side');
@@ -96,7 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
     englishColumn.style.position = 'relative';
     englishColumn.appendChild(englishIndicator);
     
-    // Chunk-based scrolling
+    /**
+     * Find the most visible chunk section in a scrollable column.
+     * @param {HTMLElement} column - Scrollable column container
+     * @returns {HTMLElement|null} Chunk element with highest visibility percentage
+     */
     function findVisibleChunk(column) {
       const chunks = column.querySelectorAll('.chunk-section');
       const columnRect = column.getBoundingClientRect();
@@ -122,6 +139,12 @@ document.addEventListener('DOMContentLoaded', function() {
       return bestChunk;
     }
     
+    /**
+     * Scroll target column to match the visible position in source column.
+     * Maintains relative scroll position within chunks for smooth synchronization.
+     * @param {HTMLElement} sourceColumn - Column that was scrolled by user
+     * @param {HTMLElement} targetColumn - Column to synchronize
+     */
     function scrollToMatchingChunk(sourceColumn, targetColumn) {
       const visibleChunk = findVisibleChunk(sourceColumn);
       if (!visibleChunk) return;
@@ -232,11 +255,17 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       scrollToMatchingChunk(latinColumn, englishColumn);
     }, 100);
-    
-    console.log('Smart synchronized scrolling enabled');
   }
   
-  // ===== FEATURE 2: SIMPLE SEARCH =====
+  // =============================================================================
+  // TEXT SEARCH
+  // =============================================================================
+
+  /**
+   * Initialize text search functionality for translation content.
+   * Creates search input UI, handles highlighting, and provides result navigation.
+   * Search scope adapts to active tab (Latin-only, English-only, or both).
+   */
   function setupSimpleSearch() {
     // Create search container
     const searchContainer = document.createElement('div');
@@ -384,7 +413,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentHighlights = [];
     let currentHighlightIndex = -1;
     const isMobile = window.innerWidth <= 768;
-    
+
+    /**
+     * Execute search across visible translation text.
+     * Highlights matches, updates result count, and navigates to first result.
+     * Search scope determined by active tab and checkbox selections.
+     */
     function performSearch() {
       // Clear previous highlights
       clearHighlights();
@@ -634,7 +668,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize
     updateMobileSearchOptions();
-    console.log('Search functionality enabled');
   }
   
   // ===== INITIALIZE FEATURES =====
@@ -643,7 +676,8 @@ document.addEventListener('DOMContentLoaded', function() {
   setupSimpleSearch();
   
   // Setup scrolling when side-by-side is active
-  if (document.getElementById('side-by-side').classList.contains('active')) {
+  const sideBySidePanel = document.getElementById('side-by-side');
+  if (sideBySidePanel && sideBySidePanel.classList.contains('active')) {
     setupSynchronizedScrolling();
   }
   
@@ -658,14 +692,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle window resize
   window.addEventListener('resize', function() {
     const wasMobile = window.innerWidth <= 768;
-    
+
     // If switching between mobile and desktop, reload the page
     // This is a simplistic approach; a more complex solution would
     // reinitialize the features without reloading
     if (wasMobile !== (window.innerWidth <= 768)) {
       // Instead of reload, we could re-run setup functions
       setupSimpleSearch();
-      if (document.getElementById('side-by-side').classList.contains('active')) {
+      const sideBySide = document.getElementById('side-by-side');
+      if (sideBySide && sideBySide.classList.contains('active')) {
         setupSynchronizedScrolling();
       }
     }
