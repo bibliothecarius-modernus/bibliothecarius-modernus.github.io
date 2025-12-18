@@ -42,6 +42,7 @@ layout: default
     <div class="translation-tabs">
       <button class="tab-btn analysis-tab active" data-target="analysis">Analysis</button>
       <button class="tab-btn translation-tab" data-target="translation">Translation</button>
+      <button class="tab-btn metadata-tab" data-target="metadata">Resource Info</button>
     </div>
 
     <!-- Tab Content -->
@@ -128,10 +129,10 @@ layout: default
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Resource Info - Collapsible section -->
-    {% include resource_info_tab.html %}
+      <!-- Resource Info Tab -->
+      {% include resource_info_tab.html %}
+    </div>
   </div>
   
   {% if page.youtube_id %}

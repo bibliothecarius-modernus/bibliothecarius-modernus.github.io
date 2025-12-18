@@ -183,8 +183,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear loading placeholders
     container.innerHTML = '';
 
-    // Get view type from data attribute
-    const viewType = container.getAttribute('data-view-type');
+    // Get view type from data attribute, or detect from parent elements
+    let viewType = container.getAttribute('data-view-type');
+
+    // Fallback: detect view type from parent elements if attribute is missing
+    if (!viewType) {
+      const latinColumn = container.closest('.latin-column');
+      const englishColumn = container.closest('.english-column');
+      const parentView = container.closest('.translation-view');
+
+      if (latinColumn) {
+        viewType = 'side-by-side-latin';
+      } else if (englishColumn) {
+        viewType = 'side-by-side-english';
+      } else if (parentView) {
+        const viewId = parentView.id;
+        if (viewId === 'view-latin') viewType = 'latin-only';
+        else if (viewId === 'view-english') viewType = 'english-only';
+        else if (viewId === 'view-both') viewType = 'side-by-side-latin'; // fallback
+      }
+    }
 
     /** Extract chunk number from either old or new JSON format */
     function getChunkNumber(chunk) {
@@ -212,63 +230,53 @@ document.addEventListener('DOMContentLoaded', function() {
         .replace(/<break time="\\d+ms"\/>/g, '');
     }
 
+    /** Render Latin chunks */
+    function renderLatinChunks(isFullView) {
+      json.chunks.forEach(chunk => {
+        const chunkNum = getChunkNumber(chunk);
+        const chunkEl = document.createElement('div');
+        chunkEl.className = isFullView ? 'chunk-section latin-full' : 'chunk-section';
+        if (isFullView) chunkEl.id = 'chunk-' + chunkNum;
+        chunkEl.dataset.chunk = chunkNum;
+        chunkEl.innerHTML = `
+          <span class="chunk-number">${chunkNum}</span>
+          <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
+        `;
+        container.appendChild(chunkEl);
+      });
+    }
+
+    /** Render English chunks */
+    function renderEnglishChunks(isFullView) {
+      json.chunks.forEach(chunk => {
+        const chunkNum = getChunkNumber(chunk);
+        const chunkEl = document.createElement('div');
+        chunkEl.className = isFullView ? 'chunk-section english-full' : 'chunk-section';
+        if (isFullView) chunkEl.id = 'chunk-' + chunkNum;
+        chunkEl.dataset.chunk = chunkNum;
+        chunkEl.innerHTML = `
+          <span class="chunk-number">${chunkNum}</span>
+          <div class="english-text">${cleanEnglishText(getEnglishText(chunk))}</div>
+        `;
+        container.appendChild(chunkEl);
+      });
+    }
+
     // Check if json has chunks
     if (json && json.chunks && json.chunks.length > 0) {
       // Process based on view type
       if (viewType === 'latin-only') {
-        // Latin only view
-        json.chunks.forEach(chunk => {
-          const chunkNum = getChunkNumber(chunk);
-          const chunkEl = document.createElement('div');
-          chunkEl.className = 'chunk-section latin-full';
-          chunkEl.id = 'chunk-' + chunkNum;
-          chunkEl.dataset.chunk = chunkNum;
-          chunkEl.innerHTML = `
-            <span class="chunk-number">${chunkNum}</span>
-            <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
-          `;
-          container.appendChild(chunkEl);
-        });
+        renderLatinChunks(true);
       } else if (viewType === 'english-only') {
-        // English only view
-        json.chunks.forEach(chunk => {
-          const chunkNum = getChunkNumber(chunk);
-          const chunkEl = document.createElement('div');
-          chunkEl.className = 'chunk-section english-full';
-          chunkEl.id = 'chunk-' + chunkNum;
-          chunkEl.dataset.chunk = chunkNum;
-          chunkEl.innerHTML = `
-            <span class="chunk-number">${chunkNum}</span>
-            <div class="english-text">${cleanEnglishText(getEnglishText(chunk))}</div>
-          `;
-          container.appendChild(chunkEl);
-        });
+        renderEnglishChunks(true);
       } else if (viewType === 'side-by-side-latin') {
-        // Latin column in side-by-side view
-        json.chunks.forEach(chunk => {
-          const chunkNum = getChunkNumber(chunk);
-          const chunkEl = document.createElement('div');
-          chunkEl.className = 'chunk-section';
-          chunkEl.dataset.chunk = chunkNum;
-          chunkEl.innerHTML = `
-            <span class="chunk-number">${chunkNum}</span>
-            <div class="latin-text">${getLatinText(chunk).replace(/\n/g, '<br>')}</div>
-          `;
-          container.appendChild(chunkEl);
-        });
+        renderLatinChunks(false);
       } else if (viewType === 'side-by-side-english') {
-        // English column in side-by-side view
-        json.chunks.forEach(chunk => {
-          const chunkNum = getChunkNumber(chunk);
-          const chunkEl = document.createElement('div');
-          chunkEl.className = 'chunk-section';
-          chunkEl.dataset.chunk = chunkNum;
-          chunkEl.innerHTML = `
-            <span class="chunk-number">${chunkNum}</span>
-            <div class="english-text">${cleanEnglishText(getEnglishText(chunk))}</div>
-          `;
-          container.appendChild(chunkEl);
-        });
+        renderEnglishChunks(false);
+      } else {
+        // Fallback: render English by default
+        console.warn('Unknown viewType:', viewType, '- defaulting to English');
+        renderEnglishChunks(true);
       }
     } else {
       // No chunks found

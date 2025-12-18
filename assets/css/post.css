@@ -99,6 +99,21 @@
   color: var(--white);
 }
 
+/* Resource Info / Metadata tab styling */
+.metadata-tab {
+  background-color: var(--sienna);
+  color: var(--bg-color);
+}
+
+.metadata-tab:hover {
+  background-color: var(--sienna-light);
+}
+
+.metadata-tab.active {
+  background-color: var(--sienna);
+  color: var(--white);
+}
+
 /* View Toggle within Translation tab */
 .translation-view-toggle {
   display: flex;
@@ -596,55 +611,6 @@
   }
 }
 
-/* Resource Info - Collapsible Details */
-.resource-info-details {
-  max-width: var(--content-width);
-  margin: 30px auto 0;
-  border: 1px solid var(--highlight-color);
-  border-radius: 6px;
-  background-color: var(--white);
-}
-
-.resource-info-details summary {
-  padding: 15px 20px;
-  font-family: 'Luxurious Roman', serif;
-  font-size: 1.2rem;
-  color: var(--text-color);
-  background-color: var(--bg-color-light);
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-}
-
-.resource-info-details summary::-webkit-details-marker {
-  display: none;
-}
-
-.resource-info-details summary::after {
-  content: '+';
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--highlight-color);
-  transition: transform 0.2s;
-}
-
-.resource-info-details[open] summary::after {
-  content: '−';
-}
-
-.resource-info-details summary:hover {
-  background-color: #f0e8d8;
-}
-
-.resource-info-details[open] summary {
-  border-bottom: 1px solid var(--highlight-color);
-  border-radius: 6px 6px 0 0;
-}
-
 /* Metadata content styling */
 .metadata-container {
   padding: 15px 10px;
@@ -713,17 +679,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .resource-info-details {
-    margin: 20px 10px 0;
-  }
-
-  .resource-info-details summary {
-    padding: 12px 15px;
-    font-size: 1.1rem;
-  }
-}
-
 @media (max-width: 480px) {
   .metadata-table th {
     width: 45%;
@@ -736,10 +691,5 @@
 
   .translation-notes {
     padding: 12px 15px;
-  }
-
-  .resource-info-details summary {
-    padding: 10px 12px;
-    font-size: 1rem;
   }
 }
