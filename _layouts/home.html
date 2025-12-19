@@ -137,52 +137,61 @@ layout: default
     <span id="posts-count"></span>
   </div>
 
+  <!-- View Toggle -->
+  <div class="view-toggle-container">
+    <button class="view-mode-btn active" data-view="grid" aria-label="Grid view">
+      <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 3h8v8H3V3zm0 10h8v8H3v-8zm10-10h8v8h-8V3zm0 10h8v8h-8v-8z"/></svg>
+    </button>
+    <button class="view-mode-btn" data-view="list" aria-label="List view">
+      <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></svg>
+    </button>
+  </div>
+
   <!-- Post List with Data Attributes for Filtering/Sorting -->
   <ul class="post-list" id="filtered-posts">
     {% for post in site.posts %}
     {% unless post.listed == false %}
-    <li class="post-item" 
+    <li class="post-item"
         data-title="{{ post.title }}"
         data-date="{{ post.date | date: '%Y-%m-%d' }}"
         data-original-date="{{ post.original_work.date | remove: 'c.' | remove: 'CE' | strip }}"
         data-author="{{ post.original_work.author | slugify }}"
         data-categories="{{ post.categories | join: ',' | slugify }}">
-        <div class="post-thumbnail">
-        {% if post.youtube_id %}
-            <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/maxresdefault.jpg"
-                alt="{{ post.title | escape }}"
-                onerror="this.src='https://img.youtube.com/vi/{{ post.youtube_id }}/hqdefault.jpg'">
-        {% elsif post.image %}
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
-        {% else %}
-            <div class="post-thumbnail placeholder"></div>
-        {% endif %}
-        </div>
-        <div class="post-content-wrapper">
-        <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h3>
-        <div class="post-meta">
-            <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
-            {% if post.original_work.date %}
-              <span class="original-date">Original work: {{ post.original_work.date }}</span>
-            {% endif %}
+        <a href="{{ post.url | relative_url }}" class="post-card-link">
+          <div class="post-thumbnail">
+          {% if post.youtube_id %}
+              <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/maxresdefault.jpg"
+                  alt="{{ post.title | escape }}"
+                  onerror="this.src='https://img.youtube.com/vi/{{ post.youtube_id }}/hqdefault.jpg'">
+          {% elsif post.image %}
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
+          {% else %}
+              <div class="post-placeholder">
+                <span class="placeholder-letter">{{ post.title | slice: 0 }}</span>
+              </div>
+          {% endif %}
+          </div>
+          <div class="post-content-wrapper">
             {% if post.original_work.author %}
-              <span class="post-author">by {{ post.original_work.author }}</span>
+              <span class="post-author">{{ post.original_work.author }}</span>
             {% endif %}
-        </div>
-        <div class="post-excerpt">
-            {{ post.excerpt | strip_html | truncatewords: 30 }}
-        </div>
-        {% if post.categories %}
-        <div class="post-categories">
-            {% for category in post.categories %}
-            {% assign cat_data = site.data.categories[category] %}
-            <a href="{{ '/archive/#' | append: category | relative_url }}" class="category-tag" data-category="{{ category }}">{% if cat_data %}{{ cat_data.name }}{% else %}{{ category }}{% endif %}</a>
-            {% endfor %}
-        </div>
-        {% endif %}
-        </div>
+            <h3 class="post-link">{{ post.title | escape }}</h3>
+            <div class="post-meta">
+              <span class="post-date">{{ post.date | date: "%b %Y" }}{% if post.original_work.date %} · Original {{ post.original_work.date }}{% endif %}</span>
+            </div>
+            <div class="post-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 20 }}
+            </div>
+            {% if post.categories %}
+            <div class="post-categories">
+                {% for category in post.categories %}
+                {% assign cat_data = site.data.categories[category] %}
+                <span class="category-tag" data-category="{{ category }}">{% if cat_data %}{{ cat_data.name }}{% else %}{{ category }}{% endif %}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </a>
     </li>
     {% endunless %}
     {% endfor %}
@@ -277,3 +286,39 @@ layout: default
     }
   }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const viewButtons = document.querySelectorAll('.view-mode-btn');
+  const postList = document.getElementById('filtered-posts');
+
+  // Restore saved view preference
+  const savedView = localStorage.getItem('postListView') || 'grid';
+  if (savedView === 'list') {
+    postList.classList.add('list-view');
+    viewButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.view === 'list');
+    });
+  }
+
+  viewButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const view = this.dataset.view;
+
+      // Update button states
+      viewButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      // Toggle list view class
+      if (view === 'list') {
+        postList.classList.add('list-view');
+      } else {
+        postList.classList.remove('list-view');
+      }
+
+      // Save preference
+      localStorage.setItem('postListView', view);
+    });
+  });
+});
+</script>
