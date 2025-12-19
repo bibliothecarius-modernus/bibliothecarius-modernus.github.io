@@ -334,4 +334,127 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Also handle hash changes (e.g., clicking internal links)
   window.addEventListener('hashchange', scrollToHashChunk);
+
+  // --- Scroll to Top Button ---
+  const scrollToTopBtn = document.getElementById('scroll-to-top');
+  if (scrollToTopBtn) {
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    // Scroll to top when clicked
+    scrollToTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // --- Copy and Download Functions ---
+  const copyLatinBtn = document.getElementById('copy-latin-btn');
+  const copyEnglishBtn = document.getElementById('copy-english-btn');
+  const downloadBtn = document.getElementById('download-btn');
+
+  /** Extract text from all latin-text elements */
+  function getLatinText() {
+    const latinElements = document.querySelectorAll('.latin-text');
+    let text = '';
+    latinElements.forEach(function(el, index) {
+      if (index > 0) text += '\n\n';
+      text += el.textContent.trim();
+    });
+    return text;
+  }
+
+  /** Extract text from all english-text elements */
+  function getEnglishText() {
+    const englishElements = document.querySelectorAll('.english-text');
+    let text = '';
+    englishElements.forEach(function(el, index) {
+      if (index > 0) text += '\n\n';
+      text += el.textContent.trim();
+    });
+    return text;
+  }
+
+  /** Copy text to clipboard with visual feedback */
+  function copyToClipboard(text, button) {
+    navigator.clipboard.writeText(text).then(function() {
+      button.classList.add('copied');
+      const originalText = button.querySelector('span').textContent;
+      button.querySelector('span').textContent = 'Copied!';
+      setTimeout(function() {
+        button.classList.remove('copied');
+        button.querySelector('span').textContent = originalText;
+      }, 2000);
+    }).catch(function(err) {
+      console.error('Failed to copy:', err);
+      alert('Failed to copy text. Please try again.');
+    });
+  }
+
+  /** Download text as a file */
+  function downloadAsFile(filename, content) {
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  if (copyLatinBtn) {
+    copyLatinBtn.addEventListener('click', function() {
+      const text = getLatinText();
+      if (text) {
+        copyToClipboard(text, this);
+      } else {
+        alert('No Latin text available to copy.');
+      }
+    });
+  }
+
+  if (copyEnglishBtn) {
+    copyEnglishBtn.addEventListener('click', function() {
+      const text = getEnglishText();
+      if (text) {
+        copyToClipboard(text, this);
+      } else {
+        alert('No English text available to copy.');
+      }
+    });
+  }
+
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', function() {
+      const latinText = getLatinText();
+      const englishText = getEnglishText();
+      const pageTitle = document.querySelector('.post-title')?.textContent || 'translation';
+      const safeTitle = pageTitle.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+
+      let content = '';
+      if (latinText) {
+        content += '=== LATIN TEXT ===\n\n' + latinText;
+      }
+      if (englishText) {
+        if (content) content += '\n\n\n';
+        content += '=== ENGLISH TRANSLATION ===\n\n' + englishText;
+      }
+
+      if (content) {
+        downloadAsFile(safeTitle + '.txt', content);
+      } else {
+        alert('No translation text available to download.');
+      }
+    });
+  }
 });

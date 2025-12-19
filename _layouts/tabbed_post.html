@@ -58,11 +58,27 @@ layout: default
 
       <!-- Translation View (unified) -->
       <div id="translation" class="tab-panel">
-        <!-- View Toggle -->
-        <div class="translation-view-toggle">
-          <button class="view-toggle-btn active" data-view="both">Both</button>
-          <button class="view-toggle-btn" data-view="latin">Latin</button>
-          <button class="view-toggle-btn" data-view="english">English</button>
+        <!-- View Toggle and Actions -->
+        <div class="translation-toolbar">
+          <div class="translation-view-toggle">
+            <button class="view-toggle-btn active" data-view="both">Both</button>
+            <button class="view-toggle-btn" data-view="latin">Latin</button>
+            <button class="view-toggle-btn" data-view="english">English</button>
+          </div>
+          <div class="translation-actions">
+            <button class="action-btn" id="copy-latin-btn" title="Copy Latin text">
+              <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              <span>Latin</span>
+            </button>
+            <button class="action-btn" id="copy-english-btn" title="Copy English text">
+              <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              <span>English</span>
+            </button>
+            <button class="action-btn" id="download-btn" title="Download as text file">
+              <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              <span>Download</span>
+            </button>
+          </div>
         </div>
 
         <!-- Both (Side by Side) View -->
@@ -137,8 +153,8 @@ layout: default
   
   {% if page.youtube_id %}
   <div class="youtube-promo">
-    <h3>Enjoy this article? Continue the discussion!</h3>
-    <p>Watch the translation and share your insights on YouTube.</p>
+    <h3>Watch this translation on YouTube</h3>
+    <p>Listen to the Latin with English translation and leave your thoughts in the comments.</p>
     <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" class="youtube-button" target="_blank">
       <svg class="youtube-icon" viewBox="0 0 24 24" width="24" height="24">
         <path fill="currentColor" d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34,.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58a8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34,.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
@@ -148,8 +164,8 @@ layout: default
   </div>
   {% else %}
   <div class="youtube-promo">
-    <h3>Explore More Latin Patristic Texts</h3>
-    <p>Discover more ancient wisdom through our video translations on YouTube.</p>
+    <h3>Explore More Translations</h3>
+    <p>Find more Latin Patristic texts with audio on our YouTube channel.</p>
     <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" class="youtube-button" target="_blank">
       <svg class="youtube-icon" viewBox="0 0 24 24" width="24" height="24">
         <path fill="currentColor" d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34,.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58a8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34,.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
@@ -158,6 +174,13 @@ layout: default
     </a>
   </div>
   {% endif %}
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+      <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
 
   <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
 

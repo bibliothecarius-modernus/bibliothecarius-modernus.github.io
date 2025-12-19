@@ -671,10 +671,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // ===== INITIALIZE FEATURES =====
-  
-  // Setup search immediately
-  setupSimpleSearch();
-  
+
   // Setup scrolling when side-by-side is active
   const sideBySidePanel = document.getElementById('side-by-side');
   if (sideBySidePanel && sideBySidePanel.classList.contains('active')) {
@@ -693,12 +690,8 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', function() {
     const wasMobile = window.innerWidth <= 768;
 
-    // If switching between mobile and desktop, reload the page
-    // This is a simplistic approach; a more complex solution would
-    // reinitialize the features without reloading
+    // If switching between mobile and desktop, reinitialize scrolling
     if (wasMobile !== (window.innerWidth <= 768)) {
-      // Instead of reload, we could re-run setup functions
-      setupSimpleSearch();
       const sideBySide = document.getElementById('side-by-side');
       if (sideBySide && sideBySide.classList.contains('active')) {
         setupSynchronizedScrolling();
