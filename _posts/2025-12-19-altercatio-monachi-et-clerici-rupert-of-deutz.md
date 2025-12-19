@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Dispute Between a Monk and a Cleric: Whether a Monk May Preach"
 date: 2025-12-19
-listed: false
+listed: true
 publish_date: 2025-12-19
 categories: [Medieval Theology, Monastic Writings, Ecclesiastical Debates]
 author: "Rupert of Deutz"
