@@ -1,0 +1,26 @@
+{
+  "$schema": "https://zenodo.org/api/schemas/deposits/records/legacyrecord.json",
+  "title": "Bibliothecarius Modernus: Latin Patristic Translations",
+  "description": "AI-assisted translations of Latin Patristic texts, produced using Claude (Anthropic) with human direction, selection, and editorial review. Original Latin sourced primarily from Patrologia Latina. Translations prioritize accessibility while preserving original meaning; the Latin text is always provided alongside English for verification.",
+  "creators": [
+    {
+      "name": "Wolfslayer, Ryan",
+      "affiliation": "Bibliothecarius Modernus",
+      "orcid": "0000-0001-8914-9706"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "patristics",
+    "Latin",
+    "translation",
+    "church fathers",
+    "medieval theology",
+    "AI-assisted translation",
+    "Patrologia Latina"
+  ],
+  "upload_type": "publication",
+  "publication_type": "other",
+  "language": "eng",
+  "notes": "Translations produced with AI assistance (Claude, Anthropic). See individual records and https://bibliothecarius-modernus.github.io/about/ for methodology details."
+}

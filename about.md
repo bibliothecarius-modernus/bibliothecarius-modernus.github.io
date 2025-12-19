@@ -16,6 +16,13 @@ permalink: /about/
 
   <p>To ensure accuracy, the translation process incorporates several safeguards against AI errors (including hallucinations). The videos display the original Latin alongside the English translation, and interlinear (English-Latin) versions are available on the GitHub repository for many texts. This transparency allows viewers to verify translations and identify any potential inaccuracies.</p>
 
+  <!-- Translation Methodology Section -->
+  <h3>Translation Methodology</h3>
+
+  <p>Translations are produced using AI assistance (currently Claude 4.5 Sonnet, previously ChatGPT-4o for earlier works) with human direction and review. The process involves text selection, prompting strategy, quality review, and editorial oversight by Ryan Wolfslayer. Contextual research and analysis sections are produced using additional AI research tools (OpenAI o3) with human synthesis and verification.</p>
+
+  <p>This approach treats AI as a sophisticated tool requiring disclosure rather than a co-author. The human contributor remains responsible for text selection, curatorial decisions, translation direction, quality review, and all editorial decisions. The original Latin is always displayed alongside English to enable verification.</p>
+
   <!-- Resources Section (moved up for better flow) -->
   <h3>Resources</h3>
   

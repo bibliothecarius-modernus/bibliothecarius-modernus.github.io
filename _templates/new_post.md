@@ -16,6 +16,7 @@ original_work:
     - text: ""
 
 external_resources:
+  doi: ""
   archive_url: ""
   github_url: ""
 ---
