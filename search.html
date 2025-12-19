@@ -31,10 +31,16 @@ permalink: /search.html
     --pagefind-ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
   }
 
+  /* Hide the magnifying glass icon */
+  .pagefind-ui__search-icon {
+    display: none !important;
+  }
+
   /* Search input styling */
   .pagefind-ui__search-input {
     font-size: 1.1rem !important;
     padding: 14px 16px !important;
+    padding-left: 16px !important;  /* Remove extra padding for icon */
   }
 
   /* Results styling */

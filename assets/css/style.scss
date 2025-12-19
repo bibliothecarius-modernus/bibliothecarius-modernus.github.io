@@ -455,11 +455,19 @@ a:hover {
     padding: 3px 10px;
     border-radius: 15px;
     display: inline-block;
+    text-decoration: none;
 }
 
 .category-tag:hover {
     background-color: var(--dark-highlight);
     color: white;
+}
+
+.category-tag:visited,
+.category-tag:active,
+.category-tag:focus {
+    color: white;
+    background-color: var(--highlight-color);
 }
 
 .read-more {
