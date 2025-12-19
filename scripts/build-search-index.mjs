@@ -18,6 +18,9 @@ const SITE_DIR = '_site';
 const TRANSLATIONS_DIR = 'assets/translations';
 const POSTS_DIR = '_posts';
 
+// Cache mapping translation_json paths to post URLs
+const translationToPostUrl = new Map();
+
 /**
  * Extract text content, stripping HTML/SSML tags
  */
@@ -132,9 +135,48 @@ function extractCentury(dateStr) {
 }
 
 /**
+ * Build mapping of translation JSON paths to their post URLs
+ * by scanning all posts for translation_json references
+ */
+async function buildTranslationToPostUrlMap() {
+  try {
+    const postFiles = (await readdir(POSTS_DIR)).filter(f => f.endsWith('.md'));
+
+    for (const postFile of postFiles) {
+      const frontMatter = await parsePostFrontMatter(join(POSTS_DIR, postFile));
+      if (!frontMatter?.translation_json) continue;
+
+      // Extract the JSON filename from the path
+      const jsonPath = frontMatter.translation_json;
+      const jsonFilename = jsonPath.split('/').pop();
+
+      // Build the post URL from the filename
+      // Post filename: YYYY-MM-DD-title.md
+      const match = postFile.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)\.md$/);
+      if (match) {
+        const [, year, month, , title] = match;
+        const postUrl = `/${year}/${month}/${title}/`;
+        translationToPostUrl.set(jsonFilename, postUrl);
+      }
+    }
+
+    console.log(`   Built URL map for ${translationToPostUrl.size} translation files`);
+  } catch (err) {
+    console.log(`   Warning: Could not build translation URL map: ${err.message}`);
+  }
+}
+
+/**
  * Get the URL for a translation chunk
  */
 function getChunkUrl(jsonFile, chunkId) {
+  // First, check if we have a mapped post URL for this JSON file
+  const mappedUrl = translationToPostUrl.get(jsonFile);
+  if (mappedUrl) {
+    return `${mappedUrl}#chunk-${chunkId}`;
+  }
+
+  // Fallback: derive from JSON filename
   const stem = jsonFile.replace('.json', '');
   // Parse date from filename: YYYY-MM-DD-title.json
   const match = stem.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/);
@@ -158,7 +200,11 @@ async function main() {
   const { page_count } = await index.addDirectory({ path: SITE_DIR });
   console.log(`   Added ${page_count} HTML pages\n`);
 
-  // Step 2: Index translation JSON files
+  // Step 2: Build translation JSON to post URL mapping
+  console.log(`🔗 Mapping translation files to post URLs...`);
+  await buildTranslationToPostUrlMap();
+
+  // Step 3: Index translation JSON files
   console.log(`📜 Indexing translation files from ${TRANSLATIONS_DIR}/...`);
 
   let translationFiles;
@@ -248,7 +294,7 @@ async function main() {
     console.log(`   ⚠️  ${errors} files had errors`);
   }
 
-  // Step 3: Write the index
+  // Step 4: Write the index
   console.log(`\n📦 Writing index to ${SITE_DIR}/pagefind/...`);
   await index.writeFiles({ outputPath: join(SITE_DIR, 'pagefind') });
 
