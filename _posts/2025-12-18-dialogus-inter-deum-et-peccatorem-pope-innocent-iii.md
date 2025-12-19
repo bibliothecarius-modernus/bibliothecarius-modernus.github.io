@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Dialogus inter Deum et Peccatorem (c. 1195-1215)"
 date: 2025-12-19
-listed: false
+listed: true
 publish_date: 2025-12-19
 categories: [penitential-literature, moral-theology, mystical-theology]
 youtube_id: "ChsStFdL5jw"
