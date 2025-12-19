@@ -3,148 +3,78 @@ layout: default
 ---
 
 <div class="home">
-  <div class="home-header">
-    <h1 class="home-title">{{ page.title | default: site.title }}</h1>
-    <p class="home-subtitle">{{ page.subtitle | default: site.description }}</p>
-  </div>
-
-<!-- Hero Section with Search -->
-<section class="hero-section">
-  <div class="hero-content">
-    <h2>Antiqua servare, nova quaerere</h2>
-    <p>Latin Patristic texts translated through modern AI technology</p>
-    
-    <!-- Search Integration -->
-    <div class="hero-search-container">
-      <form action="{{ '/search.html' | relative_url }}" method="get" class="hero-search-form">
-        <input type="text" name="query" placeholder="Search translations..." class="hero-search-input">
-        <button type="submit" class="hero-search-button">
-          <svg viewBox="0 0 24 24" width="18" height="18">
-            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-          </svg>
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
+  <!-- Minimal Header -->
+  <header class="page-header">
+    <p class="tagline"><em>Antiqua servare, nova quaerere</em> — Latin Patristic texts in translation</p>
+  </header>
 
   <div class="content">
     {{ content }}
   </div>
 
-<!-- Latest Research Section with Enhanced Filtering -->
+<!-- Translations Section -->
 <section class="research-section">
-  <div class="research-header">
-    <h2 class="post-list-heading">Latest Translations & Research</h2>
-    
-    <!-- Filtering Controls -->
-    <div class="filter-controls">
-      <div class="filter-row">
-        <div class="filter-group">
-          <label for="filter-century">Century:</label>
-          <select id="filter-century" class="filter-select">
-            <option value="all">All Centuries</option>
-            
-            {% comment %}
-            First, get all the centuries correctly calculated
-            {% endcomment %}
-            {% assign all_dates = site.posts | map: "original_work" | map: "date" | compact %}
-            {% assign centuries_array = "" | split: "" %}
-            
-            {% for date in all_dates %}
-              {% if date != nil and date != "" %}
-                {% assign cleaned_date = date | remove: "c." | remove: "CE" | remove: "AD" | strip %}
-                {% assign year_str = cleaned_date | split: "-" | first | strip %}
-                {% if year_str != "" %}
-                  {% assign year_num = year_str | plus: 0 %}
-                  {% if year_num > 0 %}
-                    {% if year_num == 100 or year_num == 200 or year_num == 300 or year_num == 400 or year_num == 500 or year_num == 600 or year_num == 700 or year_num == 800 or year_num == 900 or year_num == 1000 or year_num == 1100 or year_num == 1200 or year_num == 1300 or year_num == 1400 or year_num == 1500 or year_num == 1600 or year_num == 1700 or year_num == 1800 or year_num == 1900 or year_num == 2000 %}
-                      {% comment %} For years ending in 00, we need special handling {% endcomment %}
-                      {% assign century = year_num | divided_by: 100 | plus: 1 %}
-                    {% else %}
-                      {% assign century = year_num | divided_by: 100 | plus: 1 %}
-                    {% endif %}
-                    {% assign centuries_array = centuries_array | push: century %}
-                  {% endif %}
+
+  <!-- Toolbar: Search + Filters + View Toggle -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <input type="text" id="quick-filter" class="quick-filter" placeholder="Filter by title or author...">
+    </div>
+    <div class="toolbar-right">
+      <div class="filter-dropdowns">
+        <select id="filter-century" class="filter-select">
+          <option value="all">Century</option>
+          {% assign all_dates = site.posts | map: "original_work" | map: "date" | compact %}
+          {% assign centuries_array = "" | split: "" %}
+          {% for date in all_dates %}
+            {% if date != nil and date != "" %}
+              {% assign cleaned_date = date | remove: "c." | remove: "CE" | remove: "AD" | strip %}
+              {% assign year_str = cleaned_date | split: "-" | first | strip %}
+              {% if year_str != "" %}
+                {% assign year_num = year_str | plus: 0 %}
+                {% if year_num > 0 %}
+                  {% assign century = year_num | divided_by: 100 | plus: 1 %}
+                  {% assign centuries_array = centuries_array | push: century %}
                 {% endif %}
               {% endif %}
-            {% endfor %}
-            
-            {% comment %}
-            Extract unique centuries and convert to integers for sorting
-            {% endcomment %}
-            {% assign unique_centuries = centuries_array | uniq %}
-            {% assign century_integers = "" | split: "" %}
-            {% for century in unique_centuries %}
-              {% assign cent_int = century | plus: 0 %}
-              {% assign century_integers = century_integers | push: cent_int %}
-            {% endfor %}
-            
-            {% comment %}
-            Sort centuries manually by creating a sorted array
-            {% endcomment %}
-            {% assign sorted_centuries = century_integers | sort %}
-            
-            {% comment %}
-            Generate the century options
-            {% endcomment %}
-            {% for century in sorted_centuries %}
-              {% assign ordinal = "th" %}
-              {% assign last_digit = century | modulo: 10 %}
-              {% assign last_two_digits = century | modulo: 100 %}
-              {% if last_digit == 1 and last_two_digits != 11 %}
-                {% assign ordinal = "st" %}
-              {% elsif last_digit == 2 and last_two_digits != 12 %}
-                {% assign ordinal = "nd" %}
-              {% elsif last_digit == 3 and last_two_digits != 13 %}
-                {% assign ordinal = "rd" %}
-              {% endif %}
-              <option value="{{ century }}">{{ century }}{{ ordinal }} Century</option>
-            {% endfor %}
-          </select>
-        </div>
-        
-        <div class="filter-group">
-          <label for="filter-author">Author:</label>
-          <select id="filter-author" class="filter-select">
-            <option value="all">All Authors</option>
-            {% assign authors = site.posts | map: "original_work" | map: "author" | uniq | sort %}
-            {% for author in authors %}
-              {% if author != nil and author != "" %}
-                <option value="{{ author | slugify }}">{{ author }}</option>
-              {% endif %}
-            {% endfor %}
-          </select>
-        </div>
-        
-        <button id="reset-filters" class="reset-button">
-          <svg viewBox="0 0 24 24" width="16" height="16">
-            <path fill="currentColor" d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
-          </svg>
-          Reset
+            {% endif %}
+          {% endfor %}
+          {% assign sorted_centuries = centuries_array | uniq | sort %}
+          {% for century in sorted_centuries %}
+            {% assign ordinal = "th" %}
+            {% assign last_digit = century | modulo: 10 %}
+            {% assign last_two_digits = century | modulo: 100 %}
+            {% if last_digit == 1 and last_two_digits != 11 %}{% assign ordinal = "st" %}
+            {% elsif last_digit == 2 and last_two_digits != 12 %}{% assign ordinal = "nd" %}
+            {% elsif last_digit == 3 and last_two_digits != 13 %}{% assign ordinal = "rd" %}{% endif %}
+            <option value="{{ century }}">{{ century }}{{ ordinal }} c.</option>
+          {% endfor %}
+        </select>
+        <select id="filter-author" class="filter-select">
+          <option value="all">Author</option>
+          {% assign authors = site.posts | map: "original_work" | map: "author" | uniq | sort %}
+          {% for author in authors %}
+            {% if author != nil and author != "" %}
+              <option value="{{ author | slugify }}">{{ author }}</option>
+            {% endif %}
+          {% endfor %}
+        </select>
+      </div>
+      <div class="view-toggle">
+        <button class="view-mode-btn active" data-view="grid" aria-label="Grid view">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M3 3h8v8H3V3zm0 10h8v8H3v-8zm10-10h8v8h-8V3zm0 10h8v8h-8v-8z"/></svg>
+        </button>
+        <button class="view-mode-btn" data-view="list" aria-label="List view">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></svg>
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Animated Loader for when filtering changes -->
-  <div class="loader" style="display: none;">
-    <div class="loader-icon"></div>
-  </div>
-
-  <!-- Results count -->
-  <div class="results-count">
-    <span id="posts-count"></span>
-  </div>
-
-  <!-- View Toggle -->
-  <div class="view-toggle-container">
-    <button class="view-mode-btn active" data-view="grid" aria-label="Grid view">
-      <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 3h8v8H3V3zm0 10h8v8H3v-8zm10-10h8v8h-8V3zm0 10h8v8h-8v-8z"/></svg>
-    </button>
-    <button class="view-mode-btn" data-view="list" aria-label="List view">
-      <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></svg>
-    </button>
+  <!-- Active Filters Display -->
+  <div id="active-filters" class="active-filters" style="display: none;">
+    <span class="active-filters-label">Showing:</span>
+    <div id="filter-chips" class="filter-chips"></div>
   </div>
 
   <!-- Post List with Data Attributes for Filtering/Sorting -->
@@ -214,97 +144,129 @@ layout: default
 
 </div>
 
-<style>
-  /* Hero Search Styles */
-  .hero-search-container {
-    width: 100%;
-    max-width: 500px;
-    margin: 25px auto 30px;
-  }
-  
-  .hero-search-form {
-    display: flex;
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid var(--highlight-color);
-  }
-  
-  .hero-search-input {
-    flex: 1;
-    padding: 12px 20px;
-    border: none;
-    font-size: 16px;
-    font-family: 'PT Serif', serif;
-    background-color: transparent;
-    color: var(--text-color);
-  }
-  
-  .hero-search-input::placeholder {
-    color: var(--dark-gray);
-    font-style: italic;
-  }
-  
-  .hero-search-input:focus {
-    outline: none;
-  }
-  
-  .hero-search-button {
-    background-color: var(--highlight-color);
-    color: white;
-    border: none;
-    padding: 12px 15px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  .hero-search-button:hover {
-    background-color: var(--dark-highlight);
-  }
-  
-  @media screen and (max-width: 600px) {
-    .hero-search-container {
-      max-width: 100%;
-    }
-  }
-</style>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const viewButtons = document.querySelectorAll('.view-mode-btn');
   const postList = document.getElementById('filtered-posts');
+  const postItems = document.querySelectorAll('.post-item');
+  const quickFilter = document.getElementById('quick-filter');
+  const centurySelect = document.getElementById('filter-century');
+  const authorSelect = document.getElementById('filter-author');
+  const activeFiltersContainer = document.getElementById('active-filters');
+  const filterChips = document.getElementById('filter-chips');
+  const noResults = document.getElementById('no-results');
+  const clearFiltersLink = document.getElementById('clear-filters');
 
   // Restore saved view preference
   const savedView = localStorage.getItem('postListView') || 'grid';
   if (savedView === 'list') {
     postList.classList.add('list-view');
-    viewButtons.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.view === 'list');
+    viewButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.view === 'list'));
+  }
+
+  // View toggle
+  viewButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      viewButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      postList.classList.toggle('list-view', this.dataset.view === 'list');
+      localStorage.setItem('postListView', this.dataset.view);
+    });
+  });
+
+  // Filter function
+  function applyFilters() {
+    const quickText = quickFilter.value.toLowerCase().trim();
+    const century = centurySelect.value;
+    const author = authorSelect.value;
+    let visibleCount = 0;
+
+    postItems.forEach(item => {
+      const title = (item.dataset.title || '').toLowerCase();
+      const itemAuthor = item.dataset.author || '';
+      const originalDate = item.dataset.originalDate || '';
+
+      // Calculate century from original date
+      let itemCentury = 'all';
+      if (originalDate) {
+        const yearMatch = originalDate.match(/(\d{3,4})/);
+        if (yearMatch) {
+          const year = parseInt(yearMatch[1]);
+          itemCentury = String(Math.floor(year / 100) + 1);
+        }
+      }
+
+      // Check filters
+      const matchesQuick = !quickText || title.includes(quickText) || itemAuthor.includes(quickText);
+      const matchesCentury = century === 'all' || itemCentury === century;
+      const matchesAuthor = author === 'all' || itemAuthor === author;
+
+      const visible = matchesQuick && matchesCentury && matchesAuthor;
+      item.style.display = visible ? '' : 'none';
+      if (visible) visibleCount++;
+    });
+
+    // Update active filters chips
+    updateFilterChips(century, author);
+
+    // Show/hide no results message
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+
+  function updateFilterChips(century, author) {
+    const chips = [];
+
+    if (century !== 'all') {
+      const centuryText = centurySelect.options[centurySelect.selectedIndex].text;
+      chips.push({ type: 'century', value: century, label: centuryText });
+    }
+
+    if (author !== 'all') {
+      const authorText = authorSelect.options[authorSelect.selectedIndex].text;
+      chips.push({ type: 'author', value: author, label: authorText });
+    }
+
+    if (chips.length === 0) {
+      activeFiltersContainer.style.display = 'none';
+      return;
+    }
+
+    activeFiltersContainer.style.display = 'flex';
+    filterChips.innerHTML = chips.map(chip =>
+      `<span class="filter-chip" data-type="${chip.type}">${chip.label}<button class="chip-remove" aria-label="Remove filter">&times;</button></span>`
+    ).join('');
+
+    // Add remove handlers
+    filterChips.querySelectorAll('.chip-remove').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const chip = this.parentElement;
+        if (chip.dataset.type === 'century') {
+          centurySelect.value = 'all';
+        } else if (chip.dataset.type === 'author') {
+          authorSelect.value = 'all';
+        }
+        applyFilters();
+      });
     });
   }
 
-  viewButtons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      const view = this.dataset.view;
+  function clearAllFilters() {
+    quickFilter.value = '';
+    centurySelect.value = 'all';
+    authorSelect.value = 'all';
+    applyFilters();
+  }
 
-      // Update button states
-      viewButtons.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-
-      // Toggle list view class
-      if (view === 'list') {
-        postList.classList.add('list-view');
-      } else {
-        postList.classList.remove('list-view');
-      }
-
-      // Save preference
-      localStorage.setItem('postListView', view);
-    });
+  // Event listeners
+  quickFilter.addEventListener('input', applyFilters);
+  centurySelect.addEventListener('change', applyFilters);
+  authorSelect.addEventListener('change', applyFilters);
+  clearFiltersLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    clearAllFilters();
   });
+
+  // Initial filter application
+  applyFilters();
 });
 </script>
