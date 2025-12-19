@@ -1,15 +1,15 @@
 ---
 layout: tabbed_post
-title: "Dispute Between a Monk and a Cleric: Whether a Monk May Preach (c. 12th century00 CE)"
+title: "Altercatio Monachi et Clerici (c. 1120 CE)"
 date: 2025-12-19
 listed: false
 categories: [medieval-theology, monastic-spirituality, ecclesiology]
 youtube_id: "uv9vVZjYywI"
 translation_json: "/assets/translations/2025-12-19-dispute-between-a-monk-and-a-cleric-whether-a-monk-may-preach-rupert-of-deutz.json"
 original_work:
-  latin_title: Dispute Between a Monk and a Cleric: Whether a Monk May Preach
+  latin_title: Altercatio Monachi et Clerici
   author: "Rupert of Deutz"
-  date: "c. 12th century00 CE"
+  date: "c. 1120 CE"
   publication: "Patrologia Latina Volume 170"
   context: "Dispute Between a Monk and a Cleric: Whether a Monk May Preach"
 external_resources:
