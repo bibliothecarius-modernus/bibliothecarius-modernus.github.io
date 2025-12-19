@@ -5,7 +5,7 @@ date: 2025-12-19
 listed: false
 categories: [medieval-theology, monastic-spirituality, ecclesiology]
 youtube_id: "uv9vVZjYywI"
-translation_json: "/assets/translations/2025-12-19-dispute-between-a-monk-and-a-cleric-whether-a-monk-may-preach-rupert-of-deutz.json"
+translation_json: "/assets/translations/2025-12-19-altercatio-monachi-et-clerici-rupert-of-deutz.json"
 original_work:
   latin_title: Altercatio Monachi et Clerici
   author: "Rupert of Deutz"
