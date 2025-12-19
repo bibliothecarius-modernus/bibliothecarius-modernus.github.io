@@ -707,33 +707,36 @@ document.addEventListener('DOMContentLoaded', function() {
         
         item.addEventListener('click', () => {
           // Update select element
-          const select = dropdown.closest('.search-select-wrapper').querySelector('select');
+          const wrapper = dropdown.closest('.search-select-wrapper');
+          const select = wrapper.querySelector('select');
           select.value = option.value;
-          
-          // Update UI
-          const selectedDisplay = dropdown.closest('.search-select-wrapper').querySelector('.selected-author');
-          updateSelectedDisplay(selectedDisplay, option.text);
-          
-          // Update wrapper state
+
+          // Update UI - both the search input and the selected display
+          const searchInput = wrapper.querySelector('.author-search-input');
+          const selectedDisplay = wrapper.querySelector('.selected-author');
+
           if (option.value === 'all') {
-            dropdown.closest('.search-select-wrapper').classList.remove('has-selected');
+            searchInput.value = '';
+            wrapper.classList.remove('has-selected');
           } else {
-            dropdown.closest('.search-select-wrapper').classList.add('has-selected');
+            searchInput.value = option.text;
+            wrapper.classList.add('has-selected');
           }
-          
+          updateSelectedDisplay(selectedDisplay, option.text);
+
           // Close dropdown
           dropdown.classList.remove('active');
           document.querySelector('.author-dropdown-overlay')?.classList.remove('active');
-          
+
           // Trigger change event
           const event = new Event('change');
           select.dispatchEvent(event);
         });
-        
+
         dropdown.appendChild(item);
       });
     }
-    
+
     function filterDropdownOptions(dropdown, allOptions, searchTerm) {
       // Get header element if it exists (for mobile)
       const header = dropdown.querySelector('.author-dropdown-header');
@@ -777,31 +780,34 @@ document.addEventListener('DOMContentLoaded', function() {
         
         item.addEventListener('click', () => {
           // Update select element
+          const wrapper = dropdown.closest('.search-select-wrapper');
           select.value = option.value;
-          
-          // Update UI
-          const selectedDisplay = dropdown.closest('.search-select-wrapper').querySelector('.selected-author');
-          updateSelectedDisplay(selectedDisplay, option.text);
-          
-          // Update wrapper state
+
+          // Update UI - both the search input and the selected display
+          const searchInput = wrapper.querySelector('.author-search-input');
+          const selectedDisplay = wrapper.querySelector('.selected-author');
+
           if (option.value === 'all') {
-            dropdown.closest('.search-select-wrapper').classList.remove('has-selected');
+            searchInput.value = '';
+            wrapper.classList.remove('has-selected');
           } else {
-            dropdown.closest('.search-select-wrapper').classList.add('has-selected');
+            searchInput.value = option.text;
+            wrapper.classList.add('has-selected');
           }
-          
+          updateSelectedDisplay(selectedDisplay, option.text);
+
           // Close dropdown
           dropdown.classList.remove('active');
           document.querySelector('.author-dropdown-overlay')?.classList.remove('active');
-          
+
           // Trigger change event
           const event = new Event('change');
           select.dispatchEvent(event);
         });
-        
+
         dropdown.appendChild(item);
       });
-      
+
       // Add "No results" message if needed
       if (filteredOptions.length === 1 && filteredOptions[0].value === 'all' && searchTerm) {
         const noResults = document.createElement('div');
