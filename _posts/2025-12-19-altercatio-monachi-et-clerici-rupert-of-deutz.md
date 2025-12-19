@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 170"
   context: "Dispute Between a Monk and a Cleric: Whether a Monk May Preach"
 external_resources:
+  doi: "10.5281/zenodo.17983708"
   archive_url: "https://archive.org/details/altercatio-monachi-et-clerici-rupert-deutz"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_170/Rupert%20of%20Deutz%20-%20Dispute%20Between%20a%20Monk%20and%20a%20Cleric:%20Whether%20a%20Monk%20May%20Preach"
 ---
