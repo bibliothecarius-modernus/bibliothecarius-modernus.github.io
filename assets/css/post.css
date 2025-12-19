@@ -794,3 +794,169 @@
     height: 44px;
   }
 }
+
+/* ============================================
+   PRINT STYLES
+   Optimized for scholarly side-by-side output
+   ============================================ */
+@media print {
+  /* Hide UI chrome */
+  .site-header,
+  .site-footer,
+  .translation-tabs,
+  .translation-toolbar,
+  .youtube-promo,
+  .youtube-embed,
+  .scroll-to-top,
+  .mobile-both-notice,
+  #analysis,
+  #metadata,
+  #view-latin,
+  #view-english {
+    display: none !important;
+  }
+
+  /* Reset page layout */
+  body {
+    background: white;
+    color: black;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .wrapper {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .page-content {
+    padding: 0;
+  }
+
+  /* Post header - centered title and date */
+  .post-header {
+    text-align: center;
+    margin-bottom: 24pt;
+    padding-bottom: 12pt;
+    border-bottom: 1pt solid #333;
+    max-width: 100%;
+  }
+
+  .post-title {
+    font-size: 18pt;
+    margin-bottom: 6pt;
+  }
+
+  .post-meta {
+    font-size: 10pt;
+    color: #333;
+  }
+
+  /* Show translation panel */
+  #translation-viewer {
+    margin: 0;
+  }
+
+  .tab-content {
+    border: none;
+    max-width: 100%;
+  }
+
+  #translation.tab-panel {
+    display: block !important;
+    padding: 0;
+  }
+
+  #view-both.translation-view {
+    display: block !important;
+  }
+
+  /* Two-column side-by-side layout for print */
+  .two-columns {
+    display: flex !important;
+    max-height: none !important;
+    gap: 16pt;
+  }
+
+  .latin-column,
+  .english-column {
+    flex: 1;
+    overflow: visible;
+    padding: 0;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  .latin-column {
+    border-right: 1pt solid #999;
+    padding-right: 12pt;
+  }
+
+  .english-column {
+    padding-left: 12pt;
+  }
+
+  .column-content {
+    height: auto;
+  }
+
+  /* Typography for print */
+  .latin-text,
+  .english-text {
+    font-size: 10pt;
+    line-height: 1.6;
+    margin-bottom: 12pt;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .latin-text {
+    font-style: italic;
+  }
+
+  /* Chunk sections */
+  .chunk-section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 16pt;
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  .chunk-number {
+    font-size: 8pt;
+    color: #666;
+    margin-bottom: 4pt;
+  }
+
+  /* Column headers */
+  .two-columns h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    margin-bottom: 12pt;
+    padding-bottom: 6pt;
+    border-bottom: 0.5pt solid #ccc;
+  }
+
+  /* Links print as text */
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 0.75in;
+  }
+
+  /* Add URL after title for reference */
+  .post-header::after {
+    content: "bibliothecarius-modernus.github.io";
+    display: block;
+    font-size: 9pt;
+    color: #666;
+    margin-top: 6pt;
+  }
+}
