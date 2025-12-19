@@ -7,7 +7,7 @@ youtube_id: "dTD1ymDfGYA"
 translation_json: "/assets/translations/2025-12-15-de-octo-vitiis-saint-eutropius-of-valencia.json"
 original_work:
   latin_title: De Octo Vitiis
-  author: "Saint Eutropius of Valencia"
+  author: "Eutropius of Valencia"
   date: "c. 600 CE"
   publication: "Patrologia Latina Volume 80"
   context: "On the Eight Vices"

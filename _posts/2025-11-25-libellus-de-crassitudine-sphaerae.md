@@ -7,7 +7,7 @@ youtube_id: "44vqTfEStio"
 translation_json: "/assets/translations/2025-11-25-libellus-de-crassitudine-sphaerae.json"
 original_work:
   latin_title: Libellus de Ratione Inveniendi Crassitudinem Sphaerae
-  author: "Adelbold (Adalbold II), Bishop of Utrecht"
+  author: "Adelbold of Utrecht"
   date: "c. 1000"
   publication: "Patrologia Latina Volume 140"
   context: "A mathematical treatise on calculating the volume of a sphere, addressed to Pope Sylvester II (Gerbert of Aurillac), the famous 'Mathematician Pope.' This work demonstrates the sophisticated mathematical culture of cathedral schools in the 10th-11th century and the survival of classical Greek mathematics through medieval intermediaries."

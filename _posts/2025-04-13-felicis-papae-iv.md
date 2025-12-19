@@ -7,7 +7,7 @@ youtube_id: "WURnD0QG2q4"
 translation_json: "/assets/translations/2025-04-13-epistolae-et-decreta-felicis-papae-iv.json"
 original_work:
   latin_title: Epistolae et decreta Felicis Papae IV
-  author: "Pope Felix IV"
+  author: "Felix IV"
   date: "c. 530"
   publication: "Patrologia Latina Volume 65"
   context: "Collection of papal letters and decrees addressing clerical standards, responses to Semi-Pelagianism, church governance concerns in Ravenna, and theological guidance on grace, free will, and the reception of converted heretics during the Ostrogothic rule of Italy."

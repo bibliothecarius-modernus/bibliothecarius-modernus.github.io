@@ -7,7 +7,7 @@ youtube_id: "ed0n_UFGJWQ"
 translation_json: "/assets/translations/2025-12-16-de-planctu-naturae-alain-de-lille-alanus-de-insulis.json"
 original_work:
   latin_title: De Planctu Naturae
-  author: "Alain de Lille (Alanus de Insulis)"
+  author: "Alain de Lille"
   date: "c. 1200 CE"
   publication: "Patrologia Latina Volume 210"
   context: "The Complaint of Nature"

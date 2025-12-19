@@ -8,7 +8,7 @@ translation_json: "/assets/translations/2025-05-08-epistolae-de-sanctus-leo-iii.
 # Additional metadata fields
 original_work:
   latin_title: Epistolae de Sanctus Leo III Pontifex Romanus
-  author: "Pope Leo III"
+  author: "Leo III"
   date: "c. 795-816"
   publication: "Patrologia Latina Volume 102"
   context: "Written during the Carolingian age, these letters document papal-imperial relations, theological controversies, and ecclesiastical reforms during the formative period when Leo III crowned Charlemagne as Emperor of the Romans."

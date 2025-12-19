@@ -9,7 +9,7 @@ youtube_id: "ChsStFdL5jw"
 translation_json: "/assets/translations/2025-12-18-dialogus-inter-deum-et-peccatorem-pope-innocent-iii.json"
 original_work:
   latin_title: Dialogus inter Deum et Peccatorem
-  author: "Pope Innocent III"
+  author: "Innocent III"
   date: "c. 1195-1215"
   publication: "Patrologia Latina Volume 217, cols. 691-702"
   context: "Dialogue Between God and a Sinner"
