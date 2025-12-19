@@ -4,7 +4,7 @@ title: "Altercatio Monachi et Clerici (c. 1120 CE)"
 date: 2025-12-19
 listed: false
 categories: [medieval-theology, monastic-spirituality, ecclesiology]
-youtube_id: "uv9vVZjYywI"
+youtube_id: "yZMVmIbK9w8"
 translation_json: "/assets/translations/2025-12-19-altercatio-monachi-et-clerici-rupert-of-deutz.json"
 original_work:
   latin_title: Altercatio Monachi et Clerici
