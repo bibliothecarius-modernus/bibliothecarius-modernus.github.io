@@ -628,6 +628,11 @@ a:hover {
     font-size: 1.1rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    &:visited,
+    &:active {
+        color: white;
+    }
 }
 
 .read-more-button:hover {
