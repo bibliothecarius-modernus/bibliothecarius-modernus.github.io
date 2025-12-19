@@ -31,16 +31,15 @@ permalink: /search.html
     --pagefind-ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
   }
 
-  /* Hide the magnifying glass icon */
-  .pagefind-ui__search-icon {
+  /* Hide the magnifying glass icon (it's a ::before pseudo-element on the form) */
+  .pagefind-ui__form::before {
     display: none !important;
   }
 
-  /* Search input styling */
+  /* Search input styling - remove left padding since icon is hidden */
   .pagefind-ui__search-input {
     font-size: 1.1rem !important;
     padding: 14px 16px !important;
-    padding-left: 16px !important;  /* Remove extra padding for icon */
   }
 
   /* Results styling */

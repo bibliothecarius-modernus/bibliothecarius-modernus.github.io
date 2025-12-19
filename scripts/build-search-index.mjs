@@ -191,6 +191,8 @@ async function main() {
   console.log('🔍 Building Pagefind search index...\n');
 
   // Create Pagefind index
+  // Use forceLanguage: 'en' to create a single unified index
+  // (Pagefind doesn't support Latin stemming anyway, so we use 'en' for all content)
   const { index } = await pagefind.createIndex({
     forceLanguage: 'en'
   });
@@ -237,12 +239,14 @@ async function main() {
         const url = getChunkUrl(jsonFile, chunkId);
 
         // Index Latin text
+        // Note: Use 'en' as language code for unified index (Pagefind doesn't support Latin stemming)
+        // The 'language' filter and meta still identify this as Latin content for filtering
         const latinText = cleanText(getLatinText(chunk));
         if (latinText && latinText.length > 10) {
           await index.addCustomRecord({
             url: url,
             content: latinText,
-            language: 'la',
+            language: 'en',
             meta: {
               title: metadata.titleLatin || metadata.title,
               author: metadata.author,
