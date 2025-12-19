@@ -1,7 +1,69 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+{% assign cutoff_date = "2025-11-01" | date: "%s" %}
+{% assign post_date = page.date | date: "%s" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": {{ page.title | jsonify }},
+  "name": {{ page.original_work.latin_title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "inLanguage": ["la", "en"],
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Wolfslayer",
+    "url": "https://orcid.org/0000-0001-8914-9706"
+  },
+  "editor": {
+    "@type": "Person",
+    "name": "Ryan Wolfslayer",
+    "url": "https://orcid.org/0000-0001-8914-9706"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bibliothecarius Modernus",
+    "url": "{{ site.url }}"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Bibliothecarius Modernus",
+    "url": "{{ site.url }}"
+  },
+  "about": {
+    "@type": "CreativeWork",
+    "name": {{ page.original_work.latin_title | jsonify }},
+    "author": {
+      "@type": "Person",
+      "name": {{ page.original_work.author | jsonify }}
+    },
+    "inLanguage": "la",
+    "dateCreated": {{ page.original_work.date | jsonify }}
+  },
+  "workTranslation": {
+    "@type": "CreativeWork",
+    "name": {{ page.original_work.latin_title | jsonify }},
+    "inLanguage": "la"
+  },
+  "translationOfWork": {
+    "@type": "CreativeWork",
+    "name": {{ page.original_work.latin_title | jsonify }},
+    "inLanguage": "la"
+  },
+  "description": "AI-assisted English translation of {{ page.original_work.latin_title }} by {{ page.original_work.author }} ({{ page.original_work.date }}). Translated using {% if post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %} with human editorial oversight.",
+  "license": "https://creativecommons.org/licenses/by/4.0/"{% if page.external_resources.doi %},
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "DOI",
+    "value": "{{ page.external_resources.doi }}"
+  },
+  "sameAs": "https://doi.org/{{ page.external_resources.doi }}"{% endif %},
+  "url": "{{ site.url }}{{ page.url }}"
+}
+</script>
+<article class="post" itemscope itemtype="http://schema.org/ScholarlyArticle">
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
