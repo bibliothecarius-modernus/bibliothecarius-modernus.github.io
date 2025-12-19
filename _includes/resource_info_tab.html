@@ -103,6 +103,13 @@
             {% endif %}
         </td>
         </tr>
+        <tr>
+        <th>Export</th>
+        <td>
+            <button class="action-btn" id="export-bibtex">BibTeX</button>
+            <button class="action-btn" id="export-ris">RIS</button>
+        </td>
+        </tr>
       <tr>
         <th>License</th>
         <td>Creative Commons Attribution 4.0 International (CC BY 4.0)</td>
@@ -148,4 +155,21 @@
       <p>If you're a translator interested in creating your own translation or scholarly edition based on this work, you are welcome to do so under the Creative Commons license. No permission is needed, though acknowledgment is appreciated.</p>
     </div>
   </div>
+
+  <script>
+    window.citationData = {
+      author: "{{ page.original_work.author | escape }}",
+      latinTitle: "{{ page.original_work.latin_title | escape }}",
+      postTitle: "{{ page.title | escape }}",
+      originalDate: "{{ page.original_work.date | escape }}",
+      publication: "{{ page.original_work.publication | escape }}",
+      year: "{{ page.date | date: '%Y' }}",
+      month: "{{ page.date | date: '%m' }}",
+      day: "{{ page.date | date: '%d' }}",
+      isoDate: "{{ page.date | date: '%Y-%m-%d' }}",
+      doi: "{{ page.external_resources.doi }}",
+      url: "{{ site.url }}{{ page.url }}",
+      aiModel: "{% if post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %}"
+    };
+  </script>
 </div>

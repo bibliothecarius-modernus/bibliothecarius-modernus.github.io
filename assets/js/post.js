@@ -457,4 +457,64 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  /** Generate BibTeX citation */
+  function generateBibTeX() {
+    const d = window.citationData;
+    if (!d) return '';
+    const citeKey = 'bibliothecarius' + d.year + d.latinTitle.replace(/[^a-zA-Z]/g, '').substring(0, 20);
+    let bibtex = `@misc{${citeKey},
+  title = {${d.latinTitle}},
+  editor = {Wolfslayer, Ryan},
+  year = {${d.year}},
+  month = {${d.month}},
+  url = {${d.doi ? 'https://doi.org/' + d.doi : d.url}},
+`;
+    if (d.doi) {
+      bibtex += `  doi = {${d.doi}},\n`;
+    }
+    bibtex += `  note = {AI-assisted translation using ${d.aiModel}. Original work by ${d.author} (${d.originalDate}). Source: ${d.publication}},
+  howpublished = {Bibliothecarius Modernus}
+}`;
+    return bibtex;
+  }
+
+  /** Generate RIS citation */
+  function generateRIS() {
+    const d = window.citationData;
+    if (!d) return '';
+    const lines = [
+      'TY  - ELEC',
+      'ED  - Wolfslayer, Ryan',
+      'TI  - ' + d.latinTitle,
+      'T2  - Bibliothecarius Modernus',
+      'PY  - ' + d.year,
+      'DA  - ' + d.isoDate.replace(/-/g, '/'),
+      d.doi ? 'DO  - ' + d.doi : null,
+      'UR  - ' + (d.doi ? 'https://doi.org/' + d.doi : d.url),
+      'N1  - AI-assisted translation using ' + d.aiModel + '. Original work by ' + d.author + ' (' + d.originalDate + '). Source: ' + d.publication,
+      'ER  - '
+    ].filter(Boolean);
+    return lines.join('\n');
+  }
+
+  /** BibTeX export button */
+  document.getElementById('export-bibtex')?.addEventListener('click', function() {
+    if (!window.citationData) {
+      alert('Citation data not available.');
+      return;
+    }
+    const safeTitle = window.citationData.latinTitle.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    downloadAsFile(safeTitle + '.bib', generateBibTeX());
+  });
+
+  /** RIS export button */
+  document.getElementById('export-ris')?.addEventListener('click', function() {
+    if (!window.citationData) {
+      alert('Citation data not available.');
+      return;
+    }
+    const safeTitle = window.citationData.latinTitle.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    downloadAsFile(safeTitle + '.ris', generateRIS());
+  });
 });
