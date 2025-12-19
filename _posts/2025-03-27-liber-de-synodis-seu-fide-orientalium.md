@@ -12,6 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 10"
   context: "Written during Hilary's exile in Phrygia, this work analyzes Eastern synodal creeds to clarify theological misunderstandings between Eastern and Western bishops during the Arian controversy, seeking to unite orthodox believers against shared heresies."
 external_resources:
+  doi: "10.5281/zenodo.17982583"
   archive_url: "https://archive.org/details/book-on-the-synods-or-the-faith-of-the-easterners"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_10"
 

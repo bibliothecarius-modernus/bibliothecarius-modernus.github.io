@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 55"
   context: "A historical-theological treatise examining Pope Leo the Great's opposition to Pelagianism, highlighting his crucial role in reinforcing Augustinian teaching on grace against heretical claims denying original sin and divine grace."
 external_resources:
+  doi: "10.5281/zenodo.17982619"
   archive_url: "https://archive.org/details/on-the-pelagian-heresy-growing-in-the-age-of-leo-the-great"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55"
 

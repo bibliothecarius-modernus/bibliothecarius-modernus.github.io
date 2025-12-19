@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 132"
   context: "Provincial council convened in the aftermath of the Battle of Soissons (923) during a period of civil war and political upheaval in West Francia, issuing unprecedented penitential decrees for all combatants regardless of faction."
 external_resources:
+  doi: "10.5281/zenodo.17982567"
   archive_url: "https://archive.org/details/reims-council-presided-by-seulf"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_132"
 

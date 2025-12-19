@@ -14,6 +14,7 @@ original_work:
   publication: "Patrologia Latina Volume 87"
   context: "A remarkable collection of monastic writings from the twilight of Visigothic Spain, blending autobiographical narratives, ascetic teachings, visionary accounts, and acrostic poetry to instruct and inspire the monks of northwest Iberia."
 external_resources:
+  doi: "10.5281/zenodo.17982603"
   archive_url: "https://archive.org/details/minor-works-of-saint-valerius-the-abbot"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_87"
 

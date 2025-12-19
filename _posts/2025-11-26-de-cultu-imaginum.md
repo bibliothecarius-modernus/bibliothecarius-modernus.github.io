@@ -12,7 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 106, cols. 303-386"
   context: "A three-book Carolingian defense of sacred imagery written in response to the iconoclastic arguments of Claudius of Turin"
 external_resources:
-  doi: "10.5281/zenodo.EXAMPLE"
+  doi: "10.5281/zenodo.17982641"
   archive_url: "https://archive.org/details/jonas-orleans-de-cultu-imaginum-book-1"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_106"
 additional_videos:

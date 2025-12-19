@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 55"
   context: "A theological treatise examining the Eutychian heresy, documenting the controversies surrounding the Council of Chalcedon, and defending orthodox Christology against Monophysite claims that diminished Christ's true humanity."
 external_resources:
+  doi: "10.5281/zenodo.17982617"
   archive_url: "https://archive.org/details/on-the-heresy-and-history-of-the-eutychians-book-one"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55"
 

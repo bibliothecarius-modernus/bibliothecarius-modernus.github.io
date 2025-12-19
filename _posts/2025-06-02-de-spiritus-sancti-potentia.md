@@ -12,6 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 52"
   context: "Provides systematic pneumatological instruction for fourth-century catechumens in the Danubian provinces, articulating the Holy Spirits divine power and operations within the broader context of Nicetas missionary efforts to establish orthodox Trinitarian doctrine among newly converted Gothic and Dacian peoples during the Arian controversies."
 external_resources:
+  doi: "10.5281/zenodo.17982633"
   archive_url: "https://archive.org/details/on-the-power-of-the-holy-spirit"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_52"
 

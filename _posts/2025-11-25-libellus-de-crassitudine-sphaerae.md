@@ -12,6 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 140"
   context: "A mathematical treatise on calculating the volume of a sphere, addressed to Pope Sylvester II (Gerbert of Aurillac), the famous 'Mathematician Pope.' This work demonstrates the sophisticated mathematical culture of cathedral schools in the 10th-11th century and the survival of classical Greek mathematics through medieval intermediaries."
 external_resources:
+  doi: "10.5281/zenodo.17982639"
   archive_url: "https://archive.org/details/adelbold-treatise-sphere-thickness"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_140"
 

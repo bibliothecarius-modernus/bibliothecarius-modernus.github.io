@@ -15,6 +15,7 @@ original_work:
   context: "A significant 6th-century commentary on the Book of Revelation that preserved earlier interpretations by Tyconius while adapting them to orthodox Catholic theology, becoming influential for medieval apocalyptic exegesis."
 
 external_resources:
+  doi: "10.5281/zenodo.17982577"
   archive_url: "https://archive.org/details/commentary-on-the-apocalypse-book-one"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68"
 

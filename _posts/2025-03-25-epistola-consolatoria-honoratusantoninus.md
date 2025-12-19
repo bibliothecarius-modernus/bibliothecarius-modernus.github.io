@@ -14,6 +14,7 @@ original_work:
   publication: "Patrologia Latina Volume 50"
   context: "Written during the Vandal rule of North Africa when King Geiseric was persecuting Nicene Christians. Honoratus, Bishop of Constantina, addresses Arcadius, a high-ranking Catholic official facing martyrdom for refusing to accept Arianism."
 external_resources:
+  doi: "10.5281/zenodo.17982575"
   archive_url: "https://archive.org/details/consolatory-letter-to-arcadius"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_50"
 

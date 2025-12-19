@@ -15,6 +15,7 @@ original_work:
   context: "Examines the ancient Gallican liturgy, with its distinctive ceremonial elements and theological symbolism that differed significantly from the Roman Rite before Carolingian reforms."
 
 external_resources:
+  doi: "10.5281/zenodo.17982525"
   archive_url: "https://archive.org/details/brief-exposition-of-the-old-gallican-liturgy"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_72"
 

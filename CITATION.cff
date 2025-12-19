@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "Bibliothecarius Modernus: Latin Patristic Translations"
+message: "If you use or reference these translations, please cite as below."
+type: dataset
+authors:
+  - family-names: Wolfslayer
+    given-names: Ryan
+    orcid: "https://orcid.org/0000-0001-8914-9706"
+    affiliation: Bibliothecarius Modernus
+repository-code: "https://github.com/bibliothecarius-modernus/bibliothecarius-modernus.github.io"
+url: "https://bibliothecarius-modernus.github.io"
+abstract: >-
+  AI-assisted translations of Latin Patristic texts from sources including
+  Patrologia Latina. Translations produced using Claude (Anthropic) with
+  human direction, selection, and editorial review. Provides side-by-side
+  Latin and English text for verification. Covers works from the Apostolic
+  Fathers through medieval theologians, many lacking prior English translations.
+keywords:
+  - patristics
+  - Latin
+  - translation
+  - church fathers
+  - medieval theology
+  - Patrologia Latina
+  - AI-assisted translation
+license: CC-BY-4.0

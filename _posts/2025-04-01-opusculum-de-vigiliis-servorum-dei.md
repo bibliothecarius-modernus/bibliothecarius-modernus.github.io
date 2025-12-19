@@ -14,6 +14,7 @@ original_work:
   publication: "Patrologia Latina Volume 68, 365-372 (as Nicetius of Trier); Volume 30, 232-239 (as pseudo-Jerome)"
   context: "A pastoral treatise written to explain and defend the practice of nocturnal vigils in early Christian communities, emphasizing their biblical foundations and spiritual benefits during a period of liturgical development in frontier regions of the Roman Empire."
 external_resources:
+  doi: "10.5281/zenodo.17982595"
   archive_url: "https://archive.org/details/work-on-the-vigils-of-gods-servants"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68"
 

@@ -15,6 +15,7 @@ original_work:
   context: "A compilation of patristic commentaries on the Genesis creation narrative, offering theological insights into each day of creation while synthesizing early Christian interpretations of divine creative acts."
 
 external_resources:
+  doi: "10.5281/zenodo.17982587"
   archive_url: "https://archive.org/details/on-the-six-days-of-creation"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_93"
 

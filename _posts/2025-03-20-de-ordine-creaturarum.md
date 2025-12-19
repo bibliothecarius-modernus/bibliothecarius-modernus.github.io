@@ -15,6 +15,7 @@ original_work:
   context: "An Irish synthesis of biblical cosmology and natural philosophy that presented a comprehensive theological vision of creation's hierarchical order, incorrectly attributed to Isidore of Seville for centuries."
 
 external_resources:
+  doi: "10.5281/zenodo.17982563"
   archive_url: "https://archive.org/details/on-the-order-of-creatures"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_83"
 

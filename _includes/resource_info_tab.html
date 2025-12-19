@@ -77,7 +77,7 @@
       </tr>
       <tr>
         <th>Permalink</th>
-        <td><a href="{{ site.url }}{{ page.url }}">{{ site.url }}{{ page.url }}</a></td>
+        <td>{% if page.external_resources.doi %}<a href="https://doi.org/{{ page.external_resources.doi }}">https://doi.org/{{ page.external_resources.doi }}</a>{% else %}<a href="{{ site.url }}{{ page.url }}">{{ site.url }}{{ page.url }}</a>{% endif %}</td>
       </tr>
       
       <tr>

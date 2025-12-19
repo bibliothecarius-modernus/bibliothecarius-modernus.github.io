@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 126"
   context: "A practical monastic guide detailing fasting observances throughout the liturgical year at Monte Cassino, written during the Carolingian monastic reform era and preserving important early medieval ascetic and liturgical practices."
 external_resources:
+  doi: "10.5281/zenodo.17982593"
   archive_url: "https://archive.org/details/how-to-observe-fasting-throughout-the-year"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_126"
 

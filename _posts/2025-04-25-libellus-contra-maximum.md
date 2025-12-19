@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 58"
   context: "Written during Vandal rule in North Africa when Homoian Arian theology was imposed by the ruling Germanic people, challenging Nicene bishops to defend orthodox Trinitarian doctrine using Scripture alone."
 external_resources:
+  doi: "10.5281/zenodo.17982615"
   archive_url: "https://archive.org/details/booklet-against-maximus-the-arian" 
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_58"
 

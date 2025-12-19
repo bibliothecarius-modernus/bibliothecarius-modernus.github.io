@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 17"
   context: "An ancient baptismal exorcism prayer from the Ambrosian liturgical tradition, representing one of the earliest recorded Latin exorcism formulas used in catechumenal preparation before baptism."
 external_resources:
+  doi: "10.5281/zenodo.17982625"
   archive_url: "https://archive.org/details/exorcism_202505"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_17"
 

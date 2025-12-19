@@ -15,6 +15,7 @@ original_work:
   context: "Written shortly after Odo's death in 942, this hagiography documents the life and reforming mission of St. Odo, who played a central role in the 10th-century Cluniac monastic renewal movement that revitalized Benedictine monasticism across Europe."
 
 external_resources:
+  doi: "10.5281/zenodo.17982561"
   archive_url: "https://archive.org/details/the-life-of-saint-odo-second-abbot-of-cluny"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_133"
 

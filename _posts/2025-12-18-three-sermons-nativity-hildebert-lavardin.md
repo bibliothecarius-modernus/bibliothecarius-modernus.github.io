@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 171"
   context: "Three Christmas Sermons"
 external_resources:
+  doi: "10.5281/zenodo.17982655"
   archive_url: "https://archive.org/details/sermones-tres-nativitate-domini-hildebert"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_171/Hildebert%20of%20Lavardin%20-%20Three%20Sermons%20on%20the%20Nativity%20of%20the%20Lord"
 ---

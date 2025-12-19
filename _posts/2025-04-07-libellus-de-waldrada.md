@@ -15,6 +15,7 @@ original_work:
   context: "A legal-theological brief produced during King Lothar II's controversial divorce case, justifying his separation from Queen Theutberga and his desire to marry his longtime mistress Waldrada."
 
 external_resources:
+  doi: "10.5281/zenodo.17982597"
   archive_url: "https://archive.org/details/libellus-de-waldrada"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_121"
 

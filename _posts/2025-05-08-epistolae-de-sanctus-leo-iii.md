@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 102"
   context: "Written during the Carolingian age, these letters document papal-imperial relations, theological controversies, and ecclesiastical reforms during the formative period when Leo III crowned Charlemagne as Emperor of the Romans."
 external_resources:
+  doi: "10.5281/zenodo.17982621"
   archive_url: "https://archive.org/details/letters-of-pope-saint-leo-iii" 
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_102"
 

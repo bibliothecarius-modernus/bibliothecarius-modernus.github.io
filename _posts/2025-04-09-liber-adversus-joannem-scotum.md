@@ -15,6 +15,7 @@ original_work:
   context: "A systematic refutation of John Scotus Eriugena's treatise on predestination, written during the heated 9th-century theological controversy in the Carolingian Empire over divine foreknowledge, grace, and free will."
 
 external_resources:
+  doi: "10.5281/zenodo.17982601"
   archive_url: "https://archive.org/details/book-against-john-scotus"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_119"
 

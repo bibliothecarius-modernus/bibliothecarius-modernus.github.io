@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 203"
   context: "Examines the salvation of Adam and original sin through scholastic theological methodology, addressing fundamental questions of human nature, divine commandment, and redemption in medieval Christian thought."
 external_resources:
+  doi: "10.5281/zenodo.17982629"
   archive_url: "https://archive.org/details/response-concerning-the-salvation-of-the-first-man"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_203"
 

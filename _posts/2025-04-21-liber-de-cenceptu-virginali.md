@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 158"
   context: "A theological treatise examining how Christ could take on human nature from the Virgin Mary without inheriting original sin, featuring Anselm's nuanced explanation of sin's transmission through human nature rather than the act of procreation."
 external_resources:
+  doi: "10.5281/zenodo.17982613"
   archive_url: "https://archive.org/details/book-on-the-virgin-conception" 
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_158"
 

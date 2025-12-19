@@ -12,6 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 210"
   context: "The Complaint of Nature"
 external_resources:
+  doi: "10.5281/zenodo.17982645"
   archive_url: "https://archive.org/details/de-planctu-naturae-alan-of-lille"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_210/Alain%20de%20Lille%20(Alanus%20de%20Insulis)%20-%20De%20Planctu%20Naturae"
 ---

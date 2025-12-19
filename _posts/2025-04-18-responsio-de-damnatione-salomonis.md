@@ -12,6 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 203"
   context: "A theological treatise examining the controversial question of King Solomon's salvation or damnation, analyzing biblical evidence to conclude that despite his God-given wisdom, Solomon died unrepentant of idolatry and was therefore condemned."
 external_resources:
+  doi: "10.5281/zenodo.17982611"
   archive_url: "https://archive.org/details/a-response-concerning-the-damnation-of-solomon"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_203"
 

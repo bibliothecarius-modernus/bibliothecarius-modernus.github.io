@@ -15,6 +15,7 @@ original_work:
   context: "Written during Gottschalk's imprisonment after condemnation at the Synods of Mainz (848) and Quierzy (849) for his controversial views on predestination, these confessional texts represent his unwavering theological stance in the face of ecclesiastical opposition."
 
 external_resources:
+  doi: "10.5281/zenodo.17982569"
   archive_url: "https://archive.org/details/confessio-et-confessio-prolixior"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_121"
 

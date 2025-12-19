@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 204"
   context: "A treatise exploring the Christian understanding of death as spiritual progress rather than defeat, written as pastoral counsel during the medieval period when mortality was both ubiquitous and spiritually significant."
 external_resources:
+  doi: "10.5281/zenodo.17982623"
   archive_url: "https://archive.org/details/on-the-advancement-of-death"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_204"
 

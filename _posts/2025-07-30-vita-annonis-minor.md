@@ -13,6 +13,7 @@ original_work:
   publication: "Siegburger Studien Volume 10"
   context: "A late 12th-century hagiographic biography of Saint Anno II, Archbishop of Cologne, compiled specifically to support his canonization in 1183. The work emphasizes Anno's sanctity, miracles, and role as a church reformer during the Investiture Controversy era."
 external_resources:
+  doi: "10.5281/zenodo.17982637"
   archive_url: "https://archive.org/details/vita-annonis-minor"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Vita_Annonis_Minor"
 

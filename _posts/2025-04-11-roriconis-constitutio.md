@@ -15,6 +15,7 @@ original_work:
   context: "A foundation charter documenting Bishop Roricon's restoration of the Abbey of St. Vincent in Laon, importing twelve monks from Fleury Abbey to reestablish Benedictine monastic life after Viking devastation and subsequent decline."
 
 external_resources:
+  doi: "10.5281/zenodo.17982607"
   archive_url: "https://archive.org/details/constitution-of-rorico"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_133"
 

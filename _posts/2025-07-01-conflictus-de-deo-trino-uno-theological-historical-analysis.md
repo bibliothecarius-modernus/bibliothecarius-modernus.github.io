@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 53"
   context: "A theological dialogue defending Chalcedonian Christology against Monophysite objections, written during the critical period surrounding the Council of Chalcedon (451). Presents the orthodox doctrine of Christ's two natures in one person through a debate between Arnobius (representing Rome) and Serapion (representing Egyptian Monophysites)."
 external_resources:
+  doi: "10.5281/zenodo.17982635"
   archive_url: "https://archive.org/details/conflicts-on-the-trinity-book-one"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_53"
 

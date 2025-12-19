@@ -12,6 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 80"
   context: "On the Eight Vices"
 external_resources:
+  doi: "10.5281/zenodo.17982643"
   archive_url: "https://archive.org/details/de-octo-vitiis-eutropius-valencia"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Eutropius%20of%20Valencia%20-%20On%20the%20Eight%20Vices"
 ---

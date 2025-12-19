@@ -12,6 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 120"
   context: "A theological treatise defending Mary's perpetual virginity, particularly during childbirth, written as a direct response to the positions of Ratramnus of Corbie during the vibrant doctrinal debates of the Carolingian Renaissance."
 external_resources:
+  doi: "10.5281/zenodo.17982581"
   archive_url: "https://archive.org/details/on-the-birth-of-the-virgin"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_120"
 

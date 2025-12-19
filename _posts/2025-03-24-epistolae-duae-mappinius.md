@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 68"
   context: "Two surviving letters from Mappinius, Bishop of Reims, provide insight into Merovingian ecclesiastical politics, canon law enforcement, and episcopal networks in 6th-century Gaul, preserved in the Epistulae Austrasicae collection."
 external_resources:
+  doi: "10.5281/zenodo.17982573"
   archive_url: "https://archive.org/details/two-letters-of-mapinius-of-reims"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68"
 

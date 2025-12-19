@@ -14,6 +14,7 @@ original_work:
   publication: "Patrologia Latina Volume 80, cols. 107-112"
   context: "Three Letters of Count Bulgaranus"
 external_resources:
+  doi: "10.5281/zenodo.17982653"
   archive_url: "https://archive.org/details/bulgaranus-epistolae-tres"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Bulgaranus%20Comes%20-%20Three%20Letters"
 ---

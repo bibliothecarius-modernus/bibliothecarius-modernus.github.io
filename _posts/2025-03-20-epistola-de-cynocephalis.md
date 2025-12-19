@@ -12,6 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 121"
   context: "Written as a theological response to missionary Rimbert's inquiry about whether dog-headed people (cynocephali) possess rational souls and should be considered human, eligible for Christian conversion."
 external_resources:
+  doi: "10.5281/zenodo.17982565"
   archive_url: "https://archive.org/details/epistola-de-cynocephalis"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_121"
 

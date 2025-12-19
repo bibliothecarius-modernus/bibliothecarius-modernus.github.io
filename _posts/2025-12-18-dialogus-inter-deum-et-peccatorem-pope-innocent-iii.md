@@ -14,6 +14,7 @@ original_work:
   publication: "Patrologia Latina Volume 217, cols. 691-702"
   context: "Dialogue Between God and a Sinner"
 external_resources:
+  doi: "10.5281/zenodo.17982649"
   archive_url: "https://archive.org/details/dialogue-between-god-and-sinner-innocent-iii"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_217"
 ---

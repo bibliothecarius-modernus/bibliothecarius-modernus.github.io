@@ -15,6 +15,7 @@ original_work:
   context: "Written during renewed debates over the Holy Spirit's procession in the aftermath of the Great Schism, this treatise represents Rupert's mature reflection on Trinitarian doctrine and defends the Western Filioque position through extensive biblical exegesis."
 
 external_resources:
+  doi: "10.5281/zenodo.17982585"
   archive_url: "https://archive.org/details/On_the_Glorification_of_the_Trinity"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_169"
 

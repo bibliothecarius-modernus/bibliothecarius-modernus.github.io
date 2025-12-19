@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 178"
   context: "Ethics, or the Book Called Know Yourself"
 external_resources:
+  doi: "10.5281/zenodo.17982647"
   archive_url: "https://archive.org/details/abelard-scito-te-ipsum-ethics"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_178/Peter%20Abelard%20-%20Ethics,%20or%20the%20Book%20Called%20Know%20Yourself"
 ---

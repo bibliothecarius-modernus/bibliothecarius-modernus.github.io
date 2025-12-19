@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 104"
   context: "A treatise combating popular superstitions about weather magic in Carolingian Gaul, arguing that natural phenomena like hail and thunder are governed solely by God's providence, not by human sorcerers (tempestarii)."
 external_resources:
+  doi: "10.5281/zenodo.17982591"
   archive_url: "https://archive.org/details/book-on-hail-and-thunder"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_104"
 

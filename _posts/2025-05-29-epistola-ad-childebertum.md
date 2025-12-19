@@ -12,6 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 68"
   context: "This episcopal letter represents a crucial intervention in the ecclesiastical crisis caused by Merovingian political fragmentation, as Leo of Sens attempts to restore proper metropolitan authority over suffragan bishops whose dioceses had been severed from their traditional ecclesiastical provinces by the division of Cloviss kingdom among his sons."
 external_resources:
+  doi: "10.5281/zenodo.17982631"
   archive_url: "https://archive.org/details/letter-to-childerbert"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68"
 

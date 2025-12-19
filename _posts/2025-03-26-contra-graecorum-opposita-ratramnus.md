@@ -13,6 +13,7 @@ original_work:
   publication: "Patrologia Latina Volume 121"
   context: "Written during the Photian Schism to defend Latin theological positions against Byzantine criticisms, particularly regarding the Filioque clause, papal primacy, and Western liturgical practices during a period of intensifying East-West ecclesiastical tension."
 external_resources:
+  doi: "10.5281/zenodo.17982579"
   archive_url: "https://archive.org/details/against-the-objections-of-the-greeks-book-one"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_121"
 

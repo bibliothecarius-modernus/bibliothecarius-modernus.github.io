@@ -12,6 +12,7 @@ original_work:
   publication: "Patrologia Latina Volume 125"
   context: "A Carolingian-era exegetical work that interprets Solomon's couch from Song of Songs 3:9-11 as an allegory for the Church, providing spiritual counsel for the Carolingian court during the reign of Charles the Bald."
 external_resources:
+  doi: "10.5281/zenodo.17982609"
   archive_url: "https://archive.org/details/explanation-in-ferculum-salomonis"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_125"
 
