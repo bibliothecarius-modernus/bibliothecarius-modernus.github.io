@@ -10,6 +10,7 @@ century: "12th century"
 volume: "PL 170"
 youtube_id: "uv9vVZjYywI"
 github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_170/Rupert%20of%20Deutz%20-%20Dispute%20Between%20a%20Monk%20and%20a%20Cleric:%20Whether%20a%20Monk%20May%20Preach"
+archive_url: "https://archive.org/details/altercatio-monachi-et-clerici-rupert-deutz"
 ---
 A 12th-century dialogue defending the right of ordained monks to preach, challenging the Hieronymian dictum that "monks should weep, not teach." Written by Rupert, Abbot of Deutz, the text features a spirited debate between a monk and a secular cleric, marshaling patristic authorities and biblical precedent to argue that monastic ordination confers full preaching authority.
 
