@@ -911,6 +911,14 @@ figcaption {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.about-page .resource-list a {
+    color: var(--highlight-color);
+}
+
+.about-page .resource-list a:hover {
+    color: var(--dark-highlight);
+}
+
 .social-links {
     display: flex;
     justify-content: center;
