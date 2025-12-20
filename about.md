@@ -28,6 +28,7 @@ permalink: /about/
   
   <ul class="resource-list">
     <li><a href="https://github.com/wryan14/Latin-Patristic-Texts" target="_blank">Latin Patristic Texts Repository</a> - Access the growing collection of translated texts.</li>
+    <li><a href="https://doi.org/10.5281/zenodo.18002473" target="_blank">Project White Paper</a> - A detailed documentation of the project's philosophy, technical architecture, and methodology.</li>
   </ul>
 
   <p><em>For any translators who are interested in making their own translations or authoritative editions: Everything associated with my project is under Creative Commons license, so it's yours to use as a jumping off point - no need to ask. If you want to credit my work or just let me know this was helpful, that's always appreciated but not required.</em></p>
