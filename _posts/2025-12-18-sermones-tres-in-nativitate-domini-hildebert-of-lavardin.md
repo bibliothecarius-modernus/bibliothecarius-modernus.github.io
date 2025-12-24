@@ -6,6 +6,7 @@ listed: true
 publish_date: 2025-12-24
 categories: [medieval-theology, biblical-commentary]
 youtube_id: "mPHeN5t4qnY"
+translation_json: "/assets/translations/2025-12-18-sermones-tres-in-nativitate-domini-hildebert-of-lavardin.json"
 original_work:
   latin_title: Sermones Tres in Nativitate Domini
   author: "Hildebert of Lavardin"
