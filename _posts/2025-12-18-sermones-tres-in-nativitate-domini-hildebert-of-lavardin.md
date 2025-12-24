@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Sermones Tres in Nativitate Domini (c. 1100-1130 CE)"
 date: 2025-12-24
-listed: false
+listed: true
 publish_date: 2025-12-24
 categories: [medieval-theology, biblical-commentary]
 youtube_id: "mPHeN5t4qnY"
