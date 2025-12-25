@@ -6,6 +6,9 @@ on:
     - cron: '5 11 * * *'
   workflow_dispatch:  # Allow manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   publish-scheduled-posts:
     runs-on: ubuntu-latest
