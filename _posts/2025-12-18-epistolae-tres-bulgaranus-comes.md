@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Epistolae Tres (c. 610 CE)"
 date: 2025-12-18
-listed: false
+listed: true
 publish_date: 2025-12-25
 categories: [epistolary, visigothic-mozarabic-writings, medieval-diplomacy]
 youtube_id: "u-WBXrP2QtY"
@@ -18,7 +18,6 @@ external_resources:
   archive_url: "https://archive.org/details/bulgaranus-epistolae-tres"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Bulgaranus%20Comes%20-%20Three%20Letters"
 ---
-
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
   Three 7th-century diplomatic letters from a Visigothic count to a Frankish bishop, providing rare documentation of official correspondence between the Visigothic and Frankish kingdoms during the reign of King Gundemar and offering valuable insights into early medieval diplomatic practices and inter-kingdom relations.
 </p>
