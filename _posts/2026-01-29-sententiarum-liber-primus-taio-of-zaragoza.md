@@ -1,8 +1,8 @@
 ---
 layout: tabbed_post
 title: "Sententiarum Liber Primus (c. 7th century)"
-date: 2026-01-29
-listed: false
+date: 2026-02-07
+listed: true
 categories: [visigothic-mozarabic-writings, medieval-theology, patristic-philosophy]
 youtube_id: "Qzg1y9Ozj-4"
 translation_json: "/assets/translations/2026-01-29-sententiarum-liber-primus-taio-of-zaragoza.json"
@@ -135,3 +135,7 @@ Taio of Zaragoza died around 683, having witnessed the extraordinary intellectua
 18. [Scholasticism - Wikipedia](https://en.wikipedia.org/wiki/Scholasticism)
 19. [Froia Facts for Kids](https://kids.kiddle.co/Froia)
 20. [Saint of the Day – 26 March – Braulio (590-651) - AnaStpaul](https://anastpaul.com/2018/03/26/saint-of-the-day-26-march-braulio-590-651/)
+
+---
+
+*This is Book 1 of 5 in Taio of Zaragoza's Sententiarum Libri. Book 2 coming soon.*
