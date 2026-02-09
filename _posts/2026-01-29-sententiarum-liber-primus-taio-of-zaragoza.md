@@ -15,11 +15,27 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/taio-zaragoza-sententiarum-liber-primus"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Taio%20of%20Zaragoza%20-%20The%20First%20Book%20of%20Sentences"
+additional_videos:
+  - title: "Book II"
+    youtube_id: "MF8o5TXm--k"
+    archive_url: "https://archive.org/details/taio-zaragoza-sententiarum-liber-secundus"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
   A 7th-century theological florilegium that systematically compiled patristic teachings into five thematic books, creating what may be the first Western theological summa. The work synthesized doctrines from Gregory the Great and Augustine to provide systematic instruction for Visigothic clergy, predating Peter Lombard's famous *Sentences* by nearly five centuries.
 </p>
+
+## Sententiarum Libri V — Complete Series
+
+This translation covers Taio's five-book theological summa in separate volumes:
+
+| Book | Duration | Watch | Listen |
+|------|----------|-------|--------|
+| **Book I**: God, Creation, and Divine Attributes | ~169 min | [YouTube](https://www.youtube.com/watch?v=Qzg1y9Ozj-4) | [Archive.org](https://archive.org/details/taio-zaragoza-sententiarum-liber-primus) |
+| **Book II**: Incarnation, Church, and Pastoral Office | ~307 min | [YouTube](https://www.youtube.com/watch?v=MF8o5TXm--k) | [Archive.org](https://archive.org/details/taio-zaragoza-sententiarum-liber-secundus) |
+| **Book III** | *Coming soon* | | |
+| **Book IV** | *Coming soon* | | |
+| **Book V** | *Coming soon* | | |
 
 # Taio of Zaragoza's Sententiarum Liber Primus: A Seventh-Century Theological Florilegium in the Visigothic Kingdom
 
@@ -138,4 +154,4 @@ Taio of Zaragoza died around 683, having witnessed the extraordinary intellectua
 
 ---
 
-*This is Book 1 of 5 in Taio of Zaragoza's Sententiarum Libri. Book 2 coming soon.*
+*This is Book 1 of 5 in Taio of Zaragoza's Sententiarum Libri. Books 3-5 coming soon.*
