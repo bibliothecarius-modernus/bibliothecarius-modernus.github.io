@@ -1,17 +1,17 @@
 ---
 layout: tabbed_post
-title: "Sententiarum Liber Primus (c. 7th century)"
+title: "Sententiarum Libri Quinque (c. 7th century)"
 date: 2026-02-07
 listed: true
 categories: [visigothic-mozarabic-writings, medieval-theology, patristic-philosophy]
 youtube_id: "Qzg1y9Ozj-4"
-translation_json: "/assets/translations/2026-01-29-sententiarum-liber-primus-taio-of-zaragoza.json"
+translation_json: "/assets/translations/2026-01-29-sententiarum-libri-quinque-taio-of-zaragoza.json"
 original_work:
-  latin_title: Sententiarum Liber Primus
+  latin_title: Sententiarum Libri Quinque
   author: "Taio of Zaragoza"
   date: "c. 7th century"
   publication: "Patrologia Latina Volume 80"
-  context: "The First Book of Sentences"
+  context: "The Five Books of Sentences"
 external_resources:
   archive_url: "https://archive.org/details/taio-zaragoza-sententiarum-liber-primus"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Taio%20of%20Zaragoza%20-%20The%20First%20Book%20of%20Sentences"
