@@ -25,6 +25,9 @@ additional_videos:
   - title: "Book IV"
     youtube_id: "NtydyuBYwiE"
     archive_url: "https://archive.org/details/taio-zaragoza-sententiarum-liber-quartus"
+  - title: "Book V"
+    youtube_id: "43VQaS547Io"
+    archive_url: "https://archive.org/details/taio-zaragoza-sententiarum-liber-quintus"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
@@ -41,7 +44,7 @@ This translation covers Taio's five-book theological summa in separate volumes:
 | **Book II**: Incarnation, Church, and Pastoral Office | ~307 min | [YouTube](https://www.youtube.com/watch?v=MF8o5TXm--k) | [Archive.org](https://archive.org/details/taio-zaragoza-sententiarum-liber-secundus) |
 | **Book III**: Christology and the Holy Spirit | ~181 min | [YouTube](https://www.youtube.com/watch?v=TG6T_NWBDDc) | [Archive.org](https://archive.org/details/taio-zaragoza-sententiarum-liber-tertius) |
 | **Book IV**: Ecclesiology, Heresy, and Baptism | ~105 min | [YouTube](https://www.youtube.com/watch?v=NtydyuBYwiE) | [Archive.org](https://archive.org/details/taio-zaragoza-sententiarum-liber-quartus) |
-| **Book V** | *Coming soon* | | |
+| **Book V**: Worldly Vices, Judgment, and the Eternal | ~77 min | [YouTube](https://www.youtube.com/watch?v=43VQaS547Io) | [Archive.org](https://archive.org/details/taio-zaragoza-sententiarum-liber-quintus) |
 
 # Taio of Zaragoza's Sententiarum Liber Primus: A Seventh-Century Theological Florilegium in the Visigothic Kingdom
 
