@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Versus de Cuculo (c. 8th century)"
 date: 2026-04-15
-listed: false
+listed: true
 categories: [carolingian-theological-renaissance, irish-anglo-saxon-contributions]
 youtube_id: "BXePSn0j0_A"
 translation_json: "/assets/translations/2026-04-15-versus-de-cuculo-alcuin-of-york.json"
