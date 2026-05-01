@@ -4,7 +4,7 @@ title: "Polypticum quod appellatur Perpendiculum (textus alter) (c. 10th century
 date: 2026-05-01
 listed: false
 categories: [medieval-theology, canon-law, ecclesiastical-history]
-youtube_id: "PENDING"
+youtube_id: "4IdooTf19bQ"
 translation_json: "/assets/translations/2026-05-01-polypticum-quod-appellatur-perpendiculum-textus-alter-atto-of-vercelli.json"
 original_work:
   latin_title: Polypticum quod appellatur Perpendiculum (textus alter)
