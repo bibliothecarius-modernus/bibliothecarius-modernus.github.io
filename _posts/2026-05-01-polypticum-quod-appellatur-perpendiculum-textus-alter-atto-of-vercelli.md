@@ -18,7 +18,7 @@ external_resources:
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-  A 10th-century episcopal handbook that provides systematic guidance for church governance, combining canonical law with practical pastoral advice for managing diocesan affairs. This comprehensive manual reflects the administrative challenges facing bishops during the Ottonian reform period and represents one of the most detailed surviving accounts of medieval ecclesiastical administration.
+  A 10th-century cryptic political-moral satire censuring the corruption and ambition of Italian princes and clergy, written in deliberately obscure Latin to disguise its targets. This second recension is Atto of Vercelli's own slightly clearer rewrite of his original Polypticum, offering insight into Ottonian-era political invective and the medieval Latin tradition of esoteric writing.
 </p>
 
 ## Historical Context
