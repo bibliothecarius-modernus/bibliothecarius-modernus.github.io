@@ -40,7 +40,7 @@ external_resources:
 
 
 <figure style="text-align: center; margin: 2em auto; max-width: 50%;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Italy_1000_AD.svg/1427px-Italy_1000_AD.svg.png" alt="Political divisions in Italy around 1000 AD, showing the fragmented landscape that Atto witnessed during his episcopal career under multiple competing rulers" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Italy_1000_AD.svg" alt="Political divisions in Italy around 1000 AD, showing the fragmented landscape that Atto witnessed during his episcopal career under multiple competing rulers" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Political divisions in Italy around 1000 AD, showing the fragmented landscape that Atto witnessed during his episcopal career under multiple competing rulers<br><small>License: * CC BY-SA 3.0 (Map by “MapMaster”</small></figcaption>
 </figure>
 
