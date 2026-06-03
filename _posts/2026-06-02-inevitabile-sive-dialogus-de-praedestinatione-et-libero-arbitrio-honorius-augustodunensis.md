@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Inevitabile sive Dialogus de Praedestinatione et Libero Arbitrio (c. 12th century)"
 date: 2026-06-02
-listed: false
+listed: true
 categories: [medieval-theology, soteriology, patristic-philosophy]
 youtube_id: "k2O2uouONFI"
 translation_json: "/assets/translations/2026-06-02-inevitabile-sive-dialogus-de-praedestinatione-et-libero-arbitrio-honorius-augustodunensis.json"
