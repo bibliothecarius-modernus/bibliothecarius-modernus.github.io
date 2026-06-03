@@ -31,8 +31,8 @@ external_resources:
 
 
 <figure style="text-align: center; margin: 2em auto; max-width: 50%;">
-  <img src="https://dewiki.de/Lexikon/Schottenkloster_St._Jakob_%28Regensburg%29#:~:text=Nordportal%20der%20zugeh%C3%B6rigen%20Klosterkirche%20mit,den%20gro%C3%9Fen%20Werken%20der%20Romanik" alt="Portal of the Schottenkirche St. Jakob in Regensburg, where Honorius likely lived as a recluse and completed his theological works including the *Inevitabile*" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Portal of the Schottenkirche St. Jakob in Regensburg, where Honorius likely lived as a recluse and completed his theological works including the *Inevitabile*<br><small>License: unknown</small></figcaption>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Schottenportal_4.jpg" alt="Portal of the Schottenkirche St. Jakob in Regensburg, where Honorius likely lived as a recluse and completed his theological works including the *Inevitabile*" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Portal of the Schottenkirche St. Jakob in Regensburg, where Honorius likely lived as a recluse and completed his theological works including the *Inevitabile*<br><small>Photo: Allie Caulfield, <a href="https://commons.wikimedia.org/wiki/File:Schottenportal_4.jpg">Wikimedia Commons</a>, CC BY 2.0</small></figcaption>
 </figure>
 
 
@@ -70,8 +70,8 @@ Piecing together clues, historians have formed a sketch of his career: Honorius 
 
 
 <figure style="text-align: center; margin: 2em auto; max-width: 50%;">
-  <img src="https://geschichtsquellen.de/autor/2949#:~:text=1100%20scheint%20er%20sich%20in,auch%20Verbindungen%20zum%20Kloster%20Lambach" alt="Ruins of St. Augustine's Abbey, Canterbury, representative of the monastic environment where Honorius may have encountered Anselm's theological ideas" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Ruins of St. Augustine's Abbey, Canterbury, representative of the monastic environment where Honorius may have encountered Anselm's theological ideas<br><small>License: unknown</small></figcaption>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Canterbury_-_St._Augustine%E2%80%99s_Abbey_-_1987-09-14_adj.jpg" alt="Ruins of St. Augustine's Abbey, Canterbury, representative of the monastic environment where Honorius may have encountered Anselm's theological ideas" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">Ruins of St. Augustine's Abbey, Canterbury, representative of the monastic environment where Honorius may have encountered Anselm's theological ideas<br><small>Photo: Cbaile19, <a href="https://commons.wikimedia.org/wiki/File:Canterbury_-_St._Augustine%E2%80%99s_Abbey_-_1987-09-14_adj.jpg">Wikimedia Commons</a>, CC0</small></figcaption>
 </figure>
 
 
@@ -79,8 +79,8 @@ Piecing together clues, historians have formed a sketch of his career: Honorius 
 
 
 <figure style="text-align: center; margin: 2em auto; max-width: 50%;">
-  <img src="https://commons.wikimedia.org/wiki/File%3AHonorius_Augustodunensis_Opera_exegetica_159.png#:~:text=in%20the%20Song%20of%20Songs,World%20Digital%20Library" alt="A manuscript page from Honorius Augustodunensis's opera exegetica, illustrating the medieval transmission of his theological works" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">A manuscript page from Honorius Augustodunensis's opera exegetica, illustrating the medieval transmission of his theological works<br><small>License: unknown</small></figcaption>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Honorius_Augustodunensis_Opera_exegetica_159.png" alt="A manuscript page from Honorius Augustodunensis's opera exegetica, illustrating the medieval transmission of his theological works" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <figcaption style="font-style: italic; margin-top: 0.5em; color: #666; font-size: 0.9em;">A manuscript page from Honorius Augustodunensis's opera exegetica, illustrating the medieval transmission of his theological works<br><small>Public domain, <a href="https://commons.wikimedia.org/wiki/File:Honorius_Augustodunensis_Opera_exegetica_159.png">Wikimedia Commons</a></small></figcaption>
 </figure>
 
 
