@@ -4,7 +4,7 @@ title: "De collectione Isidori Mercatoris (c. 18th century)"
 date: 2026-06-08
 listed: false
 categories: [ecclesiastical-history, canon-law, papal-bulls-decretals]
-youtube_id: "PENDING"
+youtube_id: "jQqnGHrRZ88"
 translation_json: "/assets/translations/2026-06-08-de-collectione-isidori-mercatoris-pietro-girolamo-ballerini.json"
 original_work:
   latin_title: De collectione Isidori Mercatoris
