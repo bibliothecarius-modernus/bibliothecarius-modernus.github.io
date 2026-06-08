@@ -4,7 +4,7 @@ title: "Liber de tentationibus suis (c. 11th century)"
 date: 2026-06-08
 listed: false
 categories: [asceticism-monasticism, monastic-spirituality, medieval-theology]
-youtube_id: "PENDING"
+youtube_id: "dSRNS5C3cO4"
 translation_json: "/assets/translations/2026-06-08-liber-de-tentationibus-suis-othloh-of-st-emmeram.json"
 original_work:
   latin_title: Liber de tentationibus suis
