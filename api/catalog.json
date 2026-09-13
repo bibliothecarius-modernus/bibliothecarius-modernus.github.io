@@ -2,7 +2,7 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-13T16:25:57Z",
+ "generated_at": "2026-09-13T21:11:57Z",
  "version": "export:2026-09-13;registry:2026-09-13",
  "publisher": {
   "name": "Bibliothecarius Modernus",
@@ -28,12 +28,12 @@
  },
  "counts": {
   "works": 3772,
-  "publications": 286,
+  "publications": 287,
   "parts": 5,
   "works_by_status": {
    "untranslated": 3584,
-   "published": 176,
-   "candidate": 9,
+   "published": 177,
+   "candidate": 8,
    "rejected": 1,
    "translated": 2
   },
@@ -19276,12 +19276,14 @@
    },
    "century": "5th-6th",
    "section": "main",
-   "status": "candidate",
+   "status": "published",
    "english_translation_status": "none-found",
    "boundary_verified": false,
    "estimated_minutes": 101.8,
-   "translated_by_bibliothecarius": false,
-   "publications": []
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2880"
+   ]
   },
   {
    "id": "pl068-001",
@@ -91297,6 +91299,64 @@
     }
    },
    "version": "2026-09-13T16:25:05Z"
+  },
+  {
+   "id": "pub-2880",
+   "kind": "publication",
+   "catalog_id": "pl067-900",
+   "part_id": null,
+   "project_id": "explanatio-in-cantica-canticorum-20260913",
+   "title_english": "Mystical Explanation of the Song of Songs",
+   "title_latin": "Explanatio in Cantica Canticorum",
+   "author": "Justus of Urgel",
+   "pl_volume": 67,
+   "columns": {
+    "start": 961,
+    "end": 994
+   },
+   "century": "5th-6th",
+   "status": "published",
+   "youtube_visibility": "public",
+   "published_at": "2026-09-13T21:09:21Z",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=QFZM6iVxKy8",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/explanatio-in-cantica-canticorum-justus-of-urgel/",
+    "archive": "https://archive.org/details/mystical-explanation-of-the-song-of-songs",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_67/Justus%20of%20Urgel%20-%20Mystical%20Explanation%20of%20the%20Song%20of%20Songs"
+   },
+   "doi": null,
+   "provenance": {
+    "source_of_record": "pipeline",
+    "generation": "v2",
+    "translator_model": "openai/gpt-5.5",
+    "translation_date": "2026-09-13",
+    "translation_date_source": "project_state",
+    "source_check": true,
+    "translation_qa": "attention"
+   },
+   "review": {
+    "status": "unreviewed",
+    "checked_at": null,
+    "known_defects": []
+   },
+   "rights": {
+    "license": null,
+    "license_status": "unresolved",
+    "source_text_rights": "not-redistributed"
+   },
+   "locators": {
+    "work": "pl067-900",
+    "passages_available": true,
+    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/09/explanatio-in-cantica-canticorum-justus-of-urgel/#chunk-{n}"
+   },
+   "related": {
+    "same_author": [],
+    "adjacent_in_volume": {
+     "prev": "pl067-020",
+     "next": null
+    }
+   },
+   "version": "2026-09-13T21:09:39Z"
   }
  ]
 }
