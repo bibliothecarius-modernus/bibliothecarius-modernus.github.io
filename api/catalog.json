@@ -2,8 +2,8 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-13T16:20:20Z",
- "version": "export:2026-09-13;registry:2026-06-10",
+ "generated_at": "2026-09-13T16:25:57Z",
+ "version": "export:2026-09-13;registry:2026-09-13",
  "publisher": {
   "name": "Bibliothecarius Modernus",
   "url": "https://bibliothecarius-modernus.github.io",
@@ -32,9 +32,8 @@
   "parts": 5,
   "works_by_status": {
    "untranslated": 3584,
-   "published": 174,
+   "published": 176,
    "candidate": 9,
-   "in_progress": 2,
    "rejected": 1,
    "translated": 2
   },
@@ -16507,13 +16506,13 @@
    },
    "century": "4th-5th",
    "section": "main",
-   "status": "in_progress",
+   "status": "published",
    "english_translation_status": "unknown",
    "boundary_verified": false,
    "estimated_minutes": 1439.5,
    "translated_by_bibliothecarius": true,
    "publications": [
-    "pub-2738"
+    "pub-2879"
    ]
   },
   {
@@ -47096,13 +47095,13 @@
    },
    "century": "10th-11th",
    "section": "main",
-   "status": "in_progress",
+   "status": "published",
    "english_translation_status": "unknown",
    "boundary_verified": false,
    "estimated_minutes": 117.4,
    "translated_by_bibliothecarius": true,
    "publications": [
-    "pub-2724"
+    "pub-2878"
    ]
   },
   {
@@ -81227,86 +81226,6 @@
    "version": "2026-06-10T02:29:40Z"
   },
   {
-   "id": "pub-2724",
-   "kind": "publication",
-   "catalog_id": "pl146-001",
-   "part_id": null,
-   "project_id": "liber-de-tentationibus-suis-20260608",
-   "title_english": "Book of His Temptations",
-   "title_latin": "Liber de tentationibus suis",
-   "author": "Othloh of St Emmeram",
-   "pl_volume": 146,
-   "columns": {
-    "start": 29,
-    "end": 58
-   },
-   "century": "10th-11th",
-   "status": "published",
-   "youtube_visibility": null,
-   "published_at": "2026-06-08",
-   "urls": {
-    "youtube": "https://www.youtube.com/watch?v=dSRNS5C3cO4",
-    "blog": "https://bibliothecarius-modernus.github.io/2026/06/liber-de-tentationibus-suis-othloh-of-st-emmeram/",
-    "archive": "https://archive.org/details/othloh-de-tentationibus",
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_146/Othloh%20of%20St%20Emmeram%20-%20Book%20of%20His%20Temptations"
-   },
-   "doi": null,
-   "provenance": {
-    "source_of_record": "pl-readme",
-    "generation": "gen3",
-    "translator_model": "claude-sonnet-4.5",
-    "translation_date": "2026-06-08",
-    "translation_date_source": "project_state",
-    "source_check": null,
-    "translation_qa": null
-   },
-   "review": {
-    "status": "defect-recorded",
-    "checked_at": "2026-09-13",
-    "known_defects": [
-     {
-      "type": "omission",
-      "coverage_pct": 70.32,
-      "missing_source_words": 3408,
-      "found": "2026-09-13",
-      "ref": "docs/v2/experiments/HISTORICAL_COVERAGE_SCAN_2026.md (Phase 1, 2026-09-13)"
-     }
-    ]
-   },
-   "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
-   },
-   "locators": {
-    "work": "pl146-001",
-    "passages_available": false,
-    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/06/liber-de-tentationibus-suis-othloh-of-st-emmeram/#chunk-{n}"
-   },
-   "related": {
-    "same_author": [
-     "pl146-002",
-     "pl146-003",
-     "pl146-004",
-     "pl146-005",
-     "pl146-006",
-     "pl146-007",
-     "pl146-008",
-     "pl146-009",
-     "pl146-010",
-     "pl146-011",
-     "pl146-012",
-     "pl146-013",
-     "pl146-014"
-    ],
-    "adjacent_in_volume": {
-     "prev": null,
-     "next": "pl146-002"
-    }
-   },
-   "version": "2026-06-10T02:29:40Z"
-  },
-  {
    "id": "pub-2725",
    "kind": "publication",
    "catalog_id": "pl013-023",
@@ -82204,84 +82123,6 @@
     "adjacent_in_volume": {
      "prev": "pl020-001",
      "next": "pl020-003"
-    }
-   },
-   "version": "2026-06-10T02:29:40Z"
-  },
-  {
-   "id": "pub-2738",
-   "kind": "publication",
-   "catalog_id": "pl056-001",
-   "part_id": null,
-   "project_id": "de-collectione-isidori-mercatoris-20260608",
-   "title_english": "On the Collection of Isidore Mercator — the False Decretals",
-   "title_latin": "De collectione Isidori Mercatoris",
-   "author": "Pietro & Girolamo Ballerini",
-   "pl_volume": 56,
-   "columns": {
-    "start": 240,
-    "end": 264
-   },
-   "century": "4th-5th",
-   "status": "published",
-   "youtube_visibility": null,
-   "published_at": "2026-06-08",
-   "urls": {
-    "youtube": "https://www.youtube.com/watch?v=jQqnGHrRZ88",
-    "blog": "https://bibliothecarius-modernus.github.io/2026/06/de-collectione-isidori-mercatoris-pietro-girolamo-ballerini/",
-    "archive": "https://archive.org/details/ballerini-false-decretals",
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_56/Pietro%20%26%20Girolamo%20Ballerini%20-%20On%20the%20Collection%20of%20Isidore%20Mercator%20%E2%80%94%20the%20False%20Decretals"
-   },
-   "doi": null,
-   "provenance": {
-    "source_of_record": "pl-readme",
-    "generation": "gen3",
-    "translator_model": "claude-sonnet-4.5",
-    "translation_date": "2026-06-08",
-    "translation_date_source": "project_state",
-    "source_check": null,
-    "translation_qa": null
-   },
-   "review": {
-    "status": "defect-recorded",
-    "checked_at": "2026-09-13",
-    "known_defects": [
-     {
-      "type": "omission",
-      "coverage_pct": 69.09,
-      "missing_source_words": 3576,
-      "found": "2026-09-13",
-      "ref": "docs/v2/experiments/HISTORICAL_COVERAGE_SCAN_2026.md (Phase 1, 2026-09-13)"
-     }
-    ]
-   },
-   "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
-   },
-   "locators": {
-    "work": "pl056-001",
-    "passages_available": false,
-    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/06/de-collectione-isidori-mercatoris-pietro-girolamo-ballerini/#chunk-{n}"
-   },
-   "related": {
-    "same_author": [
-     "pl055-001",
-     "pl055-002",
-     "pl055-003",
-     "pl055-004",
-     "pl056-002",
-     "pl056-003",
-     "pl056-004",
-     "pl056-005",
-     "pl056-006",
-     "pl056-007",
-     "pl056-008"
-    ],
-    "adjacent_in_volume": {
-     "prev": null,
-     "next": "pl056-002"
     }
    },
    "version": "2026-06-10T02:29:40Z"
@@ -91298,6 +91139,164 @@
     }
    },
    "version": "2026-06-10T02:29:40Z"
+  },
+  {
+   "id": "pub-2878",
+   "kind": "publication",
+   "catalog_id": "pl146-001",
+   "part_id": null,
+   "project_id": "liber-de-tentationibus-suis-20260608",
+   "title_english": "Book of His Temptations",
+   "title_latin": "Libellus de suis tentationibus, varia fortuna et scriptis.",
+   "author": "Othloh of St Emmeram",
+   "pl_volume": 146,
+   "columns": {
+    "start": 29,
+    "end": 58
+   },
+   "century": "10th-11th",
+   "status": "published",
+   "youtube_visibility": "public",
+   "published_at": "2026-08-21T14:07:57Z",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=dSRNS5C3cO4",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/06/liber-de-tentationibus-suis-othloh-of-st-emmeram/",
+    "archive": "https://archive.org/details/othloh-de-tentationibus",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_146/Othloh%20of%20St%20Emmeram%20-%20Book%20of%20His%20Temptations"
+   },
+   "doi": null,
+   "provenance": {
+    "source_of_record": "pipeline",
+    "generation": "gen3",
+    "translator_model": "claude-sonnet-4.5",
+    "translation_date": "2026-06-08",
+    "translation_date_source": "project_state",
+    "source_check": null,
+    "translation_qa": null
+   },
+   "review": {
+    "status": "defect-recorded",
+    "checked_at": "2026-09-13",
+    "known_defects": [
+     {
+      "type": "omission",
+      "coverage_pct": 70.32,
+      "missing_source_words": 3408,
+      "found": "2026-09-13",
+      "ref": "docs/v2/experiments/HISTORICAL_COVERAGE_SCAN_2026.md (Phase 1, 2026-09-13)"
+     }
+    ]
+   },
+   "rights": {
+    "license": null,
+    "license_status": "unresolved",
+    "source_text_rights": "not-redistributed"
+   },
+   "locators": {
+    "work": "pl146-001",
+    "passages_available": false,
+    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/06/liber-de-tentationibus-suis-othloh-of-st-emmeram/#chunk-{n}"
+   },
+   "related": {
+    "same_author": [
+     "pl146-002",
+     "pl146-003",
+     "pl146-004",
+     "pl146-005",
+     "pl146-006",
+     "pl146-007",
+     "pl146-008",
+     "pl146-009",
+     "pl146-010",
+     "pl146-011",
+     "pl146-012",
+     "pl146-013",
+     "pl146-014"
+    ],
+    "adjacent_in_volume": {
+     "prev": null,
+     "next": "pl146-002"
+    }
+   },
+   "version": "2026-09-13T16:25:05Z"
+  },
+  {
+   "id": "pub-2879",
+   "kind": "publication",
+   "catalog_id": "pl056-001",
+   "part_id": null,
+   "project_id": "de-collectione-isidori-mercatoris-20260608",
+   "title_english": "On the Collection of Isidore Mercator — the False Decretals",
+   "title_latin": "Balleriniorum Disquisitiones de antiquis collectionibus et collectoribus canonum.",
+   "author": "Pietro & Girolamo Ballerini",
+   "pl_volume": 56,
+   "columns": {
+    "start": 240,
+    "end": 264
+   },
+   "century": "4th-5th",
+   "status": "published",
+   "youtube_visibility": "public",
+   "published_at": "2026-08-27T19:35:05Z",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=jQqnGHrRZ88",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/06/de-collectione-isidori-mercatoris-pietro-girolamo-ballerini/",
+    "archive": "https://archive.org/details/ballerini-false-decretals",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_56/Pietro%20&%20Girolamo%20Ballerini%20-%20On%20the%20Collection%20of%20Isidore%20Mercator%20—%20the%20False%20Decretals"
+   },
+   "doi": null,
+   "provenance": {
+    "source_of_record": "pipeline",
+    "generation": "gen3",
+    "translator_model": "claude-sonnet-4.5",
+    "translation_date": "2026-06-08",
+    "translation_date_source": "project_state",
+    "source_check": null,
+    "translation_qa": null
+   },
+   "review": {
+    "status": "defect-recorded",
+    "checked_at": "2026-09-13",
+    "known_defects": [
+     {
+      "type": "omission",
+      "coverage_pct": 69.09,
+      "missing_source_words": 3576,
+      "found": "2026-09-13",
+      "ref": "docs/v2/experiments/HISTORICAL_COVERAGE_SCAN_2026.md (Phase 1, 2026-09-13)"
+     }
+    ]
+   },
+   "rights": {
+    "license": null,
+    "license_status": "unresolved",
+    "source_text_rights": "not-redistributed"
+   },
+   "locators": {
+    "work": "pl056-001",
+    "passages_available": false,
+    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/06/de-collectione-isidori-mercatoris-pietro-girolamo-ballerini/#chunk-{n}"
+   },
+   "related": {
+    "same_author": [
+     "pl055-001",
+     "pl055-002",
+     "pl055-003",
+     "pl055-004",
+     "pl056-002",
+     "pl056-003",
+     "pl056-004",
+     "pl056-005",
+     "pl056-006",
+     "pl056-007",
+     "pl056-008"
+    ],
+    "adjacent_in_volume": {
+     "prev": null,
+     "next": "pl056-002"
+    }
+   },
+   "version": "2026-09-13T16:25:05Z"
   }
  ]
 }
