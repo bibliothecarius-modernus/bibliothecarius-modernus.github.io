@@ -13,6 +13,8 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <!-- RSS feed link for discovery -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  <!-- Machine-readable catalog (identity, PL location, publication metadata; no source text) -->
+  <link rel="alternate" type="application/json" title="Bibliothecarius Modernus machine-readable catalog" href="{{ "/api/catalog.json" | relative_url }}">
   
   <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

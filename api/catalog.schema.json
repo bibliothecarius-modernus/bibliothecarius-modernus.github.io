@@ -1,0 +1,593 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
+ "title": "Bibliothecarius Modernus public catalog export",
+ "description": "Schema bibliothecarius.catalog/1. Machine-readable identity, bibliographic and publication metadata for the library; no source text.",
+ "type": "object",
+ "required": [
+  "schema",
+  "schema_url",
+  "documentation",
+  "generated_at",
+  "version",
+  "publisher",
+  "rights",
+  "locator_scheme",
+  "counts",
+  "works",
+  "parts",
+  "publications"
+ ],
+ "properties": {
+  "schema": {
+   "const": "bibliothecarius.catalog/1"
+  },
+  "schema_url": {
+   "type": "string"
+  },
+  "documentation": {
+   "type": "string"
+  },
+  "generated_at": {
+   "type": "string"
+  },
+  "version": {
+   "type": "string"
+  },
+  "publisher": {
+   "type": "object"
+  },
+  "rights": {
+   "type": "object"
+  },
+  "locator_scheme": {
+   "type": "object"
+  },
+  "counts": {
+   "type": "object"
+  },
+  "works": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "kind",
+     "author",
+     "title_latin",
+     "pl_volume",
+     "columns",
+     "century",
+     "section",
+     "status",
+     "english_translation_status",
+     "boundary_verified",
+     "estimated_minutes",
+     "translated_by_bibliothecarius",
+     "publications"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^pl\\d{3}-\\d{3}$"
+     },
+     "kind": {
+      "const": "work"
+     },
+     "author": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "title_latin": {
+      "type": "string"
+     },
+     "pl_volume": {
+      "type": "integer"
+     },
+     "columns": {
+      "type": "object",
+      "properties": {
+       "start": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "end": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       }
+      },
+      "required": [
+       "start",
+       "end"
+      ]
+     },
+     "century": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "section": {
+      "type": "string"
+     },
+     "status": {
+      "type": "string"
+     },
+     "english_translation_status": {
+      "type": "string"
+     },
+     "boundary_verified": {
+      "type": "boolean"
+     },
+     "estimated_minutes": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "translated_by_bibliothecarius": {
+      "type": "boolean"
+     },
+     "publications": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "parts": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "kind",
+     "catalog_id",
+     "ordinal",
+     "label",
+     "title",
+     "columns",
+     "status",
+     "english_translation_status",
+     "verified",
+     "publications"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "kind": {
+      "const": "part"
+     },
+     "catalog_id": {
+      "type": "string"
+     },
+     "ordinal": {
+      "type": "integer"
+     },
+     "label": {
+      "type": "string"
+     },
+     "title": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "columns": {
+      "type": "object",
+      "properties": {
+       "start": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "end": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       }
+      },
+      "required": [
+       "start",
+       "end"
+      ]
+     },
+     "status": {
+      "type": "string"
+     },
+     "english_translation_status": {
+      "type": "string"
+     },
+     "verified": {
+      "type": "boolean"
+     },
+     "publications": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "publications": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "kind",
+     "catalog_id",
+     "part_id",
+     "project_id",
+     "title_english",
+     "title_latin",
+     "author",
+     "pl_volume",
+     "columns",
+     "century",
+     "status",
+     "youtube_visibility",
+     "published_at",
+     "urls",
+     "doi",
+     "provenance",
+     "review",
+     "rights",
+     "locators",
+     "related",
+     "version"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^pub-\\d+$"
+     },
+     "kind": {
+      "const": "publication"
+     },
+     "catalog_id": {
+      "type": "string",
+      "pattern": "^pl\\d{3}-\\d{3}$"
+     },
+     "part_id": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "project_id": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "title_english": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "title_latin": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "author": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "pl_volume": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "columns": {
+      "type": "object",
+      "properties": {
+       "start": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "end": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       }
+      },
+      "required": [
+       "start",
+       "end"
+      ]
+     },
+     "century": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "status": {
+      "enum": [
+       "published",
+       "translated"
+      ]
+     },
+     "youtube_visibility": {
+      "enum": [
+       "public",
+       "unlisted",
+       "private",
+       null
+      ]
+     },
+     "published_at": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "urls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "youtube",
+       "blog",
+       "archive",
+       "github"
+      ],
+      "properties": {
+       "youtube": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "blog": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "archive": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "github": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      }
+     },
+     "doi": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "source_of_record",
+       "generation",
+       "translator_model",
+       "translation_date",
+       "translation_date_source",
+       "source_check",
+       "translation_qa"
+      ],
+      "properties": {
+       "source_of_record": {
+        "type": "string"
+       },
+       "generation": {
+        "enum": [
+         "gen1",
+         "gen2",
+         "gen3",
+         "v2",
+         "legacy-unknown"
+        ]
+       },
+       "translator_model": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "translation_date": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "translation_date_source": {
+        "enum": [
+         "project_state",
+         "translation_json_unverified",
+         "git_history",
+         null
+        ]
+       },
+       "source_check": {
+        "type": [
+         "boolean",
+         "null"
+        ]
+       },
+       "translation_qa": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      }
+     },
+     "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "status",
+       "checked_at",
+       "known_defects"
+      ],
+      "properties": {
+       "status": {
+        "enum": [
+         "unreviewed",
+         "spot-checked",
+         "coverage-verified",
+         "defect-recorded",
+         "human-reviewed"
+        ]
+       },
+       "checked_at": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "known_defects": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "required": [
+          "type",
+          "ref"
+         ],
+         "properties": {
+          "type": {
+           "type": "string"
+          },
+          "coverage_pct": {
+           "type": "number"
+          },
+          "missing_source_words": {
+           "type": "integer"
+          },
+          "found": {
+           "type": "string"
+          },
+          "ref": {
+           "type": "string"
+          }
+         }
+        }
+       }
+      }
+     },
+     "rights": {
+      "type": "object",
+      "required": [
+       "license",
+       "license_status",
+       "source_text_rights"
+      ],
+      "properties": {
+       "license": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "license_status": {
+        "enum": [
+         "unresolved",
+         "declared"
+        ]
+       },
+       "source_text_rights": {
+        "const": "not-redistributed"
+       }
+      }
+     },
+     "locators": {
+      "type": "object",
+      "required": [
+       "work",
+       "passages_available",
+       "web_anchor_pattern"
+      ],
+      "properties": {
+       "work": {
+        "type": "string"
+       },
+       "passages_available": {
+        "type": "boolean"
+       },
+       "web_anchor_pattern": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      }
+     },
+     "related": {
+      "type": "object",
+      "required": [
+       "same_author",
+       "adjacent_in_volume"
+      ],
+      "properties": {
+       "same_author": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "adjacent_in_volume": {
+        "type": "object",
+        "properties": {
+         "prev": {
+          "type": [
+           "string",
+           "null"
+          ]
+         },
+         "next": {
+          "type": [
+           "string",
+           "null"
+          ]
+         }
+        }
+       }
+      }
+     },
+     "version": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    }
+   }
+  }
+ }
+}
