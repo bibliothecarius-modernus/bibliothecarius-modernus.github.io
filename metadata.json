@@ -1,9 +1,10 @@
 ---
 layout: null
 ---
+{%- assign listed_posts = site.posts | where_exp: "post", "post.listed != false" -%}
 {
   "posts": [
-    {% for post in site.posts %}
+    {% for post in listed_posts %}
     {
       "title": {{ post.title | jsonify }},
       "url": "{{ site.url }}{{ site.baseurl }}{{ post.url }}",
@@ -18,11 +19,16 @@ layout: null
         "context": {{ post.original_work.context | jsonify }}
         {% endif %}
       },
+      "catalog_id": {% if post.catalog_id %}{{ post.catalog_id | jsonify }}{% else %}null{% endif %},
+      "pl_volume": {% if post.pl_volume %}{{ post.pl_volume | jsonify }}{% else %}null{% endif %},
+      "pl_columns": {% if post.pl_columns %}{{ post.pl_columns | jsonify }}{% else %}null{% endif %},
+      "project_id": {% if post.project_id %}{{ post.project_id | jsonify }}{% else %}null{% endif %},
       "youtube_id": {% if post.youtube_id %}{{ post.youtube_id | jsonify }}{% else %}null{% endif %},
       "youtube_url": {% if post.youtube_id %}"https://www.youtube.com/watch?v={{ post.youtube_id }}"{% else %}null{% endif %},
       "external_resources": {
         "archive_url": {% if post.external_resources.archive_url %}{{ post.external_resources.archive_url | jsonify }}{% else %}null{% endif %},
-        "github_url": {% if post.external_resources.github_url %}{{ post.external_resources.github_url | jsonify }}{% else %}null{% endif %}
+        "github_url": {% if post.external_resources.github_url %}{{ post.external_resources.github_url | jsonify }}{% else %}null{% endif %},
+        "doi": {% if post.external_resources.doi %}{{ post.external_resources.doi | jsonify }}{% else %}null{% endif %}
       }
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
