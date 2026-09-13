@@ -4,7 +4,7 @@ title: "Explanatio in Cantica Canticorum (c. 6th century)"
 date: 2026-09-13
 listed: false
 categories: [old-testament-commentaries, visigothic-mozarabic-writings, post-nicene-fathers]
-youtube_id: "PENDING"
+youtube_id: "QFZM6iVxKy8"
 translation_json: "/assets/translations/2026-09-13-explanatio-in-cantica-canticorum-justus-of-urgel.json"
 original_work:
   latin_title: Explanatio in Cantica Canticorum
