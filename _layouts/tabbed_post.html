@@ -52,7 +52,7 @@ layout: default
     "name": {{ page.original_work.latin_title | jsonify }},
     "inLanguage": "la"
   },
-  "description": "AI-assisted English translation of {{ page.original_work.latin_title }} by {{ page.original_work.author }} ({{ page.original_work.date }}). Translated using {% if post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %} with human editorial oversight.",
+  "description": "AI-assisted English translation of {{ page.original_work.latin_title }} by {{ page.original_work.author }} ({{ page.original_work.date }}). Translated using {% if page.translation_model %}{{ page.translation_model }}{% elsif post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %} with human editorial oversight.",
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "isAccessibleForFree": true,
   "conditionsOfAccess": "Translation, essay and metadata: CC0 1.0 (Bibliothecarius Modernus). Latin text: public domain (Migne, Patrologia Latina, 1844-65)."{% if page.external_resources.doi %},

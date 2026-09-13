@@ -51,12 +51,12 @@
       {% assign post_date = page.date | date: "%s" %}
       <tr>
         <th>Translation Method</th>
-        <td>{% if post_date >= cutoff_date %}AI translation using Claude 4.5 Sonnet with automated and human review safeguards{% else %}AI translation using ChatGPT-4o with automated and human review safeguards{% endif %}</td>
+        <td>{% if page.translation_model %}AI translation using {{ page.translation_model }} with deterministic coverage QA, an independent cross-family model review and recorded human corrections{% elsif post_date >= cutoff_date %}AI translation using Claude 4.5 Sonnet with automated and human review safeguards{% else %}AI translation using ChatGPT-4o with automated and human review safeguards{% endif %}</td>
       </tr>
       {% if post_date >= cutoff_date %}
       <tr>
         <th>Research Method</th>
-        <td>Deep contextual research using OpenAI o3 Deep Research</td>
+        <td>{% if page.research_model %}Deep contextual research using {{ page.research_model }} (web-search-augmented), read against the cited sources by the curator{% else %}Deep contextual research using OpenAI o3 Deep Research{% endif %}</td>
       </tr>
       {% endif %}
       <tr>
@@ -95,7 +95,7 @@
         <tr>
         <th>Citation</th>
         <td>
-            {{ page.original_work.author }}. "{{ page.original_work.latin_title }}." Translation by Bibliothecarius Modernus using {% if post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %}, {{ page.date | date: "%-d %b. %Y" }},
+            {{ page.original_work.author }}. "{{ page.original_work.latin_title }}." Translation by Bibliothecarius Modernus using {% if page.translation_model %}{{ page.translation_model }}{% elsif post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %}, {{ page.date | date: "%-d %b. %Y" }},
             {% if page.external_resources.doi %}
             DOI: <a href="https://doi.org/{{ page.external_resources.doi }}">{{ page.external_resources.doi }}</a>
             {% else %}
@@ -169,7 +169,7 @@
       isoDate: "{{ page.date | date: '%Y-%m-%d' }}",
       doi: "{{ page.external_resources.doi }}",
       url: "{{ site.url }}{{ page.url }}",
-      aiModel: "{% if post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %}"
+      aiModel: "{% if page.translation_model %}{{ page.translation_model }}{% elsif post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %}"
     };
   </script>
 </div>
