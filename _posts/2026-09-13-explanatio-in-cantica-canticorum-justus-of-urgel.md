@@ -2,6 +2,7 @@
 layout: tabbed_post
 title: "Explanatio in Cantica Canticorum (c. 6th century)"
 date: 2026-09-13
+publish_date: 2026-09-13
 listed: true
 categories: [old-testament-commentaries, visigothic-mozarabic-writings, post-nicene-fathers]
 youtube_id: "QFZM6iVxKy8"
