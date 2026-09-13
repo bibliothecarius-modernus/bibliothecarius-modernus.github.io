@@ -29,20 +29,20 @@ project_id: "explanatio-in-cantica-canticorum-20260913"
 
 ### Authorship and evidence for Justus
 
-The attribution of the commentary to **Justus, bishop of Urgell**, is secure by ordinary patristic standards. Isidore of Seville explicitly states in *De viris illustribus* 34 that “Justus, bishop of the church of Urgell in the Spains” published a small exposition of the Song, treating its meaning “very briefly and clearly through allegory.” Isidore adds that Justus was the brother of Justinian of Valencia and names two other brothers, Nebridius and Elpidius. The dedicatory correspondence transmitted with the commentary is consistent with this episcopal attribution, and the manuscript tradition does not preserve a serious rival author. ([monumenta.ch](https://www.monumenta.ch/latein/textsyn.php?bildnummer=23&binary=&codex_content=&codices=&column=&domain=&error_msg=&from_year=&fsize=&hide_apparatus=1&hide_links=&hide_links_per_word=1&hide_trace=&hilite_id=&id=&inframe=1&lang=0&last_bisid=&last_bisstring=&last_vor=&linkname=bbb0289&looked_up_codex_contents=&looked_up_codices=&msize=medium&number=&popup_msize=medium&prefix=&row=&s_id=&satz=&string=&suffix=v&tabelle=Isidorus&to_year=&unhide_trace=&utm_source=openai))
+The attribution of the commentary to **Justus, bishop of Urgell**, is secure by ordinary patristic standards. Isidore of Seville explicitly states in *De viris illustribus* 34 that “Justus, bishop of the church of Urgell in the Spains” published a small exposition of the Song, treating its meaning “very briefly and clearly through allegory.” Isidore adds that Justus was the brother of Justinian of Valencia and names two other brothers, Nebridius and Elpidius. The dedicatory correspondence transmitted with the commentary is consistent with this episcopal attribution, and the manuscript tradition does not preserve a serious rival author. ([monumenta.ch](https://www.monumenta.ch/latein/textsyn.php?bildnummer=23&binary=&codex_content=&codices=&column=&domain=&error_msg=&from_year=&fsize=&hide_apparatus=1&hide_links=&hide_links_per_word=1&hide_trace=&hilite_id=&id=&inframe=1&lang=0&last_bisid=&last_bisstring=&last_vor=&linkname=bbb0289&looked_up_codex_contents=&looked_up_codices=&msize=medium&number=&popup_msize=medium&prefix=&row=&s_id=&satz=&string=&suffix=v&tabelle=Isidorus&to_year=&unhide_trace=))
 
 It is important to distinguish Isidore’s evidence from reconstruction:
 
 - **Isidore says** that Justus was bishop of Urgell, brother of Justinian, and that Nebridius and Elpidius were also his brothers. In the preceding notice, Isidore calls Justinian one of four episcopal brothers born of the same mother.
 - **Isidore does not identify** the sees of Nebridius and Elpidius in Justus’s notice. Their identification as bishops of Egara/Terrassa and Huesca respectively depends on correlating Isidore with conciliar subscriptions.
 - Isidore gives **no birth date, birthplace, education, date of consecration or death date** for Justus.
-- Assertions that Justus was born in Valencia, belonged to a particular aristocratic family, or was literally the first bishop ever to hold Urgell are later inferences. He is more accurately called the **first historically documented bishop of Urgell**. A recent study describes the four brothers as an episcopal dynasty whose sees extended across the Tarraconensis and Carthaginiensis, but this is a modern social-historical characterization, not Isidore’s language. ([degruyterbrill.com](https://www.degruyterbrill.com/document/doi/10.1515/9781802702378-005/pdf?licenseType=open-access&utm_source=openai))
+- Assertions that Justus was born in Valencia, belonged to a particular aristocratic family, or was literally the first bishop ever to hold Urgell are later inferences. He is more accurately called the **first historically documented bishop of Urgell**. A recent study describes the four brothers as an episcopal dynasty whose sees extended across the Tarraconensis and Carthaginiensis, but this is a modern social-historical characterization, not Isidore’s language. ([degruyterbrill.com](https://www.degruyterbrill.com/document/doi/10.1515/9781802702378-005/pdf?licenseType=open-access))
 
 ### Conciliar attestations and dates
 
 Justus subscribed the acts associated with the **Second Council of Toledo**, conventionally dated 527 but dated 527/531 in recent scholarship because of problems reconciling its transmitted chronological formulae. The wording of his subscription says that he arrived after some time, reread and approved the decrees, and subscribed them. Thus “attested in the council’s acts” is more exact than imagining him present throughout the original sessions. Some subscriptions, including those of episcopal brothers, also have a complicated textual history in the canonical collections. ([researchgate.net](https://www.researchgate.net/publication/404721736_The_Second_Council_of_Toledo_527531_Introduction_and_Annotated_Translation))
 
-Justus is next securely attested among the bishops of the **provincial Council of Lleida in 546**, convened under Sergius of Tarragona. Since there is no reliable later notice of his death, the proper biographical terminus is simply **after 546**. ([enciclopedia.cat](https://www.enciclopedia.cat/catalunya-romanica/concilis-provincials-de-lleida?utm_source=openai))
+Justus is next securely attested among the bishops of the **provincial Council of Lleida in 546**, convened under Sergius of Tarragona. Since there is no reliable later notice of his death, the proper biographical terminus is simply **after 546**. ([enciclopedia.cat](https://www.enciclopedia.cat/catalunya-romanica/concilis-provincials-de-lleida))
 
 ### Date of composition
 
@@ -53,7 +53,7 @@ The commentary cannot be assigned a single precise year. The main evidence is:
 3. Sergius is securely documented presiding over the councils of Barcelona in 540 and Lleida in 546; wider episcopal ranges such as c.520/535–555 are reconstructions rather than uniformly attested dates.
 4. Justus was episcopally active by the date assigned to Toledo II, 527 or 531, and still active in 546.
 
-The most defensible range is therefore the period of overlap between their episcopates, probably the **530s–540s**, while acknowledging that some reconstructions permit a broader range extending into the 520s or early 550s. Nothing in the surviving prefaces proves that it was composed specifically for the Council of Lleida or immediately before it. ([ub.edu](https://www.ub.edu/grat/wp-content/uploads/2014/11/grat18.htm?utm_source=openai))
+The most defensible range is therefore the period of overlap between their episcopates, probably the **530s–540s**, while acknowledging that some reconstructions permit a broader range extending into the 520s or early 550s. Nothing in the surviving prefaces proves that it was composed specifically for the Council of Lleida or immediately before it. ([ub.edu](https://www.ub.edu/grat/wp-content/uploads/2014/11/grat18.htm))
 
 The word **papa** in the salutation to Sergius is a late-antique episcopal honorific. It does not make Sergius bishop of Rome; the named historical addressee is the metropolitan of Tarragona.
 
@@ -92,7 +92,7 @@ The transmitted exposition follows the Song through its **eight chapters**. Its 
 - **the daughters or young women of Jerusalem**;
 - occasionally other collective speakers or observers.
 
-The bride is fundamentally the corporate Church rather than primarily Mary or an individual contemplative soul. Individual moral applications are possible, but the governing sense is ecclesiological and salvation-historical. This agrees with Isidore’s contemporary summary that Justus treated the entire work allegorically. ([monumenta.ch](https://www.monumenta.ch/latein/textsyn.php?bildnummer=23&binary=&codex_content=&codices=&column=&domain=&error_msg=&from_year=&fsize=&hide_apparatus=1&hide_links=&hide_links_per_word=1&hide_trace=&hilite_id=&id=&inframe=1&lang=0&last_bisid=&last_bisstring=&last_vor=&linkname=bbb0289&looked_up_codex_contents=&looked_up_codices=&msize=medium&number=&popup_msize=medium&prefix=&row=&s_id=&satz=&string=&suffix=v&tabelle=Isidorus&to_year=&unhide_trace=&utm_source=openai))
+The bride is fundamentally the corporate Church rather than primarily Mary or an individual contemplative soul. Individual moral applications are possible, but the governing sense is ecclesiological and salvation-historical. This agrees with Isidore’s contemporary summary that Justus treated the entire work allegorically. ([monumenta.ch](https://www.monumenta.ch/latein/textsyn.php?bildnummer=23&binary=&codex_content=&codices=&column=&domain=&error_msg=&from_year=&fsize=&hide_apparatus=1&hide_links=&hide_links_per_word=1&hide_trace=&hilite_id=&id=&inframe=1&lang=0&last_bisid=&last_bisstring=&last_vor=&linkname=bbb0289&looked_up_codex_contents=&looked_up_codices=&msize=medium&number=&popup_msize=medium&prefix=&row=&s_id=&satz=&string=&suffix=v&tabelle=Isidorus&to_year=&unhide_trace=))
 
 The dialogue dramatizes the Church’s longing for Christ, the activity of apostles and teachers, ecclesial growth, persecution, heresy, purification and promised union with the Bridegroom. Images of breasts, vineyards, flowers, spices, walls, gardens, military companies and bodily beauty are regularly translated into the language of Scripture, preaching, sacraments, virtues, martyrs and ecclesiastical offices.
 
@@ -116,7 +116,7 @@ Core themes include:
 5. **Purification and progress:** the Church moves through trials toward fuller beauty and union with Christ.
 6. **Episcopal responsibility:** sound teaching, discipline and reform are part of the Church’s preparation for the Bridegroom.
 
-The commentary is thoroughly Nicene and ecclesial; no heterodox proposition has generated a serious attributional or doctrinal controversy. Cano Herrero’s proposal that a theology of participation or deification is structurally important deserves attention, but should be presented as a recent rereading rather than as the older consensus description of the work. ([philpapers.org](https://philpapers.org/rec/CANLEI-2?utm_source=openai))
+The commentary is thoroughly Nicene and ecclesial; no heterodox proposition has generated a serious attributional or doctrinal controversy. Cano Herrero’s proposal that a theology of participation or deification is structurally important deserves attention, but should be presented as a recent rereading rather than as the older consensus description of the work. ([philpapers.org](https://philpapers.org/rec/CANLEI-2))
 
 ### Earlier and contemporary Latin interpretation
 
@@ -124,7 +124,7 @@ The claim that Justus was the first Latin commentator requires several qualifica
 
 #### Hippolytus
 
-Hippolytus’s third-century commentary is the earliest substantial surviving Christian exposition. It was written in Greek and survives principally through Georgian and other eastern versions, Greek fragments and later patristic reuse. Material entered the Latin tradition especially through Ambrose. It is therefore better to speak of Hippolytus’s **Latin afterlife or fragments mediated by Latin authors**, not a complete Latin commentary directly transmitted under his name. ([portail.biblissima.fr](https://portail.biblissima.fr/ark%3A/43093/oedataddb71b8baf598ba330223592c32657e0be75f884?utm_source=openai))
+Hippolytus’s third-century commentary is the earliest substantial surviving Christian exposition. It was written in Greek and survives principally through Georgian and other eastern versions, Greek fragments and later patristic reuse. Material entered the Latin tradition especially through Ambrose. It is therefore better to speak of Hippolytus’s **Latin afterlife or fragments mediated by Latin authors**, not a complete Latin commentary directly transmitted under his name. ([portail.biblissima.fr](https://portail.biblissima.fr/ark%3A/43093/oedataddb71b8baf598ba330223592c32657e0be75f884))
 
 #### Origen
 
@@ -134,19 +134,19 @@ Origen’s commentary and homilies established the foundational Christian readin
 - Rufinus translated part of Origen’s much larger commentary.
 - Neither Latin survival constitutes a complete exposition of all eight chapters: the surviving material reaches only into the early chapters of the Song.
 
-These translations were nevertheless immensely important in transmitting Origenian vocabulary and method to the Latin West. ([newadvent.org](https://www.newadvent.org/fathers/3002.htm?utm_source=openai))
+These translations were nevertheless immensely important in transmitting Origenian vocabulary and method to the Latin West. ([newadvent.org](https://www.newadvent.org/fathers/3002.htm))
 
 #### Gregory of Elvira
 
-Gregory’s *Tractatus de epithalamio*, probably from the mid or later fourth century, is the **earliest extant Song commentary composed in Latin**. It is a partial exposition, not a complete verse-by-verse commentary on the whole book. Its ecclesiological and anti-heretical interpretation is especially relevant to Justus’s Hispano-Latin setting. ([academic.oup.com](https://academic.oup.com/book/9092/chapter-abstract/155649705?utm_source=openai))
+Gregory’s *Tractatus de epithalamio*, probably from the mid or later fourth century, is the **earliest extant Song commentary composed in Latin**. It is a partial exposition, not a complete verse-by-verse commentary on the whole book. Its ecclesiological and anti-heretical interpretation is especially relevant to Justus’s Hispano-Latin setting. ([academic.oup.com](https://academic.oup.com/book/9092/chapter-abstract/155649705))
 
 #### Ambrose
 
-Ambrose did not leave a continuous commentary on the entire Song. He interpreted many of its verses throughout his exegetical, ascetical and doctrinal writings, often adapting Hippolytan and Origenian traditions. In the twelfth century, William of Saint-Thierry collected Ambrose’s scattered interpretations in a dedicated florilegium. That medieval compilation must not be mistaken for a continuous late-fourth-century Ambrosian commentary. ([catalogue.bnf.fr](https://catalogue.bnf.fr/ark%3A/12148/cb14520874r?utm_source=openai))
+Ambrose did not leave a continuous commentary on the entire Song. He interpreted many of its verses throughout his exegetical, ascetical and doctrinal writings, often adapting Hippolytan and Origenian traditions. In the twelfth century, William of Saint-Thierry collected Ambrose’s scattered interpretations in a dedicated florilegium. That medieval compilation must not be mistaken for a continuous late-fourth-century Ambrosian commentary. ([catalogue.bnf.fr](https://catalogue.bnf.fr/ark%3A/12148/cb14520874r))
 
 #### Apponius
 
-Apponius wrote a large and complete Latin commentary in twelve books. His identity and date are uncertain. The critical editors Bernard de Vrégille and Louis Neyrand argued for a northern Italian or Roman-area author writing around **420–430**; other scholars have questioned whether the evidence permits so early a date. If the editors’ dating is accepted, Apponius—not Justus—is the earliest surviving complete Latin commentator. ([persee.fr](https://www.persee.fr/doc/rhpr_0035-2403_1998_num_78_3_5514_t1_0355_0000_2?utm_source=openai))
+Apponius wrote a large and complete Latin commentary in twelve books. His identity and date are uncertain. The critical editors Bernard de Vrégille and Louis Neyrand argued for a northern Italian or Roman-area author writing around **420–430**; other scholars have questioned whether the evidence permits so early a date. If the editors’ dating is accepted, Apponius—not Justus—is the earliest surviving complete Latin commentator. ([persee.fr](https://www.persee.fr/doc/rhpr_0035-2403_1998_num_78_3_5514_t1_0355_0000_2))
 
 ### Justus’s relation to earlier authorities
 
@@ -168,7 +168,7 @@ Justus’s influence was considerably wider than the small scale of the commenta
 - **Angelomus of Luxeuil** drew extensively on *Vox antiquae ecclesiae*. Guglielmetti’s work has clarified that Angelomus’s Justus material is mediated through this compilation, rather than taken directly from Justus or simply from Alcuin.
 - **Haimo of Auxerre** belongs to the same Carolingian exegetical environment and uses distinctions such as *mystice* and *spiritualiter* associated with the tradition represented by Justus. A substantial direct dependence on Justus, however, is less clearly demonstrated than the dependencies of the anonymous works and Angelomus.
 - One of the anonymous commentaries critically edited in *Osculetur me* combines Origenian material with Justus.
-- Gregory the Great and Bede drew on Justus without naming him; Beatus of Liébana, Claudius of Turin and Theodulf of Orléans (four passages of the *Libri Carolini*) also reused material from him. ([scribd.com](https://www.scribd.com/document/1074688384/Hannah-W-Matis-The-Song-of-Songs-in-the-Early-Middle-Ages-Brill-2019?utm_source=openai))
+- Gregory the Great and Bede drew on Justus without naming him; Beatus of Liébana, Claudius of Turin and Theodulf of Orléans (four passages of the *Libri Carolini*) also reused material from him. ([scribd.com](https://www.scribd.com/document/1074688384/Hannah-W-Matis-The-Song-of-Songs-in-the-Early-Middle-Ages-Brill-2019))
 
 Thus the most important channel of reception was often **indirect compilation**: Justus’s concise explanations were easily excerpted, combined with Gregory of Elvira, Alcuin or Origen, and reinserted into larger Carolingian commentaries.
 
@@ -178,7 +178,7 @@ Thus the most important channel of reception was often **indirect compilation**:
 
 ### Manuscript tradition
 
-Guglielmetti’s critical edition reports **twenty-six surviving manuscripts**, from the third quarter of the seventh century into the early modern period, transmitted through **three principal families**: an Iberian family, a Franco-Alemannic family (whose oldest witness may have been copied at Trier), and a third distributed between Italy and Germany. ([air.unimi.it](https://air.unimi.it/retrieve/dfa8b997-08d9-748b-e053-3a05fe0a3a96/Un%20aper%C3%A7u%20de%20la%20circulation.pdf?utm_source=openai))
+Guglielmetti’s critical edition reports **twenty-six surviving manuscripts**, from the third quarter of the seventh century into the early modern period, transmitted through **three principal families**: an Iberian family, a Franco-Alemannic family (whose oldest witness may have been copied at Trier), and a third distributed between Italy and Germany. ([air.unimi.it](https://air.unimi.it/retrieve/dfa8b997-08d9-748b-e053-3a05fe0a3a96/Un%20aper%C3%A7u%20de%20la%20circulation.pdf))
 
 Important witnesses named in the published conspectus include:
 
@@ -197,7 +197,7 @@ Important witnesses named in the published conspectus include:
 - **Mh** — Madrid, Real Academia de la Historia  
 - **P** — Paris, Bibliothèque nationale de France, lat. 2673  
 - **R** — Rome, Biblioteca Vallicelliana, B.62  
-- a Wolfenbüttel/Helmstedt fragment now catalogued as **HAB, Cod. Guelf. 60 Theol. 2°**. ([air.unimi.it](https://air.unimi.it/retrieve/dfa8b997-08d9-748b-e053-3a05fe0a3a96/Un%20aper%C3%A7u%20de%20la%20circulation.pdf?utm_source=openai))
+- a Wolfenbüttel/Helmstedt fragment now catalogued as **HAB, Cod. Guelf. 60 Theol. 2°**. ([air.unimi.it](https://air.unimi.it/retrieve/dfa8b997-08d9-748b-e053-3a05fe0a3a96/Un%20aper%C3%A7u%20de%20la%20circulation.pdf))
 
 This is a selection rather than a substitute for the complete census in Guglielmetti’s *Conspectus siglorum*. The Vallicelliana manuscript B.62, dated to the third quarter of the seventh century, is the oldest witness.
 
@@ -207,7 +207,7 @@ The **editio princeps** is:
 
 > *Iusti Episcopi Orgelitani, In Cantica Canticorum explanatio*, edited by Menrad Molther, Haguenau, 1529 (Migne’s *Notitia*: “edidit Menradus Maltherus, Haganoae 1529”).
 
-A digitized copy survives at the University of Salamanca. ([cervantesvirtual.com](https://www.cervantesvirtual.com/portales/real_academia_espanola/obra/iusti-episcopi-orgelitani-in-cantica-canticorum-explanatio/?utm_source=openai))
+A digitized copy survives at the University of Salamanca. ([cervantesvirtual.com](https://www.cervantesvirtual.com/portales/real_academia_espanola/obra/iusti-episcopi-orgelitani-in-cantica-canticorum-explanatio/))
 
 Migne printed the commentary, prefatory letters and prologue in **PL 67, cols. 961–994**. This is a precritical reprint of the early-modern printed tradition, not an edition based on a fresh examination of the manuscripts. Migne’s immediate textual ancestor is generally placed in the line of the patristic collections culminating in Andrea Gallandi’s *Bibliotheca veterum patrum*, themselves ultimately dependent on the sixteenth-century print tradition. The exact print genealogy should be cited from Guglielmetti’s 2011 examination rather than reconstructed from PL alone.
 
@@ -226,7 +226,7 @@ It contains the first full critical edition based on the complete manuscript and
 - **Italian:** complete translation in Guglielmetti 2011.
 - **English:** no published complete translation located.
 - **French or German:** no complete modern translation located.
-- The Spanish translation published by Martín and Iranzo concerns the separate *Sermo de sancto Vincentio*, not the Song commentary. ([estudiosmedievales.revistas.csic.es](https://estudiosmedievales.revistas.csic.es/index.php/estudiosmedievales/article/view/393/0?utm_source=openai))
+- The Spanish translation published by Martín and Iranzo concerns the separate *Sermo de sancto Vincentio*, not the Song commentary. ([estudiosmedievales.revistas.csic.es](https://estudiosmedievales.revistas.csic.es/index.php/estudiosmedievales/article/view/393/0))
 
 The PL text should be used only when the critical edition is unavailable. Its principal weaknesses are dependence on a narrow precritical print line, absence of a genuine manuscript apparatus, uncertain punctuation and speaker divisions, and inherited omissions or expansions that helped produce the misleading older theory of long and short recensions. Guglielmetti’s edition demonstrates that these are transmissional phenomena within one work.
 
@@ -244,9 +244,9 @@ Justus belonged to an unusual group of four episcopal brothers. Isidore’s noti
 - **Justus** was Justinian’s brother and bishop of Urgell.
 - **Nebridius and Elpidius** were also their brothers and were said to have written works unknown to Isidore.
 
-The association of Nebridius with Egara and Elpidius with Huesca comes from the conciliar record, not from Isidore’s chapter on Justus. The concentration of several sees in one family has consequently been interpreted as evidence for an influential post-Roman episcopal dynasty. ([monumenta.ch](https://www.monumenta.ch/latein/textsyn.php?bildnummer=23&binary=&codex_content=&codices=&column=&domain=&error_msg=&from_year=&fsize=&hide_apparatus=1&hide_links=&hide_links_per_word=1&hide_trace=&hilite_id=&id=&inframe=1&lang=0&last_bisid=&last_bisstring=&last_vor=&linkname=bbb0289&looked_up_codex_contents=&looked_up_codices=&msize=medium&number=&popup_msize=medium&prefix=&row=&s_id=&satz=&string=&suffix=v&tabelle=Isidorus&to_year=&unhide_trace=&utm_source=openai))
+The association of Nebridius with Egara and Elpidius with Huesca comes from the conciliar record, not from Isidore’s chapter on Justus. The concentration of several sees in one family has consequently been interpreted as evidence for an influential post-Roman episcopal dynasty. ([monumenta.ch](https://www.monumenta.ch/latein/textsyn.php?bildnummer=23&binary=&codex_content=&codices=&column=&domain=&error_msg=&from_year=&fsize=&hide_apparatus=1&hide_links=&hide_links_per_word=1&hide_trace=&hilite_id=&id=&inframe=1&lang=0&last_bisid=&last_bisstring=&last_vor=&linkname=bbb0289&looked_up_codex_contents=&looked_up_codices=&msize=medium&number=&popup_msize=medium&prefix=&row=&s_id=&satz=&string=&suffix=v&tabelle=Isidorus&to_year=&unhide_trace=))
 
-His securely attested literary work is the *Explanatio*. A sermon for St Vincent of Zaragoza also circulated under Justus’s name. Its attribution has been disputed: Antonio Linage Conde proposed Justinian of Valencia, partly on biblical-textual and local grounds, while later editors retained the traditional attribution with reservations. This controversy concerns the sermon and should not be transferred automatically to the Song commentary. ([researchgate.net](https://www.researchgate.net/publication/272721630_Justo_de_Urgel_Sermo_de_s_Vincentio_CPL_1092_estudio_de_su_tradicion_manuscrita_edicion_critica_y_traduccion?utm_source=openai))
+His securely attested literary work is the *Explanatio*. A sermon for St Vincent of Zaragoza also circulated under Justus’s name. Its attribution has been disputed: Antonio Linage Conde proposed Justinian of Valencia, partly on biblical-textual and local grounds, while later editors retained the traditional attribution with reservations. This controversy concerns the sermon and should not be transferred automatically to the Song commentary. ([researchgate.net](https://www.researchgate.net/publication/272721630_Justo_de_Urgel_Sermo_de_s_Vincentio_CPL_1092_estudio_de_su_tradicion_manuscrita_edicion_critica_y_traduccion))
 
 Justus’s later cult is less ancient than his literary reputation. His inclusion in early modern martyrological traditions and his feast on 28 May belong to reception history, not evidence for his sixth-century biography.
 
