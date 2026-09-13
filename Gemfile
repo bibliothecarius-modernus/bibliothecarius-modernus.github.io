@@ -1,12 +1,15 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
+# Versions are pinned to conservative ranges so CI builds are reproducible
+# until a real Gemfile.lock is generated in CI (bundler is not installed on the
+# authoring machine, so a lock file cannot be produced trustworthily here).
+gem "jekyll", "~> 4.3.0"
 
 group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-seo-tag"
-  gem "jekyll-sitemap"
-  gem "jekyll-redirect-from"
+  gem "jekyll-feed", "~> 0.17"
+  gem "jekyll-seo-tag", "~> 2.8"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-redirect-from", "~> 0.16"
 end
 
 # Theme
