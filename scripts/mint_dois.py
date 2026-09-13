@@ -237,7 +237,7 @@ def build_zenodo_metadata(front_matter: dict, post_path: Path) -> dict:
                 "orcid": "0000-0001-8914-9706"
             }
         ],
-        "license": "cc-by-4.0",
+        "license": "cc0-1.0",  # owner decision D031 (2026-09-13): translations are CC0; existing 2025 records are not re-licensed
         "keywords": keywords,
         "language": "eng",
         "notes": (

@@ -23,7 +23,7 @@ Latin of a passage is only ever available inside a published translation
 | `schema`, `schema_url`, `documentation` | which contract this file follows |
 | `generated_at`, `version` | when it was generated; `export:<date>;registry:<date>` |
 | `publisher` | the library, its site and corpus repository |
-| `rights` | licence status of the metadata; **`unresolved` until the owner records a licence** |
+| `rights` | licence of the metadata: **CC0 1.0** (`license_status: declared`, owner decision D031, 2026-09-13); the PL source text is not redistributed |
 | `locator_scheme` | the passage locator grammar (below) and its limitations |
 | `counts` | totals per array and per work status |
 | `works[]` | every work in Migne's Patrologia Latina as the catalog indexes it (3,700+) |
@@ -54,8 +54,8 @@ translation exists, video private/unlisted/none), `youtube_visibility`,
 `review` (`status`: `unreviewed` · `spot-checked` · `coverage-verified` — a
 deterministic source-coverage check passed, which is not a fidelity claim ·
 `defect-recorded` — a known defect is listed · `human-reviewed`; `known_defects[]`
-with type, coverage and a reference to the evidence), `rights` (per publication;
-unresolved until decided), `locators`, `related` (same author, neighbours in the
+with type, coverage and a reference to the evidence), `rights` (per publication: `CC0-1.0`,
+`declared`; a note where a 2025 Zenodo record carries CC BY 4.0 as deposited), `locators`, `related` (same author, neighbours in the
 volume), `version` (the registry row's last update).
 
 Known defects are published deliberately: twelve pipeline-era translations are

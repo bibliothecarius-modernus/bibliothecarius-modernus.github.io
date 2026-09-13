@@ -515,6 +515,12 @@
          "null"
         ]
        },
+       "license_url": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
        "license_status": {
         "enum": [
          "unresolved",
@@ -523,6 +529,18 @@
        },
        "source_text_rights": {
         "const": "not-redistributed"
+       },
+       "source_text": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "note": {
+        "type": [
+         "string",
+         "null"
+        ]
        }
       }
      },

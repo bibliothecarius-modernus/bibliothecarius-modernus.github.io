@@ -2,7 +2,7 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-13T21:12:35Z",
+ "generated_at": "2026-09-13T22:28:10Z",
  "version": "export:2026-09-13;registry:2026-09-13",
  "publisher": {
   "name": "Bibliothecarius Modernus",
@@ -10,9 +10,10 @@
   "corpus": "https://github.com/wryan14/Latin-Patristic-Texts"
  },
  "rights": {
-  "metadata_license": null,
-  "license_status": "unresolved",
-  "note": "Licensing of the translations and metadata is an open owner decision (2026-09); until it is recorded here no licence is asserted. PL source text is not redistributed."
+  "metadata_license": "CC0-1.0",
+  "metadata_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_status": "declared",
+  "note": "Owner decision D031 (2026-09-13): this metadata and every Bibliothecarius-created translation, essay and scholarly metadata are dedicated CC0 1.0. The Latin source text is public domain (Migne, PL, 1844–65) and is not redistributed here. Zenodo records minted in 2025 carry CC BY 4.0 as deposited; the CC0 dedication applies to the same content and is the governing statement for reuse."
  },
  "locator_scheme": {
   "pattern": "plNNN-SSS[/part]:cNNNN[a-d]:chunk-n",
@@ -72313,9 +72314,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl140-010",
@@ -72376,9 +72380,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl123-001",
@@ -72445,9 +72452,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl123-001",
@@ -72514,9 +72524,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl121-039",
@@ -72577,9 +72590,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl104-001",
@@ -72635,9 +72651,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl104-001",
@@ -72701,9 +72720,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl210-010",
@@ -72775,9 +72797,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl101-004/versus-de-cuculo",
@@ -72844,9 +72869,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl014-008",
@@ -72928,9 +72956,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl017-015",
@@ -73012,9 +73043,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl131-026",
@@ -73072,9 +73106,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl003-010",
@@ -73130,9 +73167,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl003-063",
@@ -73190,9 +73230,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl018-006",
@@ -73259,9 +73302,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl018-007",
@@ -73328,9 +73374,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-007",
@@ -73397,9 +73446,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl132-006",
@@ -73455,9 +73507,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl158-009",
@@ -73539,9 +73594,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl053-004",
@@ -73600,9 +73658,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-004",
@@ -73661,9 +73722,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl133-019",
@@ -73719,9 +73783,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl134-006",
@@ -73783,9 +73850,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl033-001",
@@ -73846,9 +73916,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl020-024",
@@ -73904,9 +73977,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl098-006",
@@ -73984,9 +74060,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl126-010",
@@ -74045,9 +74124,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl121-004",
@@ -74109,9 +74191,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl080-900",
@@ -74167,9 +74252,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-014",
@@ -74225,9 +74313,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-016",
@@ -74283,9 +74374,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl058-009",
@@ -74344,9 +74438,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl058-008",
@@ -74402,9 +74499,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl124-009",
@@ -74462,9 +74562,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl124-009",
@@ -74522,9 +74625,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-010",
@@ -74583,9 +74689,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-006",
@@ -74643,9 +74752,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-011",
@@ -74709,9 +74821,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-014",
@@ -74775,9 +74890,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-015",
@@ -74841,9 +74959,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-010",
@@ -74907,9 +75028,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-009",
@@ -74973,9 +75097,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-013",
@@ -75039,9 +75166,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-016",
@@ -75105,9 +75235,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl080-901",
@@ -75163,9 +75296,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl059-005",
@@ -75221,9 +75357,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl058-014",
@@ -75282,9 +75421,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl072-026",
@@ -75340,9 +75482,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl119-005",
@@ -75409,9 +75554,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl119-006",
@@ -75478,9 +75626,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-017",
@@ -75553,9 +75704,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-016",
@@ -75628,9 +75782,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-013",
@@ -75703,9 +75860,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-013",
@@ -75778,9 +75938,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-012",
@@ -75853,9 +76016,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-021",
@@ -75928,9 +76094,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl072-004",
@@ -75990,9 +76159,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl155-004",
@@ -76056,9 +76228,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl174-005",
@@ -76121,9 +76296,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl121-008",
@@ -76182,9 +76360,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl121-009",
@@ -76243,9 +76424,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl121-011",
@@ -76305,9 +76489,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -76384,9 +76571,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -76463,9 +76653,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -76542,9 +76735,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -76621,9 +76817,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -76700,9 +76899,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -76779,9 +76981,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -76858,9 +77063,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -76937,9 +77145,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -77016,9 +77227,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -77095,9 +77309,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -77174,9 +77391,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl117-001",
@@ -77253,9 +77473,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl118-006",
@@ -77319,9 +77542,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl118-006",
@@ -77385,9 +77611,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl132-018",
@@ -77445,9 +77674,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl132-019",
@@ -77505,9 +77737,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-018",
@@ -77568,9 +77803,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-017",
@@ -77631,9 +77869,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-019",
@@ -77694,9 +77935,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl010-008",
@@ -77778,9 +78022,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl010-002",
@@ -77862,9 +78109,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl010-006",
@@ -77946,9 +78196,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl010-010",
@@ -78030,9 +78283,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl010-011",
@@ -78114,9 +78370,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl010-004",
@@ -78206,9 +78465,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl171-004",
@@ -78290,9 +78552,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl125-007",
@@ -78357,9 +78622,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl050-006",
@@ -78415,9 +78683,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl172-018",
@@ -78497,9 +78768,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl176-011",
@@ -78581,9 +78855,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-008",
@@ -78650,9 +78927,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl133-001",
@@ -78716,9 +78996,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl025-017",
@@ -78800,9 +79083,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl133-012",
@@ -78858,9 +79144,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl122-004",
@@ -78933,9 +79222,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl122-014",
@@ -79016,9 +79308,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl106-005",
@@ -79082,9 +79377,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl106-005",
@@ -79148,9 +79446,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl106-005",
@@ -79206,9 +79507,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl133-013",
@@ -79264,9 +79568,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl068-001",
@@ -79322,9 +79629,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl055-004",
@@ -79392,9 +79702,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl055-004",
@@ -79462,9 +79775,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl055-004",
@@ -79532,9 +79848,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl055-004",
@@ -79602,9 +79921,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl055-004",
@@ -79672,9 +79994,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl055-004",
@@ -79742,9 +80067,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl031-003",
@@ -79800,9 +80128,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl013-018",
@@ -79863,9 +80194,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl013-020",
@@ -79926,9 +80260,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl102-009",
@@ -79986,9 +80323,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl068-003",
@@ -80044,9 +80384,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-012",
@@ -80102,9 +80445,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-017",
@@ -80160,9 +80506,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-013",
@@ -80218,9 +80567,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-015",
@@ -80276,9 +80628,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl209-001",
@@ -80334,9 +80689,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl209-002",
@@ -80392,9 +80750,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-004",
@@ -80450,9 +80811,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl052-008",
@@ -80514,9 +80878,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl052-005",
@@ -80578,9 +80945,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl052-006",
@@ -80642,9 +81012,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl068-009",
@@ -80702,9 +81075,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl131-019",
@@ -80766,9 +81142,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl131-021",
@@ -80830,9 +81209,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl018-005",
@@ -80888,9 +81270,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl133-020",
@@ -80946,9 +81331,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl132-016",
@@ -81007,9 +81395,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl124-017",
@@ -81068,9 +81459,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl133-001",
@@ -81134,9 +81528,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl011-010",
@@ -81201,9 +81598,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl133-001",
@@ -81267,9 +81667,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl013-023",
@@ -81328,9 +81731,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl013-024",
@@ -81389,9 +81795,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl013-022",
@@ -81450,9 +81859,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl095-014",
@@ -81521,9 +81933,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl061-011",
@@ -81590,9 +82005,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl178-007",
@@ -81674,9 +82092,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl009-007",
@@ -81758,9 +82179,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl203-006",
@@ -81834,9 +82258,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl203-004",
@@ -81910,9 +82337,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl203-006",
@@ -81986,9 +82416,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl020-001",
@@ -82047,9 +82480,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl020-003",
@@ -82108,9 +82544,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl020-002",
@@ -82169,9 +82608,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl098-012",
@@ -82249,9 +82691,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl133-014",
@@ -82307,9 +82752,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl005-011",
@@ -82365,9 +82813,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-001",
@@ -82423,9 +82874,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl217-004",
@@ -82500,9 +82954,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl133-023",
@@ -82558,9 +83015,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl102-011",
@@ -82618,9 +83078,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl005-002",
@@ -82676,9 +83139,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-026",
@@ -82734,9 +83200,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-027",
@@ -82792,9 +83261,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-028",
@@ -82850,9 +83322,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl068-016",
@@ -82910,9 +83385,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl068-016",
@@ -82970,9 +83448,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl068-016",
@@ -83030,9 +83511,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl068-016",
@@ -83090,9 +83574,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl068-016",
@@ -83150,9 +83637,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl051-010",
@@ -83222,9 +83712,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl051-006",
@@ -83294,9 +83787,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl051-001",
@@ -83366,9 +83862,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl013-025",
@@ -83426,9 +83925,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl002-008",
@@ -83510,9 +84012,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl112-022",
@@ -83594,9 +84099,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl132-021",
@@ -83652,9 +84160,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl132-007",
@@ -83715,9 +84226,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl132-010",
@@ -83778,9 +84292,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl132-008",
@@ -83841,9 +84358,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl155-017",
@@ -83901,9 +84421,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl121-005",
@@ -83965,9 +84488,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl121-005",
@@ -84029,9 +84555,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl121-005",
@@ -84093,9 +84622,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl121-005",
@@ -84157,9 +84689,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl121-006",
@@ -84221,9 +84756,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl121-002",
@@ -84285,9 +84823,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-024",
@@ -84345,9 +84886,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-024",
@@ -84405,9 +84949,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl204-014",
@@ -84478,9 +85025,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl204-001",
@@ -84551,9 +85101,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl133-018",
@@ -84609,9 +85162,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl169-001",
@@ -84676,9 +85232,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl169-001",
@@ -84743,9 +85302,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl169-001",
@@ -84810,9 +85372,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl169-001",
@@ -84877,9 +85442,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl169-001",
@@ -84944,9 +85512,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl169-001",
@@ -85011,9 +85582,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl169-001",
@@ -85078,9 +85652,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl169-001",
@@ -85145,9 +85722,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl169-001",
@@ -85212,9 +85792,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl170-009",
@@ -85296,9 +85879,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl120-006",
@@ -85364,9 +85950,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl017-016",
@@ -85448,9 +86037,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl005-006",
@@ -85506,9 +86098,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl087-001",
@@ -85590,9 +86185,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl072-005",
@@ -85652,9 +86250,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl083-013",
@@ -85736,9 +86337,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl087-014",
@@ -85820,9 +86424,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl018-001",
@@ -85878,9 +86485,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-014",
@@ -85939,9 +86549,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl087-018",
@@ -86023,9 +86636,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-019",
@@ -86081,9 +86697,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-019",
@@ -86139,9 +86758,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-003",
@@ -86200,9 +86822,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-003",
@@ -86261,9 +86886,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-003",
@@ -86322,9 +86950,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-003",
@@ -86383,9 +87014,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl132-049",
@@ -86441,9 +87075,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl087-015",
@@ -86525,9 +87162,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl087-015",
@@ -86609,9 +87249,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl133-021",
@@ -86675,9 +87318,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl080-032/sententiarum-libri-quinque",
@@ -86741,9 +87387,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl080-032/sententiarum-libri-quinque",
@@ -86807,9 +87456,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl080-032/sententiarum-libri-quinque",
@@ -86873,9 +87525,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl080-032/sententiarum-libri-quinque",
@@ -86939,9 +87594,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl080-032/sententiarum-libri-quinque",
@@ -86997,9 +87655,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl105-002",
@@ -87055,9 +87716,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl105-002",
@@ -87113,9 +87777,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl105-002",
@@ -87171,9 +87838,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl105-002",
@@ -87229,9 +87899,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl030-002",
@@ -87296,9 +87969,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-016",
@@ -87354,9 +88030,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl087-027",
@@ -87438,9 +88117,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl087-015",
@@ -87522,9 +88204,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl093-003",
@@ -87606,9 +88291,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl013-014",
@@ -87664,9 +88352,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl114-008",
@@ -87722,9 +88413,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl115-014",
@@ -87780,9 +88474,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl121-023",
@@ -87841,9 +88538,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl170-009",
@@ -87925,9 +88625,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl106-005",
@@ -87983,9 +88686,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl106-005",
@@ -88041,9 +88747,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl133-001",
@@ -88107,9 +88816,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl010-010",
@@ -88191,9 +88903,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-018",
@@ -88254,9 +88969,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl087-014",
@@ -88338,9 +89056,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl122-014",
@@ -88413,9 +89134,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl005-011",
@@ -88471,9 +89195,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl132-008",
@@ -88534,9 +89261,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl132-021",
@@ -88592,9 +89322,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl131-021",
@@ -88656,9 +89389,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl126-010",
@@ -88717,9 +89453,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl121-023",
@@ -88778,9 +89517,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl104-004",
@@ -88839,9 +89581,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-013",
@@ -88914,9 +89659,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl105-002",
@@ -88972,9 +89720,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl018-006",
@@ -89041,9 +89792,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-007",
@@ -89110,9 +89864,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-003",
@@ -89171,9 +89928,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-003",
@@ -89232,9 +89992,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-003",
@@ -89293,9 +90056,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-003",
@@ -89354,9 +90120,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl030-002",
@@ -89421,9 +90190,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl068-016",
@@ -89481,9 +90253,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl068-016",
@@ -89541,9 +90316,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl068-016",
@@ -89601,9 +90379,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl053-016",
@@ -89659,9 +90440,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl104-001",
@@ -89717,9 +90501,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl105-002",
@@ -89775,9 +90562,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl105-002",
@@ -89833,9 +90623,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl050-010",
@@ -89899,9 +90692,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl031-003",
@@ -89957,9 +90753,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-017",
@@ -90015,9 +90814,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-017",
@@ -90073,9 +90875,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-017",
@@ -90131,9 +90936,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl008-013",
@@ -90189,9 +90997,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl098-013",
@@ -90269,9 +91080,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl098-013",
@@ -90349,9 +91163,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl098-013",
@@ -90429,9 +91246,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl098-013",
@@ -90509,9 +91329,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl065-024",
@@ -90569,9 +91392,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl155-004",
@@ -90635,9 +91461,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl033-001",
@@ -90698,9 +91527,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl068-016",
@@ -90758,9 +91590,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl121-005",
@@ -90822,9 +91657,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": "the Zenodo record for this work was deposited under CC BY 4.0 (2025); the owner's CC0 dedication of the same content governs reuse"
    },
    "locators": {
     "work": "pl055-004",
@@ -90892,9 +91730,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl080-032/sententiarum-libri-quinque",
@@ -90950,9 +91791,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl080-032/sententiarum-libri-quinque",
@@ -91008,9 +91852,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl080-032/sententiarum-libri-quinque",
@@ -91066,9 +91913,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl080-032/sententiarum-libri-quinque",
@@ -91124,9 +91974,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl080-032/sententiarum-libri-quinque",
@@ -91190,9 +92043,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl146-001",
@@ -91270,9 +92126,12 @@
     ]
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl056-001",
@@ -91340,9 +92199,12 @@
     "known_defects": []
    },
    "rights": {
-    "license": null,
-    "license_status": "unresolved",
-    "source_text_rights": "not-redistributed"
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
    },
    "locators": {
     "work": "pl067-900",

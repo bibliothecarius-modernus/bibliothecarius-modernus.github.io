@@ -9,7 +9,7 @@
       "orcid": "0000-0001-8914-9706"
     }
   ],
-  "license": "cc-by-4.0",
+  "license": "cc0-1.0",
   "keywords": [
     "patristics",
     "Latin",
@@ -22,5 +22,5 @@
   "upload_type": "publication",
   "publication_type": "other",
   "language": "eng",
-  "notes": "Translations produced with AI assistance (Claude, Anthropic). See individual records and https://bibliothecarius-modernus.github.io/about/ for methodology details."
+  "notes": "Translations produced with AI assistance (Claude, Anthropic). See individual records and https://bibliothecarius-modernus.github.io/about/ for methodology details. Licensing (owner decision 2026-09-13): translations, essays and metadata CC0 1.0; the Latin source is public domain (Migne, Patrologia Latina)."
 }

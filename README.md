@@ -72,4 +72,7 @@ Translation JSON format:
 
 ## License
 
-CC0 1.0 Universal - see [LICENSE](LICENSE)
+- Translations, contextual essays, scholarly metadata and the `api/catalog.json` export: **CC0 1.0 Universal** (public domain dedication) — see [LICENSE.md](LICENSE.md).
+- Latin texts: public domain (J.-P. Migne, *Patrologia Latina*, 1844–65); no rights claimed.
+- Site code (layouts, includes, scripts, plugins): MIT — see [LICENSE.md](LICENSE.md).
+- Project white papers and methodology documents: CC BY 4.0.

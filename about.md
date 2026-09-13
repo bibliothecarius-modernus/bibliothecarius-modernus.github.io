@@ -32,7 +32,7 @@ permalink: /about/
     <li><a href="https://youtu.be/t80WboyHzWE" target="_blank">Project Video Overview</a> - A video introduction to the project.</li>
   </ul>
 
-  <p><em>For any translators who are interested in making their own translations or authoritative editions: Everything associated with my project is under Creative Commons license, so it's yours to use as a jumping off point - no need to ask. If you want to credit my work or just let me know this was helpful, that's always appreciated but not required.</em></p>
+  <p><em>For any translators who are interested in making their own translations or authoritative editions: the translations, contextual essays and metadata of this project are dedicated to the public domain (<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0</a>), so they are yours to use as a jumping-off point - no need to ask. The Latin texts themselves are public domain (Migne, Patrologia Latina). The project's white papers and system documentation are CC BY 4.0. If you want to credit my work or just let me know this was helpful, that's always appreciated but not required.</em></p>
 
   <hr style="width: 70%; margin: 30px auto; border: none; border-top: 1px solid #c0b283;">
 

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "Bibliothecarius Modernus: Latin Patristic Translations"
-message: "If you use or reference these translations, please cite as below."
+message: "If you use or reference these translations, please cite as below. The translations, essays and metadata are dedicated CC0 1.0; the project white paper (DOI 10.5281/zenodo.18002473) is CC BY 4.0."
 type: dataset
 authors:
   - family-names: Wolfslayer
@@ -23,4 +23,4 @@ keywords:
   - medieval theology
   - Patrologia Latina
   - AI-assisted translation
-license: CC-BY-4.0
+license: CC0-1.0
