@@ -21,6 +21,35 @@ const POSTS_DIR = '_posts';
 // Cache mapping translation_json paths to post URLs
 const translationToPostUrl = new Map();
 
+// Posts with `listed: false` are unpublished: their HTML and their translation
+// JSON must not enter the public search index.
+const unlistedPostUrls = new Set();
+const unlistedTranslationFiles = new Set();
+
+/**
+ * A "NOTA LECTORIBUS" placeholder JSON is a single-chunk notice, not a translation.
+ */
+function isPlaceholderTranslation(data) {
+  const chunks = Array.isArray(data.chunks) ? data.chunks : [];
+  if (chunks.length !== 1) return false;
+  const text = `${getLatinText(chunks[0])} ${getEnglishText(chunks[0])}`;
+  return /NOTA LECTORIBUS/i.test(text);
+}
+
+/**
+ * Normalise a century label so the filter has one spelling:
+ * "11 century" -> "11th century"; "11th century" unchanged.
+ */
+function normalizeCenturyLabel(label) {
+  if (!label) return '';
+  const m = String(label).trim().match(/^(\d{1,2})(st|nd|rd|th)?\s*century$/i);
+  if (!m) return String(label).trim();
+  const n = parseInt(m[1], 10);
+  const suffix = (n % 100 >= 11 && n % 100 <= 13) ? 'th'
+    : n % 10 === 1 ? 'st' : n % 10 === 2 ? 'nd' : n % 10 === 3 ? 'rd' : 'th';
+  return `${n}${suffix} century`;
+}
+
 /**
  * Extract text content, stripping HTML/SSML tags
  */
@@ -53,6 +82,23 @@ function getEnglishText(chunk) {
  */
 function getChunkId(chunk) {
   return chunk.chunk_id || chunk.chunk_number || 0;
+}
+
+/**
+ * Recursively list .html/.htm files under dir, as paths relative to dir.
+ */
+async function walkHtmlFiles(dir, base = dir) {
+  const out = [];
+  const entries = await readdir(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      out.push(...await walkHtmlFiles(full, base));
+    } else if (/\.html?$/i.test(entry.name)) {
+      out.push(full.slice(base.length + 1));
+    }
+  }
+  return out.sort();
 }
 
 /**
@@ -157,7 +203,14 @@ async function buildTranslationToPostUrlMap() {
         const [, year, month, , title] = match;
         const postUrl = `/${year}/${month}/${title}/`;
         translationToPostUrl.set(jsonFilename, postUrl);
+        if (frontMatter.listed === false) {
+          unlistedPostUrls.add(postUrl);
+          unlistedTranslationFiles.add(jsonFilename);
+        }
       }
+    }
+    if (unlistedPostUrls.size) {
+      console.log(`   Excluding ${unlistedPostUrls.size} unlisted post(s) from the index`);
     }
 
     console.log(`   Built URL map for ${translationToPostUrl.size} translation files`);
@@ -197,14 +250,32 @@ async function main() {
     forceLanguage: 'en'
   });
 
-  // Step 1: Index Jekyll HTML output
-  console.log(`📄 Indexing HTML from ${SITE_DIR}/...`);
-  const { page_count } = await index.addDirectory({ path: SITE_DIR });
-  console.log(`   Added ${page_count} HTML pages\n`);
-
-  // Step 2: Build translation JSON to post URL mapping
+  // Step 1: Build translation JSON to post URL mapping (also finds unlisted posts)
   console.log(`🔗 Mapping translation files to post URLs...`);
   await buildTranslationToPostUrlMap();
+
+  // Step 2: Index Jekyll HTML output, excluding unlisted posts' pages.
+  // Files are added one by one (addHTMLFile) rather than via addDirectory so the
+  // exclusion is a plain path check, not a glob dialect we cannot test locally.
+  console.log(`📄 Indexing HTML from ${SITE_DIR}/...`);
+  const htmlFiles = await walkHtmlFiles(SITE_DIR);
+  let page_count = 0;
+  let excludedPages = 0;
+  for (const rel of htmlFiles) {
+    const urlPath = '/' + rel.replace(/\\/g, '/').replace(/index\.html$/, '');
+    if ([...unlistedPostUrls].some(u => urlPath === u || urlPath.startsWith(u))) {
+      excludedPages++;
+      continue;
+    }
+    const content = await readFile(join(SITE_DIR, rel), 'utf-8');
+    const { errors: fileErrors } = await index.addHTMLFile({ sourcePath: rel, content });
+    if (fileErrors && fileErrors.length) {
+      console.log(`   Warning: ${rel}: ${fileErrors.join('; ')}`);
+      continue;
+    }
+    page_count++;
+  }
+  console.log(`   Added ${page_count} HTML pages${excludedPages ? ` (excluded ${excludedPages} unlisted page(s))` : ''}\n`);
 
   // Step 3: Index translation JSON files
   console.log(`📜 Indexing translation files from ${TRANSLATIONS_DIR}/...`);
@@ -221,8 +292,15 @@ async function main() {
   let englishChunks = 0;
   let errors = 0;
 
+  let skippedUnlisted = 0;
+  let skippedPlaceholders = 0;
+
   for (const jsonFile of translationFiles) {
     try {
+      if (unlistedTranslationFiles.has(jsonFile)) {
+        skippedUnlisted++;
+        continue;
+      }
       const jsonPath = join(TRANSLATIONS_DIR, jsonFile);
       const rawData = await readFile(jsonPath, 'utf-8');
       const data = JSON.parse(rawData);
@@ -231,8 +309,13 @@ async function main() {
         console.log(`   Skipping ${jsonFile}: no chunks array`);
         continue;
       }
+      if (isPlaceholderTranslation(data)) {
+        skippedPlaceholders++;
+        continue;
+      }
 
       const metadata = await getMetadata(jsonFile, data);
+      metadata.century = normalizeCenturyLabel(metadata.century);
 
       for (const chunk of data.chunks) {
         const chunkId = getChunkId(chunk);
@@ -294,6 +377,8 @@ async function main() {
 
   console.log(`\n   Added ${latinChunks} Latin chunks`);
   console.log(`   Added ${englishChunks} English chunks`);
+  if (skippedUnlisted) console.log(`   Skipped ${skippedUnlisted} unlisted translation file(s)`);
+  if (skippedPlaceholders) console.log(`   Skipped ${skippedPlaceholders} placeholder file(s) (NOTA LECTORIBUS)`);
   if (errors > 0) {
     console.log(`   ⚠️  ${errors} files had errors`);
   }
