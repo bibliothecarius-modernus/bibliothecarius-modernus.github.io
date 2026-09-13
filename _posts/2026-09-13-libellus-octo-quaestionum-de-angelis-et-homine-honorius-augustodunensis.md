@@ -2,6 +2,7 @@
 layout: tabbed_post
 title: "Libellus octo quaestionum de angelis et homine (c. 12th century)"
 date: 2026-09-13
+publish_date: 2026-09-13
 listed: true
 categories: [medieval-theology, patristic-philosophy, eschatology]
 youtube_id: "-P4eVPONBKQ"
