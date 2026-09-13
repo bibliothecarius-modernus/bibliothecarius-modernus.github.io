@@ -2,7 +2,7 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-13T22:28:10Z",
+ "generated_at": "2026-09-13T23:38:53Z",
  "version": "export:2026-09-13;registry:2026-09-13",
  "publisher": {
   "name": "Bibliothecarius Modernus",
@@ -29,12 +29,12 @@
  },
  "counts": {
   "works": 3772,
-  "publications": 287,
+  "publications": 288,
   "parts": 5,
   "works_by_status": {
    "untranslated": 3584,
-   "published": 177,
-   "candidate": 8,
+   "published": 178,
+   "candidate": 7,
    "rejected": 1,
    "translated": 2
   },
@@ -59035,12 +59035,14 @@
    },
    "century": "11th-12th",
    "section": "main",
-   "status": "candidate",
+   "status": "published",
    "english_translation_status": "none-found",
    "boundary_verified": false,
    "estimated_minutes": 19.6,
-   "translated_by_bibliothecarius": false,
-   "publications": []
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2881"
+   ]
   },
   {
    "id": "pl172-018",
@@ -92219,6 +92221,91 @@
     }
    },
    "version": "2026-09-13T21:09:39Z"
+  },
+  {
+   "id": "pub-2881",
+   "kind": "publication",
+   "catalog_id": "pl172-017",
+   "part_id": null,
+   "project_id": "libellus-octo-quaestionum-de-angelis-et-homine-20260913",
+   "title_english": "Eight Questions on Angels and Man",
+   "title_latin": "Libellus octo quaestionum.",
+   "author": "Honorius Augustodunensis",
+   "pl_volume": 172,
+   "columns": {
+    "start": 1185,
+    "end": 1192
+   },
+   "century": "11th-12th",
+   "status": "published",
+   "youtube_visibility": "public",
+   "published_at": "2026-09-13T23:37:47Z",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=-P4eVPONBKQ",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/libellus-octo-quaestionum-de-angelis-et-homine-honorius-augustodunensis/",
+    "archive": "https://archive.org/details/eight-questions-on-angels-and-man",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_172/Honorius%20Augustodunensis%20-%20Eight%20Questions%20on%20Angels%20and%20Man"
+   },
+   "doi": null,
+   "provenance": {
+    "source_of_record": "pipeline",
+    "generation": "v2",
+    "translator_model": "openai/gpt-5.5",
+    "translation_date": "2026-09-13",
+    "translation_date_source": "project_state",
+    "source_check": true,
+    "translation_qa": "attention"
+   },
+   "review": {
+    "status": "coverage-verified",
+    "checked_at": "2026-09-13",
+    "known_defects": []
+   },
+   "rights": {
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
+   },
+   "locators": {
+    "work": "pl172-017",
+    "passages_available": true,
+    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/09/libellus-octo-quaestionum-de-angelis-et-homine-honorius-augustodunensis/#chunk-{n}"
+   },
+   "related": {
+    "same_author": [
+     "pl172-001",
+     "pl172-002",
+     "pl172-003",
+     "pl172-004",
+     "pl172-005",
+     "pl172-006",
+     "pl172-007",
+     "pl172-008",
+     "pl172-009",
+     "pl172-010",
+     "pl172-011",
+     "pl172-012",
+     "pl172-013",
+     "pl172-014",
+     "pl172-015",
+     "pl172-016",
+     "pl172-018",
+     "pl172-019",
+     "pl172-020",
+     "pl172-021",
+     "pl172-022",
+     "pl172-023",
+     "pl172-024"
+    ],
+    "adjacent_in_volume": {
+     "prev": "pl172-016",
+     "next": "pl172-018"
+    }
+   },
+   "version": "2026-09-13T23:38:03Z"
   }
  ]
 }
