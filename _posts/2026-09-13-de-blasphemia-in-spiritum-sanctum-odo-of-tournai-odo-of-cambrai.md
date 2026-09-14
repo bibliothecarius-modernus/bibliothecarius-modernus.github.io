@@ -2,6 +2,7 @@
 layout: tabbed_post
 title: "De blasphemia in Spiritum sanctum (c. 12th century)"
 date: 2026-09-13
+publish_date: 2026-09-14
 listed: true
 categories: [pneumatology, medieval-theology, scholastic-theology]
 youtube_id: "yXD5x_ObVjY"
