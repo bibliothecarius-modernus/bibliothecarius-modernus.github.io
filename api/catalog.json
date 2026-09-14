@@ -2,8 +2,8 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-13T23:38:53Z",
- "version": "export:2026-09-13;registry:2026-09-13",
+ "generated_at": "2026-09-14T02:29:08Z",
+ "version": "export:2026-09-14;registry:2026-09-14",
  "publisher": {
   "name": "Bibliothecarius Modernus",
   "url": "https://bibliothecarius-modernus.github.io",
@@ -29,11 +29,11 @@
  },
  "counts": {
   "works": 3772,
-  "publications": 288,
+  "publications": 289,
   "parts": 5,
   "works_by_status": {
-   "untranslated": 3584,
-   "published": 178,
+   "untranslated": 3583,
+   "published": 179,
    "candidate": 7,
    "rejected": 1,
    "translated": 2
@@ -54308,12 +54308,14 @@
    },
    "century": "11th-12th",
    "section": "main",
-   "status": "untranslated",
-   "english_translation_status": "unknown",
+   "status": "published",
+   "english_translation_status": "none-found",
    "boundary_verified": false,
    "estimated_minutes": 18.9,
-   "translated_by_bibliothecarius": false,
-   "publications": []
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2882"
+   ]
   },
   {
    "id": "pl160-028",
@@ -92306,6 +92308,75 @@
     }
    },
    "version": "2026-09-13T23:38:03Z"
+  },
+  {
+   "id": "pub-2882",
+   "kind": "publication",
+   "catalog_id": "pl160-027",
+   "part_id": null,
+   "project_id": "de-blasphemia-in-spiritum-sanctum-20260914",
+   "title_english": "On Blasphemy against the Holy Spirit",
+   "title_latin": "De blasphemia in Spiritum sanctum.",
+   "author": "Odo of Tournai (Odo of Cambrai)",
+   "pl_volume": 160,
+   "columns": {
+    "start": 1111,
+    "end": 1118
+   },
+   "century": "11th-12th",
+   "status": "published",
+   "youtube_visibility": "public",
+   "published_at": "2026-09-14T02:26:56Z",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=yXD5x_ObVjY",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/de-blasphemia-in-spiritum-sanctum-odo-of-tournai-odo-of-cambrai/",
+    "archive": "https://archive.org/details/on-blasphemy-against-the-holy-spirit",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_160/Odo%20of%20Tournai%20(Odo%20of%20Cambrai)%20-%20On%20Blasphemy%20against%20the%20Holy%20Spirit"
+   },
+   "doi": null,
+   "provenance": {
+    "source_of_record": "pipeline",
+    "generation": "v2",
+    "translator_model": "openai/gpt-5.5",
+    "translation_date": "2026-09-14",
+    "translation_date_source": "project_state",
+    "source_check": true,
+    "translation_qa": "attention"
+   },
+   "review": {
+    "status": "coverage-verified",
+    "checked_at": "2026-09-14",
+    "known_defects": []
+   },
+   "rights": {
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
+   },
+   "locators": {
+    "work": "pl160-027",
+    "passages_available": false,
+    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/09/de-blasphemia-in-spiritum-sanctum-odo-of-tournai-odo-of-cambrai/#chunk-{n}"
+   },
+   "related": {
+    "same_author": [
+     "pl160-024",
+     "pl160-025",
+     "pl160-026",
+     "pl160-028",
+     "pl160-029",
+     "pl160-030",
+     "pl160-031"
+    ],
+    "adjacent_in_volume": {
+     "prev": "pl160-026",
+     "next": "pl160-028"
+    }
+   },
+   "version": "2026-09-14T02:27:12Z"
   }
  ]
 }
