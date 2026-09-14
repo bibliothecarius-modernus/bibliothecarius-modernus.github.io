@@ -7,8 +7,6 @@ permalink: /about/
 <div class="about-page">
   <img src="{{ '/assets/images/bibliothecarius-logo.png' | relative_url }}" alt="The Modern Librarian" class="profile">
 
-  <h2>Bibliothecarius Modernus</h2>
-
   <p>Bibliothecarius Modernus is an open library of Latin Christian and medieval texts that are difficult to find in English. The collection focuses especially on works that have never been translated, survive only in old or hard-to-find translations, or receive little attention outside specialist scholarship.</p>
 
   <p>Each edition brings the Latin source and English translation together in one place, along with contextual research, a bibliography, audio, video, and reusable text and metadata.</p>
@@ -81,21 +79,15 @@ permalink: /about/
     <p>Bibliothecarius Modernus is an independent project maintained by Ryan Wolfslayer, a librarian and programmer with a background in digital librarianship.</p>
 
     <p>The project combines fairly traditional library concerns, including access, preservation, description, provenance, and reuse, with tools that make it possible for one person to work through a much larger body of material than would otherwise be practical.</p>
-    <p>ORCID: <a href="https://orcid.org/0000-0001-8914-9706" target="_blank">0000-0001-8914-9706</a></p>
   </div>
 
   <div class="contact-methods">
     <p>
       <strong>Contact:</strong> <a href="mailto:bibliothecarius.modernus@gmail.com">bibliothecarius.modernus@gmail.com</a><br>
-      <strong>Professional:</strong> <a href="https://www.linkedin.com/in/ryanwolfslayer/" target="_blank">LinkedIn</a>
+      <strong>Professional:</strong> <a href="https://www.linkedin.com/in/ryanwolfslayer/" target="_blank">LinkedIn</a><br>
+      <strong>ORCID:</strong> <a href="https://orcid.org/0000-0001-8914-9706" target="_blank">0000-0001-8914-9706</a>
     </p>
   </div>
-
-  <p class="about-links">
-    <a href="{{ '/' | relative_url }}" class="read-more-button">Browse the collection</a>
-    <a href="{{ '/search.html' | relative_url }}" class="read-more-button">Search the library</a>
-    <a href="https://github.com/wryan14/Latin-Patristic-Texts" target="_blank" class="read-more-button">View the open text corpus</a>
-  </p>
 
   <div class="social-links">
     <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">
