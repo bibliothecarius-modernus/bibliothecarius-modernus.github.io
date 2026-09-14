@@ -1,6 +1,6 @@
 {
  "schema": "bibliothecarius.editions/1",
- "generated_at": "2026-09-14T17:42:47Z",
+ "generated_at": "2026-09-14T17:43:55Z",
  "source": "projection of api/catalog.json publications[] keyed by website path (Phase 8B)",
  "rights": "CC0-1.0",
  "by_path": {

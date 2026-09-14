@@ -819,7 +819,10 @@
         ]
        },
        "source_text_rights": {
-        "const": "not-redistributed"
+        "enum": [
+         "not-redistributed",
+         "transcription-cc0"
+        ]
        },
        "source_text": {
         "type": [

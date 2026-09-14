@@ -2,7 +2,7 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-14T17:42:47Z",
+ "generated_at": "2026-09-14T17:43:55Z",
  "version": "export:2026-09-14;registry:2026-09-14",
  "publisher": {
   "name": "Bibliothecarius Modernus",
@@ -92524,8 +92524,8 @@
     "license": "CC0-1.0",
     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
     "license_status": "declared",
-    "source_text_rights": "not-redistributed",
-    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "source_text_rights": "transcription-cc0",
+    "source_text": "Latin: Bibliothecarius Modernus transcription from the digitized manuscript (CC0 1.0); the manuscript text is public domain; the images remain with the holding institution under its stated terms (see manuscript_objects[].image_rights)",
     "note": null
    },
    "locators": {
