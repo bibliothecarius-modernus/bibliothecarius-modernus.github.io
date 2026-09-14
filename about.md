@@ -7,61 +7,96 @@ permalink: /about/
 <div class="about-page">
   <img src="{{ '/assets/images/bibliothecarius-logo.png' | relative_url }}" alt="The Modern Librarian" class="profile">
 
-  <h2>About Bibliothecarius Modernus - The Modern Librarian</h2>
-  
-  <!-- Project Description Section -->
-  <p>Bibliothecarius Modernus uses AI technology to translate Latin Patristic texts, hopefully making them accessible to audiences that extend beyond niche Latin scholarship. These translations are not intended as authoritative scholarly editions, and the quality will vary based on the AI processing, particularly when handling theologically nuanced concepts. Despite these limitations, the project operates on the principle that accessibility outweighs perfection.</p>
+  <h2>Bibliothecarius Modernus</h2>
 
-  <p>Many works featured here have fallen into relative obscurity, either lacking English translations entirely or having only dated versions available. In some rare cases, more popular authors (like Tertullian or Ambrose) are included for personal reasons or upon request. The translation is prompted for maximal clarity while preserving the original meaning, with the goal of making these historical texts more approachable and potentially inspiring deeper scholarly study. Rather than replacing authoritative editions, this project should help translators identify works that still resonate with modern audiences or deserve further scholarly attention.</p>
+  <p>Bibliothecarius Modernus is an open library of Latin Christian and medieval texts that are difficult to find in English. The collection focuses especially on works that have never been translated, survive only in old or hard-to-find translations, or receive little attention outside specialist scholarship.</p>
 
-  <p>To ensure accuracy, the translation process incorporates several safeguards against AI errors (including hallucinations). The videos display the original Latin alongside the English translation, and the Latin and English texts are available on the GitHub repository for many texts. This transparency allows viewers to verify translations and identify any potential inaccuracies.</p>
+  <p>Each edition brings the Latin source and English translation together in one place, along with contextual research, a bibliography, audio, video, and reusable text and metadata.</p>
 
-  <!-- Translation Methodology Section -->
-  <h3 id="translation-methodology">Translation Methodology</h3>
+  <p class="about-links">
+    <a href="{{ '/' | relative_url }}" class="read-more-button">Browse the collection</a>
+    <a href="{{ '/search.html' | relative_url }}" class="read-more-button">Search the library</a>
+    <a href="https://github.com/wryan14/Latin-Patristic-Texts" target="_blank" class="read-more-button">View the open text corpus</a>
+  </p>
 
-  <p>Translations are produced using AI assistance with human direction and review. The process involves text selection, prompting strategy, quality review, and editorial oversight by Ryan Wolfslayer. Contextual research and analysis sections are produced using additional AI research tools with human synthesis and verification. Newer editions (from September 2026) also receive source-coverage checks, independent model review, and recorded curator corrections, all noted on each edition's Resource Info tab.</p>
+  <h3>Why this exists</h3>
 
-  <p>This approach treats AI as a sophisticated tool requiring disclosure rather than a co-author. The human contributor remains responsible for text selection, curatorial decisions, translation direction, quality review, and all editorial decisions. The original Latin is always displayed alongside English to enable verification.</p>
+  <p>Digitization has solved only part of the access problem.</p>
 
-  <!-- Resources Section (moved up for better flow) -->
-  <h3>Resources</h3>
-  
-  <ul class="resource-list">
-    <li><a href="https://github.com/wryan14/Latin-Patristic-Texts" target="_blank">Latin Patristic Texts Repository</a> - Access the growing collection of translated texts.</li>
-    <li><a href="https://doi.org/10.5281/zenodo.18002473" target="_blank">Project White Paper</a> (PDF) - The project's philosophy, technical architecture, and methodology.</li>
-    <li><a href="https://youtu.be/t80WboyHzWE" target="_blank">Project Video Overview</a> - A video introduction to the project.</li>
-    <li><a href="{{ site.archive_link }}" target="_blank">Internet Archive</a> - Audio versions and translation data for each text.</li>
-    <li><a href="{{ '/api/README.md' | relative_url }}">Machine-readable catalog</a> - Identifiers, source locations, provenance and review status for every text, for software and citation tools.</li>
-  </ul>
+  <p>A nineteenth-century Latin edition may be freely available online and still remain effectively closed to anyone who cannot read Latin. A work may have an English translation that survives in a book held by only a handful of libraries. A manuscript may be available in excellent digital photographs while having no searchable Latin transcription at all.</p>
 
-  <p><em>For any translators who are interested in making their own translations or authoritative editions: the translations, contextual essays and metadata of this project are dedicated to the public domain (<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0</a>), so they are yours to use as a jumping-off point - no need to ask. The Latin texts themselves are public domain (Migne, Patrologia Latina). The project's white papers and system documentation are CC BY 4.0, and the site code is MIT. If you want to credit my work or just let me know this was helpful, that's always appreciated but not required.</em></p>
+  <p>Bibliothecarius Modernus exists to make more of that material usable.</p>
+
+  <p>The emphasis is on texts that have fallen into relative obscurity, not because they are necessarily unimportant, but because translation and publication have always required time, money, and specialized attention. Modern tools have changed what one person can reasonably attempt, which makes it possible to work through material that might otherwise continue to sit unread.</p>
+
+  <h3>Completeness and the choice of source</h3>
+
+  <p>My preference is to publish as much of a work as the surviving source allows.</p>
+
+  <p>For most printed works, that means translating the complete text rather than selecting a few interesting passages. Longer works may appear in installments, but those divisions should follow the structure of the work, such as books, chapters, sermons, or letters. Manuscripts present a different problem. Sometimes the manuscript itself preserves only a fragment, the beginning or ending is missing, or the text survives imperfectly. In those cases, the aim is not artificial completeness, but a complete presentation of what the source actually preserves.</p>
+
+  <p>The Latin text used here is also not always the text a specialist would choose for a modern critical edition. Much of the collection has grown out of a particular digitized edition or manuscript tradition because that was the material available and practical to work from. Where a better text can reasonably be identified and used, I would prefer to use it. Still, the project has generally favored practicality over waiting for ideal circumstances.</p>
+
+  <p>That distinction matters. Bibliothecarius Modernus is not attempting to establish the definitive text of every work. The source used for an edition should instead be stated plainly enough that a reader can judge it, compare it with other editions, or improve on it later.</p>
+
+  <p>A typical edition includes the English translation, the Latin source alongside it, an introduction and bibliography, an audio edition, a video edition, and downloadable text and metadata. Some readers may want the parallel text, while others may only need the audio or a plain-text file. The same source should be useful in several different ways.</p>
+
+  <h3 id="how-the-translations-are-made">How the translations are made</h3>
+
+  <p>AI is part of the production process because it makes the scale of the project possible.</p>
+
+  <p>I use AI for translation, research, and some production tasks, while retaining responsibility for selection, source checking, review, corrections, and publication. Newer editions are checked for complete source coverage, reviewed independently, and corrected before publication. Research is checked against the sources it cites rather than accepted simply because a model supplied a reference.</p>
+
+  <p>The Latin remains visible alongside the English so that readers who know Latin can evaluate the translation directly. Readers should not have to trust a translation simply because it appears on a finished website.</p>
+
+  <p>These are not critical editions, and they are not presented as such. Their purpose is to make neglected texts accessible while keeping the source and editorial process visible enough for someone else to examine the work.</p>
+
+  <h3>Digitized sources and manuscript transcription</h3>
+
+  <p>Most of the collection has been produced from digitized sources. Much of it comes from scans of older printed editions, especially Migne's <em>Patrologia Latina</em>, although other editions are used when available.</p>
+
+  <p>Digitized manuscripts create a different kind of access problem. A library may provide excellent images of a medieval codex while offering no searchable transcription of the text on the page. In those cases, the first task is not translation but transcription.</p>
+
+  <p>Where an openly digitized manuscript contains worthwhile material and no usable Latin text exists, Bibliothecarius Modernus may produce a transcription before translating it. The repository, shelfmark, folio references, method, uncertainties, and revision history remain attached to the transcription so that readers can return to the manuscript and check the reading for themselves.</p>
+
+  <p>This work also has to remain modest about what a single witness can establish. A transcription of one manuscript represents that manuscript. It does not automatically establish the best reading across an entire textual tradition.</p>
+
+  <h3>Open by default</h3>
+
+  <p>The project is meant to be reused.</p>
+
+  <p>Translations, research, metadata, and original transcriptions created by Bibliothecarius Modernus are released under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a>. The historical Latin sources are public domain. Project software is open source, while the methodological documentation is separately licensed for reuse with attribution. Details: <a href="{{ '/LICENSE.md' | relative_url }}">Licensing</a>.</p>
+
+  <p>If a translation here helps someone prepare a better translation, teach a class, build a dataset, write an article, or create another edition, that is a good outcome. There is no need to ask permission first.</p>
 
   <hr style="width: 70%; margin: 30px auto; border: none; border-top: 1px solid #c0b283;">
 
-  <!-- About Me Section -->
-  <h3>About Me</h3>
+  <h3>About the project</h3>
 
   <div class="about-me">
     <div class="circular-photo-container">
       <img src="{{ '/assets/images/ryan-photo.jpg' | relative_url }}" alt="Ryan Wolfslayer" class="profile">
     </div>
-    
-    <p>Hi, I'm Ryan Wolfslayer, the person behind Bibliothecarius Modernus. For those who are interested, I am a trained librarian with an MSLIS from the University of Illinois at Urbana-Champaign. I've been working in digital librarianship for close to ten years and am an avid Python programmer. In my free time I read entirely too much theology, which is what directly inspired this project.</p>
+
+    <p>Bibliothecarius Modernus is an independent project maintained by Ryan Wolfslayer, a librarian and Python programmer with a background in digital librarianship.</p>
+
+    <p>The project combines fairly traditional library concerns, including access, preservation, description, provenance, and reuse, with tools that make it possible for one person to work through a much larger body of material than would otherwise be practical.</p>
     <p>ORCID: <a href="https://orcid.org/0000-0001-8914-9706" target="_blank">0000-0001-8914-9706</a></p>
   </div>
 
-  <!-- Connect Section (consolidated) -->
-  <h3>Connect & Contribute</h3>
-  
-  <p>Community engagement is the best part of the process, and I look forward to many discussions, corrections, and new theological or historical insights. If you know of existing scholarly translations, please share this information.</p>
-  
   <div class="contact-methods">
     <p>
       <strong>Contact:</strong> <a href="mailto:bibliothecarius.modernus@gmail.com">bibliothecarius.modernus@gmail.com</a><br>
       <strong>Professional:</strong> <a href="https://www.linkedin.com/in/ryanwolfslayer/" target="_blank">LinkedIn</a>
     </p>
   </div>
-  
+
+  <p class="about-links">
+    <a href="{{ '/' | relative_url }}" class="read-more-button">Browse the collection</a>
+    <a href="{{ '/search.html' | relative_url }}" class="read-more-button">Search the library</a>
+    <a href="https://github.com/wryan14/Latin-Patristic-Texts" target="_blank" class="read-more-button">View the open text corpus</a>
+  </p>
+
   <div class="social-links">
     <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">
       <svg class="svg-icon youtube">

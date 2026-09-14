@@ -891,6 +891,14 @@ figcaption {
     margin: 0 auto;
 }
 
+.about-page .about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
 .about-page .latin-motto {
     font-family: 'Luxurious Roman', serif;
     font-style: italic;
