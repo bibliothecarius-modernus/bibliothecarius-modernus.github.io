@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De blasphemia in Spiritum sanctum (c. 12th century)"
 date: 2026-09-13
-listed: false
+listed: true
 categories: [pneumatology, medieval-theology, scholastic-theology]
 youtube_id: "yXD5x_ObVjY"
 translation_json: "/assets/translations/2026-09-13-de-blasphemia-in-spiritum-sanctum-odo-of-tournai-odo-of-cambrai.json"
