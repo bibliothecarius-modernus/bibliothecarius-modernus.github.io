@@ -46,13 +46,13 @@ This follows emerging academic norms treating AI as a sophisticated tool requiri
 - Contextual research and analysis content
 - Editorial decisions about publication
 
-The AI tool (currently Claude 4.5 Sonnet, previously ChatGPT-4o for older translations) performs the linguistic transformation from Latin to English under human direction.
+The AI model performs the linguistic transformation from Latin to English under human direction. The model used for each edition is recorded in that edition's provenance (Resource Info tab, `metadata.json`, `api/catalog.json`) rather than in this document; the 2024–25 editions were made with earlier models, and each edition page states what is known.
 
 ## Citation Format
 
 Recommended citation for individual translations:
 
-> [Author]. "[Latin Title]." Translated by Ryan Wolfslayer using Claude (Anthropic), Bibliothecarius Modernus, [Date]. DOI: [DOI]
+> [Author]. "[Latin Title]." Translated by Ryan Wolfslayer using [AI model from the edition's provenance], Bibliothecarius Modernus, [Date]. DOI: [DOI]
 
 Example:
 
