@@ -7,69 +7,53 @@ permalink: /about/
 <div class="about-page">
   <img src="{{ '/assets/images/bibliothecarius-logo.png' | relative_url }}" alt="The Modern Librarian" class="profile">
 
-  <h2>About Bibliothecarius Modernus</h2>
+  <h2>About Bibliothecarius Modernus - The Modern Librarian</h2>
+  
+  <!-- Project Description Section -->
+  <p>Bibliothecarius Modernus uses AI technology to translate Latin Patristic texts, hopefully making them accessible to audiences that extend beyond niche Latin scholarship. These translations are not intended as authoritative scholarly editions, and the quality will vary based on the AI processing, particularly when handling theologically nuanced concepts. Despite these limitations, the project operates on the principle that accessibility outweighs perfection.</p>
 
-  <p>Bibliothecarius Modernus is an independent digital library of neglected Latin literature. It exists because a large part of the Latin Christian and medieval record — sermons, letters, treatises, commentaries, chronicles, dialogues — has never been translated into English, or was translated once, long ago, in an edition no library near you holds. The library's purpose is to put those works in front of readers, researchers, students and librarians in a form they can read, hear, verify and cite: complete open translations, parallel texts, contextual research, audio and video editions, and machine-readable scholarly data — and, where the sources require it, new transcriptions from manuscripts.</p>
+  <p>Many works featured here have fallen into relative obscurity, either lacking English translations entirely or having only dated versions available. In some rare cases, more popular authors (like Tertullian or Ambrose) are included for personal reasons or upon request. The translation is prompted for maximal clarity while preserving the original meaning, with the goal of making these historical texts more approachable and potentially inspiring deeper scholarly study. Rather than replacing authoritative editions, this project should help translators identify works that still resonate with modern audiences or deserve further scholarly attention.</p>
 
-  <h3>What an edition contains</h3>
+  <p>To ensure accuracy, the translation process incorporates several safeguards against AI errors (including hallucinations). The videos display the original Latin alongside the English translation, and the Latin and English texts are available on the GitHub repository for many texts. This transparency allows viewers to verify translations and identify any potential inaccuracies.</p>
 
-  <p>The unit of the library is the <strong>edition</strong>: one complete publication of one work. An edition contains the English translation with the Latin source alongside it, segment by segment, so that every sentence can be checked; a researched introduction with its bibliography; an audio edition on the Internet Archive; an archival video on YouTube, in which the Latin is on screen while the English is read; the edition's data (<code>translation.json</code>) in the open text corpus on GitHub; and a page on this site, the <em>Resource Info</em> tab of which records the catalog id, the source location, the method, the review status and the rights. Editions are identified by the library's catalog ids (<code>plNNN-SSS</code>: Patrologia Latina volume and sequence) and, for the newer editions, by passage locators that pin a sentence to a column and a segment.</p>
+  <!-- Translation Methodology Section -->
+  <h3 id="translation-methodology">Translation Methodology</h3>
 
-  <h3>Completeness and installments</h3>
+  <p>Translations are produced using AI assistance with human direction and review. The process involves text selection, prompting strategy, quality review, and editorial oversight by Ryan Wolfslayer. Contextual research and analysis sections are produced using additional AI research tools with human synthesis and verification. Newer editions (from September 2026) also receive source-coverage checks, independent model review, and recorded curator corrections, all noted on each edition's Resource Info tab.</p>
 
-  <p>When a work is selected, the whole work is the goal — never an excerpt or a "best of". Long works are published in installments that follow the work's own divisions (books, letters, sermons, chapters), never a word count, and each installment states where it sits in the whole. The library grows in two ways: broad, partly serendipitous coverage of neglected printed Latin literature (Migne's <em>Patrologia Latina</em> and related editions), and, in future, deliberately selected manuscript material that has never been transcribed.</p>
+  <p>This approach treats AI as a sophisticated tool requiring disclosure rather than a co-author. The human contributor remains responsible for text selection, curatorial decisions, translation direction, quality review, and all editorial decisions. The original Latin is always displayed alongside English to enable verification.</p>
 
-  <h3>How the editions are made and checked</h3>
-
-  <p>Modern AI makes a one-person library of this scale possible, and the library does not hide that; it describes the method, per edition, from recorded provenance. For editions made since September 2026 the workflow is this. The Latin is taken from the source with its boundaries read and confirmed by the curator and its <strong>source integrity</strong> recorded (source kind, volume and columns, complications such as misprinted references). The text is translated in short, source-anchored segments by a production model chosen after a whole-work comparison of candidates; the model is named on the edition page, not here, because models change. Every segment is then checked deterministically against the Latin for <strong>coverage</strong>, so that no stretch of the source can be silently dropped. The translation is submitted to an independent <strong>cross-family review</strong> by a model of a different family, which reports concrete errors tied to exact Latin; the curator reads the flagged passages against the Latin, decides each item, and applies corrections only through a corrections file, so that every change is <strong>recorded</strong> with its Latin basis, its reason and who judged it. Contextual research is produced with a web-search-augmented research model, read by the curator against the cited sources, and kept as a <strong>verified claims record</strong> from which the introduction, the video description and the metadata are derived — a claim the record does not support cannot be published. Narration uses a synthetic voice; the audio and subtitles are checked against the text.</p>
-
-  <p>Each edition therefore states its <strong>provenance</strong>: which models and checks were used, when, and what its <strong>review status</strong> is. The statuses are: <em>coverage-verified</em> (every stretch of the Latin is accounted for in the English and, for the newer editions, an independent review and the curator's corrections are recorded), <em>human-reviewed</em> (the curator read the whole translation against the Latin), <em>spot-checked</em>, <em>defect-recorded</em> (a known defect is listed rather than hidden) and <em>unreviewed</em>. A review status is a statement of what was checked. <strong>It is not a guarantee of perfect fidelity</strong>: errors remain possible in every edition, and the Latin is always beside the English so that you can check.</p>
-
-  <h3>What these editions are not</h3>
-
-  <p>These are not critical editions, but they are documented, source-linked digital editions with explicit provenance and review status. They are reliable enough to read, to quote with care against the Latin, and to use as the starting point for a scholarly translation — which anyone may do without asking.</p>
-
-  <h3>The historical corpus (2024–2025)</h3>
-
-  <p>Most of the library's editions were made before the current workflow existed, with earlier models and lighter checks: no segment-level coverage check, no independent review, and no per-segment provenance. Their pages say so (review status <em>unreviewed</em> or <em>defect-recorded</em>), and the twelve editions known to be missing a contiguous stretch of their source are flagged in the machine-readable catalog. They are preserved rather than rewritten, repaired individually when a real defect is found, and never presented as more than they are.</p>
-
-  <h3>Manuscripts</h3>
-
-  <p>Where a neglected work survives only in manuscript, or where no usable printed text exists, the library will transcribe it from digitized images held by libraries and museums. Each such transcription will be published with full provenance — holding institution, shelfmark and folios, the images used and their rights, the transcription method, its review status and its version — will credit the holding institution first and fully, and will be dedicated to the public domain like everything else the library creates. The manuscript images themselves remain under the terms of the institution that holds them.</p>
-
-  <h3>Licensing</h3>
-
-  <p>Translations, introductions, metadata and transcriptions created by Bibliothecarius Modernus are dedicated to the public domain (<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0</a>). The Latin sources are public domain (Migne, <em>Patrologia Latina</em>, 1844–65, or the named manuscript). Figures reproduced from third parties carry their own rights, stated where they appear. Methodology papers and system documentation are CC BY 4.0; software is MIT. If you want to credit the library or just let me know this was helpful, that is always appreciated but never required. Details: <a href="{{ '/LICENSE.md' | relative_url }}">Licensing</a>.</p>
-
-  <h3>Where the library lives</h3>
-
+  <!-- Resources Section (moved up for better flow) -->
+  <h3>Resources</h3>
+  
   <ul class="resource-list">
-    <li><a href="{{ '/' | relative_url }}">This site</a> — the reading room: parallel texts, introductions, bibliographies, figures, resource identity, search in Latin and English.</li>
-    <li><a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" target="_blank">YouTube</a> — the archival video editions (the Latin on screen, the English read aloud).</li>
-    <li><a href="https://github.com/wryan14/Latin-Patristic-Texts" target="_blank">Latin Patristic Texts</a> — the open text corpus: Latin source, English translation and edition data for every work, cloneable and versioned.</li>
-    <li><a href="{{ site.archive_link }}" target="_blank">Internet Archive</a> — the audio editions and edition data, preserved.</li>
-    <li><a href="{{ '/api/README.md' | relative_url }}">Machine-readable catalog</a> — every work the library indexes and every edition with identifiers, source location, provenance, review status and rights, for software and citation tools.</li>
-    <li><a href="https://doi.org/10.5281/zenodo.18002473" target="_blank">White paper (December 2025)</a> — the project's philosophy, architecture and methodology as they stood then; a second, evidence-based paper is being written from the project's own records.</li>
+    <li><a href="https://github.com/wryan14/Latin-Patristic-Texts" target="_blank">Latin Patristic Texts Repository</a> - Access the growing collection of translated texts.</li>
+    <li><a href="https://doi.org/10.5281/zenodo.18002473" target="_blank">Project White Paper</a> (PDF) - The project's philosophy, technical architecture, and methodology.</li>
+    <li><a href="https://youtu.be/t80WboyHzWE" target="_blank">Project Video Overview</a> - A video introduction to the project.</li>
+    <li><a href="{{ site.archive_link }}" target="_blank">Internet Archive</a> - Audio versions and translation data for each text.</li>
+    <li><a href="{{ '/api/README.md' | relative_url }}">Machine-readable catalog</a> - Identifiers, source locations, provenance and review status for every text, for software and citation tools.</li>
   </ul>
+
+  <p><em>For any translators who are interested in making their own translations or authoritative editions: the translations, contextual essays and metadata of this project are dedicated to the public domain (<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0</a>), so they are yours to use as a jumping-off point - no need to ask. The Latin texts themselves are public domain (Migne, Patrologia Latina). The project's white papers and system documentation are CC BY 4.0, and the site code is MIT. If you want to credit my work or just let me know this was helpful, that's always appreciated but not required.</em></p>
 
   <hr style="width: 70%; margin: 30px auto; border: none; border-top: 1px solid #c0b283;">
 
-  <!-- About the curator -->
-  <h3>About the curator</h3>
+  <!-- About Me Section -->
+  <h3>About Me</h3>
 
   <div class="about-me">
     <div class="circular-photo-container">
       <img src="{{ '/assets/images/ryan-photo.jpg' | relative_url }}" alt="Ryan Wolfslayer" class="profile">
     </div>
-
-    <p>Bibliothecarius Modernus is built and curated by Ryan Wolfslayer, a librarian (MSLIS, University of Illinois at Urbana-Champaign) who has spent close to a decade working in digital librarianship, metadata and scholarly infrastructure, and who programs in Python. The library is the natural work of that training: collection development, cataloguing and stable identifiers, provenance, rights, preservation, and interoperability with the repositories and tools that researchers actually use. The interest in the texts themselves is personal — years of reading theology and church history — and the library is an independent project.</p>
+    
+    <p>Hi, I'm Ryan Wolfslayer, the person behind Bibliothecarius Modernus. For those who are interested, I am a trained librarian with an MSLIS from the University of Illinois at Urbana-Champaign. I've been working in digital librarianship for close to ten years and am an avid Python programmer. In my free time I read entirely too much theology, which is what directly inspired this project.</p>
     <p>ORCID: <a href="https://orcid.org/0000-0001-8914-9706" target="_blank">0000-0001-8914-9706</a></p>
   </div>
 
   <!-- Connect Section (consolidated) -->
   <h3>Connect & Contribute</h3>
   
-  <p>Corrections, references to existing translations or editions, and requests for works are welcome. If you know of a scholarly translation of a work published here, please say so; the edition page will point to it.</p>
+  <p>Community engagement is the best part of the process, and I look forward to many discussions, corrections, and new theological or historical insights. If you know of existing scholarly translations, please share this information.</p>
   
   <div class="contact-methods">
     <p>
