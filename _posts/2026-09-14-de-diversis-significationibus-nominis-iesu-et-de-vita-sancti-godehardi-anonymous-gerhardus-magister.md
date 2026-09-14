@@ -3,7 +3,7 @@ layout: tabbed_post
 title: "De diversis significationibus nominis Iesu et De vita sancti Godehardi (c. 13th century)"
 date: 2026-09-14
 listed: false
-categories: [hagiography, homiletics, medieval-theology]
+categories: [homiletics, hagiography, medieval-theology]
 youtube_id: "FaiCvzt55bY"
 translation_json: "/assets/translations/2026-09-14-de-diversis-significationibus-nominis-iesu-et-de-vita-sancti-godehardi-anonymous-gerhardus-magister.json"
 original_work:
@@ -45,13 +45,13 @@ content_license: "CC0-1.0"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-  Two thirteenth-century devotional texts that illuminate medieval approaches to sacred nomenclature and local sanctity: an anonymous treatise exploring the spiritual meanings of Jesus's name, and a sermon by Magister Gerhardus on Saint Godehard of Hildesheim. Together they demonstrate how theological reflection and hagiographical preaching served monastic spiritual formation in medieval Germany.
+  Two 13th-century devotional texts comprising a compilation on the mystical meanings of the name Jesus and a sermon on Saint Godehard of Hildesheim. These works illuminate medieval exegetical methods and local hagiographical traditions, demonstrating how theological speculation and regional sanctity intersected in monastic spiritual literature.
 </p>
 
 <figure class="research-figure" style="margin: 20px auto; max-width: 640px; text-align: center;">
-  <a href="https://diglib.hab.de/mss/602-helmst/start.htm?image=00034"><img src="https://diglib.hab.de/mss/602-helmst/00034.jpg" alt="Folio 16v preserves the rubric *Sermo magistri Gerardi* and the beginning of the Godehard sermon." style="max-width: 100%; border: 1px solid #c0b283; box-shadow: 0 1px 3px rgba(0,0,0,0.15);"></a>
+  <a href="https://diglib.hab.de/mss/602-helmst/start.htm?image=00034"><img src="https://diglib.hab.de/mss/602-helmst/00034.jpg" alt="Folio 16v preserves the rubric Sermo magistri Gerhardi and the beginning of the Godehard sermon." style="max-width: 100%; border: 1px solid #c0b283; box-shadow: 0 1px 3px rgba(0,0,0,0.15);"></a>
   <figcaption style="font-size: 0.9em; color: #5a4a3a; margin-top: 8px; text-align: left;">
-    <strong>Folio 16v preserves the rubric *Sermo magistri Gerardi* and the beginning of the Godehard sermon.</strong> — Herzog August Bibliothek Wolfenbüttel, second half of the 13th century. Relationship: direct evidence for this work.
+    <strong>Folio 16v preserves the rubric Sermo magistri Gerhardi and the beginning of the Godehard sermon.</strong> — Herzog August Bibliothek Wolfenbüttel, second half of the 13th century. Relationship: direct evidence for this work.
     <br>Image rights: public domain. Attribution: none required; recommended source credit: “Herzog August Bibliothek Wolfenbüttel: Cod. Guelf. 602 Helmst., f. 16v”. <a href="https://diglib.hab.de/mss/602-helmst/start.htm?image=00034">Source</a>.
     <br><em>This figure is third-party material under its own terms; the CC0 dedication of this page covers only the Bibliothecarius translation, essay and metadata.</em>
   </figcaption>
