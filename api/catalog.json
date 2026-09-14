@@ -2,7 +2,7 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-14T17:41:55Z",
+ "generated_at": "2026-09-14T17:42:47Z",
  "version": "export:2026-09-14;registry:2026-09-14",
  "publisher": {
   "name": "Bibliothecarius Modernus",
@@ -72340,7 +72340,7 @@
     "uncertain_passages_present": true
    },
    "translation_version": null,
-   "status": "in_progress",
+   "status": "published",
    "translated_by_bibliothecarius": true,
    "publications": [
     "pub-2883"
@@ -72373,7 +72373,7 @@
     "uncertain_passages_present": true
    },
    "translation_version": null,
-   "status": "in_progress",
+   "status": "published",
    "translated_by_bibliothecarius": true,
    "publications": [
     "pub-2883"
