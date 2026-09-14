@@ -2,6 +2,7 @@
 layout: tabbed_post
 title: "De diversis significationibus nominis Iesu et De vita sancti Godehardi (c. 13th century)"
 date: 2026-09-14
+publish_date: 2026-09-14
 listed: true
 categories: [homiletics, hagiography, medieval-theology]
 youtube_id: "FaiCvzt55bY"
