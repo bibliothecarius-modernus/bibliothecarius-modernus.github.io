@@ -1,5 +1,25 @@
+{%- comment -%}
+Resource Info tab (Phase 8B, D040). Identity and provenance rows are read from the post's
+front matter (v2 editions) and from _data/editions.json (the projection of api/catalog.json
+keyed by the post's path). Nothing is inferred from dates: an edition without a recorded
+model, research model or review status says so ("legacy edition", "not recorded").
+{%- endcomment -%}
+{%- assign edition = site.data.editions.by_path[page.url] -%}
+{%- assign catalog_id = page.catalog_id -%}
+{%- if catalog_id == nil and edition and edition.ambiguous != true -%}{%- assign catalog_id = edition.catalog_id -%}{%- endif -%}
+{%- assign translation_model = page.translation_model -%}
+{%- if translation_model == nil and edition -%}{%- assign translation_model = edition.translator_model -%}{%- endif -%}
+{%- assign review_status = page.review_status -%}
+{%- if review_status == nil and edition -%}{%- assign review_status = edition.review_status -%}{%- endif -%}
+{%- assign pl_volume = page.pl_volume -%}
+{%- if pl_volume == nil and edition -%}{%- assign pl_volume = edition.pl_volume -%}{%- endif -%}
+{%- assign pl_columns = page.pl_columns -%}
+{%- if pl_columns == nil and edition and edition.columns.start and edition.columns.end -%}{%- capture pl_columns -%}{{ edition.columns.start }}-{{ edition.columns.end }}{%- endcapture -%}{%- endif -%}
+{%- assign source_kind = page.source_kind | default: "migne-pl" -%}
+{%- assign is_v2 = false -%}
+{%- if page.translation_model or edition.generation == "v2" -%}{%- assign is_v2 = true -%}{%- endif -%}
 <div id="metadata" class="tab-panel">
-  <h3>Text & Translation Information</h3>
+  <h3>Resource Info</h3>
   <div class="metadata-container">
     <table class="metadata-table">
       <tr>
@@ -22,9 +42,15 @@
         <td>Latin</td>
       </tr>
       <tr>
-        <th>Publication</th>
-        <td>{{ page.original_work.publication }}</td>
+        <th>Source</th>
+        <td>{{ page.original_work.publication }}{% if pl_columns %}, cols. {{ pl_columns }}{% endif %}{% if source_kind == "migne-pl" %} (J.-P. Migne, <em>Patrologia Latina</em>, 1844–65; public domain){% elsif source_kind == "bibliothecarius-transcription" %} — Bibliothecarius Modernus transcription from manuscript images (see Manuscript source below){% elsif source_kind == "printed-edition" %} — printed edition, public domain{% endif %}</td>
       </tr>
+      {% if page.manuscript_source %}
+      <tr>
+        <th>Manuscript source</th>
+        <td>{{ page.manuscript_source.repository }}, {{ page.manuscript_source.shelfmark }}{% if page.manuscript_source.folios %}, ff. {{ page.manuscript_source.folios }}{% endif %}{% if page.manuscript_source.catalog_url %} (<a href="{{ page.manuscript_source.catalog_url }}" target="_blank">catalogue record</a>){% endif %}. Digital images: {{ page.manuscript_source.repository }}{% if page.manuscript_source.image_rights %} ({{ page.manuscript_source.image_rights }}){% endif %}. Latin transcription: Bibliothecarius Modernus{% if page.manuscript_source.transcription_date %}, {{ page.manuscript_source.transcription_date }}{% endif %} (CC0 1.0), made from the digitized images; not reviewed or endorsed by the holding institution.</td>
+      </tr>
+      {% endif %}
       <tr>
         <th>Context</th>
         <td>{{ page.original_work.context }}</td>
@@ -39,34 +65,44 @@
         </td>
       </tr>
       {% endif %}
-      
+
       <tr>
-        <th colspan="2" class="metadata-section">This Translation</th>
+        <th colspan="2" class="metadata-section">This Edition</th>
       </tr>
       <tr>
-        <th>Published</th>
-        <td>{{ page.date | date: "%B %-d, %Y" }}</td>
+        <th>Catalog id</th>
+        <td>{% if catalog_id %}<code>{{ catalog_id }}</code> — the library's stable identifier (Patrologia Latina volume and sequence; <a href="{{ '/api/README.md' | relative_url }}">machine-readable catalog</a>){% if edition.passages_available %}; passage locators <code>{{ catalog_id }}:c&lt;column&gt;:chunk-n</code> match the <code>#chunk-n</code> anchors of the Translation tab{% endif %}{% else %}not yet mapped to a catalog record (legacy edition){% endif %}</td>
       </tr>
-      {% assign cutoff_date = "2025-11-01" | date: "%s" %}
-      {% assign post_date = page.date | date: "%s" %}
+      {% if edition.publication_id and edition.ambiguous != true %}
       <tr>
-        <th>Translation Method</th>
-        <td>{% if page.translation_model %}AI translation using {{ page.translation_model }} with deterministic coverage QA, an independent cross-family model review and recorded human corrections{% elsif post_date >= cutoff_date %}AI translation using Claude 4.5 Sonnet with automated and human review safeguards{% else %}AI translation using ChatGPT-4o with automated and human review safeguards{% endif %}</td>
-      </tr>
-      {% if post_date >= cutoff_date %}
-      <tr>
-        <th>Research Method</th>
-        <td>{% if page.research_model %}Deep contextual research using {{ page.research_model }} (web-search-augmented), read against the cited sources by the curator{% else %}Deep contextual research using OpenAI o3 Deep Research{% endif %}</td>
+        <th>Catalog record</th>
+        <td><code>{{ edition.publication_id }}</code> in <a href="{{ '/api/catalog.json' | relative_url }}">api/catalog.json</a></td>
       </tr>
       {% endif %}
       <tr>
-        <th>Translation Goals</th>
-        <td>Accessibility and clarity while preserving original meaning</td>
+        <th>Published</th>
+        <td>{{ page.date | date: "%B %-d, %Y" }}{% if edition.generation == "v2" or page.translation_model %} (v2 edition){% elsif edition.generation and edition.generation != "legacy-unknown" %} ({{ edition.generation }} edition){% else %} (legacy edition, 2024–25 workflow){% endif %}</td>
       </tr>
       <tr>
-        <th>Content Includes</th>
-        <td>Latin text, English translation, contextual analysis</td>
+        <th>Translation</th>
+        <td>Bibliothecarius Modernus{% if translation_model %}, produced with <code>{{ translation_model }}</code>{% endif %}{% if is_v2 %}, in short source-anchored segments, checked by deterministic source-coverage validation, an independent review by a model of a different family, and corrections recorded by the curator with their Latin basis{% elsif translation_model %}, with the lighter checks of the 2024–25 workflow (no segment-level coverage check, no independent review){% else %} — model not recorded for this legacy edition (2024–25 workflow: AI-assisted translation with lighter checks and no per-segment provenance){% endif %}.</td>
       </tr>
+      {% if page.research_model or is_v2 %}
+      <tr>
+        <th>Research</th>
+        <td>{% if page.research_model %}Contextual research produced with <code>{{ page.research_model }}</code> (web-search-augmented), read against the cited sources by the curator{% if page.research_record %}, and kept as a verified claims record from which the introduction, description and metadata derive{% endif %}{% else %}Research model not recorded{% endif %}. {% if page.research_record %}Bibliography: see the end of the Analysis tab.{% endif %}</td>
+      </tr>
+      {% endif %}
+      <tr>
+        <th>Review status</th>
+        <td>{% if review_status %}<code>{{ review_status }}</code> — {% case review_status %}{% when "coverage-verified" %}every stretch of the Latin is accounted for in the English{% if is_v2 %}; an independent second-model review and the curator's recorded corrections are on file{% endif %}{% when "human-reviewed" %}the curator read the whole translation against the Latin{% when "spot-checked" %}the curator read selected passages against the Latin{% when "defect-recorded" %}a known defect is recorded (see below); the edition is kept with the defect stated rather than hidden{% when "unreviewed" %}no check has been recorded for this legacy edition{% else %}{{ review_status }}{% endcase %}{% else %}not recorded (legacy edition){% endif %}. A review status says what was checked; <strong>it is not a guarantee of perfect fidelity</strong> — verify crucial passages against the Latin. <a href="{{ '/about/' | relative_url }}#how-the-editions-are-made-and-checked">How editions are checked</a>.</td>
+      </tr>
+      {% if edition.known_defects.size > 0 %}
+      <tr>
+        <th>Known defects</th>
+        <td>{% for d in edition.known_defects %}{{ d.type }}: {{ d.missing_source_words }} source words not represented (coverage {{ d.coverage_pct }} %; found {{ d.found }}){% unless forloop.last %}<br>{% endunless %}{% endfor %}</td>
+      </tr>
+      {% endif %}
       <tr>
         <th>Categories</th>
         <td>
@@ -79,23 +115,32 @@
         <th>Permalink</th>
         <td>{% if page.external_resources.doi %}<a href="https://doi.org/{{ page.external_resources.doi }}">https://doi.org/{{ page.external_resources.doi }}</a>{% else %}<a href="{{ site.url }}{{ page.url }}">{{ site.url }}{{ page.url }}</a>{% endif %}</td>
       </tr>
-      
+
       <tr>
-        <th colspan="2" class="metadata-section">Usage Information</th>
+        <th colspan="2" class="metadata-section">Rights and Citation</th>
       </tr>
-      <!-- Conditionally show DOI if it exists -->
+      <tr>
+        <th>Rights</th>
+        <td>Translation, introduction and metadata: <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal</a> (public domain dedication by Bibliothecarius Modernus). Latin text: {% if source_kind == "bibliothecarius-transcription" %}public domain; the Bibliothecarius transcription is CC0; the manuscript images remain under the holding institution's terms{% else %}public domain (J.-P. Migne, <em>Patrologia Latina</em>, 1844–65); no rights claimed{% endif %}.</td>
+      </tr>
+      <tr>
+        <th>Figures</th>
+        <td>Images reproduced in the introduction are third-party material under their own terms, stated in each caption (institution, date, rights, attribution); the CC0 dedication covers only the Bibliothecarius text and metadata.</td>
+      </tr>
+      <tr>
+        <th>Reuse</th>
+        <td>Use this translation freely — as a text, as data, or as the starting point for your own translation or scholarly edition. No permission is needed; attribution is appreciated, not required.{% if page.external_resources.doi %} The Zenodo record for this edition was deposited under CC BY 4.0 (2025); the CC0 dedication of the same content governs reuse.{% endif %}</td>
+      </tr>
         {% if page.external_resources.doi %}
         <tr>
         <th>DOI</th>
         <td><a href="https://doi.org/{{ page.external_resources.doi }}" target="_blank">{{ page.external_resources.doi }}</a></td>
         </tr>
         {% endif %}
-
-        <!-- Citation with conditional DOI logic and model attribution -->
         <tr>
         <th>Citation</th>
         <td>
-            {{ page.original_work.author }}. "{{ page.original_work.latin_title }}." Translation by Bibliothecarius Modernus using {% if page.translation_model %}{{ page.translation_model }}{% elsif post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %}, {{ page.date | date: "%-d %b. %Y" }},
+            {{ page.original_work.author }}. <em>{{ page.original_work.latin_title }}</em>. Bibliothecarius Modernus edition, {{ page.date | date: "%Y" }}{% if catalog_id %}, catalog id {{ catalog_id }}{% endif %}{% if translation_model %} (translation produced with {{ translation_model }}){% endif %}.
             {% if page.external_resources.doi %}
             DOI: <a href="https://doi.org/{{ page.external_resources.doi }}">{{ page.external_resources.doi }}</a>
             {% else %}
@@ -110,49 +155,37 @@
             <button class="action-btn" id="export-ris">RIS</button>
         </td>
         </tr>
-      <tr>
-        <th>License</th>
-        <td>Translation, contextual essay and metadata: <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal</a> (public domain dedication by Bibliothecarius Modernus). Latin text: public domain (J.-P. Migne, <em>Patrologia Latina</em>, 1844–65); no rights claimed.</td>
-      </tr>
-      <tr>
-        <th>Reuse</th>
-        <td>This translation may be freely used as a starting point for your own translations or scholarly work. Attribution is appreciated but not required.</td>
-      </tr>
-      <tr>
-        <th>Limitations</th>
-        <td>This AI-assisted translation is not intended as an authoritative scholarly edition. Readers are encouraged to verify crucial passages against the original Latin.</td>
-      </tr>
-      
+
       {% if page.youtube_id or page.external_resources.archive_url or page.external_resources.github_url %}
       <tr>
-        <th colspan="2" class="metadata-section">Additional Resources</th>
+        <th colspan="2" class="metadata-section">This Edition Elsewhere</th>
       </tr>
       {% if page.external_resources.archive_url %}
       <tr>
-        <th>Archive.org</th>
-        <td><a href="{{ page.external_resources.archive_url }}" target="_blank">Download the Audio File</a></td>
+        <th>Internet Archive</th>
+        <td><a href="{{ page.external_resources.archive_url }}" target="_blank">Audio edition and edition data (preserved)</a></td>
       </tr>
       {% endif %}
       {% if page.external_resources.github_url %}
       <tr>
-        <th>GitHub</th>
-        <td><a href="{{ page.external_resources.github_url }}" target="_blank">Plain text version and source files</a></td>
+        <th>Text corpus</th>
+        <td><a href="{{ page.external_resources.github_url }}" target="_blank">Latin source, English translation and translation.json on GitHub</a></td>
       </tr>
       {% endif %}
       {% if page.youtube_id %}
       <tr>
         <th>YouTube</th>
-        <td><a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank">Video presentation with Latin/English audio</a></td>
+        <td><a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank">Archival video edition (Latin on screen, English read aloud)</a></td>
       </tr>
       {% endif %}
       {% endif %}
     </table>
-    
+
     <div class="translation-notes">
-      <h4>About This Translation</h4>
-      <p>This translation is part of the Bibliothecarius Modernus project, which uses AI technology to make Latin Patristic texts more accessible to audiences beyond specialized Latin scholarship. The translation prioritizes clarity and readability while attempting to preserve the original meaning.</p>
-      <p>The parallel presentation of Latin and English texts is designed to provide transparency and allow readers to verify the translation. You can access this text in multiple formats through our Archive.org collection, GitHub repository, or YouTube channel (links in the Additional Resources section above).</p>
-      <p>If you're a translator interested in creating your own translation or scholarly edition based on this work, you are welcome to do so: the translation is dedicated to the public domain (CC0 1.0). No permission is needed, though acknowledgment is appreciated. Records deposited on Zenodo in 2025 carry a CC BY 4.0 statement as deposited; the CC0 dedication of the same content governs reuse.</p>
+      <h4>About this edition</h4>
+      <p>This edition is part of Bibliothecarius Modernus, an independent digital library of neglected Latin literature. Every edition is complete, shows the Latin beside the English so that the translation can be checked, and states its source, its method and its review status here. These are not critical editions, but they are documented, source-linked digital editions with explicit provenance and review status.</p>
+      <p>The same edition can be heard on the Internet Archive, watched on YouTube, and cloned from the open text corpus on GitHub (links above). Software can find it in the <a href="{{ '/api/README.md' | relative_url }}">machine-readable catalog</a>{% if catalog_id %} under <code>{{ catalog_id }}</code>{% endif %}.</p>
+      <p>Translators and scholars are welcome to build on this work: the translation, introduction and metadata are dedicated to the public domain (CC0 1.0). No permission is needed; acknowledgment is appreciated.</p>
     </div>
   </div>
 
@@ -169,7 +202,8 @@
       isoDate: "{{ page.date | date: '%Y-%m-%d' }}",
       doi: "{{ page.external_resources.doi }}",
       url: "{{ site.url }}{{ page.url }}",
-      aiModel: "{% if page.translation_model %}{{ page.translation_model }}{% elsif post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %}"
+      catalogId: "{{ catalog_id }}",
+      aiModel: "{{ translation_model }}"
     };
   </script>
 </div>

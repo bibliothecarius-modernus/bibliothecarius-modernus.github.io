@@ -20,8 +20,12 @@ external_resources:
 
 redirect_from:
   - "/asceticism-monasticism/visigothic-mozarabic-writings/hagiography/2025/04/10/sancti-valerii-abbatis-opuscula.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl087-018"
+pl_volume: 87
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 Comprehensive analysis of Saint Valerius of Bierzo's collected works preserved in Patrologia Latina Volume 87, revealing the spiritual, literary and historical significance of this late 7th-century Visigothic hermit-monk whose writings combine autobiographical narratives, visionary accounts, ascetic teachings, and innovative acrostic poetry during the final decades before the Islamic conquest of Spain.
 </p>

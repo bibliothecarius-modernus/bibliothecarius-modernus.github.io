@@ -19,8 +19,12 @@ external_resources:
 
 redirect_from:
   - "/post-nicene-fathers/heresiology/ecclesiastical-history/2025/05/08/de-eutychiana-haeresi.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl055-004"
+pl_volume: 55
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 Leo the Great's systematic treatise addressing the Eutychian controversy, chronicling the turbulent events from Eutyches' condemnation in 448 through the "Robber Council" of 449 to the triumph of orthodox Christology at Chalcedon in 451.
 </p>

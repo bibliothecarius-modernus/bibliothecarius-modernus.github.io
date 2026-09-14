@@ -83,6 +83,19 @@ document.addEventListener('DOMContentLoaded', function() {
   const savedView = safeGetItem('preferredView');
   const isMobile = window.innerWidth <= 768;
 
+  // A search hit on the Latin text arrives as ?lang=latin#chunk-n (scripts/build-search-index.mjs):
+  // open the Translation tab in the Latin view so the highlighted chunk is the one that matched.
+  const wantedLang = new URLSearchParams(window.location.search).get('lang');
+  if (wantedLang === 'latin' || wantedLang === 'english') {
+    const tabButton = document.querySelector('.tab-btn[data-target="translation"]');
+    if (tabButton) tabButton.click();
+    const viewButton = document.querySelector('.view-toggle-btn[data-view="' + wantedLang + '"]');
+    if (viewButton) viewButton.click();
+    const anchor = window.location.hash && document.querySelector(window.location.hash);
+    if (anchor) setTimeout(function () { anchor.scrollIntoView({ block: 'start' }); }, 300);
+    return;
+  }
+
   // Restore tab preference
   if (savedTab && document.getElementById(savedTab)) {
     const savedButton = document.querySelector('.tab-btn[data-target="' + savedTab + '"]');
@@ -473,7 +486,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (d.doi) {
       bibtex += `  doi = {${d.doi}},\n`;
     }
-    bibtex += `  note = {AI-assisted translation using ${d.aiModel}. Original work by ${d.author} (${d.originalDate}). Source: ${d.publication}},
+    bibtex += `  note = {Bibliothecarius Modernus edition${d.catalogId ? ', catalog id ' + d.catalogId : ''}${d.aiModel ? '; translation produced with ' + d.aiModel : ''}. Original work by ${d.author} (${d.originalDate}). Source: ${d.publication}. CC0 1.0},
   howpublished = {Bibliothecarius Modernus}
 }`;
     return bibtex;
@@ -492,7 +505,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'DA  - ' + d.isoDate.replace(/-/g, '/'),
       d.doi ? 'DO  - ' + d.doi : null,
       'UR  - ' + (d.doi ? 'https://doi.org/' + d.doi : d.url),
-      'N1  - AI-assisted translation using ' + d.aiModel + '. Original work by ' + d.author + ' (' + d.originalDate + '). Source: ' + d.publication,
+      'N1  - Bibliothecarius Modernus edition' + (d.catalogId ? ', catalog id ' + d.catalogId : '') + (d.aiModel ? '; translation produced with ' + d.aiModel : '') + '. Original work by ' + d.author + ' (' + d.originalDate + '). Source: ' + d.publication + '. CC0 1.0',
       'ER  - '
     ].filter(Boolean);
     return lines.join('\n');

@@ -960,3 +960,17 @@
     margin-top: 6pt;
   }
 }
+
+/* Related editions (Phase 8B) */
+.related-works {
+    margin: 30px 0;
+    padding: 20px 25px;
+    background-color: #f9f5ea;
+    border-left: 4px solid #B8860B;
+    border-radius: 0 6px 6px 0;
+}
+.related-works h3 { margin-top: 0; color: #8B4513; }
+.related-works .related-label { margin: 12px 0 4px; font-weight: 600; color: #3E2C1B; }
+.related-works ul { margin: 0 0 8px 20px; padding: 0; }
+.related-works li { margin-bottom: 4px; }
+.related-works .related-meta { color: #5a4a3a; font-size: 0.9em; }

@@ -21,8 +21,12 @@ external_resources:
 
 redirect_from:
   - "/ecclesiastical-history/canon-law/carolingian-theological-renaissance/2025/04/07/libellus-de-waldrada.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl121-039"
+pl_volume: 121
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 The <i>Libellus de Waldrada</i> is a 9th-century legal-theological brief authored by Bishop Adventius of Metz defending King Lothar II's attempt to divorce Queen Theutberga and legitimize his relationship with his mistress Waldrada. This partisan document reflects the tension between royal desire and ecclesiastical authority, ultimately provoking Pope Nicholas I's fierce opposition in a landmark case that strengthened papal claims over royal marriages and reinforced the Church's doctrine on matrimonial indissolubility.
 </p>

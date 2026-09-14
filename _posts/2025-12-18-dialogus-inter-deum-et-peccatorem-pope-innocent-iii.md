@@ -17,8 +17,12 @@ external_resources:
   doi: "10.5281/zenodo.17982649"
   archive_url: "https://archive.org/details/dialogue-between-god-and-sinner-innocent-iii"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_217"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl217-004"
+pl_volume: 217
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
   A 13th-century devotional dialogue between God and a sinner that explores themes of confession, divine mercy, and human redemption through direct theological conversation. This intimate spiritual work reflects the period's emphasis on personal penance and likely influenced pastoral approaches to confession during Innocent III's transformative papacy.
 </p>

@@ -19,9 +19,12 @@ external_resources:
 
 redirect_from:
   - "/liturgical-texts-sacramentaries/asceticism-monasticism/ecclesiastical-history/2025/05/24/exorcismus-ambrose.html"
+
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl017-015"
+pl_volume: 17
 ---
-
-
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 An ancient Latin exorcism prayer of unknown authorship, falsely attributed to St. Ambrose, representing one of the earliest recorded baptismal exorcism formulas from the Ambrosian liturgical tradition of Milan (c. 500-600 CE), featuring dramatic biblical imagery and Trinitarian theology in the preparation of catechumens for Christian initiation.
 </p>

@@ -18,8 +18,12 @@ external_resources:
 
 redirect_from:
   - "/asceticism-monasticism/post-nicene-fathers/mystical-theology/2025/06/28/libellus-de-laude-eremi-scholarly-analysis.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl050-009"
+pl_volume: 50
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 Eucherius of Lyon's epistle to Hilary of Arles defending the eremitical life through biblical precedents and classical rhetorical techniques, illustrating 5th-century Gallic monastic theology and its adaptation of Desert Father traditions.
 </p>

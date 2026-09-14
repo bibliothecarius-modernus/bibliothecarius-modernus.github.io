@@ -2,7 +2,7 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-14T02:29:08Z",
+ "generated_at": "2026-09-14T03:55:10Z",
  "version": "export:2026-09-14;registry:2026-09-14",
  "publisher": {
   "name": "Bibliothecarius Modernus",

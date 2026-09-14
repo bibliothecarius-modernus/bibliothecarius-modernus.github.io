@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-{% assign cutoff_date = "2025-11-01" | date: "%s" %}
-{% assign post_date = page.date | date: "%s" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,16 +50,17 @@ layout: default
     "name": {{ page.original_work.latin_title | jsonify }},
     "inLanguage": "la"
   },
-  "description": "AI-assisted English translation of {{ page.original_work.latin_title }} by {{ page.original_work.author }} ({{ page.original_work.date }}). Translated using {% if page.translation_model %}{{ page.translation_model }}{% elsif post_date >= cutoff_date %}Claude 4.5 Sonnet{% else %}ChatGPT-4o{% endif %} with human editorial oversight.",
+  "description": "Bibliothecarius Modernus edition of {{ page.original_work.latin_title }} by {{ page.original_work.author }} ({{ page.original_work.date }}): complete English translation with the Latin alongside, researched introduction, audio and video editions.{% if page.translation_model %} Translation produced with {{ page.translation_model }} under source-coverage validation, independent second-model review and recorded curator corrections.{% endif %}",
+  "creativeWorkStatus": "{% if page.review_status %}{{ page.review_status }}{% elsif site.data.editions.by_path[page.url].ambiguous != true and site.data.editions.by_path[page.url].review_status %}{{ site.data.editions.by_path[page.url].review_status }}{% else %}unreviewed{% endif %}",
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "isAccessibleForFree": true,
-  "conditionsOfAccess": "Translation, essay and metadata: CC0 1.0 (Bibliothecarius Modernus). Latin text: public domain (Migne, Patrologia Latina, 1844-65)."{% if page.external_resources.doi %},
-  "identifier": {
-    "@type": "PropertyValue",
-    "propertyID": "DOI",
-    "value": "{{ page.external_resources.doi }}"
-  },
-  "sameAs": "https://doi.org/{{ page.external_resources.doi }}"{% endif %},
+  "conditionsOfAccess": "Translation, essay and metadata: CC0 1.0 (Bibliothecarius Modernus). Latin text: public domain (Migne, Patrologia Latina, 1844-65).",
+  "identifier": [{% if page.external_resources.doi %}
+    { "@type": "PropertyValue", "propertyID": "DOI", "value": "{{ page.external_resources.doi }}" },{% endif %}{% if page.catalog_id %}
+    { "@type": "PropertyValue", "propertyID": "bibliothecarius-catalog-id", "value": "{{ page.catalog_id }}" },{% endif %}
+    { "@type": "PropertyValue", "propertyID": "URL", "value": "{{ site.url }}{{ page.url }}" }
+  ],{% if page.external_resources.doi %}
+  "sameAs": "https://doi.org/{{ page.external_resources.doi }}",{% endif %}
   "url": "{{ site.url }}{{ page.url }}"
 }
 </script>
@@ -206,10 +205,12 @@ layout: default
     </div>
   </div>
   
+  {% include related_works.html %}
+
   {% if page.youtube_id %}
   <div class="youtube-promo">
-    <h3>Watch this translation on YouTube</h3>
-    <p>Listen to the Latin with English translation and leave your thoughts in the comments.</p>
+    <h3>Watch the archival video edition</h3>
+    <p>The Latin on screen, the English read aloud. Comments and corrections are welcome there too.</p>
     <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" class="youtube-button" target="_blank">
       <svg class="youtube-icon" viewBox="0 0 24 24" width="24" height="24">
         <path fill="currentColor" d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34,.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58a8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34,.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>
@@ -219,8 +220,8 @@ layout: default
   </div>
   {% else %}
   <div class="youtube-promo">
-    <h3>Explore More Translations</h3>
-    <p>Find more Latin Patristic texts with audio on our YouTube channel.</p>
+    <h3>Explore the archival video editions</h3>
+    <p>The library's editions as videos: the Latin on screen, the English read aloud.</p>
     <a href="{{ site.youtube_username | prepend: 'https://youtube.com/@' }}" class="youtube-button" target="_blank">
       <svg class="youtube-icon" viewBox="0 0 24 24" width="24" height="24">
         <path fill="currentColor" d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34,.3,2.93,2.93,0,0,0-1.73,1A8.35,8.35,0,0,0,1,9.71a48.29,48.29,0,0,0,0,4.58a8.33,8.33,0,0,0,.92,4.13A3.09,3.09,0,0,0,3.66,19.5a78.24,78.24,0,0,0,8.34,.31,78.24,78.24,0,0,0,8.34-.31,3,3,0,0,0,1.73-1.07,8.32,8.32,0,0,0,.91-4.13,48.29,48.29,0,0,0,0-4.58ZM9.88,14.56V9.44l5.47,2.55Z"/>

@@ -15,8 +15,12 @@ original_work:
 external_resources:
   archive_url: "https://archive.org/details/honorius-augustodunensis-inevitabile"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_172/Honorius%20Augustodunensis%20-%20The%20Inevitable,%20or%20A%20Dialogue%20on%20Predestination%20and%20Free%20Will"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl172-018"
+pl_volume: 172
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
   A 12th-century theological dialogue examining the relationship between divine predestination and human free will through systematic question-and-answer format. This treatise contributed to medieval scholastic debates by attempting to reconcile Augustine's doctrine of predestination with the possibility of genuine human moral agency.
 </p>

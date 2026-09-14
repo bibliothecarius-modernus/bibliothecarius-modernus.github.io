@@ -1,5 +1,11 @@
 # Bibliothecarius Modernus — machine-readable catalog
 
+Bibliothecarius Modernus is an independent digital library of neglected Latin
+literature, publishing complete open translations, parallel texts, contextual
+research, audio and video editions, and machine-readable scholarly data — and,
+where the sources require it, new transcriptions from manuscripts. This file is
+the library's catalog for machine patrons.
+
 `/api/catalog.json` is a static, versioned export of the library's catalog for
 machine patrons (search agents, citation tools, other libraries). It carries
 identity and bibliographic metadata, the Patrologia Latina location of every
@@ -51,12 +57,26 @@ translation exists, video private/unlisted/none), `youtube_visibility`,
 `published_at`, `urls.{youtube,blog,archive,github}`, `doi`,
 `provenance` (`generation` gen1/gen2/gen3/v2/legacy-unknown, `translator_model`,
 `translation_date` and its source, `source_check`, `translation_qa`),
-`review` (`status`: `unreviewed` · `spot-checked` · `coverage-verified` — a
-deterministic source-coverage check passed, which is not a fidelity claim ·
-`defect-recorded` — a known defect is listed · `human-reviewed`; `known_defects[]`
+`review` (`status`, the same vocabulary the edition pages show: `unreviewed` — no
+check recorded (most 2024–25 editions) · `spot-checked` — the curator read
+passages · `coverage-verified` — a deterministic source-coverage check passed
+and, for v2 editions, an independent review by a second model family with the
+curator's recorded corrections; **not a guarantee of fidelity** · `defect-recorded` —
+a known defect is listed · `human-reviewed` — the curator read the whole
+translation against the Latin; errors remain possible; `known_defects[]`
 with type, coverage and a reference to the evidence), `rights` (per publication: `CC0-1.0`,
 `declared`; a note where a 2025 Zenodo record carries CC BY 4.0 as deposited), `locators`, `related` (same author, neighbours in the
 volume), `version` (the registry row's last update).
+
+Terminology matches the human-facing pages: an *edition* is one Bibliothecarius
+publication of a work (`publications[]`); *translation* is the English text;
+*source text* is the public-domain Latin (`source_kind` in a v2 `translation.json`:
+`migne-pl`, `printed-edition`, `bibliothecarius-transcription`, `third-party-ocr-htr`);
+*catalog id* is `plNNN-SSS`; *review status* is `review.status`.
+
+A smaller projection of `publications[]` keyed by website path,
+`/_data/editions.json` (not served as an API; it feeds the edition pages'
+Resource Info and related-works blocks), is written by the same export.
 
 Known defects are published deliberately: twelve pipeline-era translations are
 missing a contiguous stretch of their Latin source (found 2026-09-13); each is

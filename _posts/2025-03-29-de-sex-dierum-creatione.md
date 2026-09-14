@@ -21,8 +21,12 @@ external_resources:
 
 redirect_from:
   - "/old-testament-commentaries/post-nicene-fathers/ecclesiastical-history/2025/03/29/de-sex-dierum-creatione.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl093-003"
+pl_volume: 93
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 Latin text and English translation of "On the Six Days of Creation," a medieval treatise attributed to Bede that systematically examines the Genesis creation narrative through patristic sources, offering theological interpretations of each creation day from the genesis of light to the Sabbath rest.
 </p>
@@ -51,7 +55,6 @@ Lesser-known but important influences include **Eucherius of Lyon** (5th c.), wh
 It’s worth noting that the compiler was not merely stringing quotations randomly, but likely **following the Genesis text sequentially** and pulling in the best from each Father for each verse or topic. For instance, Day 6 (creation of animals and man) might combine Augustine’s musings on the image of God in man with Ambrose’s description of Adam’s formation and Isidore’s allegory of animals representing virtues/vices subdued by man’s reason. A subtle influence is how the compiler handles differing opinions: any divergences between sources are smoothed out. Augustine’s and Ambrose’s views on the nature of the “days” did differ, but the compilation doesn’t highlight the conflict; instead, it likely presents Augustine’s take in one place and Ambrose’s in another, without comment, leaving the reader to absorb both. This reflects the medieval respect for all authorities – **apparent contradictions were often left to stand, trusting the reader or tradition to harmonize them**. In summary, *De Sex Dierum Creatione* is deeply indebted to earlier Christian thought. It **engages with existing theological traditions by literally incorporating them**, acting as a digest of centuries of Genesis interpretation. Through it, the voice of Augustine, Ambrose, and others continued to be heard in the  ninth-century classroom and monastery.
 
 ## Exegetical Method  
- [image](blob:https://chatgpt.com/bdaeff86-2ab1-4bd4-ad71-08696d49fe9c)
  
  *Medieval diagram of the Six Days of Creation, with textual commentary in concentric circles (The Hague, KB 72 A 23, fol. 36r). Such schematic illustrations reflect the kind of synthesized exegesis found in "De Sex Dierum Creatione," integrating literal and allegorical interpretations for each day.*  
 

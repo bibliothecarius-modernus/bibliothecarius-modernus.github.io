@@ -21,8 +21,12 @@ external_resources:
 
 redirect_from:
   - "/liturgical-texts-sacramentaries/ecclesiastical-history/visigothic-mozarabic-writings/2025/03/19/exposito-brevis-antiquae-liturgiae-gallicanae.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl072-005"
+pl_volume: 72
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 Examines the ancient Gallican liturgy, with its distinctive ceremonial elements and theological symbolism that differed significantly from the Roman Rite before Carolingian reforms.
 </p>

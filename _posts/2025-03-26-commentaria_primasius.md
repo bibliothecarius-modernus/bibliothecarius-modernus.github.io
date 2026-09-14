@@ -21,9 +21,12 @@ external_resources:
 
 redirect_from:
   - "/new-testament-commentaries/eschatology/post-nicene-fathers/2025/03/26/commentaria_primasius.html"
+
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl068-016"
+pl_volume: 68
 ---
-
-
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 Primasius of Hadrumetum's "Commentary on Revelation" represents a pivotal 6th-century work that preserved Tyconius's interpretive approach while purging it of Donatist elements. Drawing on Augustine's amillennial theology, Primasius reads Revelation allegorically as depicting the Church's spiritual struggle against evil rather than a chronological end-times prophecy. His commentary became foundational for medieval apocalyptic interpretation, influencing Bede, Ambrosius Autpertus, and Beatus of Liébana while serving as a crucial witness to the pre-Vulgate Latin text of Revelation.
 </p>

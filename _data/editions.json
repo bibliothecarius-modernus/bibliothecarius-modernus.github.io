@@ -1,0 +1,2255 @@
+{
+ "schema": "bibliothecarius.editions/1",
+ "generated_at": "2026-09-14T03:55:10Z",
+ "source": "projection of api/catalog.json publications[] keyed by website path (Phase 8B)",
+ "rights": "CC0-1.0",
+ "by_path": {
+  "/2025/11/libellus-de-crassitudine-sphaerae/": {
+   "catalog_id": "pl140-010",
+   "publication_id": "pub-2590",
+   "part_id": null,
+   "pl_volume": 140,
+   "columns": {
+    "start": 1103,
+    "end": null
+   },
+   "author": "Adelbold of Utrecht",
+   "title_latin": "Libellus de Ratione Inveniendi Crassitudinem Sphaerae",
+   "title_english": "Treatise on Finding the Thickness of a Sphere",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-11-26T05:08:56Z",
+   "doi": "10.5281/zenodo.17982639",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=44vqTfEStio",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/11/libellus-de-crassitudine-sphaerae/",
+    "archive": "https://archive.org/details/adelbold-treatise-sphere-thickness",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_140/Adelbold%20of%20Utrecht%20-%20Treatise%20on%20Finding%20the%20Thickness%20of%20a%20Sphere"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/04/libellus-de-waldrada/": {
+   "catalog_id": "pl121-039",
+   "publication_id": "pub-2593",
+   "part_id": null,
+   "pl_volume": 121,
+   "columns": {
+    "start": 1141,
+    "end": null
+   },
+   "author": "Adventius, Bishop of Metz",
+   "title_latin": "Libellus de Waldrada",
+   "title_english": "Little Book on Waldrada",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-11-01T10:00:37Z",
+   "doi": "10.5281/zenodo.17982597",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=XSkZR5X8h8I",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/libellus-de-waldrada/",
+    "archive": "https://archive.org/details/little-book-on-waldrada",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_121/Adventius%2C%20Bishop%20of%20Metz%20-%20Little%20Book%20on%20Waldrada"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/liber-de-grandine/": {
+   "catalog_id": null,
+   "publication_id": null,
+   "part_id": null,
+   "pl_volume": null,
+   "columns": null,
+   "author": "Agobard of Lyon",
+   "title_latin": "Liber de Grandine et Tonitruis",
+   "title_english": "Book on Hail and Thunder",
+   "generation": null,
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-08-23T10:00:57Z",
+   "doi": "10.5281/zenodo.17982591",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=ryWZe_16cwg",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/liber-de-grandine/",
+    "archive": "https://archive.org/details/book-on-hail-and-thunder",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_104/Agobard%20of%20Lyon%20-%20Book%20on%20Hail%20and%20Thunder"
+   },
+   "passages_available": null,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false,
+   "vetoed": true
+  },
+  "/2025/12/de-planctu-naturae-alain-de-lille-alanus-de-insulis/": {
+   "catalog_id": "pl210-010",
+   "publication_id": "pub-2596",
+   "part_id": null,
+   "pl_volume": 210,
+   "columns": {
+    "start": 431,
+    "end": 482
+   },
+   "author": "Alain de Lille",
+   "title_latin": "De Planctu Naturae",
+   "title_english": "The Plaint of Nature",
+   "generation": "gen2",
+   "translator_model": null,
+   "translation_date": "2025-12-16",
+   "review_status": "defect-recorded",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [
+    {
+     "type": "omission",
+     "coverage_pct": 54.82,
+     "missing_source_words": 7224,
+     "found": "2026-09-13",
+     "ref": "docs/v2/experiments/HISTORICAL_COVERAGE_SCAN_2026.md (Phase 1, 2026-09-13)"
+    }
+   ],
+   "rights": "CC0-1.0",
+   "published_at": "2025-12-17T23:34:28Z",
+   "doi": "10.5281/zenodo.17982645",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=ed0n_UFGJWQ",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/12/de-planctu-naturae-alain-de-lille-alanus-de-insulis/",
+    "archive": "https://archive.org/details/de-planctu-naturae-alan-of-lille",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_210/Alain%20de%20Lille%20-%20The%20Plaint%20of%20Nature"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/04/versus-de-cuculo-alcuin-of-york/": {
+   "catalog_id": "pl101-004",
+   "publication_id": "pub-2597",
+   "part_id": "pl101-004/versus-de-cuculo",
+   "pl_volume": 101,
+   "columns": {
+    "start": 803,
+    "end": 805
+   },
+   "author": "Alcuin of York",
+   "title_latin": "Versus de Cuculo",
+   "title_english": "Verses on the Cuckoo",
+   "generation": "gen3",
+   "translator_model": "claude-sonnet-4.5",
+   "translation_date": "2026-04-15",
+   "review_status": "coverage-verified",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2026-04-15",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=BXePSn0j0_A",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/04/versus-de-cuculo-alcuin-of-york/",
+    "archive": "https://archive.org/details/verses-on-the-cuckoo",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_101/Alcuin%20of%20York%20-%20Verses%20on%20the%20Cuckoo"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/05/exorcismus-ambrose/": {
+   "catalog_id": "pl017-015",
+   "publication_id": "pub-2599",
+   "part_id": null,
+   "pl_volume": 17,
+   "columns": {
+    "start": 1019,
+    "end": null
+   },
+   "author": "Ambrose of Milan",
+   "title_latin": "Exorcismus",
+   "title_english": "Exorcism",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-05-21T12:55:49Z",
+   "doi": "10.5281/zenodo.17982625",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=uSARcV6mxW4",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/05/exorcismus-ambrose/",
+    "archive": "https://archive.org/details/exorcism_202505",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_17/Ambrose%20of%20Milan%20-%20Exorcism"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/04/liber-de-cenceptu-virginali/": {
+   "catalog_id": "pl158-009",
+   "publication_id": "pub-2607",
+   "part_id": null,
+   "pl_volume": 158,
+   "columns": {
+    "start": 431,
+    "end": null
+   },
+   "author": "Anselm of Canterbury",
+   "title_latin": "Liber de cenceptu virginali et originali peccato",
+   "title_english": "Book on the Virgin Conception",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-04-21T10:01:08Z",
+   "doi": "10.5281/zenodo.17982613",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=hgSPaJGgsTo",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/liber-de-cenceptu-virginali/",
+    "archive": "https://archive.org/details/book-on-the-virgin-conception",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_158/Anselm%20of%20Canterbury%20-%20Book%20on%20the%20Virgin%20Conception"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/07/conflictus-de-deo-trino-uno-theological-historical-analysis/": {
+   "catalog_id": "pl053-004",
+   "publication_id": "pub-2608",
+   "part_id": null,
+   "pl_volume": 53,
+   "columns": {
+    "start": 239,
+    "end": null
+   },
+   "author": "Arnobius the Younger",
+   "title_latin": "Conflictus de Deo Trino et Uno Liber Primus",
+   "title_english": "Conflicts on the Trinity Book One",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-07-02T10:01:34Z",
+   "doi": "10.5281/zenodo.17982635",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=oXz9YxwZqc4",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/07/conflictus-de-deo-trino-uno-theological-historical-analysis/",
+    "archive": "https://archive.org/details/conflicts-on-the-trinity-book-one",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_53/Arnobius%20the%20Younger%20-%20Conflicts%20on%20the%20Trinity%20Book%20One"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/05/polypticum-quod-appellatur-perpendiculum-textus-alter-atto-of-vercelli/": {
+   "catalog_id": "pl134-006",
+   "publication_id": "pub-2611",
+   "part_id": null,
+   "pl_volume": 134,
+   "columns": {
+    "start": 881,
+    "end": 892
+   },
+   "author": "Atto of Vercelli",
+   "title_latin": "Polypticum quod appellatur Perpendiculum (textus alter)",
+   "title_english": "The Polypticum which is called Perpendiculum (alternative recension)",
+   "generation": "gen3",
+   "translator_model": "claude-sonnet-4.5",
+   "translation_date": "2026-05-01",
+   "review_status": "coverage-verified",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2026-05-11",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=4IdooTf19bQ",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/05/polypticum-quod-appellatur-perpendiculum-textus-alter-atto-of-vercelli/",
+    "archive": "https://archive.org/details/atto-vercelli-polypticum-textus-alter",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_134/Atto%20of%20Vercelli%20-%20The%20Polypticum%20which%20is%20called%20Perpendiculum%20%28alternative%20recension%29"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/12/epistolae-tres-bulgaranus-comes/": {
+   "catalog_id": null,
+   "publication_id": "pub-2617;pub-2623;pub-2710;pub-2727;pub-2757",
+   "part_id": null,
+   "pl_volume": null,
+   "columns": null,
+   "author": null,
+   "title_latin": null,
+   "title_english": null,
+   "generation": null,
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": null,
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=u-WBXrP2QtY",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/12/epistolae-tres-bulgaranus-comes/",
+    "archive": "https://archive.org/details/bulgaranus-epistolae-tres",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Bulgaranus%20Comes%20-%20Three%20Letters"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl051-010",
+     "title": "Confession",
+     "url": "https://bibliothecarius-modernus.github.io/2025/03/confessio-et-confessio-prolixior/"
+    }
+   ],
+   "adjacent": [
+    {
+     "catalog_id": "pl080-032",
+     "title": "The Second Book of Sentences",
+     "url": "https://bibliothecarius-modernus.github.io/2026/01/sententiarum-liber-primus/",
+     "position": "prev"
+    },
+    {
+     "catalog_id": "pl080-032",
+     "title": "Sententiarum Libri Quinque (c. 7th century)",
+     "url": "https://bibliothecarius-modernus.github.io/2026/01/sententiarum-libri-quinque-taio-of-zaragoza/",
+     "position": "prev"
+    },
+    {
+     "catalog_id": "pl080-032",
+     "title": "Sententiarum Libri Quinque (c. 7th century) — Book II",
+     "url": "https://bibliothecarius-modernus.github.io/2026/01/sententiarum-libri-quinque-taio-of-zaragoza/",
+     "position": "prev"
+    },
+    {
+     "catalog_id": "pl080-032",
+     "title": "Sententiarum Libri Quinque (c. 7th century) — Book III",
+     "url": "https://bibliothecarius-modernus.github.io/2026/01/sententiarum-libri-quinque-taio-of-zaragoza/",
+     "position": "prev"
+    },
+    {
+     "catalog_id": "pl080-032",
+     "title": "Sententiarum Libri Quinque (c. 7th century) — Book IV",
+     "url": "https://bibliothecarius-modernus.github.io/2026/01/sententiarum-libri-quinque-taio-of-zaragoza/",
+     "position": "prev"
+    },
+    {
+     "catalog_id": "pl080-032",
+     "title": "Sententiarum Libri Quinque (c. 7th century) — Book V",
+     "url": "https://bibliothecarius-modernus.github.io/2026/01/sententiarum-libri-quinque-taio-of-zaragoza/",
+     "position": "prev"
+    },
+    {
+     "catalog_id": "pl080-901",
+     "title": "On the Eight Vices",
+     "url": "https://bibliothecarius-modernus.github.io/2025/12/de-octo-vitiis-saint-eutropius-of-valencia/",
+     "position": "next"
+    }
+   ],
+   "ambiguous": true
+  },
+  "/2025/04/libellus-contra-maximum/": {
+   "catalog_id": "pl058-008",
+   "publication_id": "pub-2621",
+   "part_id": null,
+   "pl_volume": 58,
+   "columns": {
+    "start": 757,
+    "end": null
+   },
+   "author": "Cerealis of Castellensis",
+   "title_latin": "Libellus contra Maximum Arianum",
+   "title_english": "Booklet against Maximus the Arian",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-04-25T10:00:43Z",
+   "doi": "10.5281/zenodo.17982615",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=PfotBx6JKsg",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/libellus-contra-maximum/",
+    "archive": "https://archive.org/details/booklet-against-maximus-the-arian",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_58/Cerealis%20of%20Castellensis%20-%20Booklet%20against%20Maximus%20the%20Arian"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/06/libellus-de-laude-eremi-scholarly-analysis/": {
+   "catalog_id": "pl050-009",
+   "publication_id": "pub-2630",
+   "part_id": null,
+   "pl_volume": 50,
+   "columns": {
+    "start": 701,
+    "end": null
+   },
+   "author": "Eucherius of Lyon",
+   "title_latin": "Libellus de Laude Eremi",
+   "title_english": "Little Book on the Praise of the Hermitage",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-08-06T10:00:39Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=f9agxTyZwdc",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/06/libellus-de-laude-eremi-scholarly-analysis/",
+    "archive": "https://archive.org/details/little-book-on-the-praise-of-the-hermitage",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_50/Eucherius%20of%20Lyon%20-%20Little%20Book%20on%20the%20Praise%20of%20the%20Hermitage"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl050-013",
+     "title": "Passion of St. Maurice and Companions",
+     "url": "https://bibliothecarius-modernus.github.io/2025/04/passio-s-mauricii/"
+    }
+   ],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/04/passio-s-mauricii/": {
+   "catalog_id": "pl050-013",
+   "publication_id": "pub-2631",
+   "part_id": null,
+   "pl_volume": 50,
+   "columns": {
+    "start": 827,
+    "end": null
+   },
+   "author": "Eucherius of Lyon",
+   "title_latin": "Passio S. Mauricii et sociorum",
+   "title_english": "Passion of St. Maurice and Companions",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-08-10T10:00:43Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=jKYrw8S5Ufg",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/passio-s-mauricii/",
+    "archive": "https://archive.org/details/passion-of-st.-maurice-and-companions",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_50/Eucherius%20of%20Lyon%20-%20Passion%20of%20St.%20Maurice%20and%20Companions"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl050-009",
+     "title": "Little Book on the Praise of the Hermitage",
+     "url": "https://bibliothecarius-modernus.github.io/2025/06/libellus-de-laude-eremi-scholarly-analysis/"
+    }
+   ],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/12/de-octo-vitiis-saint-eutropius-of-valencia/": {
+   "catalog_id": "pl080-901",
+   "publication_id": "pub-2633",
+   "part_id": null,
+   "pl_volume": 80,
+   "columns": {
+    "start": 9,
+    "end": 18
+   },
+   "author": "Eutropius of Valencia",
+   "title_latin": "De Octo Vitiis",
+   "title_english": "On the Eight Vices",
+   "generation": "gen2",
+   "translator_model": null,
+   "translation_date": "2025-12-15",
+   "review_status": "unreviewed",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-12-15T23:00:25Z",
+   "doi": "10.5281/zenodo.17982643",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=dTD1ymDfGYA",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/12/de-octo-vitiis-saint-eutropius-of-valencia/",
+    "archive": "https://archive.org/details/de-octo-vitiis-eutropius-valencia",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Eutropius%20of%20Valencia%20-%20On%20the%20Eight%20Vices"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [
+    {
+     "catalog_id": "pl080-900",
+     "title": "Three Letters",
+     "url": "https://bibliothecarius-modernus.github.io/2025/12/epistolae-tres-bulgaranus-comes/",
+     "position": "prev"
+    }
+   ],
+   "ambiguous": false
+  },
+  "/2025/05/sermones/": {
+   "catalog_id": null,
+   "publication_id": "pub-2635;pub-2644;pub-2708;pub-2709",
+   "part_id": null,
+   "pl_volume": null,
+   "columns": null,
+   "author": null,
+   "title_latin": null,
+   "title_english": null,
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": null,
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=3zdD_OtCzHs",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/05/sermones/",
+    "archive": "https://archive.org/details/eight-sermons-by-faustus-of-riez",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_58/Faustus%20of%20Riez%20-%20Eight%20Sermons"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl065-016",
+     "title": "On Faith",
+     "url": "https://bibliothecarius-modernus.github.io/2025/05/fulgentius-de-fide/"
+    }
+   ],
+   "adjacent": [
+    {
+     "catalog_id": "pl209-002",
+     "title": "Sermons on Various Subjects",
+     "url": "https://bibliothecarius-modernus.github.io/2025/05/sermones/",
+     "position": "next"
+    },
+    {
+     "catalog_id": "pl209-001",
+     "title": "Sermons on the Saints",
+     "url": "https://bibliothecarius-modernus.github.io/2025/05/sermones/",
+     "position": "prev"
+    }
+   ],
+   "ambiguous": true
+  },
+  "/2025/04/liber-adversus-joannem-scotum/": {
+   "catalog_id": "pl119-006",
+   "publication_id": "pub-2638",
+   "part_id": null,
+   "pl_volume": 119,
+   "columns": {
+    "start": 101,
+    "end": null
+   },
+   "author": "Florus of Lyon",
+   "title_latin": "Liber adversus Joannem Scotum",
+   "title_english": "Book against John Scotus",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-01-06T11:00:27Z",
+   "doi": "10.5281/zenodo.17982601",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=OpAmSWjh77k",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/liber-adversus-joannem-scotum/",
+    "archive": "https://archive.org/details/book-against-john-scotus",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_119/Florus%20of%20Lyon%20-%20Book%20against%20John%20Scotus"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/05/fulgentius-de-fide/": {
+   "catalog_id": "pl065-016",
+   "publication_id": "pub-2640",
+   "part_id": null,
+   "pl_volume": 65,
+   "columns": {
+    "start": 671,
+    "end": null
+   },
+   "author": "Fulgentius of Ruspe",
+   "title_latin": "De Fide ad Petrum",
+   "title_english": "On Faith",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-06-20T23:19:18Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=Dn4WhiCWPis",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/05/fulgentius-de-fide/",
+    "archive": "https://archive.org/details/on-faith-fulgentius",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_65/Fulgentius%20of%20Ruspe%20-%20On%20Faith"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl065-021",
+     "title": "Two unpublished sermons",
+     "url": "https://bibliothecarius-modernus.github.io/2025/05/sermones/"
+    }
+   ],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/confessio-et-confessio-prolixior/": {
+   "catalog_id": null,
+   "publication_id": "pub-2648;pub-2755",
+   "part_id": null,
+   "pl_volume": null,
+   "columns": null,
+   "author": null,
+   "title_latin": null,
+   "title_english": null,
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": null,
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=kuOpVJZ6dG4",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/confessio-et-confessio-prolixior/",
+    "archive": "https://archive.org/details/confession-and-extended-confession",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_121/Gottschalk%20of%20Orbais%20-%20Confession%20and%20Extended%20Confession"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl051-001",
+     "title": "The Epistles and Commentaries of Prosper of Aquitaine",
+     "url": "https://bibliothecarius-modernus.github.io/2025/12/epistolae-tres-bulgaranus-comes/"
+    }
+   ],
+   "adjacent": [],
+   "ambiguous": true
+  },
+  "/2025/03/concilium-rhemense-seulfus/": {
+   "catalog_id": null,
+   "publication_id": "pub-2666;pub-2803",
+   "part_id": null,
+   "pl_volume": 132,
+   "columns": null,
+   "author": null,
+   "title_latin": null,
+   "title_english": null,
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": null,
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=T2t1Fkm_Ct4",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/concilium-rhemense-seulfus/",
+    "archive": "https://archive.org/details/the-rheims-council-presided-by-hervaeus",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_132/Hervaeus%20of%20Rheims%20-%20The%20Rheims%20Council%20Presided%20by%20Hervaeus"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": true
+  },
+  "/2025/03/liber-de-synodis-seu-fide-orientalium/": {
+   "catalog_id": "pl010-002",
+   "publication_id": "pub-2671",
+   "part_id": null,
+   "pl_volume": 10,
+   "columns": {
+    "start": 471,
+    "end": null
+   },
+   "author": "Hilary of Poitiers",
+   "title_latin": "Liber de Synodis seu Fide Orientalium",
+   "title_english": "Book on the Synods or the Faith of the Easterners",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-03-31T22:29:42Z",
+   "doi": "10.5281/zenodo.17982583",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=VSceYHnbL2g",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/liber-de-synodis-seu-fide-orientalium/",
+    "archive": "https://archive.org/details/book-on-the-synods-or-the-faith-of-the-easterners",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_10/Hilary%20of%20Poitiers%20-%20Book%20on%20the%20Synods%20or%20the%20Faith%20of%20the%20Easterners"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/12/sermones-tres-in-nativitate-domini-hildebert-of-lavardin/": {
+   "catalog_id": null,
+   "publication_id": "pub-2676;pub-2719",
+   "part_id": null,
+   "pl_volume": null,
+   "columns": null,
+   "author": null,
+   "title_latin": null,
+   "title_english": null,
+   "generation": null,
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "defect-recorded",
+   "review_checked_at": null,
+   "known_defects": [
+    {
+     "type": "omission",
+     "coverage_pct": 91.44,
+     "missing_source_words": 408,
+     "found": "2026-09-13",
+     "ref": "docs/v2/experiments/HISTORICAL_COVERAGE_SCAN_2026.md (Phase 1, 2026-09-13)"
+    }
+   ],
+   "rights": "CC0-1.0",
+   "published_at": null,
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=mPHeN5t4qnY",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/12/sermones-tres-in-nativitate-domini-hildebert-of-lavardin/",
+    "archive": "https://archive.org/details/sermones-tres-nativitate-domini-hildebert",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_171/Hildebert%20of%20Lavardin%20-%20Three%20Sermons%20on%20the%20Nativity%20of%20the%20Lord"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": true
+  },
+  "/2025/04/explanatio-in-ferculum-salomonis/": {
+   "catalog_id": "pl125-007",
+   "publication_id": "pub-2677",
+   "part_id": null,
+   "pl_volume": 125,
+   "columns": {
+    "start": 817,
+    "end": null
+   },
+   "author": "Hincmar of Reims",
+   "title_latin": "Explanatio in Ferculum Salomonis",
+   "title_english": "Explanation on the Vessel of Solomon",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-11-08T11:00:05Z",
+   "doi": "10.5281/zenodo.17982609",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=3KBp38ROsXU",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/explanatio-in-ferculum-salomonis/",
+    "archive": "https://archive.org/details/explanation-on-the-vessel-of-solomon",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_125/Hincmar%20of%20Reims%20-%20Explanation%20on%20the%20Vessel%20of%20Solomon"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/epistola-consolatoria-honoratusantoninus/": {
+   "catalog_id": "pl050-006",
+   "publication_id": "pub-2678",
+   "part_id": null,
+   "pl_volume": 50,
+   "columns": {
+    "start": 567,
+    "end": null
+   },
+   "author": "Honoratus Antoninus",
+   "title_latin": "Epistola consolatoria ad Arcadium",
+   "title_english": "Consolatory Letter to Arcadius",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-08-03T10:00:01Z",
+   "doi": "10.5281/zenodo.17982575",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=11SnNFY7vfM",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/epistola-consolatoria-honoratusantoninus/",
+    "archive": "https://archive.org/details/consolatory-letter-to-arcadius",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_50/Honoratus%20Antoninus%20-%20Consolatory%20Letter%20to%20Arcadius"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/06/inevitabile-sive-dialogus-de-praedestinatione-et-libero-arbitrio-honorius-augustodunensis/": {
+   "catalog_id": "pl172-018",
+   "publication_id": "pub-2679",
+   "part_id": null,
+   "pl_volume": 172,
+   "columns": {
+    "start": 1197,
+    "end": 1222
+   },
+   "author": "Honorius Augustodunensis",
+   "title_latin": "Inevitabile sive Dialogus de Praedestinatione et Libero Arbitrio",
+   "title_english": "The Inevitable, or A Dialogue on Predestination and Free Will",
+   "generation": "gen3",
+   "translator_model": "claude-sonnet-4.5",
+   "translation_date": "2026-06-01",
+   "review_status": "unreviewed",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2026-06-02",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=k2O2uouONFI",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/06/inevitabile-sive-dialogus-de-praedestinatione-et-libero-arbitrio-honorius-augustodunensis/",
+    "archive": "https://archive.org/details/honorius-augustodunensis-inevitabile",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_172/Honorius%20Augustodunensis%20-%20The%20Inevitable%2C%20or%20A%20Dialogue%20on%20Predestination%20and%20Free%20Will"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl172-017",
+     "title": "Eight Questions on Angels and Man",
+     "url": "https://bibliothecarius-modernus.github.io/2026/09/libellus-octo-quaestionum-de-angelis-et-homine-honorius-augustodunensis/"
+    }
+   ],
+   "adjacent": [
+    {
+     "catalog_id": "pl172-017",
+     "title": "Eight Questions on Angels and Man",
+     "url": "https://bibliothecarius-modernus.github.io/2026/09/libellus-octo-quaestionum-de-angelis-et-homine-honorius-augustodunensis/",
+     "position": "prev"
+    }
+   ],
+   "ambiguous": false
+  },
+  "/2025/04/de-quatuor-voluntatibus-in-christo/": {
+   "catalog_id": "pl176-011",
+   "publication_id": "pub-2680",
+   "part_id": null,
+   "pl_volume": 176,
+   "columns": {
+    "start": 841,
+    "end": null
+   },
+   "author": "Hugh of Saint Victor",
+   "title_latin": "De Quatuor Voluntatibus in Christo",
+   "title_english": "On the Four Wills in Christ",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-06-21T22:29:42Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=qf-BkTxhQpU",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/de-quatuor-voluntatibus-in-christo/",
+    "archive": "https://archive.org/details/on-the-four-wills-in-christ",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_176/Hugh%20of%20Saint%20Victor%20-%20On%20the%20Four%20Wills%20in%20Christ"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/defensio-eruditionis-hieronymianae/": {
+   "catalog_id": "pl025-017",
+   "publication_id": "pub-2684",
+   "part_id": null,
+   "pl_volume": 25,
+   "columns": {
+    "start": 1577,
+    "end": null
+   },
+   "author": "Jerome of Stridon",
+   "title_latin": "Defensio Eruditionis Hieronymianae adversus Joannem Clericum",
+   "title_english": "Defense of the Learning of Jerome Against Jean Le Clerc",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-02-19T11:00:08Z",
+   "doi": "10.5281/zenodo.15073583",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=40fIiE9grXY",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/defensio-eruditionis-hieronymianae/",
+    "archive": "https://archive.org/details/defense-of-the-learning-of-jerome-against-jean-le-clerc",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_25/Jerome%20of%20Stridon%20-%20Defense%20of%20the%20Learning%20of%20Jerome%20Against%20Jean%20Le%20Clerc"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/11/de-cultu-imaginum/": {
+   "catalog_id": null,
+   "publication_id": null,
+   "part_id": null,
+   "pl_volume": null,
+   "columns": null,
+   "author": null,
+   "title_latin": null,
+   "title_english": null,
+   "generation": null,
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "defect-recorded",
+   "review_checked_at": null,
+   "known_defects": [
+    {
+     "type": "omission",
+     "coverage_pct": 75.37,
+     "missing_source_words": 3396,
+     "found": "2026-09-13",
+     "ref": "docs/v2/PHASE_2_CHECKPOINT.md (Jonas scan, 2026-09-13)"
+    },
+    {
+     "type": "omission",
+     "coverage_pct": 43.97,
+     "missing_source_words": 5196,
+     "found": "2026-09-13",
+     "ref": "docs/v2/PHASE_2_CHECKPOINT.md (Jonas scan, 2026-09-13)"
+    },
+    {
+     "type": "omission",
+     "coverage_pct": 51.33,
+     "missing_source_words": 4380,
+     "found": "2026-09-13",
+     "ref": "docs/v2/PHASE_2_CHECKPOINT.md (Jonas scan, 2026-09-13)"
+    }
+   ],
+   "rights": "CC0-1.0",
+   "published_at": null,
+   "doi": null,
+   "urls": {
+    "youtube": null,
+    "blog": "https://bibliothecarius-modernus.github.io/2025/11/de-cultu-imaginum/",
+    "archive": null,
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_106/Jonas%20of%20Orleans%20-%20De%20cultu%20imaginum%20Book%201"
+   },
+   "passages_available": null,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": true,
+   "vetoed": true
+  },
+  "/2025/05/epistola-ad-childebertum/": {
+   "catalog_id": "pl068-001",
+   "publication_id": "pub-2692",
+   "part_id": null,
+   "pl_volume": 68,
+   "columns": {
+    "start": 11,
+    "end": null
+   },
+   "author": "Leo of Sens",
+   "title_latin": "Epistola ad Childerbertum",
+   "title_english": "Letter to Childerbert",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-05-16T10:00:57Z",
+   "doi": "10.5281/zenodo.17982631",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=ZbM7vdt48fE",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/05/epistola-ad-childebertum/",
+    "archive": "https://archive.org/details/letter-to-childerbert",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68/Leo%20of%20Sens%20-%20Letter%20to%20Childerbert"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/05/de-eutychiana-haeresi/": {
+   "catalog_id": "pl055-004",
+   "publication_id": "pub-2695",
+   "part_id": null,
+   "pl_volume": 55,
+   "columns": {
+    "start": 183,
+    "end": null
+   },
+   "author": "Leo the Great",
+   "title_latin": "De Eutychiana haeresi et historia Liber I",
+   "title_english": "On the Heresy and History of the Manicheans Book One",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-02-26T11:01:14Z",
+   "doi": "10.5281/zenodo.17982617",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=tzr_yYbAreU",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/05/de-eutychiana-haeresi/",
+    "archive": "https://archive.org/details/on-the-heresy-and-history-of-the-eutychians-book-one",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Leo%20the%20Great%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Manicheans%20Book%20One"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl056-001",
+     "title": "On the Collection of Isidore Mercator — the False Decretals",
+     "url": "https://bibliothecarius-modernus.github.io/2026/06/de-collectione-isidori-mercatoris-pietro-girolamo-ballerini/"
+    }
+   ],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/epistolae-duae-mappinius/": {
+   "catalog_id": null,
+   "publication_id": "pub-2703;pub-2821",
+   "part_id": null,
+   "pl_volume": null,
+   "columns": null,
+   "author": null,
+   "title_latin": null,
+   "title_english": null,
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": null,
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=XAKzgRgQoJw",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/epistolae-duae-mappinius/",
+    "archive": "https://archive.org/details/two-letters-of-mapinius-of-reims",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68/Mapinius%20of%20Reims%20-%20Two%20Letters%20of%20Mapinius%20of%20Reims"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": true
+  },
+  "/2025/06/de-spiritus-sancti-potentia/": {
+   "catalog_id": "pl052-006",
+   "publication_id": "pub-2713",
+   "part_id": null,
+   "pl_volume": 52,
+   "columns": {
+    "start": 855,
+    "end": null
+   },
+   "author": "Nicetas of Remesiana",
+   "title_latin": "De Spiritus sancti potentia",
+   "title_english": "On the Power of the Holy Spirit",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-06-02T20:13:05Z",
+   "doi": "10.5281/zenodo.17982633",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=f7hA8ons1AQ",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/06/de-spiritus-sancti-potentia/",
+    "archive": "https://archive.org/details/on-the-power-of-the-holy-spirit",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_52/Nicetas%20of%20Remesiana%20-%20On%20the%20Power%20of%20the%20Holy%20Spirit"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/04/opusculum-de-vigiliis-servorum-dei/": {
+   "catalog_id": "pl068-009",
+   "publication_id": "pub-2714",
+   "part_id": null,
+   "pl_volume": 68,
+   "columns": {
+    "start": 365,
+    "end": null
+   },
+   "author": "Nicetas of Remesiana",
+   "title_latin": "Opusculum de vigiliis servorum Dei",
+   "title_english": "Work on the Vigils of Gods Servants",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-04-02T10:00:01Z",
+   "doi": "10.5281/zenodo.17982595",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=03_nqMucNBw",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/opusculum-de-vigiliis-servorum-dei/",
+    "archive": "https://archive.org/details/work-on-the-vigils-of-gods-servants",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68/Nicetas%20of%20Remesiana%20-%20Work%20on%20the%20Vigils%20of%20Gods%20Servants"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/vita-sancti-odonis/": {
+   "catalog_id": null,
+   "publication_id": null,
+   "part_id": null,
+   "pl_volume": null,
+   "columns": null,
+   "author": null,
+   "title_latin": null,
+   "title_english": null,
+   "generation": null,
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": null,
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=Ysp8glHxXdQ",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/vita-sancti-odonis/",
+    "archive": "https://archive.org/details/the-life-of-saint-odo-second-abbot-of-cluny",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_133/Odo%20of%20Cluny%20-%20The%20Life%20of%20Saint%20Odo%20Second%20Abbot%20of%20Cluny"
+   },
+   "passages_available": null,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": true,
+   "vetoed": true
+  },
+  "/2025/12/ethica-scito-te-ipsum-peter-abelard/": {
+   "catalog_id": "pl178-007",
+   "publication_id": "pub-2730",
+   "part_id": null,
+   "pl_volume": 178,
+   "columns": {
+    "start": 633,
+    "end": 678
+   },
+   "author": "Peter Abelard",
+   "title_latin": "Ethica seu Liber dictus Scito Te Ipsum",
+   "title_english": "Ethics, or the Book Called Know Yourself",
+   "generation": "gen2",
+   "translator_model": null,
+   "translation_date": "2025-12-17",
+   "review_status": "defect-recorded",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [
+    {
+     "type": "omission",
+     "coverage_pct": 69.38,
+     "missing_source_words": 4920,
+     "found": "2026-09-13",
+     "ref": "docs/v2/experiments/HISTORICAL_COVERAGE_SCAN_2026.md (Phase 1, 2026-09-13)"
+    }
+   ],
+   "rights": "CC0-1.0",
+   "published_at": "2025-12-17T08:00:01Z",
+   "doi": "10.5281/zenodo.17982647",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=Lj7g6J2FKy0",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/12/ethica-scito-te-ipsum-peter-abelard/",
+    "archive": "https://archive.org/details/abelard-scito-te-ipsum-ethics",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_178/Peter%20Abelard%20-%20Ethics%2C%20or%20the%20Book%20Called%20Know%20Yourself"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/04/responsio-de-damnatione-salomonis/": {
+   "catalog_id": "pl203-006",
+   "publication_id": "pub-2734",
+   "part_id": null,
+   "pl_volume": 203,
+   "columns": {
+    "start": 621,
+    "end": null
+   },
+   "author": "Philip of Harveng",
+   "title_latin": "Responsio De Damnatione Salomonis",
+   "title_english": "Response Concerning the Salvation of the First Man",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-04-18T10:01:21Z",
+   "doi": "10.5281/zenodo.17982611",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=DX1T56mA3FM",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/responsio-de-damnatione-salomonis/",
+    "archive": "https://archive.org/details/a-response-concerning-the-damnation-of-solomon",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_203/Philip%20of%20Harveng%20-%20Response%20Concerning%20the%20Salvation%20of%20the%20First%20Man"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/04/felicis-papae-iv/": {
+   "catalog_id": "pl065-001",
+   "publication_id": "pub-2742",
+   "part_id": null,
+   "pl_volume": 65,
+   "columns": {
+    "start": 9,
+    "end": null
+   },
+   "author": "Pope Felix IV",
+   "title_latin": "Epistolae et decreta Felicis Papae IV",
+   "title_english": "Letters and Decrees of Pope Felix IV",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-07-13T10:00:23Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=WURnD0QG2q4",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/felicis-papae-iv/",
+    "archive": "https://archive.org/details/letters-and-decrees-of-pope-felix-iv",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_65/Pope%20Felix%20IV%20-%20Letters%20and%20Decrees%20of%20Pope%20Felix%20IV"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/12/dialogus-inter-deum-et-peccatorem-pope-innocent-iii/": {
+   "catalog_id": "pl217-004",
+   "publication_id": "pub-2743",
+   "part_id": null,
+   "pl_volume": 217,
+   "columns": {
+    "start": 691,
+    "end": null
+   },
+   "author": "Pope Innocent III",
+   "title_latin": "Dialogus inter Deum et Peccatorem",
+   "title_english": "Dialogue Between God and a Sinner",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-12-19T11:00:19Z",
+   "doi": "10.5281/zenodo.17982649",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=ChsStFdL5jw",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/12/dialogus-inter-deum-et-peccatorem-pope-innocent-iii/",
+    "archive": "https://archive.org/details/dialogue-between-god-and-sinner-innocent-iii",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_217/Pope%20Innocent%20III%20-%20Dialogue%20Between%20God%20and%20a%20Sinner"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/05/epistolae-de-sanctus-leo-iii/": {
+   "catalog_id": "pl102-011",
+   "publication_id": "pub-2745",
+   "part_id": null,
+   "pl_volume": 102,
+   "columns": {
+    "start": 1023,
+    "end": null
+   },
+   "author": "Pope Saint Leo III",
+   "title_latin": "Epistolae de Sanctus Leo III Pontifex Romanus",
+   "title_english": "Letters of Pope Saint Leo III",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-02-05T11:01:15Z",
+   "doi": "10.5281/zenodo.17982621",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=rVkoTp1lIvA",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/05/epistolae-de-sanctus-leo-iii/",
+    "archive": "https://archive.org/details/letters-of-pope-saint-leo-iii",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_102/Pope%20Saint%20Leo%20III%20-%20Letters%20of%20Pope%20Saint%20Leo%20III"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/05/potamius-lisbon-tractatus-martyrio-isaiae-analysis/": {
+   "catalog_id": "pl008-027",
+   "publication_id": "pub-2748",
+   "part_id": null,
+   "pl_volume": 8,
+   "columns": {
+    "start": 1415,
+    "end": null
+   },
+   "author": "Potamius",
+   "title_latin": "Potamii tractatus de martyrio Isaiae",
+   "title_english": "Treatise on the Martyrdom of Isaiah",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-08-02T10:00:26Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=GRQXBiuL0UE",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/05/potamius-lisbon-tractatus-martyrio-isaiae-analysis/",
+    "archive": "https://archive.org/details/treatise-on-the-martyrdom-of-isaiah",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_8/Potamius%20-%20Treatise%20on%20the%20Martyrdom%20of%20Isaiah"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/libellus-de-mundi-duratione/": {
+   "catalog_id": "pl013-025",
+   "publication_id": "pub-2758",
+   "part_id": null,
+   "pl_volume": 13,
+   "columns": {
+    "start": 1097,
+    "end": null
+   },
+   "author": "Q. Julius Hilarianus",
+   "title_latin": "Libellus de mundi Duratione",
+   "title_english": "Little Book on the Duration of the World",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-07-18T10:00:03Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=4Ccek3JHA-g",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/libellus-de-mundi-duratione/",
+    "archive": "https://archive.org/details/little-book-on-the-duration-of-the-world",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_13/Q.%20Julius%20Hilarianus%20-%20Little%20Book%20on%20the%20Duration%20of%20the%20World"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/epistola-de-cynocephalis/": {
+   "catalog_id": "pl121-006",
+   "publication_id": "pub-2770",
+   "part_id": null,
+   "pl_volume": 121,
+   "columns": {
+    "start": null,
+    "end": null
+   },
+   "author": "Ratramnus",
+   "title_latin": "Epistola de cynocephalis",
+   "title_english": "Letter on the Cynocephali",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-10-31T10:00:27Z",
+   "doi": "10.5281/zenodo.17982565",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=PNH4_eu-F5c",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/epistola-de-cynocephalis/",
+    "archive": "https://archive.org/details/letter-on-the-cynocephali",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_121/Ratramnus%20-%20Letter%20on%20the%20Cynocephali"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl121-005",
+     "title": "Contra Graecorum Opposita (c.868)",
+     "url": "https://bibliothecarius-modernus.github.io/2025/03/contra-graecorum-opposita-ratramnus/"
+    }
+   ],
+   "adjacent": [
+    {
+     "catalog_id": "pl121-005",
+     "title": "Contra Graecorum Opposita (c.868)",
+     "url": "https://bibliothecarius-modernus.github.io/2025/03/contra-graecorum-opposita-ratramnus/",
+     "position": "prev"
+    }
+   ],
+   "ambiguous": false
+  },
+  "/2025/05/de-profectu-mortis/": {
+   "catalog_id": "pl204-014",
+   "publication_id": "pub-2774",
+   "part_id": null,
+   "pl_volume": 204,
+   "columns": {
+    "start": 181,
+    "end": null
+   },
+   "author": "Renier of St Laurent",
+   "title_latin": "De profectu mortis",
+   "title_english": "On the Advancement of Death",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-04-28T10:00:38Z",
+   "doi": "10.5281/zenodo.17982623",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=LylIfved93M",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/05/de-profectu-mortis/",
+    "archive": "https://archive.org/details/on-the-advancement-of-death",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_204/Renier%20of%20St%20Laurent%20-%20On%20the%20Advancement%20of%20Death"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/04/roriconis-constitutio/": {
+   "catalog_id": "pl133-018",
+   "publication_id": "pub-2776",
+   "part_id": null,
+   "pl_volume": 133,
+   "columns": {
+    "start": 951,
+    "end": null
+   },
+   "author": "Rorico of Laon",
+   "title_latin": "Roriconis Constitutio",
+   "title_english": "Constitution of Rorico",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-02-12T11:00:16Z",
+   "doi": "10.5281/zenodo.17982607",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=AlXtX9dZmh8",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/roriconis-constitutio/",
+    "archive": "https://archive.org/details/constitution-of-rorico",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_133/Rorico%20of%20Laon%20-%20Constitution%20of%20Rorico"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/de-glorificatione-trinitatis/": {
+   "catalog_id": "pl169-001",
+   "publication_id": "pub-2781",
+   "part_id": null,
+   "pl_volume": 169,
+   "columns": {
+    "start": 13,
+    "end": null
+   },
+   "author": "Rupert of Deutz",
+   "title_latin": "De glorificatione Trinitatis et processione sancti Spiritus Liber Primus",
+   "title_english": "On the Glorification of the Trinity Book One",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-03-30T21:29:49Z",
+   "doi": "10.5281/zenodo.17982585",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=3lLq_1wsZFI",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/de-glorificatione-trinitatis/",
+    "archive": "https://archive.org/details/on-the-glorification-of-the-trinity",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_169/Rupert%20of%20Deutz%20-%20On%20the%20Glorification%20of%20the%20Trinity%20Book%20One"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/de-partu-virginis/": {
+   "catalog_id": "pl120-006",
+   "publication_id": "pub-2787",
+   "part_id": null,
+   "pl_volume": 120,
+   "columns": {
+    "start": 1365,
+    "end": null
+   },
+   "author": "S. Paschatius Radbertus",
+   "title_latin": "De Partu Virginis",
+   "title_english": "On the Birth of the Virgin",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-09-12T10:00:29Z",
+   "doi": "10.5281/zenodo.17982581",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=JCI4hA5gwEg",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/de-partu-virginis/",
+    "archive": "https://archive.org/details/on-the-birth-of-the-virgin",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_120/S.%20Paschatius%20Radbertus%20-%20On%20the%20Birth%20of%20the%20Virgin"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/exposito-brevis-antiquae-liturgiae-gallicanae/": {
+   "catalog_id": "pl072-005",
+   "publication_id": "pub-2791",
+   "part_id": null,
+   "pl_volume": 72,
+   "columns": {
+    "start": 83,
+    "end": null
+   },
+   "author": "Saint Germanus of Paris",
+   "title_latin": "Expositio brevis antiquae liturgiae Gallicanae",
+   "title_english": "Brief Exposition of the Old Gallican Liturgy",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-09-24T10:00:05Z",
+   "doi": "10.5281/zenodo.17982525",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=28tOAJ4t7W4",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/exposito-brevis-antiquae-liturgiae-gallicanae/",
+    "archive": "https://archive.org/details/brief-exposition-of-the-old-gallican-liturgy",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_72/Saint%20Germanus%20of%20Paris%20-%20Brief%20Exposition%20of%20the%20Old%20Gallican%20Liturgy"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/de-ordine-creaturarum/": {
+   "catalog_id": "pl083-013",
+   "publication_id": "pub-2792",
+   "part_id": null,
+   "pl_volume": 83,
+   "columns": {
+    "start": 913,
+    "end": null
+   },
+   "author": "Saint Isidore of Seville",
+   "title_latin": "De ordine creaturarum",
+   "title_english": "On the Order of Creatures",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-08-17T10:00:25Z",
+   "doi": "10.5281/zenodo.17982563",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=KFZOL1rWOkY",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/de-ordine-creaturarum/",
+    "archive": "https://archive.org/details/on-the-order-of-creatures",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_83/Saint%20Isidore%20of%20Seville%20-%20On%20the%20Order%20of%20Creatures"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/04/sancti-valerii-abbatis-opuscula/": {
+   "catalog_id": "pl087-018",
+   "publication_id": "pub-2796",
+   "part_id": null,
+   "pl_volume": 87,
+   "columns": {
+    "start": 417,
+    "end": null
+   },
+   "author": "Saint Valerius abbot",
+   "title_latin": "Sancti Valerii Abbatis Opuscula",
+   "title_english": "Minor Works of Saint Valerius the Abbot",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-04-04T10:01:18Z",
+   "doi": "10.5281/zenodo.17982603",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=vpHVRMlVkmM",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/sancti-valerii-abbatis-opuscula/",
+    "archive": "https://archive.org/details/minor-works-of-saint-valerius-the-abbot",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_87/Saint%20Valerius%20abbot%20-%20Minor%20Works%20of%20Saint%20Valerius%20the%20Abbot"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/01/sententiarum-liber-primus/": {
+   "catalog_id": "pl080-032",
+   "publication_id": "pub-2810",
+   "part_id": "pl080-032/sententiarum-libri-quinque",
+   "pl_volume": 80,
+   "columns": {
+    "start": 719,
+    "end": null
+   },
+   "author": "Taio of Zaragoza",
+   "title_latin": "Sententiarum Liber Secundus",
+   "title_english": "The Second Book of Sentences",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "defect-recorded",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [
+    {
+     "type": "omission",
+     "coverage_pct": 86.45,
+     "missing_source_words": 3504,
+     "found": "2026-09-13",
+     "ref": "docs/v2/experiments/HISTORICAL_COVERAGE_SCAN_2026.md (Phase 1, 2026-09-13)"
+    }
+   ],
+   "rights": "CC0-1.0",
+   "published_at": null,
+   "doi": null,
+   "urls": {
+    "youtube": null,
+    "blog": "https://bibliothecarius-modernus.github.io/2026/01/sententiarum-liber-primus/",
+    "archive": "https://archive.org/details/taio-zaragoza-sententiarum-liber-secundus",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Taio%20of%20Zaragoza%20-%20The%20Second%20Book%20of%20Sentences"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [
+    {
+     "catalog_id": "pl080-900",
+     "title": "Three Letters",
+     "url": "https://bibliothecarius-modernus.github.io/2025/12/epistolae-tres-bulgaranus-comes/",
+     "position": "next"
+    }
+   ],
+   "ambiguous": false
+  },
+  "/2025/03/de-sex-dierum-creatione/": {
+   "catalog_id": "pl093-003",
+   "publication_id": "pub-2820",
+   "part_id": null,
+   "pl_volume": 93,
+   "columns": {
+    "start": 207,
+    "end": null
+   },
+   "author": "Venerable Bede",
+   "title_latin": "De Sex Dierum Creatione",
+   "title_english": "On the Six Days of Creation",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-08-24T10:00:30Z",
+   "doi": "10.5281/zenodo.17982587",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=IoeT2lqYi5U",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/de-sex-dierum-creatione/",
+    "archive": "https://archive.org/details/on-the-six-days-of-creation",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_93/Venerable%20Bede%20-%20On%20the%20Six%20Days%20of%20Creation"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/12/altercatio-monachi-et-clerici-rupert-of-deutz/": {
+   "catalog_id": "pl170-009",
+   "publication_id": "pub-2825",
+   "part_id": null,
+   "pl_volume": 170,
+   "columns": {
+    "start": 537,
+    "end": 544
+   },
+   "author": "Rupert of Deutz",
+   "title_latin": "Altercatio Monachi et Clerici",
+   "title_english": "Altercatio Monachi et Clerici - Rupert of Deutz (12th Century Latin)",
+   "generation": "gen2",
+   "translator_model": null,
+   "translation_date": "2025-12-19",
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-12-19T05:37:04Z",
+   "doi": "10.5281/zenodo.17983708",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=yZMVmIbK9w8",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/12/altercatio-monachi-et-clerici-rupert-of-deutz/",
+    "archive": "https://archive.org/details/altercatio-monachi-et-clerici-rupert-deutz",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_170/Rupert%20of%20Deutz%20-%20Dispute%20Between%20a%20Monk%20and%20a%20Cleric:%20Whether%20a%20Monk%20May%20Preach"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/quomodo-per-annum-jejunandum/": {
+   "catalog_id": "pl126-010",
+   "publication_id": "pub-2838",
+   "part_id": null,
+   "pl_volume": 126,
+   "columns": {
+    "start": 987,
+    "end": null
+   },
+   "author": "Bertharius of Monte Cassino",
+   "title_latin": "Quomodo per annum jejunandum sit",
+   "title_english": "How to Fast Throughout the Year | Bertharius of Monte Cassino",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-11-06T11:00:29Z",
+   "doi": "10.5281/zenodo.17982593",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=PjQvT8fEPFE",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/quomodo-per-annum-jejunandum/",
+    "archive": "https://archive.org/details/how-to-observe-fasting-throughout-the-year",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_126"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/04/libellus-emendationis/": {
+   "catalog_id": "pl031-003",
+   "publication_id": "pub-2858",
+   "part_id": null,
+   "pl_volume": 31,
+   "columns": {
+    "start": 1215,
+    "end": null
+   },
+   "author": "Leporius",
+   "title_latin": "Libellus emendationis",
+   "title_english": "Libellus Emendationis by Leporius | 5th-Century Retraction and Orthodox Confession on Christ",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-07-31T10:00:51Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=uFdb0zb7RvU",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/04/libellus-emendationis/",
+    "archive": "https://archive.org/details/little-book-of-emendation",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_31"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/libri-carolini/": {
+   "catalog_id": "pl098-013",
+   "publication_id": "pub-2866",
+   "part_id": null,
+   "pl_volume": 98,
+   "columns": {
+    "start": null,
+    "end": null
+   },
+   "author": "Theodulf of Orléans",
+   "title_latin": "Opus Caroli regis contra synodum",
+   "title_english": "Libri Carolini by Charlemagne's Court | Book 1",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2024-07-04T10:00:29Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=YQd2VGZZpEM",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/libri-carolini/",
+    "archive": "https://archive.org/details/libri-carolini-790",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Libri_Carolini"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/commentaria_primasius/": {
+   "catalog_id": "pl068-016",
+   "publication_id": "pub-2870",
+   "part_id": null,
+   "pl_volume": 68,
+   "columns": {
+    "start": 793,
+    "end": null
+   },
+   "author": "Primasius of Hadrumetum",
+   "title_latin": "Commentaria in Apocalypsin",
+   "title_english": "Commentaria in Apocalypsin (c.540)",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-03-26",
+   "doi": "10.5281/zenodo.17982577",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=BpyXIhdZuMw",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/commentaria_primasius/",
+    "archive": "https://archive.org/details/commentary-on-the-apocalypse-book-one",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2025/03/contra-graecorum-opposita-ratramnus/": {
+   "catalog_id": "pl121-005",
+   "publication_id": "pub-2871",
+   "part_id": null,
+   "pl_volume": 121,
+   "columns": {
+    "start": 223,
+    "end": null
+   },
+   "author": "Ratramnus of Corbie",
+   "title_latin": "Contra Graecorum Opposita",
+   "title_english": "Contra Graecorum Opposita (c.868)",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-03-26",
+   "doi": "10.5281/zenodo.17982579",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=kirdtBRa8ZA",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/03/contra-graecorum-opposita-ratramnus/",
+    "archive": "https://archive.org/details/against-the-objections-of-the-greeks-book-one",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_121"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl121-006",
+     "title": "Letter on the Cynocephali",
+     "url": "https://bibliothecarius-modernus.github.io/2025/03/epistola-de-cynocephalis/"
+    }
+   ],
+   "adjacent": [
+    {
+     "catalog_id": "pl121-006",
+     "title": "Letter on the Cynocephali",
+     "url": "https://bibliothecarius-modernus.github.io/2025/03/epistola-de-cynocephalis/",
+     "position": "next"
+    }
+   ],
+   "ambiguous": false
+  },
+  "/2025/05/de-pelagiana-haeresi/": {
+   "catalog_id": "pl055-004",
+   "publication_id": "pub-2872",
+   "part_id": null,
+   "pl_volume": 55,
+   "columns": {
+    "start": 183,
+    "end": null
+   },
+   "author": "Pseudo-Leo the Great",
+   "title_latin": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente",
+   "title_english": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (c.445)",
+   "generation": "legacy-unknown",
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2025-05-08",
+   "doi": "10.5281/zenodo.17982619",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=i60cOx7hcgY",
+    "blog": "https://bibliothecarius-modernus.github.io/2025/05/de-pelagiana-haeresi/",
+    "archive": "https://archive.org/details/on-the-pelagian-heresy-growing-in-the-age-of-leo-the-great",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl056-001",
+     "title": "On the Collection of Isidore Mercator — the False Decretals",
+     "url": "https://bibliothecarius-modernus.github.io/2026/06/de-collectione-isidori-mercatoris-pietro-girolamo-ballerini/"
+    }
+   ],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/01/sententiarum-libri-quinque-taio-of-zaragoza/": {
+   "catalog_id": "pl080-032",
+   "publication_id": "pub-2873;pub-2874;pub-2875;pub-2876;pub-2877",
+   "part_id": "pl080-032/sententiarum-libri-quinque",
+   "pl_volume": 80,
+   "columns": null,
+   "author": "Taio of Zaragoza",
+   "title_latin": null,
+   "title_english": null,
+   "generation": null,
+   "translator_model": null,
+   "translation_date": null,
+   "review_status": "unreviewed",
+   "review_checked_at": null,
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2026-02-07",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=Qzg1y9Ozj-4",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/01/sententiarum-libri-quinque-taio-of-zaragoza/",
+    "archive": "https://archive.org/details/taio-zaragoza-sententiarum-liber-primus",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_80/Taio%20of%20Zaragoza%20-%20The%20First%20Book%20of%20Sentences"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [
+    {
+     "catalog_id": "pl080-900",
+     "title": "Three Letters",
+     "url": "https://bibliothecarius-modernus.github.io/2025/12/epistolae-tres-bulgaranus-comes/",
+     "position": "next"
+    }
+   ],
+   "ambiguous": true
+  },
+  "/2026/06/liber-de-tentationibus-suis-othloh-of-st-emmeram/": {
+   "catalog_id": "pl146-001",
+   "publication_id": "pub-2878",
+   "part_id": null,
+   "pl_volume": 146,
+   "columns": {
+    "start": 29,
+    "end": 58
+   },
+   "author": "Othloh of St Emmeram",
+   "title_latin": "Libellus de suis tentationibus, varia fortuna et scriptis.",
+   "title_english": "Book of His Temptations",
+   "generation": "gen3",
+   "translator_model": "claude-sonnet-4.5",
+   "translation_date": "2026-06-08",
+   "review_status": "defect-recorded",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [
+    {
+     "type": "omission",
+     "coverage_pct": 70.32,
+     "missing_source_words": 3408,
+     "found": "2026-09-13",
+     "ref": "docs/v2/experiments/HISTORICAL_COVERAGE_SCAN_2026.md (Phase 1, 2026-09-13)"
+    }
+   ],
+   "rights": "CC0-1.0",
+   "published_at": "2026-08-21T14:07:57Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=dSRNS5C3cO4",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/06/liber-de-tentationibus-suis-othloh-of-st-emmeram/",
+    "archive": "https://archive.org/details/othloh-de-tentationibus",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_146/Othloh%20of%20St%20Emmeram%20-%20Book%20of%20His%20Temptations"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/06/de-collectione-isidori-mercatoris-pietro-girolamo-ballerini/": {
+   "catalog_id": "pl056-001",
+   "publication_id": "pub-2879",
+   "part_id": null,
+   "pl_volume": 56,
+   "columns": {
+    "start": 240,
+    "end": 264
+   },
+   "author": "Pietro & Girolamo Ballerini",
+   "title_latin": "Balleriniorum Disquisitiones de antiquis collectionibus et collectoribus canonum.",
+   "title_english": "On the Collection of Isidore Mercator — the False Decretals",
+   "generation": "gen3",
+   "translator_model": "claude-sonnet-4.5",
+   "translation_date": "2026-06-08",
+   "review_status": "defect-recorded",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [
+    {
+     "type": "omission",
+     "coverage_pct": 69.09,
+     "missing_source_words": 3576,
+     "found": "2026-09-13",
+     "ref": "docs/v2/experiments/HISTORICAL_COVERAGE_SCAN_2026.md (Phase 1, 2026-09-13)"
+    }
+   ],
+   "rights": "CC0-1.0",
+   "published_at": "2026-08-27T19:35:05Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=jQqnGHrRZ88",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/06/de-collectione-isidori-mercatoris-pietro-girolamo-ballerini/",
+    "archive": "https://archive.org/details/ballerini-false-decretals",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_56/Pietro%20&%20Girolamo%20Ballerini%20-%20On%20the%20Collection%20of%20Isidore%20Mercator%20—%20the%20False%20Decretals"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl055-004",
+     "title": "On the Heresy and History of the Manicheans Book One",
+     "url": "https://bibliothecarius-modernus.github.io/2025/05/de-eutychiana-haeresi/"
+    },
+    {
+     "catalog_id": "pl055-004",
+     "title": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (c.445)",
+     "url": "https://bibliothecarius-modernus.github.io/2025/05/de-pelagiana-haeresi/"
+    }
+   ],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/09/explanatio-in-cantica-canticorum-justus-of-urgel/": {
+   "catalog_id": "pl067-900",
+   "publication_id": "pub-2880",
+   "part_id": null,
+   "pl_volume": 67,
+   "columns": {
+    "start": 961,
+    "end": 994
+   },
+   "author": "Justus of Urgel",
+   "title_latin": "Explanatio in Cantica Canticorum",
+   "title_english": "Mystical Explanation of the Song of Songs",
+   "generation": "v2",
+   "translator_model": "openai/gpt-5.5",
+   "translation_date": "2026-09-13",
+   "review_status": "coverage-verified",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2026-09-13T21:09:21Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=QFZM6iVxKy8",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/explanatio-in-cantica-canticorum-justus-of-urgel/",
+    "archive": "https://archive.org/details/mystical-explanation-of-the-song-of-songs",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_67/Justus%20of%20Urgel%20-%20Mystical%20Explanation%20of%20the%20Song%20of%20Songs"
+   },
+   "passages_available": true,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/09/libellus-octo-quaestionum-de-angelis-et-homine-honorius-augustodunensis/": {
+   "catalog_id": "pl172-017",
+   "publication_id": "pub-2881",
+   "part_id": null,
+   "pl_volume": 172,
+   "columns": {
+    "start": 1185,
+    "end": 1192
+   },
+   "author": "Honorius Augustodunensis",
+   "title_latin": "Libellus octo quaestionum.",
+   "title_english": "Eight Questions on Angels and Man",
+   "generation": "v2",
+   "translator_model": "openai/gpt-5.5",
+   "translation_date": "2026-09-13",
+   "review_status": "coverage-verified",
+   "review_checked_at": "2026-09-13",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2026-09-13T23:37:47Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=-P4eVPONBKQ",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/libellus-octo-quaestionum-de-angelis-et-homine-honorius-augustodunensis/",
+    "archive": "https://archive.org/details/eight-questions-on-angels-and-man",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_172/Honorius%20Augustodunensis%20-%20Eight%20Questions%20on%20Angels%20and%20Man"
+   },
+   "passages_available": true,
+   "related_same_author": [
+    {
+     "catalog_id": "pl172-018",
+     "title": "The Inevitable, or A Dialogue on Predestination and Free Will",
+     "url": "https://bibliothecarius-modernus.github.io/2026/06/inevitabile-sive-dialogus-de-praedestinatione-et-libero-arbitrio-honorius-augustodunensis/"
+    }
+   ],
+   "adjacent": [
+    {
+     "catalog_id": "pl172-018",
+     "title": "The Inevitable, or A Dialogue on Predestination and Free Will",
+     "url": "https://bibliothecarius-modernus.github.io/2026/06/inevitabile-sive-dialogus-de-praedestinatione-et-libero-arbitrio-honorius-augustodunensis/",
+     "position": "next"
+    }
+   ],
+   "ambiguous": false
+  },
+  "/2026/09/de-blasphemia-in-spiritum-sanctum-odo-of-tournai-odo-of-cambrai/": {
+   "catalog_id": "pl160-027",
+   "publication_id": "pub-2882",
+   "part_id": null,
+   "pl_volume": 160,
+   "columns": {
+    "start": 1111,
+    "end": 1118
+   },
+   "author": "Odo of Tournai (Odo of Cambrai)",
+   "title_latin": "De blasphemia in Spiritum sanctum.",
+   "title_english": "On Blasphemy against the Holy Spirit",
+   "generation": "v2",
+   "translator_model": "openai/gpt-5.5",
+   "translation_date": "2026-09-14",
+   "review_status": "coverage-verified",
+   "review_checked_at": "2026-09-14",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2026-09-14T02:26:56Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=yXD5x_ObVjY",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/de-blasphemia-in-spiritum-sanctum-odo-of-tournai-odo-of-cambrai/",
+    "archive": "https://archive.org/details/on-blasphemy-against-the-holy-spirit",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_160/Odo%20of%20Tournai%20(Odo%20of%20Cambrai)%20-%20On%20Blasphemy%20against%20the%20Holy%20Spirit"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  }
+ }
+}

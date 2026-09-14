@@ -18,8 +18,12 @@ external_resources:
 
 redirect_from:
   - "/marian-theology-devotion/carolingian-theological-renaissance/christology/2025/03/27/de-partu-virginis.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl120-006"
+pl_volume: 120
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 Carolingian monk Paschasius Radbertus's influential theological treatise defending Mary's miraculous virginity during childbirth against contemporaries who argued for a natural birth, employing patristic citations and scriptural typology to demonstrate that Christ's birth, like His conception and resurrection, transcended natural laws while preserving His true humanity.
 </p>

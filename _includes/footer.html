@@ -3,8 +3,9 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <h2 class="footer-heading">{{ site.title | escape }}</h2>
-        <p>{{ site.description | escape }}</p>
-        <p style="margin-top: 10px; font-size: 0.85em;">Translations, essays and metadata: <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0</a> (public domain dedication). Latin texts: public domain (Migne, <em>Patrologia Latina</em>). <a href="{{ '/LICENSE.md' | relative_url }}">Licensing</a>.</p>
+        <p><em>{{ site.motto | escape }}</em></p>
+        <p style="margin-top: 6px; font-size: 0.9em;">An independent digital library of neglected Latin literature.</p>
+        <p style="margin-top: 10px; font-size: 0.85em;">Translations, research essays, metadata and transcriptions created by Bibliothecarius Modernus: <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0</a> (public domain dedication). Latin source texts: public domain (Migne, <em>Patrologia Latina</em>, or the named manuscript). Figures and quotations from third parties: their own rights, stated where they appear. White papers and methodology documents: CC BY 4.0. <a href="{{ '/LICENSE.md' | relative_url }}">Licensing</a>.</p>
         <!-- RSS link -->
         <p style="margin-top: 15px;">
           <a href="{{ '/feed.xml' | relative_url }}" target="_blank" style="display: flex; align-items: center; color: var(--highlight-color);">
@@ -18,14 +19,15 @@
         </p>
         <!-- API link added here -->
         <p style="margin-top: 10px;">
-          <a href="{{ '/metadata.json' | relative_url }}" target="_blank" style="display: flex; align-items: center; color: var(--highlight-color);">
+          <a href="{{ '/api/catalog.json' | relative_url }}" target="_blank" style="display: flex; align-items: center; color: var(--highlight-color);">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
               <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
               <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
             </svg>
-            Metadata API
+            Machine-readable catalog
           </a>
         </p>
+        <p style="margin-top: 4px; font-size: 0.85em;"><a href="{{ '/api/README.md' | relative_url }}">catalog documentation</a> · <a href="{{ '/metadata.json' | relative_url }}">edition index (JSON)</a></p>
       </div>
 
       <div class="footer-col footer-col-2">
@@ -61,7 +63,7 @@
     </div>
 
     <div class="copyright">
-      <p>&copy; {{ 'now' | date: "%Y" }} Bibliothecarius Modernus. All rights reserved.</p>
+      <p>Bibliothecarius Modernus · an independent project curated by a librarian · 2024–{{ 'now' | date: "%Y" }} · no rights reserved over the library's own contributions (<a href="{{ '/LICENSE.md' | relative_url }}">CC0</a>)</p>
     </div>
   </div>
 </footer>

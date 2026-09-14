@@ -21,8 +21,12 @@ external_resources:
 
 redirect_from:
   - "/irish-anglo-saxon-contributions/natural-philosophy-medicine/neo-platonic-christian-philosophy/2025/03/20/de-ordine-creaturarum.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl083-013"
+pl_volume: 83
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 A 7th-century Irish synthesis of biblical cosmology and natural philosophy that shaped medieval understanding of universal order through its hierarchical organization of all creation from the Trinity to the material world, incorrectly attributed to Isidore of Seville until modern scholarship revealed its Hiberno-Latin origins.
 </p>

@@ -220,13 +220,20 @@ async function buildTranslationToPostUrlMap() {
 }
 
 /**
- * Get the URL for a translation chunk
+ * Get the URL for a translation chunk.
+ *
+ * Pagefind keys records by URL, so a Latin record and an English record for the same
+ * chunk must not share one URL — before Phase 8B the English record silently replaced
+ * the Latin one and Latin text was never searchable (audit finding W6). The Latin record
+ * therefore carries `?lang=latin` before the anchor; the edition page reads it and opens
+ * the Latin view (assets/js/post.js), and the `#chunk-n` anchor still resolves.
  */
-function getChunkUrl(jsonFile, chunkId) {
+function getChunkUrl(jsonFile, chunkId, lang = 'english') {
+  const suffix = (lang === 'latin' ? '?lang=latin' : '') + `#chunk-${chunkId}`;
   // First, check if we have a mapped post URL for this JSON file
   const mappedUrl = translationToPostUrl.get(jsonFile);
   if (mappedUrl) {
-    return `${mappedUrl}#chunk-${chunkId}`;
+    return `${mappedUrl}${suffix}`;
   }
 
   // Fallback: derive from JSON filename
@@ -235,9 +242,9 @@ function getChunkUrl(jsonFile, chunkId) {
   const match = stem.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/);
   if (match) {
     const [, year, month, , title] = match;
-    return `/${year}/${month}/${title}/#chunk-${chunkId}`;
+    return `/${year}/${month}/${title}/${suffix}`;
   }
-  return `/translations/${stem}/#chunk-${chunkId}`;
+  return `/translations/${stem}/${suffix}`;
 }
 
 async function main() {
@@ -319,7 +326,8 @@ async function main() {
 
       for (const chunk of data.chunks) {
         const chunkId = getChunkId(chunk);
-        const url = getChunkUrl(jsonFile, chunkId);
+        const url = getChunkUrl(jsonFile, chunkId, 'english');
+        const latinUrl = getChunkUrl(jsonFile, chunkId, 'latin');
 
         // Index Latin text
         // Note: Use 'en' as language code for unified index (Pagefind doesn't support Latin stemming)
@@ -327,7 +335,7 @@ async function main() {
         const latinText = cleanText(getLatinText(chunk));
         if (latinText && latinText.length > 10) {
           await index.addCustomRecord({
-            url: url,
+            url: latinUrl,
             content: latinText,
             language: 'en',
             meta: {

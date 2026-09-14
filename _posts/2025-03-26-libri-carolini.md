@@ -18,8 +18,12 @@ external_resources:
 
 redirect_from:
   - "/carolingian-theological-renaissance/apologetics/ecclesiastical-history/2025/03/26/libri-carolini.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl098-013"
+pl_volume: 98
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 The Libri Carolini, commissioned by Charlemagne and authored primarily by Theodulf of Orléans, represents the Carolingian response to the Second Council of Nicaea's (787) endorsement of icon veneration. This comprehensive theological treatise articulates a nuanced middle position—accepting images for didactic and decorative purposes while rejecting their veneration as potentially idolatrous. Though suppressed in its own time to avoid conflict with the papacy, the work resurfaced during the Reformation and remains a crucial witness to Carolingian theological thought and the intellectual achievements of Charlemagne's court.
 </p>

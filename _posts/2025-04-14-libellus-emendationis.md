@@ -17,8 +17,12 @@ external_resources:
 
 redirect_from:
   - "/post-nicene-fathers/christology/apologetics/2025/04/14/libellus-emendationis.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl031-003"
+pl_volume: 31
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 The Libellus emendationis, written by the Gallic monk Leporius around 418 AD, represents a pivotal theological self-retraction that addresses early Christological controversies. Under Augustine's guidance, this confession recants proto-Nestorian views on Christ's nature and anticipates orthodox formulations on the incarnation, making it a significant bridge between Western and Eastern theological developments before the Council of Chalcedon.
 </p>

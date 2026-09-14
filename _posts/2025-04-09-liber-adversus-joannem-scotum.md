@@ -21,8 +21,12 @@ external_resources:
 
 redirect_from:
   - "/post-nicene-fathers/apologetics/carolingian-theological-renaissance/2025/04/09/liber-adversus-joannem-scotum.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl119-006"
+pl_volume: 119
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 A scholarly polemic by Florus of Lyon that methodically dismantles John Scotus Eriugena's rationalistic approach to predestination, defending Augustinian theology through authoritative citations while articulating a nuanced position that affirms both divine sovereignty and human responsibility in the 9th-century Carolingian theological debate.
 </p>

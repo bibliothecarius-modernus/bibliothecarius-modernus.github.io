@@ -19,8 +19,12 @@ external_resources:
 
 redirect_from:
   - "/liturgical-texts-sacramentaries/ecclesiastical-history/post-nicene-fathers/2025/05/08/epistolae-de-sanctus-leo-iii.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl102-011"
+pl_volume: 102
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 Letters from Pope Leo III's pontificate (795-816) illuminating the complex alliance between papal authority and Carolingian power, containing diplomatic correspondence with Charlemagne, responses to ecclesiastical disputes in England, and theological positions on controversial doctrines like the Filioque.
 </p>

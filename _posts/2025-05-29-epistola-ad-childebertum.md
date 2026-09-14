@@ -18,8 +18,12 @@ external_resources:
 
 redirect_from:
   - "/ecclesiology/apostolic-fathers/post-nicene-fathers/2025/05/29/epistola-ad-childebertum.html"
----
 
+# Stable catalog identity (Phase 8B, 2026-09-14): mapped from the registry by the post's own
+# permalink / YouTube id / Archive identifier (tools/backfill_website_catalog_ids.py); not guessed from the title.
+catalog_id: "pl068-001"
+pl_volume: 68
+---
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 Leo of Sens's letter to King Childebert I (c. 537-538) protesting the king's attempt to create a new bishopric at Melun, illustrating the ecclesiastical-political conflicts arising from the fragmentation of church authority across divided Merovingian kingdoms.
 </p>

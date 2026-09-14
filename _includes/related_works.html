@@ -1,0 +1,58 @@
+{%- comment -%}
+Related editions (Phase 8B, §9): built only from structured fields that exist today —
+the same author (front matter), shared categories (front matter), and the catalog's
+same-author / adjacent-in-volume lists projected into _data/editions.json. Nothing is
+inferred from titles; when no relationship is supported, the block is not rendered.
+{%- endcomment -%}
+{%- assign edition = site.data.editions.by_path[page.url] -%}
+{%- assign same_author = "" | split: "" -%}
+{%- for post in site.posts -%}
+  {%- if post.url != page.url and post.listed != false and post.original_work.author == page.original_work.author -%}
+    {%- assign same_author = same_author | push: post -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign shared = "" | split: "" -%}
+{%- for post in site.posts -%}
+  {%- if post.url == page.url or post.listed == false -%}{%- continue -%}{%- endif -%}
+  {%- assign hit = false -%}
+  {%- for c in page.categories -%}{%- if post.categories contains c -%}{%- assign hit = true -%}{%- endif -%}{%- endfor -%}
+  {%- if hit and shared.size < 6 -%}
+    {%- assign already = false -%}
+    {%- for s in same_author -%}{%- if s.url == post.url -%}{%- assign already = true -%}{%- endif -%}{%- endfor -%}
+    {%- unless already -%}{%- assign shared = shared | push: post -%}{%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign catalog_related = "" | split: "" -%}
+{%- if edition and edition.ambiguous != true -%}
+  {%- for r in edition.related_same_author -%}{%- assign catalog_related = catalog_related | push: r -%}{%- endfor -%}
+  {%- for r in edition.adjacent -%}{%- assign catalog_related = catalog_related | push: r -%}{%- endfor -%}
+{%- endif -%}
+{%- if same_author.size > 0 or shared.size > 0 or catalog_related.size > 0 -%}
+<section class="related-works">
+  <h3>Related editions</h3>
+  {%- if same_author.size > 0 %}
+  <p class="related-label">More by {{ page.original_work.author }}</p>
+  <ul>
+    {%- for post in same_author %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.original_work.latin_title | default: post.title }}</a>{% if post.original_work.date %} <span class="related-meta">({{ post.original_work.date }})</span>{% endif %}</li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+  {%- if catalog_related.size > 0 %}
+  <p class="related-label">From the catalog: same author or neighbouring in the volume</p>
+  <ul>
+    {%- for r in catalog_related %}
+    <li><a href="{{ r.url }}">{{ r.title }}</a> <span class="related-meta">({{ r.catalog_id }}{% if r.position %}, {{ r.position }} in the volume{% endif %})</span></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+  {%- if shared.size > 0 %}
+  <p class="related-label">Same categories</p>
+  <ul>
+    {%- for post in shared %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.original_work.latin_title | default: post.title }}</a> <span class="related-meta">— {{ post.original_work.author }}{% if post.original_work.date %}, {{ post.original_work.date }}{% endif %}</span></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</section>
+{%- endif -%}
