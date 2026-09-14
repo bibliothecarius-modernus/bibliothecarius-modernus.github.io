@@ -24,7 +24,8 @@ layout: default
       <div class="filter-dropdowns">
         <select id="filter-century" class="filter-select">
           <option value="all">Century</option>
-          {% assign all_dates = site.posts | map: "original_work" | map: "date" | compact %}
+          {% assign listed_posts = site.posts | where_exp: "post", "post.listed != false" %}
+          {% assign all_dates = listed_posts | map: "original_work" | map: "date" | compact %}
           {% assign centuries_array = "" | split: "" %}
           {% for date in all_dates %}
             {% if date != nil and date != "" %}
@@ -52,7 +53,7 @@ layout: default
         </select>
         <select id="filter-author" class="filter-select">
           <option value="all">Author</option>
-          {% assign authors = site.posts | map: "original_work" | map: "author" | uniq | sort %}
+          {% assign authors = listed_posts | map: "original_work" | map: "author" | uniq | sort %}
           {% for author in authors %}
             {% if author != nil and author != "" %}
               <option value="{{ author | slugify }}">{{ author }}</option>

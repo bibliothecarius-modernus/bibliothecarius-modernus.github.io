@@ -48,8 +48,20 @@ model, research model or review status says so ("legacy edition", "not recorded"
       {% if page.manuscript_source %}
       <tr>
         <th>Manuscript source</th>
-        <td>{{ page.manuscript_source.repository }}, {{ page.manuscript_source.shelfmark }}{% if page.manuscript_source.folios %}, ff. {{ page.manuscript_source.folios }}{% endif %}{% if page.manuscript_source.catalog_url %} (<a href="{{ page.manuscript_source.catalog_url }}" target="_blank">catalogue record</a>){% endif %}. Digital images: {{ page.manuscript_source.repository }}{% if page.manuscript_source.image_rights %} ({{ page.manuscript_source.image_rights }}){% endif %}. Latin transcription: Bibliothecarius Modernus{% if page.manuscript_source.transcription_date %}, {{ page.manuscript_source.transcription_date }}{% endif %} (CC0 1.0), made from the digitized images; not reviewed or endorsed by the holding institution.</td>
+        <td>{{ page.manuscript_source.repository }}, {{ page.manuscript_source.shelfmark }}{% if page.manuscript_source.part %}, Part {{ page.manuscript_source.part }}{% endif %}{% if page.manuscript_source.folios %}, ff. {{ page.manuscript_source.folios }}{% endif %}{% if page.manuscript_source.catalog_url %} (<a href="{{ page.manuscript_source.catalog_url }}" target="_blank">catalogue record</a>){% endif %}. Digital images: {{ page.manuscript_source.repository }}{% if page.manuscript_source.digitization_url %} (<a href="{{ page.manuscript_source.digitization_url }}" target="_blank">digitized manuscript</a>){% endif %}{% if page.manuscript_source.image_rights %} ({{ page.manuscript_source.image_rights }}){% endif %}. Latin transcription: Bibliothecarius Modernus{% if page.manuscript_source.transcription_date %}, {{ page.manuscript_source.transcription_date }}{% endif %}{% if page.manuscript_source.transcription_version %}, version {{ page.manuscript_source.transcription_version }}{% endif %} (CC0 1.0), made from the digitized images; not reviewed or endorsed by the holding institution.</td>
       </tr>
+      {% if page.manuscript_units %}
+      <tr>
+        <th>Textual units</th>
+        <td>{% for u in page.manuscript_units %}<code>{{ u.id }}</code>{% if u.title_latin %} — <em>{{ u.title_latin }}</em>{% endif %}{% if u.folios %}, ff. {{ u.folios }}{% endif %}{% if u.rubric %} (rubric ›{{ u.rubric }}‹){% endif %}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</td>
+      </tr>
+      {% endif %}
+      {% if page.manuscript_source.transcription_status %}
+      <tr>
+        <th>Transcription status</th>
+        <td>{{ page.manuscript_source.transcription_status }}. Uncertain readings are marked ⟨?⟩ in the Latin; the transcription provenance file in the corpus lists each one.</td>
+      </tr>
+      {% endif %}
       {% endif %}
       <tr>
         <th>Context</th>
