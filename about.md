@@ -78,7 +78,7 @@ permalink: /about/
       <img src="{{ '/assets/images/ryan-photo.jpg' | relative_url }}" alt="Ryan Wolfslayer" class="profile">
     </div>
 
-    <p>Bibliothecarius Modernus is an independent project maintained by Ryan Wolfslayer, a librarian and Python programmer with a background in digital librarianship.</p>
+    <p>Bibliothecarius Modernus is an independent project maintained by Ryan Wolfslayer, a librarian and programmer with a background in digital librarianship.</p>
 
     <p>The project combines fairly traditional library concerns, including access, preservation, description, provenance, and reuse, with tools that make it possible for one person to work through a much larger body of material than would otherwise be practical.</p>
     <p>ORCID: <a href="https://orcid.org/0000-0001-8914-9706" target="_blank">0000-0001-8914-9706</a></p>
