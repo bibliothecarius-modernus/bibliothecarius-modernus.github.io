@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De diversis significationibus nominis Iesu et De vita sancti Godehardi (c. 13th century)"
 date: 2026-09-14
-listed: false
+listed: true
 categories: [homiletics, hagiography, medieval-theology]
 youtube_id: "FaiCvzt55bY"
 translation_json: "/assets/translations/2026-09-14-de-diversis-significationibus-nominis-iesu-et-de-vita-sancti-godehardi-anonymous-gerhardus-magister.json"
