@@ -1,5 +1,20 @@
 # Bibliothecarius Modernus — machine-readable catalog
 
+Bibliothecarius Modernus is an independent digital library of neglected Latin
+literature, publishing complete open translations, parallel texts, contextual
+research, audio and video editions, and machine-readable scholarly data — and,
+where the sources require it, new transcriptions from manuscripts. This file is
+the library's catalog for machine patrons.
+
+Manuscript-derived editions (from 2026-09) are catalogued as a *manuscript object*
+(`ms-<repository>-<shelfmark>[-p<part>]`, e.g. `ms-hab-602-helmst-p1`) with *textual
+units* (`ms-…-NNN`) as children; they never receive `plNNN-SSS` ids. The object
+record carries the holding institution, shelfmark, part, folios, catalogue and
+digitization URLs and the institution's image-rights statement (quoted and dated);
+each unit carries folios, word count, edition status, the transcription version and
+its review status, and the publication ids. The transcription itself is CC0 and lives
+in the corpus under `Manuscripts/`; the images stay with the institution.
+
 `/api/catalog.json` is a static, versioned export of the library's catalog for
 machine patrons (search agents, citation tools, other libraries). It carries
 identity and bibliographic metadata, the Patrologia Latina location of every

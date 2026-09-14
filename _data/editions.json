@@ -1,6 +1,6 @@
 {
  "schema": "bibliothecarius.editions/1",
- "generated_at": "2026-09-14T03:55:10Z",
+ "generated_at": "2026-09-14T17:41:55Z",
  "source": "projection of api/catalog.json publications[] keyed by website path (Phase 8B)",
  "rights": "CC0-1.0",
  "by_path": {
@@ -2245,6 +2245,38 @@
     "blog": "https://bibliothecarius-modernus.github.io/2026/09/de-blasphemia-in-spiritum-sanctum-odo-of-tournai-odo-of-cambrai/",
     "archive": "https://archive.org/details/on-blasphemy-against-the-holy-spirit",
     "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_160/Odo%20of%20Tournai%20(Odo%20of%20Cambrai)%20-%20On%20Blasphemy%20against%20the%20Holy%20Spirit"
+   },
+   "passages_available": false,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/09/de-diversis-significationibus-nominis-iesu-et-de-vita-sancti-godehardi-anonymous-gerhardus-magister/": {
+   "catalog_id": "ms-hab-602-helmst-p1",
+   "publication_id": "pub-2883",
+   "part_id": null,
+   "pl_volume": 0,
+   "columns": {
+    "start": null,
+    "end": null
+   },
+   "author": "Anonymous; Gerhardus magister",
+   "title_latin": "HAB Wolfenbüttel, Cod. Guelf. 602 Helmst., Part I",
+   "title_english": "On the Meanings of the Name of Jesus, and On the Life of Saint Godehard",
+   "generation": "v2",
+   "translator_model": "openai/gpt-5.5",
+   "translation_date": "2026-09-14",
+   "review_status": "coverage-verified",
+   "review_checked_at": "2026-09-14",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2026-09-14T17:41:04Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=FaiCvzt55bY",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/de-diversis-significationibus-nominis-iesu-et-de-vita-sancti-godehardi-anonymous-gerhardus-magister/",
+    "archive": "https://archive.org/details/on-the-meanings-of-the-name-of-jesus-and-on-the-life-of-saint-godehard",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Manuscripts/HAB_Wolfenbuettel/Cod_Guelf_602_Helmst/Part_I"
    },
    "passages_available": false,
    "related_same_author": [],

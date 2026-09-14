@@ -223,6 +223,297 @@
     }
    }
   },
+  "manuscript_objects": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "kind",
+     "institution",
+     "shelfmark",
+     "part",
+     "folios",
+     "image_rights",
+     "status",
+     "units",
+     "publications"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^ms-[a-z0-9]+(-[a-z0-9]+)*$"
+     },
+     "kind": {
+      "const": "manuscript_object"
+     },
+     "institution": {
+      "type": "string"
+     },
+     "institution_short": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "shelfmark": {
+      "type": "string"
+     },
+     "part": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "folios": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "catalogue_url": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "catalogue_citation": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "digitization_url": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "image_url_pattern": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "iiif_manifest": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "date_origin": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "place_origin": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "image_rights": {
+      "type": "object",
+      "properties": {
+       "statement": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "url": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "date_checked": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "credit": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      }
+     },
+     "status": {
+      "type": "string"
+     },
+     "units": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "publications": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "manuscript_units": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "kind",
+     "parent_id",
+     "ordinal",
+     "author",
+     "title_latin",
+     "folios",
+     "word_count",
+     "transcription",
+     "status",
+     "publications"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^ms-[a-z0-9]+(-[a-z0-9]+)*-\\d{3}$"
+     },
+     "kind": {
+      "const": "manuscript_unit"
+     },
+     "parent_id": {
+      "type": "string"
+     },
+     "ordinal": {
+      "type": "integer"
+     },
+     "author": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "title_latin": {
+      "type": "string"
+     },
+     "rubric": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "incipit": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "explicit": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "folios": {
+      "type": "object",
+      "properties": {
+       "start": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "end": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      }
+     },
+     "lines": {
+      "type": "object",
+      "properties": {
+       "start": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "end": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       }
+      }
+     },
+     "word_count": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "frontier_class": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "edition_status": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "transcription": {
+      "type": "object",
+      "properties": {
+       "version": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "review_status": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "uncertain_passages_present": {
+        "type": [
+         "boolean",
+         "null"
+        ]
+       }
+      }
+     },
+     "translation_version": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "status": {
+      "type": "string"
+     },
+     "translated_by_bibliothecarius": {
+      "type": "boolean"
+     },
+     "publications": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
   "publications": {
    "type": "array",
    "items": {
@@ -262,7 +553,7 @@
      },
      "catalog_id": {
       "type": "string",
-      "pattern": "^pl\\d{3}-\\d{3}$"
+      "pattern": "^(pl\\d{3}-\\d{3}|ms-[a-z0-9]+(-[a-z0-9]+)*)$"
      },
      "part_id": {
       "type": [

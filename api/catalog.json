@@ -2,7 +2,7 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-14T03:55:10Z",
+ "generated_at": "2026-09-14T17:41:55Z",
  "version": "export:2026-09-14;registry:2026-09-14",
  "publisher": {
   "name": "Bibliothecarius Modernus",
@@ -21,6 +21,7 @@
   "part": "plNNN-SSS/label-slug — a part (letter, sermon, book) of a work",
   "column": "cNNNN[a-d] — the Patrologia Latina column (and quarter) where the passage begins",
   "chunk": "chunk-n — chunk n of the Bibliothecarius translation (translation.json chunk_id, 1-based); the website anchors every chunk as #chunk-n",
+  "manuscript": "ms-<repository>-<shelfmark>[-p<part>] — a manuscript object (parent); ms-…-NNN — a textual unit within it (child); locator ms-…:fNNr:chunk-n uses the folio where the chunk's Latin begins instead of a PL column (Phase 9B, D044 proposal)",
   "limitations": [
    "Historical works (before v2, 2026-09) carry no chunk-to-column mapping; only work-level locators and #chunk-n anchors are available for them.",
    "Chunk-level column locators exist only where passages.json was built by the v2 pipeline; passages_available says so per publication.",
@@ -29,8 +30,10 @@
  },
  "counts": {
   "works": 3772,
-  "publications": 289,
+  "publications": 290,
   "parts": 5,
+  "manuscript_objects": 1,
+  "manuscript_units": 2,
   "works_by_status": {
    "untranslated": 3583,
    "published": 179,
@@ -72277,6 +72280,106 @@
    "publications": []
   }
  ],
+ "manuscript_objects": [
+  {
+   "id": "ms-hab-602-helmst-p1",
+   "kind": "manuscript_object",
+   "institution": "Herzog August Bibliothek Wolfenbüttel",
+   "institution_short": "HAB Wolfenbüttel",
+   "shelfmark": "Cod. Guelf. 602 Helmst.",
+   "part": "I",
+   "folios": "1r–20v",
+   "catalogue_url": "https://diglib.hab.de/?catalog=Lesser&db=mss&id=602-helmst&list=ms",
+   "catalogue_citation": "Bertram Lesser, Katalog der mittelalterlichen Helmstedter Handschriften, Teil IV: Cod. Guelf. 462 bis 615 Helmst. (in Vorbereitung), HAB Handschriftendatenbank; older: Heinemann Nr. 650 (1886)",
+   "digitization_url": "https://diglib.hab.de/mss/602-helmst/start.htm",
+   "image_url_pattern": "https://diglib.hab.de/mss/602-helmst/max/NNNNN.jpg (00003 = f. 1r)",
+   "iiif_manifest": null,
+   "date_origin": "13th century, second half",
+   "place_origin": "Wöltingerode, Cistercian nunnery (near Goslar)",
+   "image_rights": {
+    "statement": "Imagedigitalisate von HAB-Beständen werden als Public Domain publiziert. (Legacy © / CC BY-SA marks in the frame: 'Beide Angaben haben aber ihre Gültigkeit verloren.')",
+    "url": "https://diglib.hab.de/nutzungshinweise.html",
+    "date_checked": "2026-09-14",
+    "credit": "Manuscript source: Herzog August Bibliothek Wolfenbüttel, Cod. Guelf. 602 Helmst., Part I. Digital images: Herzog August Bibliothek Wolfenbüttel <https://diglib.hab.de/mss/602-helmst/start.htm> — published by the HAB as public domain (usage notes, read 2026-09-14). Description: Bertram Lesser, Katalog der mittelalterlichen Helmstedter Handschriften IV (in preparation), CC BY-SA. Bibliothecarius Modernus transcription, 2026, version 1.0 (CC0 1.0)."
+   },
+   "status": "published",
+   "units": [
+    "ms-hab-602-helmst-p1-002",
+    "ms-hab-602-helmst-p1-004"
+   ],
+   "publications": [
+    "pub-2883"
+   ]
+  }
+ ],
+ "manuscript_units": [
+  {
+   "id": "ms-hab-602-helmst-p1-002",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-hab-602-helmst-p1",
+   "ordinal": 2,
+   "author": "Anonymous",
+   "title_latin": "De diversis significationibus nominis Iesu",
+   "rubric": "De deo",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "2v",
+    "end": "3v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 509,
+   "frontier_class": "A",
+   "edition_status": "no modern edition or machine-readable transcription of the complete text located (Phase 9A search); the opening litany circulates in other forms",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; operator full read; human curator sign-off pending",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2883"
+   ]
+  },
+  {
+   "id": "ms-hab-602-helmst-p1-004",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-hab-602-helmst-p1",
+   "ordinal": 4,
+   "author": "Gerhardus magister",
+   "title_latin": "De vita sancti Godehardi episcopi Hildeshemensis",
+   "rubric": "Sermo magistri Gerhardi",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "16v",
+    "end": "17v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 513,
+   "frontier_class": "A",
+   "edition_status": "no modern edition or machine-readable transcription located (Phase 9A search); attribution 'magister Gerhardus' unidentified",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; operator full read; human curator sign-off pending",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2883"
+   ]
+  }
+ ],
  "publications": [
   {
    "id": "pub-2590",
@@ -92377,6 +92480,67 @@
     }
    },
    "version": "2026-09-14T02:27:12Z"
+  },
+  {
+   "id": "pub-2883",
+   "kind": "publication",
+   "catalog_id": "ms-hab-602-helmst-p1",
+   "part_id": null,
+   "project_id": "de-diversis-significationibus-nominis-iesu-et-de-v-20260914",
+   "title_english": "On the Meanings of the Name of Jesus, and On the Life of Saint Godehard",
+   "title_latin": "HAB Wolfenbüttel, Cod. Guelf. 602 Helmst., Part I",
+   "author": "Anonymous; Gerhardus magister",
+   "pl_volume": 0,
+   "columns": {
+    "start": null,
+    "end": null
+   },
+   "century": null,
+   "status": "published",
+   "youtube_visibility": "public",
+   "published_at": "2026-09-14T17:41:04Z",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=FaiCvzt55bY",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/de-diversis-significationibus-nominis-iesu-et-de-vita-sancti-godehardi-anonymous-gerhardus-magister/",
+    "archive": "https://archive.org/details/on-the-meanings-of-the-name-of-jesus-and-on-the-life-of-saint-godehard",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Manuscripts/HAB_Wolfenbuettel/Cod_Guelf_602_Helmst/Part_I"
+   },
+   "doi": null,
+   "provenance": {
+    "source_of_record": "pipeline",
+    "generation": "v2",
+    "translator_model": "openai/gpt-5.5",
+    "translation_date": "2026-09-14",
+    "translation_date_source": "project_state",
+    "source_check": true,
+    "translation_qa": "pass"
+   },
+   "review": {
+    "status": "coverage-verified",
+    "checked_at": "2026-09-14",
+    "known_defects": []
+   },
+   "rights": {
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
+   },
+   "locators": {
+    "work": "ms-hab-602-helmst-p1",
+    "passages_available": false,
+    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/09/de-diversis-significationibus-nominis-iesu-et-de-vita-sancti-godehardi-anonymous-gerhardus-magister/#chunk-{n}"
+   },
+   "related": {
+    "same_author": [],
+    "adjacent_in_volume": {
+     "prev": null,
+     "next": "ms-hab-602-helmst-p1-002"
+    }
+   },
+   "version": "2026-09-14T17:41:22Z"
   }
  ]
 }
