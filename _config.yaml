@@ -5,9 +5,11 @@
 title: Bibliothecarius Modernus
 subtitle: The Modern Librarian
 motto: "Antiqua servare, nova quaerere"
-# The identity sentence (D040) is the site description used for search snippets and feeds.
-description: "Bibliothecarius Modernus is an independent digital library of neglected Latin literature, publishing complete open translations, parallel texts, contextual research, audio and video editions, and machine-readable scholarly data — and, where the sources require it, new transcriptions from manuscripts."
-identity_short: "An independent digital library of neglected Latin literature: complete open translations, parallel texts, research, audio and video editions, and citable scholarly data."
+# description: the site's meta description (search snippets). Curator-controlled copy (Phase 8C);
+# this is the homepage tagline. Owner review pending for a longer SEO sentence, if wanted.
+description: "Antiqua servare, nova quaerere — Latin Patristic texts in translation"
+# identity: the D040 identity sentence, used only in machine-readable metadata (metadata.json publisher.identity).
+identity: "Bibliothecarius Modernus is an independent digital library of neglected Latin literature, publishing complete open translations, parallel texts, contextual research, audio and video editions, and machine-readable scholarly data — and, where the sources require it, new transcriptions from manuscripts."
 baseurl: ""
 url: "https://bibliothecarius-modernus.github.io"
 

@@ -1,11 +1,5 @@
 # Bibliothecarius Modernus — machine-readable catalog
 
-Bibliothecarius Modernus is an independent digital library of neglected Latin
-literature, publishing complete open translations, parallel texts, contextual
-research, audio and video editions, and machine-readable scholarly data — and,
-where the sources require it, new transcriptions from manuscripts. This file is
-the library's catalog for machine patrons.
-
 `/api/catalog.json` is a static, versioned export of the library's catalog for
 machine patrons (search agents, citation tools, other libraries). It carries
 identity and bibliographic metadata, the Patrologia Latina location of every

@@ -5,7 +5,7 @@ layout: null
 {
   "schema": "bibliothecarius.editions-index/1",
   "generated_at": "{{ site.time | date_to_xmlschema }}",
-  "publisher": {"name": "Bibliothecarius Modernus", "url": "{{ site.url }}", "identity": {{ site.description | jsonify }}},
+  "publisher": {"name": "Bibliothecarius Modernus", "url": "{{ site.url }}", "identity": {{ site.identity | jsonify }}},
   "rights": {"license": "CC0-1.0", "license_url": "https://creativecommons.org/publicdomain/zero/1.0/", "note": "This index, the translations, essays and metadata it points to are dedicated CC0 1.0 by Bibliothecarius Modernus; Latin source texts are public domain (Migne, Patrologia Latina) and are not redistributed here."},
   "catalog": "{{ site.url }}/api/catalog.json",
   "posts": [

@@ -94,8 +94,16 @@ model, research model or review status says so ("legacy edition", "not recorded"
       </tr>
       {% endif %}
       <tr>
+        <th>Translation Goals</th>
+        <td>Accessibility and clarity while preserving original meaning</td>
+      </tr>
+      <tr>
+        <th>Content Includes</th>
+        <td>Latin text, English translation, contextual analysis</td>
+      </tr>
+      <tr>
         <th>Review status</th>
-        <td>{% if review_status %}<code>{{ review_status }}</code> — {% case review_status %}{% when "coverage-verified" %}every stretch of the Latin is accounted for in the English{% if is_v2 %}; an independent second-model review and the curator's recorded corrections are on file{% endif %}{% when "human-reviewed" %}the curator read the whole translation against the Latin{% when "spot-checked" %}the curator read selected passages against the Latin{% when "defect-recorded" %}a known defect is recorded (see below); the edition is kept with the defect stated rather than hidden{% when "unreviewed" %}no check has been recorded for this legacy edition{% else %}{{ review_status }}{% endcase %}{% else %}not recorded (legacy edition){% endif %}. A review status says what was checked; <strong>it is not a guarantee of perfect fidelity</strong> — verify crucial passages against the Latin. <a href="{{ '/about/' | relative_url }}#how-the-editions-are-made-and-checked">How editions are checked</a>.</td>
+        <td>{% if review_status %}<code>{{ review_status }}</code> — {% case review_status %}{% when "coverage-verified" %}every stretch of the Latin is accounted for in the English{% if is_v2 %}; an independent second-model review and the curator's recorded corrections are on file{% endif %}{% when "human-reviewed" %}the curator read the whole translation against the Latin{% when "spot-checked" %}the curator read selected passages against the Latin{% when "defect-recorded" %}a known defect is recorded (see below); the edition is kept with the defect stated rather than hidden{% when "unreviewed" %}no check has been recorded for this legacy edition{% else %}{{ review_status }}{% endcase %}{% else %}not recorded (legacy edition){% endif %}. A review status says what was checked; <strong>it is not a guarantee of perfect fidelity</strong> — verify crucial passages against the Latin. <a href="{{ '/about/' | relative_url }}#translation-methodology">Translation methodology</a>.</td>
       </tr>
       {% if edition.known_defects.size > 0 %}
       <tr>
@@ -129,7 +137,11 @@ model, research model or review status says so ("legacy edition", "not recorded"
       </tr>
       <tr>
         <th>Reuse</th>
-        <td>Use this translation freely — as a text, as data, or as the starting point for your own translation or scholarly edition. No permission is needed; attribution is appreciated, not required.{% if page.external_resources.doi %} The Zenodo record for this edition was deposited under CC BY 4.0 (2025); the CC0 dedication of the same content governs reuse.{% endif %}</td>
+        <td>This translation may be freely used as a starting point for your own translations or scholarly work. Attribution is appreciated but not required.{% if page.external_resources.doi %} The Zenodo record for this edition was deposited under CC BY 4.0 (2025); the CC0 dedication of the same content governs reuse.{% endif %}</td>
+      </tr>
+      <tr>
+        <th>Limitations</th>
+        <td>This AI-assisted translation is not intended as an authoritative scholarly edition. Readers are encouraged to verify crucial passages against the original Latin.</td>
       </tr>
         {% if page.external_resources.doi %}
         <tr>
@@ -158,34 +170,34 @@ model, research model or review status says so ("legacy edition", "not recorded"
 
       {% if page.youtube_id or page.external_resources.archive_url or page.external_resources.github_url %}
       <tr>
-        <th colspan="2" class="metadata-section">This Edition Elsewhere</th>
+        <th colspan="2" class="metadata-section">Additional Resources</th>
       </tr>
       {% if page.external_resources.archive_url %}
       <tr>
-        <th>Internet Archive</th>
-        <td><a href="{{ page.external_resources.archive_url }}" target="_blank">Audio edition and edition data (preserved)</a></td>
+        <th>Archive.org</th>
+        <td><a href="{{ page.external_resources.archive_url }}" target="_blank">Download the Audio File</a></td>
       </tr>
       {% endif %}
       {% if page.external_resources.github_url %}
       <tr>
-        <th>Text corpus</th>
-        <td><a href="{{ page.external_resources.github_url }}" target="_blank">Latin source, English translation and translation.json on GitHub</a></td>
+        <th>GitHub</th>
+        <td><a href="{{ page.external_resources.github_url }}" target="_blank">Plain text version and source files</a></td>
       </tr>
       {% endif %}
       {% if page.youtube_id %}
       <tr>
         <th>YouTube</th>
-        <td><a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank">Archival video edition (Latin on screen, English read aloud)</a></td>
+        <td><a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank">Video presentation with Latin/English audio</a></td>
       </tr>
       {% endif %}
       {% endif %}
     </table>
 
     <div class="translation-notes">
-      <h4>About this edition</h4>
-      <p>This edition is part of Bibliothecarius Modernus, an independent digital library of neglected Latin literature. Every edition is complete, shows the Latin beside the English so that the translation can be checked, and states its source, its method and its review status here. These are not critical editions, but they are documented, source-linked digital editions with explicit provenance and review status.</p>
-      <p>The same edition can be heard on the Internet Archive, watched on YouTube, and cloned from the open text corpus on GitHub (links above). Software can find it in the <a href="{{ '/api/README.md' | relative_url }}">machine-readable catalog</a>{% if catalog_id %} under <code>{{ catalog_id }}</code>{% endif %}.</p>
-      <p>Translators and scholars are welcome to build on this work: the translation, introduction and metadata are dedicated to the public domain (CC0 1.0). No permission is needed; acknowledgment is appreciated.</p>
+      <h4>About This Translation</h4>
+      <p>This translation is part of the Bibliothecarius Modernus project, which uses AI technology to make Latin Patristic texts more accessible to audiences beyond specialized Latin scholarship. The translation prioritizes clarity and readability while attempting to preserve the original meaning.</p>
+      <p>The parallel presentation of Latin and English texts is designed to provide transparency and allow readers to verify the translation. You can access this text in multiple formats through our Archive.org collection, GitHub repository, or YouTube channel (links in the Additional Resources section above). Software can find it in the <a href="{{ '/api/README.md' | relative_url }}">machine-readable catalog</a>{% if catalog_id %} under <code>{{ catalog_id }}</code>{% endif %}.</p>
+      <p>If you're a translator interested in creating your own translation or scholarly edition based on this work, you are welcome to do so: the translation is dedicated to the public domain (CC0 1.0). No permission is needed, though acknowledgment is appreciated. Records deposited on Zenodo in 2025 carry a CC BY 4.0 statement as deposited; the CC0 dedication of the same content governs reuse.</p>
     </div>
   </div>
 

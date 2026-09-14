@@ -1,6 +1,8 @@
-# Bibliothecarius Modernus — website
+# Bibliothecarius Modernus
 
-Bibliothecarius Modernus is an independent digital library of neglected Latin literature, publishing complete open translations, parallel texts, contextual research, audio and video editions, and machine-readable scholarly data — and, where the sources require it, new transcriptions from manuscripts. This repository is the library's website (the reading room): every edition's page with the English translation beside the Latin, a researched introduction with bibliography and figures, the edition's identity and provenance (Resource Info), search in Latin and English, and the machine-readable catalog.
+A Jekyll site publishing AI-assisted translations of Latin Patristic texts. Provides side-by-side Latin/English translations of early Church fathers and medieval theologians, many of which lack existing English translations.
+
+Translations prioritize accessibility over scholarly authority—the original Latin is always displayed alongside English for verification.
 
 Live site: https://bibliothecarius-modernus.github.io
 
@@ -66,12 +68,13 @@ Translation JSON format:
 
 (Legacy files use `chunk_number`, `original_latin` and `cleaned_english_translation`; both forms are read.)
 
-## The library elsewhere
+## Related Resources
 
-- [Latin Patristic Texts](https://github.com/wryan14/Latin-Patristic-Texts) — the open text corpus (Latin source, English translation, `translation.json` per edition; CC0)
-- [YouTube](https://youtube.com/@BibliothecariusModernus) — the archival video editions
-- [Internet Archive](https://archive.org/details/@ryan_wolfslayer) — the audio editions and edition data
-- [White paper (2025)](https://doi.org/10.5281/zenodo.18002473)
+- [Project Blog](https://bibliothecarius-modernus.github.io/)
+- [Latin Patristic Texts Repository](https://github.com/wryan14/Latin-Patristic-Texts) - Source texts and translations (`translation.json` per edition; CC0)
+- [YouTube Channel](https://youtube.com/@BibliothecariusModernus) - Video presentations with Latin/English display
+- [Internet Archive](https://archive.org/details/@ryan_wolfslayer) - Audio versions and translation data
+- [Project White Paper (2025)](https://doi.org/10.5281/zenodo.18002473)
 
 ## Licensing
 
