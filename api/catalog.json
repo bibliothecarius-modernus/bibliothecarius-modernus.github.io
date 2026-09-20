@@ -2,8 +2,8 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-14T17:43:55Z",
- "version": "export:2026-09-14;registry:2026-09-14",
+ "generated_at": "2026-09-20T22:51:03Z",
+ "version": "export:2026-09-20;registry:2026-09-20",
  "publisher": {
   "name": "Bibliothecarius Modernus",
   "url": "https://bibliothecarius-modernus.github.io",
@@ -30,8 +30,8 @@
  },
  "counts": {
   "works": 3772,
-  "publications": 290,
-  "parts": 5,
+  "publications": 291,
+  "parts": 6,
   "manuscript_objects": 1,
   "manuscript_units": 2,
   "works_by_status": {
@@ -57714,7 +57714,8 @@
    "estimated_minutes": 2043.5,
    "translated_by_bibliothecarius": true,
    "publications": [
-    "pub-2676"
+    "pub-2676",
+    "pub-2884"
    ]
   },
   {
@@ -72278,6 +72279,24 @@
    "english_translation_status": "none-found",
    "verified": false,
    "publications": []
+  },
+  {
+   "id": "pl171-004/cxiii",
+   "kind": "part",
+   "catalog_id": "pl171-004",
+   "ordinal": 65,
+   "label": "CXIII.",
+   "title": "DE DUABUS CIVITATIBUS DEI ET DIABOLI",
+   "columns": {
+    "start": 864,
+    "end": 867
+   },
+   "status": "published",
+   "english_translation_status": "unknown",
+   "verified": false,
+   "publications": [
+    "pub-2884"
+   ]
   }
  ],
  "manuscript_objects": [
@@ -92541,6 +92560,93 @@
     }
    },
    "version": "2026-09-14T17:41:22Z"
+  },
+  {
+   "id": "pub-2884",
+   "kind": "publication",
+   "catalog_id": "pl171-004",
+   "part_id": "pl171-004/cxiii",
+   "project_id": "de-duabus-civitatibus-dei-et-diaboli-20260920",
+   "title_english": "On the Two Cities of God and the Devil",
+   "title_latin": "De duabus civitatibus Dei et diaboli",
+   "author": "Geoffroy Babion",
+   "pl_volume": 171,
+   "columns": {
+    "start": 864,
+    "end": 867
+   },
+   "century": "11th-12th",
+   "status": "published",
+   "youtube_visibility": "public",
+   "published_at": "2026-09-20T22:49:13Z",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=HoT-UhOz0T0",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/de-duabus-civitatibus-dei-et-diaboli-geoffroy-babion/",
+    "archive": "https://archive.org/details/on-the-two-cities-of-god-and-the-devil",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_171/Geoffroy%20Babion%20-%20On%20the%20Two%20Cities%20of%20God%20and%20the%20Devil"
+   },
+   "doi": null,
+   "provenance": {
+    "source_of_record": "pipeline",
+    "generation": "v2",
+    "translator_model": "openai/gpt-5.5",
+    "translation_date": "2026-09-20",
+    "translation_date_source": "project_state",
+    "source_check": true,
+    "translation_qa": "attention"
+   },
+   "review": {
+    "status": "coverage-verified",
+    "checked_at": "2026-09-20",
+    "known_defects": []
+   },
+   "rights": {
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "not-redistributed",
+    "source_text": "Latin: Migne, Patrologia Latina (1844–65), public domain; only the Latin paired inside the published translation is served",
+    "note": null
+   },
+   "locators": {
+    "work": "pl171-004/cxiii",
+    "passages_available": true,
+    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/09/de-duabus-civitatibus-dei-et-diaboli-geoffroy-babion/#chunk-{n}"
+   },
+   "related": {
+    "same_author": [
+     "pl171-001",
+     "pl171-002",
+     "pl171-003",
+     "pl171-005",
+     "pl171-006",
+     "pl171-007",
+     "pl171-008",
+     "pl171-009",
+     "pl171-010",
+     "pl171-011",
+     "pl171-012",
+     "pl171-013",
+     "pl171-014",
+     "pl171-015",
+     "pl171-016",
+     "pl171-017",
+     "pl171-018",
+     "pl171-019",
+     "pl171-020",
+     "pl171-021",
+     "pl171-022",
+     "pl171-023",
+     "pl171-024",
+     "pl171-025",
+     "pl171-026"
+    ],
+    "adjacent_in_volume": {
+     "prev": "pl171-003",
+     "next": "pl171-005"
+    }
+   },
+   "version": "2026-09-20T22:49:42Z"
   }
  ]
 }
