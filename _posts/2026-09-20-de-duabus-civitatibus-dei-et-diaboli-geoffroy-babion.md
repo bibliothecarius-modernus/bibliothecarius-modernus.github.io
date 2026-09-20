@@ -2,6 +2,7 @@
 layout: tabbed_post
 title: "De duabus civitatibus Dei et diaboli (c. 12th century)"
 date: 2026-09-20
+publish_date: 2026-09-20
 listed: true
 categories: [homiletics, medieval-theology, eschatology]
 youtube_id: "HoT-UhOz0T0"
