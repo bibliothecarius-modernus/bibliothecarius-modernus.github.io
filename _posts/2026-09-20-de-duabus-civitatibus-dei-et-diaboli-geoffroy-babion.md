@@ -32,7 +32,7 @@ content_license: "CC0-1.0"
 </p>
 
 <figure class="research-figure" style="margin: 20px auto; max-width: 640px; text-align: center;">
-  <a href="https://commons.wikimedia.org/wiki/File:City_of_God_Manuscript.jpg">A later illuminated witness to Augustine’s <em>City of God</em>, the principal theological background to Babion’s two-cities sermon.</a>
+  <a href="https://commons.wikimedia.org/wiki/File:City_of_God_Manuscript.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/5/52/City_of_God_Manuscript.jpg" alt="A later illuminated witness to Augustine’s <em>City of God</em>, the principal theological background to Babion’s two-cities sermon." style="max-width: 100%; border: 1px solid #c0b283; box-shadow: 0 1px 3px rgba(0,0,0,0.15);"></a>
   <figcaption style="font-size: 0.9em; color: #5a4a3a; margin-top: 8px; text-align: left;">
     <strong>A later illuminated witness to Augustine’s <em>City of God</em>, the principal theological background to Babion’s two-cities sermon.</strong> — New York Public Library, Spencer Collection MS 30, 15th century. Relationship: thematic context.
     <br>Image rights: public domain. Attribution: none required; credit to the New York Public Library recommended. <a href="https://commons.wikimedia.org/wiki/File:City_of_God_Manuscript.jpg">Source</a>.
@@ -41,7 +41,7 @@ content_license: "CC0-1.0"
 </figure>
 
 <figure class="research-figure" style="margin: 20px auto; max-width: 640px; text-align: center;">
-  <a href="https://commons.wikimedia.org/wiki/File:Fifth_vision-_an_angel_announces_judgment_to_men_of_many_categories_of_life;_another_angel_points_to_the_city_of_Babylon_falling_to_pieces_(NYPL_b12455533-425232).tif">An Apocalypse illumination depicting the fall of Babylon, the biblical event invoked by the sermon’s opening verse.</a>
+  <a href="https://commons.wikimedia.org/wiki/File:Fifth_vision-_an_angel_announces_judgment_to_men_of_many_categories_of_life;_another_angel_points_to_the_city_of_Babylon_falling_to_pieces_(NYPL_b12455533-425232).tif"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Fifth_vision-_an_angel_announces_judgment_to_men_of_many_categories_of_life%3B_another_angel_points_to_the_city_of_Babylon_falling_to_pieces_%28NYPL_b12455533-425232%29.tif/lossy-page1-1280px-thumbnail.tif.jpg" alt="An Apocalypse illumination depicting the fall of Babylon, the biblical event invoked by the sermon’s opening verse." style="max-width: 100%; border: 1px solid #c0b283; box-shadow: 0 1px 3px rgba(0,0,0,0.15);"></a>
   <figcaption style="font-size: 0.9em; color: #5a4a3a; margin-top: 8px; text-align: left;">
     <strong>An Apocalypse illumination depicting the fall of Babylon, the biblical event invoked by the sermon’s opening verse.</strong> — New York Public Library, c. 1425. Relationship: thematic context.
     <br>Image rights: public domain. Attribution: none required; credit to the New York Public Library recommended. <a href="https://commons.wikimedia.org/wiki/File:Fifth_vision-_an_angel_announces_judgment_to_men_of_many_categories_of_life;_another_angel_points_to_the_city_of_Babylon_falling_to_pieces_(NYPL_b12455533-425232).tif">Source</a>.
