@@ -1,6 +1,6 @@
 {
  "schema": "bibliothecarius.editions/1",
- "generated_at": "2026-09-20T22:51:03Z",
+ "generated_at": "2026-09-21T12:05:38Z",
  "source": "projection of api/catalog.json publications[] keyed by website path (Phase 8B)",
  "rights": "CC0-1.0",
  "by_path": {
@@ -2261,7 +2261,7 @@
     "end": null
    },
    "author": "Anonymous; Gerhardus magister",
-   "title_latin": "HAB Wolfenbüttel, Cod. Guelf. 602 Helmst., Part I",
+   "title_latin": "De diversis significationibus nominis Iesu et De vita sancti Godehardi",
    "title_english": "On the Meanings of the Name of Jesus, and On the Life of Saint Godehard",
    "generation": "v2",
    "translator_model": "openai/gpt-5.5",
@@ -2311,6 +2311,38 @@
     "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_171/Geoffroy%20Babion%20-%20On%20the%20Two%20Cities%20of%20God%20and%20the%20Devil"
    },
    "passages_available": true,
+   "related_same_author": [],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/09/sermo-in-natale-unius-confessoris-anonymous/": {
+   "catalog_id": "ms-yale-beinecke-571",
+   "publication_id": "pub-2885",
+   "part_id": null,
+   "pl_volume": 0,
+   "columns": {
+    "start": null,
+    "end": null
+   },
+   "author": "Anonymous",
+   "title_latin": "Sermo in natale unius confessoris",
+   "title_english": "Anonymous Sermon for the Feast of a Confessor, Later Associated with St. Aderald of Troyes",
+   "generation": "v2",
+   "translator_model": "openai/gpt-5.5",
+   "translation_date": "2026-09-21",
+   "review_status": "coverage-verified",
+   "review_checked_at": "2026-09-21",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2026-09-21T12:04:37Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=ZfwLsXORYGk",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/sermo-in-natale-unius-confessoris-anonymous/",
+    "archive": "https://archive.org/details/anonymous-sermon-for-the-feast-of-a-confessor-beinecke-ms-571",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Manuscripts/Yale_Beinecke/MS_571/Whole"
+   },
+   "passages_available": false,
    "related_same_author": [],
    "adjacent": [],
    "ambiguous": false

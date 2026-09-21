@@ -2,8 +2,8 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-20T22:51:03Z",
- "version": "export:2026-09-20;registry:2026-09-20",
+ "generated_at": "2026-09-21T12:05:38Z",
+ "version": "export:2026-09-21;registry:2026-09-21",
  "publisher": {
   "name": "Bibliothecarius Modernus",
   "url": "https://bibliothecarius-modernus.github.io",
@@ -30,10 +30,10 @@
  },
  "counts": {
   "works": 3772,
-  "publications": 291,
+  "publications": 292,
   "parts": 6,
-  "manuscript_objects": 1,
-  "manuscript_units": 2,
+  "manuscript_objects": 2,
+  "manuscript_units": 3,
   "works_by_status": {
    "untranslated": 3583,
    "published": 179,
@@ -72329,6 +72329,35 @@
    "publications": [
     "pub-2883"
    ]
+  },
+  {
+   "id": "ms-yale-beinecke-571",
+   "kind": "manuscript_object",
+   "institution": "Yale University, Beinecke Rare Book and Manuscript Library",
+   "institution_short": "Beinecke Library, Yale",
+   "shelfmark": "MS 571",
+   "part": null,
+   "folios": "1r–108v",
+   "catalogue_url": "https://pre1600ms.beinecke.library.yale.edu/docs/pre1600.ms571.htm",
+   "catalogue_citation": "Albert Derolez, description of Beinecke MS 571, Beinecke Rare Book and Manuscript Library pre-1600 manuscripts catalogue (updated 30 November 2007)",
+   "digitization_url": "https://collections.library.yale.edu/catalog/17418520",
+   "image_url_pattern": "https://collections.library.yale.edu/iiif/2/<OID>/full/full/0/default.jpg (17418950 = f. 65r … 17418959 = f. 69v)",
+   "iiif_manifest": null,
+   "date_origin": "10th century, second half (ff. 64r–74v, hand B; the codex as a whole s. X² and XII¹)",
+   "place_origin": "France",
+   "image_rights": {
+    "statement": "Yale University, Open Access to Digital Representations of Works in the Public Domain (2011): \"Yale will make digital copies of unrestricted public domain collections available for use without limitations through the University's electronic interfaces.\" The item record carries Yale's generic notice (\"The use of this image may be subject to the copyright law of the United States…\").",
+    "url": "https://lux.collections.yale.edu/content/open-access-policy-2011",
+    "date_checked": "2026-09-20",
+    "credit": "Manuscript source: Yale University, Beinecke Rare Book and Manuscript Library, MS 571, ff. 65r–69v. Digital images: Beinecke Rare Book and Manuscript Library, Yale University <https://collections.library.yale.edu/catalog/17418520>, used under Yale's Open Access policy for public-domain collections (read 2026-09-20); no endorsement implied. Description: Albert Derolez, Beinecke pre-1600 manuscripts catalogue (2007). Bibliothecarius Modernus transcription, 2026, version 1.0 (CC0 1.0)."
+   },
+   "status": "published",
+   "units": [
+    "ms-yale-beinecke-571-003"
+   ],
+   "publications": [
+    "pub-2885"
+   ]
   }
  ],
  "manuscript_units": [
@@ -72396,6 +72425,39 @@
    "translated_by_bibliothecarius": true,
    "publications": [
     "pub-2883"
+   ]
+  },
+  {
+   "id": "ms-yale-beinecke-571-003",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-yale-beinecke-571",
+   "ordinal": 3,
+   "author": "Anonymous",
+   "title_latin": "Sermo in natale unius confessoris",
+   "rubric": "Sermo in natale unius confessoris",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "65r",
+    "end": "69v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 1425,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (bounded search 2026-09-20; In Principio, Mirabile and Grégoire's Homéliaires not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "published",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2885"
    ]
   }
  ],
@@ -92507,7 +92569,7 @@
    "part_id": null,
    "project_id": "de-diversis-significationibus-nominis-iesu-et-de-v-20260914",
    "title_english": "On the Meanings of the Name of Jesus, and On the Life of Saint Godehard",
-   "title_latin": "HAB Wolfenbüttel, Cod. Guelf. 602 Helmst., Part I",
+   "title_latin": "De diversis significationibus nominis Iesu et De vita sancti Godehardi",
    "author": "Anonymous; Gerhardus magister",
    "pl_volume": 0,
    "columns": {
@@ -92647,6 +92709,70 @@
     }
    },
    "version": "2026-09-20T22:49:42Z"
+  },
+  {
+   "id": "pub-2885",
+   "kind": "publication",
+   "catalog_id": "ms-yale-beinecke-571",
+   "part_id": null,
+   "project_id": "sermo-in-natale-unius-confessoris-20260921",
+   "title_english": "Anonymous Sermon for the Feast of a Confessor, Later Associated with St. Aderald of Troyes",
+   "title_latin": "Sermo in natale unius confessoris",
+   "author": "Anonymous",
+   "pl_volume": 0,
+   "columns": {
+    "start": null,
+    "end": null
+   },
+   "century": null,
+   "status": "published",
+   "youtube_visibility": "public",
+   "published_at": "2026-09-21T12:04:37Z",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=ZfwLsXORYGk",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/sermo-in-natale-unius-confessoris-anonymous/",
+    "archive": "https://archive.org/details/anonymous-sermon-for-the-feast-of-a-confessor-beinecke-ms-571",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Manuscripts/Yale_Beinecke/MS_571/Whole"
+   },
+   "doi": null,
+   "provenance": {
+    "source_of_record": "pipeline",
+    "generation": "v2",
+    "translator_model": "openai/gpt-5.5",
+    "translation_date": "2026-09-21",
+    "translation_date_source": "project_state",
+    "source_check": true,
+    "translation_qa": "pass"
+   },
+   "review": {
+    "status": "coverage-verified",
+    "checked_at": "2026-09-21",
+    "known_defects": []
+   },
+   "rights": {
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "transcription-cc0",
+    "source_text": "Latin: Bibliothecarius Modernus transcription from the digitized manuscript (CC0 1.0); the manuscript text is public domain; the images remain with the holding institution under its stated terms (see manuscript_objects[].image_rights)",
+    "note": null
+   },
+   "locators": {
+    "work": "ms-yale-beinecke-571",
+    "passages_available": false,
+    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/09/sermo-in-natale-unius-confessoris-anonymous/#chunk-{n}"
+   },
+   "related": {
+    "same_author": [
+     "ms-hab-602-helmst-p1-002",
+     "ms-yale-beinecke-571-003"
+    ],
+    "adjacent_in_volume": {
+     "prev": "ms-hab-602-helmst-p1-004",
+     "next": "ms-yale-beinecke-571-003"
+    }
+   },
+   "version": "2026-09-21T12:04:52Z"
   }
  ]
 }
