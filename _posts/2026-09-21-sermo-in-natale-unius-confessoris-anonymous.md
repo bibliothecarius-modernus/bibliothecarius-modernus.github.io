@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Anonymous Sermon for the Feast of a Confessor, Later Associated with St. Aderald of Troyes"
 date: 2026-09-21
-listed: false
+listed: true
 categories: [homiletics, hagiography, carolingian-theological-renaissance]
 youtube_id: "ZfwLsXORYGk"
 translation_json: "/assets/translations/2026-09-21-sermo-in-natale-unius-confessoris-anonymous.json"
