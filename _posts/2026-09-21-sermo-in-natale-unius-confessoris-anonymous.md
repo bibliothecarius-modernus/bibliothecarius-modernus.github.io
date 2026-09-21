@@ -13,7 +13,7 @@ original_work:
   publication: "Yale University, Beinecke Rare Book and Manuscript Library, MS 571, ff. 65r–69v"
   context: "Anonymous Sermon for the Feast of a Confessor, Later Associated with St. Aderald of Troyes"
 external_resources:
-  archive_url: ""
+  archive_url: "https://archive.org/details/anonymous-sermon-for-the-feast-of-a-confessor-beinecke-ms-571"
   github_url: "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Manuscripts/Yale_Beinecke/MS_571/Whole"
 catalog_id: "ms-yale-beinecke-571"
 source_kind: "bibliothecarius-transcription"
