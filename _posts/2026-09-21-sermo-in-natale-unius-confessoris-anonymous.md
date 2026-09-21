@@ -2,6 +2,7 @@
 layout: tabbed_post
 title: "Anonymous Sermon for the Feast of a Confessor, Later Associated with St. Aderald of Troyes"
 date: 2026-09-21
+publish_date: 2026-09-21
 listed: true
 categories: [homiletics, hagiography, carolingian-theological-renaissance]
 youtube_id: "ZfwLsXORYGk"
