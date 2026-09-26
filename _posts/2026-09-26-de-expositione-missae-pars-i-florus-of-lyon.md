@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De expositione missae, pars I (c. 9th century)"
 date: 2026-09-26
-listed: false
+listed: true
 categories: [liturgical-texts-sacramentaries, carolingian-theological-renaissance, medieval-theology]
 youtube_id: "WR4kgd9ZZZE"
 translation_json: "/assets/translations/2026-09-26-de-expositione-missae-pars-i-florus-of-lyon.json"
