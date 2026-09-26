@@ -27,7 +27,7 @@ content_license: "CC0-1.0"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-style: italic;">
-  A 9th-century liturgical exposition that assembles patristic authorities to explain the Mass through traditional allegorical interpretation, likely composed as an alternative to the innovative ceremonial commentaries of Amalarius of Metz during Carolingian efforts to standardize worship.
+  A Carolingian commentary on the prayers of the Mass, built almost entirely from quotations of Augustine and other Fathers, in which Florus of Lyon explains what the prayers mean rather than what their ceremonies symbolize; Part I runs from the opening greeting to the Sanctus.
 </p>
 
 <figure class="research-figure" style="margin: 20px auto; max-width: 640px; text-align: center;">
