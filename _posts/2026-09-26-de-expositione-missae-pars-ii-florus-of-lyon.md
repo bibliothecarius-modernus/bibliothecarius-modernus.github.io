@@ -3,7 +3,8 @@ layout: tabbed_post
 title: "De expositione missae, pars II (c. 9th century)"
 date: 2026-09-26
 listed: false
-categories: [liturgical-texts-sacramentaries, carolingian-theological-renaissance, homiletics]
+publish_date: 2026-10-04
+categories: [liturgical-texts-sacramentaries, carolingian-theological-renaissance, medieval-theology]
 youtube_id: "g367BvyZQRg"
 translation_json: "/assets/translations/2026-09-26-de-expositione-missae-pars-ii-florus-of-lyon.json"
 original_work:
@@ -27,7 +28,7 @@ content_license: "CC0-1.0"
 ---
 
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-style: italic;">
-  A 9th-century liturgical exposition that systematically explains the Mass through patristic authorities, compiled as an alternative to the allegorical interpretations of Amalarius of Metz during Carolingian efforts to standardize worship and clerical education.
+  A Carolingian commentary on the prayers of the Mass, built almost entirely from quotations of Augustine and other Fathers; Part II explains the canon from “Therefore, most merciful Father” through the consecration and the remembrance of the dead, then the Lord’s Prayer, the peace, the Lamb of God, communion and the dismissal.
 </p>
 
 <figure class="research-figure" style="margin: 20px auto; max-width: 640px; text-align: center;">
