@@ -28,7 +28,7 @@ permalink: /about/
       <img src="{{ '/assets/images/ryan-photo.jpg' | relative_url }}" alt="Ryan Wolfslayer" class="profile">
     </div>
 
-    <p>Bibliothecarius Modernus is an independent project maintained by Ryan Wolfslayer, a librarian and programmer with a background in digital librarianship.</p>
+    <p>Bibliothecarius Modernus is an independent project created and run by Ryan Wolfslayer, a librarian and programmer who reads entirely too much theology.</p>
   </div>
 
   <p class="about-links">
