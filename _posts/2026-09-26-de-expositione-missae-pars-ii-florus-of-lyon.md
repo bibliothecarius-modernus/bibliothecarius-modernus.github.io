@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "De expositione missae, pars II (c. 9th century)"
 date: 2026-09-26
-listed: false
+listed: true
 publish_date: 2026-10-04
 categories: [liturgical-texts-sacramentaries, carolingian-theological-renaissance, medieval-theology]
 youtube_id: "g367BvyZQRg"
