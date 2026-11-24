@@ -1,6 +1,6 @@
 {
  "schema": "bibliothecarius.editions/1",
- "generated_at": "2026-11-24T16:34:22Z",
+ "generated_at": "2026-11-24T21:12:50Z",
  "source": "projection of api/catalog.json publications[] keyed by website path (Phase 8B)",
  "rights": "CC0-1.0",
  "by_path": {
@@ -604,6 +604,11 @@
      "catalog_id": "pl119-002",
      "title": "Exposition of the Mass, Part I",
      "url": "https://bibliothecarius-modernus.github.io/2026/09/de-expositione-missae-pars-i-florus-of-lyon/"
+    },
+    {
+     "catalog_id": "pl119-002",
+     "title": "Exposition of the Mass, Part II",
+     "url": "https://bibliothecarius-modernus.github.io/2026/09/de-expositione-missae-pars-ii-florus-of-lyon/"
     }
    ],
    "adjacent": [],
@@ -2379,6 +2384,44 @@
     "blog": "https://bibliothecarius-modernus.github.io/2026/09/de-expositione-missae-pars-i-florus-of-lyon/",
     "archive": "https://archive.org/details/exposition-of-the-mass-part-i",
     "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_119/Florus%20of%20Lyon%20-%20Exposition%20of%20the%20Mass,%20Part%20I"
+   },
+   "passages_available": false,
+   "related_same_author": [
+    {
+     "catalog_id": "pl119-006",
+     "title": "Book against John Scotus",
+     "url": "https://bibliothecarius-modernus.github.io/2025/04/liber-adversus-joannem-scotum/"
+    }
+   ],
+   "adjacent": [],
+   "ambiguous": false
+  },
+  "/2026/09/de-expositione-missae-pars-ii-florus-of-lyon/": {
+   "catalog_id": "pl119-002",
+   "publication_id": "pub-2887",
+   "part_id": "pl119-002/ii",
+   "pl_volume": 119,
+   "columns": {
+    "start": 43,
+    "end": 72
+   },
+   "author": "Florus of Lyon",
+   "title_latin": "De expositione missae, pars II",
+   "title_english": "Exposition of the Mass, Part II",
+   "generation": "v2",
+   "translator_model": "openai/gpt-5.5",
+   "translation_date": "2026-09-26",
+   "review_status": "coverage-verified",
+   "review_checked_at": "2026-09-26",
+   "known_defects": [],
+   "rights": "CC0-1.0",
+   "published_at": "2026-10-04T00:30:11Z",
+   "doi": null,
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=g367BvyZQRg",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/09/de-expositione-missae-pars-ii-florus-of-lyon/",
+    "archive": "https://archive.org/details/exposition-of-the-mass-part-ii",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_119/Florus%20of%20Lyon%20-%20Exposition%20of%20the%20Mass,%20Part%20II"
    },
    "passages_available": false,
    "related_same_author": [
