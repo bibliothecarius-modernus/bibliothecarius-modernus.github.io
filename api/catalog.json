@@ -2,8 +2,8 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-09-26T22:29:21Z",
- "version": "export:2026-09-26;registry:2026-09-26",
+ "generated_at": "2026-11-24T16:15:28Z",
+ "version": "export:2026-11-24;registry:2026-11-24",
  "publisher": {
   "name": "Bibliothecarius Modernus",
   "url": "https://bibliothecarius-modernus.github.io",
@@ -72556,7 +72556,7 @@
    "project_id": null,
    "title_english": "Historical Eulogy",
    "title_latin": "Sancti Adonis Elogium historicum.",
-   "author": "Ado of Vienne",
+   "author": "Jean Mabillon",
    "pl_volume": 68,
    "columns": {
     "start": 9,
@@ -72618,7 +72618,7 @@
      "next": "pl123-002"
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2592",
@@ -72628,7 +72628,7 @@
    "project_id": null,
    "title_english": "Historical Eulogy",
    "title_latin": "Sancti Adonis Elogium historicum",
-   "author": "Ado of Vienne",
+   "author": "Jean Mabillon",
    "pl_volume": 123,
    "columns": {
     "start": 9,
@@ -72690,7 +72690,7 @@
      "next": "pl123-002"
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2593",
@@ -79172,7 +79172,7 @@
    "project_id": null,
    "title_english": "Defense of the Learning of Jerome Against Jean Le Clerc",
    "title_latin": "Defensio Eruditionis Hieronymianae adversus Joannem Clericum",
-   "author": "Jerome of Stridon",
+   "author": "Jean Martianay",
    "pl_volume": 25,
    "columns": {
     "start": 1577,
@@ -79249,7 +79249,7 @@
      "next": null
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2685",
@@ -79805,7 +79805,7 @@
    "project_id": null,
    "title_english": "On the Heresy and History of the Eutychians Book One",
    "title_latin": "Quesnelli Dissertationes in S. Leonis Magni opera.",
-   "author": "Leo the Great",
+   "author": "Pietro Tommaso Cacciari",
    "pl_volume": 55,
    "columns": {
     "start": 183,
@@ -79868,7 +79868,7 @@
      "next": null
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2694",
@@ -79878,7 +79878,7 @@
    "project_id": null,
    "title_english": "On the Heresy and History of the Eutychians Book Two",
    "title_latin": "Quesnelli Dissertationes in S. Leonis Magni opera.",
-   "author": "Leo the Great",
+   "author": "Pietro Tommaso Cacciari",
    "pl_volume": 55,
    "columns": {
     "start": 183,
@@ -79941,7 +79941,7 @@
      "next": null
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2695",
@@ -79951,7 +79951,7 @@
    "project_id": null,
    "title_english": "On the Heresy and History of the Manicheans Book One",
    "title_latin": "De Eutychiana haeresi et historia Liber I",
-   "author": "Leo the Great",
+   "author": "Pietro Tommaso Cacciari",
    "pl_volume": 55,
    "columns": {
     "start": 183,
@@ -80014,7 +80014,7 @@
      "next": null
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2696",
@@ -80024,7 +80024,7 @@
    "project_id": null,
    "title_english": "On the Heresy and History of the Manicheans Book Two",
    "title_latin": "Quesnelli Dissertationes in S. Leonis Magni opera.",
-   "author": "Leo the Great",
+   "author": "Pietro Tommaso Cacciari",
    "pl_volume": 55,
    "columns": {
     "start": 183,
@@ -80087,7 +80087,7 @@
      "next": null
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2697",
@@ -80097,7 +80097,7 @@
    "project_id": null,
    "title_english": "On the Heresy and History of the Priscillianists",
    "title_latin": "Quesnelli Dissertationes in S. Leonis Magni opera.",
-   "author": "Leo the Great",
+   "author": "Pietro Tommaso Cacciari",
    "pl_volume": 55,
    "columns": {
     "start": 183,
@@ -80160,7 +80160,7 @@
      "next": null
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2698",
@@ -80170,7 +80170,7 @@
    "project_id": null,
    "title_english": "On the Pelagian Heresy Growing in the Age of Leo the Great",
    "title_latin": "Quesnelli Dissertationes in S. Leonis Magni opera.",
-   "author": "Leo the Great",
+   "author": "Pietro Tommaso Cacciari",
    "pl_volume": 55,
    "columns": {
     "start": 183,
@@ -80233,7 +80233,7 @@
      "next": null
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2699",
@@ -81251,7 +81251,7 @@
    "project_id": null,
    "title_english": "Books on the Interpreters of Sacred Scriptures",
    "title_latin": "Libri de interpretibus divinarum Scripturarum",
-   "author": "Notker Labeo",
+   "author": "Notker Balbulus",
    "pl_volume": 131,
    "columns": {
     "start": 993,
@@ -81308,7 +81308,7 @@
      "next": "pl131-020"
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2716",
@@ -81318,7 +81318,7 @@
    "project_id": null,
    "title_english": "Martyrology of Notker Labeo",
    "title_latin": "Martyrologium.",
-   "author": "Notker Labeo",
+   "author": "Notker Balbulus",
    "pl_volume": 131,
    "columns": {
     "start": 1026,
@@ -81375,7 +81375,7 @@
      "next": "pl131-022"
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2717",
@@ -81635,7 +81635,7 @@
    "project_id": null,
    "title_english": "The Life of Saint Odo Second Abbot of Cluny",
    "title_latin": "Vita Sancti Odonis Abbatis Cluniacensis Secundi",
-   "author": "Odo of Cluny",
+   "author": "John Italus of Cluny",
    "pl_volume": 133,
    "columns": {
     "start": 9,
@@ -81694,7 +81694,7 @@
      "next": "pl133-002"
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2722",
@@ -91831,9 +91831,9 @@
    "catalog_id": "pl055-004",
    "part_id": null,
    "project_id": null,
-   "title_english": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (c.445)",
+   "title_english": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (1751)",
    "title_latin": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente",
-   "author": "Pseudo-Leo the Great",
+   "author": "Pietro Tommaso Cacciari",
    "pl_volume": 55,
    "columns": {
     "start": 183,
@@ -91896,7 +91896,7 @@
      "next": null
     }
    },
-   "version": "2026-06-10T02:29:40Z"
+   "version": "2026-11-24T16:14:59Z"
   },
   {
    "id": "pub-2873",

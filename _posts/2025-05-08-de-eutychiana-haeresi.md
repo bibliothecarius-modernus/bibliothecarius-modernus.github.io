@@ -1,6 +1,6 @@
 ---
 layout: tabbed_post
-title: "De Eutychiana haeresi et historia (c.450)"
+title: "De Eutychiana haeresi et historia (1751)"
 date: 2025-05-08
 categories: [post-nicene-fathers, heresiology, ecclesiastical-history]
 youtube_id: "peY5ysKu7Mo"
@@ -8,8 +8,8 @@ translation_json: "/assets/translations/2025-05-08-de-eutychiana-haeresi.json"
 # Additional metadata fields
 original_work:
   latin_title: "De Eutychiana haeresi et historia"
-  author: "Leo the Great"
-  date: "c. 450"
+  author: "Pietro Tommaso Cacciari"
+  date: "1751"
   publication: "Patrologia Latina Volume 55"
   context: "A theological treatise examining the Eutychian heresy, documenting the controversies surrounding the Council of Chalcedon, and defending orthodox Christology against Monophysite claims that diminished Christ's true humanity."
 external_resources:
@@ -25,8 +25,12 @@ redirect_from:
 catalog_id: "pl055-004"
 pl_volume: 55
 ---
+<p class="correction-note" style="border-left: 4px solid #8B0000; padding: 10px 16px; background-color: #fbf3f0; margin-bottom: 20px;">
+<strong>Correction (24 November 2026):</strong> This work is not by Leo the Great. It is one of Pietro Tommaso Cacciari's <em>Exercitationes</em> on Leo's works (Rome, 1751), reprinted in PL 55. The essay below was written under the earlier attribution; its remarks on authorship, date and transmission are superseded.
+</p>
+
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-Leo the Great's systematic treatise addressing the Eutychian controversy, chronicling the turbulent events from Eutyches' condemnation in 448 through the "Robber Council" of 449 to the triumph of orthodox Christology at Chalcedon in 451.
+Pietro Tommaso Cacciari's eighteenth-century dissertation on the Eutychian controversy in the age of Leo the Great, chronicling the turbulent events from Eutyches' condemnation in 448 through the "Robber Council" of 449 to the triumph of orthodox Christology at Chalcedon in 451.
 </p>
 
 ## Historical and Theological Context

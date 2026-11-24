@@ -1,6 +1,6 @@
 ---
 layout: tabbed_post
-title: "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (c.445)"
+title: "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (1751)"
 date: 2025-05-08
 categories: [post-nicene-fathers, apologetics, heresiology]
 youtube_id: "i60cOx7hcgY"
@@ -8,8 +8,8 @@ translation_json: "/assets/translations/2025-05-08-de-pelagiana-haeresi.json"
 # Additional metadata fields
 original_work:
   latin_title: De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente
-  author: "Pseudo-Leo the Great"
-  date: "c. 445"
+  author: "Pietro Tommaso Cacciari"
+  date: "1751"
   publication: "Patrologia Latina Volume 55"
   context: "A historical-theological treatise examining Pope Leo the Great's opposition to Pelagianism, highlighting his crucial role in reinforcing Augustinian teaching on grace against heretical claims denying original sin and divine grace."
 external_resources:
@@ -25,6 +25,10 @@ redirect_from:
 catalog_id: "pl055-004"
 pl_volume: 55
 ---
+<p class="correction-note" style="border-left: 4px solid #8B0000; padding: 10px 16px; background-color: #fbf3f0; margin-bottom: 20px;">
+<strong>Correction (24 November 2026):</strong> This work is not by Leo the Great. It is one of Pietro Tommaso Cacciari's <em>Exercitationes</em> on Leo's works (Rome, 1751), reprinted in PL 55. The essay below was written under the earlier attribution; its remarks on authorship, date and transmission are superseded.
+</p>
+
 <p class="article-summary" style="font-size: 1.2rem; line-height: 1.7; color: #3E2C1B; border-left: 4px solid #B8860B; padding: 12px 18px; background-color: #f9f5ea; border-radius: 0 6px 6px 0; margin-bottom: 25px; margin-top: 15px; font-style: italic; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
 This historical-theological compilation documents Pope Leo the Great's decisive campaign against Pelagianism in 5th-century Italy, demonstrating how his papal authority consolidated Augustine's doctrines on grace, original sin, and salvation throughout the Western Church.
 </p>

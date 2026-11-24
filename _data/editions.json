@@ -1,6 +1,6 @@
 {
  "schema": "bibliothecarius.editions/1",
- "generated_at": "2026-09-26T22:29:21Z",
+ "generated_at": "2026-11-24T16:15:28Z",
  "source": "projection of api/catalog.json publications[] keyed by website path (Phase 8B)",
  "rights": "CC0-1.0",
  "by_path": {
@@ -930,7 +930,7 @@
     "start": 1577,
     "end": null
    },
-   "author": "Jerome of Stridon",
+   "author": "Jean Martianay",
    "title_latin": "Defensio Eruditionis Hieronymianae adversus Joannem Clericum",
    "title_english": "Defense of the Learning of Jerome Against Jean Le Clerc",
    "generation": "legacy-unknown",
@@ -1046,7 +1046,7 @@
     "start": 183,
     "end": null
    },
-   "author": "Leo the Great",
+   "author": "Pietro Tommaso Cacciari",
    "title_latin": "De Eutychiana haeresi et historia Liber I",
    "title_english": "On the Heresy and History of the Manicheans Book One",
    "generation": "legacy-unknown",
@@ -1992,9 +1992,9 @@
     "start": 183,
     "end": null
    },
-   "author": "Pseudo-Leo the Great",
+   "author": "Pietro Tommaso Cacciari",
    "title_latin": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente",
-   "title_english": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (c.445)",
+   "title_english": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (1751)",
    "generation": "legacy-unknown",
    "translator_model": null,
    "translation_date": null,
@@ -2141,7 +2141,7 @@
     },
     {
      "catalog_id": "pl055-004",
-     "title": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (c.445)",
+     "title": "De Pelagiana Haeresi, S Leonis Magni Aevo Gliscente (1751)",
      "url": "https://bibliothecarius-modernus.github.io/2025/05/de-pelagiana-haeresi/"
     }
    ],
