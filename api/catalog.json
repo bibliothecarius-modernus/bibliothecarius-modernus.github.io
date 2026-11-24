@@ -2,7 +2,7 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-11-24T16:15:28Z",
+ "generated_at": "2026-11-24T16:34:22Z",
  "version": "export:2026-11-24;registry:2026-11-24",
  "publisher": {
   "name": "Bibliothecarius Modernus",
@@ -72570,7 +72570,7 @@
     "youtube": null,
     "blog": null,
     "archive": null,
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68/Ado%20of%20Vienne%20-%20Historical%20Eulogy"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_68/Jean%20Mabillon%20-%20Historical%20Eulogy"
    },
    "doi": null,
    "provenance": {
@@ -72618,7 +72618,7 @@
      "next": "pl123-002"
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2592",
@@ -72642,7 +72642,7 @@
     "youtube": "https://www.youtube.com/watch?v=BLZPxk3T9qQ",
     "blog": null,
     "archive": "https://archive.org/details/historical-eulogy",
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_123/Ado%20of%20Vienne%20-%20Historical%20Eulogy"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_123/Jean%20Mabillon%20-%20Historical%20Eulogy"
    },
    "doi": null,
    "provenance": {
@@ -72690,7 +72690,7 @@
      "next": "pl123-002"
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2593",
@@ -79186,7 +79186,7 @@
     "youtube": "https://www.youtube.com/watch?v=40fIiE9grXY",
     "blog": "https://bibliothecarius-modernus.github.io/2025/03/defensio-eruditionis-hieronymianae/",
     "archive": "https://archive.org/details/defense-of-the-learning-of-jerome-against-jean-le-clerc",
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_25/Jerome%20of%20Stridon%20-%20Defense%20of%20the%20Learning%20of%20Jerome%20Against%20Jean%20Le%20Clerc"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_25/Jean%20Martianay%20-%20Defense%20of%20the%20Learning%20of%20Jerome%20Against%20Jean%20Le%20Clerc"
    },
    "doi": "10.5281/zenodo.15073583",
    "provenance": {
@@ -79249,7 +79249,7 @@
      "next": null
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2685",
@@ -79819,7 +79819,7 @@
     "youtube": "https://www.youtube.com/watch?v=peY5ysKu7Mo",
     "blog": null,
     "archive": null,
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Leo%20the%20Great%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Eutychians%20Book%20One"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Pietro%20Tommaso%20Cacciari%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Eutychians%20Book%20One"
    },
    "doi": null,
    "provenance": {
@@ -79868,7 +79868,7 @@
      "next": null
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2694",
@@ -79892,7 +79892,7 @@
     "youtube": "https://www.youtube.com/watch?v=SGeglMMQXtE",
     "blog": null,
     "archive": null,
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Leo%20the%20Great%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Eutychians%20Book%20Two"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Pietro%20Tommaso%20Cacciari%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Eutychians%20Book%20Two"
    },
    "doi": null,
    "provenance": {
@@ -79941,7 +79941,7 @@
      "next": null
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2695",
@@ -79965,7 +79965,7 @@
     "youtube": "https://www.youtube.com/watch?v=tzr_yYbAreU",
     "blog": "https://bibliothecarius-modernus.github.io/2025/05/de-eutychiana-haeresi/",
     "archive": "https://archive.org/details/on-the-heresy-and-history-of-the-eutychians-book-one",
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Leo%20the%20Great%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Manicheans%20Book%20One"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Pietro%20Tommaso%20Cacciari%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Manicheans%20Book%20One"
    },
    "doi": "10.5281/zenodo.17982617",
    "provenance": {
@@ -80014,7 +80014,7 @@
      "next": null
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2696",
@@ -80038,7 +80038,7 @@
     "youtube": "https://www.youtube.com/watch?v=OcX_31LRjwY",
     "blog": null,
     "archive": null,
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Leo%20the%20Great%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Manicheans%20Book%20Two"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Pietro%20Tommaso%20Cacciari%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Manicheans%20Book%20Two"
    },
    "doi": null,
    "provenance": {
@@ -80087,7 +80087,7 @@
      "next": null
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2697",
@@ -80111,7 +80111,7 @@
     "youtube": "https://www.youtube.com/watch?v=w9fYQHBBOUQ",
     "blog": null,
     "archive": null,
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Leo%20the%20Great%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Priscillianists"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Pietro%20Tommaso%20Cacciari%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Priscillianists"
    },
    "doi": null,
    "provenance": {
@@ -80160,7 +80160,7 @@
      "next": null
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2698",
@@ -80184,7 +80184,7 @@
     "youtube": null,
     "blog": null,
     "archive": null,
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Leo%20the%20Great%20-%20On%20the%20Pelagian%20Heresy%20Growing%20in%20the%20Age%20of%20Leo%20the%20Great"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Pietro%20Tommaso%20Cacciari%20-%20On%20the%20Pelagian%20Heresy%20Growing%20in%20the%20Age%20of%20Leo%20the%20Great"
    },
    "doi": null,
    "provenance": {
@@ -80233,7 +80233,7 @@
      "next": null
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2699",
@@ -81265,7 +81265,7 @@
     "youtube": "https://www.youtube.com/watch?v=MaSojacIWmQ",
     "blog": null,
     "archive": "https://archive.org/details/books-on-the-interpreters-of-sacred-scriptures",
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_131/Notker%20Labeo%20-%20Books%20on%20the%20Interpreters%20of%20Sacred%20Scriptures"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_131/Notker%20Balbulus%20-%20Books%20on%20the%20Interpreters%20of%20Sacred%20Scriptures"
    },
    "doi": null,
    "provenance": {
@@ -81308,7 +81308,7 @@
      "next": "pl131-020"
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2716",
@@ -81316,7 +81316,7 @@
    "catalog_id": "pl131-021",
    "part_id": null,
    "project_id": null,
-   "title_english": "Martyrology of Notker Labeo",
+   "title_english": "Martyrology of Notker Balbulus",
    "title_latin": "Martyrologium.",
    "author": "Notker Balbulus",
    "pl_volume": 131,
@@ -81332,7 +81332,7 @@
     "youtube": null,
     "blog": null,
     "archive": null,
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_131/Notker%20Labeo%20-%20Martyrology%20of%20Notker%20Labeo"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_131/Notker%20Balbulus%20-%20Martyrology%20of%20Notker%20Balbulus"
    },
    "doi": null,
    "provenance": {
@@ -81375,7 +81375,7 @@
      "next": "pl131-022"
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2717",
@@ -81649,7 +81649,7 @@
     "youtube": "https://www.youtube.com/watch?v=Ysp8glHxXdQ",
     "blog": "https://bibliothecarius-modernus.github.io/2025/03/vita-sancti-odonis/",
     "archive": "https://archive.org/details/the-life-of-saint-odo-second-abbot-of-cluny",
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_133/Odo%20of%20Cluny%20-%20The%20Life%20of%20Saint%20Odo%20Second%20Abbot%20of%20Cluny"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_133/John%20Italus%20of%20Cluny%20-%20The%20Life%20of%20Saint%20Odo%20Second%20Abbot%20of%20Cluny"
    },
    "doi": "10.5281/zenodo.17982561",
    "provenance": {
@@ -81694,7 +81694,7 @@
      "next": "pl133-002"
     }
    },
-   "version": "2026-11-24T16:14:59Z"
+   "version": "2026-11-24T16:34:22Z"
   },
   {
    "id": "pub-2722",

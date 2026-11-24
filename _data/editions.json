@@ -1,6 +1,6 @@
 {
  "schema": "bibliothecarius.editions/1",
- "generated_at": "2026-11-24T16:15:28Z",
+ "generated_at": "2026-11-24T16:34:22Z",
  "source": "projection of api/catalog.json publications[] keyed by website path (Phase 8B)",
  "rights": "CC0-1.0",
  "by_path": {
@@ -946,7 +946,7 @@
     "youtube": "https://www.youtube.com/watch?v=40fIiE9grXY",
     "blog": "https://bibliothecarius-modernus.github.io/2025/03/defensio-eruditionis-hieronymianae/",
     "archive": "https://archive.org/details/defense-of-the-learning-of-jerome-against-jean-le-clerc",
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_25/Jerome%20of%20Stridon%20-%20Defense%20of%20the%20Learning%20of%20Jerome%20Against%20Jean%20Le%20Clerc"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_25/Jean%20Martianay%20-%20Defense%20of%20the%20Learning%20of%20Jerome%20Against%20Jean%20Le%20Clerc"
    },
    "passages_available": false,
    "related_same_author": [],
@@ -1062,7 +1062,7 @@
     "youtube": "https://www.youtube.com/watch?v=tzr_yYbAreU",
     "blog": "https://bibliothecarius-modernus.github.io/2025/05/de-eutychiana-haeresi/",
     "archive": "https://archive.org/details/on-the-heresy-and-history-of-the-eutychians-book-one",
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Leo%20the%20Great%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Manicheans%20Book%20One"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_55/Pietro%20Tommaso%20Cacciari%20-%20On%20the%20Heresy%20and%20History%20of%20the%20Manicheans%20Book%20One"
    },
    "passages_available": false,
    "related_same_author": [
@@ -1190,7 +1190,7 @@
     "youtube": "https://www.youtube.com/watch?v=Ysp8glHxXdQ",
     "blog": "https://bibliothecarius-modernus.github.io/2025/03/vita-sancti-odonis/",
     "archive": "https://archive.org/details/the-life-of-saint-odo-second-abbot-of-cluny",
-    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_133/Odo%20of%20Cluny%20-%20The%20Life%20of%20Saint%20Odo%20Second%20Abbot%20of%20Cluny"
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Patrologia_Latina/vol_133/John%20Italus%20of%20Cluny%20-%20The%20Life%20of%20Saint%20Odo%20Second%20Abbot%20of%20Cluny"
    },
    "passages_available": null,
    "related_same_author": [],
