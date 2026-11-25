@@ -2,7 +2,7 @@
 layout: tabbed_post
 title: "Untitled Sermons"
 date: 2026-11-25
-listed: false
+listed: true
 categories: [homiletics, medieval-theology]
 youtube_id: "zqUgaGBb8-U"
 translation_json: "/assets/translations/2026-11-25-sermones-anonymous.json"
