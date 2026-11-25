@@ -2,6 +2,7 @@
 layout: tabbed_post
 title: "Untitled Sermons"
 date: 2026-11-25
+publish_date: 2026-11-25
 listed: true
 categories: [homiletics, medieval-theology]
 youtube_id: "zqUgaGBb8-U"
