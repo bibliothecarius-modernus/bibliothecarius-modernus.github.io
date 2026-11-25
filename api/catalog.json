@@ -2,8 +2,8 @@
  "schema": "bibliothecarius.catalog/1",
  "schema_url": "https://bibliothecarius-modernus.github.io/api/catalog.schema.json",
  "documentation": "https://bibliothecarius-modernus.github.io/api/README.md",
- "generated_at": "2026-11-24T21:12:50Z",
- "version": "export:2026-11-24;registry:2026-11-24",
+ "generated_at": "2026-11-25T18:07:20Z",
+ "version": "export:2026-11-25;registry:2026-11-25",
  "publisher": {
   "name": "Bibliothecarius Modernus",
   "url": "https://bibliothecarius-modernus.github.io",
@@ -30,10 +30,10 @@
  },
  "counts": {
   "works": 3772,
-  "publications": 294,
+  "publications": 295,
   "parts": 8,
-  "manuscript_objects": 2,
-  "manuscript_units": 3,
+  "manuscript_objects": 3,
+  "manuscript_units": 29,
   "works_by_status": {
    "untranslated": 3583,
    "published": 179,
@@ -72397,6 +72397,60 @@
    "publications": [
     "pub-2885"
    ]
+  },
+  {
+   "id": "ms-houghton-lat-184",
+   "kind": "manuscript_object",
+   "institution": "Houghton Library, Harvard University",
+   "institution_short": "Houghton Library",
+   "shelfmark": "MS Lat 184",
+   "part": null,
+   "folios": "1r–101v",
+   "catalogue_url": "https://id.lib.harvard.edu/alma/990093504630203941/catalog",
+   "catalogue_citation": "Library catalogue record (HOLLIS 990093504630203941): Sermones in festivitatibus sanctorum et de reparacione lapsus, Germany, between 1150 and 1175",
+   "digitization_url": "https://nrs.harvard.edu/urn-3:FHCL.HOUGH:4657147",
+   "image_url_pattern": "https://mps.lib.harvard.edu/assets/images/drs:<ID>/full/full/0/default.jpg (22154003 = f. 1r … 22154034 = f. 16v)",
+   "iiif_manifest": null,
+   "date_origin": "between 1150 and 1175 (library record)",
+   "place_origin": "Germany (library record); the 'communis ebdomada' sermon points to North German use (inference)",
+   "image_rights": {
+    "statement": "Harvard Library, Policy on Access to Digital Reproductions of Works in the Public Domain: \"Harvard Library asserts no copyright over digital reproductions of works in its collections which are in the public domain, where those digital reproductions are made openly available on Harvard Library websites.\" Conditions honoured: source credited; Harvard's name not used in titles, URLs or as a prominent element; no endorsement implied.",
+    "url": "https://library.harvard.edu/about/policies/policy-access-digital-reproductions-works-public-domain",
+    "date_checked": "2026-11-24",
+    "credit": "Manuscript source: Houghton Library, Harvard University, MS Lat 184, ff. 1r–16v. Digital images: Houghton Library, Harvard University <https://nrs.harvard.edu/urn-3:FHCL.HOUGH:4657147>, used under Harvard Library's Policy on Access to Digital Reproductions of Works in the Public Domain (read 2026-11-24); no endorsement implied. Bibliothecarius Modernus transcription, 2026, version 1.0 (CC0 1.0)."
+   },
+   "status": "published",
+   "units": [
+    "ms-houghton-lat-184-001",
+    "ms-houghton-lat-184-002",
+    "ms-houghton-lat-184-003",
+    "ms-houghton-lat-184-004",
+    "ms-houghton-lat-184-005",
+    "ms-houghton-lat-184-006",
+    "ms-houghton-lat-184-007",
+    "ms-houghton-lat-184-008",
+    "ms-houghton-lat-184-009",
+    "ms-houghton-lat-184-010",
+    "ms-houghton-lat-184-011",
+    "ms-houghton-lat-184-012",
+    "ms-houghton-lat-184-013",
+    "ms-houghton-lat-184-014",
+    "ms-houghton-lat-184-015",
+    "ms-houghton-lat-184-016",
+    "ms-houghton-lat-184-017",
+    "ms-houghton-lat-184-018",
+    "ms-houghton-lat-184-019",
+    "ms-houghton-lat-184-020",
+    "ms-houghton-lat-184-021",
+    "ms-houghton-lat-184-022",
+    "ms-houghton-lat-184-023",
+    "ms-houghton-lat-184-024",
+    "ms-houghton-lat-184-025",
+    "ms-houghton-lat-184-026"
+   ],
+   "publications": [
+    "pub-2888"
+   ]
   }
  ],
  "manuscript_units": [
@@ -72497,6 +72551,864 @@
    "translated_by_bibliothecarius": true,
    "publications": [
     "pub-2885"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-001",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 1,
+   "author": "Anonymous",
+   "title_latin": "In Epiphania: finis sermonis",
+   "rubric": null,
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "1r",
+    "end": "1r"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 55,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-002",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 2,
+   "author": "Anonymous",
+   "title_latin": "In purificatione",
+   "rubric": "In purificatione",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "1r",
+    "end": "1v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 139,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-003",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 3,
+   "author": "Anonymous",
+   "title_latin": "In quadragesima",
+   "rubric": "In .xl.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "1v",
+    "end": "1v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 179,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-004",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 4,
+   "author": "Anonymous",
+   "title_latin": "Sermo initio deperdito",
+   "rubric": null,
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "2r",
+    "end": "2v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 226,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-005",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 5,
+   "author": "Anonymous",
+   "title_latin": "De sancto Iohanne baptista",
+   "rubric": "De s. iohanne baptista.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "2v",
+    "end": "3r"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 317,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-006",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 6,
+   "author": "Anonymous",
+   "title_latin": "Sancti Petri apostoli",
+   "rubric": "Sancti Petri apostoli",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "3r",
+    "end": "4r"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 344,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-007",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 7,
+   "author": "Anonymous",
+   "title_latin": "In assumptione sancte Marie",
+   "rubric": "In assumptione s. m.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "4r",
+    "end": "4v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 201,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-008",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 8,
+   "author": "Anonymous",
+   "title_latin": "Conclusio sermonis",
+   "rubric": null,
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "5r",
+    "end": "5r"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 27,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-009",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 9,
+   "author": "Anonymous",
+   "title_latin": "In nativitate sancte marie",
+   "rubric": "In natiuitate sancte marie.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "5r",
+    "end": "5v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 222,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-010",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 10,
+   "author": "Anonymous",
+   "title_latin": "De sancto Michahele",
+   "rubric": "De sancto Michahele.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "5v",
+    "end": "6r"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 238,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-011",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 11,
+   "author": "Anonymous",
+   "title_latin": "In natale omnium sanctorum",
+   "rubric": "In natale(?) omnium sanctorum",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "6r",
+    "end": "7r"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 299,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-012",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 12,
+   "author": "Anonymous",
+   "title_latin": "Sancti Martini",
+   "rubric": "Sancti Martini",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "7r",
+    "end": "7v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 274,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-013",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 13,
+   "author": "Anonymous",
+   "title_latin": "In quocumque festo",
+   "rubric": "In quocumque(?) festo.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "7v",
+    "end": "8v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 245,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-014",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 14,
+   "author": "Anonymous",
+   "title_latin": "Item in quolibet festo",
+   "rubric": "Item in quolibet festo.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "8v",
+    "end": "8v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 124,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-015",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 15,
+   "author": "Anonymous",
+   "title_latin": "Alius sermo",
+   "rubric": "Alius sermo.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "8v",
+    "end": "9v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 434,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-016",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 16,
+   "author": "Anonymous",
+   "title_latin": "Alius",
+   "rubric": "alius.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "10r",
+    "end": "10v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 291,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-017",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 17,
+   "author": "Anonymous",
+   "title_latin": "Alius",
+   "rubric": "Alius.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "10v",
+    "end": "11r"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 154,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-018",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 18,
+   "author": "Anonymous",
+   "title_latin": "Alius",
+   "rubric": "alius",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "11r",
+    "end": "11v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 223,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-019",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 19,
+   "author": "Anonymous",
+   "title_latin": "Alius",
+   "rubric": "Alius.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "11v",
+    "end": "12r"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 148,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-020",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 20,
+   "author": "Anonymous",
+   "title_latin": "Sermo in ebdomada que dicitur communis",
+   "rubric": "Sermo in ebdomada que dicitur communis(?).",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "12r",
+    "end": "12v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 196,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-021",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 21,
+   "author": "Anonymous",
+   "title_latin": "Admonitio ad sacerdotes (in margine)",
+   "rubric": null,
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "12v",
+    "end": "13v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 438,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-022",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 22,
+   "author": "Anonymous",
+   "title_latin": "In dedicatione",
+   "rubric": "In dedicatione(?)",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "13v",
+    "end": "14r"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 251,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-023",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 23,
+   "author": "Anonymous",
+   "title_latin": "In die exequiarum",
+   "rubric": "In die exequiarum",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "14r",
+    "end": "15r"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 398,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-024",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 24,
+   "author": "Anonymous",
+   "title_latin": "Dominica die",
+   "rubric": "Dominica die.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "15r",
+    "end": "15v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 143,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-025",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 25,
+   "author": "Anonymous",
+   "title_latin": "Quando volueris",
+   "rubric": "Quando uolueris.",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "15v",
+    "end": "16v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 397,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
+   ]
+  },
+  {
+   "id": "ms-houghton-lat-184-026",
+   "kind": "manuscript_unit",
+   "parent_id": "ms-houghton-lat-184",
+   "ordinal": 26,
+   "author": "Anonymous",
+   "title_latin": "In dedicatione",
+   "rubric": "In dedicatione(?).",
+   "incipit": null,
+   "explicit": null,
+   "folios": {
+    "start": "16v",
+    "end": "16v"
+   },
+   "lines": {
+    "start": null,
+    "end": null
+   },
+   "word_count": 124,
+   "frontier_class": "A",
+   "edition_status": "no edition, transcription or translation located (PL full-text and web searches 2026-11-24; Schneyer, Mirabile, In Principio not consulted)",
+   "transcription": {
+    "version": "1.0",
+    "review_status": "reconciled; uncertain passages present; not curator-verified",
+    "uncertain_passages_present": true
+   },
+   "translation_version": null,
+   "status": "in_progress",
+   "translated_by_bibliothecarius": true,
+   "publications": [
+    "pub-2888"
    ]
   }
  ],
@@ -92804,7 +93716,30 @@
    "related": {
     "same_author": [
      "ms-hab-602-helmst-p1-002",
-     "ms-yale-beinecke-571-003"
+     "ms-yale-beinecke-571-003",
+     "ms-houghton-lat-184",
+     "ms-houghton-lat-184-001",
+     "ms-houghton-lat-184-002",
+     "ms-houghton-lat-184-003",
+     "ms-houghton-lat-184-004",
+     "ms-houghton-lat-184-005",
+     "ms-houghton-lat-184-006",
+     "ms-houghton-lat-184-007",
+     "ms-houghton-lat-184-008",
+     "ms-houghton-lat-184-009",
+     "ms-houghton-lat-184-010",
+     "ms-houghton-lat-184-011",
+     "ms-houghton-lat-184-012",
+     "ms-houghton-lat-184-013",
+     "ms-houghton-lat-184-014",
+     "ms-houghton-lat-184-015",
+     "ms-houghton-lat-184-016",
+     "ms-houghton-lat-184-017",
+     "ms-houghton-lat-184-018",
+     "ms-houghton-lat-184-019",
+     "ms-houghton-lat-184-020",
+     "ms-houghton-lat-184-021",
+     "ms-houghton-lat-184-022"
     ],
     "adjacent_in_volume": {
      "prev": "ms-hab-602-helmst-p1-004",
@@ -92956,6 +93891,93 @@
     }
    },
    "version": "2026-11-24T21:12:39Z"
+  },
+  {
+   "id": "pub-2888",
+   "kind": "publication",
+   "catalog_id": "ms-houghton-lat-184",
+   "part_id": null,
+   "project_id": "sermones-ad-populum-20261125",
+   "title_english": "Untitled Sermons",
+   "title_latin": "Sermones",
+   "author": "Anonymous",
+   "pl_volume": 0,
+   "columns": {
+    "start": null,
+    "end": null
+   },
+   "century": null,
+   "status": "published",
+   "youtube_visibility": "public",
+   "published_at": "2026-11-25T18:06:47Z",
+   "urls": {
+    "youtube": "https://www.youtube.com/watch?v=zqUgaGBb8-U",
+    "blog": "https://bibliothecarius-modernus.github.io/2026/11/sermones-anonymous/",
+    "archive": "https://archive.org/details/untitled-sermons-houghton-ms-lat-184",
+    "github": "https://github.com/wryan14/Latin-Patristic-Texts/tree/main/Manuscripts/Houghton_Library/MS_Lat_184/Whole"
+   },
+   "doi": null,
+   "provenance": {
+    "source_of_record": "pipeline",
+    "generation": "v2",
+    "translator_model": "openai/gpt-5.5",
+    "translation_date": "2026-11-25",
+    "translation_date_source": "project_state",
+    "source_check": true,
+    "translation_qa": "attention"
+   },
+   "review": {
+    "status": "coverage-verified",
+    "checked_at": "2026-11-25",
+    "known_defects": []
+   },
+   "rights": {
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_status": "declared",
+    "source_text_rights": "transcription-cc0",
+    "source_text": "Latin: Bibliothecarius Modernus transcription from the digitized manuscript (CC0 1.0); the manuscript text is public domain; the images remain with the holding institution under its stated terms (see manuscript_objects[].image_rights)",
+    "note": null
+   },
+   "locators": {
+    "work": "ms-houghton-lat-184",
+    "passages_available": false,
+    "web_anchor_pattern": "https://bibliothecarius-modernus.github.io/2026/11/sermones-anonymous/#chunk-{n}"
+   },
+   "related": {
+    "same_author": [
+     "ms-hab-602-helmst-p1-002",
+     "ms-yale-beinecke-571",
+     "ms-yale-beinecke-571-003",
+     "ms-houghton-lat-184-001",
+     "ms-houghton-lat-184-002",
+     "ms-houghton-lat-184-003",
+     "ms-houghton-lat-184-004",
+     "ms-houghton-lat-184-005",
+     "ms-houghton-lat-184-006",
+     "ms-houghton-lat-184-007",
+     "ms-houghton-lat-184-008",
+     "ms-houghton-lat-184-009",
+     "ms-houghton-lat-184-010",
+     "ms-houghton-lat-184-011",
+     "ms-houghton-lat-184-012",
+     "ms-houghton-lat-184-013",
+     "ms-houghton-lat-184-014",
+     "ms-houghton-lat-184-015",
+     "ms-houghton-lat-184-016",
+     "ms-houghton-lat-184-017",
+     "ms-houghton-lat-184-018",
+     "ms-houghton-lat-184-019",
+     "ms-houghton-lat-184-020",
+     "ms-houghton-lat-184-021",
+     "ms-houghton-lat-184-022"
+    ],
+    "adjacent_in_volume": {
+     "prev": "ms-yale-beinecke-571-003",
+     "next": "ms-houghton-lat-184-001"
+    }
+   },
+   "version": "2026-11-25T18:07:05Z"
   }
  ]
 }
